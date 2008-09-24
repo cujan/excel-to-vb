@@ -1,0 +1,16 @@
+1. Stiahnut klienta z http://www.anrichter.net/projects/qsvn/wiki/download
+
+2. Po instalacii spustime program QSvn
+
+3. program pracuje so styrmi zakladnymi funkciami
+   - Checkout - pomocou tejto funkcie stiahneme obsah z SVN servra do nami zadaneho adresara
+   - Add - prida subor/adresar ktory nie je pod SVN kontrolou medzi SVN subory
+   - Update - skontroluje ci je lokalna kopia identicka s verziou na SVN servri, ak nie ponukne dialog box pre akciu
+   - Commit - uploadne zmeneny kod z lokalneho disku na SVN server (tu sa pridava sprava - message - o zmene ktoru sme vykonali s kodom)
+
+4. Ak chceme vidiet, ze ake zmeny sa vykonali s kodom od nasej poslednej upravy, tak pouzijeme funkciu Show Log - tu mozeme sledovat zmeny v kode od jeho vytvorenia
+
+
+
+  Pre lepsiu pracu s kodom je dobre v nastaveniach nastavit cestu k nejakemu Diff vieweru (WinDiff, FreeDiff, ...)
+
