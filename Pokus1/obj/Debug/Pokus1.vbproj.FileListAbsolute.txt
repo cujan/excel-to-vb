@@ -8,3 +8,13 @@ D:\tmp\Pokus1\Pokus1\Pokus1\obj\Debug\Pokus1.vbproj.GenerateResource.Cache
 D:\tmp\Pokus1\Pokus1\Pokus1\obj\Debug\Pokus1.exe
 D:\tmp\Pokus1\Pokus1\Pokus1\obj\Debug\Pokus1.xml
 D:\tmp\Pokus1\Pokus1\Pokus1\obj\Debug\Pokus1.pdb
+D:\tmp\svn\Pokus1\obj\Debug\Pokus1.exe
+D:\tmp\svn\Pokus1\obj\Debug\Pokus1.xml
+D:\tmp\svn\Pokus1\obj\Debug\Pokus1.pdb
+D:\tmp\svn\Pokus1\bin\Debug\Pokus1.exe
+D:\tmp\svn\Pokus1\bin\Debug\Pokus1.pdb
+D:\tmp\svn\Pokus1\bin\Debug\Pokus1.xml
+D:\tmp\svn\Pokus1\obj\Debug\ResolveAssemblyReference.cache
+D:\tmp\svn\Pokus1\obj\Debug\WindowsApplication1.Form1.resources
+D:\tmp\svn\Pokus1\obj\Debug\WindowsApplication1.Resources.resources
+D:\tmp\svn\Pokus1\obj\Debug\Pokus1.vbproj.GenerateResource.Cache

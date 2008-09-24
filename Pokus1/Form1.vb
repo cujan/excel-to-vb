@@ -8,6 +8,8 @@
         PictureBox1.Image() = System.Drawing.Image.FromFile(PictureBox1.ImageLocation)
         TextBox1.Text = PictureBox1.ImageLocation
         Label4.Text = PictureBox1.Image.Size.ToString
+        Label6.Text = TimeOfDay.Now
+
 
 
     End Sub
