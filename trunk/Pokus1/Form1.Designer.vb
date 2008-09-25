@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl
         Me.TabPage1 = New System.Windows.Forms.TabPage
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox
         Me.Label8 = New System.Windows.Forms.Label
         Me.Label7 = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
@@ -38,7 +39,7 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label
         Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -57,6 +58,7 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.CheckBox2)
         Me.TabPage1.Controls.Add(Me.CheckBox1)
         Me.TabPage1.Controls.Add(Me.Label8)
         Me.TabPage1.Controls.Add(Me.Label7)
@@ -70,6 +72,16 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Otvoriť"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(54, 160)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox1.TabIndex = 7
+        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -197,15 +209,15 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'CheckBox1
+        'CheckBox2
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(54, 160)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
-        Me.CheckBox1.TabIndex = 7
-        Me.CheckBox1.Text = "CheckBox1"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(215, 163)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox2.TabIndex = 8
+        Me.CheckBox2.Text = "CheckBox2"
+        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -241,5 +253,6 @@ Partial Class Form1
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
 
 End Class
