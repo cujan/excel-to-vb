@@ -1,6 +1,6 @@
-1. Stiahnut klienta z http://www.anrichter.net/projects/qsvn/wiki/download
+1. Stiahnut klienta z http://www.collab.net/downloads/subversion/
 
-2. Po instalacii spustime program QSvn
+2. Po instalacii spustime prikazovy riadok v adresari, kde chceme pracovat s kodom
 
 3. program pracuje so styrmi zakladnymi funkciami
    - Checkout - pomocou tejto funkcie stiahneme obsah z SVN servra do nami zadaneho adresara
@@ -12,5 +12,5 @@
 
 
 
-  Pre lepsiu pracu s kodom je dobre v nastaveniach nastavit cestu k nejakemu Diff vieweru (WinDiff, FreeDiff, ...)
+  Pre lepsiu pracu s kodom je dobre mat nainstalovany nejaky Diff viewer (WinDiff, FreeDiff, ...)
 
