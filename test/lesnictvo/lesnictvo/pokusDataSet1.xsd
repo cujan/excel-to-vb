@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="pokusDataSet1" targetNamespace="http://tempuri.org/pokusDataSet1.xsd" xmlns:mstns="http://tempuri.org/pokusDataSet1.xsd" xmlns="http://tempuri.org/pokusDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Database1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Database1ConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.lesnictvo.My.MySettings.GlobalReference.Default.Database1ConnectionString" Provider="Microsoft.SqlServerCe.Client.3.5" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vseobecne_udajeTableAdapter" GeneratorDataComponentClassName="vseobecne_udajeTableAdapter" Name="vseobecne_udaje" UserDataComponentName="vseobecne_udajeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (MySettings)" DbObjectName="vseobecne_udaje" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Mesto], [psc], [cislo_uctu] FROM [vseobecne_udaje]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Mesto" DataSetColumn="Mesto" />
+              <Mapping SourceColumn="psc" DataSetColumn="psc" />
+              <Mapping SourceColumn="cislo_uctu" DataSetColumn="cislo_uctu" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="pokusDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="pokusDataSet1" msprop:Generator_UserDSName="pokusDataSet1" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vseobecne_udaje" msprop:Generator_UserTableName="vseobecne_udaje" msprop:Generator_RowDeletedName="vseobecne_udajeRowDeleted" msprop:Generator_TableClassName="vseobecne_udajeDataTable" msprop:Generator_RowChangedName="vseobecne_udajeRowChanged" msprop:Generator_RowClassName="vseobecne_udajeRow" msprop:Generator_RowChangingName="vseobecne_udajeRowChanging" msprop:Generator_RowEvArgName="vseobecne_udajeRowChangeEvent" msprop:Generator_RowEvHandlerName="vseobecne_udajeRowChangeEventHandler" msprop:Generator_TablePropName="vseobecne_udaje" msprop:Generator_TableVarName="tablevseobecne_udaje" msprop:Generator_RowDeletingName="vseobecne_udajeRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mesto" msprop:Generator_UserColumnName="Mesto" msprop:Generator_ColumnPropNameInRow="Mesto" msprop:Generator_ColumnVarNameInTable="columnMesto" msprop:Generator_ColumnPropNameInTable="MestoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="psc" msprop:Generator_UserColumnName="psc" msprop:Generator_ColumnPropNameInRow="psc" msprop:Generator_ColumnVarNameInTable="columnpsc" msprop:Generator_ColumnPropNameInTable="pscColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cislo_uctu" msprop:Generator_UserColumnName="cislo_uctu" msprop:Generator_ColumnPropNameInRow="cislo_uctu" msprop:Generator_ColumnVarNameInTable="columncislo_uctu" msprop:Generator_ColumnPropNameInTable="cislo_uctuColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
