@@ -88,11 +88,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dodavatelia.vb">
+    <Compile Include="odberatelia.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dodavatelia.Designer.vb">
-      <DependentUpon>dodavatelia.vb</DependentUpon>
+    <Compile Include="odberatelia.Designer.vb">
+      <DependentUpon>odberatelia.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MDIParent1.Designer.vb">
@@ -116,10 +116,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="vseobecne_udaje.Designer.vb">
+      <DependentUpon>vseobecne_udaje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vseobecne_udaje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vseobecne_udajeDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vseobecne_udajeDataSet1.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="dodavatelia.resx">
-      <DependentUpon>dodavatelia.vb</DependentUpon>
+    <EmbeddedResource Include="odberatelia.resx">
+      <DependentUpon>odberatelia.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
@@ -130,6 +141,10 @@
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vseobecne_udaje.resx">
+      <DependentUpon>vseobecne_udaje.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -154,6 +169,17 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="vseobecne_udajeDataSet1.xsc">
+      <DependentUpon>vseobecne_udajeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="vseobecne_udajeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vseobecne_udajeDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vseobecne_udajeDataSet1.xss">
+      <DependentUpon>vseobecne_udajeDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
