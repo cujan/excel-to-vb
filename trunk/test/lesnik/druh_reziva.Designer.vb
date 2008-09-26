@@ -57,7 +57,11 @@ Partial Class druh_reziva
         Me.Label3 = New System.Windows.Forms.Label
         Me.Label4 = New System.Windows.Forms.Label
         Me.Label5 = New System.Windows.Forms.Label
+<<<<<<< .mine
+        Me.siedmi_label = New System.Windows.Forms.Label
+=======
         Me.siesty_label = New System.Windows.Forms.Label
+>>>>>>> .r39
         KodLabel = New System.Windows.Forms.Label
         DruRezivaLabel = New System.Windows.Forms.Label
         CenaLabel = New System.Windows.Forms.Label
@@ -348,6 +352,17 @@ Partial Class druh_reziva
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "Label 5 -2"
         '
+<<<<<<< .mine
+        'siedmi_label
+        '
+        Me.siedmi_label.AutoSize = True
+        Me.siedmi_label.Location = New System.Drawing.Point(363, 19)
+        Me.siedmi_label.Name = "siedmi_label"
+        Me.siedmi_label.Size = New System.Drawing.Size(58, 13)
+        Me.siedmi_label.TabIndex = 16
+        Me.siedmi_label.Text = "siesty label"
+        '
+=======
         'siesty_label
         '
         Me.siesty_label.AutoSize = True
@@ -357,12 +372,17 @@ Partial Class druh_reziva
         Me.siesty_label.TabIndex = 16
         Me.siesty_label.Text = "siesty_label"
         '
+>>>>>>> .r39
         'druh_reziva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(483, 345)
+<<<<<<< .mine
+        Me.Controls.Add(Me.siedmi_label)
+=======
         Me.Controls.Add(Me.siesty_label)
+>>>>>>> .r39
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -420,5 +440,9 @@ Partial Class druh_reziva
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
+<<<<<<< .mine
+    Friend WithEvents siedmi_label As System.Windows.Forms.Label
+=======
     Friend WithEvents siesty_label As System.Windows.Forms.Label
+>>>>>>> .r39
 End Class
