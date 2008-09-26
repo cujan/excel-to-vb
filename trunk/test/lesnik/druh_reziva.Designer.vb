@@ -57,6 +57,7 @@ Partial Class druh_reziva
         Me.Label3 = New System.Windows.Forms.Label
         Me.Label4 = New System.Windows.Forms.Label
         Me.Label5 = New System.Windows.Forms.Label
+        Me.siesty_label = New System.Windows.Forms.Label
         KodLabel = New System.Windows.Forms.Label
         DruRezivaLabel = New System.Windows.Forms.Label
         CenaLabel = New System.Windows.Forms.Label
@@ -347,11 +348,21 @@ Partial Class druh_reziva
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "Label 5 -2"
         '
+        'siesty_label
+        '
+        Me.siesty_label.AutoSize = True
+        Me.siesty_label.Location = New System.Drawing.Point(353, 12)
+        Me.siesty_label.Name = "siesty_label"
+        Me.siesty_label.Size = New System.Drawing.Size(61, 13)
+        Me.siesty_label.TabIndex = 16
+        Me.siesty_label.Text = "siesty_label"
+        '
         'druh_reziva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(483, 345)
+        Me.Controls.Add(Me.siesty_label)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -409,4 +420,5 @@ Partial Class druh_reziva
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents siesty_label As System.Windows.Forms.Label
 End Class
