@@ -33,6 +33,8 @@ Partial Class vseobecne_udaje
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(vseobecne_udaje))
         Me.Vseobecne_udajeBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.Vseobecne_udajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Vseobecne_udajeDataSet1 = New lesnictvo.vseobecne_udajeDataSet1
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
@@ -52,10 +54,15 @@ Partial Class vseobecne_udaje
         Me.DicTextBox = New System.Windows.Forms.TextBox
         Me.Cislo_uctuTextBox = New System.Windows.Forms.TextBox
         Me.Button1 = New System.Windows.Forms.Button
-        Me.Vseobecne_udajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Vseobecne_udajeDataSet1 = New lesnictvo.vseobecne_udajeDataSet1
         Me.Vseobecne_udajeTableAdapter = New lesnictvo.vseobecne_udajeDataSet1TableAdapters.vseobecne_udajeTableAdapter
         Me.TableAdapterManager = New lesnictvo.vseobecne_udajeDataSet1TableAdapters.TableAdapterManager
+        Me.Database1DataSet1 = New lesnictvo.Database1DataSet1
+        Me.Vseobecne_udajeBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Vseobecne_udajeTableAdapter1 = New lesnictvo.Database1DataSet1TableAdapters.vseobecne_udajeTableAdapter
+        Me.TableAdapterManager1 = New lesnictvo.Database1DataSet1TableAdapters.TableAdapterManager
+        Me.Vseobecne_udajeDataGridView = New System.Windows.Forms.DataGridView
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         NazovLabel = New System.Windows.Forms.Label
         UlicaLabel = New System.Windows.Forms.Label
         MestoLabel = New System.Windows.Forms.Label
@@ -67,6 +74,9 @@ Partial Class vseobecne_udaje
         Me.Vseobecne_udajeBindingNavigator.SuspendLayout()
         CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vseobecne_udajeDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Database1DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Vseobecne_udajeBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Vseobecne_udajeDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NazovLabel
@@ -159,6 +169,16 @@ Partial Class vseobecne_udaje
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'Vseobecne_udajeBindingSource
+        '
+        Me.Vseobecne_udajeBindingSource.DataMember = "vseobecne_udaje"
+        Me.Vseobecne_udajeBindingSource.DataSource = Me.Vseobecne_udajeDataSet1
+        '
+        'Vseobecne_udajeDataSet1
+        '
+        Me.Vseobecne_udajeDataSet1.DataSetName = "vseobecne_udajeDataSet1"
+        Me.Vseobecne_udajeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -309,16 +329,6 @@ Partial Class vseobecne_udaje
         Me.Button1.Text = "Ulož zmeny"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Vseobecne_udajeBindingSource
-        '
-        Me.Vseobecne_udajeBindingSource.DataMember = "vseobecne_udaje"
-        Me.Vseobecne_udajeBindingSource.DataSource = Me.Vseobecne_udajeDataSet1
-        '
-        'Vseobecne_udajeDataSet1
-        '
-        Me.Vseobecne_udajeDataSet1.DataSetName = "vseobecne_udajeDataSet1"
-        Me.Vseobecne_udajeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Vseobecne_udajeTableAdapter
         '
         Me.Vseobecne_udajeTableAdapter.ClearBeforeFill = True
@@ -329,11 +339,55 @@ Partial Class vseobecne_udaje
         Me.TableAdapterManager.UpdateOrder = lesnictvo.vseobecne_udajeDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.vseobecne_udajeTableAdapter = Me.Vseobecne_udajeTableAdapter
         '
+        'Database1DataSet1
+        '
+        Me.Database1DataSet1.DataSetName = "Database1DataSet1"
+        Me.Database1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Vseobecne_udajeBindingSource1
+        '
+        Me.Vseobecne_udajeBindingSource1.DataMember = "vseobecne_udaje"
+        Me.Vseobecne_udajeBindingSource1.DataSource = Me.Database1DataSet1
+        '
+        'Vseobecne_udajeTableAdapter1
+        '
+        Me.Vseobecne_udajeTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.UpdateOrder = lesnictvo.Database1DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager1.vseobecne_udajeTableAdapter = Me.Vseobecne_udajeTableAdapter1
+        '
+        'Vseobecne_udajeDataGridView
+        '
+        Me.Vseobecne_udajeDataGridView.AutoGenerateColumns = False
+        Me.Vseobecne_udajeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Vseobecne_udajeDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
+        Me.Vseobecne_udajeDataGridView.DataSource = Me.Vseobecne_udajeBindingSource1
+        Me.Vseobecne_udajeDataGridView.Location = New System.Drawing.Point(473, 165)
+        Me.Vseobecne_udajeDataGridView.Name = "Vseobecne_udajeDataGridView"
+        Me.Vseobecne_udajeDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.Vseobecne_udajeDataGridView.TabIndex = 17
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "nazov"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "nazov"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "ulica"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "ulica"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
         'vseobecne_udaje
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(612, 470)
+        Me.ClientSize = New System.Drawing.Size(793, 470)
+        Me.Controls.Add(Me.Vseobecne_udajeDataGridView)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(NazovLabel)
         Me.Controls.Add(Me.NazovTextBox)
@@ -358,6 +412,9 @@ Partial Class vseobecne_udaje
         Me.Vseobecne_udajeBindingNavigator.PerformLayout()
         CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Vseobecne_udajeDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Database1DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Vseobecne_udajeBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Vseobecne_udajeDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -387,4 +444,11 @@ Partial Class vseobecne_udaje
     Friend WithEvents DicTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Cislo_uctuTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Database1DataSet1 As lesnictvo.Database1DataSet1
+    Friend WithEvents Vseobecne_udajeBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents Vseobecne_udajeTableAdapter1 As lesnictvo.Database1DataSet1TableAdapters.vseobecne_udajeTableAdapter
+    Friend WithEvents TableAdapterManager1 As lesnictvo.Database1DataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents Vseobecne_udajeDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

@@ -8,6 +8,8 @@
     End Sub
 
     Private Sub vseobecne_udaje_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Database1DataSet1.vseobecne_udaje' table. You can move, or remove it, as needed.
+        Me.Vseobecne_udajeTableAdapter1.Fill(Me.Database1DataSet1.vseobecne_udaje)
         'TODO: This line of code loads data into the 'Vseobecne_udajeDataSet1.vseobecne_udaje' table. You can move, or remove it, as needed.
         Me.Vseobecne_udajeTableAdapter.Fill(Me.Vseobecne_udajeDataSet1.vseobecne_udaje)
         'TODO: This line of code loads data into the 'Vseobecne_udajeDataSet1.vseobecne_udaje' table. You can move, or remove it, as needed.
