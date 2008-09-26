@@ -63,6 +63,12 @@ Partial Class vseobecne_udaje
         Me.Vseobecne_udajeDataGridView = New System.Windows.Forms.DataGridView
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Database1DataSet2 = New lesnictvo.Database1DataSet2
+        Me.Vseobecne_udajeBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Vseobecne_udajeTableAdapter2 = New lesnictvo.Database1DataSet2TableAdapters.vseobecne_udajeTableAdapter
+        Me.TableAdapterManager2 = New lesnictvo.Database1DataSet2TableAdapters.TableAdapterManager
+        Me.Vseobecne_udajeDataGridView1 = New System.Windows.Forms.DataGridView
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         NazovLabel = New System.Windows.Forms.Label
         UlicaLabel = New System.Windows.Forms.Label
         MestoLabel = New System.Windows.Forms.Label
@@ -77,6 +83,9 @@ Partial Class vseobecne_udaje
         CType(Me.Database1DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vseobecne_udajeBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vseobecne_udajeDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Database1DataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Vseobecne_udajeBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Vseobecne_udajeDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NazovLabel
@@ -382,11 +391,49 @@ Partial Class vseobecne_udaje
         Me.DataGridViewTextBoxColumn2.HeaderText = "ulica"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
+        'Database1DataSet2
+        '
+        Me.Database1DataSet2.DataSetName = "Database1DataSet2"
+        Me.Database1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Vseobecne_udajeBindingSource2
+        '
+        Me.Vseobecne_udajeBindingSource2.DataMember = "vseobecne_udaje"
+        Me.Vseobecne_udajeBindingSource2.DataSource = Me.Database1DataSet2
+        '
+        'Vseobecne_udajeTableAdapter2
+        '
+        Me.Vseobecne_udajeTableAdapter2.ClearBeforeFill = True
+        '
+        'TableAdapterManager2
+        '
+        Me.TableAdapterManager2.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager2.Connection = Nothing
+        Me.TableAdapterManager2.UpdateOrder = lesnictvo.Database1DataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Vseobecne_udajeDataGridView1
+        '
+        Me.Vseobecne_udajeDataGridView1.AutoGenerateColumns = False
+        Me.Vseobecne_udajeDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Vseobecne_udajeDataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3})
+        Me.Vseobecne_udajeDataGridView1.DataSource = Me.Vseobecne_udajeBindingSource2
+        Me.Vseobecne_udajeDataGridView1.Location = New System.Drawing.Point(497, 23)
+        Me.Vseobecne_udajeDataGridView1.Name = "Vseobecne_udajeDataGridView1"
+        Me.Vseobecne_udajeDataGridView1.Size = New System.Drawing.Size(300, 220)
+        Me.Vseobecne_udajeDataGridView1.TabIndex = 17
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "dic"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "dic"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
         'vseobecne_udaje
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(793, 470)
+        Me.ClientSize = New System.Drawing.Size(817, 470)
+        Me.Controls.Add(Me.Vseobecne_udajeDataGridView1)
         Me.Controls.Add(Me.Vseobecne_udajeDataGridView)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(NazovLabel)
@@ -415,6 +462,9 @@ Partial Class vseobecne_udaje
         CType(Me.Database1DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Vseobecne_udajeBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Vseobecne_udajeDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Database1DataSet2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Vseobecne_udajeBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Vseobecne_udajeDataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -451,4 +501,10 @@ Partial Class vseobecne_udaje
     Friend WithEvents Vseobecne_udajeDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Database1DataSet2 As lesnictvo.Database1DataSet2
+    Friend WithEvents Vseobecne_udajeBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents Vseobecne_udajeTableAdapter2 As lesnictvo.Database1DataSet2TableAdapters.vseobecne_udajeTableAdapter
+    Friend WithEvents TableAdapterManager2 As lesnictvo.Database1DataSet2TableAdapters.TableAdapterManager
+    Friend WithEvents Vseobecne_udajeDataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
