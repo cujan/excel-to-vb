@@ -53,6 +53,7 @@ Partial Class druh_reziva
         Me.CenaTextBox = New System.Windows.Forms.TextBox
         Me.Button1 = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
         KodLabel = New System.Windows.Forms.Label
         DruRezivaLabel = New System.Windows.Forms.Label
         CenaLabel = New System.Windows.Forms.Label
@@ -142,7 +143,7 @@ Partial Class druh_reziva
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Celkový počet položiek"
         '
@@ -307,11 +308,21 @@ Partial Class druh_reziva
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "cau marek"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(205, 84)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(41, 13)
+        Me.Label2.TabIndex = 12
+        Me.Label2.Text = "Nazdar"
+        '
         'druh_reziva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(483, 345)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(KodLabel)
@@ -361,4 +372,5 @@ Partial Class druh_reziva
     Friend WithEvents CenaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class
