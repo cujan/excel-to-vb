@@ -54,6 +54,7 @@ Partial Class druh_reziva
         Me.Button1 = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
         KodLabel = New System.Windows.Forms.Label
         DruRezivaLabel = New System.Windows.Forms.Label
         CenaLabel = New System.Windows.Forms.Label
@@ -317,11 +318,21 @@ Partial Class druh_reziva
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Nazdar"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(253, 69)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(53, 13)
+        Me.Label3.TabIndex = 13
+        Me.Label3.Text = "dalsi label"
+        '
         'druh_reziva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(483, 345)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
@@ -373,4 +384,5 @@ Partial Class druh_reziva
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class
