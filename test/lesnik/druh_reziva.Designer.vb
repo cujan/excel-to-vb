@@ -332,20 +332,20 @@ Partial Class druh_reziva
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(199, 67)
+        Me.Label4.Location = New System.Drawing.Point(203, 68)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(56, 13)
+        Me.Label4.Size = New System.Drawing.Size(62, 13)
         Me.Label4.TabIndex = 14
-        Me.Label4.Text = "este jeden"
+        Me.Label4.Text = "dalsi label 2"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(257, 10)
+        Me.Label5.Location = New System.Drawing.Point(219, 15)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(54, 13)
         Me.Label5.TabIndex = 15
-        Me.Label5.Text = "Label 5 -1"
+        Me.Label5.Text = "Label 5 -2"
         '
         'druh_reziva
         '
