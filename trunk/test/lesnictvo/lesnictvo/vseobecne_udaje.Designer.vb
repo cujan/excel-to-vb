@@ -56,6 +56,14 @@ Partial Class vseobecne_udaje
         Me.DicTextBox = New System.Windows.Forms.TextBox
         Me.Cislo_uctuTextBox = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
+        Me.PokusDataSet1 = New lesnictvo.pokusDataSet1
+        Me.Vseobecne_udajeBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Vseobecne_udajeTableAdapter1 = New lesnictvo.pokusDataSet1TableAdapters.vseobecne_udajeTableAdapter
+        Me.TableAdapterManager1 = New lesnictvo.pokusDataSet1TableAdapters.TableAdapterManager
+        Me.Vseobecne_udajeDataGridView = New System.Windows.Forms.DataGridView
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         NazovLabel = New System.Windows.Forms.Label
         UlicaLabel = New System.Windows.Forms.Label
         MestoLabel = New System.Windows.Forms.Label
@@ -67,6 +75,9 @@ Partial Class vseobecne_udaje
         CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Vseobecne_udajeBindingNavigator.SuspendLayout()
+        CType(Me.PokusDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Vseobecne_udajeBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Vseobecne_udajeDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NazovLabel
@@ -329,11 +340,61 @@ Partial Class vseobecne_udaje
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "cau marek"
         '
+        'PokusDataSet1
+        '
+        Me.PokusDataSet1.DataSetName = "pokusDataSet1"
+        Me.PokusDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Vseobecne_udajeBindingSource1
+        '
+        Me.Vseobecne_udajeBindingSource1.DataMember = "vseobecne_udaje"
+        Me.Vseobecne_udajeBindingSource1.DataSource = Me.PokusDataSet1
+        '
+        'Vseobecne_udajeTableAdapter1
+        '
+        Me.Vseobecne_udajeTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.Connection = Nothing
+        Me.TableAdapterManager1.UpdateOrder = lesnictvo.pokusDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Vseobecne_udajeDataGridView
+        '
+        Me.Vseobecne_udajeDataGridView.AutoGenerateColumns = False
+        Me.Vseobecne_udajeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Vseobecne_udajeDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
+        Me.Vseobecne_udajeDataGridView.DataSource = Me.Vseobecne_udajeBindingSource1
+        Me.Vseobecne_udajeDataGridView.Location = New System.Drawing.Point(384, 237)
+        Me.Vseobecne_udajeDataGridView.Name = "Vseobecne_udajeDataGridView"
+        Me.Vseobecne_udajeDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.Vseobecne_udajeDataGridView.TabIndex = 17
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Mesto"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Mesto"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "psc"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "psc"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "cislo_uctu"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "cislo_uctu"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
         'vseobecne_udaje
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(612, 470)
+        Me.ClientSize = New System.Drawing.Size(704, 477)
+        Me.Controls.Add(Me.Vseobecne_udajeDataGridView)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(NazovLabel)
         Me.Controls.Add(Me.NazovTextBox)
@@ -357,6 +418,9 @@ Partial Class vseobecne_udaje
         CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Vseobecne_udajeBindingNavigator.ResumeLayout(False)
         Me.Vseobecne_udajeBindingNavigator.PerformLayout()
+        CType(Me.PokusDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Vseobecne_udajeBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Vseobecne_udajeDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -386,4 +450,12 @@ Partial Class vseobecne_udaje
     Friend WithEvents DicTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Cislo_uctuTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents PokusDataSet1 As lesnictvo.pokusDataSet1
+    Friend WithEvents Vseobecne_udajeBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents Vseobecne_udajeTableAdapter1 As lesnictvo.pokusDataSet1TableAdapters.vseobecne_udajeTableAdapter
+    Friend WithEvents TableAdapterManager1 As lesnictvo.pokusDataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents Vseobecne_udajeDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
