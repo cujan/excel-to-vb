@@ -61,6 +61,7 @@ Partial Class odberatelia
         Me.IcoTextBox = New System.Windows.Forms.TextBox
         Me.DicTextBox = New System.Windows.Forms.TextBox
         Me.Button1 = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
         NazovLabel = New System.Windows.Forms.Label
         UlicaLabel = New System.Windows.Forms.Label
         MestoLabel = New System.Windows.Forms.Label
@@ -179,7 +180,7 @@ Partial Class odberatelia
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -376,11 +377,21 @@ Partial Class odberatelia
         Me.Button1.Text = "uloz"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(221, 138)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(59, 13)
+        Me.Label1.TabIndex = 17
+        Me.Label1.Text = "odberatelia"
+        '
         'odberatelia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(775, 434)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(NazovLabel)
         Me.Controls.Add(Me.NazovTextBox)
@@ -439,4 +450,5 @@ Partial Class odberatelia
     Friend WithEvents IcoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents DicTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
