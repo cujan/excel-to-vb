@@ -59,6 +59,10 @@ Partial Class MDIParent1
         Me.TileHorizontalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ArrangeIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.ČíselníkyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.DodávateliaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.NastaveniaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.VšeobecnéÚdajeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem
         Me.ContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.IndexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
@@ -77,10 +81,6 @@ Partial Class MDIParent1
         Me.StatusStrip = New System.Windows.Forms.StatusStrip
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ČíselníkyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.DodávateliaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.NastaveniaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.VšeobecnéÚdajeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -110,7 +110,7 @@ Partial Class MDIParent1
         Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.NewToolStripMenuItem.Text = "&New"
         '
         'OpenToolStripMenuItem
@@ -331,6 +331,32 @@ Partial Class MDIParent1
         Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.ArrangeIconsToolStripMenuItem.Text = "&Arrange Icons"
         '
+        'ČíselníkyToolStripMenuItem
+        '
+        Me.ČíselníkyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DodávateliaToolStripMenuItem})
+        Me.ČíselníkyToolStripMenuItem.Name = "ČíselníkyToolStripMenuItem"
+        Me.ČíselníkyToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
+        Me.ČíselníkyToolStripMenuItem.Text = "Číselníky"
+        '
+        'DodávateliaToolStripMenuItem
+        '
+        Me.DodávateliaToolStripMenuItem.Name = "DodávateliaToolStripMenuItem"
+        Me.DodávateliaToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.DodávateliaToolStripMenuItem.Text = "Odberatelia"
+        '
+        'NastaveniaToolStripMenuItem
+        '
+        Me.NastaveniaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VšeobecnéÚdajeToolStripMenuItem})
+        Me.NastaveniaToolStripMenuItem.Name = "NastaveniaToolStripMenuItem"
+        Me.NastaveniaToolStripMenuItem.Size = New System.Drawing.Size(73, 20)
+        Me.NastaveniaToolStripMenuItem.Text = "Nastavenia"
+        '
+        'VšeobecnéÚdajeToolStripMenuItem
+        '
+        Me.VšeobecnéÚdajeToolStripMenuItem.Name = "VšeobecnéÚdajeToolStripMenuItem"
+        Me.VšeobecnéÚdajeToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.VšeobecnéÚdajeToolStripMenuItem.Text = "Všeobecné údaje"
+        '
         'HelpMenu
         '
         Me.HelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.IndexToolStripMenuItem, Me.SearchToolStripMenuItem, Me.ToolStripSeparator8, Me.AboutToolStripMenuItem})
@@ -459,32 +485,6 @@ Partial Class MDIParent1
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(38, 17)
         Me.ToolStripStatusLabel.Text = "Status"
-        '
-        'ČíselníkyToolStripMenuItem
-        '
-        Me.ČíselníkyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DodávateliaToolStripMenuItem})
-        Me.ČíselníkyToolStripMenuItem.Name = "ČíselníkyToolStripMenuItem"
-        Me.ČíselníkyToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
-        Me.ČíselníkyToolStripMenuItem.Text = "Číselníky"
-        '
-        'DodávateliaToolStripMenuItem
-        '
-        Me.DodávateliaToolStripMenuItem.Name = "DodávateliaToolStripMenuItem"
-        Me.DodávateliaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DodávateliaToolStripMenuItem.Text = "Odberatelia"
-        '
-        'NastaveniaToolStripMenuItem
-        '
-        Me.NastaveniaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VšeobecnéÚdajeToolStripMenuItem})
-        Me.NastaveniaToolStripMenuItem.Name = "NastaveniaToolStripMenuItem"
-        Me.NastaveniaToolStripMenuItem.Size = New System.Drawing.Size(73, 20)
-        Me.NastaveniaToolStripMenuItem.Text = "Nastavenia"
-        '
-        'VšeobecnéÚdajeToolStripMenuItem
-        '
-        Me.VšeobecnéÚdajeToolStripMenuItem.Name = "VšeobecnéÚdajeToolStripMenuItem"
-        Me.VšeobecnéÚdajeToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.VšeobecnéÚdajeToolStripMenuItem.Text = "Všeobecné údaje"
         '
         'MDIParent1
         '

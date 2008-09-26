@@ -23,7 +23,6 @@ Partial Class vseobecne_udaje
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(vseobecne_udaje))
         Dim NazovLabel As System.Windows.Forms.Label
         Dim UlicaLabel As System.Windows.Forms.Label
         Dim MestoLabel As System.Windows.Forms.Label
@@ -31,22 +30,19 @@ Partial Class vseobecne_udaje
         Dim IcoLabel As System.Windows.Forms.Label
         Dim DicLabel As System.Windows.Forms.Label
         Dim Cislo_uctuLabel As System.Windows.Forms.Label
-        Me.Vseobecne_udajeDataSet1 = New lesnictvo.vseobecne_udajeDataSet1
-        Me.Vseobecne_udajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Vseobecne_udajeTableAdapter = New lesnictvo.vseobecne_udajeDataSet1TableAdapters.vseobecne_udajeTableAdapter
-        Me.TableAdapterManager = New lesnictvo.vseobecne_udajeDataSet1TableAdapters.TableAdapterManager
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(vseobecne_udaje))
         Me.Vseobecne_udajeBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.Vseobecne_udajeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.NazovTextBox = New System.Windows.Forms.TextBox
         Me.UlicaTextBox = New System.Windows.Forms.TextBox
@@ -55,6 +51,11 @@ Partial Class vseobecne_udaje
         Me.IcoTextBox = New System.Windows.Forms.TextBox
         Me.DicTextBox = New System.Windows.Forms.TextBox
         Me.Cislo_uctuTextBox = New System.Windows.Forms.TextBox
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.Vseobecne_udajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Vseobecne_udajeDataSet1 = New lesnictvo.vseobecne_udajeDataSet1
+        Me.Vseobecne_udajeTableAdapter = New lesnictvo.vseobecne_udajeDataSet1TableAdapters.vseobecne_udajeTableAdapter
+        Me.TableAdapterManager = New lesnictvo.vseobecne_udajeDataSet1TableAdapters.TableAdapterManager
         NazovLabel = New System.Windows.Forms.Label
         UlicaLabel = New System.Windows.Forms.Label
         MestoLabel = New System.Windows.Forms.Label
@@ -62,31 +63,74 @@ Partial Class vseobecne_udaje
         IcoLabel = New System.Windows.Forms.Label
         DicLabel = New System.Windows.Forms.Label
         Cislo_uctuLabel = New System.Windows.Forms.Label
-        CType(Me.Vseobecne_udajeDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Vseobecne_udajeBindingNavigator.SuspendLayout()
+        CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Vseobecne_udajeDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Vseobecne_udajeDataSet1
+        'NazovLabel
         '
-        Me.Vseobecne_udajeDataSet1.DataSetName = "vseobecne_udajeDataSet1"
-        Me.Vseobecne_udajeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        NazovLabel.AutoSize = True
+        NazovLabel.Location = New System.Drawing.Point(36, 58)
+        NazovLabel.Name = "NazovLabel"
+        NazovLabel.Size = New System.Drawing.Size(95, 13)
+        NazovLabel.TabIndex = 3
+        NazovLabel.Text = "Názov organizácie"
         '
-        'Vseobecne_udajeBindingSource
+        'UlicaLabel
         '
-        Me.Vseobecne_udajeBindingSource.DataMember = "vseobecne_udaje"
-        Me.Vseobecne_udajeBindingSource.DataSource = Me.Vseobecne_udajeDataSet1
+        UlicaLabel.AutoSize = True
+        UlicaLabel.Location = New System.Drawing.Point(36, 97)
+        UlicaLabel.Name = "UlicaLabel"
+        UlicaLabel.Size = New System.Drawing.Size(31, 13)
+        UlicaLabel.TabIndex = 5
+        UlicaLabel.Text = "Ulica"
         '
-        'Vseobecne_udajeTableAdapter
+        'MestoLabel
         '
-        Me.Vseobecne_udajeTableAdapter.ClearBeforeFill = True
+        MestoLabel.AutoSize = True
+        MestoLabel.Location = New System.Drawing.Point(36, 136)
+        MestoLabel.Name = "MestoLabel"
+        MestoLabel.Size = New System.Drawing.Size(36, 13)
+        MestoLabel.TabIndex = 7
+        MestoLabel.Text = "Mesto"
         '
-        'TableAdapterManager
+        'PscLabel
         '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.UpdateOrder = lesnictvo.vseobecne_udajeDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.vseobecne_udajeTableAdapter = Me.Vseobecne_udajeTableAdapter
+        PscLabel.AutoSize = True
+        PscLabel.Location = New System.Drawing.Point(36, 175)
+        PscLabel.Name = "PscLabel"
+        PscLabel.Size = New System.Drawing.Size(28, 13)
+        PscLabel.TabIndex = 9
+        PscLabel.Text = "PSČ"
+        '
+        'IcoLabel
+        '
+        IcoLabel.AutoSize = True
+        IcoLabel.Location = New System.Drawing.Point(36, 214)
+        IcoLabel.Name = "IcoLabel"
+        IcoLabel.Size = New System.Drawing.Size(25, 13)
+        IcoLabel.TabIndex = 11
+        IcoLabel.Text = "IČO"
+        '
+        'DicLabel
+        '
+        DicLabel.AutoSize = True
+        DicLabel.Location = New System.Drawing.Point(36, 253)
+        DicLabel.Name = "DicLabel"
+        DicLabel.Size = New System.Drawing.Size(25, 13)
+        DicLabel.TabIndex = 13
+        DicLabel.Text = "DIČ"
+        '
+        'Cislo_uctuLabel
+        '
+        Cislo_uctuLabel.AutoSize = True
+        Cislo_uctuLabel.Location = New System.Drawing.Point(36, 292)
+        Cislo_uctuLabel.Name = "Cislo_uctuLabel"
+        Cislo_uctuLabel.Size = New System.Drawing.Size(55, 13)
+        Cislo_uctuLabel.TabIndex = 15
+        Cislo_uctuLabel.Text = "Číslo účtu"
         '
         'Vseobecne_udajeBindingNavigator
         '
@@ -106,6 +150,31 @@ Partial Class vseobecne_udaje
         Me.Vseobecne_udajeBindingNavigator.TabIndex = 0
         Me.Vseobecne_udajeBindingNavigator.Text = "BindingNavigator1"
         Me.Vseobecne_udajeBindingNavigator.Visible = False
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -139,17 +208,10 @@ Partial Class vseobecne_udaje
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 13)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -157,7 +219,7 @@ Partial Class vseobecne_udaje
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -166,48 +228,21 @@ Partial Class vseobecne_udaje
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'Vseobecne_udajeBindingNavigatorSaveItem
         '
         Me.Vseobecne_udajeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Image = CType(resources.GetObject("Vseobecne_udajeBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Name = "Vseobecne_udajeBindingNavigatorSaveItem"
-        Me.Vseobecne_udajeBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.Vseobecne_udajeBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'NazovLabel
-        '
-        NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(36, 58)
-        NazovLabel.Name = "NazovLabel"
-        NazovLabel.Size = New System.Drawing.Size(95, 13)
-        NazovLabel.TabIndex = 3
-        NazovLabel.Text = "Názov organizácie"
         '
         'NazovTextBox
         '
@@ -217,15 +252,6 @@ Partial Class vseobecne_udaje
         Me.NazovTextBox.Size = New System.Drawing.Size(483, 20)
         Me.NazovTextBox.TabIndex = 4
         '
-        'UlicaLabel
-        '
-        UlicaLabel.AutoSize = True
-        UlicaLabel.Location = New System.Drawing.Point(36, 97)
-        UlicaLabel.Name = "UlicaLabel"
-        UlicaLabel.Size = New System.Drawing.Size(31, 13)
-        UlicaLabel.TabIndex = 5
-        UlicaLabel.Text = "Ulica"
-        '
         'UlicaTextBox
         '
         Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "ulica", True))
@@ -233,15 +259,6 @@ Partial Class vseobecne_udaje
         Me.UlicaTextBox.Name = "UlicaTextBox"
         Me.UlicaTextBox.Size = New System.Drawing.Size(148, 20)
         Me.UlicaTextBox.TabIndex = 6
-        '
-        'MestoLabel
-        '
-        MestoLabel.AutoSize = True
-        MestoLabel.Location = New System.Drawing.Point(36, 136)
-        MestoLabel.Name = "MestoLabel"
-        MestoLabel.Size = New System.Drawing.Size(36, 13)
-        MestoLabel.TabIndex = 7
-        MestoLabel.Text = "Mesto"
         '
         'MestoTextBox
         '
@@ -251,15 +268,6 @@ Partial Class vseobecne_udaje
         Me.MestoTextBox.Size = New System.Drawing.Size(148, 20)
         Me.MestoTextBox.TabIndex = 8
         '
-        'PscLabel
-        '
-        PscLabel.AutoSize = True
-        PscLabel.Location = New System.Drawing.Point(36, 175)
-        PscLabel.Name = "PscLabel"
-        PscLabel.Size = New System.Drawing.Size(28, 13)
-        PscLabel.TabIndex = 9
-        PscLabel.Text = "PSČ"
-        '
         'PscTextBox
         '
         Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "psc", True))
@@ -267,15 +275,6 @@ Partial Class vseobecne_udaje
         Me.PscTextBox.Name = "PscTextBox"
         Me.PscTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PscTextBox.TabIndex = 10
-        '
-        'IcoLabel
-        '
-        IcoLabel.AutoSize = True
-        IcoLabel.Location = New System.Drawing.Point(36, 214)
-        IcoLabel.Name = "IcoLabel"
-        IcoLabel.Size = New System.Drawing.Size(25, 13)
-        IcoLabel.TabIndex = 11
-        IcoLabel.Text = "IČO"
         '
         'IcoTextBox
         '
@@ -285,15 +284,6 @@ Partial Class vseobecne_udaje
         Me.IcoTextBox.Size = New System.Drawing.Size(148, 20)
         Me.IcoTextBox.TabIndex = 12
         '
-        'DicLabel
-        '
-        DicLabel.AutoSize = True
-        DicLabel.Location = New System.Drawing.Point(36, 253)
-        DicLabel.Name = "DicLabel"
-        DicLabel.Size = New System.Drawing.Size(25, 13)
-        DicLabel.TabIndex = 13
-        DicLabel.Text = "DIČ"
-        '
         'DicTextBox
         '
         Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "dic", True))
@@ -301,15 +291,6 @@ Partial Class vseobecne_udaje
         Me.DicTextBox.Name = "DicTextBox"
         Me.DicTextBox.Size = New System.Drawing.Size(148, 20)
         Me.DicTextBox.TabIndex = 14
-        '
-        'Cislo_uctuLabel
-        '
-        Cislo_uctuLabel.AutoSize = True
-        Cislo_uctuLabel.Location = New System.Drawing.Point(36, 292)
-        Cislo_uctuLabel.Name = "Cislo_uctuLabel"
-        Cislo_uctuLabel.Size = New System.Drawing.Size(55, 13)
-        Cislo_uctuLabel.TabIndex = 15
-        Cislo_uctuLabel.Text = "Číslo účtu"
         '
         'Cislo_uctuTextBox
         '
@@ -319,11 +300,41 @@ Partial Class vseobecne_udaje
         Me.Cislo_uctuTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Cislo_uctuTextBox.TabIndex = 16
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(294, 304)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 17
+        Me.Button1.Text = "Ulož zmeny"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Vseobecne_udajeBindingSource
+        '
+        Me.Vseobecne_udajeBindingSource.DataMember = "vseobecne_udaje"
+        Me.Vseobecne_udajeBindingSource.DataSource = Me.Vseobecne_udajeDataSet1
+        '
+        'Vseobecne_udajeDataSet1
+        '
+        Me.Vseobecne_udajeDataSet1.DataSetName = "vseobecne_udajeDataSet1"
+        Me.Vseobecne_udajeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Vseobecne_udajeTableAdapter
+        '
+        Me.Vseobecne_udajeTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.UpdateOrder = lesnictvo.vseobecne_udajeDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.vseobecne_udajeTableAdapter = Me.Vseobecne_udajeTableAdapter
+        '
         'vseobecne_udaje
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(612, 470)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(NazovLabel)
         Me.Controls.Add(Me.NazovTextBox)
         Me.Controls.Add(UlicaLabel)
@@ -340,12 +351,13 @@ Partial Class vseobecne_udaje
         Me.Controls.Add(Me.Cislo_uctuTextBox)
         Me.Controls.Add(Me.Vseobecne_udajeBindingNavigator)
         Me.Name = "vseobecne_udaje"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Všeobecné údaje"
-        CType(Me.Vseobecne_udajeDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Vseobecne_udajeBindingNavigator.ResumeLayout(False)
         Me.Vseobecne_udajeBindingNavigator.PerformLayout()
+        CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Vseobecne_udajeDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -374,4 +386,5 @@ Partial Class vseobecne_udaje
     Friend WithEvents IcoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents DicTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Cislo_uctuTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
