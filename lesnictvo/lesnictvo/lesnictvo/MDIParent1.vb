@@ -101,4 +101,29 @@ Public Class MDIParent1
 
 
     End Sub
+
+    Private Sub CenníkToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CenníkToolStripMenuItem.Click
+        cennik.Show()
+
+    End Sub
+
+    Private Sub ZoznamDrevínToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ZoznamDrevínToolStripMenuItem.Click
+        zoznam_drevin.Show()
+
+    End Sub
+
+    Private Sub MožnostiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MožnostiToolStripMenuItem.Click
+        moznosti.Show()
+
+    End Sub
+
+    Private Sub DodacíListToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DodacíListToolStripMenuItem.Click
+        dodaci_list.Show()
+
+    End Sub
+
+    Private Sub VystavenéFaktúryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VystavenéFaktúryToolStripMenuItem.Click
+        vystavene_faktury.Show()
+
+    End Sub
 End Class

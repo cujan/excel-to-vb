@@ -96,4 +96,9 @@ Public Class MDIParent1
     Private Sub VšeobecnéÚdajeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VšeobecnéÚdajeToolStripMenuItem.Click
         vseobecne_udaje.Show()
     End Sub
+
+    Private Sub DalsiaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DalsiaToolStripMenuItem.Click
+        Form2.Show()
+
+    End Sub
 End Class
