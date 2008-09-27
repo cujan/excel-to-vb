@@ -103,7 +103,7 @@ Public Class MDIParent1
     End Sub
 
     Private Sub CenníkToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CenníkToolStripMenuItem.Click
-        cennik.Show()
+
 
     End Sub
 
@@ -125,5 +125,13 @@ Public Class MDIParent1
     Private Sub VystavenéFaktúryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VystavenéFaktúryToolStripMenuItem.Click
         vystavene_faktury.Show()
 
+    End Sub
+
+    Private Sub CenníkRezivaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CenníkRezivaToolStripMenuItem.Click
+        cennik_reziva.Show()
+    End Sub
+
+    Private Sub CenníkGuľatinovýchVýrezovToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CenníkGuľatinovýchVýrezovToolStripMenuItem.Click
+        cennik_vyrezov.Show()
     End Sub
 End Class

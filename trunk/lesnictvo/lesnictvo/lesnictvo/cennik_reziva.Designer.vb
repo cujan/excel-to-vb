@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class zoznam_drevin
+Partial Class cennik_reziva
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,12 +23,12 @@ Partial Class zoznam_drevin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(zoznam_drevin))
-        Me.Zoznam_drevinDataSet1 = New lesnictvo.zoznam_drevinDataSet1
-        Me.DrevinyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DrevinyTableAdapter = New lesnictvo.zoznam_drevinDataSet1TableAdapters.drevinyTableAdapter
-        Me.TableAdapterManager = New lesnictvo.zoznam_drevinDataSet1TableAdapters.TableAdapterManager
-        Me.DrevinyBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(cennik_reziva))
+        Me.RezivoDataSet1 = New lesnictvo.rezivoDataSet1
+        Me.Druh_rezivaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Druh_rezivaTableAdapter = New lesnictvo.rezivoDataSet1TableAdapters.druh_rezivaTableAdapter
+        Me.TableAdapterManager = New lesnictvo.rezivoDataSet1TableAdapters.TableAdapterManager
+        Me.Druh_rezivaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
@@ -40,54 +40,56 @@ Partial Class zoznam_drevin
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
-        Me.DrevinyBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.DrevinyDataGridView = New System.Windows.Forms.DataGridView
+        Me.Druh_rezivaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
+        Me.Druh_rezivaDataGridView = New System.Windows.Forms.DataGridView
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        CType(Me.Zoznam_drevinDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DrevinyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DrevinyBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.DrevinyBindingNavigator.SuspendLayout()
-        CType(Me.DrevinyDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        CType(Me.RezivoDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Druh_rezivaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Druh_rezivaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Druh_rezivaBindingNavigator.SuspendLayout()
+        CType(Me.Druh_rezivaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Zoznam_drevinDataSet1
+        'RezivoDataSet1
         '
-        Me.Zoznam_drevinDataSet1.DataSetName = "zoznam_drevinDataSet1"
-        Me.Zoznam_drevinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.RezivoDataSet1.DataSetName = "rezivoDataSet1"
+        Me.RezivoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'DrevinyBindingSource
+        'Druh_rezivaBindingSource
         '
-        Me.DrevinyBindingSource.DataMember = "dreviny"
-        Me.DrevinyBindingSource.DataSource = Me.Zoznam_drevinDataSet1
+        Me.Druh_rezivaBindingSource.DataMember = "druh_reziva"
+        Me.Druh_rezivaBindingSource.DataSource = Me.RezivoDataSet1
         '
-        'DrevinyTableAdapter
+        'Druh_rezivaTableAdapter
         '
-        Me.DrevinyTableAdapter.ClearBeforeFill = True
+        Me.Druh_rezivaTableAdapter.ClearBeforeFill = True
         '
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.drevinyTableAdapter = Me.DrevinyTableAdapter
-        Me.TableAdapterManager.UpdateOrder = lesnictvo.zoznam_drevinDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.druh_rezivaTableAdapter = Me.Druh_rezivaTableAdapter
+        Me.TableAdapterManager.UpdateOrder = lesnictvo.rezivoDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'DrevinyBindingNavigator
+        'Druh_rezivaBindingNavigator
         '
-        Me.DrevinyBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.DrevinyBindingNavigator.BindingSource = Me.DrevinyBindingSource
-        Me.DrevinyBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.DrevinyBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.DrevinyBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.DrevinyBindingNavigatorSaveItem})
-        Me.DrevinyBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.DrevinyBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.DrevinyBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.DrevinyBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.DrevinyBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.DrevinyBindingNavigator.Name = "DrevinyBindingNavigator"
-        Me.DrevinyBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.DrevinyBindingNavigator.Size = New System.Drawing.Size(720, 25)
-        Me.DrevinyBindingNavigator.TabIndex = 0
-        Me.DrevinyBindingNavigator.Text = "BindingNavigator1"
+        Me.Druh_rezivaBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.Druh_rezivaBindingNavigator.BindingSource = Me.Druh_rezivaBindingSource
+        Me.Druh_rezivaBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.Druh_rezivaBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.Druh_rezivaBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.Druh_rezivaBindingNavigatorSaveItem})
+        Me.Druh_rezivaBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.Druh_rezivaBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.Druh_rezivaBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.Druh_rezivaBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.Druh_rezivaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.Druh_rezivaBindingNavigator.Name = "Druh_rezivaBindingNavigator"
+        Me.Druh_rezivaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.Druh_rezivaBindingNavigator.Size = New System.Drawing.Size(727, 25)
+        Me.Druh_rezivaBindingNavigator.TabIndex = 0
+        Me.Druh_rezivaBindingNavigator.Text = "BindingNavigator1"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -174,63 +176,74 @@ Partial Class zoznam_drevin
         Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
-        'DrevinyBindingNavigatorSaveItem
+        'Druh_rezivaBindingNavigatorSaveItem
         '
-        Me.DrevinyBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.DrevinyBindingNavigatorSaveItem.Image = CType(resources.GetObject("DrevinyBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.DrevinyBindingNavigatorSaveItem.Name = "DrevinyBindingNavigatorSaveItem"
-        Me.DrevinyBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
-        Me.DrevinyBindingNavigatorSaveItem.Text = "Save Data"
+        Me.Druh_rezivaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Druh_rezivaBindingNavigatorSaveItem.Image = CType(resources.GetObject("Druh_rezivaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.Druh_rezivaBindingNavigatorSaveItem.Name = "Druh_rezivaBindingNavigatorSaveItem"
+        Me.Druh_rezivaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.Druh_rezivaBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'DrevinyDataGridView
+        'Druh_rezivaDataGridView
         '
-        Me.DrevinyDataGridView.AutoGenerateColumns = False
-        Me.DrevinyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DrevinyDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
-        Me.DrevinyDataGridView.DataSource = Me.DrevinyBindingSource
-        Me.DrevinyDataGridView.Location = New System.Drawing.Point(108, 28)
-        Me.DrevinyDataGridView.Name = "DrevinyDataGridView"
-        Me.DrevinyDataGridView.Size = New System.Drawing.Size(340, 349)
-        Me.DrevinyDataGridView.TabIndex = 1
+        Me.Druh_rezivaDataGridView.AutoGenerateColumns = False
+        Me.Druh_rezivaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Druh_rezivaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.Druh_rezivaDataGridView.DataSource = Me.Druh_rezivaBindingSource
+        Me.Druh_rezivaDataGridView.Location = New System.Drawing.Point(62, 45)
+        Me.Druh_rezivaDataGridView.Name = "Druh_rezivaDataGridView"
+        Me.Druh_rezivaDataGridView.Size = New System.Drawing.Size(452, 220)
+        Me.Druh_rezivaDataGridView.TabIndex = 1
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "id"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
         '
         'DataGridViewTextBoxColumn2
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "nazov"
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "kod"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "kod"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
         'DataGridViewTextBoxColumn3
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "skratka"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "skratka"
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "druh_reziva"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "druh_reziva"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
-        'zoznam_drevin
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "cena"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "cena"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'cennik_reziva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(720, 416)
-        Me.Controls.Add(Me.DrevinyDataGridView)
-        Me.Controls.Add(Me.DrevinyBindingNavigator)
-        Me.Name = "zoznam_drevin"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Zoznam drevín"
-        CType(Me.Zoznam_drevinDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DrevinyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DrevinyBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.DrevinyBindingNavigator.ResumeLayout(False)
-        Me.DrevinyBindingNavigator.PerformLayout()
-        CType(Me.DrevinyDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ClientSize = New System.Drawing.Size(727, 330)
+        Me.Controls.Add(Me.Druh_rezivaDataGridView)
+        Me.Controls.Add(Me.Druh_rezivaBindingNavigator)
+        Me.Name = "cennik_reziva"
+        Me.Text = "cennik_reziva"
+        CType(Me.RezivoDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Druh_rezivaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Druh_rezivaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Druh_rezivaBindingNavigator.ResumeLayout(False)
+        Me.Druh_rezivaBindingNavigator.PerformLayout()
+        CType(Me.Druh_rezivaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Zoznam_drevinDataSet1 As lesnictvo.zoznam_drevinDataSet1
-    Friend WithEvents DrevinyBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents DrevinyTableAdapter As lesnictvo.zoznam_drevinDataSet1TableAdapters.drevinyTableAdapter
-    Friend WithEvents TableAdapterManager As lesnictvo.zoznam_drevinDataSet1TableAdapters.TableAdapterManager
-    Friend WithEvents DrevinyBindingNavigator As System.Windows.Forms.BindingNavigator
+    Friend WithEvents RezivoDataSet1 As lesnictvo.rezivoDataSet1
+    Friend WithEvents Druh_rezivaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Druh_rezivaTableAdapter As lesnictvo.rezivoDataSet1TableAdapters.druh_rezivaTableAdapter
+    Friend WithEvents TableAdapterManager As lesnictvo.rezivoDataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents Druh_rezivaBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
     Friend WithEvents BindingNavigatorDeleteItem As System.Windows.Forms.ToolStripButton
@@ -242,8 +255,10 @@ Partial Class zoznam_drevin
     Friend WithEvents BindingNavigatorMoveNextItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents DrevinyBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents DrevinyDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents Druh_rezivaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Druh_rezivaDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
