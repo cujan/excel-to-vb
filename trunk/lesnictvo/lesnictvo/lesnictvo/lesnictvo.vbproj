@@ -138,6 +138,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="odberateliaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>odberateliaDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="vseobecne_udaje.Designer.vb">
       <DependentUpon>vseobecne_udaje.vb</DependentUpon>
     </Compile>
@@ -224,6 +229,17 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="odberateliaDataSet1.xsc">
+      <DependentUpon>odberateliaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="odberateliaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>odberateliaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="odberateliaDataSet1.xss">
+      <DependentUpon>odberateliaDataSet1.xsd</DependentUpon>
     </None>
     <None Include="vseobecne_udajeDataSet1.xsc">
       <DependentUpon>vseobecne_udajeDataSet1.xsd</DependentUpon>
