@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class odberatelia
+Partial Class novy_odberatel
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,8 +23,7 @@ Partial Class odberatelia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(odberatelia))
-        Dim IdLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(novy_odberatel))
         Dim NazovLabel As System.Windows.Forms.Label
         Dim UlicaLabel As System.Windows.Forms.Label
         Dim MestoLabel As System.Windows.Forms.Label
@@ -49,24 +48,14 @@ Partial Class odberatelia
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.OdberateliaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.OdberateliaDataGridView = New System.Windows.Forms.DataGridView
-        Me.IdTextBox = New System.Windows.Forms.TextBox
-        Me.NazovComboBox = New System.Windows.Forms.ComboBox
+        Me.NazovTextBox = New System.Windows.Forms.TextBox
         Me.UlicaTextBox = New System.Windows.Forms.TextBox
         Me.MestoTextBox = New System.Windows.Forms.TextBox
         Me.PscTextBox = New System.Windows.Forms.TextBox
         Me.IcoTextBox = New System.Windows.Forms.TextBox
         Me.DicTextBox = New System.Windows.Forms.TextBox
         Me.Cislo_uctuTextBox = New System.Windows.Forms.TextBox
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Button1 = New System.Windows.Forms.Button
-        IdLabel = New System.Windows.Forms.Label
         NazovLabel = New System.Windows.Forms.Label
         UlicaLabel = New System.Windows.Forms.Label
         MestoLabel = New System.Windows.Forms.Label
@@ -78,7 +67,6 @@ Partial Class odberatelia
         CType(Me.OdberateliaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OdberateliaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.OdberateliaBindingNavigator.SuspendLayout()
-        CType(Me.OdberateliaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'OdberateliaDataSet1
@@ -115,7 +103,7 @@ Partial Class odberatelia
         Me.OdberateliaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.OdberateliaBindingNavigator.Name = "OdberateliaBindingNavigator"
         Me.OdberateliaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.OdberateliaBindingNavigator.Size = New System.Drawing.Size(907, 25)
+        Me.OdberateliaBindingNavigator.Size = New System.Drawing.Size(462, 25)
         Me.OdberateliaBindingNavigator.TabIndex = 0
         Me.OdberateliaBindingNavigator.Text = "BindingNavigator1"
         '
@@ -212,224 +200,142 @@ Partial Class odberatelia
         Me.OdberateliaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.OdberateliaBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'OdberateliaDataGridView
-        '
-        Me.OdberateliaDataGridView.AutoGenerateColumns = False
-        Me.OdberateliaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.OdberateliaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
-        Me.OdberateliaDataGridView.DataSource = Me.OdberateliaBindingSource
-        Me.OdberateliaDataGridView.Location = New System.Drawing.Point(12, 279)
-        Me.OdberateliaDataGridView.Name = "OdberateliaDataGridView"
-        Me.OdberateliaDataGridView.Size = New System.Drawing.Size(844, 220)
-        Me.OdberateliaDataGridView.TabIndex = 1
-        '
-        'IdLabel
-        '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(132, 73)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(18, 13)
-        IdLabel.TabIndex = 2
-        IdLabel.Text = "id:"
-        '
-        'IdTextBox
-        '
-        Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "id", True))
-        Me.IdTextBox.Location = New System.Drawing.Point(193, 70)
-        Me.IdTextBox.Name = "IdTextBox"
-        Me.IdTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.IdTextBox.TabIndex = 3
-        '
         'NazovLabel
         '
         NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(132, 99)
+        NazovLabel.Location = New System.Drawing.Point(76, 106)
         NazovLabel.Name = "NazovLabel"
         NazovLabel.Size = New System.Drawing.Size(39, 13)
-        NazovLabel.TabIndex = 4
+        NazovLabel.TabIndex = 3
         NazovLabel.Text = "nazov:"
         '
-        'NazovComboBox
+        'NazovTextBox
         '
-        Me.NazovComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "nazov", True))
-        Me.NazovComboBox.DataSource = Me.OdberateliaBindingSource
-        Me.NazovComboBox.DisplayMember = "nazov"
-        Me.NazovComboBox.FormattingEnabled = True
-        Me.NazovComboBox.Location = New System.Drawing.Point(193, 96)
-        Me.NazovComboBox.Name = "NazovComboBox"
-        Me.NazovComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.NazovComboBox.TabIndex = 5
+        Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "nazov", True))
+        Me.NazovTextBox.Location = New System.Drawing.Point(137, 103)
+        Me.NazovTextBox.Name = "NazovTextBox"
+        Me.NazovTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NazovTextBox.TabIndex = 4
         '
         'UlicaLabel
         '
         UlicaLabel.AutoSize = True
-        UlicaLabel.Location = New System.Drawing.Point(132, 126)
+        UlicaLabel.Location = New System.Drawing.Point(76, 132)
         UlicaLabel.Name = "UlicaLabel"
         UlicaLabel.Size = New System.Drawing.Size(32, 13)
-        UlicaLabel.TabIndex = 6
+        UlicaLabel.TabIndex = 5
         UlicaLabel.Text = "ulica:"
         '
         'UlicaTextBox
         '
         Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "ulica", True))
-        Me.UlicaTextBox.Location = New System.Drawing.Point(193, 123)
+        Me.UlicaTextBox.Location = New System.Drawing.Point(137, 129)
         Me.UlicaTextBox.Name = "UlicaTextBox"
-        Me.UlicaTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.UlicaTextBox.TabIndex = 7
+        Me.UlicaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.UlicaTextBox.TabIndex = 6
         '
         'MestoLabel
         '
         MestoLabel.AutoSize = True
-        MestoLabel.Location = New System.Drawing.Point(132, 152)
+        MestoLabel.Location = New System.Drawing.Point(76, 158)
         MestoLabel.Name = "MestoLabel"
         MestoLabel.Size = New System.Drawing.Size(38, 13)
-        MestoLabel.TabIndex = 8
+        MestoLabel.TabIndex = 7
         MestoLabel.Text = "mesto:"
         '
         'MestoTextBox
         '
         Me.MestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "mesto", True))
-        Me.MestoTextBox.Location = New System.Drawing.Point(193, 149)
+        Me.MestoTextBox.Location = New System.Drawing.Point(137, 155)
         Me.MestoTextBox.Name = "MestoTextBox"
-        Me.MestoTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.MestoTextBox.TabIndex = 9
+        Me.MestoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.MestoTextBox.TabIndex = 8
         '
         'PscLabel
         '
         PscLabel.AutoSize = True
-        PscLabel.Location = New System.Drawing.Point(132, 178)
+        PscLabel.Location = New System.Drawing.Point(76, 184)
         PscLabel.Name = "PscLabel"
         PscLabel.Size = New System.Drawing.Size(27, 13)
-        PscLabel.TabIndex = 10
+        PscLabel.TabIndex = 9
         PscLabel.Text = "psc:"
         '
         'PscTextBox
         '
         Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "psc", True))
-        Me.PscTextBox.Location = New System.Drawing.Point(193, 175)
+        Me.PscTextBox.Location = New System.Drawing.Point(137, 181)
         Me.PscTextBox.Name = "PscTextBox"
-        Me.PscTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.PscTextBox.TabIndex = 11
+        Me.PscTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.PscTextBox.TabIndex = 10
         '
         'IcoLabel
         '
         IcoLabel.AutoSize = True
-        IcoLabel.Location = New System.Drawing.Point(132, 204)
+        IcoLabel.Location = New System.Drawing.Point(76, 210)
         IcoLabel.Name = "IcoLabel"
         IcoLabel.Size = New System.Drawing.Size(24, 13)
-        IcoLabel.TabIndex = 12
+        IcoLabel.TabIndex = 11
         IcoLabel.Text = "ico:"
         '
         'IcoTextBox
         '
         Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "ico", True))
-        Me.IcoTextBox.Location = New System.Drawing.Point(193, 201)
+        Me.IcoTextBox.Location = New System.Drawing.Point(137, 207)
         Me.IcoTextBox.Name = "IcoTextBox"
-        Me.IcoTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.IcoTextBox.TabIndex = 13
+        Me.IcoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.IcoTextBox.TabIndex = 12
         '
         'DicLabel
         '
         DicLabel.AutoSize = True
-        DicLabel.Location = New System.Drawing.Point(132, 230)
+        DicLabel.Location = New System.Drawing.Point(76, 236)
         DicLabel.Name = "DicLabel"
         DicLabel.Size = New System.Drawing.Size(24, 13)
-        DicLabel.TabIndex = 14
+        DicLabel.TabIndex = 13
         DicLabel.Text = "dic:"
         '
         'DicTextBox
         '
         Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "dic", True))
-        Me.DicTextBox.Location = New System.Drawing.Point(193, 227)
+        Me.DicTextBox.Location = New System.Drawing.Point(137, 233)
         Me.DicTextBox.Name = "DicTextBox"
-        Me.DicTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.DicTextBox.TabIndex = 15
+        Me.DicTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.DicTextBox.TabIndex = 14
         '
         'Cislo_uctuLabel
         '
         Cislo_uctuLabel.AutoSize = True
-        Cislo_uctuLabel.Location = New System.Drawing.Point(132, 256)
+        Cislo_uctuLabel.Location = New System.Drawing.Point(76, 262)
         Cislo_uctuLabel.Name = "Cislo_uctuLabel"
         Cislo_uctuLabel.Size = New System.Drawing.Size(55, 13)
-        Cislo_uctuLabel.TabIndex = 16
+        Cislo_uctuLabel.TabIndex = 15
         Cislo_uctuLabel.Text = "cislo uctu:"
         '
         'Cislo_uctuTextBox
         '
         Me.Cislo_uctuTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "cislo_uctu", True))
-        Me.Cislo_uctuTextBox.Location = New System.Drawing.Point(193, 253)
+        Me.Cislo_uctuTextBox.Location = New System.Drawing.Point(137, 259)
         Me.Cislo_uctuTextBox.Name = "Cislo_uctuTextBox"
-        Me.Cislo_uctuTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.Cislo_uctuTextBox.TabIndex = 17
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "nazov"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "ulica"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "ulica"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "mesto"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "mesto"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "psc"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "psc"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "ico"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "ico"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "dic"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "dic"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "cislo_uctu"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "cislo_uctu"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.Cislo_uctuTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Cislo_uctuTextBox.TabIndex = 16
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(574, 88)
+        Me.Button1.Location = New System.Drawing.Point(137, 316)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(127, 23)
-        Me.Button1.TabIndex = 18
-        Me.Button1.Text = "Nový odberateľ"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 17
+        Me.Button1.Text = "Pridaj "
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'odberatelia
+        'novy_odberatel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(907, 555)
+        Me.ClientSize = New System.Drawing.Size(462, 374)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(IdLabel)
-        Me.Controls.Add(Me.IdTextBox)
         Me.Controls.Add(NazovLabel)
-        Me.Controls.Add(Me.NazovComboBox)
+        Me.Controls.Add(Me.NazovTextBox)
         Me.Controls.Add(UlicaLabel)
         Me.Controls.Add(Me.UlicaTextBox)
         Me.Controls.Add(MestoLabel)
@@ -442,17 +348,14 @@ Partial Class odberatelia
         Me.Controls.Add(Me.DicTextBox)
         Me.Controls.Add(Cislo_uctuLabel)
         Me.Controls.Add(Me.Cislo_uctuTextBox)
-        Me.Controls.Add(Me.OdberateliaDataGridView)
         Me.Controls.Add(Me.OdberateliaBindingNavigator)
-        Me.Name = "odberatelia"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Odberatelia"
+        Me.Name = "novy_odberatel"
+        Me.Text = "Nový odberateľ"
         CType(Me.OdberateliaDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OdberateliaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OdberateliaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.OdberateliaBindingNavigator.ResumeLayout(False)
         Me.OdberateliaBindingNavigator.PerformLayout()
-        CType(Me.OdberateliaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -474,22 +377,12 @@ Partial Class odberatelia
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents OdberateliaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents OdberateliaDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents IdTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents NazovComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents NazovTextBox As System.Windows.Forms.TextBox
     Friend WithEvents UlicaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents MestoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents PscTextBox As System.Windows.Forms.TextBox
     Friend WithEvents IcoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents DicTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Cislo_uctuTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Button1 As System.Windows.Forms.Button
-
 End Class
