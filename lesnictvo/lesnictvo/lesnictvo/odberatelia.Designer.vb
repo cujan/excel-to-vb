@@ -23,8 +23,6 @@ Partial Class odberatelia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(odberatelia))
-        Dim IdLabel As System.Windows.Forms.Label
         Dim NazovLabel As System.Windows.Forms.Label
         Dim UlicaLabel As System.Windows.Forms.Label
         Dim MestoLabel As System.Windows.Forms.Label
@@ -32,32 +30,25 @@ Partial Class odberatelia
         Dim IcoLabel As System.Windows.Forms.Label
         Dim DicLabel As System.Windows.Forms.Label
         Dim Cislo_uctuLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(odberatelia))
         Me.OdberateliaDataSet1 = New lesnictvo.odberateliaDataSet1
         Me.OdberateliaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OdberateliaTableAdapter = New lesnictvo.odberateliaDataSet1TableAdapters.odberateliaTableAdapter
         Me.TableAdapterManager = New lesnictvo.odberateliaDataSet1TableAdapters.TableAdapterManager
         Me.OdberateliaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.OdberateliaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.OdberateliaDataGridView = New System.Windows.Forms.DataGridView
-        Me.IdTextBox = New System.Windows.Forms.TextBox
-        Me.NazovComboBox = New System.Windows.Forms.ComboBox
-        Me.UlicaTextBox = New System.Windows.Forms.TextBox
-        Me.MestoTextBox = New System.Windows.Forms.TextBox
-        Me.PscTextBox = New System.Windows.Forms.TextBox
-        Me.IcoTextBox = New System.Windows.Forms.TextBox
-        Me.DicTextBox = New System.Windows.Forms.TextBox
-        Me.Cislo_uctuTextBox = New System.Windows.Forms.TextBox
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -65,8 +56,14 @@ Partial Class odberatelia
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.NazovComboBox = New System.Windows.Forms.ComboBox
+        Me.UlicaTextBox = New System.Windows.Forms.TextBox
+        Me.MestoTextBox = New System.Windows.Forms.TextBox
+        Me.PscTextBox = New System.Windows.Forms.TextBox
+        Me.IcoTextBox = New System.Windows.Forms.TextBox
+        Me.DicTextBox = New System.Windows.Forms.TextBox
+        Me.Cislo_uctuTextBox = New System.Windows.Forms.TextBox
         Me.Button1 = New System.Windows.Forms.Button
-        IdLabel = New System.Windows.Forms.Label
         NazovLabel = New System.Windows.Forms.Label
         UlicaLabel = New System.Windows.Forms.Label
         MestoLabel = New System.Windows.Forms.Label
@@ -80,6 +77,69 @@ Partial Class odberatelia
         Me.OdberateliaBindingNavigator.SuspendLayout()
         CType(Me.OdberateliaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'NazovLabel
+        '
+        NazovLabel.AutoSize = True
+        NazovLabel.Location = New System.Drawing.Point(12, 47)
+        NazovLabel.Name = "NazovLabel"
+        NazovLabel.Size = New System.Drawing.Size(39, 13)
+        NazovLabel.TabIndex = 4
+        NazovLabel.Text = "nazov:"
+        '
+        'UlicaLabel
+        '
+        UlicaLabel.AutoSize = True
+        UlicaLabel.Location = New System.Drawing.Point(19, 123)
+        UlicaLabel.Name = "UlicaLabel"
+        UlicaLabel.Size = New System.Drawing.Size(32, 13)
+        UlicaLabel.TabIndex = 6
+        UlicaLabel.Text = "ulica:"
+        '
+        'MestoLabel
+        '
+        MestoLabel.AutoSize = True
+        MestoLabel.Location = New System.Drawing.Point(238, 130)
+        MestoLabel.Name = "MestoLabel"
+        MestoLabel.Size = New System.Drawing.Size(38, 13)
+        MestoLabel.TabIndex = 8
+        MestoLabel.Text = "mesto:"
+        '
+        'PscLabel
+        '
+        PscLabel.AutoSize = True
+        PscLabel.Location = New System.Drawing.Point(443, 137)
+        PscLabel.Name = "PscLabel"
+        PscLabel.Size = New System.Drawing.Size(27, 13)
+        PscLabel.TabIndex = 10
+        PscLabel.Text = "psc:"
+        '
+        'IcoLabel
+        '
+        IcoLabel.AutoSize = True
+        IcoLabel.Location = New System.Drawing.Point(19, 186)
+        IcoLabel.Name = "IcoLabel"
+        IcoLabel.Size = New System.Drawing.Size(24, 13)
+        IcoLabel.TabIndex = 12
+        IcoLabel.Text = "ico:"
+        '
+        'DicLabel
+        '
+        DicLabel.AutoSize = True
+        DicLabel.Location = New System.Drawing.Point(238, 208)
+        DicLabel.Name = "DicLabel"
+        DicLabel.Size = New System.Drawing.Size(24, 13)
+        DicLabel.TabIndex = 14
+        DicLabel.Text = "dic:"
+        '
+        'Cislo_uctuLabel
+        '
+        Cislo_uctuLabel.AutoSize = True
+        Cislo_uctuLabel.Location = New System.Drawing.Point(443, 215)
+        Cislo_uctuLabel.Name = "Cislo_uctuLabel"
+        Cislo_uctuLabel.Size = New System.Drawing.Size(55, 13)
+        Cislo_uctuLabel.TabIndex = 16
+        Cislo_uctuLabel.Text = "cislo uctu:"
         '
         'OdberateliaDataSet1
         '
@@ -119,6 +179,31 @@ Partial Class odberatelia
         Me.OdberateliaBindingNavigator.TabIndex = 0
         Me.OdberateliaBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -151,16 +236,9 @@ Partial Class odberatelia
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -183,26 +261,8 @@ Partial Class odberatelia
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'OdberateliaBindingNavigatorSaveItem
         '
@@ -222,145 +282,6 @@ Partial Class odberatelia
         Me.OdberateliaDataGridView.Name = "OdberateliaDataGridView"
         Me.OdberateliaDataGridView.Size = New System.Drawing.Size(844, 220)
         Me.OdberateliaDataGridView.TabIndex = 1
-        '
-        'IdLabel
-        '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(132, 73)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(18, 13)
-        IdLabel.TabIndex = 2
-        IdLabel.Text = "id:"
-        '
-        'IdTextBox
-        '
-        Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "id", True))
-        Me.IdTextBox.Location = New System.Drawing.Point(193, 70)
-        Me.IdTextBox.Name = "IdTextBox"
-        Me.IdTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.IdTextBox.TabIndex = 3
-        '
-        'NazovLabel
-        '
-        NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(132, 99)
-        NazovLabel.Name = "NazovLabel"
-        NazovLabel.Size = New System.Drawing.Size(39, 13)
-        NazovLabel.TabIndex = 4
-        NazovLabel.Text = "nazov:"
-        '
-        'NazovComboBox
-        '
-        Me.NazovComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "nazov", True))
-        Me.NazovComboBox.DataSource = Me.OdberateliaBindingSource
-        Me.NazovComboBox.DisplayMember = "nazov"
-        Me.NazovComboBox.FormattingEnabled = True
-        Me.NazovComboBox.Location = New System.Drawing.Point(193, 96)
-        Me.NazovComboBox.Name = "NazovComboBox"
-        Me.NazovComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.NazovComboBox.TabIndex = 5
-        '
-        'UlicaLabel
-        '
-        UlicaLabel.AutoSize = True
-        UlicaLabel.Location = New System.Drawing.Point(132, 126)
-        UlicaLabel.Name = "UlicaLabel"
-        UlicaLabel.Size = New System.Drawing.Size(32, 13)
-        UlicaLabel.TabIndex = 6
-        UlicaLabel.Text = "ulica:"
-        '
-        'UlicaTextBox
-        '
-        Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "ulica", True))
-        Me.UlicaTextBox.Location = New System.Drawing.Point(193, 123)
-        Me.UlicaTextBox.Name = "UlicaTextBox"
-        Me.UlicaTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.UlicaTextBox.TabIndex = 7
-        '
-        'MestoLabel
-        '
-        MestoLabel.AutoSize = True
-        MestoLabel.Location = New System.Drawing.Point(132, 152)
-        MestoLabel.Name = "MestoLabel"
-        MestoLabel.Size = New System.Drawing.Size(38, 13)
-        MestoLabel.TabIndex = 8
-        MestoLabel.Text = "mesto:"
-        '
-        'MestoTextBox
-        '
-        Me.MestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "mesto", True))
-        Me.MestoTextBox.Location = New System.Drawing.Point(193, 149)
-        Me.MestoTextBox.Name = "MestoTextBox"
-        Me.MestoTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.MestoTextBox.TabIndex = 9
-        '
-        'PscLabel
-        '
-        PscLabel.AutoSize = True
-        PscLabel.Location = New System.Drawing.Point(132, 178)
-        PscLabel.Name = "PscLabel"
-        PscLabel.Size = New System.Drawing.Size(27, 13)
-        PscLabel.TabIndex = 10
-        PscLabel.Text = "psc:"
-        '
-        'PscTextBox
-        '
-        Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "psc", True))
-        Me.PscTextBox.Location = New System.Drawing.Point(193, 175)
-        Me.PscTextBox.Name = "PscTextBox"
-        Me.PscTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.PscTextBox.TabIndex = 11
-        '
-        'IcoLabel
-        '
-        IcoLabel.AutoSize = True
-        IcoLabel.Location = New System.Drawing.Point(132, 204)
-        IcoLabel.Name = "IcoLabel"
-        IcoLabel.Size = New System.Drawing.Size(24, 13)
-        IcoLabel.TabIndex = 12
-        IcoLabel.Text = "ico:"
-        '
-        'IcoTextBox
-        '
-        Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "ico", True))
-        Me.IcoTextBox.Location = New System.Drawing.Point(193, 201)
-        Me.IcoTextBox.Name = "IcoTextBox"
-        Me.IcoTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.IcoTextBox.TabIndex = 13
-        '
-        'DicLabel
-        '
-        DicLabel.AutoSize = True
-        DicLabel.Location = New System.Drawing.Point(132, 230)
-        DicLabel.Name = "DicLabel"
-        DicLabel.Size = New System.Drawing.Size(24, 13)
-        DicLabel.TabIndex = 14
-        DicLabel.Text = "dic:"
-        '
-        'DicTextBox
-        '
-        Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "dic", True))
-        Me.DicTextBox.Location = New System.Drawing.Point(193, 227)
-        Me.DicTextBox.Name = "DicTextBox"
-        Me.DicTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.DicTextBox.TabIndex = 15
-        '
-        'Cislo_uctuLabel
-        '
-        Cislo_uctuLabel.AutoSize = True
-        Cislo_uctuLabel.Location = New System.Drawing.Point(132, 256)
-        Cislo_uctuLabel.Name = "Cislo_uctuLabel"
-        Cislo_uctuLabel.Size = New System.Drawing.Size(55, 13)
-        Cislo_uctuLabel.TabIndex = 16
-        Cislo_uctuLabel.Text = "cislo uctu:"
-        '
-        'Cislo_uctuTextBox
-        '
-        Me.Cislo_uctuTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "cislo_uctu", True))
-        Me.Cislo_uctuTextBox.Location = New System.Drawing.Point(193, 253)
-        Me.Cislo_uctuTextBox.Name = "Cislo_uctuTextBox"
-        Me.Cislo_uctuTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.Cislo_uctuTextBox.TabIndex = 17
         '
         'DataGridViewTextBoxColumn2
         '
@@ -411,13 +332,72 @@ Partial Class odberatelia
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         Me.DataGridViewTextBoxColumn8.ReadOnly = True
         '
+        'NazovComboBox
+        '
+        Me.NazovComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "nazov", True))
+        Me.NazovComboBox.DataSource = Me.OdberateliaBindingSource
+        Me.NazovComboBox.DisplayMember = "nazov"
+        Me.NazovComboBox.FormattingEnabled = True
+        Me.NazovComboBox.Location = New System.Drawing.Point(86, 47)
+        Me.NazovComboBox.Name = "NazovComboBox"
+        Me.NazovComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.NazovComboBox.TabIndex = 5
+        '
+        'UlicaTextBox
+        '
+        Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "ulica", True))
+        Me.UlicaTextBox.Location = New System.Drawing.Point(86, 123)
+        Me.UlicaTextBox.Name = "UlicaTextBox"
+        Me.UlicaTextBox.Size = New System.Drawing.Size(121, 20)
+        Me.UlicaTextBox.TabIndex = 7
+        '
+        'MestoTextBox
+        '
+        Me.MestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "mesto", True))
+        Me.MestoTextBox.Location = New System.Drawing.Point(304, 130)
+        Me.MestoTextBox.Name = "MestoTextBox"
+        Me.MestoTextBox.Size = New System.Drawing.Size(121, 20)
+        Me.MestoTextBox.TabIndex = 9
+        '
+        'PscTextBox
+        '
+        Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "psc", True))
+        Me.PscTextBox.Location = New System.Drawing.Point(476, 134)
+        Me.PscTextBox.Name = "PscTextBox"
+        Me.PscTextBox.Size = New System.Drawing.Size(121, 20)
+        Me.PscTextBox.TabIndex = 11
+        '
+        'IcoTextBox
+        '
+        Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "ico", True))
+        Me.IcoTextBox.Location = New System.Drawing.Point(86, 201)
+        Me.IcoTextBox.Name = "IcoTextBox"
+        Me.IcoTextBox.Size = New System.Drawing.Size(121, 20)
+        Me.IcoTextBox.TabIndex = 13
+        '
+        'DicTextBox
+        '
+        Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "dic", True))
+        Me.DicTextBox.Location = New System.Drawing.Point(304, 208)
+        Me.DicTextBox.Name = "DicTextBox"
+        Me.DicTextBox.Size = New System.Drawing.Size(121, 20)
+        Me.DicTextBox.TabIndex = 15
+        '
+        'Cislo_uctuTextBox
+        '
+        Me.Cislo_uctuTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "cislo_uctu", True))
+        Me.Cislo_uctuTextBox.Location = New System.Drawing.Point(504, 212)
+        Me.Cislo_uctuTextBox.Name = "Cislo_uctuTextBox"
+        Me.Cislo_uctuTextBox.Size = New System.Drawing.Size(121, 20)
+        Me.Cislo_uctuTextBox.TabIndex = 17
+        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(574, 88)
+        Me.Button1.Location = New System.Drawing.Point(354, 246)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(127, 23)
         Me.Button1.TabIndex = 18
-        Me.Button1.Text = "Nový odberateľ"
+        Me.Button1.Text = "Ulož odberateľa"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'odberatelia
@@ -426,8 +406,6 @@ Partial Class odberatelia
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(907, 555)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(IdLabel)
-        Me.Controls.Add(Me.IdTextBox)
         Me.Controls.Add(NazovLabel)
         Me.Controls.Add(Me.NazovComboBox)
         Me.Controls.Add(UlicaLabel)
@@ -475,7 +453,6 @@ Partial Class odberatelia
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents OdberateliaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents OdberateliaDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents IdTextBox As System.Windows.Forms.TextBox
     Friend WithEvents NazovComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents UlicaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents MestoTextBox As System.Windows.Forms.TextBox
