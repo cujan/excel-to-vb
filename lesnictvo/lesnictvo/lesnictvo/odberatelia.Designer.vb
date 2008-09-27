@@ -65,6 +65,7 @@ Partial Class odberatelia
         Me.Cislo_uctuTextBox = New System.Windows.Forms.TextBox
         Me.Button1 = New System.Windows.Forms.Button
         Me.edit = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
         NazovLabel = New System.Windows.Forms.Label
         UlicaLabel = New System.Windows.Forms.Label
         MestoLabel = New System.Windows.Forms.Label
@@ -118,7 +119,7 @@ Partial Class odberatelia
         'IcoLabel
         '
         IcoLabel.AutoSize = True
-        IcoLabel.Location = New System.Drawing.Point(19, 186)
+        IcoLabel.Location = New System.Drawing.Point(19, 201)
         IcoLabel.Name = "IcoLabel"
         IcoLabel.Size = New System.Drawing.Size(24, 13)
         IcoLabel.TabIndex = 12
@@ -179,6 +180,7 @@ Partial Class odberatelia
         Me.OdberateliaBindingNavigator.Size = New System.Drawing.Size(907, 25)
         Me.OdberateliaBindingNavigator.TabIndex = 0
         Me.OdberateliaBindingNavigator.Text = "BindingNavigator1"
+        Me.OdberateliaBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
@@ -275,12 +277,14 @@ Partial Class odberatelia
         '
         'OdberateliaDataGridView
         '
+        Me.OdberateliaDataGridView.AllowUserToAddRows = False
         Me.OdberateliaDataGridView.AutoGenerateColumns = False
         Me.OdberateliaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.OdberateliaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.OdberateliaDataGridView.DataSource = Me.OdberateliaBindingSource
         Me.OdberateliaDataGridView.Location = New System.Drawing.Point(12, 279)
         Me.OdberateliaDataGridView.Name = "OdberateliaDataGridView"
+        Me.OdberateliaDataGridView.ReadOnly = True
         Me.OdberateliaDataGridView.Size = New System.Drawing.Size(844, 220)
         Me.OdberateliaDataGridView.TabIndex = 1
         '
@@ -405,16 +409,26 @@ Partial Class odberatelia
         '
         Me.edit.Location = New System.Drawing.Point(216, 246)
         Me.edit.Name = "edit"
-        Me.edit.Size = New System.Drawing.Size(75, 23)
+        Me.edit.Size = New System.Drawing.Size(87, 23)
         Me.edit.TabIndex = 19
         Me.edit.Text = "Upraviť"
         Me.edit.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(522, 246)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(103, 23)
+        Me.Button2.TabIndex = 20
+        Me.Button2.Text = "Zmaž odberateľa"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'odberatelia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(907, 555)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.edit)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(NazovLabel)
@@ -480,5 +494,6 @@ Partial Class odberatelia
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents edit As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class
