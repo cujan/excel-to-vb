@@ -64,6 +64,7 @@ Partial Class odberatelia
         Me.DicTextBox = New System.Windows.Forms.TextBox
         Me.Cislo_uctuTextBox = New System.Windows.Forms.TextBox
         Me.Button1 = New System.Windows.Forms.Button
+        Me.edit = New System.Windows.Forms.Button
         NazovLabel = New System.Windows.Forms.Label
         UlicaLabel = New System.Windows.Forms.Label
         MestoLabel = New System.Windows.Forms.Label
@@ -400,11 +401,21 @@ Partial Class odberatelia
         Me.Button1.Text = "Ulož odberateľa"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'edit
+        '
+        Me.edit.Location = New System.Drawing.Point(216, 246)
+        Me.edit.Name = "edit"
+        Me.edit.Size = New System.Drawing.Size(75, 23)
+        Me.edit.TabIndex = 19
+        Me.edit.Text = "Upraviť"
+        Me.edit.UseVisualStyleBackColor = True
+        '
         'odberatelia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(907, 555)
+        Me.Controls.Add(Me.edit)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(NazovLabel)
         Me.Controls.Add(Me.NazovComboBox)
@@ -468,5 +479,6 @@ Partial Class odberatelia
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents edit As System.Windows.Forms.Button
 
 End Class

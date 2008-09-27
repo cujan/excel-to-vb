@@ -5,6 +5,14 @@
         Me.OdberateliaTableAdapter.Fill(Me.OdberateliaDataSet1.odberatelia)
         Me.MdiParent = MDIParent1
         Me.OdberateliaBindingSource.AddNew()
+        UlicaTextBox.ReadOnly = True
+        MestoTextBox.ReadOnly = True
+        PscTextBox.ReadOnly = True
+        Cislo_uctuTextBox.ReadOnly = True
+        DicTextBox.ReadOnly = True
+        IcoTextBox.ReadOnly = True
+
+
     End Sub
 
     Private Sub OdberateliaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OdberateliaBindingNavigatorSaveItem.Click
@@ -25,6 +33,26 @@
     End Sub
 
     Private Sub BindingNavigatorDeleteItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BindingNavigatorDeleteItem.Click
+
+    End Sub
+
+    Private Sub edit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles edit.Click
+        UlicaTextBox.ReadOnly = False
+        MestoTextBox.ReadOnly = False
+        PscTextBox.ReadOnly = False
+        Cislo_uctuTextBox.ReadOnly = False
+        DicTextBox.ReadOnly = False
+        IcoTextBox.ReadOnly = False
+
+    End Sub
+
+    Private Sub NazovComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NazovComboBox.SelectedIndexChanged
+        UlicaTextBox.ReadOnly = True
+        MestoTextBox.ReadOnly = True
+        PscTextBox.ReadOnly = True
+        Cislo_uctuTextBox.ReadOnly = True
+        DicTextBox.ReadOnly = True
+        IcoTextBox.ReadOnly = True
 
     End Sub
 End Class
