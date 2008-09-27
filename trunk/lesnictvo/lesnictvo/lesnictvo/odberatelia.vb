@@ -5,12 +5,12 @@
         Me.OdberateliaTableAdapter.Fill(Me.OdberateliaDataSet1.odberatelia)
         Me.MdiParent = MDIParent1
         Me.OdberateliaBindingSource.AddNew()
-        UlicaTextBox.ReadOnly = True
-        MestoTextBox.ReadOnly = True
-        PscTextBox.ReadOnly = True
-        Cislo_uctuTextBox.ReadOnly = True
-        DicTextBox.ReadOnly = True
-        IcoTextBox.ReadOnly = True
+        UlicaTextBox.ReadOnly = False
+        MestoTextBox.ReadOnly = False
+        PscTextBox.ReadOnly = False
+        Cislo_uctuTextBox.ReadOnly = False
+        DicTextBox.ReadOnly = False
+        IcoTextBox.ReadOnly = False
 
 
     End Sub
@@ -43,6 +43,7 @@
         Cislo_uctuTextBox.ReadOnly = False
         DicTextBox.ReadOnly = False
         IcoTextBox.ReadOnly = False
+        
 
     End Sub
 
@@ -54,5 +55,9 @@
         DicTextBox.ReadOnly = True
         IcoTextBox.ReadOnly = True
 
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Me.OdberateliaBindingSource.RemoveCurrent()
     End Sub
 End Class
