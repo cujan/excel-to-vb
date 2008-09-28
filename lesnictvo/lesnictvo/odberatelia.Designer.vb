@@ -66,6 +66,8 @@ Partial Class odberatelia
         Me.Button1 = New System.Windows.Forms.Button
         Me.edit = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
+        Me.detajly = New System.Windows.Forms.Label
+        Me.Button3 = New System.Windows.Forms.Button
         NazovLabel = New System.Windows.Forms.Label
         UlicaLabel = New System.Windows.Forms.Label
         MestoLabel = New System.Windows.Forms.Label
@@ -83,16 +85,16 @@ Partial Class odberatelia
         'NazovLabel
         '
         NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(12, 47)
+        NazovLabel.Location = New System.Drawing.Point(12, 26)
         NazovLabel.Name = "NazovLabel"
-        NazovLabel.Size = New System.Drawing.Size(39, 13)
+        NazovLabel.Size = New System.Drawing.Size(101, 13)
         NazovLabel.TabIndex = 4
-        NazovLabel.Text = "nazov:"
+        NazovLabel.Text = "Vyberte odberateľa:"
         '
         'UlicaLabel
         '
         UlicaLabel.AutoSize = True
-        UlicaLabel.Location = New System.Drawing.Point(19, 123)
+        UlicaLabel.Location = New System.Drawing.Point(12, 95)
         UlicaLabel.Name = "UlicaLabel"
         UlicaLabel.Size = New System.Drawing.Size(32, 13)
         UlicaLabel.TabIndex = 6
@@ -101,7 +103,7 @@ Partial Class odberatelia
         'MestoLabel
         '
         MestoLabel.AutoSize = True
-        MestoLabel.Location = New System.Drawing.Point(238, 130)
+        MestoLabel.Location = New System.Drawing.Point(9, 123)
         MestoLabel.Name = "MestoLabel"
         MestoLabel.Size = New System.Drawing.Size(38, 13)
         MestoLabel.TabIndex = 8
@@ -110,7 +112,7 @@ Partial Class odberatelia
         'PscLabel
         '
         PscLabel.AutoSize = True
-        PscLabel.Location = New System.Drawing.Point(443, 137)
+        PscLabel.Location = New System.Drawing.Point(17, 149)
         PscLabel.Name = "PscLabel"
         PscLabel.Size = New System.Drawing.Size(27, 13)
         PscLabel.TabIndex = 10
@@ -119,7 +121,7 @@ Partial Class odberatelia
         'IcoLabel
         '
         IcoLabel.AutoSize = True
-        IcoLabel.Location = New System.Drawing.Point(19, 201)
+        IcoLabel.Location = New System.Drawing.Point(248, 91)
         IcoLabel.Name = "IcoLabel"
         IcoLabel.Size = New System.Drawing.Size(24, 13)
         IcoLabel.TabIndex = 12
@@ -128,7 +130,7 @@ Partial Class odberatelia
         'DicLabel
         '
         DicLabel.AutoSize = True
-        DicLabel.Location = New System.Drawing.Point(238, 208)
+        DicLabel.Location = New System.Drawing.Point(248, 127)
         DicLabel.Name = "DicLabel"
         DicLabel.Size = New System.Drawing.Size(24, 13)
         DicLabel.TabIndex = 14
@@ -137,7 +139,7 @@ Partial Class odberatelia
         'Cislo_uctuLabel
         '
         Cislo_uctuLabel.AutoSize = True
-        Cislo_uctuLabel.Location = New System.Drawing.Point(443, 215)
+        Cislo_uctuLabel.Location = New System.Drawing.Point(217, 157)
         Cislo_uctuLabel.Name = "Cislo_uctuLabel"
         Cislo_uctuLabel.Size = New System.Drawing.Size(55, 13)
         Cislo_uctuLabel.TabIndex = 16
@@ -282,10 +284,10 @@ Partial Class odberatelia
         Me.OdberateliaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.OdberateliaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.OdberateliaDataGridView.DataSource = Me.OdberateliaBindingSource
-        Me.OdberateliaDataGridView.Location = New System.Drawing.Point(12, 279)
+        Me.OdberateliaDataGridView.Location = New System.Drawing.Point(12, 210)
         Me.OdberateliaDataGridView.Name = "OdberateliaDataGridView"
         Me.OdberateliaDataGridView.ReadOnly = True
-        Me.OdberateliaDataGridView.Size = New System.Drawing.Size(844, 220)
+        Me.OdberateliaDataGridView.Size = New System.Drawing.Size(844, 333)
         Me.OdberateliaDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn2
@@ -343,7 +345,7 @@ Partial Class odberatelia
         Me.NazovComboBox.DataSource = Me.OdberateliaBindingSource
         Me.NazovComboBox.DisplayMember = "nazov"
         Me.NazovComboBox.FormattingEnabled = True
-        Me.NazovComboBox.Location = New System.Drawing.Point(86, 47)
+        Me.NazovComboBox.Location = New System.Drawing.Point(119, 23)
         Me.NazovComboBox.Name = "NazovComboBox"
         Me.NazovComboBox.Size = New System.Drawing.Size(121, 21)
         Me.NazovComboBox.TabIndex = 5
@@ -351,7 +353,7 @@ Partial Class odberatelia
         'UlicaTextBox
         '
         Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "ulica", True))
-        Me.UlicaTextBox.Location = New System.Drawing.Point(86, 123)
+        Me.UlicaTextBox.Location = New System.Drawing.Point(50, 92)
         Me.UlicaTextBox.Name = "UlicaTextBox"
         Me.UlicaTextBox.Size = New System.Drawing.Size(121, 20)
         Me.UlicaTextBox.TabIndex = 7
@@ -359,7 +361,7 @@ Partial Class odberatelia
         'MestoTextBox
         '
         Me.MestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "mesto", True))
-        Me.MestoTextBox.Location = New System.Drawing.Point(304, 130)
+        Me.MestoTextBox.Location = New System.Drawing.Point(50, 120)
         Me.MestoTextBox.Name = "MestoTextBox"
         Me.MestoTextBox.Size = New System.Drawing.Size(121, 20)
         Me.MestoTextBox.TabIndex = 9
@@ -367,7 +369,7 @@ Partial Class odberatelia
         'PscTextBox
         '
         Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "psc", True))
-        Me.PscTextBox.Location = New System.Drawing.Point(476, 134)
+        Me.PscTextBox.Location = New System.Drawing.Point(50, 146)
         Me.PscTextBox.Name = "PscTextBox"
         Me.PscTextBox.Size = New System.Drawing.Size(121, 20)
         Me.PscTextBox.TabIndex = 11
@@ -375,7 +377,7 @@ Partial Class odberatelia
         'IcoTextBox
         '
         Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "ico", True))
-        Me.IcoTextBox.Location = New System.Drawing.Point(86, 201)
+        Me.IcoTextBox.Location = New System.Drawing.Point(278, 88)
         Me.IcoTextBox.Name = "IcoTextBox"
         Me.IcoTextBox.Size = New System.Drawing.Size(121, 20)
         Me.IcoTextBox.TabIndex = 13
@@ -383,7 +385,7 @@ Partial Class odberatelia
         'DicTextBox
         '
         Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "dic", True))
-        Me.DicTextBox.Location = New System.Drawing.Point(304, 208)
+        Me.DicTextBox.Location = New System.Drawing.Point(278, 120)
         Me.DicTextBox.Name = "DicTextBox"
         Me.DicTextBox.Size = New System.Drawing.Size(121, 20)
         Me.DicTextBox.TabIndex = 15
@@ -391,43 +393,63 @@ Partial Class odberatelia
         'Cislo_uctuTextBox
         '
         Me.Cislo_uctuTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OdberateliaBindingSource, "cislo_uctu", True))
-        Me.Cislo_uctuTextBox.Location = New System.Drawing.Point(504, 212)
+        Me.Cislo_uctuTextBox.Location = New System.Drawing.Point(278, 154)
         Me.Cislo_uctuTextBox.Name = "Cislo_uctuTextBox"
         Me.Cislo_uctuTextBox.Size = New System.Drawing.Size(121, 20)
         Me.Cislo_uctuTextBox.TabIndex = 17
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(354, 246)
+        Me.Button1.Location = New System.Drawing.Point(463, 125)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(127, 23)
+        Me.Button1.Size = New System.Drawing.Size(106, 23)
         Me.Button1.TabIndex = 18
-        Me.Button1.Text = "Ulož odberateľa"
+        Me.Button1.Text = "Ulož zmeny"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'edit
         '
-        Me.edit.Location = New System.Drawing.Point(216, 246)
+        Me.edit.Location = New System.Drawing.Point(463, 98)
         Me.edit.Name = "edit"
-        Me.edit.Size = New System.Drawing.Size(87, 23)
+        Me.edit.Size = New System.Drawing.Size(106, 23)
         Me.edit.TabIndex = 19
-        Me.edit.Text = "Upraviť"
+        Me.edit.Text = "Uprav detajly"
         Me.edit.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(522, 246)
+        Me.Button2.Location = New System.Drawing.Point(463, 151)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(103, 23)
         Me.Button2.TabIndex = 20
-        Me.Button2.Text = "Zmaž odberateľa"
+        Me.Button2.Text = "Vymaž odberateľa"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'detajly
+        '
+        Me.detajly.AutoSize = True
+        Me.detajly.Location = New System.Drawing.Point(12, 63)
+        Me.detajly.Name = "detajly"
+        Me.detajly.Size = New System.Drawing.Size(111, 13)
+        Me.detajly.TabIndex = 21
+        Me.detajly.Text = "Detajly o odberateľovi"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(463, 73)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(106, 23)
+        Me.Button3.TabIndex = 22
+        Me.Button3.Text = "Pridaj odberateľa"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'odberatelia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(907, 555)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.detajly)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.edit)
         Me.Controls.Add(Me.Button1)
@@ -495,5 +517,7 @@ Partial Class odberatelia
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents edit As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents detajly As System.Windows.Forms.Label
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 
 End Class
