@@ -27,9 +27,14 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Me.Validate()
-        Me.OdberateliaBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.OdberateliaDataSet1)
+        If UlicaTextBox.ReadOnly = False Then
+            Me.Validate()
+            Me.OdberateliaBindingSource.EndEdit()
+            Me.TableAdapterManager.UpdateAll(Me.OdberateliaDataSet1)
+        Else
+            varovanie.Show()
+            varovanie.varovanie_text.Text = "Nemôžete uložiť zmeny skôr ako ste stlačili tlačítko Upraviť."
+        End If
     End Sub
 
     Private Sub BindingNavigatorDeleteItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BindingNavigatorDeleteItem.Click
