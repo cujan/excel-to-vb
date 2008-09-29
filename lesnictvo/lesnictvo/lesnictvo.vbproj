@@ -87,6 +87,8 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cenaButtonArray.vb" />
+    <Compile Include="cenaTextboxArray.vb" />
     <Compile Include="cennik_reziva.Designer.vb">
       <DependentUpon>cennik_reziva.vb</DependentUpon>
     </Compile>
@@ -121,6 +123,7 @@
     <Compile Include="moznosti.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="rezivoButtonArray.vb" />
     <Compile Include="odberatelia.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +162,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rezivoDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="rezivoTextboxArray.vb" />
     <Compile Include="varovanie.Designer.vb">
       <DependentUpon>varovanie.vb</DependentUpon>
     </Compile>
