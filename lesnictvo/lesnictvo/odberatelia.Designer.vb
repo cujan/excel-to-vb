@@ -432,7 +432,7 @@ Partial Class odberatelia
         Me.detajly.Name = "detajly"
         Me.detajly.Size = New System.Drawing.Size(111, 13)
         Me.detajly.TabIndex = 21
-        Me.detajly.Text = "Detajly o odberateľovi"
+        Me.detajly.Text = "Detaily o odberateľovi"
         '
         'Button3
         '
