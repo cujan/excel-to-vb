@@ -3,6 +3,7 @@
     Dim rezivo_button_array As rezivoButtonArray
     Dim cena_textbox_array As cenaTextboxArray
     Dim rezivo_textbox_array As rezivoTextboxArray
+    Dim jednotka_d_textbox_array As jednotkaDTextboxArray
 
     Private Sub dodaci_list_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'OdberateliaDataSet1.odberatelia' table. You can move, or remove it, as needed.
@@ -23,7 +24,7 @@
         rezivo_button_array.AddNewButton()
         cena_textbox_array.AddNewTextbox()
         rezivo_textbox_array.AddNewTextbox()
-
+        jednotka_d_textbox_array.AddNewTextbox()
 
 
     End Sub
@@ -33,6 +34,8 @@
         rezivo_button_array.Remove()
         cena_textbox_array.Remove()
         rezivo_textbox_array.Remove()
+        jednotka_d_textbox_array.Remove()
+
 
     End Sub
 End Class
