@@ -4,7 +4,6 @@
         'TODO: This line of code loads data into the 'OdberateliaDataSet1.odberatelia' table. You can move, or remove it, as needed.
         Me.OdberateliaTableAdapter.Fill(Me.OdberateliaDataSet1.odberatelia)
         Me.MdiParent = MDIParent1
-        Me.OdberateliaBindingSource.AddNew()
         UlicaTextBox.ReadOnly = False
         MestoTextBox.ReadOnly = False
         PscTextBox.ReadOnly = False
@@ -32,8 +31,7 @@
             Me.OdberateliaBindingSource.EndEdit()
             Me.TableAdapterManager.UpdateAll(Me.OdberateliaDataSet1)
         Else
-            varovanie.Show()
-            varovanie.varovanie_text.Text = "Nemôžete uložiť zmeny skôr ako ste stlačili tlačítko Upraviť."
+            MsgBox("Nemôžete uložit zmeny, zatiaľ ste žiadne neuskutočnili!!!", MsgBoxStyle.OkCancel)
         End If
     End Sub
 
@@ -64,5 +62,15 @@
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Me.OdberateliaBindingSource.RemoveCurrent()
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        Me.OdberateliaBindingSource.AddNew()
+        UlicaTextBox.ReadOnly = False
+        MestoTextBox.ReadOnly = False
+        PscTextBox.ReadOnly = False
+        Cislo_uctuTextBox.ReadOnly = False
+        DicTextBox.ReadOnly = False
+        IcoTextBox.ReadOnly = False
     End Sub
 End Class
