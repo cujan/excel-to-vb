@@ -13,8 +13,8 @@
         HostForm.Controls.Add(aTextbox)
         ' Set intial properties for the button object.
         aTextbox.Top = 140 + Count * 25
-        aTextbox.Left = 745
-        aTextbox.Width = 30
+        aTextbox.Left = 720
+        aTextbox.Width = 40
         aTextbox.Height = 22
         aTextbox.Tag = Me.Count
         aTextbox.ReadOnly = True

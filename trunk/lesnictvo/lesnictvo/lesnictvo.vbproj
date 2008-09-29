@@ -117,7 +117,14 @@
     <Compile Include="dodaci_list.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jednotkaDButtonArray.vb" />
     <Compile Include="jednotkaDTextboxArray.vb" />
+    <Compile Include="jednotkaHButtonArray.vb" />
+    <Compile Include="jednotkaHTextboxArray.vb" />
+    <Compile Include="jednotkaSButtonArray.vb" />
+    <Compile Include="jednotkaSTextboxArray.vb" />
+    <Compile Include="m3ButtonArray.vb" />
+    <Compile Include="m3TextboxArray.vb" />
     <Compile Include="moznosti.Designer.vb">
       <DependentUpon>moznosti.vb</DependentUpon>
     </Compile>
