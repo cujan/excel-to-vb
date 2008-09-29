@@ -1,38 +1,38 @@
-﻿Public Class cenaButtonArray
-
+﻿Public Class m3TextboxArray
     Inherits System.Collections.CollectionBase
     Private ReadOnly HostForm As System.Windows.Forms.Form
 
-    Public Function AddNewButton() As System.Windows.Forms.Button
+    Public Function AddNewTextbox() As System.Windows.Forms.TextBox
         ' Create a new instance of the Button class.
-        Dim aButton As New System.Windows.Forms.Button()
+        Dim aTextbox As New System.Windows.Forms.TextBox()
+
         ' Add the button to the collection's internal list.
-        Me.List.Add(aButton)
+        Me.List.Add(aTextbox)
         ' Add the button to the controls collection of the form 
         ' referenced by the HostForm field.
-        HostForm.Controls.Add(aButton)
+        HostForm.Controls.Add(aTextbox)
         ' Set intial properties for the button object.
-        aButton.Top = 140 + Count * 25
-        aButton.Left = 762
-        aButton.Width = 15
-        aButton.Height = 22
-        aButton.Tag = Me.Count
-        aButton.Text = ">"
+        aTextbox.Top = 140 + Count * 25
+        aTextbox.Left = 625
+        aTextbox.Width = 60
+        aTextbox.Height = 22
+        aTextbox.Tag = Me.Count
+        aTextbox.Text = "0"
 
-        AddHandler aButton.Click, AddressOf ClickHandler
+        '       AddHandler aTextbox.Click, AddressOf ClickHandler
 
-        Return aButton
+        Return aTextbox
     End Function
 
     Public Sub New(ByVal host As System.Windows.Forms.Form)
         HostForm = host
-        Me.AddNewButton()
+        Me.AddNewTextbox()
     End Sub
 
     Default Public ReadOnly Property Item(ByVal Index As Integer) As  _
-   System.Windows.Forms.Button
+   System.Windows.Forms.TextBox
         Get
-            Return CType(Me.List.Item(Index), System.Windows.Forms.Button)
+            Return CType(Me.List.Item(Index), System.Windows.Forms.TextBox)
         End Get
     End Property
 
@@ -46,14 +46,4 @@
             Me.List.RemoveAt(Me.Count - 1)
         End If
     End Sub
-
-    Public Sub ClickHandler(ByVal sender As Object, ByVal e As  _
-    System.EventArgs)
-        MessageBox.Show("you have clicked cena button " & CType(CType(sender,  _
-           System.Windows.Forms.Button).Tag, String))
-    End Sub
-
-
 End Class
-
-

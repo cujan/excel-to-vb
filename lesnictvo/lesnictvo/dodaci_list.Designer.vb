@@ -54,6 +54,8 @@ Partial Class dodaci_list
         Me.pridaj_riadok = New System.Windows.Forms.Button
         Me.odober_riadok = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
         CType(Me.OdberateliaDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OdberateliaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OdberateliaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,7 +74,7 @@ Partial Class dodaci_list
         'text_drevina
         '
         Me.text_drevina.AutoSize = True
-        Me.text_drevina.Location = New System.Drawing.Point(54, 134)
+        Me.text_drevina.Location = New System.Drawing.Point(51, 141)
         Me.text_drevina.Name = "text_drevina"
         Me.text_drevina.Size = New System.Drawing.Size(62, 13)
         Me.text_drevina.TabIndex = 3
@@ -80,7 +82,7 @@ Partial Class dodaci_list
         '
         'text_cena
         '
-        Me.text_cena.Location = New System.Drawing.Point(747, 130)
+        Me.text_cena.Location = New System.Drawing.Point(725, 135)
         Me.text_cena.Name = "text_cena"
         Me.text_cena.Size = New System.Drawing.Size(39, 26)
         Me.text_cena.TabIndex = 6
@@ -288,7 +290,7 @@ Partial Class dodaci_list
         '
         'pridaj_riadok
         '
-        Me.pridaj_riadok.Location = New System.Drawing.Point(807, 134)
+        Me.pridaj_riadok.Location = New System.Drawing.Point(797, 134)
         Me.pridaj_riadok.Name = "pridaj_riadok"
         Me.pridaj_riadok.Size = New System.Drawing.Size(22, 22)
         Me.pridaj_riadok.TabIndex = 21
@@ -297,7 +299,7 @@ Partial Class dodaci_list
         '
         'odober_riadok
         '
-        Me.odober_riadok.Location = New System.Drawing.Point(835, 134)
+        Me.odober_riadok.Location = New System.Drawing.Point(825, 134)
         Me.odober_riadok.Name = "odober_riadok"
         Me.odober_riadok.Size = New System.Drawing.Size(22, 22)
         Me.odober_riadok.TabIndex = 22
@@ -313,12 +315,32 @@ Partial Class dodaci_list
         Me.Label1.Text = "Dĺžka v m"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label2
+        '
+        Me.Label2.Location = New System.Drawing.Point(472, 131)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(45, 30)
+        Me.Label2.TabIndex = 24
+        Me.Label2.Text = "Šírka v cm"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label3
+        '
+        Me.Label3.Location = New System.Drawing.Point(548, 131)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(48, 30)
+        Me.Label3.TabIndex = 25
+        Me.Label3.Text = "Hrúbka v cm"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'dodaci_list
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(869, 307)
+        Me.ClientSize = New System.Drawing.Size(855, 307)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.odober_riadok)
         Me.Controls.Add(Me.pridaj_riadok)
         Me.Controls.Add(Me.NazovComboBox)
@@ -348,6 +370,13 @@ Partial Class dodaci_list
         Me.rezivo_textbox_array = New rezivoTextboxArray(Me)
         Me.rezivo_button_array = New rezivoButtonArray(Me)
         Me.jednotka_d_textbox_array = New jednotkaDTextboxArray(Me)
+        Me.jednotka_d_button_array = New jednotkaDButtonArray(Me)
+        Me.jednotka_s_button_array = New jednotkaSButtonArray(Me)
+        Me.jednotka_s_textbox_array = New jednotkaSTextboxArray(Me)
+        Me.jednotka_h_button_array = New jednotkaHButtonArray(Me)
+        Me.jednotka_h_textbox_array = New jednotkaHTextboxArray(Me)
+        Me.m3_textbox_array = New m3TextboxArray(Me)
+        Me.m3_button_array = New m3ButtonArray(Me)
 
 
 
@@ -382,4 +411,6 @@ Partial Class dodaci_list
     Friend WithEvents pridaj_riadok As System.Windows.Forms.Button
     Friend WithEvents odober_riadok As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class

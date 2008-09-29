@@ -1,4 +1,4 @@
-﻿Public Class cenaButtonArray
+﻿Public Class jednotkaHButtonArray
 
     Inherits System.Collections.CollectionBase
     Private ReadOnly HostForm As System.Windows.Forms.Form
@@ -13,7 +13,7 @@
         HostForm.Controls.Add(aButton)
         ' Set intial properties for the button object.
         aButton.Top = 140 + Count * 25
-        aButton.Left = 762
+        aButton.Left = 595
         aButton.Width = 15
         aButton.Height = 22
         aButton.Tag = Me.Count
@@ -49,11 +49,9 @@
 
     Public Sub ClickHandler(ByVal sender As Object, ByVal e As  _
     System.EventArgs)
-        MessageBox.Show("you have clicked cena button " & CType(CType(sender,  _
+        MessageBox.Show("you have clicked jednotka H button " & CType(CType(sender,  _
            System.Windows.Forms.Button).Tag, String))
     End Sub
 
 
 End Class
-
-
