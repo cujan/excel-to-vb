@@ -13,7 +13,7 @@
         HostForm.Controls.Add(aButton)
         ' Set intial properties for the button object.
         aButton.Top = 140 + Count * 25
-        aButton.Left = 410
+        aButton.Left = 785
         aButton.Width = 15
         aButton.Height = 22
         aButton.Tag = Me.Count

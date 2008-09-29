@@ -53,6 +53,7 @@ Partial Class dodaci_list
         Me.NazovComboBox = New System.Windows.Forms.ComboBox
         Me.pridaj_riadok = New System.Windows.Forms.Button
         Me.odober_riadok = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
         CType(Me.OdberateliaDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OdberateliaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OdberateliaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,17 +80,17 @@ Partial Class dodaci_list
         '
         'text_cena
         '
-        Me.text_cena.AutoSize = True
-        Me.text_cena.Location = New System.Drawing.Point(437, 134)
+        Me.text_cena.Location = New System.Drawing.Point(747, 130)
         Me.text_cena.Name = "text_cena"
-        Me.text_cena.Size = New System.Drawing.Size(90, 13)
+        Me.text_cena.Size = New System.Drawing.Size(39, 26)
         Me.text_cena.TabIndex = 6
-        Me.text_cena.Text = "Jednotková cena"
+        Me.text_cena.Text = "Cena za m3"
+        Me.text_cena.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'text_mnozstvo
         '
         Me.text_mnozstvo.AutoSize = True
-        Me.text_mnozstvo.Location = New System.Drawing.Point(590, 134)
+        Me.text_mnozstvo.Location = New System.Drawing.Point(631, 143)
         Me.text_mnozstvo.Name = "text_mnozstvo"
         Me.text_mnozstvo.Size = New System.Drawing.Size(53, 13)
         Me.text_mnozstvo.TabIndex = 9
@@ -287,7 +288,7 @@ Partial Class dodaci_list
         '
         'pridaj_riadok
         '
-        Me.pridaj_riadok.Location = New System.Drawing.Point(737, 134)
+        Me.pridaj_riadok.Location = New System.Drawing.Point(807, 134)
         Me.pridaj_riadok.Name = "pridaj_riadok"
         Me.pridaj_riadok.Size = New System.Drawing.Size(22, 22)
         Me.pridaj_riadok.TabIndex = 21
@@ -296,32 +297,42 @@ Partial Class dodaci_list
         '
         'odober_riadok
         '
-        Me.odober_riadok.Location = New System.Drawing.Point(765, 134)
+        Me.odober_riadok.Location = New System.Drawing.Point(835, 134)
         Me.odober_riadok.Name = "odober_riadok"
         Me.odober_riadok.Size = New System.Drawing.Size(22, 22)
         Me.odober_riadok.TabIndex = 22
         Me.odober_riadok.Text = "--"
         Me.odober_riadok.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(382, 134)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(49, 27)
+        Me.Label1.TabIndex = 23
+        Me.Label1.Text = "Dĺžka v m"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'dodaci_list
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(802, 307)
+        Me.ClientSize = New System.Drawing.Size(869, 307)
         Me.Controls.Add(Me.odober_riadok)
         Me.Controls.Add(Me.pridaj_riadok)
         Me.Controls.Add(Me.NazovComboBox)
         Me.Controls.Add(Me.OdberateliaBindingNavigator)
         Me.Controls.Add(Me.cislo_d_listu)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.text_cislo_d_listu)
         Me.Controls.Add(Me.ulozit_dodaci_list)
         Me.Controls.Add(Me.zobrazit_ppd)
         Me.Controls.Add(Me.zobrazit_fakturu)
-        Me.Controls.Add(Me.text_mnozstvo)
-        Me.Controls.Add(Me.text_cena)
         Me.Controls.Add(Me.text_drevina)
         Me.Controls.Add(Me.text_odberatel)
+        Me.Controls.Add(Me.text_mnozstvo)
+        Me.Controls.Add(Me.text_cena)
         Me.Name = "dodaci_list"
         Me.Text = "Dodací list"
         CType(Me.OdberateliaDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -333,9 +344,10 @@ Partial Class dodaci_list
         Me.PerformLayout()
 
         Me.cena_textbox_array = New cenaTextboxArray(Me)
-        Me.rezivo_textbox_array = New rezivoTextboxArray(Me)
         Me.cena_button_array = New cenaButtonArray(Me)
+        Me.rezivo_textbox_array = New rezivoTextboxArray(Me)
         Me.rezivo_button_array = New rezivoButtonArray(Me)
+        Me.jednotka_d_textbox_array = New jednotkaDTextboxArray(Me)
 
 
 
@@ -369,4 +381,5 @@ Partial Class dodaci_list
     Friend WithEvents NazovComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents pridaj_riadok As System.Windows.Forms.Button
     Friend WithEvents odober_riadok As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

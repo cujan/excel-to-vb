@@ -117,6 +117,7 @@
     <Compile Include="dodaci_list.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jednotkaDTextboxArray.vb" />
     <Compile Include="moznosti.Designer.vb">
       <DependentUpon>moznosti.vb</DependentUpon>
     </Compile>

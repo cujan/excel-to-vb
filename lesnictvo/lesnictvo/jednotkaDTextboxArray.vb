@@ -1,4 +1,4 @@
-﻿Public Class cenaTextboxArray
+﻿Public Class jednotkaDTextboxArray
     Inherits System.Collections.CollectionBase
     Private ReadOnly HostForm As System.Windows.Forms.Form
 
@@ -13,11 +13,10 @@
         HostForm.Controls.Add(aTextbox)
         ' Set intial properties for the button object.
         aTextbox.Top = 140 + Count * 25
-        aTextbox.Left = 745
-        aTextbox.Width = 30
+        aTextbox.Left = 380
+        aTextbox.Width = 50
         aTextbox.Height = 22
         aTextbox.Tag = Me.Count
-        aTextbox.ReadOnly = True
         aTextbox.Text = "0"
 
         '       AddHandler aTextbox.Click, AddressOf ClickHandler
@@ -47,10 +46,4 @@
             Me.List.RemoveAt(Me.Count - 1)
         End If
     End Sub
-
-    '   Public Sub ClickHandler(ByVal sender As Object, ByVal e As  _
-    '  System.EventArgs)
-    '     MessageBox.Show("you have clicked odberatel button " & CType(CType(sender,  _
-    '       System.Windows.Forms.Button).Tag, String))
-    ' End Sub
 End Class
