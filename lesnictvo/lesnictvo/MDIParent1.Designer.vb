@@ -65,6 +65,8 @@ Partial Class MDIParent1
         Me.DodávateliaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ZoznamDrevínToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.CenníkToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.CenníkRezivaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.CenníkGuľatinovýchVýrezovToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ArchívToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.VystavenéFaktúryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.NastaveniaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
@@ -89,8 +91,7 @@ Partial Class MDIParent1
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.Vseobecne_udajeDataSet11 = New lesnictvo.vseobecne_udajeDataSet1
-        Me.CenníkRezivaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CenníkGuľatinovýchVýrezovToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.Dodak2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -344,7 +345,7 @@ Partial Class MDIParent1
         '
         'ZostavyToolStripMenuItem
         '
-        Me.ZostavyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DodacíListToolStripMenuItem})
+        Me.ZostavyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DodacíListToolStripMenuItem, Me.Dodak2ToolStripMenuItem})
         Me.ZostavyToolStripMenuItem.Name = "ZostavyToolStripMenuItem"
         Me.ZostavyToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
         Me.ZostavyToolStripMenuItem.Text = "Zostavy"
@@ -380,6 +381,18 @@ Partial Class MDIParent1
         Me.CenníkToolStripMenuItem.Name = "CenníkToolStripMenuItem"
         Me.CenníkToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.CenníkToolStripMenuItem.Text = "Cenník"
+        '
+        'CenníkRezivaToolStripMenuItem
+        '
+        Me.CenníkRezivaToolStripMenuItem.Name = "CenníkRezivaToolStripMenuItem"
+        Me.CenníkRezivaToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.CenníkRezivaToolStripMenuItem.Text = "Cenník reziva"
+        '
+        'CenníkGuľatinovýchVýrezovToolStripMenuItem
+        '
+        Me.CenníkGuľatinovýchVýrezovToolStripMenuItem.Name = "CenníkGuľatinovýchVýrezovToolStripMenuItem"
+        Me.CenníkGuľatinovýchVýrezovToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.CenníkGuľatinovýchVýrezovToolStripMenuItem.Text = "Cenník guľatinových výrezov"
         '
         'ArchívToolStripMenuItem
         '
@@ -547,17 +560,11 @@ Partial Class MDIParent1
         Me.Vseobecne_udajeDataSet11.DataSetName = "vseobecne_udajeDataSet1"
         Me.Vseobecne_udajeDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'CenníkRezivaToolStripMenuItem
+        'Dodak2ToolStripMenuItem
         '
-        Me.CenníkRezivaToolStripMenuItem.Name = "CenníkRezivaToolStripMenuItem"
-        Me.CenníkRezivaToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
-        Me.CenníkRezivaToolStripMenuItem.Text = "Cenník reziva"
-        '
-        'CenníkGuľatinovýchVýrezovToolStripMenuItem
-        '
-        Me.CenníkGuľatinovýchVýrezovToolStripMenuItem.Name = "CenníkGuľatinovýchVýrezovToolStripMenuItem"
-        Me.CenníkGuľatinovýchVýrezovToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
-        Me.CenníkGuľatinovýchVýrezovToolStripMenuItem.Text = "Cenník guľatinových výrezov"
+        Me.Dodak2ToolStripMenuItem.Name = "Dodak2ToolStripMenuItem"
+        Me.Dodak2ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.Dodak2ToolStripMenuItem.Text = "dodak2"
         '
         'MDIParent1
         '
@@ -651,5 +658,6 @@ Partial Class MDIParent1
     Friend WithEvents VystavenéFaktúryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CenníkRezivaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CenníkGuľatinovýchVýrezovToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Dodak2ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

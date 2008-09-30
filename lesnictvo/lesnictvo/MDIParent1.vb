@@ -134,4 +134,8 @@ Public Class MDIParent1
     Private Sub CenníkGuľatinovýchVýrezovToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CenníkGuľatinovýchVýrezovToolStripMenuItem.Click
         cennik_vyrezov.Show()
     End Sub
+
+    Private Sub Dodak2ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Dodak2ToolStripMenuItem.Click
+        dodak2.Show()
+    End Sub
 End Class
