@@ -122,6 +122,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dodaci_listDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dodaci_list_detailyDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dodaci_list_detailyDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dodak2.Designer.vb">
       <DependentUpon>dodak2.vb</DependentUpon>
     </Compile>
@@ -141,6 +146,16 @@
     </Compile>
     <Compile Include="moznosti.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pohlad_drevinaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pohlad_drevinaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pohlad_odberatelDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pohlad_odberatelDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="rezivoButtonArray.vb" />
     <Compile Include="odberatelia.vb">
@@ -304,6 +319,17 @@
     <None Include="dodaci_listDataSet1.xss">
       <DependentUpon>dodaci_listDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="dodaci_list_detailyDataSet1.xsc">
+      <DependentUpon>dodaci_list_detailyDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dodaci_list_detailyDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dodaci_list_detailyDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dodaci_list_detailyDataSet1.xss">
+      <DependentUpon>dodaci_list_detailyDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="lesnictvo_TemporaryKey.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -324,6 +350,28 @@
     </None>
     <None Include="odberateliaDataSet1.xss">
       <DependentUpon>odberateliaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pohlad_drevinaDataSet1.xsc">
+      <DependentUpon>pohlad_drevinaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pohlad_drevinaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pohlad_drevinaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pohlad_drevinaDataSet1.xss">
+      <DependentUpon>pohlad_drevinaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pohlad_odberatelDataSet1.xsc">
+      <DependentUpon>pohlad_odberatelDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pohlad_odberatelDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pohlad_odberatelDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pohlad_odberatelDataSet1.xss">
+      <DependentUpon>pohlad_odberatelDataSet1.xsd</DependentUpon>
     </None>
     <None Include="rezivoDataSet1.xsc">
       <DependentUpon>rezivoDataSet1.xsd</DependentUpon>
