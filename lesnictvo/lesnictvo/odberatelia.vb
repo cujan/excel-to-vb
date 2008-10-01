@@ -73,4 +73,8 @@
         DicTextBox.ReadOnly = False
         IcoTextBox.ReadOnly = False
     End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        odberatelia_print.Visible = True
+    End Sub
 End Class
