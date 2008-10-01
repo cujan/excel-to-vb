@@ -127,6 +127,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dodaci_list_detailyDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dodaci_list_rezivo.Designer.vb">
+      <DependentUpon>dodaci_list_rezivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dodaci_list_rezivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dodaci_list_rezivoDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dodaci_list_rezivoDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dodak2.Designer.vb">
       <DependentUpon>dodak2.vb</DependentUpon>
     </Compile>
@@ -156,6 +167,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>pohlad_odberatelDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pohlad_rezivoDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pohlad_rezivoDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="rezivoButtonArray.vb" />
     <Compile Include="odberatelia.vb">
@@ -245,6 +261,10 @@
       <DependentUpon>dodaci_list.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="dodaci_list_rezivo.resx">
+      <DependentUpon>dodaci_list_rezivo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="dodak2.resx">
       <DependentUpon>dodak2.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -330,6 +350,17 @@
     <None Include="dodaci_list_detailyDataSet1.xss">
       <DependentUpon>dodaci_list_detailyDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="dodaci_list_rezivoDataSet1.xsc">
+      <DependentUpon>dodaci_list_rezivoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dodaci_list_rezivoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dodaci_list_rezivoDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dodaci_list_rezivoDataSet1.xss">
+      <DependentUpon>dodaci_list_rezivoDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="lesnictvo_TemporaryKey.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -372,6 +403,17 @@
     </None>
     <None Include="pohlad_odberatelDataSet1.xss">
       <DependentUpon>pohlad_odberatelDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pohlad_rezivoDataSet1.xsc">
+      <DependentUpon>pohlad_rezivoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pohlad_rezivoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pohlad_rezivoDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pohlad_rezivoDataSet1.xss">
+      <DependentUpon>pohlad_rezivoDataSet1.xsd</DependentUpon>
     </None>
     <None Include="rezivoDataSet1.xsc">
       <DependentUpon>rezivoDataSet1.xsd</DependentUpon>

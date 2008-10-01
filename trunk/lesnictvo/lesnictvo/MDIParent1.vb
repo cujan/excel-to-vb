@@ -138,4 +138,8 @@ Public Class MDIParent1
     Private Sub Dodak2ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Dodak2ToolStripMenuItem.Click
         dodak2.Show()
     End Sub
+
+    Private Sub DodacíListRezivoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DodacíListRezivoToolStripMenuItem.Click
+        dodaci_list_rezivo.Show()
+    End Sub
 End Class
