@@ -21,12 +21,12 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("dodaci_listDataSet1"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("dodaci_list_detailyDataSet1"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class dodaci_listDataSet1
+Partial Public Class dodaci_list_detailyDataSet1
     Inherits Global.System.Data.DataSet
     
-    Private tabledodaci_list As dodaci_listDataTable
+    Private tabledodaci_list_detaily As dodaci_list_detailyDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -55,8 +55,8 @@ Partial Public Class dodaci_listDataSet1
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("dodaci_list")) Is Nothing) Then
-                MyBase.Tables.Add(New dodaci_listDataTable(ds.Tables("dodaci_list")))
+            If (Not (ds.Tables("dodaci_list_detaily")) Is Nothing) Then
+                MyBase.Tables.Add(New dodaci_list_detailyDataTable(ds.Tables("dodaci_list_detaily")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -78,9 +78,9 @@ Partial Public Class dodaci_listDataSet1
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property dodaci_list() As dodaci_listDataTable
+    Public ReadOnly Property dodaci_list_detaily() As dodaci_list_detailyDataTable
         Get
-            Return Me.tabledodaci_list
+            Return Me.tabledodaci_list_detaily
         End Get
     End Property
     
@@ -121,7 +121,7 @@ Partial Public Class dodaci_listDataSet1
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As dodaci_listDataSet1 = CType(MyBase.Clone,dodaci_listDataSet1)
+        Dim cln As dodaci_list_detailyDataSet1 = CType(MyBase.Clone,dodaci_list_detailyDataSet1)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -143,8 +143,8 @@ Partial Public Class dodaci_listDataSet1
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet
             ds.ReadXml(reader)
-            If (Not (ds.Tables("dodaci_list")) Is Nothing) Then
-                MyBase.Tables.Add(New dodaci_listDataTable(ds.Tables("dodaci_list")))
+            If (Not (ds.Tables("dodaci_list_detaily")) Is Nothing) Then
+                MyBase.Tables.Add(New dodaci_list_detailyDataTable(ds.Tables("dodaci_list_detaily")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -175,27 +175,27 @@ Partial Public Class dodaci_listDataSet1
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tabledodaci_list = CType(MyBase.Tables("dodaci_list"),dodaci_listDataTable)
+        Me.tabledodaci_list_detaily = CType(MyBase.Tables("dodaci_list_detaily"),dodaci_list_detailyDataTable)
         If (initTable = true) Then
-            If (Not (Me.tabledodaci_list) Is Nothing) Then
-                Me.tabledodaci_list.InitVars
+            If (Not (Me.tabledodaci_list_detaily) Is Nothing) Then
+                Me.tabledodaci_list_detaily.InitVars
             End If
         End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
     Private Sub InitClass()
-        Me.DataSetName = "dodaci_listDataSet1"
+        Me.DataSetName = "dodaci_list_detailyDataSet1"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/dodaci_listDataSet1.xsd"
+        Me.Namespace = "http://tempuri.org/dodaci_list_detailyDataSet1.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tabledodaci_list = New dodaci_listDataTable
-        MyBase.Tables.Add(Me.tabledodaci_list)
+        Me.tabledodaci_list_detaily = New dodaci_list_detailyDataTable
+        MyBase.Tables.Add(Me.tabledodaci_list_detaily)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-    Private Function ShouldSerializedodaci_list() As Boolean
+    Private Function ShouldSerializedodaci_list_detaily() As Boolean
         Return false
     End Function
     
@@ -208,7 +208,7 @@ Partial Public Class dodaci_listDataSet1
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As dodaci_listDataSet1 = New dodaci_listDataSet1
+        Dim ds As dodaci_list_detailyDataSet1 = New dodaci_list_detailyDataSet1
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny
@@ -255,7 +255,7 @@ Partial Public Class dodaci_listDataSet1
         Return type
     End Function
     
-    Public Delegate Sub dodaci_listRowChangeEventHandler(ByVal sender As Object, ByVal e As dodaci_listRowChangeEvent)
+    Public Delegate Sub dodaci_list_detailyRowChangeEventHandler(ByVal sender As Object, ByVal e As dodaci_list_detailyRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -263,19 +263,29 @@ Partial Public Class dodaci_listDataSet1
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0"),  _
      Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class dodaci_listDataTable
-        Inherits Global.System.Data.TypedTableBase(Of dodaci_listRow)
+    Partial Public Class dodaci_list_detailyDataTable
+        Inherits Global.System.Data.TypedTableBase(Of dodaci_list_detailyRow)
         
         Private columnid As Global.System.Data.DataColumn
         
-        Private columnid_odberatel As Global.System.Data.DataColumn
+        Private columndodaci_listID As Global.System.Data.DataColumn
         
-        Private columndatum As Global.System.Data.DataColumn
+        Private columndrevinaID As Global.System.Data.DataColumn
+        
+        Private columndlzka As Global.System.Data.DataColumn
+        
+        Private columnsirka As Global.System.Data.DataColumn
+        
+        Private columnhrubka As Global.System.Data.DataColumn
+        
+        Private columnmnozstvo As Global.System.Data.DataColumn
+        
+        Private columncena As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "dodaci_list"
+            Me.TableName = "dodaci_list_detaily"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -312,16 +322,51 @@ Partial Public Class dodaci_listDataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property id_odberatelColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property dodaci_listIDColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnid_odberatel
+                Return Me.columndodaci_listID
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property datumColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property drevinaIDColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columndatum
+                Return Me.columndrevinaID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property dlzkaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndlzka
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property sirkaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsirka
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property hrubkaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnhrubka
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property mnozstvoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmnozstvo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property cenaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncena
             End Get
         End Property
         
@@ -334,66 +379,81 @@ Partial Public Class dodaci_listDataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As dodaci_listRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As dodaci_list_detailyRow
             Get
-                Return CType(Me.Rows(index),dodaci_listRow)
+                Return CType(Me.Rows(index),dodaci_list_detailyRow)
             End Get
         End Property
         
-        Public Event dodaci_listRowChanging As dodaci_listRowChangeEventHandler
+        Public Event dodaci_list_detailyRowChanging As dodaci_list_detailyRowChangeEventHandler
         
-        Public Event dodaci_listRowChanged As dodaci_listRowChangeEventHandler
+        Public Event dodaci_list_detailyRowChanged As dodaci_list_detailyRowChangeEventHandler
         
-        Public Event dodaci_listRowDeleting As dodaci_listRowChangeEventHandler
+        Public Event dodaci_list_detailyRowDeleting As dodaci_list_detailyRowChangeEventHandler
         
-        Public Event dodaci_listRowDeleted As dodaci_listRowChangeEventHandler
+        Public Event dodaci_list_detailyRowDeleted As dodaci_list_detailyRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overloads Sub Adddodaci_listRow(ByVal row As dodaci_listRow)
+        Public Overloads Sub Adddodaci_list_detailyRow(ByVal row As dodaci_list_detailyRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overloads Function Adddodaci_listRow(ByVal id_odberatel As Integer, ByVal datum As Date) As dodaci_listRow
-            Dim rowdodaci_listRow As dodaci_listRow = CType(Me.NewRow,dodaci_listRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, id_odberatel, datum}
-            rowdodaci_listRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowdodaci_listRow)
-            Return rowdodaci_listRow
+        Public Overloads Function Adddodaci_list_detailyRow(ByVal dodaci_listID As Integer, ByVal drevinaID As Integer, ByVal dlzka As Integer, ByVal sirka As Integer, ByVal hrubka As Integer, ByVal mnozstvo As Integer, ByVal cena As Integer) As dodaci_list_detailyRow
+            Dim rowdodaci_list_detailyRow As dodaci_list_detailyRow = CType(Me.NewRow,dodaci_list_detailyRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, dodaci_listID, drevinaID, dlzka, sirka, hrubka, mnozstvo, cena}
+            rowdodaci_list_detailyRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowdodaci_list_detailyRow)
+            Return rowdodaci_list_detailyRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function FindByid(ByVal id As Integer) As dodaci_listRow
-            Return CType(Me.Rows.Find(New Object() {id}),dodaci_listRow)
+        Public Function FindByid(ByVal id As Integer) As dodaci_list_detailyRow
+            Return CType(Me.Rows.Find(New Object() {id}),dodaci_list_detailyRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As dodaci_listDataTable = CType(MyBase.Clone,dodaci_listDataTable)
+            Dim cln As dodaci_list_detailyDataTable = CType(MyBase.Clone,dodaci_list_detailyDataTable)
             cln.InitVars
             Return cln
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New dodaci_listDataTable
+            Return New dodaci_list_detailyDataTable
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Friend Sub InitVars()
             Me.columnid = MyBase.Columns("id")
-            Me.columnid_odberatel = MyBase.Columns("id_odberatel")
-            Me.columndatum = MyBase.Columns("datum")
+            Me.columndodaci_listID = MyBase.Columns("dodaci_listID")
+            Me.columndrevinaID = MyBase.Columns("drevinaID")
+            Me.columndlzka = MyBase.Columns("dlzka")
+            Me.columnsirka = MyBase.Columns("sirka")
+            Me.columnhrubka = MyBase.Columns("hrubka")
+            Me.columnmnozstvo = MyBase.Columns("mnozstvo")
+            Me.columncena = MyBase.Columns("cena")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitClass()
             Me.columnid = New Global.System.Data.DataColumn("id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid)
-            Me.columnid_odberatel = New Global.System.Data.DataColumn("id_odberatel", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnid_odberatel)
-            Me.columndatum = New Global.System.Data.DataColumn("datum", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndatum)
+            Me.columndodaci_listID = New Global.System.Data.DataColumn("dodaci_listID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndodaci_listID)
+            Me.columndrevinaID = New Global.System.Data.DataColumn("drevinaID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndrevinaID)
+            Me.columndlzka = New Global.System.Data.DataColumn("dlzka", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndlzka)
+            Me.columnsirka = New Global.System.Data.DataColumn("sirka", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsirka)
+            Me.columnhrubka = New Global.System.Data.DataColumn("hrubka", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnhrubka)
+            Me.columnmnozstvo = New Global.System.Data.DataColumn("mnozstvo", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmnozstvo)
+            Me.columncena = New Global.System.Data.DataColumn("cena", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncena)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
             Me.columnid.AutoIncrement = true
             Me.columnid.AutoIncrementSeed = -1
@@ -404,54 +464,54 @@ Partial Public Class dodaci_listDataSet1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function Newdodaci_listRow() As dodaci_listRow
-            Return CType(Me.NewRow,dodaci_listRow)
+        Public Function Newdodaci_list_detailyRow() As dodaci_list_detailyRow
+            Return CType(Me.NewRow,dodaci_list_detailyRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New dodaci_listRow(builder)
+            Return New dodaci_list_detailyRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(dodaci_listRow)
+            Return GetType(dodaci_list_detailyRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.dodaci_listRowChangedEvent) Is Nothing) Then
-                RaiseEvent dodaci_listRowChanged(Me, New dodaci_listRowChangeEvent(CType(e.Row,dodaci_listRow), e.Action))
+            If (Not (Me.dodaci_list_detailyRowChangedEvent) Is Nothing) Then
+                RaiseEvent dodaci_list_detailyRowChanged(Me, New dodaci_list_detailyRowChangeEvent(CType(e.Row,dodaci_list_detailyRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.dodaci_listRowChangingEvent) Is Nothing) Then
-                RaiseEvent dodaci_listRowChanging(Me, New dodaci_listRowChangeEvent(CType(e.Row,dodaci_listRow), e.Action))
+            If (Not (Me.dodaci_list_detailyRowChangingEvent) Is Nothing) Then
+                RaiseEvent dodaci_list_detailyRowChanging(Me, New dodaci_list_detailyRowChangeEvent(CType(e.Row,dodaci_list_detailyRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.dodaci_listRowDeletedEvent) Is Nothing) Then
-                RaiseEvent dodaci_listRowDeleted(Me, New dodaci_listRowChangeEvent(CType(e.Row,dodaci_listRow), e.Action))
+            If (Not (Me.dodaci_list_detailyRowDeletedEvent) Is Nothing) Then
+                RaiseEvent dodaci_list_detailyRowDeleted(Me, New dodaci_list_detailyRowChangeEvent(CType(e.Row,dodaci_list_detailyRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.dodaci_listRowDeletingEvent) Is Nothing) Then
-                RaiseEvent dodaci_listRowDeleting(Me, New dodaci_listRowChangeEvent(CType(e.Row,dodaci_listRow), e.Action))
+            If (Not (Me.dodaci_list_detailyRowDeletingEvent) Is Nothing) Then
+                RaiseEvent dodaci_list_detailyRowDeleting(Me, New dodaci_list_detailyRowChangeEvent(CType(e.Row,dodaci_list_detailyRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub Removedodaci_listRow(ByVal row As dodaci_listRow)
+        Public Sub Removedodaci_list_detailyRow(ByVal row As dodaci_list_detailyRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -459,7 +519,7 @@ Partial Public Class dodaci_listDataSet1
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence
-            Dim ds As dodaci_listDataSet1 = New dodaci_listDataSet1
+            Dim ds As dodaci_list_detailyDataSet1 = New dodaci_list_detailyDataSet1
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -477,7 +537,7 @@ Partial Public Class dodaci_listDataSet1
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "dodaci_listDataTable"
+            attribute2.FixedValue = "dodaci_list_detailyDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -525,73 +585,193 @@ Partial Public Class dodaci_listDataSet1
     '''Represents strongly named DataRow class.
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")>  _
-    Partial Public Class dodaci_listRow
+    Partial Public Class dodaci_list_detailyRow
         Inherits Global.System.Data.DataRow
         
-        Private tabledodaci_list As dodaci_listDataTable
+        Private tabledodaci_list_detaily As dodaci_list_detailyDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tabledodaci_list = CType(Me.Table,dodaci_listDataTable)
+            Me.tabledodaci_list_detaily = CType(Me.Table,dodaci_list_detailyDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Property id() As Integer
             Get
-                Return CType(Me(Me.tabledodaci_list.idColumn),Integer)
+                Return CType(Me(Me.tabledodaci_list_detaily.idColumn),Integer)
             End Get
             Set
-                Me(Me.tabledodaci_list.idColumn) = value
+                Me(Me.tabledodaci_list_detaily.idColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property id_odberatel() As Integer
+        Public Property dodaci_listID() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tabledodaci_list.id_odberatelColumn),Integer)
+                    Return CType(Me(Me.tabledodaci_list_detaily.dodaci_listIDColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'id_odberatel' in table 'dodaci_list' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'dodaci_listID' in table 'dodaci_list_detaily' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabledodaci_list.id_odberatelColumn) = value
+                Me(Me.tabledodaci_list_detaily.dodaci_listIDColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property datum() As Date
+        Public Property drevinaID() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tabledodaci_list.datumColumn),Date)
+                    Return CType(Me(Me.tabledodaci_list_detaily.drevinaIDColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'datum' in table 'dodaci_list' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'drevinaID' in table 'dodaci_list_detaily' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabledodaci_list.datumColumn) = value
+                Me(Me.tabledodaci_list_detaily.drevinaIDColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function Isid_odberatelNull() As Boolean
-            Return Me.IsNull(Me.tabledodaci_list.id_odberatelColumn)
+        Public Property dlzka() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabledodaci_list_detaily.dlzkaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'dlzka' in table 'dodaci_list_detaily' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabledodaci_list_detaily.dlzkaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property sirka() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabledodaci_list_detaily.sirkaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'sirka' in table 'dodaci_list_detaily' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabledodaci_list_detaily.sirkaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property hrubka() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabledodaci_list_detaily.hrubkaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'hrubka' in table 'dodaci_list_detaily' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabledodaci_list_detaily.hrubkaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property mnozstvo() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabledodaci_list_detaily.mnozstvoColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'mnozstvo' in table 'dodaci_list_detaily' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabledodaci_list_detaily.mnozstvoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property cena() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabledodaci_list_detaily.cenaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'cena' in table 'dodaci_list_detaily' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabledodaci_list_detaily.cenaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isdodaci_listIDNull() As Boolean
+            Return Me.IsNull(Me.tabledodaci_list_detaily.dodaci_listIDColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub Setid_odberatelNull()
-            Me(Me.tabledodaci_list.id_odberatelColumn) = Global.System.Convert.DBNull
+        Public Sub Setdodaci_listIDNull()
+            Me(Me.tabledodaci_list_detaily.dodaci_listIDColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function IsdatumNull() As Boolean
-            Return Me.IsNull(Me.tabledodaci_list.datumColumn)
+        Public Function IsdrevinaIDNull() As Boolean
+            Return Me.IsNull(Me.tabledodaci_list_detaily.drevinaIDColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub SetdatumNull()
-            Me(Me.tabledodaci_list.datumColumn) = Global.System.Convert.DBNull
+        Public Sub SetdrevinaIDNull()
+            Me(Me.tabledodaci_list_detaily.drevinaIDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function IsdlzkaNull() As Boolean
+            Return Me.IsNull(Me.tabledodaci_list_detaily.dlzkaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub SetdlzkaNull()
+            Me(Me.tabledodaci_list_detaily.dlzkaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function IssirkaNull() As Boolean
+            Return Me.IsNull(Me.tabledodaci_list_detaily.sirkaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub SetsirkaNull()
+            Me(Me.tabledodaci_list_detaily.sirkaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function IshrubkaNull() As Boolean
+            Return Me.IsNull(Me.tabledodaci_list_detaily.hrubkaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub SethrubkaNull()
+            Me(Me.tabledodaci_list_detaily.hrubkaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function IsmnozstvoNull() As Boolean
+            Return Me.IsNull(Me.tabledodaci_list_detaily.mnozstvoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub SetmnozstvoNull()
+            Me(Me.tabledodaci_list_detaily.mnozstvoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function IscenaNull() As Boolean
+            Return Me.IsNull(Me.tabledodaci_list_detaily.cenaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub SetcenaNull()
+            Me(Me.tabledodaci_list_detaily.cenaColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -599,22 +779,22 @@ Partial Public Class dodaci_listDataSet1
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")>  _
-    Public Class dodaci_listRowChangeEvent
+    Public Class dodaci_list_detailyRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As dodaci_listRow
+        Private eventRow As dodaci_list_detailyRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub New(ByVal row As dodaci_listRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As dodaci_list_detailyRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property Row() As dodaci_listRow
+        Public ReadOnly Property Row() As dodaci_list_detailyRow
             Get
                 Return Me.eventRow
             End Get
@@ -629,7 +809,7 @@ Partial Public Class dodaci_listDataSet1
     End Class
 End Class
 
-Namespace dodaci_listDataSet1TableAdapters
+Namespace dodaci_list_detailyDataSet1TableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -641,7 +821,7 @@ Namespace dodaci_listDataSet1TableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class dodaci_listTableAdapter
+    Partial Public Class dodaci_list_detailyTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.SqlServerCe.SqlCeDataAdapter
@@ -751,30 +931,47 @@ Namespace dodaci_listDataSet1TableAdapters
             Me._adapter = New Global.System.Data.SqlServerCe.SqlCeDataAdapter
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "dodaci_list"
+            tableMapping.DataSetTable = "dodaci_list_detaily"
             tableMapping.ColumnMappings.Add("id", "id")
-            tableMapping.ColumnMappings.Add("id_odberatel", "id_odberatel")
-            tableMapping.ColumnMappings.Add("datum", "datum")
+            tableMapping.ColumnMappings.Add("dodaci_listID", "dodaci_listID")
+            tableMapping.ColumnMappings.Add("drevinaID", "drevinaID")
+            tableMapping.ColumnMappings.Add("dlzka", "dlzka")
+            tableMapping.ColumnMappings.Add("sirka", "sirka")
+            tableMapping.ColumnMappings.Add("hrubka", "hrubka")
+            tableMapping.ColumnMappings.Add("mnozstvo", "mnozstvo")
+            tableMapping.ColumnMappings.Add("cena", "cena")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dodaci_list] WHERE (([id] = @p1))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dodaci_list_detaily] WHERE (([id] = @p1))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dodaci_list] ([id_odberatel], [datum]) VALUES (@p1, @p2)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dodaci_list_detaily] ([dodaci_listID], [drevinaID], [dlzka], [sirka]"& _ 
+                ", [hrubka], [mnozstvo], [cena]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_odberatel", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "datum", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "dodaci_listID", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "drevinaID", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "dlzka", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "sirka", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p5", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "hrubka", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p6", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "mnozstvo", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p7", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cena", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dodaci_list] SET [id_odberatel] = @p1, [datum] = @p2 WHERE (([id] = @p3))"& _ 
-                ""
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dodaci_list_detaily] SET [dodaci_listID] = @p1, [drevinaID] = @p2, [dlzka"& _ 
+                "] = @p3, [sirka] = @p4, [hrubka] = @p5, [mnozstvo] = @p6, [cena] = @p7 WHERE ((["& _ 
+                "id] = @p8))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_odberatel", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "datum", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "dodaci_listID", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "drevinaID", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "dlzka", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "sirka", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p5", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "hrubka", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p6", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "mnozstvo", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p7", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cena", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p8", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -788,14 +985,15 @@ Namespace dodaci_listDataSet1TableAdapters
             Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT id, id_odberatel, datum FROM dodaci_list"
+            Me._commandCollection(0).CommandText = "SELECT [id], [dodaci_listID], [drevinaID], [dlzka], [sirka], [hrubka], [mnozstvo]"& _ 
+                ", [cena] FROM [dodaci_list_detaily]"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As dodaci_listDataSet1.dodaci_listDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As dodaci_list_detailyDataSet1.dodaci_list_detailyDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -807,23 +1005,23 @@ Namespace dodaci_listDataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As dodaci_listDataSet1.dodaci_listDataTable
+        Public Overloads Overridable Function GetData() As dodaci_list_detailyDataSet1.dodaci_list_detailyDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As dodaci_listDataSet1.dodaci_listDataTable = New dodaci_listDataSet1.dodaci_listDataTable
+            Dim dataTable As dodaci_list_detailyDataSet1.dodaci_list_detailyDataTable = New dodaci_list_detailyDataSet1.dodaci_list_detailyDataTable
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As dodaci_listDataSet1.dodaci_listDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As dodaci_list_detailyDataSet1.dodaci_list_detailyDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As dodaci_listDataSet1) As Integer
-            Return Me.Adapter.Update(dataSet, "dodaci_list")
+        Public Overloads Overridable Function Update(ByVal dataSet As dodaci_list_detailyDataSet1) As Integer
+            Return Me.Adapter.Update(dataSet, "dodaci_list_detaily")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -861,16 +1059,41 @@ Namespace dodaci_listDataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal p1 As Global.System.Nullable(Of Integer), ByVal p2 As Global.System.Nullable(Of Date)) As Integer
+        Public Overloads Overridable Function Insert(ByVal p1 As Global.System.Nullable(Of Integer), ByVal p2 As Global.System.Nullable(Of Integer), ByVal p3 As Global.System.Nullable(Of Integer), ByVal p4 As Global.System.Nullable(Of Integer), ByVal p5 As Global.System.Nullable(Of Integer), ByVal p6 As Global.System.Nullable(Of Integer), ByVal p7 As Global.System.Nullable(Of Integer)) As Integer
             If (p1.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(p1.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
             If (p2.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(p2.Value,Date)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(p2.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (p3.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(p3.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (p4.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(p4.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (p5.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(p5.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (p6.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(p6.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (p7.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(p7.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -890,18 +1113,43 @@ Namespace dodaci_listDataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p1 As Global.System.Nullable(Of Integer), ByVal p2 As Global.System.Nullable(Of Date), ByVal p3 As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal p1 As Global.System.Nullable(Of Integer), ByVal p2 As Global.System.Nullable(Of Integer), ByVal p3 As Global.System.Nullable(Of Integer), ByVal p4 As Global.System.Nullable(Of Integer), ByVal p5 As Global.System.Nullable(Of Integer), ByVal p6 As Global.System.Nullable(Of Integer), ByVal p7 As Global.System.Nullable(Of Integer), ByVal p8 As Integer) As Integer
             If (p1.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(p1.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
             If (p2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(p3,Integer)
+            If (p3.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(p3.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (p4.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(p4.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (p5.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(p5.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (p6.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(p6.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (p7.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(p7.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(p8,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -932,7 +1180,7 @@ Namespace dodaci_listDataSet1TableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
-        Private _dodaci_listTableAdapter As dodaci_listTableAdapter
+        Private _dodaci_list_detailyTableAdapter As dodaci_list_detailyTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -952,14 +1200,14 @@ Namespace dodaci_listDataSet1TableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"& _ 
             "", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property dodaci_listTableAdapter() As dodaci_listTableAdapter
+        Public Property dodaci_list_detailyTableAdapter() As dodaci_list_detailyTableAdapter
             Get
-                Return Me._dodaci_listTableAdapter
+                Return Me._dodaci_list_detailyTableAdapter
             End Get
             Set
-                If ((Not (Me._dodaci_listTableAdapter) Is Nothing)  _
+                If ((Not (Me._dodaci_list_detailyTableAdapter) Is Nothing)  _
                             AndAlso (Me.TableAdapterInstanceCount = 1)) Then
-                    Me._dodaci_listTableAdapter = value
+                    Me._dodaci_list_detailyTableAdapter = value
                     Return
                 End If
                 If ((Not (value) Is Nothing)  _
@@ -967,7 +1215,7 @@ Namespace dodaci_listDataSet1TableAdapters
                     Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                             "tring.")
                 End If
-                Me._dodaci_listTableAdapter = value
+                Me._dodaci_list_detailyTableAdapter = value
             End Set
         End Property
         
@@ -988,9 +1236,9 @@ Namespace dodaci_listDataSet1TableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
-                If ((Not (Me._dodaci_listTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._dodaci_listTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._dodaci_listTableAdapter.Connection
+                If ((Not (Me._dodaci_list_detailyTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._dodaci_list_detailyTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._dodaci_list_detailyTableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -1004,7 +1252,7 @@ Namespace dodaci_listDataSet1TableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
-                If (Not (Me._dodaci_listTableAdapter) Is Nothing) Then
+                If (Not (Me._dodaci_list_detailyTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -1015,14 +1263,14 @@ Namespace dodaci_listDataSet1TableAdapters
         '''Update rows in top-down order.
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As dodaci_listDataSet1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As dodaci_list_detailyDataSet1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._dodaci_listTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.dodaci_list.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._dodaci_list_detailyTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.dodaci_list_detaily.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._dodaci_listTableAdapter.Update(updatedRows))
+                    result = (result + Me._dodaci_list_detailyTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -1033,13 +1281,13 @@ Namespace dodaci_listDataSet1TableAdapters
         '''Insert rows in top-down order.
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As dodaci_listDataSet1, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As dodaci_list_detailyDataSet1, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._dodaci_listTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.dodaci_list.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._dodaci_list_detailyTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.dodaci_list_detaily.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._dodaci_listTableAdapter.Update(addedRows))
+                    result = (result + Me._dodaci_list_detailyTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -1050,13 +1298,13 @@ Namespace dodaci_listDataSet1TableAdapters
         '''Delete rows in bottom-up order.
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As dodaci_listDataSet1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As dodaci_list_detailyDataSet1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._dodaci_listTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.dodaci_list.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._dodaci_list_detailyTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.dodaci_list_detaily.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._dodaci_listTableAdapter.Update(deletedRows))
+                    result = (result + Me._dodaci_list_detailyTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -1092,7 +1340,7 @@ Namespace dodaci_listDataSet1TableAdapters
         '''Update all changes to the dataset.
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As dodaci_listDataSet1) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As dodaci_list_detailyDataSet1) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If
@@ -1128,13 +1376,13 @@ Namespace dodaci_listDataSet1TableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
-                If (Not (Me._dodaci_listTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._dodaci_listTableAdapter, Me._dodaci_listTableAdapter.Connection)
-                    Me._dodaci_listTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlServerCe.SqlCeConnection)
-                    Me._dodaci_listTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlServerCe.SqlCeTransaction)
-                    If Me._dodaci_listTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._dodaci_listTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._dodaci_listTableAdapter.Adapter)
+                If (Not (Me._dodaci_list_detailyTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._dodaci_list_detailyTableAdapter, Me._dodaci_list_detailyTableAdapter.Connection)
+                    Me._dodaci_list_detailyTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlServerCe.SqlCeConnection)
+                    Me._dodaci_list_detailyTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlServerCe.SqlCeTransaction)
+                    If Me._dodaci_list_detailyTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._dodaci_list_detailyTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._dodaci_list_detailyTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -1197,9 +1445,9 @@ Namespace dodaci_listDataSet1TableAdapters
                 If workConnOpened Then
                     workConnection.Close
                 End If
-                If (Not (Me._dodaci_listTableAdapter) Is Nothing) Then
-                    Me._dodaci_listTableAdapter.Connection = CType(revertConnections(Me._dodaci_listTableAdapter),Global.System.Data.SqlServerCe.SqlCeConnection)
-                    Me._dodaci_listTableAdapter.Transaction = Nothing
+                If (Not (Me._dodaci_list_detailyTableAdapter) Is Nothing) Then
+                    Me._dodaci_list_detailyTableAdapter.Connection = CType(revertConnections(Me._dodaci_list_detailyTableAdapter),Global.System.Data.SqlServerCe.SqlCeConnection)
+                    Me._dodaci_list_detailyTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter
