@@ -68,6 +68,7 @@ Partial Class odberatelia
         Me.Button2 = New System.Windows.Forms.Button
         Me.detajly = New System.Windows.Forms.Label
         Me.Button3 = New System.Windows.Forms.Button
+        Me.Button4 = New System.Windows.Forms.Button
         NazovLabel = New System.Windows.Forms.Label
         UlicaLabel = New System.Windows.Forms.Label
         MestoLabel = New System.Windows.Forms.Label
@@ -400,7 +401,7 @@ Partial Class odberatelia
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(463, 125)
+        Me.Button1.Location = New System.Drawing.Point(463, 94)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(106, 23)
         Me.Button1.TabIndex = 18
@@ -409,7 +410,7 @@ Partial Class odberatelia
         '
         'edit
         '
-        Me.edit.Location = New System.Drawing.Point(463, 98)
+        Me.edit.Location = New System.Drawing.Point(463, 67)
         Me.edit.Name = "edit"
         Me.edit.Size = New System.Drawing.Size(106, 23)
         Me.edit.TabIndex = 19
@@ -418,7 +419,7 @@ Partial Class odberatelia
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(463, 151)
+        Me.Button2.Location = New System.Drawing.Point(463, 120)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(103, 23)
         Me.Button2.TabIndex = 20
@@ -436,18 +437,28 @@ Partial Class odberatelia
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(463, 73)
+        Me.Button3.Location = New System.Drawing.Point(463, 42)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(106, 23)
         Me.Button3.TabIndex = 22
         Me.Button3.Text = "Pridaj odberateľa"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(463, 150)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(103, 23)
+        Me.Button4.TabIndex = 23
+        Me.Button4.Text = "Vytlačiť zoznam"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'odberatelia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(907, 555)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.detajly)
         Me.Controls.Add(Me.Button2)
@@ -519,5 +530,6 @@ Partial Class odberatelia
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents detajly As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 
 End Class

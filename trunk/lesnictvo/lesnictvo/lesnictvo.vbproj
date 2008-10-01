@@ -56,6 +56,7 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
@@ -157,6 +158,17 @@
     </Compile>
     <Compile Include="moznosti.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="odberatelia_print.Designer.vb">
+      <DependentUpon>odberatelia_print.vb</DependentUpon>
+    </Compile>
+    <Compile Include="odberatelia_print.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="odberatelia_print_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>odberatelia_print_Dataset.xsd</DependentUpon>
     </Compile>
     <Compile Include="pohlad_drevinaDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -287,6 +299,10 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="odberatelia_print.resx">
+      <DependentUpon>odberatelia_print.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="varovanie.resx">
       <DependentUpon>varovanie.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -381,6 +397,17 @@
     </None>
     <None Include="odberateliaDataSet1.xss">
       <DependentUpon>odberateliaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="odberatelia_print_Dataset.xsc">
+      <DependentUpon>odberatelia_print_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="odberatelia_print_Dataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>odberatelia_print_Dataset.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="odberatelia_print_Dataset.xss">
+      <DependentUpon>odberatelia_print_Dataset.xsd</DependentUpon>
     </None>
     <None Include="pohlad_drevinaDataSet1.xsc">
       <DependentUpon>pohlad_drevinaDataSet1.xsd</DependentUpon>
