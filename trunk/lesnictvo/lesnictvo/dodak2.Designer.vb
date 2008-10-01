@@ -23,47 +23,45 @@ Partial Class dodak2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dodak2))
         Dim IdLabel As System.Windows.Forms.Label
         Dim Id_odberatelLabel As System.Windows.Forms.Label
         Dim DatumLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dodak2))
         Me.Dodaci_listDataSet1 = New lesnictvo.dodaci_listDataSet1
         Me.Dodaci_listBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Dodaci_listTableAdapter = New lesnictvo.dodaci_listDataSet1TableAdapters.dodaci_listTableAdapter
         Me.TableAdapterManager = New lesnictvo.dodaci_listDataSet1TableAdapters.TableAdapterManager
         Me.Dodaci_listBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.Dodaci_listBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.IdTextBox = New System.Windows.Forms.TextBox
         Me.DatumDateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.Dodaci_list_detailyDataSet1 = New lesnictvo.dodaci_list_detailyDataSet1
         Me.Dodaci_list_detailyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Dodaci_list_detailyTableAdapter = New lesnictvo.dodaci_list_detailyDataSet1TableAdapters.dodaci_list_detailyTableAdapter
-        Me.TableAdapterManager1 = New lesnictvo.dodaci_list_detailyDataSet1TableAdapters.TableAdapterManager
+        Me.Dodaci_list_detailyTableAdapter = New lesnictvo.dodaci_listDataSet1TableAdapters.dodaci_list_detailyTableAdapter
         Me.Dodaci_list_detailyDataGridView = New System.Windows.Forms.DataGridView
         Me.pohlad_drevinaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Pohlad_drevinaDataSet1 = New lesnictvo.pohlad_drevinaDataSet1
         Me.DrevinyTableAdapter = New lesnictvo.pohlad_drevinaDataSet1TableAdapters.drevinyTableAdapter
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.pohlad_odberatelBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Pohlad_odberatelDataSet1 = New lesnictvo.pohlad_odberatelDataSet1
-        Me.OdberateliaTableAdapter = New lesnictvo.pohlad_odberatelDataSet1TableAdapters.odberateliaTableAdapter
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewComboBoxColumn
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox
+        Me.pohlad_odberatelBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Pohlad_odberatelDataSet1 = New lesnictvo.pohlad_odberatelDataSet1
+        Me.OdberateliaTableAdapter = New lesnictvo.pohlad_odberatelDataSet1TableAdapters.odberateliaTableAdapter
         IdLabel = New System.Windows.Forms.Label
         Id_odberatelLabel = New System.Windows.Forms.Label
         DatumLabel = New System.Windows.Forms.Label
@@ -71,7 +69,6 @@ Partial Class dodak2
         CType(Me.Dodaci_listBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dodaci_listBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Dodaci_listBindingNavigator.SuspendLayout()
-        CType(Me.Dodaci_list_detailyDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dodaci_list_detailyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dodaci_list_detailyDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pohlad_drevinaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,33 +76,6 @@ Partial Class dodak2
         CType(Me.pohlad_odberatelBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pohlad_odberatelDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'IdLabel
-        '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(65, 50)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(18, 13)
-        IdLabel.TabIndex = 1
-        IdLabel.Text = "id:"
-        '
-        'Id_odberatelLabel
-        '
-        Id_odberatelLabel.AutoSize = True
-        Id_odberatelLabel.Location = New System.Drawing.Point(65, 76)
-        Id_odberatelLabel.Name = "Id_odberatelLabel"
-        Id_odberatelLabel.Size = New System.Drawing.Size(65, 13)
-        Id_odberatelLabel.TabIndex = 3
-        Id_odberatelLabel.Text = "id odberatel:"
-        '
-        'DatumLabel
-        '
-        DatumLabel.AutoSize = True
-        DatumLabel.Location = New System.Drawing.Point(65, 103)
-        DatumLabel.Name = "DatumLabel"
-        DatumLabel.Size = New System.Drawing.Size(39, 13)
-        DatumLabel.TabIndex = 5
-        DatumLabel.Text = "datum:"
         '
         'Dodaci_listDataSet1
         '
@@ -124,6 +94,7 @@ Partial Class dodak2
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.dodaci_list_detailyTableAdapter = Me.Dodaci_list_detailyTableAdapter
         Me.TableAdapterManager.dodaci_listTableAdapter = Me.Dodaci_listTableAdapter
         Me.TableAdapterManager.UpdateOrder = lesnictvo.dodaci_listDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
@@ -144,31 +115,6 @@ Partial Class dodak2
         Me.Dodaci_listBindingNavigator.Size = New System.Drawing.Size(941, 25)
         Me.Dodaci_listBindingNavigator.TabIndex = 0
         Me.Dodaci_listBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -202,9 +148,16 @@ Partial Class dodak2
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -227,8 +180,26 @@ Partial Class dodak2
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'Dodaci_listBindingNavigatorSaveItem
         '
@@ -238,41 +209,57 @@ Partial Class dodak2
         Me.Dodaci_listBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.Dodaci_listBindingNavigatorSaveItem.Text = "Save Data"
         '
+        'IdLabel
+        '
+        IdLabel.AutoSize = True
+        IdLabel.Location = New System.Drawing.Point(75, 78)
+        IdLabel.Name = "IdLabel"
+        IdLabel.Size = New System.Drawing.Size(18, 13)
+        IdLabel.TabIndex = 1
+        IdLabel.Text = "id:"
+        '
         'IdTextBox
         '
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Dodaci_listBindingSource, "id", True))
-        Me.IdTextBox.Location = New System.Drawing.Point(136, 47)
+        Me.IdTextBox.Location = New System.Drawing.Point(146, 75)
         Me.IdTextBox.Name = "IdTextBox"
         Me.IdTextBox.Size = New System.Drawing.Size(200, 20)
         Me.IdTextBox.TabIndex = 2
         '
+        'Id_odberatelLabel
+        '
+        Id_odberatelLabel.AutoSize = True
+        Id_odberatelLabel.Location = New System.Drawing.Point(75, 104)
+        Id_odberatelLabel.Name = "Id_odberatelLabel"
+        Id_odberatelLabel.Size = New System.Drawing.Size(65, 13)
+        Id_odberatelLabel.TabIndex = 3
+        Id_odberatelLabel.Text = "id odberatel:"
+        '
+        'DatumLabel
+        '
+        DatumLabel.AutoSize = True
+        DatumLabel.Location = New System.Drawing.Point(75, 131)
+        DatumLabel.Name = "DatumLabel"
+        DatumLabel.Size = New System.Drawing.Size(39, 13)
+        DatumLabel.TabIndex = 5
+        DatumLabel.Text = "datum:"
+        '
         'DatumDateTimePicker
         '
         Me.DatumDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Dodaci_listBindingSource, "datum", True))
-        Me.DatumDateTimePicker.Location = New System.Drawing.Point(136, 99)
+        Me.DatumDateTimePicker.Location = New System.Drawing.Point(146, 127)
         Me.DatumDateTimePicker.Name = "DatumDateTimePicker"
         Me.DatumDateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.DatumDateTimePicker.TabIndex = 6
         '
-        'Dodaci_list_detailyDataSet1
-        '
-        Me.Dodaci_list_detailyDataSet1.DataSetName = "dodaci_list_detailyDataSet1"
-        Me.Dodaci_list_detailyDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Dodaci_list_detailyBindingSource
         '
-        Me.Dodaci_list_detailyBindingSource.DataMember = "dodaci_list_detaily"
-        Me.Dodaci_list_detailyBindingSource.DataSource = Me.Dodaci_list_detailyDataSet1
+        Me.Dodaci_list_detailyBindingSource.DataMember = "dodaci_list_dodaci_list_detaily"
+        Me.Dodaci_list_detailyBindingSource.DataSource = Me.Dodaci_listBindingSource
         '
         'Dodaci_list_detailyTableAdapter
         '
         Me.Dodaci_list_detailyTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.dodaci_list_detailyTableAdapter = Me.Dodaci_list_detailyTableAdapter
-        Me.TableAdapterManager1.UpdateOrder = lesnictvo.dodaci_list_detailyDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Dodaci_list_detailyDataGridView
         '
@@ -280,9 +267,9 @@ Partial Class dodak2
         Me.Dodaci_list_detailyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Dodaci_list_detailyDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.Dodaci_list_detailyDataGridView.DataSource = Me.Dodaci_list_detailyBindingSource
-        Me.Dodaci_list_detailyDataGridView.Location = New System.Drawing.Point(12, 190)
+        Me.Dodaci_list_detailyDataGridView.Location = New System.Drawing.Point(12, 282)
         Me.Dodaci_list_detailyDataGridView.Name = "Dodaci_list_detailyDataGridView"
-        Me.Dodaci_list_detailyDataGridView.Size = New System.Drawing.Size(845, 220)
+        Me.Dodaci_list_detailyDataGridView.Size = New System.Drawing.Size(790, 220)
         Me.Dodaci_list_detailyDataGridView.TabIndex = 7
         '
         'pohlad_drevinaBindingSource1
@@ -298,31 +285,6 @@ Partial Class dodak2
         'DrevinyTableAdapter
         '
         Me.DrevinyTableAdapter.ClearBeforeFill = True
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DataSource = Me.pohlad_odberatelBindingSource1
-        Me.ComboBox1.DisplayMember = "nazov"
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(137, 74)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(199, 21)
-        Me.ComboBox1.TabIndex = 8
-        Me.ComboBox1.ValueMember = "id"
-        '
-        'pohlad_odberatelBindingSource1
-        '
-        Me.pohlad_odberatelBindingSource1.DataMember = "odberatelia"
-        Me.pohlad_odberatelBindingSource1.DataSource = Me.Pohlad_odberatelDataSet1
-        '
-        'Pohlad_odberatelDataSet1
-        '
-        Me.Pohlad_odberatelDataSet1.DataSetName = "pohlad_odberatelDataSet1"
-        Me.Pohlad_odberatelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'OdberateliaTableAdapter
-        '
-        Me.OdberateliaTableAdapter.ClearBeforeFill = True
         '
         'DataGridViewTextBoxColumn3
         '
@@ -365,11 +327,37 @@ Partial Class dodak2
         Me.DataGridViewTextBoxColumn8.HeaderText = "cena"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.Dodaci_listBindingSource, "id_odberatel", True))
+        Me.ComboBox1.DataSource = Me.pohlad_odberatelBindingSource1
+        Me.ComboBox1.DisplayMember = "nazov"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(146, 102)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
+        Me.ComboBox1.TabIndex = 8
+        Me.ComboBox1.ValueMember = "id"
+        '
+        'pohlad_odberatelBindingSource1
+        '
+        Me.pohlad_odberatelBindingSource1.DataMember = "odberatelia"
+        Me.pohlad_odberatelBindingSource1.DataSource = Me.Pohlad_odberatelDataSet1
+        '
+        'Pohlad_odberatelDataSet1
+        '
+        Me.Pohlad_odberatelDataSet1.DataSetName = "pohlad_odberatelDataSet1"
+        Me.Pohlad_odberatelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'OdberateliaTableAdapter
+        '
+        Me.OdberateliaTableAdapter.ClearBeforeFill = True
+        '
         'dodak2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(941, 529)
+        Me.ClientSize = New System.Drawing.Size(941, 532)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Dodaci_list_detailyDataGridView)
         Me.Controls.Add(IdLabel)
@@ -385,7 +373,6 @@ Partial Class dodak2
         CType(Me.Dodaci_listBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Dodaci_listBindingNavigator.ResumeLayout(False)
         Me.Dodaci_listBindingNavigator.PerformLayout()
-        CType(Me.Dodaci_list_detailyDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Dodaci_list_detailyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Dodaci_list_detailyDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pohlad_drevinaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -413,24 +400,22 @@ Partial Class dodak2
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents Dodaci_listBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Dodaci_list_detailyTableAdapter As lesnictvo.dodaci_listDataSet1TableAdapters.dodaci_list_detailyTableAdapter
     Friend WithEvents IdTextBox As System.Windows.Forms.TextBox
     Friend WithEvents DatumDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Dodaci_list_detailyDataSet1 As lesnictvo.dodaci_list_detailyDataSet1
     Friend WithEvents Dodaci_list_detailyBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents Dodaci_list_detailyTableAdapter As lesnictvo.dodaci_list_detailyDataSet1TableAdapters.dodaci_list_detailyTableAdapter
-    Friend WithEvents TableAdapterManager1 As lesnictvo.dodaci_list_detailyDataSet1TableAdapters.TableAdapterManager
     Friend WithEvents Dodaci_list_detailyDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents pohlad_drevinaBindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents Pohlad_drevinaDataSet1 As lesnictvo.pohlad_drevinaDataSet1
     Friend WithEvents DrevinyTableAdapter As lesnictvo.pohlad_drevinaDataSet1TableAdapters.drevinyTableAdapter
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents pohlad_odberatelBindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents Pohlad_odberatelDataSet1 As lesnictvo.pohlad_odberatelDataSet1
-    Friend WithEvents OdberateliaTableAdapter As lesnictvo.pohlad_odberatelDataSet1TableAdapters.odberateliaTableAdapter
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents pohlad_odberatelBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents Pohlad_odberatelDataSet1 As lesnictvo.pohlad_odberatelDataSet1
+    Friend WithEvents OdberateliaTableAdapter As lesnictvo.pohlad_odberatelDataSet1TableAdapters.odberateliaTableAdapter
 End Class
