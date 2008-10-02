@@ -139,6 +139,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dodaci_list_rezivoDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dodaci_list_rezivo_detaily.Designer.vb">
+      <DependentUpon>dodaci_list_rezivo_detaily.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dodaci_list_rezivo_detaily.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dodak2.Designer.vb">
       <DependentUpon>dodak2.vb</DependentUpon>
     </Compile>
@@ -275,6 +281,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dodaci_list_rezivo.resx">
       <DependentUpon>dodaci_list_rezivo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dodaci_list_rezivo_detaily.resx">
+      <DependentUpon>dodaci_list_rezivo_detaily.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="dodak2.resx">
