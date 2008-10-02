@@ -38,10 +38,6 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Me.Validate()
-        Me.Dodaci_listBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.Dodaci_listDataSet1)
-        Me.Dodaci_listTableAdapter.Update(Me.Dodaci_listDataSet1)
-
+        dodaci_list_rezivo_detaily.Show()
     End Sub
 End Class

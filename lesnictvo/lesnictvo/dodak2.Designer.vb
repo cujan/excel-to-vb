@@ -49,21 +49,21 @@ Partial Class dodak2
         Me.DatumDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Dodaci_list_detailyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Dodaci_list_detailyDataGridView = New System.Windows.Forms.DataGridView
-        Me.pohlad_drevinaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Pohlad_drevinaDataSet1 = New lesnictvo.pohlad_drevinaDataSet1
-        Me.DrevinyTableAdapter = New lesnictvo.pohlad_drevinaDataSet1TableAdapters.drevinyTableAdapter
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.pohlad_odberatelBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Pohlad_odberatelDataSet1 = New lesnictvo.pohlad_odberatelDataSet1
-        Me.OdberateliaTableAdapter = New lesnictvo.pohlad_odberatelDataSet1TableAdapters.odberateliaTableAdapter
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.dodaci_listID = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewComboBoxColumn
+        Me.pohlad_drevinaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Pohlad_drevinaDataSet1 = New lesnictvo.pohlad_drevinaDataSet1
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DrevinyTableAdapter = New lesnictvo.pohlad_drevinaDataSet1TableAdapters.drevinyTableAdapter
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox
+        Me.pohlad_odberatelBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Pohlad_odberatelDataSet1 = New lesnictvo.pohlad_odberatelDataSet1
+        Me.OdberateliaTableAdapter = New lesnictvo.pohlad_odberatelDataSet1TableAdapters.odberateliaTableAdapter
         Me.Button1 = New System.Windows.Forms.Button
         IdLabel = New System.Windows.Forms.Label
         Id_odberatelLabel = New System.Windows.Forms.Label
@@ -270,50 +270,10 @@ Partial Class dodak2
         Me.Dodaci_list_detailyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Dodaci_list_detailyDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.dodaci_listID, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.Dodaci_list_detailyDataGridView.DataSource = Me.Dodaci_list_detailyBindingSource
-        Me.Dodaci_list_detailyDataGridView.Location = New System.Drawing.Point(12, 282)
+        Me.Dodaci_list_detailyDataGridView.Location = New System.Drawing.Point(120, 283)
         Me.Dodaci_list_detailyDataGridView.Name = "Dodaci_list_detailyDataGridView"
         Me.Dodaci_list_detailyDataGridView.Size = New System.Drawing.Size(790, 220)
         Me.Dodaci_list_detailyDataGridView.TabIndex = 7
-        '
-        'pohlad_drevinaBindingSource1
-        '
-        Me.pohlad_drevinaBindingSource1.DataMember = "dreviny"
-        Me.pohlad_drevinaBindingSource1.DataSource = Me.Pohlad_drevinaDataSet1
-        '
-        'Pohlad_drevinaDataSet1
-        '
-        Me.Pohlad_drevinaDataSet1.DataSetName = "pohlad_drevinaDataSet1"
-        Me.Pohlad_drevinaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DrevinyTableAdapter
-        '
-        Me.DrevinyTableAdapter.ClearBeforeFill = True
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.Dodaci_listBindingSource, "id_odberatel", True))
-        Me.ComboBox1.DataSource = Me.pohlad_odberatelBindingSource1
-        Me.ComboBox1.DisplayMember = "nazov"
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(146, 102)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox1.TabIndex = 8
-        Me.ComboBox1.ValueMember = "id"
-        '
-        'pohlad_odberatelBindingSource1
-        '
-        Me.pohlad_odberatelBindingSource1.DataMember = "odberatelia"
-        Me.pohlad_odberatelBindingSource1.DataSource = Me.Pohlad_odberatelDataSet1
-        '
-        'Pohlad_odberatelDataSet1
-        '
-        Me.Pohlad_odberatelDataSet1.DataSetName = "pohlad_odberatelDataSet1"
-        Me.Pohlad_odberatelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'OdberateliaTableAdapter
-        '
-        Me.OdberateliaTableAdapter.ClearBeforeFill = True
         '
         'id
         '
@@ -338,6 +298,16 @@ Partial Class dodak2
         Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.DataGridViewTextBoxColumn3.ValueMember = "id"
+        '
+        'pohlad_drevinaBindingSource1
+        '
+        Me.pohlad_drevinaBindingSource1.DataMember = "dreviny"
+        Me.pohlad_drevinaBindingSource1.DataSource = Me.Pohlad_drevinaDataSet1
+        '
+        'Pohlad_drevinaDataSet1
+        '
+        Me.Pohlad_drevinaDataSet1.DataSetName = "pohlad_drevinaDataSet1"
+        Me.Pohlad_drevinaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'DataGridViewTextBoxColumn4
         '
@@ -368,6 +338,36 @@ Partial Class dodak2
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "cena"
         Me.DataGridViewTextBoxColumn8.HeaderText = "cena"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'DrevinyTableAdapter
+        '
+        Me.DrevinyTableAdapter.ClearBeforeFill = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.Dodaci_listBindingSource, "id_odberatel", True))
+        Me.ComboBox1.DataSource = Me.pohlad_odberatelBindingSource1
+        Me.ComboBox1.DisplayMember = "nazov"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(146, 102)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
+        Me.ComboBox1.TabIndex = 8
+        Me.ComboBox1.ValueMember = "id"
+        '
+        'pohlad_odberatelBindingSource1
+        '
+        Me.pohlad_odberatelBindingSource1.DataMember = "odberatelia"
+        Me.pohlad_odberatelBindingSource1.DataSource = Me.Pohlad_odberatelDataSet1
+        '
+        'Pohlad_odberatelDataSet1
+        '
+        Me.Pohlad_odberatelDataSet1.DataSetName = "pohlad_odberatelDataSet1"
+        Me.Pohlad_odberatelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'OdberateliaTableAdapter
+        '
+        Me.OdberateliaTableAdapter.ClearBeforeFill = True
         '
         'Button1
         '
