@@ -16,8 +16,7 @@
     Private Sub ToolStripButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton1.Click
         Me.OdberateliaBindingNavigator.Hide()
         Me.print_odberatelia.Form.BackColor = Color.White
-        Me.print_odberatelia.PrinterSettings.DefaultPageSettings.Landscape = False
-
+        Me.print_odberatelia.PrinterSettings.DefaultPageSettings.Landscape = True
         Me.print_odberatelia.PrintAction = Printing.PrintAction.PrintToPreview
         Me.print_odberatelia.Print(Me, PowerPacks.Printing.PrintForm.PrintOption.Scrollable)
         Me.OdberateliaBindingNavigator.Show()

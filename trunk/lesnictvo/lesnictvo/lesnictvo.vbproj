@@ -96,6 +96,17 @@
     <Compile Include="cennik_reziva.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="cennik_reziva_print.Designer.vb">
+      <DependentUpon>cennik_reziva_print.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cennik_reziva_print.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cennik_reziva_print_db.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cennik_reziva_print_db.xsd</DependentUpon>
+    </Compile>
     <Compile Include="cennik_vyrezov.Designer.vb">
       <DependentUpon>cennik_vyrezov.vb</DependentUpon>
     </Compile>
@@ -106,6 +117,17 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>cennik_vyrezovDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cennik_vyrezov_print.Designer.vb">
+      <DependentUpon>cennik_vyrezov_print.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cennik_vyrezov_print.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cennik_vyrezov_print_db.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cennik_vyrezov_print_db.xsd</DependentUpon>
     </Compile>
     <Compile Include="DATA\Database1DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -271,8 +293,16 @@
       <DependentUpon>cennik_reziva.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="cennik_reziva_print.resx">
+      <DependentUpon>cennik_reziva_print.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="cennik_vyrezov.resx">
       <DependentUpon>cennik_vyrezov.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cennik_vyrezov_print.resx">
+      <DependentUpon>cennik_vyrezov_print.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="dodaci_list.resx">
@@ -332,6 +362,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="cennik_reziva_print_db.xsc">
+      <DependentUpon>cennik_reziva_print_db.xsd</DependentUpon>
+    </None>
+    <None Include="cennik_reziva_print_db.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cennik_reziva_print_db.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cennik_reziva_print_db.xss">
+      <DependentUpon>cennik_reziva_print_db.xsd</DependentUpon>
+    </None>
     <None Include="cennik_vyrezovDataSet1.xsc">
       <DependentUpon>cennik_vyrezovDataSet1.xsd</DependentUpon>
     </None>
@@ -342,6 +383,17 @@
     </None>
     <None Include="cennik_vyrezovDataSet1.xss">
       <DependentUpon>cennik_vyrezovDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="cennik_vyrezov_print_db.xsc">
+      <DependentUpon>cennik_vyrezov_print_db.xsd</DependentUpon>
+    </None>
+    <None Include="cennik_vyrezov_print_db.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cennik_vyrezov_print_db.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cennik_vyrezov_print_db.xss">
+      <DependentUpon>cennik_vyrezov_print_db.xsd</DependentUpon>
     </None>
     <None Include="DATA\Database1DataSet.xsc">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>

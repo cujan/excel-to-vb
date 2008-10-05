@@ -37,4 +37,9 @@
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Me.Druh_rezivaBindingSource.AddNew()
     End Sub
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tlacit.Click
+        cennik_reziva_print.Show()
+
+    End Sub
 End Class
