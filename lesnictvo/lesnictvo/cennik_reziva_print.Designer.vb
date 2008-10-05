@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class odberatelia_print
+Partial Class cennik_reziva_print
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,14 +23,13 @@ Partial Class odberatelia_print
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(odberatelia_print))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(cennik_reziva_print))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Me.Odberatelia_print_Dataset = New lesnictvo.odberatelia_print_Dataset
-        Me.OdberateliaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OdberateliaTableAdapter = New lesnictvo.odberatelia_print_DatasetTableAdapters.odberateliaTableAdapter
-        Me.TableAdapterManager = New lesnictvo.odberatelia_print_DatasetTableAdapters.TableAdapterManager
-        Me.OdberateliaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.Cennik_reziva_print_db = New lesnictvo.cennik_reziva_print_db
+        Me.Druh_rezivaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Druh_rezivaTableAdapter = New lesnictvo.cennik_reziva_print_dbTableAdapters.druh_rezivaTableAdapter
+        Me.TableAdapterManager = New lesnictvo.cennik_reziva_print_dbTableAdapters.TableAdapterManager
+        Me.Druh_rezivaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
@@ -42,61 +41,57 @@ Partial Class odberatelia_print
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.OdberateliaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
+        Me.Druh_rezivaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton
-        Me.OdberateliaDataGridView = New System.Windows.Forms.DataGridView
+        Me.cennik_reziva_tlacovy_vystup = New System.Windows.Forms.DataGridView
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.print_odberatelia = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
-        CType(Me.Odberatelia_print_Dataset, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OdberateliaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OdberateliaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.OdberateliaBindingNavigator.SuspendLayout()
-        CType(Me.OdberateliaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.print_cennik_reziva = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
+        CType(Me.Cennik_reziva_print_db, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Druh_rezivaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Druh_rezivaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Druh_rezivaBindingNavigator.SuspendLayout()
+        CType(Me.cennik_reziva_tlacovy_vystup, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Odberatelia_print_Dataset
+        'Cennik_reziva_print_db
         '
-        Me.Odberatelia_print_Dataset.DataSetName = "odberatelia_print_Dataset"
-        Me.Odberatelia_print_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Cennik_reziva_print_db.DataSetName = "cennik_reziva_print_db"
+        Me.Cennik_reziva_print_db.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'OdberateliaBindingSource
+        'Druh_rezivaBindingSource
         '
-        Me.OdberateliaBindingSource.DataMember = "odberatelia"
-        Me.OdberateliaBindingSource.DataSource = Me.Odberatelia_print_Dataset
+        Me.Druh_rezivaBindingSource.DataMember = "druh_reziva"
+        Me.Druh_rezivaBindingSource.DataSource = Me.Cennik_reziva_print_db
         '
-        'OdberateliaTableAdapter
+        'Druh_rezivaTableAdapter
         '
-        Me.OdberateliaTableAdapter.ClearBeforeFill = True
+        Me.Druh_rezivaTableAdapter.ClearBeforeFill = True
         '
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.odberateliaTableAdapter = Me.OdberateliaTableAdapter
-        Me.TableAdapterManager.UpdateOrder = lesnictvo.odberatelia_print_DatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.druh_rezivaTableAdapter = Me.Druh_rezivaTableAdapter
+        Me.TableAdapterManager.UpdateOrder = lesnictvo.cennik_reziva_print_dbTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'OdberateliaBindingNavigator
+        'Druh_rezivaBindingNavigator
         '
-        Me.OdberateliaBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.OdberateliaBindingNavigator.BindingSource = Me.OdberateliaBindingSource
-        Me.OdberateliaBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.OdberateliaBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.OdberateliaBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.OdberateliaBindingNavigatorSaveItem, Me.ToolStripButton1})
-        Me.OdberateliaBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.OdberateliaBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.OdberateliaBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.OdberateliaBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.OdberateliaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.OdberateliaBindingNavigator.Name = "OdberateliaBindingNavigator"
-        Me.OdberateliaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.OdberateliaBindingNavigator.Size = New System.Drawing.Size(744, 25)
-        Me.OdberateliaBindingNavigator.TabIndex = 0
-        Me.OdberateliaBindingNavigator.Text = "BindingNavigator1"
+        Me.Druh_rezivaBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.Druh_rezivaBindingNavigator.BindingSource = Me.Druh_rezivaBindingSource
+        Me.Druh_rezivaBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.Druh_rezivaBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.Druh_rezivaBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.Druh_rezivaBindingNavigatorSaveItem, Me.ToolStripButton1})
+        Me.Druh_rezivaBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.Druh_rezivaBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.Druh_rezivaBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.Druh_rezivaBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.Druh_rezivaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.Druh_rezivaBindingNavigator.Name = "Druh_rezivaBindingNavigator"
+        Me.Druh_rezivaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.Druh_rezivaBindingNavigator.Size = New System.Drawing.Size(390, 25)
+        Me.Druh_rezivaBindingNavigator.TabIndex = 0
+        Me.Druh_rezivaBindingNavigator.Text = "BindingNavigator1"
         '
         'BindingNavigatorAddNewItem
         '
@@ -183,13 +178,13 @@ Partial Class odberatelia_print
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
-        'OdberateliaBindingNavigatorSaveItem
+        'Druh_rezivaBindingNavigatorSaveItem
         '
-        Me.OdberateliaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.OdberateliaBindingNavigatorSaveItem.Image = CType(resources.GetObject("OdberateliaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.OdberateliaBindingNavigatorSaveItem.Name = "OdberateliaBindingNavigatorSaveItem"
-        Me.OdberateliaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.OdberateliaBindingNavigatorSaveItem.Text = "Save Data"
+        Me.Druh_rezivaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Druh_rezivaBindingNavigatorSaveItem.Image = CType(resources.GetObject("Druh_rezivaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.Druh_rezivaBindingNavigatorSaveItem.Name = "Druh_rezivaBindingNavigatorSaveItem"
+        Me.Druh_rezivaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.Druh_rezivaBindingNavigatorSaveItem.Text = "Save Data"
         '
         'ToolStripButton1
         '
@@ -198,13 +193,18 @@ Partial Class odberatelia_print
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
+        Me.ToolStripButton1.Text = "Tlačiť"
         '
-        'OdberateliaDataGridView
+        'cennik_reziva_tlacovy_vystup
         '
-        Me.OdberateliaDataGridView.AutoGenerateColumns = False
-        Me.OdberateliaDataGridView.BackgroundColor = System.Drawing.Color.White
-        Me.OdberateliaDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.cennik_reziva_tlacovy_vystup.AutoGenerateColumns = False
+        Me.cennik_reziva_tlacovy_vystup.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.cennik_reziva_tlacovy_vystup.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.cennik_reziva_tlacovy_vystup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.cennik_reziva_tlacovy_vystup.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
+        Me.cennik_reziva_tlacovy_vystup.DataSource = Me.Druh_rezivaBindingSource
+        Me.cennik_reziva_tlacovy_vystup.Location = New System.Drawing.Point(0, 28)
+        Me.cennik_reziva_tlacovy_vystup.Name = "cennik_reziva_tlacovy_vystup"
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -212,98 +212,60 @@ Partial Class odberatelia_print
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.OdberateliaDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.OdberateliaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.OdberateliaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
-        Me.OdberateliaDataGridView.DataSource = Me.OdberateliaBindingSource
-        Me.OdberateliaDataGridView.Location = New System.Drawing.Point(0, 28)
-        Me.OdberateliaDataGridView.Name = "OdberateliaDataGridView"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.OdberateliaDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.OdberateliaDataGridView.Size = New System.Drawing.Size(743, 218)
-        Me.OdberateliaDataGridView.TabIndex = 1
+        Me.cennik_reziva_tlacovy_vystup.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.cennik_reziva_tlacovy_vystup.Size = New System.Drawing.Size(344, 220)
+        Me.cennik_reziva_tlacovy_vystup.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "nazov"
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "kod"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "kod"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         '
         'DataGridViewTextBoxColumn2
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "ulica"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "ulica"
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "druh_reziva"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "druh_reziva"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
         'DataGridViewTextBoxColumn3
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "mesto"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "mesto"
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "cena"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "cena"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
-        'DataGridViewTextBoxColumn4
+        'print_cennik_reziva
         '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "psc"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "psc"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.print_cennik_reziva.DocumentName = "document"
+        Me.print_cennik_reziva.Form = Me
+        Me.print_cennik_reziva.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter
+        Me.print_cennik_reziva.PrinterSettings = CType(resources.GetObject("print_cennik_reziva.PrinterSettings"), System.Drawing.Printing.PrinterSettings)
+        Me.print_cennik_reziva.PrintFileName = Nothing
         '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "ico"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "ico"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "dic"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "dic"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "cislo_uctu"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "cislo_uctu"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        '
-        'print_odberatelia
-        '
-        Me.print_odberatelia.DocumentName = "document"
-        Me.print_odberatelia.Form = Me
-        Me.print_odberatelia.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter
-        Me.print_odberatelia.PrinterSettings = CType(resources.GetObject("print_odberatelia.PrinterSettings"), System.Drawing.Printing.PrinterSettings)
-        Me.print_odberatelia.PrintFileName = Nothing
-        '
-        'odberatelia_print
+        'cennik_reziva_print
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(744, 531)
-        Me.Controls.Add(Me.OdberateliaDataGridView)
-        Me.Controls.Add(Me.OdberateliaBindingNavigator)
-        Me.Name = "odberatelia_print"
-        Me.Text = "Tlačová zostava - Odberatelia"
-        CType(Me.Odberatelia_print_Dataset, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OdberateliaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OdberateliaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.OdberateliaBindingNavigator.ResumeLayout(False)
-        Me.OdberateliaBindingNavigator.PerformLayout()
-        CType(Me.OdberateliaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ClientSize = New System.Drawing.Size(390, 319)
+        Me.Controls.Add(Me.cennik_reziva_tlacovy_vystup)
+        Me.Controls.Add(Me.Druh_rezivaBindingNavigator)
+        Me.Name = "cennik_reziva_print"
+        Me.Text = "Tlačová zostava - Cenník reziva"
+        CType(Me.Cennik_reziva_print_db, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Druh_rezivaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Druh_rezivaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Druh_rezivaBindingNavigator.ResumeLayout(False)
+        Me.Druh_rezivaBindingNavigator.PerformLayout()
+        CType(Me.cennik_reziva_tlacovy_vystup, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Odberatelia_print_Dataset As lesnictvo.odberatelia_print_Dataset
-    Friend WithEvents OdberateliaBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents OdberateliaTableAdapter As lesnictvo.odberatelia_print_DatasetTableAdapters.odberateliaTableAdapter
-    Friend WithEvents TableAdapterManager As lesnictvo.odberatelia_print_DatasetTableAdapters.TableAdapterManager
-    Friend WithEvents OdberateliaBindingNavigator As System.Windows.Forms.BindingNavigator
+    Friend WithEvents Cennik_reziva_print_db As lesnictvo.cennik_reziva_print_db
+    Friend WithEvents Druh_rezivaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Druh_rezivaTableAdapter As lesnictvo.cennik_reziva_print_dbTableAdapters.druh_rezivaTableAdapter
+    Friend WithEvents TableAdapterManager As lesnictvo.cennik_reziva_print_dbTableAdapters.TableAdapterManager
+    Friend WithEvents Druh_rezivaBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
     Friend WithEvents BindingNavigatorDeleteItem As System.Windows.Forms.ToolStripButton
@@ -315,15 +277,11 @@ Partial Class odberatelia_print
     Friend WithEvents BindingNavigatorMoveNextItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents OdberateliaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents OdberateliaDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents Druh_rezivaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents cennik_reziva_tlacovy_vystup As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents print_odberatelia As Microsoft.VisualBasic.PowerPacks.Printing.PrintForm
+    Friend WithEvents print_cennik_reziva As Microsoft.VisualBasic.PowerPacks.Printing.PrintForm
 End Class

@@ -23,10 +23,10 @@ Partial Class cennik_reziva
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(cennik_reziva))
         Dim KodLabel As System.Windows.Forms.Label
         Dim Druh_rezivaLabel As System.Windows.Forms.Label
         Dim CenaLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(cennik_reziva))
         Me.RezivoDataSet1 = New lesnictvo.rezivoDataSet1
         Me.Druh_rezivaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Druh_rezivaTableAdapter = New lesnictvo.rezivoDataSet1TableAdapters.druh_rezivaTableAdapter
@@ -55,6 +55,7 @@ Partial Class cennik_reziva
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button3 = New System.Windows.Forms.Button
         Me.Button4 = New System.Windows.Forms.Button
+        Me.tlacit = New System.Windows.Forms.Button
         KodLabel = New System.Windows.Forms.Label
         Druh_rezivaLabel = New System.Windows.Forms.Label
         CenaLabel = New System.Windows.Forms.Label
@@ -64,6 +65,33 @@ Partial Class cennik_reziva
         Me.Druh_rezivaBindingNavigator.SuspendLayout()
         CType(Me.Druh_rezivaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'KodLabel
+        '
+        KodLabel.AutoSize = True
+        KodLabel.Location = New System.Drawing.Point(12, 78)
+        KodLabel.Name = "KodLabel"
+        KodLabel.Size = New System.Drawing.Size(28, 13)
+        KodLabel.TabIndex = 4
+        KodLabel.Text = "kod:"
+        '
+        'Druh_rezivaLabel
+        '
+        Druh_rezivaLabel.AutoSize = True
+        Druh_rezivaLabel.Location = New System.Drawing.Point(152, 74)
+        Druh_rezivaLabel.Name = "Druh_rezivaLabel"
+        Druh_rezivaLabel.Size = New System.Drawing.Size(62, 13)
+        Druh_rezivaLabel.TabIndex = 6
+        Druh_rezivaLabel.Text = "druh reziva:"
+        '
+        'CenaLabel
+        '
+        CenaLabel.AutoSize = True
+        CenaLabel.Location = New System.Drawing.Point(326, 74)
+        CenaLabel.Name = "CenaLabel"
+        CenaLabel.Size = New System.Drawing.Size(34, 13)
+        CenaLabel.TabIndex = 8
+        CenaLabel.Text = "cena:"
         '
         'RezivoDataSet1
         '
@@ -225,15 +253,6 @@ Partial Class cennik_reziva
         Me.DataGridViewTextBoxColumn4.HeaderText = "cena"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
-        'KodLabel
-        '
-        KodLabel.AutoSize = True
-        KodLabel.Location = New System.Drawing.Point(12, 78)
-        KodLabel.Name = "KodLabel"
-        KodLabel.Size = New System.Drawing.Size(28, 13)
-        KodLabel.TabIndex = 4
-        KodLabel.Text = "kod:"
-        '
         'KodTextBox
         '
         Me.KodTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Druh_rezivaBindingSource, "kod", True))
@@ -242,15 +261,6 @@ Partial Class cennik_reziva
         Me.KodTextBox.Size = New System.Drawing.Size(100, 20)
         Me.KodTextBox.TabIndex = 5
         '
-        'Druh_rezivaLabel
-        '
-        Druh_rezivaLabel.AutoSize = True
-        Druh_rezivaLabel.Location = New System.Drawing.Point(152, 74)
-        Druh_rezivaLabel.Name = "Druh_rezivaLabel"
-        Druh_rezivaLabel.Size = New System.Drawing.Size(62, 13)
-        Druh_rezivaLabel.TabIndex = 6
-        Druh_rezivaLabel.Text = "druh reziva:"
-        '
         'Druh_rezivaTextBox
         '
         Me.Druh_rezivaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Druh_rezivaBindingSource, "druh_reziva", True))
@@ -258,15 +268,6 @@ Partial Class cennik_reziva
         Me.Druh_rezivaTextBox.Name = "Druh_rezivaTextBox"
         Me.Druh_rezivaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Druh_rezivaTextBox.TabIndex = 7
-        '
-        'CenaLabel
-        '
-        CenaLabel.AutoSize = True
-        CenaLabel.Location = New System.Drawing.Point(326, 74)
-        CenaLabel.Name = "CenaLabel"
-        CenaLabel.Size = New System.Drawing.Size(34, 13)
-        CenaLabel.TabIndex = 8
-        CenaLabel.Text = "cena:"
         '
         'CenaTextBox
         '
@@ -278,45 +279,55 @@ Partial Class cennik_reziva
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(577, 45)
+        Me.Button1.Location = New System.Drawing.Point(577, 29)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(83, 23)
         Me.Button1.TabIndex = 10
         Me.Button1.Text = "Pridaj"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(577, 74)
+        Me.Button2.Location = New System.Drawing.Point(577, 58)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(83, 23)
         Me.Button2.TabIndex = 11
         Me.Button2.Text = "Uprav"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(577, 104)
+        Me.Button3.Location = New System.Drawing.Point(577, 88)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(83, 23)
         Me.Button3.TabIndex = 12
         Me.Button3.Text = "Ulož"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(577, 134)
+        Me.Button4.Location = New System.Drawing.Point(577, 118)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.Size = New System.Drawing.Size(83, 23)
         Me.Button4.TabIndex = 13
         Me.Button4.Text = "Zmaž"
         Me.Button4.UseVisualStyleBackColor = True
+        '
+        'tlacit
+        '
+        Me.tlacit.Location = New System.Drawing.Point(577, 146)
+        Me.tlacit.Name = "tlacit"
+        Me.tlacit.Size = New System.Drawing.Size(83, 23)
+        Me.tlacit.TabIndex = 14
+        Me.tlacit.Text = "Vytlač cenník"
+        Me.tlacit.UseVisualStyleBackColor = True
         '
         'cennik_reziva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(727, 407)
+        Me.Controls.Add(Me.tlacit)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -369,4 +380,5 @@ Partial Class cennik_reziva
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents tlacit As System.Windows.Forms.Button
 End Class

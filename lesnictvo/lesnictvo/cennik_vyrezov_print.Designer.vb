@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class cennik_vyrezov
+Partial Class cennik_vyrezov_print
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,23 +23,23 @@ Partial Class cennik_vyrezov
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(cennik_vyrezov))
-        Me.Cennik_vyrezovDataSet1 = New lesnictvo.cennik_vyrezovDataSet1
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(cennik_vyrezov_print))
+        Me.Cennik_vyrezov_print_db = New lesnictvo.cennik_vyrezov_print_db
         Me.VyrezyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VyrezyTableAdapter = New lesnictvo.cennik_vyrezovDataSet1TableAdapters.vyrezyTableAdapter
-        Me.TableAdapterManager = New lesnictvo.cennik_vyrezovDataSet1TableAdapters.TableAdapterManager
+        Me.VyrezyTableAdapter = New lesnictvo.cennik_vyrezov_print_dbTableAdapters.vyrezyTableAdapter
+        Me.TableAdapterManager = New lesnictvo.cennik_vyrezov_print_dbTableAdapters.TableAdapterManager
         Me.VyrezyBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.VyrezyBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.VyrezyDataGridView = New System.Windows.Forms.DataGridView
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -51,23 +51,24 @@ Partial Class cennik_vyrezov
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.tlacit = New System.Windows.Forms.Button
-        CType(Me.Cennik_vyrezovDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.print_cennik_vyrezov = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton
+        CType(Me.Cennik_vyrezov_print_db, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VyrezyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VyrezyBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.VyrezyBindingNavigator.SuspendLayout()
         CType(Me.VyrezyDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Cennik_vyrezovDataSet1
+        'Cennik_vyrezov_print_db
         '
-        Me.Cennik_vyrezovDataSet1.DataSetName = "cennik_vyrezovDataSet1"
-        Me.Cennik_vyrezovDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Cennik_vyrezov_print_db.DataSetName = "cennik_vyrezov_print_db"
+        Me.Cennik_vyrezov_print_db.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'VyrezyBindingSource
         '
         Me.VyrezyBindingSource.DataMember = "vyrezy"
-        Me.VyrezyBindingSource.DataSource = Me.Cennik_vyrezovDataSet1
+        Me.VyrezyBindingSource.DataSource = Me.Cennik_vyrezov_print_db
         '
         'VyrezyTableAdapter
         '
@@ -76,7 +77,7 @@ Partial Class cennik_vyrezov
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.UpdateOrder = lesnictvo.cennik_vyrezovDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UpdateOrder = lesnictvo.cennik_vyrezov_print_dbTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.vyrezyTableAdapter = Me.VyrezyTableAdapter
         '
         'VyrezyBindingNavigator
@@ -85,7 +86,7 @@ Partial Class cennik_vyrezov
         Me.VyrezyBindingNavigator.BindingSource = Me.VyrezyBindingSource
         Me.VyrezyBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.VyrezyBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.VyrezyBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.VyrezyBindingNavigatorSaveItem})
+        Me.VyrezyBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.VyrezyBindingNavigatorSaveItem, Me.ToolStripButton1})
         Me.VyrezyBindingNavigator.Location = New System.Drawing.Point(0, 0)
         Me.VyrezyBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.VyrezyBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
@@ -93,34 +94,9 @@ Partial Class cennik_vyrezov
         Me.VyrezyBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.VyrezyBindingNavigator.Name = "VyrezyBindingNavigator"
         Me.VyrezyBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.VyrezyBindingNavigator.Size = New System.Drawing.Size(999, 25)
+        Me.VyrezyBindingNavigator.Size = New System.Drawing.Size(944, 25)
         Me.VyrezyBindingNavigator.TabIndex = 0
         Me.VyrezyBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -154,9 +130,16 @@ Partial Class cennik_vyrezov
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -179,8 +162,26 @@ Partial Class cennik_vyrezov
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'VyrezyBindingNavigatorSaveItem
         '
@@ -193,12 +194,14 @@ Partial Class cennik_vyrezov
         'VyrezyDataGridView
         '
         Me.VyrezyDataGridView.AutoGenerateColumns = False
+        Me.VyrezyDataGridView.BackgroundColor = System.Drawing.Color.White
+        Me.VyrezyDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.VyrezyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.VyrezyDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
         Me.VyrezyDataGridView.DataSource = Me.VyrezyBindingSource
-        Me.VyrezyDataGridView.Location = New System.Drawing.Point(12, 74)
+        Me.VyrezyDataGridView.Location = New System.Drawing.Point(0, 28)
         Me.VyrezyDataGridView.Name = "VyrezyDataGridView"
-        Me.VyrezyDataGridView.Size = New System.Drawing.Size(948, 220)
+        Me.VyrezyDataGridView.Size = New System.Drawing.Size(943, 220)
         Me.VyrezyDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
@@ -256,26 +259,33 @@ Partial Class cennik_vyrezov
         Me.DataGridViewTextBoxColumn9.HeaderText = "ht6"
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         '
-        'tlacit
+        'print_cennik_vyrezov
         '
-        Me.tlacit.Location = New System.Drawing.Point(576, 28)
-        Me.tlacit.Name = "tlacit"
-        Me.tlacit.Size = New System.Drawing.Size(92, 23)
-        Me.tlacit.TabIndex = 2
-        Me.tlacit.Text = "Vytlačiť cenník"
-        Me.tlacit.UseVisualStyleBackColor = True
+        Me.print_cennik_vyrezov.DocumentName = "document"
+        Me.print_cennik_vyrezov.Form = Me
+        Me.print_cennik_vyrezov.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter
+        Me.print_cennik_vyrezov.PrinterSettings = CType(resources.GetObject("print_cennik_vyrezov.PrinterSettings"), System.Drawing.Printing.PrinterSettings)
+        Me.print_cennik_vyrezov.PrintFileName = Nothing
         '
-        'cennik_vyrezov
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "Tlačiť"
+        '
+        'cennik_vyrezov_print
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(999, 399)
-        Me.Controls.Add(Me.tlacit)
+        Me.ClientSize = New System.Drawing.Size(944, 316)
         Me.Controls.Add(Me.VyrezyDataGridView)
         Me.Controls.Add(Me.VyrezyBindingNavigator)
-        Me.Name = "cennik_vyrezov"
-        Me.Text = "Cenník guľatinových výrezov"
-        CType(Me.Cennik_vyrezovDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Name = "cennik_vyrezov_print"
+        Me.Text = "Tlačová zostava - Cenník výrezov"
+        CType(Me.Cennik_vyrezov_print_db, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VyrezyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VyrezyBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.VyrezyBindingNavigator.ResumeLayout(False)
@@ -285,10 +295,10 @@ Partial Class cennik_vyrezov
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Cennik_vyrezovDataSet1 As lesnictvo.cennik_vyrezovDataSet1
+    Friend WithEvents Cennik_vyrezov_print_db As lesnictvo.cennik_vyrezov_print_db
     Friend WithEvents VyrezyBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents VyrezyTableAdapter As lesnictvo.cennik_vyrezovDataSet1TableAdapters.vyrezyTableAdapter
-    Friend WithEvents TableAdapterManager As lesnictvo.cennik_vyrezovDataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents VyrezyTableAdapter As lesnictvo.cennik_vyrezov_print_dbTableAdapters.vyrezyTableAdapter
+    Friend WithEvents TableAdapterManager As lesnictvo.cennik_vyrezov_print_dbTableAdapters.TableAdapterManager
     Friend WithEvents VyrezyBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -302,6 +312,7 @@ Partial Class cennik_vyrezov
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents VyrezyBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents VyrezyDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -312,5 +323,5 @@ Partial Class cennik_vyrezov
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents tlacit As System.Windows.Forms.Button
+    Friend WithEvents print_cennik_vyrezov As Microsoft.VisualBasic.PowerPacks.Printing.PrintForm
 End Class

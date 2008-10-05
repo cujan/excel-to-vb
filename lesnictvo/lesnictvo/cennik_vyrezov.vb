@@ -16,4 +16,9 @@
         Me.TableAdapterManager.UpdateAll(Me.Cennik_vyrezovDataSet1)
 
     End Sub
+
+    Private Sub tlacit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tlacit.Click
+        cennik_vyrezov_print.Show()
+
+    End Sub
 End Class
