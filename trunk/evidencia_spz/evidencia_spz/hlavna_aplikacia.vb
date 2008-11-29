@@ -85,4 +85,18 @@ Public Class hlavna_aplikacia
 
     Private m_ChildFormNumber As Integer
 
+    Private Sub sprava_clenov_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sprava_clenov_button.Click
+
+        If sprava_clenov_button.Text = "v" Then
+            sprava_clenov_splitter.Panel2Collapsed = False
+            sprava_clenov_button.Text = "^"
+        Else
+            sprava_clenov_splitter.Panel2Collapsed = True
+            sprava_clenov_button.Text = "v"
+
+        End If
+
+    End Sub
+
+
 End Class
