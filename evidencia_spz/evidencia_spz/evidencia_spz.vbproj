@@ -138,6 +138,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>spzDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="statna_prislusnostDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>statna_prislusnostDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="titulDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>titulDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="edituj_clena.resx">
@@ -199,6 +209,28 @@
     </None>
     <None Include="spzDataSet.xss">
       <DependentUpon>spzDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="statna_prislusnostDataSet.xsc">
+      <DependentUpon>statna_prislusnostDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="statna_prislusnostDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>statna_prislusnostDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="statna_prislusnostDataSet.xss">
+      <DependentUpon>statna_prislusnostDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="titulDataSet.xsc">
+      <DependentUpon>titulDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="titulDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>titulDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="titulDataSet.xss">
+      <DependentUpon>titulDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

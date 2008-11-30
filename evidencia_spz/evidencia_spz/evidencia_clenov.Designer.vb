@@ -198,7 +198,6 @@ Partial Class evidencia_clenov
         Me.ClenoviaDataGridView.DataSource = Me.ClenoviaBindingSource
         Me.ClenoviaDataGridView.Location = New System.Drawing.Point(52, 70)
         Me.ClenoviaDataGridView.Name = "ClenoviaDataGridView"
-        Me.ClenoviaDataGridView.ReadOnly = True
         Me.ClenoviaDataGridView.Size = New System.Drawing.Size(836, 308)
         Me.ClenoviaDataGridView.TabIndex = 1
         '
@@ -207,28 +206,24 @@ Partial Class evidencia_clenov
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "titul"
         Me.DataGridViewTextBoxColumn2.HeaderText = "titul"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "meno"
         Me.DataGridViewTextBoxColumn3.HeaderText = "meno"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "priezvisko"
         Me.DataGridViewTextBoxColumn4.HeaderText = "priezvisko"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "rodne_cislo"
         Me.DataGridViewTextBoxColumn5.HeaderText = "rodne_cislo"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
         'Button1
         '
