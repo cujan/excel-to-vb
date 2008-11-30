@@ -7,7 +7,7 @@
 
     End Sub
 
-    Private Sub evidencia_clenov_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub karta_clena_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
         hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
