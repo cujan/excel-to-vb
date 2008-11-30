@@ -49,6 +49,7 @@ Partial Class evidencia_clenov
         Me.Button1 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button3 = New System.Windows.Forms.Button
+        Me.zavri_evidencia_clenov = New System.Windows.Forms.Button
         CType(Me.ClenoviaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -256,16 +257,27 @@ Partial Class evidencia_clenov
         Me.Button3.Text = "Zmaz clena"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'zavri_evidencia_clenov
+        '
+        Me.zavri_evidencia_clenov.Location = New System.Drawing.Point(52, 32)
+        Me.zavri_evidencia_clenov.Name = "zavri_evidencia_clenov"
+        Me.zavri_evidencia_clenov.Size = New System.Drawing.Size(75, 23)
+        Me.zavri_evidencia_clenov.TabIndex = 5
+        Me.zavri_evidencia_clenov.Text = "Zavrieť"
+        Me.zavri_evidencia_clenov.UseVisualStyleBackColor = True
+        '
         'evidencia_clenov
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(953, 472)
+        Me.Controls.Add(Me.zavri_evidencia_clenov)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ClenoviaDataGridView)
         Me.Controls.Add(Me.ClenoviaBindingNavigator)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "evidencia_clenov"
         Me.Text = "evidencia_clenov"
         CType(Me.ClenoviaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -303,4 +315,5 @@ Partial Class evidencia_clenov
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents zavri_evidencia_clenov As System.Windows.Forms.Button
 End Class

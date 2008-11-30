@@ -99,4 +99,27 @@ Public Class hlavna_aplikacia
     End Sub
 
 
+    Private Sub novy_clen_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles novy_clen_button.Click
+        novy_clen.Show()
+        novy_clen.BringToFront()
+
+    End Sub
+
+    Private Sub edituj_clena_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles edituj_clena_button.Click
+        edituj_clena.Show()
+        edituj_clena.BringToFront()
+
+    End Sub
+
+    Private Sub karta_clena_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles karta_clena_button.Click
+        karta_clena.Show()
+        karta_clena.BringToFront()
+
+    End Sub
+
+    Private Sub prehlad_clenov_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles prehlad_clenov_button.Click
+        evidencia_clenov.Show()
+        evidencia_clenov.BringToFront()
+
+    End Sub
 End Class
