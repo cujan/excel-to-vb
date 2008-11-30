@@ -542,6 +542,7 @@ Partial Class novy_clen
         Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(1005, 25)
         Me.ClenoviaBindingNavigator.TabIndex = 0
         Me.ClenoviaBindingNavigator.Text = "BindingNavigator1"
+        Me.ClenoviaBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '

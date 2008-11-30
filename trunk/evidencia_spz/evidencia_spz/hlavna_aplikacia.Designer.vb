@@ -81,10 +81,10 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_splitter = New System.Windows.Forms.SplitContainer
         Me.sprava_clenov_button = New System.Windows.Forms.Button
         Me.sprava_clenov_label = New System.Windows.Forms.Label
+        Me.prehlad_clenov_button = New System.Windows.Forms.Button
         Me.karta_clena_button = New System.Windows.Forms.Button
         Me.edituj_clena_button = New System.Windows.Forms.Button
         Me.novy_clen_button = New System.Windows.Forms.Button
-        Me.prehlad_clenov_button = New System.Windows.Forms.Button
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -533,6 +533,17 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_label.Text = "Správa členov"
         Me.sprava_clenov_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'prehlad_clenov_button
+        '
+        Me.prehlad_clenov_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.prehlad_clenov_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.prehlad_clenov_button.Location = New System.Drawing.Point(4, 81)
+        Me.prehlad_clenov_button.Name = "prehlad_clenov_button"
+        Me.prehlad_clenov_button.Size = New System.Drawing.Size(130, 21)
+        Me.prehlad_clenov_button.TabIndex = 3
+        Me.prehlad_clenov_button.Text = "Prehľad členov"
+        Me.prehlad_clenov_button.UseVisualStyleBackColor = False
+        '
         'karta_clena_button
         '
         Me.karta_clena_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
@@ -566,17 +577,6 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
         '
-        'prehlad_clenov_button
-        '
-        Me.prehlad_clenov_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.prehlad_clenov_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.prehlad_clenov_button.Location = New System.Drawing.Point(4, 81)
-        Me.prehlad_clenov_button.Name = "prehlad_clenov_button"
-        Me.prehlad_clenov_button.Size = New System.Drawing.Size(130, 21)
-        Me.prehlad_clenov_button.TabIndex = 3
-        Me.prehlad_clenov_button.Text = "Prehľad členov"
-        Me.prehlad_clenov_button.UseVisualStyleBackColor = False
-        '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -590,6 +590,7 @@ Partial Class hlavna_aplikacia
         Me.MainMenuStrip = Me.MenuStrip
         Me.Name = "hlavna_aplikacia"
         Me.Text = "Administrácia SPZ"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
         Me.ToolStrip.ResumeLayout(False)
