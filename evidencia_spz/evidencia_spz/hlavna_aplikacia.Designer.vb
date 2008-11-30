@@ -81,12 +81,17 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_splitter = New System.Windows.Forms.SplitContainer
         Me.sprava_clenov_button = New System.Windows.Forms.Button
         Me.sprava_clenov_label = New System.Windows.Forms.Label
+        Me.karta_clena_button = New System.Windows.Forms.Button
+        Me.edituj_clena_button = New System.Windows.Forms.Button
+        Me.novy_clen_button = New System.Windows.Forms.Button
+        Me.prehlad_clenov_button = New System.Windows.Forms.Button
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.hlavny_splitter.Panel1.SuspendLayout()
         Me.hlavny_splitter.SuspendLayout()
         Me.sprava_clenov_splitter.Panel1.SuspendLayout()
+        Me.sprava_clenov_splitter.Panel2.SuspendLayout()
         Me.sprava_clenov_splitter.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -496,9 +501,13 @@ Partial Class hlavna_aplikacia
         '
         'sprava_clenov_splitter.Panel2
         '
-        Me.sprava_clenov_splitter.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.sprava_clenov_splitter.Panel2.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.sprava_clenov_splitter.Panel2.Controls.Add(Me.prehlad_clenov_button)
+        Me.sprava_clenov_splitter.Panel2.Controls.Add(Me.karta_clena_button)
+        Me.sprava_clenov_splitter.Panel2.Controls.Add(Me.edituj_clena_button)
+        Me.sprava_clenov_splitter.Panel2.Controls.Add(Me.novy_clen_button)
         Me.sprava_clenov_splitter.Panel2Collapsed = True
-        Me.sprava_clenov_splitter.Size = New System.Drawing.Size(138, 113)
+        Me.sprava_clenov_splitter.Size = New System.Drawing.Size(138, 137)
         Me.sprava_clenov_splitter.SplitterDistance = 25
         Me.sprava_clenov_splitter.SplitterWidth = 1
         Me.sprava_clenov_splitter.TabIndex = 0
@@ -524,6 +533,50 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_label.Text = "Správa členov"
         Me.sprava_clenov_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'karta_clena_button
+        '
+        Me.karta_clena_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.karta_clena_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.karta_clena_button.Location = New System.Drawing.Point(4, 57)
+        Me.karta_clena_button.Name = "karta_clena_button"
+        Me.karta_clena_button.Size = New System.Drawing.Size(130, 21)
+        Me.karta_clena_button.TabIndex = 2
+        Me.karta_clena_button.Text = "Zobraziť kartu člena"
+        Me.karta_clena_button.UseVisualStyleBackColor = False
+        '
+        'edituj_clena_button
+        '
+        Me.edituj_clena_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.edituj_clena_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.edituj_clena_button.Location = New System.Drawing.Point(4, 33)
+        Me.edituj_clena_button.Name = "edituj_clena_button"
+        Me.edituj_clena_button.Size = New System.Drawing.Size(130, 21)
+        Me.edituj_clena_button.TabIndex = 1
+        Me.edituj_clena_button.Text = "Upraviť člena"
+        Me.edituj_clena_button.UseVisualStyleBackColor = False
+        '
+        'novy_clen_button
+        '
+        Me.novy_clen_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.novy_clen_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.novy_clen_button.Location = New System.Drawing.Point(4, 8)
+        Me.novy_clen_button.Name = "novy_clen_button"
+        Me.novy_clen_button.Size = New System.Drawing.Size(130, 21)
+        Me.novy_clen_button.TabIndex = 0
+        Me.novy_clen_button.Text = "Pridať nového člena"
+        Me.novy_clen_button.UseVisualStyleBackColor = False
+        '
+        'prehlad_clenov_button
+        '
+        Me.prehlad_clenov_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.prehlad_clenov_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.prehlad_clenov_button.Location = New System.Drawing.Point(4, 81)
+        Me.prehlad_clenov_button.Name = "prehlad_clenov_button"
+        Me.prehlad_clenov_button.Size = New System.Drawing.Size(130, 21)
+        Me.prehlad_clenov_button.TabIndex = 3
+        Me.prehlad_clenov_button.Text = "Prehľad členov"
+        Me.prehlad_clenov_button.UseVisualStyleBackColor = False
+        '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -546,6 +599,7 @@ Partial Class hlavna_aplikacia
         Me.hlavny_splitter.Panel1.ResumeLayout(False)
         Me.hlavny_splitter.ResumeLayout(False)
         Me.sprava_clenov_splitter.Panel1.ResumeLayout(False)
+        Me.sprava_clenov_splitter.Panel2.ResumeLayout(False)
         Me.sprava_clenov_splitter.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -607,5 +661,9 @@ Partial Class hlavna_aplikacia
     Friend WithEvents sprava_clenov_splitter As System.Windows.Forms.SplitContainer
     Friend WithEvents sprava_clenov_label As System.Windows.Forms.Label
     Friend WithEvents sprava_clenov_button As System.Windows.Forms.Button
+    Friend WithEvents novy_clen_button As System.Windows.Forms.Button
+    Friend WithEvents edituj_clena_button As System.Windows.Forms.Button
+    Friend WithEvents karta_clena_button As System.Windows.Forms.Button
+    Friend WithEvents prehlad_clenov_button As System.Windows.Forms.Button
 
 End Class
