@@ -1051,7 +1051,7 @@ Partial Class karta_clena
         Me.Controls.Add(Me.ClenoviaBindingNavigator)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "karta_clena"
-        Me.Text = "evidencia_clenov"
+        Me.Text = "Karta člena"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.ClenoviaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

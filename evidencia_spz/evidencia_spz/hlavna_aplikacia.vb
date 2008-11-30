@@ -86,14 +86,20 @@ Public Class hlavna_aplikacia
     Private m_ChildFormNumber As Integer
 
     Private Sub sprava_clenov_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sprava_clenov_button.Click
+        Dim sprava_clenov_splitter_position As New System.Drawing.Point
 
         If sprava_clenov_button.Text = "v" Then
             sprava_clenov_splitter.Panel2Collapsed = False
             sprava_clenov_button.Text = "^"
+            sprava_clenov_splitter_position.Y = sprava_clenov_splitter.Location.Y + 154
+            sprava_clenov_splitter_position.X = sprava_clenov_splitter.Location.X
+            sprava_zdruzeni_splitter.Location = sprava_clenov_splitter_position
         Else
             sprava_clenov_splitter.Panel2Collapsed = True
             sprava_clenov_button.Text = "v"
-
+            sprava_clenov_splitter_position.Y = sprava_clenov_splitter.Location.Y + 34
+            sprava_clenov_splitter_position.X = sprava_clenov_splitter.Location.X
+            sprava_zdruzeni_splitter.Location = sprava_clenov_splitter_position
         End If
 
     End Sub
@@ -120,6 +126,20 @@ Public Class hlavna_aplikacia
     Private Sub prehlad_clenov_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles prehlad_clenov_button.Click
         evidencia_clenov.Show()
         evidencia_clenov.BringToFront()
+
+    End Sub
+
+
+    Private Sub sprava_zdruzeni_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sprava_zdruzeni_button.Click
+
+        If sprava_zdruzeni_button.Text = "v" Then
+            sprava_zdruzeni_button.Text = "^"
+            sprava_zdruzeni_splitter.Panel2Collapsed = False
+        Else
+            sprava_zdruzeni_button.Text = "v"
+            sprava_zdruzeni_splitter.Panel2Collapsed = True
+
+        End If
 
     End Sub
 End Class

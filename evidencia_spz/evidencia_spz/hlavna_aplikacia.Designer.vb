@@ -78,6 +78,9 @@ Partial Class hlavna_aplikacia
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.hlavny_splitter = New System.Windows.Forms.SplitContainer
+        Me.sprava_zdruzeni_splitter = New System.Windows.Forms.SplitContainer
+        Me.sprava_zdruzeni_button = New System.Windows.Forms.Button
+        Me.sprava_zdruzeni_label = New System.Windows.Forms.Label
         Me.sprava_clenov_splitter = New System.Windows.Forms.SplitContainer
         Me.sprava_clenov_button = New System.Windows.Forms.Button
         Me.sprava_clenov_label = New System.Windows.Forms.Label
@@ -90,6 +93,8 @@ Partial Class hlavna_aplikacia
         Me.StatusStrip.SuspendLayout()
         Me.hlavny_splitter.Panel1.SuspendLayout()
         Me.hlavny_splitter.SuspendLayout()
+        Me.sprava_zdruzeni_splitter.Panel1.SuspendLayout()
+        Me.sprava_zdruzeni_splitter.SuspendLayout()
         Me.sprava_clenov_splitter.Panel1.SuspendLayout()
         Me.sprava_clenov_splitter.Panel2.SuspendLayout()
         Me.sprava_clenov_splitter.SuspendLayout()
@@ -119,7 +124,7 @@ Partial Class hlavna_aplikacia
         Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewToolStripMenuItem.Text = "&New"
         '
         'OpenToolStripMenuItem
@@ -480,11 +485,55 @@ Partial Class hlavna_aplikacia
         'hlavny_splitter.Panel1
         '
         Me.hlavny_splitter.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.hlavny_splitter.Panel1.Controls.Add(Me.sprava_zdruzeni_splitter)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.sprava_clenov_splitter)
         Me.hlavny_splitter.Size = New System.Drawing.Size(712, 445)
         Me.hlavny_splitter.SplitterDistance = 165
         Me.hlavny_splitter.SplitterWidth = 1
         Me.hlavny_splitter.TabIndex = 9
+        '
+        'sprava_zdruzeni_splitter
+        '
+        Me.sprava_zdruzeni_splitter.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.sprava_zdruzeni_splitter.Location = New System.Drawing.Point(12, 48)
+        Me.sprava_zdruzeni_splitter.Name = "sprava_zdruzeni_splitter"
+        Me.sprava_zdruzeni_splitter.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'sprava_zdruzeni_splitter.Panel1
+        '
+        Me.sprava_zdruzeni_splitter.Panel1.Controls.Add(Me.sprava_zdruzeni_button)
+        Me.sprava_zdruzeni_splitter.Panel1.Controls.Add(Me.sprava_zdruzeni_label)
+        '
+        'sprava_zdruzeni_splitter.Panel2
+        '
+        Me.sprava_zdruzeni_splitter.Panel2.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.sprava_zdruzeni_splitter.Panel2Collapsed = True
+        Me.sprava_zdruzeni_splitter.Size = New System.Drawing.Size(138, 137)
+        Me.sprava_zdruzeni_splitter.SplitterDistance = 25
+        Me.sprava_zdruzeni_splitter.SplitterWidth = 1
+        Me.sprava_zdruzeni_splitter.TabIndex = 1
+        '
+        'sprava_zdruzeni_button
+        '
+        Me.sprava_zdruzeni_button.FlatAppearance.BorderSize = 0
+        Me.sprava_zdruzeni_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.sprava_zdruzeni_button.Location = New System.Drawing.Point(113, 2)
+        Me.sprava_zdruzeni_button.Name = "sprava_zdruzeni_button"
+        Me.sprava_zdruzeni_button.Size = New System.Drawing.Size(22, 22)
+        Me.sprava_zdruzeni_button.TabIndex = 1
+        Me.sprava_zdruzeni_button.Text = "v"
+        Me.sprava_zdruzeni_button.UseVisualStyleBackColor = True
+        '
+        'sprava_zdruzeni_label
+        '
+        Me.sprava_zdruzeni_label.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.sprava_zdruzeni_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sprava_zdruzeni_label.Location = New System.Drawing.Point(0, 0)
+        Me.sprava_zdruzeni_label.Name = "sprava_zdruzeni_label"
+        Me.sprava_zdruzeni_label.Size = New System.Drawing.Size(138, 25)
+        Me.sprava_zdruzeni_label.TabIndex = 0
+        Me.sprava_zdruzeni_label.Text = "Správa združení"
+        Me.sprava_zdruzeni_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'sprava_clenov_splitter
         '
@@ -514,10 +563,11 @@ Partial Class hlavna_aplikacia
         '
         'sprava_clenov_button
         '
+        Me.sprava_clenov_button.FlatAppearance.BorderSize = 0
         Me.sprava_clenov_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.sprava_clenov_button.Location = New System.Drawing.Point(111, 3)
+        Me.sprava_clenov_button.Location = New System.Drawing.Point(113, 2)
         Me.sprava_clenov_button.Name = "sprava_clenov_button"
-        Me.sprava_clenov_button.Size = New System.Drawing.Size(22, 20)
+        Me.sprava_clenov_button.Size = New System.Drawing.Size(22, 22)
         Me.sprava_clenov_button.TabIndex = 1
         Me.sprava_clenov_button.Text = "v"
         Me.sprava_clenov_button.UseVisualStyleBackColor = True
@@ -599,6 +649,8 @@ Partial Class hlavna_aplikacia
         Me.StatusStrip.PerformLayout()
         Me.hlavny_splitter.Panel1.ResumeLayout(False)
         Me.hlavny_splitter.ResumeLayout(False)
+        Me.sprava_zdruzeni_splitter.Panel1.ResumeLayout(False)
+        Me.sprava_zdruzeni_splitter.ResumeLayout(False)
         Me.sprava_clenov_splitter.Panel1.ResumeLayout(False)
         Me.sprava_clenov_splitter.Panel2.ResumeLayout(False)
         Me.sprava_clenov_splitter.ResumeLayout(False)
@@ -666,5 +718,8 @@ Partial Class hlavna_aplikacia
     Friend WithEvents edituj_clena_button As System.Windows.Forms.Button
     Friend WithEvents karta_clena_button As System.Windows.Forms.Button
     Friend WithEvents prehlad_clenov_button As System.Windows.Forms.Button
+    Friend WithEvents sprava_zdruzeni_splitter As System.Windows.Forms.SplitContainer
+    Friend WithEvents sprava_zdruzeni_label As System.Windows.Forms.Label
+    Friend WithEvents sprava_zdruzeni_button As System.Windows.Forms.Button
 
 End Class
