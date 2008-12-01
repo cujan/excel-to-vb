@@ -141,10 +141,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>spzDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="statna_prislusnost.Designer.vb">
+      <DependentUpon>statna_prislusnost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="statna_prislusnost.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="statna_prislusnostDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>statna_prislusnostDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="titul.Designer.vb">
+      <DependentUpon>titul.vb</DependentUpon>
+    </Compile>
+    <Compile Include="titul.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="titulDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -177,6 +189,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="novy_clen.resx">
       <DependentUpon>novy_clen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="statna_prislusnost.resx">
+      <DependentUpon>statna_prislusnost.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="titul.resx">
+      <DependentUpon>titul.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
