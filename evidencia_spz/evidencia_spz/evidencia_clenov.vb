@@ -39,7 +39,7 @@
     End Sub
 
     Private Sub zavri_evidencia_clenov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavri_evidencia_clenov.Click
-        Me.Hide()
+        Me.Close()
 
     End Sub
 End Class

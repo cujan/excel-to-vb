@@ -32,7 +32,7 @@
     End Sub
 
     Private Sub zavri_novy_clen_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavri_novy_clen.Click
-        Me.Hide()
+        Me.Close()
 
 
     End Sub
@@ -41,6 +41,8 @@
         Me.Validate()
         Me.ClenoviaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ClenoviaDataSet)
-        Me.Hide()
+
+        Me.Close()
+
     End Sub
 End Class
