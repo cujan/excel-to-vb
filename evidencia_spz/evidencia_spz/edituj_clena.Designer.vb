@@ -975,7 +975,6 @@ Partial Class edituj_clena
         'PriezviskoComboBox
         '
         Me.PriezviskoComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "priezvisko", True))
-        Me.PriezviskoComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.ClenoviaBindingSource, "id", True))
         Me.PriezviskoComboBox.DataSource = Me.ClenoviaBindingSource
         Me.PriezviskoComboBox.DisplayMember = "priezvisko"
         Me.PriezviskoComboBox.FormattingEnabled = True
