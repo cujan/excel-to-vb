@@ -33,4 +33,11 @@
         Me.ClenoviaBindingSource.Position = Me.PriezviskoComboBox.SelectedIndex
 
     End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Me.Validate()
+        Me.ClenoviaBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.ClenoviaDataSet)
+        Me.Hide()
+    End Sub
 End Class

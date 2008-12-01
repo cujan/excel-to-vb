@@ -122,6 +122,7 @@ Partial Class edituj_clena
         Me.Brokova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.PriezviskoComboBox = New System.Windows.Forms.ComboBox
+        Me.Button1 = New System.Windows.Forms.Button
         TitulLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -984,12 +985,22 @@ Partial Class edituj_clena
         Me.PriezviskoComboBox.TabIndex = 80
         Me.PriezviskoComboBox.ValueMember = "priezvisko"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(754, 46)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 81
+        Me.Button1.Text = "Ulož"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'edituj_clena
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(1033, 812)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PriezviskoComboBox)
         Me.Controls.Add(Me.Gulova_zbranComboBox)
         Me.Controls.Add(Me.Brokova_zbranComboBox)
@@ -1143,4 +1154,5 @@ Partial Class edituj_clena
     Friend WithEvents Brokova_zbranComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents Gulova_zbranComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents PriezviskoComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
