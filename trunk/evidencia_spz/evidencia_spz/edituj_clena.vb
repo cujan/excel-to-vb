@@ -25,7 +25,7 @@
 
     Private Sub zavri_edituj_clena_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavri_edituj_clena.Click
 
-        Me.Hide()
+        Me.Close()
 
     End Sub
 
@@ -38,6 +38,6 @@
         Me.Validate()
         Me.ClenoviaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ClenoviaDataSet)
-        Me.Hide()
+        Me.Close()
     End Sub
 End Class
