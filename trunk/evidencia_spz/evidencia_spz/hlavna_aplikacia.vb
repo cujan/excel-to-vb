@@ -142,4 +142,12 @@ Public Class hlavna_aplikacia
         End If
 
     End Sub
+
+    Private Sub TitulyToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TitulyToolStripMenuItem.Click
+        titul.Show()
+    End Sub
+
+    Private Sub ŠtátnaPríslušnosťToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ŠtátnaPríslušnosťToolStripMenuItem.Click
+        statna_prislusnost.Show()
+    End Sub
 End Class
