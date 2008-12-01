@@ -79,6 +79,8 @@ Partial Class edituj_clena
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ClenoviaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.TitulComboBox = New System.Windows.Forms.ComboBox
+        Me.TitulBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TitulDataSet = New evidencia_spz.titulDataSet
         Me.MenoTextBox = New System.Windows.Forms.TextBox
         Me.Rodne_cisloTextBox = New System.Windows.Forms.TextBox
         Me.Miesto_narodeniaTextBox = New System.Windows.Forms.TextBox
@@ -86,6 +88,8 @@ Partial Class edituj_clena
         Me.BydliskoTextBox = New System.Windows.Forms.TextBox
         Me.PscTextBox = New System.Windows.Forms.TextBox
         Me.Statna_prislusnostComboBox = New System.Windows.Forms.ComboBox
+        Me.StatnaprislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Statna_prislusnostDataSet = New evidencia_spz.statna_prislusnostDataSet
         Me.Cislo_opTextBox = New System.Windows.Forms.TextBox
         Me.Datum_vydania_opDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Cislo_plTextBox = New System.Windows.Forms.TextBox
@@ -113,11 +117,7 @@ Partial Class edituj_clena
         Me.Udelene_trestyTextBox = New System.Windows.Forms.TextBox
         Me.PoznamkyTextBox = New System.Windows.Forms.TextBox
         Me.zavri_edituj_clena = New System.Windows.Forms.Button
-        Me.TitulDataSet = New evidencia_spz.titulDataSet
-        Me.TitulBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TitulTableAdapter = New evidencia_spz.titulDataSetTableAdapters.titulTableAdapter
-        Me.Statna_prislusnostDataSet = New evidencia_spz.statna_prislusnostDataSet
-        Me.StatnaprislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Statna_prislusnostTableAdapter = New evidencia_spz.statna_prislusnostDataSetTableAdapters.statna_prislusnostTableAdapter
         Me.Brokova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
@@ -163,10 +163,10 @@ Partial Class edituj_clena
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClenoviaBindingNavigator.SuspendLayout()
-        CType(Me.TitulDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Statna_prislusnostDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Statna_prislusnostDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TitulLabel
@@ -645,6 +645,16 @@ Partial Class edituj_clena
         Me.TitulComboBox.TabIndex = 4
         Me.TitulComboBox.ValueMember = "titul_skratka"
         '
+        'TitulBindingSource
+        '
+        Me.TitulBindingSource.DataMember = "titul"
+        Me.TitulBindingSource.DataSource = Me.TitulDataSet
+        '
+        'TitulDataSet
+        '
+        Me.TitulDataSet.DataSetName = "titulDataSet"
+        Me.TitulDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'MenoTextBox
         '
         Me.MenoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "meno", True))
@@ -704,6 +714,16 @@ Partial Class edituj_clena
         Me.Statna_prislusnostComboBox.Size = New System.Drawing.Size(75, 21)
         Me.Statna_prislusnostComboBox.TabIndex = 20
         Me.Statna_prislusnostComboBox.ValueMember = "skratka"
+        '
+        'StatnaprislusnostBindingSource
+        '
+        Me.StatnaprislusnostBindingSource.DataMember = "statna_prislusnost"
+        Me.StatnaprislusnostBindingSource.DataSource = Me.Statna_prislusnostDataSet
+        '
+        'Statna_prislusnostDataSet
+        '
+        Me.Statna_prislusnostDataSet.DataSetName = "statna_prislusnostDataSet"
+        Me.Statna_prislusnostDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Cislo_opTextBox
         '
@@ -924,29 +944,9 @@ Partial Class edituj_clena
         Me.zavri_edituj_clena.Text = "Zavrieť"
         Me.zavri_edituj_clena.UseVisualStyleBackColor = True
         '
-        'TitulDataSet
-        '
-        Me.TitulDataSet.DataSetName = "titulDataSet"
-        Me.TitulDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TitulBindingSource
-        '
-        Me.TitulBindingSource.DataMember = "titul"
-        Me.TitulBindingSource.DataSource = Me.TitulDataSet
-        '
         'TitulTableAdapter
         '
         Me.TitulTableAdapter.ClearBeforeFill = True
-        '
-        'Statna_prislusnostDataSet
-        '
-        Me.Statna_prislusnostDataSet.DataSetName = "statna_prislusnostDataSet"
-        Me.Statna_prislusnostDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'StatnaprislusnostBindingSource
-        '
-        Me.StatnaprislusnostBindingSource.DataMember = "statna_prislusnost"
-        Me.StatnaprislusnostBindingSource.DataSource = Me.Statna_prislusnostDataSet
         '
         'Statna_prislusnostTableAdapter
         '
@@ -975,7 +975,7 @@ Partial Class edituj_clena
         'PriezviskoComboBox
         '
         Me.PriezviskoComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "priezvisko", True))
-        Me.PriezviskoComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.ClenoviaBindingSource, "priezvisko", True))
+        Me.PriezviskoComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.ClenoviaBindingSource, "id", True))
         Me.PriezviskoComboBox.DataSource = Me.ClenoviaBindingSource
         Me.PriezviskoComboBox.DisplayMember = "priezvisko"
         Me.PriezviskoComboBox.FormattingEnabled = True
@@ -1075,10 +1075,10 @@ Partial Class edituj_clena
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ClenoviaBindingNavigator.ResumeLayout(False)
         Me.ClenoviaBindingNavigator.PerformLayout()
-        CType(Me.TitulDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TitulBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Statna_prislusnostDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Statna_prislusnostDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

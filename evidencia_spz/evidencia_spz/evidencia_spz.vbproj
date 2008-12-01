@@ -88,6 +88,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>clenoviaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="clenoviaDataSet.vb">
+      <DependentUpon>clenoviaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="edituj_clena.Designer.vb">
       <DependentUpon>edituj_clena.vb</DependentUpon>
     </Compile>

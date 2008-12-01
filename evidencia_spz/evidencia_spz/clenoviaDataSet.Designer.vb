@@ -2252,7 +2252,7 @@ Namespace clenoviaDataSetTableAdapters
                 "polovnictva], [miesto_vyzsej_skusky_z_polovnictva], [brokova_zbran], [kontrolne_"& _ 
                 "strelby_brokova_zbran], [gulova_zbran], [kontrolne_strelby_gulova_zbran], [vyzna"& _ 
                 "menanie_III], [vyznamenanie_II], [vyznamenanie_I], [vyznamenanie_ZK], [vyznamena"& _ 
-                "nie_ine], [udelene_tresty], [poznamky] FROM [clenovia]"
+                "nie_ine], [udelene_tresty], [poznamky] FROM [clenovia] ORDER BY priezvisko"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
