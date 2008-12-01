@@ -24,7 +24,12 @@
     End Sub
 
     Private Sub zavri_edituj_clena_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavri_edituj_clena.Click
+
         Me.Hide()
 
+    End Sub
+
+    Private Sub PriezviskoComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PriezviskoComboBox.SelectedIndexChanged
+        'Me.ClenoviaBindingSource.Position = Me.PriezviskoComboBox.SelectedIndex
     End Sub
 End Class
