@@ -30,6 +30,7 @@
     End Sub
 
     Private Sub PriezviskoComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PriezviskoComboBox.SelectedIndexChanged
-        'Me.ClenoviaBindingSource.Position = Me.PriezviskoComboBox.SelectedIndex
+        Me.ClenoviaBindingSource.Position = Me.PriezviskoComboBox.SelectedIndex
+
     End Sub
 End Class
