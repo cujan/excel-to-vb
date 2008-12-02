@@ -140,6 +140,11 @@
     <Compile Include="novy_clen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="pohladpriezviskoDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pohladpriezviskoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="spzDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -226,6 +231,17 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="pohladpriezviskoDataSet.xsc">
+      <DependentUpon>pohladpriezviskoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pohladpriezviskoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pohladpriezviskoDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pohladpriezviskoDataSet.xss">
+      <DependentUpon>pohladpriezviskoDataSet.xsd</DependentUpon>
     </None>
     <None Include="spzDataSet.xsc">
       <DependentUpon>spzDataSet.xsd</DependentUpon>

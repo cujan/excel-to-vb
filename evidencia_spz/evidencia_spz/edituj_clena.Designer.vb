@@ -121,9 +121,13 @@ Partial Class edituj_clena
         Me.Statna_prislusnostTableAdapter = New evidencia_spz.statna_prislusnostDataSetTableAdapters.statna_prislusnostTableAdapter
         Me.Brokova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
-        Me.PriezviskoComboBox = New System.Windows.Forms.ComboBox
         Me.Button1 = New System.Windows.Forms.Button
         Me.ClenoviaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox
+        Me.ClenoviaBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PohladpriezviskoDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PohladpriezviskoDataSet = New evidencia_spz.pohladpriezviskoDataSet
+        Me.ClenoviaTableAdapter1 = New evidencia_spz.pohladpriezviskoDataSetTableAdapters.clenoviaTableAdapter
         TitulLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -170,6 +174,9 @@ Partial Class edituj_clena
         CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Statna_prislusnostDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClenoviaBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PohladpriezviskoDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PohladpriezviskoDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TitulLabel
@@ -539,7 +546,7 @@ Partial Class edituj_clena
         Me.ClenoviaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ClenoviaBindingNavigator.Name = "ClenoviaBindingNavigator"
         Me.ClenoviaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(1016, 25)
+        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(1033, 25)
         Me.ClenoviaBindingNavigator.TabIndex = 0
         Me.ClenoviaBindingNavigator.Text = "BindingNavigator1"
         '
@@ -975,18 +982,6 @@ Partial Class edituj_clena
         Me.Gulova_zbranComboBox.Size = New System.Drawing.Size(89, 21)
         Me.Gulova_zbranComboBox.TabIndex = 79
         '
-        'PriezviskoComboBox
-        '
-        Me.PriezviskoComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "priezvisko", True))
-        Me.PriezviskoComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.ClenoviaBindingSource, "id", True))
-        Me.PriezviskoComboBox.DataSource = Me.ClenoviaBindingSource
-        Me.PriezviskoComboBox.DisplayMember = "priezvisko"
-        Me.PriezviskoComboBox.FormattingEnabled = True
-        Me.PriezviskoComboBox.Location = New System.Drawing.Point(444, 48)
-        Me.PriezviskoComboBox.Name = "PriezviskoComboBox"
-        Me.PriezviskoComboBox.Size = New System.Drawing.Size(188, 21)
-        Me.PriezviskoComboBox.TabIndex = 80
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(754, 46)
@@ -1001,14 +996,44 @@ Partial Class edituj_clena
         Me.ClenoviaBindingSource1.DataMember = "clenovia"
         Me.ClenoviaBindingSource1.DataSource = Me.ClenoviaDataSet
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.DataSource = Me.ClenoviaBindingSource2
+        Me.ComboBox1.DisplayMember = "priezvisko"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(445, 47)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 82
+        Me.ComboBox1.ValueMember = "priezvisko"
+        '
+        'ClenoviaBindingSource2
+        '
+        Me.ClenoviaBindingSource2.DataMember = "clenovia"
+        Me.ClenoviaBindingSource2.DataSource = Me.PohladpriezviskoDataSetBindingSource
+        '
+        'PohladpriezviskoDataSetBindingSource
+        '
+        Me.PohladpriezviskoDataSetBindingSource.DataSource = Me.PohladpriezviskoDataSet
+        Me.PohladpriezviskoDataSetBindingSource.Position = 0
+        '
+        'PohladpriezviskoDataSet
+        '
+        Me.PohladpriezviskoDataSet.DataSetName = "pohladpriezviskoDataSet"
+        Me.PohladpriezviskoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ClenoviaTableAdapter1
+        '
+        Me.ClenoviaTableAdapter1.ClearBeforeFill = True
+        '
         'edituj_clena
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1033, 812)
+        Me.ClientSize = New System.Drawing.Size(1050, 812)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.PriezviskoComboBox)
         Me.Controls.Add(Me.Gulova_zbranComboBox)
         Me.Controls.Add(Me.Brokova_zbranComboBox)
         Me.Controls.Add(Me.zavri_edituj_clena)
@@ -1097,6 +1122,9 @@ Partial Class edituj_clena
         CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Statna_prislusnostDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClenoviaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClenoviaBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PohladpriezviskoDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PohladpriezviskoDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1161,7 +1189,11 @@ Partial Class edituj_clena
     Friend WithEvents Statna_prislusnostTableAdapter As evidencia_spz.statna_prislusnostDataSetTableAdapters.statna_prislusnostTableAdapter
     Friend WithEvents Brokova_zbranComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents Gulova_zbranComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents PriezviskoComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents ClenoviaBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents PohladpriezviskoDataSetBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents PohladpriezviskoDataSet As evidencia_spz.pohladpriezviskoDataSet
+    Friend WithEvents ClenoviaBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents ClenoviaTableAdapter1 As evidencia_spz.pohladpriezviskoDataSetTableAdapters.clenoviaTableAdapter
 End Class

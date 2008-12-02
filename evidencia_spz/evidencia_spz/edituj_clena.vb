@@ -8,6 +8,8 @@
     End Sub
 
     Private Sub edituj_clena_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'PohladpriezviskoDataSet.clenovia' table. You can move, or remove it, as needed.
+        Me.ClenoviaTableAdapter1.Fill(Me.PohladpriezviskoDataSet.clenovia)
         'TODO: This line of code loads data into the 'Statna_prislusnostDataSet.statna_prislusnost' table. You can move, or remove it, as needed.
         Me.Statna_prislusnostTableAdapter.Fill(Me.Statna_prislusnostDataSet.statna_prislusnost)
         'TODO: This line of code loads data into the 'TitulDataSet.titul' table. You can move, or remove it, as needed.
@@ -29,8 +31,8 @@
 
     End Sub
 
-    Private Sub PriezviskoComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PriezviskoComboBox.SelectedIndexChanged
-        Me.ClenoviaBindingSource.Position = Me.PriezviskoComboBox.SelectedIndex
+    Private Sub PriezviskoComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
 
     End Sub
 
@@ -39,5 +41,9 @@
         Me.ClenoviaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ClenoviaDataSet)
         Me.Close()
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Me.ClenoviaBindingSource.Position = Me.ComboBox1.SelectedIndex
     End Sub
 End Class
