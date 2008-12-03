@@ -87,14 +87,6 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clenoviaDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>clenoviaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="clenoviaDataSet.vb">
-      <DependentUpon>clenoviaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="edituj_clena.Designer.vb">
       <DependentUpon>edituj_clena.vb</DependentUpon>
     </Compile>
@@ -107,16 +99,16 @@
     <Compile Include="evidencia_clenov.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="karta_clena.Designer.vb">
-      <DependentUpon>karta_clena.vb</DependentUpon>
-    </Compile>
-    <Compile Include="karta_clena.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="hlavna_aplikacia.Designer.vb">
       <DependentUpon>hlavna_aplikacia.vb</DependentUpon>
     </Compile>
     <Compile Include="hlavna_aplikacia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="karta_clena.Designer.vb">
+      <DependentUpon>karta_clena.vb</DependentUpon>
+    </Compile>
+    <Compile Include="karta_clena.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -140,26 +132,11 @@
     <Compile Include="novy_clen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pohladpriezviskoDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>pohladpriezviskoDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="spzDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>spzDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="statna_prislusnost.Designer.vb">
       <DependentUpon>statna_prislusnost.vb</DependentUpon>
     </Compile>
     <Compile Include="statna_prislusnost.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="statna_prislusnostDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>statna_prislusnostDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="titul.Designer.vb">
       <DependentUpon>titul.vb</DependentUpon>
@@ -167,25 +144,8 @@
     <Compile Include="titul.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="titulDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>titulDataSet.xsd</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="edituj_clena.resx">
-      <DependentUpon>edituj_clena.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="evidencia_clenov.resx">
-      <DependentUpon>evidencia_clenov.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="karta_clena.resx">
-      <DependentUpon>karta_clena.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="hlavna_aplikacia.resx">
       <DependentUpon>hlavna_aplikacia.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -196,33 +156,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="novy_clen.resx">
-      <DependentUpon>novy_clen.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="statna_prislusnost.resx">
-      <DependentUpon>statna_prislusnost.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="titul.resx">
-      <DependentUpon>titul.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="clenoviaDataSet.xsc">
-      <DependentUpon>clenoviaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="clenoviaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>clenoviaDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="clenoviaDataSet.xss">
-      <DependentUpon>clenoviaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="evidencia_spz_TemporaryKey.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -232,55 +168,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="pohladpriezviskoDataSet.xsc">
-      <DependentUpon>pohladpriezviskoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="pohladpriezviskoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>pohladpriezviskoDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="pohladpriezviskoDataSet.xss">
-      <DependentUpon>pohladpriezviskoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="spzDataSet.xsc">
-      <DependentUpon>spzDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="spzDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>spzDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="spzDataSet.xss">
-      <DependentUpon>spzDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="statna_prislusnostDataSet.xsc">
-      <DependentUpon>statna_prislusnostDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="statna_prislusnostDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>statna_prislusnostDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="statna_prislusnostDataSet.xss">
-      <DependentUpon>statna_prislusnostDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="titulDataSet.xsc">
-      <DependentUpon>titulDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="titulDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>titulDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="titulDataSet.xss">
-      <DependentUpon>titulDataSet.xsd</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="spz.sdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
@@ -308,6 +195,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
