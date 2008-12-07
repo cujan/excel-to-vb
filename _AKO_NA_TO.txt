@@ -1,0 +1,23 @@
+1. Stiahnut klienta z tejto SVN - CollabNetSubversion-client-...
+
+2. Po instalacii spustime prikazovy riadok v adresari, kde chceme pracovat s kodom
+
+3. program pracuje so styrmi zakladnymi funkciami
+   - Checkout - pomocou tejto funkcie stiahneme obsah z SVN servra do nami zadaneho adresara
+      svn checkout https://excel-to-vb.googlecode.com/svn/trunk/ excel-to-vb --username 
+	  
+   - Add - prida subor/adresar ktory nie je pod SVN kontrolou medzi SVN subory
+      svn add <nazov suboru alebo *>
+   
+   - Update - skontroluje ci je lokalna kopia identicka s verziou na SVN servri, ak nie ponukne dialog box pre akciu
+	  svn update
+		
+   - Commit - uploadne zmeneny kod z lokalneho disku na SVN server (tu sa pridava sprava - message - o zmene ktoru sme vykonali s kodom)
+	  svn commit -m "sprava o zmene ktoru posielame"
+
+4. Ak chceme vidiet, ze ake zmeny sa vykonali s kodom od nasej poslednej upravy, tak pouzijeme prikaz "svn log" - tu mozeme sledovat zmeny v kode od jeho vytvorenia
+
+
+
+  Pre lepsiu pracu s kodom je dobre mat nainstalovany nejaky Diff viewer (WinDiff, FreeDiff, ...)
+
