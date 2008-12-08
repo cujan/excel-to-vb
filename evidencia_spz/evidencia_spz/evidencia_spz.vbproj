@@ -21,7 +21,7 @@
     <ManifestCertificateThumbprint>3B2FA4CFD762EA66F9C54B0C137686B0C492A77C</ManifestCertificateThumbprint>
     <ManifestKeyFile>evidencia_spz_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
     <PublishUrl>E:\projekt google\instalacka\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
