@@ -155,8 +155,8 @@ Public Class hlavna_aplikacia
 
     Private Sub hlavna_aplikacia_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
-            Dim oApp As Object = CreateObject("Access.Application")
-            'Dim oApp As Object = CreateObject("Microsoft.ACE.OLEDB.12.0")
+            'Dim oApp As Object = CreateObject("Access.Application")
+            Dim oApp As Object = CreateObject("Microsoft.ACE.OLEDB.12.0")
             bInstalled = True
             ' Label2.Text = bInstalled.ToString
         Catch
