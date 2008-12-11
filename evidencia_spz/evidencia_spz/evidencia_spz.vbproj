@@ -116,6 +116,12 @@
     <Compile Include="karta_clena.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="kontrola_verzii.Designer.vb">
+      <DependentUpon>kontrola_verzii.vb</DependentUpon>
+    </Compile>
+    <Compile Include="kontrola_verzii.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -185,6 +191,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="karta_clena.resx">
       <DependentUpon>karta_clena.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kontrola_verzii.resx">
+      <DependentUpon>kontrola_verzii.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">

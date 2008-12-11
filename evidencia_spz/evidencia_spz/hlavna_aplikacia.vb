@@ -1,6 +1,8 @@
 ﻿Imports System.Windows.Forms
+Imports Microsoft.Win32
 
 Public Class hlavna_aplikacia
+    Private bInstalled As Boolean
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
         ' Create a new instance of the child form.
@@ -150,4 +152,31 @@ Public Class hlavna_aplikacia
     Private Sub ŠtátnaPríslušnosťToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ŠtátnaPríslušnosťToolStripMenuItem.Click
         statna_prislusnost.Show()
     End Sub
+
+    Private Sub hlavna_aplikacia_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Try
+            Dim oApp As Object = CreateObject("Access.Application")
+            'Dim oApp As Object = CreateObject("Microsoft.ACE.OLEDB.12.0")
+            bInstalled = True
+            ' Label2.Text = bInstalled.ToString
+        Catch
+            bInstalled = False
+            'MessageBox.Show("Runtime Access 2007 nie je nainstalovany.", "Varovanie", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End Try
+
+        If Not bInstalled Then
+            'MessageBox.Show("Runtime Access 2007.", "Varovanie", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            'Me.Visible = False
+            Me.Hide()
+            kontrola_verzii.Show()
+            kontrola_verzii.BringToFront()
+            'Else
+            '    'Me.Visible = False
+            '    Me.Hide()
+            '    kontrola_verzii.Show()
+            '    kontrola_verzii.BringToFront()
+            '    'MessageBox.Show("Runtime Access 2007 nie je nainstalovany.", "Varovanie", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
+    End Sub
+
 End Class

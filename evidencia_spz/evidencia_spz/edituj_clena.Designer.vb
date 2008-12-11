@@ -534,7 +534,7 @@ Partial Class edituj_clena
         Me.ClenoviaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ClenoviaBindingNavigator.Name = "ClenoviaBindingNavigator"
         Me.ClenoviaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(718, 25)
+        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(701, 25)
         Me.ClenoviaBindingNavigator.TabIndex = 0
         Me.ClenoviaBindingNavigator.Text = "BindingNavigator1"
         '
@@ -1036,6 +1036,7 @@ Partial Class edituj_clena
         Me.Controls.Add(PoznamkyLabel)
         Me.Controls.Add(Me.PoznamkyTextBox)
         Me.Controls.Add(Me.ClenoviaBindingNavigator)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "edituj_clena"
         Me.Text = "edituj_clena"
         CType(Me.Spz_evidenciaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
