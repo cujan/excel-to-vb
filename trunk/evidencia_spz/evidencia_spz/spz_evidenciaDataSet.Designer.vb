@@ -3258,7 +3258,7 @@ Namespace spz_evidenciaDataSetTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT ID, titul, meno, priezvisko, rodne_cislo, miesto_narodenia, okres_narodeni"& _ 
@@ -3271,6 +3271,18 @@ Namespace spz_evidenciaDataSetTableAdapters
                 "bran, vyznamenanie_III, vyznamenanie_II, vyznamenanie_I, vyznamenanie_ZK, vyznam"& _ 
                 "enanie_ine, udelene_tresty, poznamky FROM clenovia"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT ID, titul, meno, priezvisko, rodne_cislo, miesto_narodenia, okres_narodeni"& _ 
+                "a, bydlisko, psc, statna_prislusnost, cislo_op, datum_vydania_op, cislo_pl, datu"& _ 
+                "m_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz"& _ 
+                "_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, [miesto_s"& _ 
+                "kusky_z _polovnictva], skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovn"& _ 
+                "ych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsia_skuska_z_polovnictva,"& _ 
+                " brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gulova_z"& _ 
+                "bran, vyznamenanie_III, vyznamenanie_II, vyznamenanie_I, vyznamenanie_ZK, vyznam"& _ 
+                "enanie_ine, udelene_tresty, poznamky "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM clenovia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where priezvisko LIKE 'H'"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3293,6 +3305,18 @@ Namespace spz_evidenciaDataSetTableAdapters
             Dim dataTable As spz_evidenciaDataSet.clenoviaDataTable = New spz_evidenciaDataSet.clenoviaDataTable
             Me.Adapter.Fill(dataTable)
             Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function hladaj(ByVal dataTable As spz_evidenciaDataSet.clenoviaDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

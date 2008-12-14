@@ -115,6 +115,8 @@ Partial Class karta_clena
         Me.Vyznamenanie_ineDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Udelene_trestyTextBox = New System.Windows.Forms.TextBox
         Me.PoznamkyTextBox = New System.Windows.Forms.TextBox
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
         TitulLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -527,7 +529,7 @@ Partial Class karta_clena
         Me.ClenoviaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ClenoviaBindingNavigator.Name = "ClenoviaBindingNavigator"
         Me.ClenoviaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(450, 25)
+        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(705, 25)
         Me.ClenoviaBindingNavigator.TabIndex = 0
         Me.ClenoviaBindingNavigator.Text = "BindingNavigator1"
         '
@@ -944,12 +946,32 @@ Partial Class karta_clena
         Me.PoznamkyTextBox.Size = New System.Drawing.Size(200, 20)
         Me.PoznamkyTextBox.TabIndex = 76
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(520, 71)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 77
+        Me.Button1.Text = "Koniec"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(520, 112)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 78
+        Me.Button2.Text = "Ulož"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'karta_clena
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(484, 778)
+        Me.ClientSize = New System.Drawing.Size(722, 778)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(TitulLabel)
         Me.Controls.Add(Me.TitulTextBox)
         Me.Controls.Add(MenoLabel)
@@ -1091,4 +1113,6 @@ Partial Class karta_clena
     Friend WithEvents Vyznamenanie_ineDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Udelene_trestyTextBox As System.Windows.Forms.TextBox
     Friend WithEvents PoznamkyTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

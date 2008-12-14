@@ -303,7 +303,18 @@
               <Mapping SourceColumn="udelene_tresty" DataSetColumn="udelene_tresty" />
               <Mapping SourceColumn="poznamky" DataSetColumn="poznamky" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="spz_evidenciaConnectionString (MySettings)" DbObjectName="clenovia" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="hladaj" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="hladaj" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="hladaj">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, titul, meno, priezvisko, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, psc, statna_prislusnost, cislo_op, datum_vydania_op, cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, [miesto_skusky_z _polovnictva], skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsia_skuska_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gulova_zbran, vyznamenanie_III, vyznamenanie_II, vyznamenanie_I, vyznamenanie_ZK, vyznamenanie_ine, udelene_tresty, poznamky 
+FROM clenovia
+where priezvisko LIKE 'H'</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="statna_prislusnostTableAdapter" GeneratorDataComponentClassName="statna_prislusnostTableAdapter" Name="statna_prislusnost" UserDataComponentName="statna_prislusnostTableAdapter">
             <MainSource>
@@ -416,10 +427,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="spz_evidenciaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="spz_evidenciaDataSet" msprop:Generator_UserDSName="spz_evidenciaDataSet" msprop:EnableTableAdapterManager="True">
+  <xs:element name="spz_evidenciaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="spz_evidenciaDataSet" msprop:Generator_DataSetName="spz_evidenciaDataSet" msprop:EnableTableAdapterManager="True">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="clenovia" msprop:Generator_UserTableName="clenovia" msprop:Generator_RowDeletedName="clenoviaRowDeleted" msprop:Generator_TableClassName="clenoviaDataTable" msprop:Generator_RowChangedName="clenoviaRowChanged" msprop:Generator_RowClassName="clenoviaRow" msprop:Generator_RowChangingName="clenoviaRowChanging" msprop:Generator_RowEvArgName="clenoviaRowChangeEvent" msprop:Generator_RowEvHandlerName="clenoviaRowChangeEventHandler" msprop:Generator_TablePropName="clenovia" msprop:Generator_TableVarName="tableclenovia" msprop:Generator_RowDeletingName="clenoviaRowDeleting">
+        <xs:element name="clenovia" msprop:Generator_UserTableName="clenovia" msprop:Generator_RowDeletedName="clenoviaRowDeleted" msprop:Generator_RowChangedName="clenoviaRowChanged" msprop:Generator_RowClassName="clenoviaRow" msprop:Generator_RowChangingName="clenoviaRowChanging" msprop:Generator_RowEvArgName="clenoviaRowChangeEvent" msprop:Generator_RowEvHandlerName="clenoviaRowChangeEventHandler" msprop:Generator_TableClassName="clenoviaDataTable" msprop:Generator_TableVarName="tableclenovia" msprop:Generator_RowDeletingName="clenoviaRowDeleting" msprop:Generator_TablePropName="clenovia">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
@@ -583,7 +594,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="statna_prislusnost" msprop:Generator_UserTableName="statna_prislusnost" msprop:Generator_RowDeletedName="statna_prislusnostRowDeleted" msprop:Generator_TableClassName="statna_prislusnostDataTable" msprop:Generator_RowChangedName="statna_prislusnostRowChanged" msprop:Generator_RowClassName="statna_prislusnostRow" msprop:Generator_RowChangingName="statna_prislusnostRowChanging" msprop:Generator_RowEvArgName="statna_prislusnostRowChangeEvent" msprop:Generator_RowEvHandlerName="statna_prislusnostRowChangeEventHandler" msprop:Generator_TablePropName="statna_prislusnost" msprop:Generator_TableVarName="tablestatna_prislusnost" msprop:Generator_RowDeletingName="statna_prislusnostRowDeleting">
+        <xs:element name="statna_prislusnost" msprop:Generator_UserTableName="statna_prislusnost" msprop:Generator_RowDeletedName="statna_prislusnostRowDeleted" msprop:Generator_RowChangedName="statna_prislusnostRowChanged" msprop:Generator_RowClassName="statna_prislusnostRow" msprop:Generator_RowChangingName="statna_prislusnostRowChanging" msprop:Generator_RowEvArgName="statna_prislusnostRowChangeEvent" msprop:Generator_RowEvHandlerName="statna_prislusnostRowChangeEventHandler" msprop:Generator_TableClassName="statna_prislusnostDataTable" msprop:Generator_TableVarName="tablestatna_prislusnost" msprop:Generator_RowDeletingName="statna_prislusnostRowDeleting" msprop:Generator_TablePropName="statna_prislusnost">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
@@ -604,7 +615,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="titul" msprop:Generator_UserTableName="titul" msprop:Generator_RowDeletedName="titulRowDeleted" msprop:Generator_TableClassName="titulDataTable" msprop:Generator_RowChangedName="titulRowChanged" msprop:Generator_RowClassName="titulRow" msprop:Generator_RowChangingName="titulRowChanging" msprop:Generator_RowEvArgName="titulRowChangeEvent" msprop:Generator_RowEvHandlerName="titulRowChangeEventHandler" msprop:Generator_TablePropName="titul" msprop:Generator_TableVarName="tabletitul" msprop:Generator_RowDeletingName="titulRowDeleting">
+        <xs:element name="titul" msprop:Generator_UserTableName="titul" msprop:Generator_RowDeletedName="titulRowDeleted" msprop:Generator_RowChangedName="titulRowChanged" msprop:Generator_RowClassName="titulRow" msprop:Generator_RowChangingName="titulRowChanging" msprop:Generator_RowEvArgName="titulRowChangeEvent" msprop:Generator_RowEvHandlerName="titulRowChangeEventHandler" msprop:Generator_TableClassName="titulDataTable" msprop:Generator_TableVarName="tabletitul" msprop:Generator_RowDeletingName="titulRowDeleting" msprop:Generator_TablePropName="titul">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />

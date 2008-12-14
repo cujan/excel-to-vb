@@ -119,6 +119,8 @@ Partial Class edituj_clena
         Me.Pohlad_priezviskoDataSet1 = New evidencia_spz.pohlad_priezviskoDataSet1
         Me.ClenoviaTableAdapter1 = New evidencia_spz.pohlad_priezviskoDataSet1TableAdapters.clenoviaTableAdapter
         Me.ClenoviaBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
         TitulLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -534,7 +536,7 @@ Partial Class edituj_clena
         Me.ClenoviaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ClenoviaBindingNavigator.Name = "ClenoviaBindingNavigator"
         Me.ClenoviaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(701, 25)
+        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(718, 25)
         Me.ClenoviaBindingNavigator.TabIndex = 0
         Me.ClenoviaBindingNavigator.Text = "BindingNavigator1"
         '
@@ -955,12 +957,32 @@ Partial Class edituj_clena
         Me.ClenoviaBindingSource2.DataMember = "clenovia"
         Me.ClenoviaBindingSource2.DataSource = Me.Pohlad_priezviskoDataSet1
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(548, 134)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 78
+        Me.Button1.Text = "Koniec"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(548, 175)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 79
+        Me.Button2.Text = "Ulož"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'edituj_clena
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(735, 778)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(TitulLabel)
         Me.Controls.Add(Me.TitulTextBox)
@@ -1109,4 +1131,6 @@ Partial Class edituj_clena
     Friend WithEvents ClenoviaBindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents ClenoviaTableAdapter1 As evidencia_spz.pohlad_priezviskoDataSet1TableAdapters.clenoviaTableAdapter
     Friend WithEvents ClenoviaBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

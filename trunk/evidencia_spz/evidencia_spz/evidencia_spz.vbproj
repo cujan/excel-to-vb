@@ -153,6 +153,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>spz_evidenciaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="spz_evidenciaDataSet.vb">
+      <DependentUpon>spz_evidenciaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="statna_prislusnost.Designer.vb">
       <DependentUpon>statna_prislusnost.vb</DependentUpon>
     </Compile>
