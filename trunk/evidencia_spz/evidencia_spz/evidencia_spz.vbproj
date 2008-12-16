@@ -56,12 +56,16 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core">
@@ -156,6 +160,11 @@
     <Compile Include="spz_evidenciaDataSet.vb">
       <DependentUpon>spz_evidenciaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="spz_zoznam_clenov_reportDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>spz_zoznam_clenov_reportDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="statna_prislusnost.Designer.vb">
       <DependentUpon>statna_prislusnost.vb</DependentUpon>
     </Compile>
@@ -177,6 +186,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>titulDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zoznam_clenov_report.Designer.vb">
+      <DependentUpon>zoznam_clenov_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="zoznam_clenov_report.vb">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -216,6 +231,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="titul.resx">
       <DependentUpon>titul.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zoznam_clenov_report.rdlc" />
+    <EmbeddedResource Include="zoznam_clenov_report.resx">
+      <DependentUpon>zoznam_clenov_report.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -262,6 +282,17 @@
     </None>
     <None Include="spz_evidenciaDataSet.xss">
       <DependentUpon>spz_evidenciaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="spz_zoznam_clenov_reportDataSet1.xsc">
+      <DependentUpon>spz_zoznam_clenov_reportDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="spz_zoznam_clenov_reportDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>spz_zoznam_clenov_reportDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="spz_zoznam_clenov_reportDataSet1.xss">
+      <DependentUpon>spz_zoznam_clenov_reportDataSet1.xsd</DependentUpon>
     </None>
     <None Include="statna_prislusnostDataSet1.xsc">
       <DependentUpon>statna_prislusnostDataSet1.xsd</DependentUpon>
