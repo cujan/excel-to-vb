@@ -26,6 +26,8 @@ Partial Class evidencia_clenov
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(evidencia_clenov))
         Me.ClenoviaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Spz_evidenciaDataSet = New evidencia_spz.spz_evidenciaDataSet
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
@@ -38,8 +40,6 @@ Partial Class evidencia_clenov
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ClenoviaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.ClenoviaDataGridView = New System.Windows.Forms.DataGridView
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -77,15 +77,16 @@ Partial Class evidencia_clenov
         Me.DataGridViewTextBoxColumn34 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn35 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn36 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Spz_evidenciaDataSet = New evidencia_spz.spz_evidenciaDataSet
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
         Me.ClenoviaTableAdapter = New evidencia_spz.spz_evidenciaDataSetTableAdapters.clenoviaTableAdapter
         Me.TableAdapterManager = New evidencia_spz.spz_evidenciaDataSetTableAdapters.TableAdapterManager
+        Me.button_report_zoznam_clenov = New System.Windows.Forms.Button
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClenoviaBindingNavigator.SuspendLayout()
-        CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Spz_evidenciaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ClenoviaBindingNavigator
@@ -114,6 +115,16 @@ Partial Class evidencia_clenov
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'ClenoviaBindingSource
+        '
+        Me.ClenoviaBindingSource.DataMember = "clenovia"
+        Me.ClenoviaBindingSource.DataSource = Me.Spz_evidenciaDataSet
+        '
+        'Spz_evidenciaDataSet
+        '
+        Me.Spz_evidenciaDataSet.DataSetName = "spz_evidenciaDataSet"
+        Me.Spz_evidenciaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -209,24 +220,6 @@ Partial Class evidencia_clenov
         Me.ClenoviaDataGridView.Name = "ClenoviaDataGridView"
         Me.ClenoviaDataGridView.Size = New System.Drawing.Size(696, 220)
         Me.ClenoviaDataGridView.TabIndex = 1
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(99, 53)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Koniec"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(212, 52)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Ulož"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'DataGridViewTextBoxColumn2
         '
@@ -450,15 +443,23 @@ Partial Class evidencia_clenov
         Me.DataGridViewTextBoxColumn36.HeaderText = "poznamky"
         Me.DataGridViewTextBoxColumn36.Name = "DataGridViewTextBoxColumn36"
         '
-        'ClenoviaBindingSource
+        'Button1
         '
-        Me.ClenoviaBindingSource.DataMember = "clenovia"
-        Me.ClenoviaBindingSource.DataSource = Me.Spz_evidenciaDataSet
+        Me.Button1.Location = New System.Drawing.Point(99, 53)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Koniec"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'Spz_evidenciaDataSet
+        'Button2
         '
-        Me.Spz_evidenciaDataSet.DataSetName = "spz_evidenciaDataSet"
-        Me.Spz_evidenciaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Button2.Location = New System.Drawing.Point(212, 52)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "Ulož"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'ClenoviaTableAdapter
         '
@@ -472,11 +473,21 @@ Partial Class evidencia_clenov
         Me.TableAdapterManager.titulTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = evidencia_spz.spz_evidenciaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'button_report_zoznam_clenov
+        '
+        Me.button_report_zoznam_clenov.Location = New System.Drawing.Point(346, 53)
+        Me.button_report_zoznam_clenov.Name = "button_report_zoznam_clenov"
+        Me.button_report_zoznam_clenov.Size = New System.Drawing.Size(185, 23)
+        Me.button_report_zoznam_clenov.TabIndex = 4
+        Me.button_report_zoznam_clenov.Text = "Vytvor tlačovú formu zoznamu členov"
+        Me.button_report_zoznam_clenov.UseVisualStyleBackColor = True
+        '
         'evidencia_clenov
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(728, 354)
+        Me.Controls.Add(Me.button_report_zoznam_clenov)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ClenoviaDataGridView)
@@ -487,9 +498,9 @@ Partial Class evidencia_clenov
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ClenoviaBindingNavigator.ResumeLayout(False)
         Me.ClenoviaBindingNavigator.PerformLayout()
-        CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Spz_evidenciaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -551,4 +562,5 @@ Partial Class evidencia_clenov
     Friend WithEvents DataGridViewTextBoxColumn34 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn35 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn36 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents button_report_zoznam_clenov As System.Windows.Forms.Button
 End Class
