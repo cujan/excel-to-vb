@@ -187,6 +187,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>titulDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="zdruzenie.Designer.vb">
+      <DependentUpon>zdruzenie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="zdruzenie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zdruzenieDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zdruzenieDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="zoznam_clenov_report.Designer.vb">
       <DependentUpon>zoznam_clenov_report.vb</DependentUpon>
     </Compile>
@@ -231,6 +242,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="titul.resx">
       <DependentUpon>titul.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zdruzenie.resx">
+      <DependentUpon>zdruzenie.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="zoznam_clenov_report.rdlc" />
@@ -315,6 +330,17 @@
     </None>
     <None Include="titulDataSet1.xss">
       <DependentUpon>titulDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="zdruzenieDataSet.xsc">
+      <DependentUpon>zdruzenieDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zdruzenieDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zdruzenieDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zdruzenieDataSet.xss">
+      <DependentUpon>zdruzenieDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

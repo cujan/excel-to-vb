@@ -8,6 +8,8 @@
     End Sub
 
     Private Sub novy_clen_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'TitulDataSet1.titul' table. You can move, or remove it, as needed.
+        Me.TitulTableAdapter.Fill(Me.TitulDataSet1.titul)
         'TODO: This line of code loads data into the 'Spz_evidenciaDataSet.clenovia' table. You can move, or remove it, as needed.
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
@@ -25,5 +27,7 @@
         Me.Validate()
         Me.ClenoviaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Spz_evidenciaDataSet)
+        MsgBox("Novy clen bol uspesne pridany", MsgBoxStyle.OkOnly)
+        Me.ClenoviaBindingSource.AddNew()
     End Sub
 End Class

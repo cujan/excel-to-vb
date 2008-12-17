@@ -78,7 +78,6 @@ Partial Class novy_clen
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ClenoviaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.TitulTextBox = New System.Windows.Forms.TextBox
         Me.MenoTextBox = New System.Windows.Forms.TextBox
         Me.PriezviskoTextBox = New System.Windows.Forms.TextBox
         Me.Rodne_cisloTextBox = New System.Windows.Forms.TextBox
@@ -117,6 +116,11 @@ Partial Class novy_clen
         Me.PoznamkyTextBox = New System.Windows.Forms.TextBox
         Me.Button1 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
+        Me.TitulComboBox = New System.Windows.Forms.ComboBox
+        Me.TitulDataSet1 = New evidencia_spz.titulDataSet1
+        Me.TitulDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TitulBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TitulTableAdapter = New evidencia_spz.titulDataSet1TableAdapters.titulTableAdapter
         TitulLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -158,6 +162,9 @@ Partial Class novy_clen
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClenoviaBindingNavigator.SuspendLayout()
+        CType(Me.TitulDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TitulLabel
@@ -529,7 +536,7 @@ Partial Class novy_clen
         Me.ClenoviaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ClenoviaBindingNavigator.Name = "ClenoviaBindingNavigator"
         Me.ClenoviaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(665, 25)
+        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(682, 25)
         Me.ClenoviaBindingNavigator.TabIndex = 0
         Me.ClenoviaBindingNavigator.Text = "BindingNavigator1"
         '
@@ -625,14 +632,6 @@ Partial Class novy_clen
         Me.ClenoviaBindingNavigatorSaveItem.Name = "ClenoviaBindingNavigatorSaveItem"
         Me.ClenoviaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ClenoviaBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'TitulTextBox
-        '
-        Me.TitulTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "titul", True))
-        Me.TitulTextBox.Location = New System.Drawing.Point(263, 63)
-        Me.TitulTextBox.Name = "TitulTextBox"
-        Me.TitulTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.TitulTextBox.TabIndex = 4
         '
         'MenoTextBox
         '
@@ -944,16 +943,47 @@ Partial Class novy_clen
         Me.Button2.Text = "Ulož"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'TitulComboBox
+        '
+        Me.TitulComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "titul", True))
+        Me.TitulComboBox.DataSource = Me.TitulBindingSource
+        Me.TitulComboBox.DisplayMember = "skratka"
+        Me.TitulComboBox.FormattingEnabled = True
+        Me.TitulComboBox.Location = New System.Drawing.Point(263, 63)
+        Me.TitulComboBox.Name = "TitulComboBox"
+        Me.TitulComboBox.Size = New System.Drawing.Size(200, 21)
+        Me.TitulComboBox.TabIndex = 79
+        Me.TitulComboBox.ValueMember = "skratka"
+        '
+        'TitulDataSet1
+        '
+        Me.TitulDataSet1.DataSetName = "titulDataSet1"
+        Me.TitulDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TitulDataSet1BindingSource
+        '
+        Me.TitulDataSet1BindingSource.DataSource = Me.TitulDataSet1
+        Me.TitulDataSet1BindingSource.Position = 0
+        '
+        'TitulBindingSource
+        '
+        Me.TitulBindingSource.DataMember = "titul"
+        Me.TitulBindingSource.DataSource = Me.TitulDataSet1BindingSource
+        '
+        'TitulTableAdapter
+        '
+        Me.TitulTableAdapter.ClearBeforeFill = True
+        '
         'novy_clen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(682, 778)
+        Me.ClientSize = New System.Drawing.Size(699, 812)
+        Me.Controls.Add(Me.TitulComboBox)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(TitulLabel)
-        Me.Controls.Add(Me.TitulTextBox)
         Me.Controls.Add(MenoLabel)
         Me.Controls.Add(Me.MenoTextBox)
         Me.Controls.Add(PriezviskoLabel)
@@ -1035,6 +1065,9 @@ Partial Class novy_clen
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ClenoviaBindingNavigator.ResumeLayout(False)
         Me.ClenoviaBindingNavigator.PerformLayout()
+        CType(Me.TitulDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1056,7 +1089,6 @@ Partial Class novy_clen
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ClenoviaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents TitulTextBox As System.Windows.Forms.TextBox
     Friend WithEvents MenoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents PriezviskoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Rodne_cisloTextBox As System.Windows.Forms.TextBox
@@ -1095,4 +1127,9 @@ Partial Class novy_clen
     Friend WithEvents PoznamkyTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents TitulComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents TitulDataSet1BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents TitulDataSet1 As evidencia_spz.titulDataSet1
+    Friend WithEvents TitulBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents TitulTableAdapter As evidencia_spz.titulDataSet1TableAdapters.titulTableAdapter
 End Class
