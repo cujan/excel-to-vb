@@ -1094,11 +1094,14 @@ Partial Class novy_clen
         'Clen_pzComboBox
         '
         Me.Clen_pzComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "clen_pz", True))
+        Me.Clen_pzComboBox.DataSource = Me.ZdruzenieBindingSource1
+        Me.Clen_pzComboBox.DisplayMember = "nazov"
         Me.Clen_pzComboBox.FormattingEnabled = True
         Me.Clen_pzComboBox.Location = New System.Drawing.Point(469, 576)
         Me.Clen_pzComboBox.Name = "Clen_pzComboBox"
         Me.Clen_pzComboBox.Size = New System.Drawing.Size(200, 21)
         Me.Clen_pzComboBox.TabIndex = 84
+        Me.Clen_pzComboBox.ValueMember = "nazov"
         '
         'ZdruzenieDataSetBindingSource
         '
