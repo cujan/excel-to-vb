@@ -141,6 +141,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="narodnostDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>narodnostDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="novy_clen.Designer.vb">
       <DependentUpon>novy_clen.vb</DependentUpon>
     </Compile>
@@ -275,6 +280,17 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="narodnostDataSet.xsc">
+      <DependentUpon>narodnostDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="narodnostDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>narodnostDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="narodnostDataSet.xss">
+      <DependentUpon>narodnostDataSet.xsd</DependentUpon>
     </None>
     <None Include="pohlad_priezviskoDataSet1.xsc">
       <DependentUpon>pohlad_priezviskoDataSet1.xsd</DependentUpon>
