@@ -117,6 +117,7 @@ Partial Class karta_clena
         Me.PoznamkyTextBox = New System.Windows.Forms.TextBox
         Me.Button1 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
+        Me.tlacit = New System.Windows.Forms.Button
         TitulLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -514,6 +515,7 @@ Partial Class karta_clena
         Me.TableAdapterManager.statna_prislusnostTableAdapter = Nothing
         Me.TableAdapterManager.titulTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = evidencia_spz.spz_evidenciaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.zdruzenieTableAdapter = Nothing
         '
         'ClenoviaBindingNavigator
         '
@@ -948,7 +950,7 @@ Partial Class karta_clena
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(520, 71)
+        Me.Button1.Location = New System.Drawing.Point(520, 130)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 77
@@ -957,12 +959,21 @@ Partial Class karta_clena
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(520, 112)
+        Me.Button2.Location = New System.Drawing.Point(520, 72)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 78
         Me.Button2.Text = "Ulož"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'tlacit
+        '
+        Me.tlacit.Location = New System.Drawing.Point(520, 101)
+        Me.tlacit.Name = "tlacit"
+        Me.tlacit.Size = New System.Drawing.Size(75, 23)
+        Me.tlacit.TabIndex = 79
+        Me.tlacit.Text = "Tlačiť"
+        Me.tlacit.UseVisualStyleBackColor = True
         '
         'karta_clena
         '
@@ -970,6 +981,7 @@ Partial Class karta_clena
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(722, 778)
+        Me.Controls.Add(Me.tlacit)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(TitulLabel)
@@ -1115,4 +1127,5 @@ Partial Class karta_clena
     Friend WithEvents PoznamkyTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents tlacit As System.Windows.Forms.Button
 End Class

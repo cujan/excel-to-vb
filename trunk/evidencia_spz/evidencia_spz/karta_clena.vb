@@ -25,4 +25,10 @@
         Me.ClenoviaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Spz_evidenciaDataSet)
     End Sub
+
+    Private Sub tlacit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tlacit.Click
+        formular_clen_1.Show()
+        formular_clen_1.BringToFront()
+
+    End Sub
 End Class

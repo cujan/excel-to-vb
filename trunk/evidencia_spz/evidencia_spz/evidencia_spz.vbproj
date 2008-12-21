@@ -58,6 +58,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Printing.PrintForm, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
@@ -106,6 +107,12 @@
       <DependentUpon>evidencia_clenov.vb</DependentUpon>
     </Compile>
     <Compile Include="evidencia_clenov.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formular_clen_1.Designer.vb">
+      <DependentUpon>formular_clen_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formular_clen_1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="hlavna_aplikacia.Designer.vb">
@@ -217,6 +224,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="evidencia_clenov.resx">
       <DependentUpon>evidencia_clenov.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formular_clen_1.resx">
+      <DependentUpon>formular_clen_1.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="hlavna_aplikacia.resx">
@@ -387,6 +398,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\formular_1.jpg" />
     <Content Include="spz_evidencia.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
