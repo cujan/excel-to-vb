@@ -36,12 +36,7 @@
 
     End Sub
 
-    Private Sub ToolStripButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.ToolStrip1.Hide()
-        Me.PrintForm1.PrintAction = Printing.PrintAction.PrintToPrinter
-        Me.PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption.ClientAreaOnly)
-        Me.ToolStrip1.Show()
-    End Sub
+    
 
     Private Sub ToolStripButton3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.ToolStrip1.Hide()
