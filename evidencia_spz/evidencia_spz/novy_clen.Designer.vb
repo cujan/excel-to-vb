@@ -88,30 +88,15 @@ Partial Class novy_clen
         Me.BydliskoTextBox = New System.Windows.Forms.TextBox
         Me.PscTextBox = New System.Windows.Forms.TextBox
         Me.Cislo_opTextBox = New System.Windows.Forms.TextBox
-        Me.Datum_vydania_opDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Cislo_plTextBox = New System.Windows.Forms.TextBox
-        Me.Datum_vydania_plDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Cislo_zpTextBox = New System.Windows.Forms.TextBox
-        Me.Datum_vydania_zpDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Cislo_clenskeho_preukazu_spzTextBox = New System.Windows.Forms.TextBox
-        Me.Clen_spz_odDateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.Clenske_doDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Cislo_dokladu_clenskeTextBox = New System.Windows.Forms.TextBox
-        Me.Skuska_z_polovnictvaDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Miesto_skusky_z__polovnictvaTextBox = New System.Windows.Forms.TextBox
-        Me.Skuska_pre_polovnych_hospodarovDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox = New System.Windows.Forms.TextBox
-        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Miesto_vyzsia_skuska_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
         Me.Brokova_zbranCheckBox = New System.Windows.Forms.CheckBox
-        Me.Kontrolne_strelby_brokDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Gulova_zbranCheckBox = New System.Windows.Forms.CheckBox
-        Me.Kontrolne_strelby_gulova_zbranDateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.Vyznamenanie_IIIDateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.Vyznamenanie_IIDateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.Vyznamenanie_IDateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.Vyznamenanie_ZKDateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.Vyznamenanie_ineDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Udelene_trestyTextBox = New System.Windows.Forms.TextBox
         Me.PoznamkyTextBox = New System.Windows.Forms.TextBox
         Me.Button1 = New System.Windows.Forms.Button
@@ -121,7 +106,6 @@ Partial Class novy_clen
         Me.TitulDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TitulDataSet1 = New evidencia_spz.titulDataSet1
         Me.TitulTableAdapter = New evidencia_spz.titulDataSet1TableAdapters.titulTableAdapter
-        Me.Datum_narodeniaDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Statna_prislusnostComboBox = New System.Windows.Forms.ComboBox
         Me.StatnaprislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StatnaprislusnostDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -136,8 +120,33 @@ Partial Class novy_clen
         Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
         Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
         Me.Clen_pzComboBox = New System.Windows.Forms.ComboBox
-        Me.ZdruzenieDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ZdruzenieBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Datum_narodeniaTextBox = New System.Windows.Forms.TextBox
+        Me.Datum_vydania_opTextBox = New System.Windows.Forms.TextBox
+        Me.Datum_vydania_plTextBox = New System.Windows.Forms.TextBox
+        Me.Datum_vydania_zpTextBox = New System.Windows.Forms.TextBox
+        Me.Clen_spz_odTextBox = New System.Windows.Forms.TextBox
+        Me.Clenske_doTextBox = New System.Windows.Forms.TextBox
+        Me.Skuska_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
+        Me.Kontrolne_strelby_brokTextBox = New System.Windows.Forms.TextBox
+        Me.Kontrolne_strelby_gulova_zbranTextBox = New System.Windows.Forms.TextBox
+        Me.Skuska_pre_polovnych_hospodarovTextBox = New System.Windows.Forms.TextBox
+        Me.Vyzsia_skuska_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
+        Me.Vyznamenanie_IIITextBox = New System.Windows.Forms.TextBox
+        Me.Vyznamenanie_IITextBox = New System.Windows.Forms.TextBox
+        Me.Vyznamenanie_ITextBox = New System.Windows.Forms.TextBox
+        Me.Vyznamenanie_ZKTextBox = New System.Windows.Forms.TextBox
+        Me.Vyznamenanie_ineTextBox = New System.Windows.Forms.TextBox
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.Label9 = New System.Windows.Forms.Label
         TitulLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -192,8 +201,8 @@ Partial Class novy_clen
         CType(Me.NarodnostDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzenieBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TitulLabel
@@ -746,14 +755,6 @@ Partial Class novy_clen
         Me.Cislo_opTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Cislo_opTextBox.TabIndex = 22
         '
-        'Datum_vydania_opDateTimePicker
-        '
-        Me.Datum_vydania_opDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "datum_vydania_op", True))
-        Me.Datum_vydania_opDateTimePicker.Location = New System.Drawing.Point(421, 349)
-        Me.Datum_vydania_opDateTimePicker.Name = "Datum_vydania_opDateTimePicker"
-        Me.Datum_vydania_opDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Datum_vydania_opDateTimePicker.TabIndex = 24
-        '
         'Cislo_plTextBox
         '
         Me.Cislo_plTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "cislo_pl", True))
@@ -761,14 +762,6 @@ Partial Class novy_clen
         Me.Cislo_plTextBox.Name = "Cislo_plTextBox"
         Me.Cislo_plTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Cislo_plTextBox.TabIndex = 26
-        '
-        'Datum_vydania_plDateTimePicker
-        '
-        Me.Datum_vydania_plDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "datum_vydania_pl", True))
-        Me.Datum_vydania_plDateTimePicker.Location = New System.Drawing.Point(421, 398)
-        Me.Datum_vydania_plDateTimePicker.Name = "Datum_vydania_plDateTimePicker"
-        Me.Datum_vydania_plDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Datum_vydania_plDateTimePicker.TabIndex = 28
         '
         'Cislo_zpTextBox
         '
@@ -778,14 +771,6 @@ Partial Class novy_clen
         Me.Cislo_zpTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Cislo_zpTextBox.TabIndex = 30
         '
-        'Datum_vydania_zpDateTimePicker
-        '
-        Me.Datum_vydania_zpDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "datum_vydania_zp", True))
-        Me.Datum_vydania_zpDateTimePicker.Location = New System.Drawing.Point(421, 446)
-        Me.Datum_vydania_zpDateTimePicker.Name = "Datum_vydania_zpDateTimePicker"
-        Me.Datum_vydania_zpDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Datum_vydania_zpDateTimePicker.TabIndex = 32
-        '
         'Cislo_clenskeho_preukazu_spzTextBox
         '
         Me.Cislo_clenskeho_preukazu_spzTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "cislo_clenskeho_preukazu_spz", True))
@@ -793,22 +778,6 @@ Partial Class novy_clen
         Me.Cislo_clenskeho_preukazu_spzTextBox.Name = "Cislo_clenskeho_preukazu_spzTextBox"
         Me.Cislo_clenskeho_preukazu_spzTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Cislo_clenskeho_preukazu_spzTextBox.TabIndex = 34
-        '
-        'Clen_spz_odDateTimePicker
-        '
-        Me.Clen_spz_odDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "clen_spz_od", True))
-        Me.Clen_spz_odDateTimePicker.Location = New System.Drawing.Point(176, 535)
-        Me.Clen_spz_odDateTimePicker.Name = "Clen_spz_odDateTimePicker"
-        Me.Clen_spz_odDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Clen_spz_odDateTimePicker.TabIndex = 36
-        '
-        'Clenske_doDateTimePicker
-        '
-        Me.Clenske_doDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "clenske_do", True))
-        Me.Clenske_doDateTimePicker.Location = New System.Drawing.Point(469, 538)
-        Me.Clenske_doDateTimePicker.Name = "Clenske_doDateTimePicker"
-        Me.Clenske_doDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Clenske_doDateTimePicker.TabIndex = 38
         '
         'Cislo_dokladu_clenskeTextBox
         '
@@ -818,14 +787,6 @@ Partial Class novy_clen
         Me.Cislo_dokladu_clenskeTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Cislo_dokladu_clenskeTextBox.TabIndex = 40
         '
-        'Skuska_z_polovnictvaDateTimePicker
-        '
-        Me.Skuska_z_polovnictvaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "skuska_z_polovnictva", True))
-        Me.Skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(175, 631)
-        Me.Skuska_z_polovnictvaDateTimePicker.Name = "Skuska_z_polovnictvaDateTimePicker"
-        Me.Skuska_z_polovnictvaDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Skuska_z_polovnictvaDateTimePicker.TabIndex = 44
-        '
         'Miesto_skusky_z__polovnictvaTextBox
         '
         Me.Miesto_skusky_z__polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "miesto_skusky_z _polovnictva", True))
@@ -834,14 +795,6 @@ Partial Class novy_clen
         Me.Miesto_skusky_z__polovnictvaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Miesto_skusky_z__polovnictvaTextBox.TabIndex = 46
         '
-        'Skuska_pre_polovnych_hospodarovDateTimePicker
-        '
-        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "skuska_pre_polovnych_hospodarov", True))
-        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Location = New System.Drawing.Point(751, 719)
-        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Name = "Skuska_pre_polovnych_hospodarovDateTimePicker"
-        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.TabIndex = 48
-        '
         'Miesto_skusky_pre_polovnych_hospodarovTextBox
         '
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "miesto_skusky_pre_polovnych_hospodarov", True))
@@ -849,14 +802,6 @@ Partial Class novy_clen
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.Name = "Miesto_skusky_pre_polovnych_hospodarovTextBox"
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.TabIndex = 50
-        '
-        'Vyzsia_skuska_z_polovnictvaDateTimePicker
-        '
-        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "vyzsia_skuska_z_polovnictva", True))
-        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(751, 771)
-        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Name = "Vyzsia_skuska_z_polovnictvaDateTimePicker"
-        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.TabIndex = 52
         '
         'Miesto_vyzsia_skuska_z_polovnictvaTextBox
         '
@@ -875,14 +820,6 @@ Partial Class novy_clen
         Me.Brokova_zbranCheckBox.TabIndex = 56
         Me.Brokova_zbranCheckBox.UseVisualStyleBackColor = True
         '
-        'Kontrolne_strelby_brokDateTimePicker
-        '
-        Me.Kontrolne_strelby_brokDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "kontrolne_strelby_brok", True))
-        Me.Kontrolne_strelby_brokDateTimePicker.Location = New System.Drawing.Point(269, 722)
-        Me.Kontrolne_strelby_brokDateTimePicker.Name = "Kontrolne_strelby_brokDateTimePicker"
-        Me.Kontrolne_strelby_brokDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Kontrolne_strelby_brokDateTimePicker.TabIndex = 58
-        '
         'Gulova_zbranCheckBox
         '
         Me.Gulova_zbranCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.ClenoviaBindingSource, "gulova_zbran", True))
@@ -891,54 +828,6 @@ Partial Class novy_clen
         Me.Gulova_zbranCheckBox.Size = New System.Drawing.Size(200, 24)
         Me.Gulova_zbranCheckBox.TabIndex = 60
         Me.Gulova_zbranCheckBox.UseVisualStyleBackColor = True
-        '
-        'Kontrolne_strelby_gulova_zbranDateTimePicker
-        '
-        Me.Kontrolne_strelby_gulova_zbranDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "kontrolne_strelby_gulova_zbran", True))
-        Me.Kontrolne_strelby_gulova_zbranDateTimePicker.Location = New System.Drawing.Point(269, 778)
-        Me.Kontrolne_strelby_gulova_zbranDateTimePicker.Name = "Kontrolne_strelby_gulova_zbranDateTimePicker"
-        Me.Kontrolne_strelby_gulova_zbranDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Kontrolne_strelby_gulova_zbranDateTimePicker.TabIndex = 62
-        '
-        'Vyznamenanie_IIIDateTimePicker
-        '
-        Me.Vyznamenanie_IIIDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "vyznamenanie_III", True))
-        Me.Vyznamenanie_IIIDateTimePicker.Location = New System.Drawing.Point(263, 851)
-        Me.Vyznamenanie_IIIDateTimePicker.Name = "Vyznamenanie_IIIDateTimePicker"
-        Me.Vyznamenanie_IIIDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Vyznamenanie_IIIDateTimePicker.TabIndex = 64
-        '
-        'Vyznamenanie_IIDateTimePicker
-        '
-        Me.Vyznamenanie_IIDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "vyznamenanie_II", True))
-        Me.Vyznamenanie_IIDateTimePicker.Location = New System.Drawing.Point(263, 877)
-        Me.Vyznamenanie_IIDateTimePicker.Name = "Vyznamenanie_IIDateTimePicker"
-        Me.Vyznamenanie_IIDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Vyznamenanie_IIDateTimePicker.TabIndex = 66
-        '
-        'Vyznamenanie_IDateTimePicker
-        '
-        Me.Vyznamenanie_IDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "vyznamenanie_I", True))
-        Me.Vyznamenanie_IDateTimePicker.Location = New System.Drawing.Point(263, 903)
-        Me.Vyznamenanie_IDateTimePicker.Name = "Vyznamenanie_IDateTimePicker"
-        Me.Vyznamenanie_IDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Vyznamenanie_IDateTimePicker.TabIndex = 68
-        '
-        'Vyznamenanie_ZKDateTimePicker
-        '
-        Me.Vyznamenanie_ZKDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "vyznamenanie_ZK", True))
-        Me.Vyznamenanie_ZKDateTimePicker.Location = New System.Drawing.Point(263, 929)
-        Me.Vyznamenanie_ZKDateTimePicker.Name = "Vyznamenanie_ZKDateTimePicker"
-        Me.Vyznamenanie_ZKDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Vyznamenanie_ZKDateTimePicker.TabIndex = 70
-        '
-        'Vyznamenanie_ineDateTimePicker
-        '
-        Me.Vyznamenanie_ineDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "vyznamenanie_ine", True))
-        Me.Vyznamenanie_ineDateTimePicker.Location = New System.Drawing.Point(263, 955)
-        Me.Vyznamenanie_ineDateTimePicker.Name = "Vyznamenanie_ineDateTimePicker"
-        Me.Vyznamenanie_ineDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Vyznamenanie_ineDateTimePicker.TabIndex = 72
         '
         'Udelene_trestyTextBox
         '
@@ -1006,14 +895,6 @@ Partial Class novy_clen
         'TitulTableAdapter
         '
         Me.TitulTableAdapter.ClearBeforeFill = True
-        '
-        'Datum_narodeniaDateTimePicker
-        '
-        Me.Datum_narodeniaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ClenoviaBindingSource, "datum_narodenia", True))
-        Me.Datum_narodeniaDateTimePicker.Location = New System.Drawing.Point(406, 115)
-        Me.Datum_narodeniaDateTimePicker.Name = "Datum_narodeniaDateTimePicker"
-        Me.Datum_narodeniaDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Datum_narodeniaDateTimePicker.TabIndex = 80
         '
         'Statna_prislusnostComboBox
         '
@@ -1103,28 +984,262 @@ Partial Class novy_clen
         Me.Clen_pzComboBox.TabIndex = 84
         Me.Clen_pzComboBox.ValueMember = "nazov"
         '
+        'ZdruzenieBindingSource1
+        '
+        Me.ZdruzenieBindingSource1.DataMember = "zdruzenie"
+        Me.ZdruzenieBindingSource1.DataSource = Me.ZdruzenieDataSetBindingSource
+        '
         'ZdruzenieDataSetBindingSource
         '
         Me.ZdruzenieDataSetBindingSource.DataSource = Me.ZdruzenieDataSet
         Me.ZdruzenieDataSetBindingSource.Position = 0
         '
-        'ZdruzenieBindingSource1
+        'Datum_narodeniaTextBox
         '
-        Me.ZdruzenieBindingSource1.DataMember = "zdruzenie"
-        Me.ZdruzenieBindingSource1.DataSource = Me.ZdruzenieDataSetBindingSource
+        Me.Datum_narodeniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "datum_narodenia", True))
+        Me.Datum_narodeniaTextBox.Location = New System.Drawing.Point(406, 115)
+        Me.Datum_narodeniaTextBox.Name = "Datum_narodeniaTextBox"
+        Me.Datum_narodeniaTextBox.Size = New System.Drawing.Size(168, 20)
+        Me.Datum_narodeniaTextBox.TabIndex = 85
+        Me.Datum_narodeniaTextBox.Tag = ""
+        '
+        'Datum_vydania_opTextBox
+        '
+        Me.Datum_vydania_opTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "datum_vydania_op", True))
+        Me.Datum_vydania_opTextBox.Location = New System.Drawing.Point(421, 346)
+        Me.Datum_vydania_opTextBox.Name = "Datum_vydania_opTextBox"
+        Me.Datum_vydania_opTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Datum_vydania_opTextBox.TabIndex = 86
+        '
+        'Datum_vydania_plTextBox
+        '
+        Me.Datum_vydania_plTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "datum_vydania_pl", True))
+        Me.Datum_vydania_plTextBox.Location = New System.Drawing.Point(421, 398)
+        Me.Datum_vydania_plTextBox.Name = "Datum_vydania_plTextBox"
+        Me.Datum_vydania_plTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Datum_vydania_plTextBox.TabIndex = 87
+        '
+        'Datum_vydania_zpTextBox
+        '
+        Me.Datum_vydania_zpTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "datum_vydania_zp", True))
+        Me.Datum_vydania_zpTextBox.Location = New System.Drawing.Point(420, 446)
+        Me.Datum_vydania_zpTextBox.Name = "Datum_vydania_zpTextBox"
+        Me.Datum_vydania_zpTextBox.Size = New System.Drawing.Size(201, 20)
+        Me.Datum_vydania_zpTextBox.TabIndex = 88
+        '
+        'Clen_spz_odTextBox
+        '
+        Me.Clen_spz_odTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "clen_spz_od", True))
+        Me.Clen_spz_odTextBox.Location = New System.Drawing.Point(176, 539)
+        Me.Clen_spz_odTextBox.Name = "Clen_spz_odTextBox"
+        Me.Clen_spz_odTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Clen_spz_odTextBox.TabIndex = 89
+        '
+        'Clenske_doTextBox
+        '
+        Me.Clenske_doTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "clenske_do", True))
+        Me.Clenske_doTextBox.Location = New System.Drawing.Point(470, 539)
+        Me.Clenske_doTextBox.Name = "Clenske_doTextBox"
+        Me.Clenske_doTextBox.Size = New System.Drawing.Size(151, 20)
+        Me.Clenske_doTextBox.TabIndex = 90
+        '
+        'Skuska_z_polovnictvaTextBox
+        '
+        Me.Skuska_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "skuska_z_polovnictva", True))
+        Me.Skuska_z_polovnictvaTextBox.Location = New System.Drawing.Point(176, 635)
+        Me.Skuska_z_polovnictvaTextBox.Name = "Skuska_z_polovnictvaTextBox"
+        Me.Skuska_z_polovnictvaTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Skuska_z_polovnictvaTextBox.TabIndex = 91
+        '
+        'Kontrolne_strelby_brokTextBox
+        '
+        Me.Kontrolne_strelby_brokTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "kontrolne_strelby_brok", True))
+        Me.Kontrolne_strelby_brokTextBox.Location = New System.Drawing.Point(269, 726)
+        Me.Kontrolne_strelby_brokTextBox.Name = "Kontrolne_strelby_brokTextBox"
+        Me.Kontrolne_strelby_brokTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Kontrolne_strelby_brokTextBox.TabIndex = 92
+        '
+        'Kontrolne_strelby_gulova_zbranTextBox
+        '
+        Me.Kontrolne_strelby_gulova_zbranTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "kontrolne_strelby_gulova_zbran", True))
+        Me.Kontrolne_strelby_gulova_zbranTextBox.Location = New System.Drawing.Point(269, 782)
+        Me.Kontrolne_strelby_gulova_zbranTextBox.Name = "Kontrolne_strelby_gulova_zbranTextBox"
+        Me.Kontrolne_strelby_gulova_zbranTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Kontrolne_strelby_gulova_zbranTextBox.TabIndex = 93
+        '
+        'Skuska_pre_polovnych_hospodarovTextBox
+        '
+        Me.Skuska_pre_polovnych_hospodarovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "skuska_pre_polovnych_hospodarov", True))
+        Me.Skuska_pre_polovnych_hospodarovTextBox.Location = New System.Drawing.Point(751, 720)
+        Me.Skuska_pre_polovnych_hospodarovTextBox.Name = "Skuska_pre_polovnych_hospodarovTextBox"
+        Me.Skuska_pre_polovnych_hospodarovTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Skuska_pre_polovnych_hospodarovTextBox.TabIndex = 94
+        '
+        'Vyzsia_skuska_z_polovnictvaTextBox
+        '
+        Me.Vyzsia_skuska_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "vyzsia_skuska_z_polovnictva", True))
+        Me.Vyzsia_skuska_z_polovnictvaTextBox.Location = New System.Drawing.Point(751, 771)
+        Me.Vyzsia_skuska_z_polovnictvaTextBox.Name = "Vyzsia_skuska_z_polovnictvaTextBox"
+        Me.Vyzsia_skuska_z_polovnictvaTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Vyzsia_skuska_z_polovnictvaTextBox.TabIndex = 95
+        '
+        'Vyznamenanie_IIITextBox
+        '
+        Me.Vyznamenanie_IIITextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "vyznamenanie_III", True))
+        Me.Vyznamenanie_IIITextBox.Location = New System.Drawing.Point(263, 855)
+        Me.Vyznamenanie_IIITextBox.Name = "Vyznamenanie_IIITextBox"
+        Me.Vyznamenanie_IIITextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Vyznamenanie_IIITextBox.TabIndex = 96
+        '
+        'Vyznamenanie_IITextBox
+        '
+        Me.Vyznamenanie_IITextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "vyznamenanie_II", True))
+        Me.Vyznamenanie_IITextBox.Location = New System.Drawing.Point(263, 878)
+        Me.Vyznamenanie_IITextBox.Name = "Vyznamenanie_IITextBox"
+        Me.Vyznamenanie_IITextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Vyznamenanie_IITextBox.TabIndex = 97
+        '
+        'Vyznamenanie_ITextBox
+        '
+        Me.Vyznamenanie_ITextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "vyznamenanie_I", True))
+        Me.Vyznamenanie_ITextBox.Location = New System.Drawing.Point(263, 903)
+        Me.Vyznamenanie_ITextBox.Name = "Vyznamenanie_ITextBox"
+        Me.Vyznamenanie_ITextBox.Size = New System.Drawing.Size(201, 20)
+        Me.Vyznamenanie_ITextBox.TabIndex = 98
+        '
+        'Vyznamenanie_ZKTextBox
+        '
+        Me.Vyznamenanie_ZKTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "vyznamenanie_ZK", True))
+        Me.Vyznamenanie_ZKTextBox.Location = New System.Drawing.Point(263, 930)
+        Me.Vyznamenanie_ZKTextBox.Name = "Vyznamenanie_ZKTextBox"
+        Me.Vyznamenanie_ZKTextBox.Size = New System.Drawing.Size(201, 20)
+        Me.Vyznamenanie_ZKTextBox.TabIndex = 99
+        '
+        'Vyznamenanie_ineTextBox
+        '
+        Me.Vyznamenanie_ineTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "vyznamenanie_ine", True))
+        Me.Vyznamenanie_ineTextBox.Location = New System.Drawing.Point(263, 952)
+        Me.Vyznamenanie_ineTextBox.Name = "Vyznamenanie_ineTextBox"
+        Me.Vyznamenanie_ineTextBox.Size = New System.Drawing.Size(201, 20)
+        Me.Vyznamenanie_ineTextBox.TabIndex = 100
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(581, 121)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(79, 13)
+        Me.Label1.TabIndex = 101
+        Me.Label1.Text = "DD.MM.RRRR"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(638, 353)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(79, 13)
+        Me.Label2.TabIndex = 102
+        Me.Label2.Text = "DD.MM.RRRR"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(638, 405)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(79, 13)
+        Me.Label3.TabIndex = 103
+        Me.Label3.Text = "DD.MM.RRRR"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(638, 453)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(79, 13)
+        Me.Label4.TabIndex = 104
+        Me.Label4.Text = "DD.MM.RRRR"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(627, 546)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(79, 13)
+        Me.Label5.TabIndex = 105
+        Me.Label5.Text = "DD.MM.RRRR"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(392, 710)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(79, 13)
+        Me.Label6.TabIndex = 106
+        Me.Label6.Text = "DD.MM.RRRR"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(390, 766)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(79, 13)
+        Me.Label7.TabIndex = 107
+        Me.Label7.Text = "DD.MM.RRRR"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(872, 697)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(79, 13)
+        Me.Label8.TabIndex = 108
+        Me.Label8.Text = "DD.MM.RRRR"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(384, 839)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(79, 13)
+        Me.Label9.TabIndex = 109
+        Me.Label9.Text = "DD.MM.RRRR"
         '
         'novy_clen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1039, 812)
+        Me.ClientSize = New System.Drawing.Size(1292, 812)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Vyznamenanie_ineTextBox)
+        Me.Controls.Add(Me.Vyznamenanie_ZKTextBox)
+        Me.Controls.Add(Me.Vyznamenanie_ITextBox)
+        Me.Controls.Add(Me.Vyznamenanie_IITextBox)
+        Me.Controls.Add(Me.Vyznamenanie_IIITextBox)
+        Me.Controls.Add(Me.Vyzsia_skuska_z_polovnictvaTextBox)
+        Me.Controls.Add(Me.Skuska_pre_polovnych_hospodarovTextBox)
+        Me.Controls.Add(Me.Kontrolne_strelby_gulova_zbranTextBox)
+        Me.Controls.Add(Me.Kontrolne_strelby_brokTextBox)
+        Me.Controls.Add(Me.Skuska_z_polovnictvaTextBox)
+        Me.Controls.Add(Me.Clenske_doTextBox)
+        Me.Controls.Add(Me.Clen_spz_odTextBox)
+        Me.Controls.Add(Me.Datum_vydania_zpTextBox)
+        Me.Controls.Add(Me.Datum_vydania_plTextBox)
+        Me.Controls.Add(Me.Datum_vydania_opTextBox)
+        Me.Controls.Add(Me.Datum_narodeniaTextBox)
         Me.Controls.Add(Me.Clen_pzComboBox)
         Me.Controls.Add(Me.NarodnostComboBox)
         Me.Controls.Add(Me.Statna_prislusnostComboBox)
         Me.Controls.Add(NarodnostLabel)
         Me.Controls.Add(Datum_narodeniaLabel)
-        Me.Controls.Add(Me.Datum_narodeniaDateTimePicker)
         Me.Controls.Add(Me.TitulComboBox)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -1147,54 +1262,39 @@ Partial Class novy_clen
         Me.Controls.Add(Cislo_opLabel)
         Me.Controls.Add(Me.Cislo_opTextBox)
         Me.Controls.Add(Datum_vydania_opLabel)
-        Me.Controls.Add(Me.Datum_vydania_opDateTimePicker)
         Me.Controls.Add(Cislo_plLabel)
         Me.Controls.Add(Me.Cislo_plTextBox)
         Me.Controls.Add(Datum_vydania_plLabel)
-        Me.Controls.Add(Me.Datum_vydania_plDateTimePicker)
         Me.Controls.Add(Cislo_zpLabel)
         Me.Controls.Add(Me.Cislo_zpTextBox)
         Me.Controls.Add(Datum_vydania_zpLabel)
-        Me.Controls.Add(Me.Datum_vydania_zpDateTimePicker)
         Me.Controls.Add(Cislo_clenskeho_preukazu_spzLabel)
         Me.Controls.Add(Me.Cislo_clenskeho_preukazu_spzTextBox)
         Me.Controls.Add(Clen_spz_odLabel)
-        Me.Controls.Add(Me.Clen_spz_odDateTimePicker)
         Me.Controls.Add(Clenske_doLabel)
-        Me.Controls.Add(Me.Clenske_doDateTimePicker)
         Me.Controls.Add(Cislo_dokladu_clenskeLabel)
         Me.Controls.Add(Me.Cislo_dokladu_clenskeTextBox)
         Me.Controls.Add(Clen_pzLabel)
         Me.Controls.Add(Skuska_z_polovnictvaLabel)
-        Me.Controls.Add(Me.Skuska_z_polovnictvaDateTimePicker)
         Me.Controls.Add(Miesto_skusky_z__polovnictvaLabel)
         Me.Controls.Add(Me.Miesto_skusky_z__polovnictvaTextBox)
         Me.Controls.Add(Skuska_pre_polovnych_hospodarovLabel)
-        Me.Controls.Add(Me.Skuska_pre_polovnych_hospodarovDateTimePicker)
         Me.Controls.Add(Miesto_skusky_pre_polovnych_hospodarovLabel)
         Me.Controls.Add(Me.Miesto_skusky_pre_polovnych_hospodarovTextBox)
         Me.Controls.Add(Vyzsia_skuska_z_polovnictvaLabel)
-        Me.Controls.Add(Me.Vyzsia_skuska_z_polovnictvaDateTimePicker)
         Me.Controls.Add(Miesto_vyzsia_skuska_z_polovnictvaLabel)
         Me.Controls.Add(Me.Miesto_vyzsia_skuska_z_polovnictvaTextBox)
         Me.Controls.Add(Brokova_zbranLabel)
         Me.Controls.Add(Me.Brokova_zbranCheckBox)
         Me.Controls.Add(Kontrolne_strelby_brokLabel)
-        Me.Controls.Add(Me.Kontrolne_strelby_brokDateTimePicker)
         Me.Controls.Add(Gulova_zbranLabel)
         Me.Controls.Add(Me.Gulova_zbranCheckBox)
         Me.Controls.Add(Kontrolne_strelby_gulova_zbranLabel)
-        Me.Controls.Add(Me.Kontrolne_strelby_gulova_zbranDateTimePicker)
         Me.Controls.Add(Vyznamenanie_IIILabel)
-        Me.Controls.Add(Me.Vyznamenanie_IIIDateTimePicker)
         Me.Controls.Add(Vyznamenanie_IILabel)
-        Me.Controls.Add(Me.Vyznamenanie_IIDateTimePicker)
         Me.Controls.Add(Vyznamenanie_ILabel)
-        Me.Controls.Add(Me.Vyznamenanie_IDateTimePicker)
         Me.Controls.Add(Vyznamenanie_ZKLabel)
-        Me.Controls.Add(Me.Vyznamenanie_ZKDateTimePicker)
         Me.Controls.Add(Vyznamenanie_ineLabel)
-        Me.Controls.Add(Me.Vyznamenanie_ineDateTimePicker)
         Me.Controls.Add(Udelene_trestyLabel)
         Me.Controls.Add(Me.Udelene_trestyTextBox)
         Me.Controls.Add(PoznamkyLabel)
@@ -1219,8 +1319,8 @@ Partial Class novy_clen
         CType(Me.NarodnostDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1250,30 +1350,15 @@ Partial Class novy_clen
     Friend WithEvents BydliskoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents PscTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Cislo_opTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Datum_vydania_opDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Cislo_plTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Datum_vydania_plDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Cislo_zpTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Datum_vydania_zpDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Cislo_clenskeho_preukazu_spzTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Clen_spz_odDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Clenske_doDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Cislo_dokladu_clenskeTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Skuska_z_polovnictvaDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Miesto_skusky_z__polovnictvaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Skuska_pre_polovnych_hospodarovDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Miesto_skusky_pre_polovnych_hospodarovTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Vyzsia_skuska_z_polovnictvaDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Miesto_vyzsia_skuska_z_polovnictvaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Brokova_zbranCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents Kontrolne_strelby_brokDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Gulova_zbranCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents Kontrolne_strelby_gulova_zbranDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Vyznamenanie_IIIDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Vyznamenanie_IIDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Vyznamenanie_IDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Vyznamenanie_ZKDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Vyznamenanie_ineDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Udelene_trestyTextBox As System.Windows.Forms.TextBox
     Friend WithEvents PoznamkyTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
@@ -1283,7 +1368,6 @@ Partial Class novy_clen
     Friend WithEvents TitulDataSet1 As evidencia_spz.titulDataSet1
     Friend WithEvents TitulBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents TitulTableAdapter As evidencia_spz.titulDataSet1TableAdapters.titulTableAdapter
-    Friend WithEvents Datum_narodeniaDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Statna_prislusnostComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents StatnaprislusnostDataSet1BindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Statna_prislusnostDataSet1 As evidencia_spz.statna_prislusnostDataSet1
@@ -1300,4 +1384,29 @@ Partial Class novy_clen
     Friend WithEvents Clen_pzComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents ZdruzenieBindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents ZdruzenieDataSetBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Datum_narodeniaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Datum_vydania_opTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Datum_vydania_plTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Datum_vydania_zpTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Clen_spz_odTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Clenske_doTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Skuska_z_polovnictvaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Kontrolne_strelby_brokTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Kontrolne_strelby_gulova_zbranTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Skuska_pre_polovnych_hospodarovTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Vyzsia_skuska_z_polovnictvaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Vyznamenanie_IIITextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Vyznamenanie_IITextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Vyznamenanie_ITextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Vyznamenanie_ZKTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Vyznamenanie_ineTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class
