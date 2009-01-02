@@ -23,6 +23,8 @@
 
         Me.ClenoviaTableAdapter.Fill(Me.Spz_evidenciaDataSet.clenovia)
         Me.ClenoviaBindingSource.AddNew()
+
+
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -42,7 +44,20 @@
     End Sub
 
     Private Sub Brokova_zbranCheckBox_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Brokova_zbranCheckBox.CheckedChanged
+        
 
+
+    End Sub
+
+    Private Sub Datum_narodeniaDateTimePicker_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Datum_narodeniaDateTimePicker_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Kontrolne_strelby_brokTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Kontrolne_strelby_brokTextBox.TextChanged
 
     End Sub
 End Class
