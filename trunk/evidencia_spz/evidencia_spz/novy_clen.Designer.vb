@@ -147,6 +147,7 @@ Partial Class novy_clen
         Me.Label7 = New System.Windows.Forms.Label
         Me.Label8 = New System.Windows.Forms.Label
         Me.Label9 = New System.Windows.Forms.Label
+        Me.dll = New System.Windows.Forms.Label
         TitulLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -1204,12 +1205,22 @@ Partial Class novy_clen
         Me.Label9.TabIndex = 109
         Me.Label9.Text = "DD.MM.RRRR"
         '
+        'dll
+        '
+        Me.dll.AutoSize = True
+        Me.dll.Location = New System.Drawing.Point(641, 21)
+        Me.dll.Name = "dll"
+        Me.dll.Size = New System.Drawing.Size(45, 13)
+        Me.dll.TabIndex = 110
+        Me.dll.Text = "Label10"
+        '
         'novy_clen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1292, 812)
+        Me.ClientSize = New System.Drawing.Size(1309, 812)
+        Me.Controls.Add(Me.dll)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -1409,4 +1420,5 @@ Partial Class novy_clen
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents dll As System.Windows.Forms.Label
 End Class
