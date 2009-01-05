@@ -129,6 +129,7 @@
     <Compile Include="karta_clena.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="kniznica.vb" />
     <Compile Include="kontrola_verzii.Designer.vb">
       <DependentUpon>kontrola_verzii.vb</DependentUpon>
     </Compile>

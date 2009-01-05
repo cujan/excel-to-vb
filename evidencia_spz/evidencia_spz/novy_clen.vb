@@ -24,6 +24,7 @@
         Me.ClenoviaTableAdapter.Fill(Me.Spz_evidenciaDataSet.clenovia)
         Me.ClenoviaBindingSource.AddNew()
 
+        dll.Text = kniznica.kontrola_dll
 
     End Sub
 
@@ -59,5 +60,35 @@
 
     Private Sub Kontrolne_strelby_brokTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Kontrolne_strelby_brokTextBox.TextChanged
 
+    End Sub
+
+    Private Sub Rodne_cisloTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Rodne_cisloTextBox.TextChanged
+
+    End Sub
+
+    Private Sub Rodne_cisloTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Rodne_cisloTextBox.Validating
+        Dim sError As String
+
+        If Not kniznica.kontrola_rc(Rodne_cisloTextBox.Text, sError) Then
+            'zorazenie chyby
+            MessageBox.Show(sError, "chyba", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+
+            'znemoznenie opustenia textboxu
+            e.Cancel = True
+        End If
+    End Sub
+
+    Private Sub PscTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PscTextBox.TextChanged
+
+    End Sub
+
+    Private Sub PscTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles PscTextBox.Validating
+        Dim sError As String
+        If Not kniznica.kontrola_psc(PscTextBox.Text, sError) Then
+            'zobrazenie chyby
+            MessageBox.Show(sError, "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            'znemoznenie opustenia textboxu
+            e.Cancel = True
+        End If
     End Sub
 End Class
