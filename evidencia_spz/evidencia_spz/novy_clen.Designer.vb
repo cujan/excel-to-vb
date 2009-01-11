@@ -148,6 +148,8 @@ Partial Class novy_clen
         Me.Label8 = New System.Windows.Forms.Label
         Me.Label9 = New System.Windows.Forms.Label
         Me.dll = New System.Windows.Forms.Label
+        Me.ErrorProvider1_rodne_cislo = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProvider1_psc = New System.Windows.Forms.ErrorProvider(Me.components)
         TitulLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -204,6 +206,8 @@ Partial Class novy_clen
         CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzenieBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1_rodne_cislo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1_psc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TitulLabel
@@ -1214,12 +1218,20 @@ Partial Class novy_clen
         Me.dll.TabIndex = 110
         Me.dll.Text = "Label10"
         '
+        'ErrorProvider1_rodne_cislo
+        '
+        Me.ErrorProvider1_rodne_cislo.ContainerControl = Me
+        '
+        'ErrorProvider1_psc
+        '
+        Me.ErrorProvider1_psc.ContainerControl = Me
+        '
         'novy_clen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1309, 812)
+        Me.ClientSize = New System.Drawing.Size(1292, 812)
         Me.Controls.Add(Me.dll)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
@@ -1332,6 +1344,8 @@ Partial Class novy_clen
         CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1_rodne_cislo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1_psc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1421,4 +1435,6 @@ Partial Class novy_clen
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents dll As System.Windows.Forms.Label
+    Friend WithEvents ErrorProvider1_rodne_cislo As System.Windows.Forms.ErrorProvider
+    Friend WithEvents ErrorProvider1_psc As System.Windows.Forms.ErrorProvider
 End Class
