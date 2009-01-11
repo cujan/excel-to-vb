@@ -71,10 +71,10 @@
 
         If Not kniznica.kontrola_rc(Rodne_cisloTextBox.Text, sError) Then
             'zorazenie chyby
-            MessageBox.Show(sError, "chyba", MessageBoxButtons.OK, MessageBoxIcon.Stop)
-
-            'znemoznenie opustenia textboxu
-            e.Cancel = True
+            ErrorProvider1_rodne_cislo.SetError(Rodne_cisloTextBox, sError)
+        Else
+            'zrus chybu, uzivatel zadal rodne cislo spravne
+            ErrorProvider1_rodne_cislo.SetError(Rodne_cisloTextBox, Nothing)
         End If
     End Sub
 
@@ -86,9 +86,11 @@
         Dim sError As String
         If Not kniznica.kontrola_psc(PscTextBox.Text, sError) Then
             'zobrazenie chyby
-            MessageBox.Show(sError, "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Stop)
-            'znemoznenie opustenia textboxu
-            e.Cancel = True
+            ErrorProvider1_psc.SetError(PscTextBox, sError)
+        Else
+            'zrus chybu, uzivatel zadal rodne cislo spravne
+            ErrorProvider1_psc.SetError(PscTextBox, Nothing)
+            
         End If
     End Sub
 End Class
