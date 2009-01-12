@@ -24,7 +24,7 @@
         Me.ClenoviaTableAdapter.Fill(Me.Spz_evidenciaDataSet.clenovia)
         Me.ClenoviaBindingSource.AddNew()
 
-        dll.Text = kniznica.kontrola_dll
+
 
     End Sub
 
