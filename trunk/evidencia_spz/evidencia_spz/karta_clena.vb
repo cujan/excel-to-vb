@@ -31,4 +31,10 @@
         formular_clen_1.BringToFront()
 
     End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        tlacovy_vystup_clen_1.BringToFront()
+        tlacovy_vystup_clen_1.Show()
+
+    End Sub
 End Class
