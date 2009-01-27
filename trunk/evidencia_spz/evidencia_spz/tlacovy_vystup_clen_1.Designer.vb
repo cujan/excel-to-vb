@@ -24,13 +24,23 @@ Partial Class tlacovy_vystup_clen_1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
-        Me.spz_evidenciaDataSet = New evidencia_spz.spz_evidenciaDataSet
         Me.clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.spz_evidenciaDataSet = New evidencia_spz.spz_evidenciaDataSet
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
         Me.clenoviaTableAdapter = New evidencia_spz.spz_evidenciaDataSetTableAdapters.clenoviaTableAdapter
-        CType(Me.spz_evidenciaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.spz_evidenciaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'clenoviaBindingSource
+        '
+        Me.clenoviaBindingSource.DataMember = "clenovia"
+        Me.clenoviaBindingSource.DataSource = Me.spz_evidenciaDataSet
+        '
+        'spz_evidenciaDataSet
+        '
+        Me.spz_evidenciaDataSet.DataSetName = "spz_evidenciaDataSet"
+        Me.spz_evidenciaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -45,16 +55,6 @@ Partial Class tlacovy_vystup_clen_1
         Me.ReportViewer1.Size = New System.Drawing.Size(829, 598)
         Me.ReportViewer1.TabIndex = 0
         '
-        'spz_evidenciaDataSet
-        '
-        Me.spz_evidenciaDataSet.DataSetName = "spz_evidenciaDataSet"
-        Me.spz_evidenciaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'clenoviaBindingSource
-        '
-        Me.clenoviaBindingSource.DataMember = "clenovia"
-        Me.clenoviaBindingSource.DataSource = Me.spz_evidenciaDataSet
-        '
         'clenoviaTableAdapter
         '
         Me.clenoviaTableAdapter.ClearBeforeFill = True
@@ -68,8 +68,8 @@ Partial Class tlacovy_vystup_clen_1
         Me.Name = "tlacovy_vystup_clen_1"
         Me.Text = "Tlačový výstup - Člen"
         Me.TopMost = True
-        CType(Me.spz_evidenciaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.spz_evidenciaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
