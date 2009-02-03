@@ -824,7 +824,7 @@
             <CanGrow>true</CanGrow>
             <Left>7cm</Left>
             <Height>0.63492cm</Height>
-            <Value>=First(Fields!datum_vydania_zp.Value, "spz_evidenciaDataSet_clenovia")</Value>
+            <Value>=First(FormatDateTime(Fields!datum_vydania_zp.Value,DateFormat.ShortDate))</Value>
           </Textbox>
           <Textbox Name="textbox27">
             <Top>5.75cm</Top>
@@ -904,7 +904,7 @@
             <CanGrow>true</CanGrow>
             <Left>7cm</Left>
             <Height>0.63492cm</Height>
-            <Value>=First(Fields!datum_vydania_pl.Value, "spz_evidenciaDataSet_clenovia")</Value>
+            <Value>=First(FormatDateTime(Fields!datum_vydania_pl.Value,DateFormat.ShortDate))</Value>
           </Textbox>
           <Textbox Name="textbox23">
             <Top>5cm</Top>
@@ -982,9 +982,9 @@
             </Style>
             <ZIndex>22</ZIndex>
             <CanGrow>true</CanGrow>
-            <Left>6.75cm</Left>
+            <Left>7cm</Left>
             <Height>0.63492cm</Height>
-            <Value>=First(Fields!datum_vydania_op.Value, "spz_evidenciaDataSet_clenovia")</Value>
+            <Value>=First(FormatDateTime(Fields!datum_vydania_op.Value,DateFormat.ShortDate))</Value>
           </Textbox>
           <Textbox Name="textbox19">
             <rd:DefaultName>textbox19</rd:DefaultName>
