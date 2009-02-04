@@ -6,6 +6,8 @@
     End Sub
 
     Private Sub evidencia_clenov_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Prehlad_clenovDataSet.clenovia' table. You can move, or remove it, as needed.
+        Me.ClenoviaTableAdapter.Fill(Me.Prehlad_clenovDataSet.clenovia)
         'TODO: This line of code loads data into the 'PrehladDataSet.clenovia' table. You can move, or remove it, as needed.
 
         'TODO: This line of code loads data into the 'ClenoviaDataSet1.clenovia' table. You can move, or remove it, as needed.
@@ -80,13 +82,28 @@
     End Sub
 
     Private Sub ClenoviaDataGridView_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
-        'Dim aktualna_pozicia As Integer = Me.ClenoviaBindingSource.Position + 1
-        'detaily_clena.Label1.Text = aktualna_pozicia
-        'detaily_clena.ClenoviaBindingSource.Position = 10
-        'detaily_clena.Show()
+        
     End Sub
 
     Private Sub BindingNavigatorPositionItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
+    End Sub
+
+    Private Sub ClenoviaBindingNavigatorSaveItem_Click_3(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClenoviaBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.ClenoviaBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Prehlad_clenovDataSet)
+
+    End Sub
+
+    Private Sub ClenoviaDataGridView_CellContentClick_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ClenoviaDataGridView.CellContentClick
+
+    End Sub
+
+    Private Sub ClenoviaDataGridView_CellDoubleClick1(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ClenoviaDataGridView.CellDoubleClick
+        Dim aktualna_pozicia As Integer = Me.ClenoviaBindingSource.Position + 1
+
+
+        detaily_clena.Show()
     End Sub
 End Class
