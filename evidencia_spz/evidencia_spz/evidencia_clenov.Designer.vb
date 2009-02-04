@@ -23,31 +23,21 @@ Partial Class evidencia_clenov
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
         Me.button_report_zoznam_clenov = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(99, 53)
+        Me.Button1.Location = New System.Drawing.Point(468, 31)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Koniec"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(212, 52)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Ulož"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'button_report_zoznam_clenov
         '
-        Me.button_report_zoznam_clenov.Location = New System.Drawing.Point(346, 53)
+        Me.button_report_zoznam_clenov.Location = New System.Drawing.Point(234, 31)
         Me.button_report_zoznam_clenov.Name = "button_report_zoznam_clenov"
         Me.button_report_zoznam_clenov.Size = New System.Drawing.Size(185, 23)
         Me.button_report_zoznam_clenov.TabIndex = 4
@@ -58,9 +48,8 @@ Partial Class evidencia_clenov
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(728, 354)
+        Me.ClientSize = New System.Drawing.Size(728, 424)
         Me.Controls.Add(Me.button_report_zoznam_clenov)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "evidencia_clenov"
@@ -69,6 +58,5 @@ Partial Class evidencia_clenov
 
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents button_report_zoznam_clenov As System.Windows.Forms.Button
 End Class
