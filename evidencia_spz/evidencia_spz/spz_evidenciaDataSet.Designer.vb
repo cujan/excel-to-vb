@@ -844,8 +844,8 @@ Partial Public Class spz_evidenciaDataSet
                     ByVal cislo_zp As String,  _
                     ByVal datum_vydania_zp As Date,  _
                     ByVal cislo_clenskeho_preukazu_spz As String,  _
-                    ByVal clen_spz_od As Date,  _
-                    ByVal clenske_do As Date,  _
+                    ByVal clen_spz_od As String,  _
+                    ByVal clenske_do As String,  _
                     ByVal cislo_dokladu_clenske As String,  _
                     ByVal skuska_z_polovnictva As Date,  _
                     ByVal miesto_skusky_z__polovnictva As String,  _
@@ -853,10 +853,10 @@ Partial Public Class spz_evidenciaDataSet
                     ByVal miesto_skusky_pre_polovnych_hospodarov As String,  _
                     ByVal vyzsia_skuska_z_polovnictva As Date,  _
                     ByVal miesto_vyzsia_skuska_z_polovnictva As String,  _
-                    ByVal brokova_zbran As Boolean,  _
-                    ByVal kontrolne_strelby_brok As Date,  _
-                    ByVal gulova_zbran As Boolean,  _
-                    ByVal kontrolne_strelby_gulova_zbran As Date,  _
+                    ByVal brokova_zbran As String,  _
+                    ByVal kontrolne_strelby_brok As String,  _
+                    ByVal gulova_zbran As String,  _
+                    ByVal kontrolne_strelby_gulova_zbran As String,  _
                     ByVal vyznamenanie_III As Date,  _
                     ByVal vyznamenanie_II As Date,  _
                     ByVal vyznamenanie_I As Date,  _
@@ -980,9 +980,9 @@ Partial Public Class spz_evidenciaDataSet
             MyBase.Columns.Add(Me.columndatum_vydania_zp)
             Me.columncislo_clenskeho_preukazu_spz = New Global.System.Data.DataColumn("cislo_clenskeho_preukazu_spz", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncislo_clenskeho_preukazu_spz)
-            Me.columnclen_spz_od = New Global.System.Data.DataColumn("clen_spz_od", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnclen_spz_od = New Global.System.Data.DataColumn("clen_spz_od", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnclen_spz_od)
-            Me.columnclenske_do = New Global.System.Data.DataColumn("clenske_do", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnclenske_do = New Global.System.Data.DataColumn("clenske_do", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnclenske_do)
             Me.columncislo_dokladu_clenske = New Global.System.Data.DataColumn("cislo_dokladu_clenske", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncislo_dokladu_clenske)
@@ -998,13 +998,13 @@ Partial Public Class spz_evidenciaDataSet
             MyBase.Columns.Add(Me.columnvyzsia_skuska_z_polovnictva)
             Me.columnmiesto_vyzsia_skuska_z_polovnictva = New Global.System.Data.DataColumn("miesto_vyzsia_skuska_z_polovnictva", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnmiesto_vyzsia_skuska_z_polovnictva)
-            Me.columnbrokova_zbran = New Global.System.Data.DataColumn("brokova_zbran", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnbrokova_zbran = New Global.System.Data.DataColumn("brokova_zbran", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnbrokova_zbran)
-            Me.columnkontrolne_strelby_brok = New Global.System.Data.DataColumn("kontrolne_strelby_brok", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnkontrolne_strelby_brok = New Global.System.Data.DataColumn("kontrolne_strelby_brok", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnkontrolne_strelby_brok)
-            Me.columngulova_zbran = New Global.System.Data.DataColumn("gulova_zbran", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            Me.columngulova_zbran = New Global.System.Data.DataColumn("gulova_zbran", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columngulova_zbran)
-            Me.columnkontrolne_strelby_gulova_zbran = New Global.System.Data.DataColumn("kontrolne_strelby_gulova_zbran", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnkontrolne_strelby_gulova_zbran = New Global.System.Data.DataColumn("kontrolne_strelby_gulova_zbran", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnkontrolne_strelby_gulova_zbran)
             Me.columnvyznamenanie_III = New Global.System.Data.DataColumn("vyznamenanie_III", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnvyznamenanie_III)
@@ -2611,10 +2611,10 @@ Partial Public Class spz_evidenciaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property clen_spz_od() As Date
+        Public Property clen_spz_od() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableclenovia.clen_spz_odColumn),Date)
+                    Return CType(Me(Me.tableclenovia.clen_spz_odColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'clen_spz_od' in table 'clenovia' is DBNull.", e)
                 End Try
@@ -2625,10 +2625,10 @@ Partial Public Class spz_evidenciaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property clenske_do() As Date
+        Public Property clenske_do() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableclenovia.clenske_doColumn),Date)
+                    Return CType(Me(Me.tableclenovia.clenske_doColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'clenske_do' in table 'clenovia' is DBNull.", e)
                 End Try
@@ -2742,10 +2742,10 @@ Partial Public Class spz_evidenciaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property brokova_zbran() As Boolean
+        Public Property brokova_zbran() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableclenovia.brokova_zbranColumn),Boolean)
+                    Return CType(Me(Me.tableclenovia.brokova_zbranColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'brokova_zbran' in table 'clenovia' is DBNull.", e)
                 End Try
@@ -2756,10 +2756,10 @@ Partial Public Class spz_evidenciaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property kontrolne_strelby_brok() As Date
+        Public Property kontrolne_strelby_brok() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableclenovia.kontrolne_strelby_brokColumn),Date)
+                    Return CType(Me(Me.tableclenovia.kontrolne_strelby_brokColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'kontrolne_strelby_brok' in table 'clenovia' is DBNull.", e)
                 End Try
@@ -2770,10 +2770,10 @@ Partial Public Class spz_evidenciaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property gulova_zbran() As Boolean
+        Public Property gulova_zbran() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableclenovia.gulova_zbranColumn),Boolean)
+                    Return CType(Me(Me.tableclenovia.gulova_zbranColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'gulova_zbran' in table 'clenovia' is DBNull.", e)
                 End Try
@@ -2784,10 +2784,10 @@ Partial Public Class spz_evidenciaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property kontrolne_strelby_gulova_zbran() As Date
+        Public Property kontrolne_strelby_gulova_zbran() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableclenovia.kontrolne_strelby_gulova_zbranColumn),Date)
+                    Return CType(Me(Me.tableclenovia.kontrolne_strelby_gulova_zbranColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'kontrolne_strelby_gulova_zbran' in table 'clenovia' is DBNu"& _ 
                             "ll.", e)
