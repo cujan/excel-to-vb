@@ -29,6 +29,9 @@
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        'tlac_clen_a4.BringToFront()
+        'tlac_clen_a4.Show()
+
         tlacovy_vystup_clen_1.BringToFront()
         tlacovy_vystup_clen_1.Show()
 

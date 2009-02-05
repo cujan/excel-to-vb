@@ -8,6 +8,9 @@
     End Sub
 
     Private Sub ReportViewer1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReportViewer1.Load
+        ReportViewer1.DocumentMapWidth = 150
+        ReportViewer1.ZoomPercent = 75%
+
 
     End Sub
 End Class
