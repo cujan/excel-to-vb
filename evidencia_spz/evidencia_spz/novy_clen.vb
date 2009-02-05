@@ -6,6 +6,8 @@
     End Sub
 
     Private Sub novy_clen_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Novy_clenDataSet.clenovia' table. You can move, or remove it, as needed.
+        Me.ClenoviaTableAdapter.Fill(Me.Novy_clenDataSet.clenovia)
         'TODO: This line of code loads data into the 'ZdruzenieDataSet.zdruzenie' table. You can move, or remove it, as needed.
 
         'TODO: This line of code loads data into the 'NarodnostDataSet.narodnost' table. You can move, or remove it, as needed.
@@ -19,6 +21,7 @@
         Me.TopLevel = False
         hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
 
+        Me.ClenoviaBindingSource.AddNew()
         
 
 
@@ -72,5 +75,24 @@
         
 
 
+    End Sub
+
+    Private Sub ClenoviaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClenoviaBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.ClenoviaBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Novy_clenDataSet)
+
+    End Sub
+
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
+
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Me.Validate()
+        Me.ClenoviaBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Novy_clenDataSet)
+        MsgBox("Nový člen bol úspešne uložený!", MsgBoxStyle.OkOnly)
+        Me.ClenoviaBindingSource.AddNew()
     End Sub
 End Class

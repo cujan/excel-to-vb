@@ -94,6 +94,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="clenoviaDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -174,6 +175,11 @@
     <Compile Include="novy_clen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="novy_clenDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>novy_clenDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="pohlad_priezviskoDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -183,6 +189,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>prehlad_clenovDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="spz_clenovia_report_a4.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -295,6 +307,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="novy_clen.resx">
       <DependentUpon>novy_clen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="statna_prislusnost.resx">
@@ -453,6 +469,17 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="novy_clenDataSet.xsc">
+      <DependentUpon>novy_clenDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="novy_clenDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>novy_clenDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="novy_clenDataSet.xss">
+      <DependentUpon>novy_clenDataSet.xsd</DependentUpon>
+    </None>
     <None Include="prehlad_clenovDataSet.xsc">
       <DependentUpon>prehlad_clenovDataSet.xsd</DependentUpon>
     </None>
