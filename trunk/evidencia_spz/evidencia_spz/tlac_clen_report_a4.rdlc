@@ -221,6 +221,698 @@
       <List Name="list1">
         <DataSetName>spz_clenovia_report_a4_clenovia</DataSetName>
         <ReportItems>
+          <Textbox Name="clenske_do">
+            <rd:DefaultName>clenske_do</rd:DefaultName>
+            <Top>9.5cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <Format>dd.MM.yyyy</Format>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>49</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!clenske_do.Value)</Value>
+          </Textbox>
+          <Textbox Name="cislo_dokladu_clenske">
+            <rd:DefaultName>cislo_dokladu_clenske</rd:DefaultName>
+            <Top>8.75cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>48</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.5cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!cislo_dokladu_clenske.Value)</Value>
+          </Textbox>
+          <Textbox Name="clen_spz_od">
+            <rd:DefaultName>clen_spz_od</rd:DefaultName>
+            <Top>8cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <Format>dd.MM.yyyy</Format>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>47</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!clen_spz_od.Value)</Value>
+          </Textbox>
+          <Textbox Name="cislo_clenskeho_preukazu_spz">
+            <rd:DefaultName>cislo_clenskeho_preukazu_spz</rd:DefaultName>
+            <Top>8cm</Top>
+            <Width>2.25cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>46</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.25cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!cislo_clenskeho_preukazu_spz.Value)</Value>
+          </Textbox>
+          <Textbox Name="datum_vydania_zp">
+            <rd:DefaultName>datum_vydania_zp</rd:DefaultName>
+            <Top>7.25cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <Format>dd.MM.yyyy</Format>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>45</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.5cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!datum_vydania_zp.Value)</Value>
+          </Textbox>
+          <Textbox Name="cislo_zp">
+            <rd:DefaultName>cislo_zp</rd:DefaultName>
+            <Top>7.25cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>44</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.25cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!cislo_zp.Value)</Value>
+          </Textbox>
+          <Textbox Name="datum_vydania_pl">
+            <rd:DefaultName>datum_vydania_pl</rd:DefaultName>
+            <Top>6.5cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <Format>dd.MM.yyyy</Format>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>43</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.5cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!datum_vydania_pl.Value)</Value>
+          </Textbox>
+          <Textbox Name="cislo_pl">
+            <rd:DefaultName>cislo_pl</rd:DefaultName>
+            <Top>6.5cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>42</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.25cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!cislo_pl.Value)</Value>
+          </Textbox>
+          <Textbox Name="textbox19">
+            <rd:DefaultName>textbox19</rd:DefaultName>
+            <Top>8cm</Top>
+            <Width>2.25cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>41</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.5cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Člen SPZ od</Value>
+          </Textbox>
+          <Textbox Name="textbox18">
+            <rd:DefaultName>textbox18</rd:DefaultName>
+            <Top>9.5cm</Top>
+            <Width>2.25cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>40</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Členské do</Value>
+          </Textbox>
+          <Textbox Name="textbox17">
+            <rd:DefaultName>textbox17</rd:DefaultName>
+            <Top>8.75cm</Top>
+            <Width>3.75cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>39</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Číslo dokladu členské</Value>
+          </Textbox>
+          <Textbox Name="textbox16">
+            <Top>7.25cm</Top>
+            <Width>1.75cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>38</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Vyd. dňa</Value>
+          </Textbox>
+          <Textbox Name="textbox15">
+            <rd:DefaultName>textbox15</rd:DefaultName>
+            <Top>8cm</Top>
+            <Width>1.5cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>37</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Číslo ČP</Value>
+          </Textbox>
+          <Textbox Name="textbox14">
+            <rd:DefaultName>textbox14</rd:DefaultName>
+            <Top>7.25cm</Top>
+            <Width>1.5cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>36</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Číslo ZP</Value>
+          </Textbox>
+          <Textbox Name="textbox13">
+            <Top>6.5cm</Top>
+            <Width>1.75cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>35</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Vyd. dňa</Value>
+          </Textbox>
+          <Textbox Name="textbox12">
+            <rd:DefaultName>textbox12</rd:DefaultName>
+            <Top>6.5cm</Top>
+            <Width>1.5cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>34</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Číslo PL</Value>
+          </Textbox>
+          <Line Name="line8">
+            <Top>6.5cm</Top>
+            <Width>8.75cm</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <ZIndex>33</ZIndex>
+            <Left>0.5cm</Left>
+            <Height>0cm</Height>
+          </Line>
+          <Textbox Name="narodnost">
+            <rd:DefaultName>narodnost</rd:DefaultName>
+            <Top>5.75cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>32</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!narodnost.Value)</Value>
+          </Textbox>
+          <Textbox Name="statna_prislusnost">
+            <rd:DefaultName>statna_prislusnost</rd:DefaultName>
+            <Top>5.75cm</Top>
+            <Width>2cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>31</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!statna_prislusnost.Value)</Value>
+          </Textbox>
+          <Textbox Name="datum_vydania_op">
+            <rd:DefaultName>datum_vydania_op</rd:DefaultName>
+            <Top>5cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <Format>dd.MM.yyyy</Format>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>30</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.5cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!datum_vydania_op.Value)</Value>
+          </Textbox>
+          <Textbox Name="cislo_op">
+            <rd:DefaultName>cislo_op</rd:DefaultName>
+            <Top>5cm</Top>
+            <Width>2.25cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>29</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.5cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!cislo_op.Value)</Value>
+          </Textbox>
+          <Textbox Name="textbox11">
+            <rd:DefaultName>textbox11</rd:DefaultName>
+            <Top>5.75cm</Top>
+            <Width>1.5cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>28</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.25cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Št. prísl.</Value>
+          </Textbox>
+          <Textbox Name="textbox10">
+            <rd:DefaultName>textbox10</rd:DefaultName>
+            <Top>5.75cm</Top>
+            <Width>2cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>27</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Národnosť</Value>
+          </Textbox>
+          <Textbox Name="textbox9">
+            <rd:DefaultName>textbox9</rd:DefaultName>
+            <Top>5cm</Top>
+            <Width>1.75cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>26</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Vyd. dňa</Value>
+          </Textbox>
+          <Textbox Name="textbox8">
+            <rd:DefaultName>textbox8</rd:DefaultName>
+            <Top>5cm</Top>
+            <Width>1.75cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>25</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Číslo OP</Value>
+          </Textbox>
+          <Line Name="line7">
+            <Top>5cm</Top>
+            <Width>8.75cm</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <ZIndex>24</ZIndex>
+            <Left>0.5cm</Left>
+            <Height>0cm</Height>
+          </Line>
+          <Textbox Name="psc">
+            <rd:DefaultName>psc</rd:DefaultName>
+            <Top>4.25cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>23</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.25cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!psc.Value)</Value>
+          </Textbox>
+          <Textbox Name="bydlisko">
+            <rd:DefaultName>bydlisko</rd:DefaultName>
+            <Top>3.75cm</Top>
+            <Width>5.75cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>22</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.25cm</Left>
+            <Height>1cm</Height>
+            <Value>=First(Fields!bydlisko.Value)</Value>
+          </Textbox>
+          <Textbox Name="textbox7">
+            <rd:DefaultName>textbox7</rd:DefaultName>
+            <Top>3.75cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>21</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Adresa bydliska</Value>
+          </Textbox>
+          <Line Name="line6">
+            <Top>3.75cm</Top>
+            <Width>8.75cm</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <ZIndex>20</ZIndex>
+            <Left>0.5cm</Left>
+            <Height>0cm</Height>
+          </Line>
+          <Textbox Name="okres_narodenia">
+            <rd:DefaultName>okres_narodenia</rd:DefaultName>
+            <Top>3cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>19</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.25cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!okres_narodenia.Value)</Value>
+          </Textbox>
+          <Textbox Name="miesto_narodenia">
+            <rd:DefaultName>miesto_narodenia</rd:DefaultName>
+            <Top>3cm</Top>
+            <Width>3.25cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>18</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.25cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!miesto_narodenia.Value)</Value>
+          </Textbox>
+          <Textbox Name="rodne_cislo">
+            <rd:DefaultName>rodne_cislo</rd:DefaultName>
+            <Top>2.25cm</Top>
+            <Width>2.25cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>17</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.5cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!rodne_cislo.Value)</Value>
+          </Textbox>
+          <Textbox Name="datum_narodenia">
+            <rd:DefaultName>datum_narodenia</rd:DefaultName>
+            <Top>2.25cm</Top>
+            <Width>2.25cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+              <Format>dd.MM.yyyy</Format>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>16</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!datum_narodenia.Value)</Value>
+          </Textbox>
+          <Textbox Name="textbox6">
+            <rd:DefaultName>textbox6</rd:DefaultName>
+            <Top>3cm</Top>
+            <Width>1.25cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>15</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Okres</Value>
+          </Textbox>
+          <Textbox Name="textbox5">
+            <rd:DefaultName>textbox5</rd:DefaultName>
+            <Top>3cm</Top>
+            <Width>0.5cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>14</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>v</Value>
+          </Textbox>
+          <Textbox Name="textbox4">
+            <rd:DefaultName>textbox4</rd:DefaultName>
+            <Top>2.25cm</Top>
+            <Width>1cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>13</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.5cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>R.Č.</Value>
+          </Textbox>
+          <Textbox Name="textbox3">
+            <rd:DefaultName>textbox3</rd:DefaultName>
+            <Top>2.25cm</Top>
+            <Width>2.25cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>12</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>Narodený dňa</Value>
+          </Textbox>
+          <Line Name="line5">
+            <Top>2.25cm</Top>
+            <Width>8.75cm</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <ZIndex>11</ZIndex>
+            <Left>0.5cm</Left>
+            <Height>0cm</Height>
+          </Line>
           <Textbox Name="id">
             <rd:DefaultName>id</rd:DefaultName>
             <Top>0.25cm</Top>
@@ -310,7 +1002,7 @@
             </Style>
             <ZIndex>6</ZIndex>
             <CanGrow>true</CanGrow>
-            <Left>1cm</Left>
+            <Left>1.25cm</Left>
             <Height>0.63492cm</Height>
             <Value>=Fields!titul_pred.Value</Value>
           </Textbox>
@@ -412,6 +1104,11 @@
             <Value>Členská karta SPZ</Value>
           </Textbox>
         </ReportItems>
+        <Style>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>9pt</FontSize>
+          <FontWeight>700</FontWeight>
+        </Style>
         <Grouping Name="list1_Details_Group">
           <Label>=Fields!meno.Value &amp; " " &amp; Fields!priezvisko.Value</Label>
           <GroupExpressions>
