@@ -106,4 +106,16 @@
 
         detaily_clena.Show()
     End Sub
+
+    Private Sub BindingNavigatorDeleteItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BindingNavigatorDeleteItem.Click
+
+    End Sub
+
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+
+        Me.ClenoviaBindingSource.RemoveCurrent()
+        Me.Validate()
+        Me.ClenoviaBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.Prehlad_clenovDataSet)
+    End Sub
 End Class

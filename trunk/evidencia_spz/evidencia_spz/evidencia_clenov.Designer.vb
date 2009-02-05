@@ -88,6 +88,7 @@ Partial Class evidencia_clenov
         Me.DataGridViewTextBoxColumn86 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn87 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn88 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Button2 = New System.Windows.Forms.Button
         CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -569,11 +570,21 @@ Partial Class evidencia_clenov
         Me.DataGridViewTextBoxColumn88.Name = "DataGridViewTextBoxColumn88"
         Me.DataGridViewTextBoxColumn88.ReadOnly = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(575, 30)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "Zmaž člena"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'evidencia_clenov
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(728, 424)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ClenoviaDataGridView)
         Me.Controls.Add(Me.ClenoviaBindingNavigator)
         Me.Controls.Add(Me.button_report_zoznam_clenov)
@@ -702,4 +713,5 @@ Partial Class evidencia_clenov
     Friend WithEvents DataGridViewTextBoxColumn86 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn87 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn88 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class
