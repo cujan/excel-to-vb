@@ -16,8 +16,8 @@
   <InteractiveWidth>8.5in</InteractiveWidth>
   <rd:GridSpacing>0.25cm</rd:GridSpacing>
   <rd:SnapToGrid>true</rd:SnapToGrid>
-  <RightMargin>2.5cm</RightMargin>
-  <LeftMargin>2.5cm</LeftMargin>
+  <RightMargin>1.5cm</RightMargin>
+  <LeftMargin>1.5cm</LeftMargin>
   <BottomMargin>2.5cm</BottomMargin>
   <rd:ReportID>aa382146-e6db-411d-8efb-45c77fed01ab</rd:ReportID>
   <PageWidth>21cm</PageWidth>
@@ -103,7 +103,7 @@
       <Table Name="table1">
         <DataSetName>spz_zoznam_clenov_reportDataSet1_clenovia</DataSetName>
         <Top>1cm</Top>
-        <Width>13.35cm</Width>
+        <Width>16.25cm</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -401,7 +401,7 @@
             <Width>2cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>3.85cm</Width>
+            <Width>6.75cm</Width>
           </TableColumn>
         </TableColumns>
         <Height>1cm</Height>
