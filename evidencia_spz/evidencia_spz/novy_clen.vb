@@ -6,6 +6,10 @@
     End Sub
 
     Private Sub novy_clen_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Statna_prislusnostDataSet1.statna_prislusnost' table. You can move, or remove it, as needed.
+        Me.Statna_prislusnostTableAdapter.Fill(Me.Statna_prislusnostDataSet1.statna_prislusnost)
+        'TODO: This line of code loads data into the 'TitulDataSet1.titul' table. You can move, or remove it, as needed.
+        Me.TitulTableAdapter.Fill(Me.TitulDataSet1.titul)
         'TODO: This line of code loads data into the 'Novy_clenDataSet.clenovia' table. You can move, or remove it, as needed.
         Me.ClenoviaTableAdapter.Fill(Me.Novy_clenDataSet.clenovia)
         'TODO: This line of code loads data into the 'ZdruzenieDataSet.zdruzenie' table. You can move, or remove it, as needed.
