@@ -32,7 +32,8 @@
         hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
 
         Me.ClenoviaBindingSource.AddNew()
-        
+
+
 
 
 
@@ -104,5 +105,9 @@
         Me.TableAdapterManager.UpdateAll(Me.Novy_clenDataSet)
         MsgBox("Nový člen bol úspešne uložený!", MsgBoxStyle.OkOnly)
         Me.ClenoviaBindingSource.AddNew()
+    End Sub
+
+    Private Sub Brokova_zbranComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 End Class
