@@ -583,6 +583,7 @@ Partial Class evidencia_clenov
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(728, 424)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ClenoviaDataGridView)

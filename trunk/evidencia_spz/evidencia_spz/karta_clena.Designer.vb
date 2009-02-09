@@ -69,6 +69,7 @@ Partial Class karta_clena
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
+        Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(722, 778)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.tlacit)

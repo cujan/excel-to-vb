@@ -516,6 +516,10 @@ Partial Class hlavna_aplikacia
         Me.hlavny_splitter.Panel1.BackColor = System.Drawing.Color.DarkGreen
         Me.hlavny_splitter.Panel1.Controls.Add(Me.sprava_zdruzeni_splitter)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.sprava_clenov_splitter)
+        '
+        'hlavny_splitter.Panel2
+        '
+        Me.hlavny_splitter.Panel2.BackColor = System.Drawing.Color.PaleGreen
         Me.hlavny_splitter.Size = New System.Drawing.Size(712, 445)
         Me.hlavny_splitter.SplitterDistance = 165
         Me.hlavny_splitter.SplitterWidth = 1
@@ -544,9 +548,10 @@ Partial Class hlavna_aplikacia
         '
         'sprava_zdruzeni_button
         '
-        Me.sprava_zdruzeni_button.BackColor = System.Drawing.Color.Green
+        Me.sprava_zdruzeni_button.BackColor = System.Drawing.Color.DarkOliveGreen
         Me.sprava_zdruzeni_button.FlatAppearance.BorderSize = 0
         Me.sprava_zdruzeni_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.sprava_zdruzeni_button.ForeColor = System.Drawing.Color.White
         Me.sprava_zdruzeni_button.Location = New System.Drawing.Point(113, 2)
         Me.sprava_zdruzeni_button.Name = "sprava_zdruzeni_button"
         Me.sprava_zdruzeni_button.Size = New System.Drawing.Size(22, 22)
@@ -556,7 +561,7 @@ Partial Class hlavna_aplikacia
         '
         'sprava_zdruzeni_label
         '
-        Me.sprava_zdruzeni_label.BackColor = System.Drawing.Color.YellowGreen
+        Me.sprava_zdruzeni_label.BackColor = System.Drawing.Color.OliveDrab
         Me.sprava_zdruzeni_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.sprava_zdruzeni_label.Location = New System.Drawing.Point(0, 0)
         Me.sprava_zdruzeni_label.Name = "sprava_zdruzeni_label"
@@ -593,9 +598,10 @@ Partial Class hlavna_aplikacia
         '
         'sprava_clenov_button
         '
-        Me.sprava_clenov_button.BackColor = System.Drawing.Color.Green
+        Me.sprava_clenov_button.BackColor = System.Drawing.Color.DarkOliveGreen
         Me.sprava_clenov_button.FlatAppearance.BorderSize = 0
         Me.sprava_clenov_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.sprava_clenov_button.ForeColor = System.Drawing.Color.White
         Me.sprava_clenov_button.Location = New System.Drawing.Point(113, 2)
         Me.sprava_clenov_button.Name = "sprava_clenov_button"
         Me.sprava_clenov_button.Size = New System.Drawing.Size(22, 22)
@@ -605,7 +611,7 @@ Partial Class hlavna_aplikacia
         '
         'sprava_clenov_label
         '
-        Me.sprava_clenov_label.BackColor = System.Drawing.Color.YellowGreen
+        Me.sprava_clenov_label.BackColor = System.Drawing.Color.OliveDrab
         Me.sprava_clenov_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.sprava_clenov_label.Location = New System.Drawing.Point(0, 0)
         Me.sprava_clenov_label.Name = "sprava_clenov_label"
@@ -616,7 +622,7 @@ Partial Class hlavna_aplikacia
         '
         'prehlad_clenov_button
         '
-        Me.prehlad_clenov_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.prehlad_clenov_button.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.prehlad_clenov_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.prehlad_clenov_button.Location = New System.Drawing.Point(4, 81)
         Me.prehlad_clenov_button.Name = "prehlad_clenov_button"
@@ -627,7 +633,7 @@ Partial Class hlavna_aplikacia
         '
         'karta_clena_button
         '
-        Me.karta_clena_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.karta_clena_button.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.karta_clena_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.karta_clena_button.Location = New System.Drawing.Point(4, 57)
         Me.karta_clena_button.Name = "karta_clena_button"
@@ -638,7 +644,7 @@ Partial Class hlavna_aplikacia
         '
         'edituj_clena_button
         '
-        Me.edituj_clena_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.edituj_clena_button.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.edituj_clena_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.edituj_clena_button.Location = New System.Drawing.Point(4, 33)
         Me.edituj_clena_button.Name = "edituj_clena_button"
@@ -649,7 +655,7 @@ Partial Class hlavna_aplikacia
         '
         'novy_clen_button
         '
-        Me.novy_clen_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.novy_clen_button.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.novy_clen_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.novy_clen_button.Location = New System.Drawing.Point(4, 8)
         Me.novy_clen_button.Name = "novy_clen_button"
