@@ -949,7 +949,7 @@ Partial Class novy_clen
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(295, 12)
         Me.Button1.Name = "Button1"
@@ -960,7 +960,7 @@ Partial Class novy_clen
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Button2.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Location = New System.Drawing.Point(169, 12)
         Me.Button2.Name = "Button2"
@@ -1156,7 +1156,7 @@ Partial Class novy_clen
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.BackColor = System.Drawing.Color.Green
+        Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(1292, 812)
         Me.Controls.Add(Me.Gulova_zbranComboBox)
         Me.Controls.Add(Me.Brokova_zbranComboBox)
