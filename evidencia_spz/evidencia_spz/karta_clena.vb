@@ -23,11 +23,12 @@
     End Sub
 
     Private Sub tlacit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tlacit.Click
-
+        tlacovy_vystup_clen_1.BringToFront()
+        tlacovy_vystup_clen_1.Show()
 
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         'tlac_clen_a4.BringToFront()
         'tlac_clen_a4.Show()
 

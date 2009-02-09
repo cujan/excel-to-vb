@@ -25,44 +25,40 @@ Partial Class karta_clena
         Me.Button1 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
         Me.tlacit = New System.Windows.Forms.Button
-        Me.Button3 = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(520, 130)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(83, 23)
         Me.Button1.TabIndex = 77
-        Me.Button1.Text = "Koniec"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Text = "Zavrieť kartu"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Location = New System.Drawing.Point(520, 72)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(83, 23)
         Me.Button2.TabIndex = 78
         Me.Button2.Text = "Ulož"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'tlacit
         '
+        Me.tlacit.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.tlacit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.tlacit.Location = New System.Drawing.Point(520, 101)
         Me.tlacit.Name = "tlacit"
-        Me.tlacit.Size = New System.Drawing.Size(75, 23)
+        Me.tlacit.Size = New System.Drawing.Size(83, 23)
         Me.tlacit.TabIndex = 79
         Me.tlacit.Text = "Tlačiť"
-        Me.tlacit.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(520, 164)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 80
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.tlacit.UseVisualStyleBackColor = False
         '
         'karta_clena
         '
@@ -71,7 +67,6 @@ Partial Class karta_clena
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(722, 778)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.tlacit)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -84,5 +79,4 @@ Partial Class karta_clena
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents tlacit As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class
