@@ -179,4 +179,7 @@ Public Class hlavna_aplikacia
         End If
     End Sub
 
+    Private Sub TitulZaMenomToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TitulZaMenomToolStripMenuItem.Click
+        titul_za.Show()
+    End Sub
 End Class
