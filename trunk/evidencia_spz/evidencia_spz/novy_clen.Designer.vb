@@ -140,8 +140,8 @@ Partial Class novy_clen
         Me.Brokova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Titul_predLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -587,6 +587,7 @@ Partial Class novy_clen
         Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(1292, 25)
         Me.ClenoviaBindingNavigator.TabIndex = 0
         Me.ClenoviaBindingNavigator.Text = "BindingNavigator1"
+        Me.ClenoviaBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
@@ -948,21 +949,25 @@ Partial Class novy_clen
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(685, 65)
+        Me.Button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(295, 12)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(150, 23)
         Me.Button1.TabIndex = 91
-        Me.Button1.Text = "Koniec"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Text = "Zavrieť kartu bez uloženia"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(685, 117)
+        Me.Button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Location = New System.Drawing.Point(169, 12)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(121, 23)
         Me.Button2.TabIndex = 92
-        Me.Button2.Text = "Ulož"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Text = "Uložiť detajly člena"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Titul_predComboBox
         '
@@ -1128,15 +1133,6 @@ Partial Class novy_clen
         Me.ShapeContainer1.TabIndex = 99
         Me.ShapeContainer1.TabStop = False
         '
-        'LineShape1
-        '
-        Me.LineShape1.BorderWidth = 2
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 41
-        Me.LineShape1.X2 = 617
-        Me.LineShape1.Y1 = 284
-        Me.LineShape1.Y2 = 284
-        '
         'LineShape2
         '
         Me.LineShape2.BorderWidth = 2
@@ -1146,11 +1142,21 @@ Partial Class novy_clen
         Me.LineShape2.Y1 = 441
         Me.LineShape2.Y2 = 441
         '
+        'LineShape1
+        '
+        Me.LineShape1.BorderWidth = 2
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 41
+        Me.LineShape1.X2 = 617
+        Me.LineShape1.Y1 = 284
+        Me.LineShape1.Y2 = 284
+        '
         'novy_clen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
+        Me.BackColor = System.Drawing.Color.Green
         Me.ClientSize = New System.Drawing.Size(1292, 812)
         Me.Controls.Add(Me.Gulova_zbranComboBox)
         Me.Controls.Add(Me.Brokova_zbranComboBox)

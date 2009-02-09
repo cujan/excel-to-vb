@@ -68,6 +68,7 @@ Partial Class hlavna_aplikacia
         Me.ČíselníkyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.TitulyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ŠtátnaPríslušnosťToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.TitulZaMenomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStrip = New System.Windows.Forms.ToolStrip
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton
@@ -91,7 +92,6 @@ Partial Class hlavna_aplikacia
         Me.karta_clena_button = New System.Windows.Forms.Button
         Me.edituj_clena_button = New System.Windows.Forms.Button
         Me.novy_clen_button = New System.Windows.Forms.Button
-        Me.TitulZaMenomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -409,6 +409,12 @@ Partial Class hlavna_aplikacia
         Me.ŠtátnaPríslušnosťToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.ŠtátnaPríslušnosťToolStripMenuItem.Text = "Štátna príslušnosť"
         '
+        'TitulZaMenomToolStripMenuItem
+        '
+        Me.TitulZaMenomToolStripMenuItem.Name = "TitulZaMenomToolStripMenuItem"
+        Me.TitulZaMenomToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.TitulZaMenomToolStripMenuItem.Text = "Titul za menom"
+        '
         'ToolStrip
         '
         Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton})
@@ -507,7 +513,7 @@ Partial Class hlavna_aplikacia
         '
         'hlavny_splitter.Panel1
         '
-        Me.hlavny_splitter.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.hlavny_splitter.Panel1.BackColor = System.Drawing.Color.DarkGreen
         Me.hlavny_splitter.Panel1.Controls.Add(Me.sprava_zdruzeni_splitter)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.sprava_clenov_splitter)
         Me.hlavny_splitter.Size = New System.Drawing.Size(712, 445)
@@ -529,7 +535,7 @@ Partial Class hlavna_aplikacia
         '
         'sprava_zdruzeni_splitter.Panel2
         '
-        Me.sprava_zdruzeni_splitter.Panel2.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.sprava_zdruzeni_splitter.Panel2.BackColor = System.Drawing.Color.PaleGreen
         Me.sprava_zdruzeni_splitter.Panel2Collapsed = True
         Me.sprava_zdruzeni_splitter.Size = New System.Drawing.Size(138, 137)
         Me.sprava_zdruzeni_splitter.SplitterDistance = 25
@@ -538,6 +544,7 @@ Partial Class hlavna_aplikacia
         '
         'sprava_zdruzeni_button
         '
+        Me.sprava_zdruzeni_button.BackColor = System.Drawing.Color.Green
         Me.sprava_zdruzeni_button.FlatAppearance.BorderSize = 0
         Me.sprava_zdruzeni_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.sprava_zdruzeni_button.Location = New System.Drawing.Point(113, 2)
@@ -545,11 +552,11 @@ Partial Class hlavna_aplikacia
         Me.sprava_zdruzeni_button.Size = New System.Drawing.Size(22, 22)
         Me.sprava_zdruzeni_button.TabIndex = 1
         Me.sprava_zdruzeni_button.Text = "v"
-        Me.sprava_zdruzeni_button.UseVisualStyleBackColor = True
+        Me.sprava_zdruzeni_button.UseVisualStyleBackColor = False
         '
         'sprava_zdruzeni_label
         '
-        Me.sprava_zdruzeni_label.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.sprava_zdruzeni_label.BackColor = System.Drawing.Color.YellowGreen
         Me.sprava_zdruzeni_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.sprava_zdruzeni_label.Location = New System.Drawing.Point(0, 0)
         Me.sprava_zdruzeni_label.Name = "sprava_zdruzeni_label"
@@ -567,13 +574,13 @@ Partial Class hlavna_aplikacia
         '
         'sprava_clenov_splitter.Panel1
         '
-        Me.sprava_clenov_splitter.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.sprava_clenov_splitter.Panel1.BackColor = System.Drawing.Color.DarkGreen
         Me.sprava_clenov_splitter.Panel1.Controls.Add(Me.sprava_clenov_button)
         Me.sprava_clenov_splitter.Panel1.Controls.Add(Me.sprava_clenov_label)
         '
         'sprava_clenov_splitter.Panel2
         '
-        Me.sprava_clenov_splitter.Panel2.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.sprava_clenov_splitter.Panel2.BackColor = System.Drawing.Color.PaleGreen
         Me.sprava_clenov_splitter.Panel2.Controls.Add(Me.prehlad_clenov_button)
         Me.sprava_clenov_splitter.Panel2.Controls.Add(Me.karta_clena_button)
         Me.sprava_clenov_splitter.Panel2.Controls.Add(Me.edituj_clena_button)
@@ -586,6 +593,7 @@ Partial Class hlavna_aplikacia
         '
         'sprava_clenov_button
         '
+        Me.sprava_clenov_button.BackColor = System.Drawing.Color.Green
         Me.sprava_clenov_button.FlatAppearance.BorderSize = 0
         Me.sprava_clenov_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.sprava_clenov_button.Location = New System.Drawing.Point(113, 2)
@@ -593,11 +601,11 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_button.Size = New System.Drawing.Size(22, 22)
         Me.sprava_clenov_button.TabIndex = 1
         Me.sprava_clenov_button.Text = "v"
-        Me.sprava_clenov_button.UseVisualStyleBackColor = True
+        Me.sprava_clenov_button.UseVisualStyleBackColor = False
         '
         'sprava_clenov_label
         '
-        Me.sprava_clenov_label.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.sprava_clenov_label.BackColor = System.Drawing.Color.YellowGreen
         Me.sprava_clenov_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.sprava_clenov_label.Location = New System.Drawing.Point(0, 0)
         Me.sprava_clenov_label.Name = "sprava_clenov_label"
@@ -650,16 +658,11 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
         '
-        'TitulZaMenomToolStripMenuItem
-        '
-        Me.TitulZaMenomToolStripMenuItem.Name = "TitulZaMenomToolStripMenuItem"
-        Me.TitulZaMenomToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
-        Me.TitulZaMenomToolStripMenuItem.Text = "Titul za menom"
-        '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Green
         Me.ClientSize = New System.Drawing.Size(712, 516)
         Me.Controls.Add(Me.hlavny_splitter)
         Me.Controls.Add(Me.ToolStrip)
