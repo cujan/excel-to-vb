@@ -98,21 +98,25 @@ Partial Class evidencia_clenov
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(468, 31)
+        Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(370, 37)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(98, 23)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Koniec"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Text = "Zavrieť kartu"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'button_report_zoznam_clenov
         '
-        Me.button_report_zoznam_clenov.Location = New System.Drawing.Point(234, 31)
+        Me.button_report_zoznam_clenov.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.button_report_zoznam_clenov.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button_report_zoznam_clenov.Location = New System.Drawing.Point(179, 37)
         Me.button_report_zoznam_clenov.Name = "button_report_zoznam_clenov"
         Me.button_report_zoznam_clenov.Size = New System.Drawing.Size(185, 23)
         Me.button_report_zoznam_clenov.TabIndex = 4
-        Me.button_report_zoznam_clenov.Text = "Vytvor tlačovú formu zoznamu členov"
-        Me.button_report_zoznam_clenov.UseVisualStyleBackColor = True
+        Me.button_report_zoznam_clenov.Text = "Vytvoriť tlačovú formu zoznamu členov"
+        Me.button_report_zoznam_clenov.UseVisualStyleBackColor = False
         '
         'Prehlad_clenovDataSet
         '
@@ -572,12 +576,14 @@ Partial Class evidencia_clenov
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(575, 30)
+        Me.Button2.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Location = New System.Drawing.Point(474, 37)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(90, 23)
         Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Zmaž člena"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Text = "Vymazať člena"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'evidencia_clenov
         '
