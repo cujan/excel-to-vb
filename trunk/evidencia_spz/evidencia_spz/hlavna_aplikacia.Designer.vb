@@ -65,6 +65,9 @@ Partial Class hlavna_aplikacia
         Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.ČíselníkyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.TitulyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.ŠtátnaPríslušnosťToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStrip = New System.Windows.Forms.ToolStrip
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton
@@ -88,9 +91,7 @@ Partial Class hlavna_aplikacia
         Me.karta_clena_button = New System.Windows.Forms.Button
         Me.edituj_clena_button = New System.Windows.Forms.Button
         Me.novy_clen_button = New System.Windows.Forms.Button
-        Me.ČíselníkyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.TitulyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ŠtátnaPríslušnosťToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.TitulZaMenomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -389,6 +390,25 @@ Partial Class hlavna_aplikacia
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.AboutToolStripMenuItem.Text = "&About ..."
         '
+        'ČíselníkyToolStripMenuItem
+        '
+        Me.ČíselníkyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TitulyToolStripMenuItem, Me.ŠtátnaPríslušnosťToolStripMenuItem, Me.TitulZaMenomToolStripMenuItem})
+        Me.ČíselníkyToolStripMenuItem.Name = "ČíselníkyToolStripMenuItem"
+        Me.ČíselníkyToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
+        Me.ČíselníkyToolStripMenuItem.Text = "Číselníky"
+        '
+        'TitulyToolStripMenuItem
+        '
+        Me.TitulyToolStripMenuItem.Name = "TitulyToolStripMenuItem"
+        Me.TitulyToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.TitulyToolStripMenuItem.Text = "Tituly"
+        '
+        'ŠtátnaPríslušnosťToolStripMenuItem
+        '
+        Me.ŠtátnaPríslušnosťToolStripMenuItem.Name = "ŠtátnaPríslušnosťToolStripMenuItem"
+        Me.ŠtátnaPríslušnosťToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.ŠtátnaPríslušnosťToolStripMenuItem.Text = "Štátna príslušnosť"
+        '
         'ToolStrip
         '
         Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton})
@@ -630,24 +650,11 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
         '
-        'ČíselníkyToolStripMenuItem
+        'TitulZaMenomToolStripMenuItem
         '
-        Me.ČíselníkyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TitulyToolStripMenuItem, Me.ŠtátnaPríslušnosťToolStripMenuItem})
-        Me.ČíselníkyToolStripMenuItem.Name = "ČíselníkyToolStripMenuItem"
-        Me.ČíselníkyToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
-        Me.ČíselníkyToolStripMenuItem.Text = "Číselníky"
-        '
-        'TitulyToolStripMenuItem
-        '
-        Me.TitulyToolStripMenuItem.Name = "TitulyToolStripMenuItem"
-        Me.TitulyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.TitulyToolStripMenuItem.Text = "Tituly"
-        '
-        'ŠtátnaPríslušnosťToolStripMenuItem
-        '
-        Me.ŠtátnaPríslušnosťToolStripMenuItem.Name = "ŠtátnaPríslušnosťToolStripMenuItem"
-        Me.ŠtátnaPríslušnosťToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
-        Me.ŠtátnaPríslušnosťToolStripMenuItem.Text = "Štátna príslušnosť"
+        Me.TitulZaMenomToolStripMenuItem.Name = "TitulZaMenomToolStripMenuItem"
+        Me.TitulZaMenomToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.TitulZaMenomToolStripMenuItem.Text = "Titul za menom"
         '
         'hlavna_aplikacia
         '
@@ -746,5 +753,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents ČíselníkyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TitulyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ŠtátnaPríslušnosťToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TitulZaMenomToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
