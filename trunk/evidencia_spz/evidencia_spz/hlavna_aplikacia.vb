@@ -89,6 +89,7 @@ Public Class hlavna_aplikacia
 
     Private Sub sprava_clenov_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sprava_clenov_button.Click
         Dim sprava_clenov_splitter_position As New System.Drawing.Point
+        Dim sprava_zdruzeni_splitter_position As New System.Drawing.Point
 
         If sprava_clenov_button.Text = "v" Then
             sprava_clenov_splitter.Panel2Collapsed = False
@@ -96,12 +97,33 @@ Public Class hlavna_aplikacia
             sprava_clenov_splitter_position.Y = sprava_clenov_splitter.Location.Y + 154
             sprava_clenov_splitter_position.X = sprava_clenov_splitter.Location.X
             sprava_zdruzeni_splitter.Location = sprava_clenov_splitter_position
+
+            If sprava_zdruzeni_splitter.Panel2Collapsed = False Then
+
+                sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 154
+            Else
+                sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 34
+            End If
+
+            sprava_zdruzeni_splitter_position.X = sprava_zdruzeni_splitter.Location.X
+            nastavenia_splitter.Location = sprava_zdruzeni_splitter_position
+
         Else
             sprava_clenov_splitter.Panel2Collapsed = True
             sprava_clenov_button.Text = "v"
             sprava_clenov_splitter_position.Y = sprava_clenov_splitter.Location.Y + 34
             sprava_clenov_splitter_position.X = sprava_clenov_splitter.Location.X
             sprava_zdruzeni_splitter.Location = sprava_clenov_splitter_position
+
+            If sprava_zdruzeni_splitter.Panel2Collapsed = False Then
+
+                sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 154
+            Else
+                sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 34
+            End If
+            sprava_zdruzeni_splitter_position.X = sprava_zdruzeni_splitter.Location.X
+            nastavenia_splitter.Location = sprava_zdruzeni_splitter_position
+
         End If
 
     End Sub
@@ -133,13 +155,21 @@ Public Class hlavna_aplikacia
 
 
     Private Sub sprava_zdruzeni_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sprava_zdruzeni_button.Click
+        Dim sprava_zdruzeni_splitter_position As New System.Drawing.Point
 
         If sprava_zdruzeni_button.Text = "v" Then
             sprava_zdruzeni_button.Text = "^"
             sprava_zdruzeni_splitter.Panel2Collapsed = False
+            sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 154
+            sprava_zdruzeni_splitter_position.X = sprava_zdruzeni_splitter.Location.X
+            nastavenia_splitter.Location = sprava_zdruzeni_splitter_position
         Else
             sprava_zdruzeni_button.Text = "v"
             sprava_zdruzeni_splitter.Panel2Collapsed = True
+
+            sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 34
+            sprava_zdruzeni_splitter_position.X = sprava_zdruzeni_splitter.Location.X
+            nastavenia_splitter.Location = sprava_zdruzeni_splitter_position
 
         End If
 
@@ -181,5 +211,28 @@ Public Class hlavna_aplikacia
 
     Private Sub TitulZaMenomToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TitulZaMenomToolStripMenuItem.Click
         titul_za.Show()
+    End Sub
+
+
+
+
+    Private Sub nastavenia_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nastavenia_button.Click
+        If nastavenia_button.Text = "v" Then
+            nastavenia_button.Text = "^"
+            nastavenia_splitter.Panel2Collapsed = False
+        Else
+            nastavenia_button.Text = "v"
+            nastavenia_splitter.Panel2Collapsed = True
+
+        End If
+    End Sub
+
+    Private Sub hlavny_splitter_Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles hlavny_splitter.Panel1.Paint
+
+    End Sub
+
+    Private Sub nastavenia_ciselniky_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nastavenia_ciselniky_button.Click
+        ciselniky.Show()
+        ciselniky.BringToFront()
     End Sub
 End Class
