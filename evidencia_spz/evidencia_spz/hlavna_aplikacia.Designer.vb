@@ -121,6 +121,7 @@ Partial Class hlavna_aplikacia
         Me.FileMenu.Name = "FileMenu"
         Me.FileMenu.Size = New System.Drawing.Size(35, 20)
         Me.FileMenu.Text = "&File"
+        Me.FileMenu.Visible = False
         '
         'NewToolStripMenuItem
         '
@@ -205,6 +206,7 @@ Partial Class hlavna_aplikacia
         Me.EditMenu.Name = "EditMenu"
         Me.EditMenu.Size = New System.Drawing.Size(37, 20)
         Me.EditMenu.Text = "&Edit"
+        Me.EditMenu.Visible = False
         '
         'UndoToolStripMenuItem
         '
@@ -274,6 +276,7 @@ Partial Class hlavna_aplikacia
         Me.ViewMenu.Name = "ViewMenu"
         Me.ViewMenu.Size = New System.Drawing.Size(41, 20)
         Me.ViewMenu.Text = "&View"
+        Me.ViewMenu.Visible = False
         '
         'ToolBarToolStripMenuItem
         '
@@ -299,6 +302,7 @@ Partial Class hlavna_aplikacia
         Me.ToolsMenu.Name = "ToolsMenu"
         Me.ToolsMenu.Size = New System.Drawing.Size(44, 20)
         Me.ToolsMenu.Text = "&Tools"
+        Me.ToolsMenu.Visible = False
         '
         'OptionsToolStripMenuItem
         '
@@ -312,6 +316,7 @@ Partial Class hlavna_aplikacia
         Me.WindowsMenu.Name = "WindowsMenu"
         Me.WindowsMenu.Size = New System.Drawing.Size(62, 20)
         Me.WindowsMenu.Text = "&Windows"
+        Me.WindowsMenu.Visible = False
         '
         'NewWindowToolStripMenuItem
         '
@@ -355,6 +360,7 @@ Partial Class hlavna_aplikacia
         Me.HelpMenu.Name = "HelpMenu"
         Me.HelpMenu.Size = New System.Drawing.Size(40, 20)
         Me.HelpMenu.Text = "&Help"
+        Me.HelpMenu.Visible = False
         '
         'ContentsToolStripMenuItem
         '
@@ -432,6 +438,7 @@ Partial Class hlavna_aplikacia
         Me.NewToolStripButton.Name = "NewToolStripButton"
         Me.NewToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.NewToolStripButton.Text = "New"
+        Me.NewToolStripButton.Visible = False
         '
         'OpenToolStripButton
         '
@@ -441,6 +448,7 @@ Partial Class hlavna_aplikacia
         Me.OpenToolStripButton.Name = "OpenToolStripButton"
         Me.OpenToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.OpenToolStripButton.Text = "Open"
+        Me.OpenToolStripButton.Visible = False
         '
         'SaveToolStripButton
         '
@@ -450,11 +458,13 @@ Partial Class hlavna_aplikacia
         Me.SaveToolStripButton.Name = "SaveToolStripButton"
         Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.SaveToolStripButton.Text = "Save"
+        Me.SaveToolStripButton.Visible = False
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator1.Visible = False
         '
         'PrintToolStripButton
         '
@@ -464,6 +474,7 @@ Partial Class hlavna_aplikacia
         Me.PrintToolStripButton.Name = "PrintToolStripButton"
         Me.PrintToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.PrintToolStripButton.Text = "Print"
+        Me.PrintToolStripButton.Visible = False
         '
         'PrintPreviewToolStripButton
         '
@@ -473,11 +484,13 @@ Partial Class hlavna_aplikacia
         Me.PrintPreviewToolStripButton.Name = "PrintPreviewToolStripButton"
         Me.PrintPreviewToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.PrintPreviewToolStripButton.Text = "Print Preview"
+        Me.PrintPreviewToolStripButton.Visible = False
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator2.Visible = False
         '
         'HelpToolStripButton
         '
@@ -487,6 +500,7 @@ Partial Class hlavna_aplikacia
         Me.HelpToolStripButton.Name = "HelpToolStripButton"
         Me.HelpToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.HelpToolStripButton.Text = "Help"
+        Me.HelpToolStripButton.Visible = False
         '
         'StatusStrip
         '
