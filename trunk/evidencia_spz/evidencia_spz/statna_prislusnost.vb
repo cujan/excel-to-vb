@@ -8,7 +8,9 @@
     Private Sub statna_prislusnost_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Statna_prislusnostDataSet1.statna_prislusnost' table. You can move, or remove it, as needed.
         Me.Statna_prislusnostTableAdapter.Fill(Me.Statna_prislusnostDataSet1.statna_prislusnost)
-
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        ciselniky.ciselniky_splitter.Panel2.Controls.Add(Me)
     End Sub
 
     Private Sub Statna_prislusnostBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
