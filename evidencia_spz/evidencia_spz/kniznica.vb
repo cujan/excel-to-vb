@@ -34,4 +34,6 @@
         'ak je vsetko v poriadku
         Return True
     End Function
+
+    
 End Module

@@ -28,11 +28,15 @@
         Me.uloz.Visible = False
         Me.SkratkaTextBox.ReadOnly = True
         Me.NazovTextBox.ReadOnly = True
+        Me.Close()
+
 
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pridaj_titul.Click
         Me.TitulBindingSource.AddNew()
+        Me.Validate()
+        Me.TitulBindingSource.EndEdit()
         Me.uloz.Visible = True
         Me.SkratkaTextBox.ReadOnly = False
         Me.NazovTextBox.ReadOnly = False
@@ -56,5 +60,13 @@
         Me.Validate()
         Me.TitulBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.TitulDataSet1)
+    End Sub
+
+    Private Sub TitulDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles TitulDataGridView.CellContentClick
+
+    End Sub
+
+    Private Sub TitulDataGridView_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TitulDataGridView.Enter
+
     End Sub
 End Class
