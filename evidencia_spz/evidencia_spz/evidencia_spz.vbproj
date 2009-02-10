@@ -224,6 +224,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>spz_zoznam_clenov_reportDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="spz_zoznam_clenov_reportDataSet1.vb">
+      <DependentUpon>spz_zoznam_clenov_reportDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="statna_prislusnost.Designer.vb">
       <DependentUpon>statna_prislusnost.vb</DependentUpon>
     </Compile>
@@ -527,7 +530,8 @@
     <None Include="spz_clenovia_report_a4.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>spz_clenovia_report_a4.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
+      <SubType>
+      </SubType>
     </None>
     <None Include="spz_clenovia_report_a4.xss">
       <DependentUpon>spz_clenovia_report_a4.xsd</DependentUpon>

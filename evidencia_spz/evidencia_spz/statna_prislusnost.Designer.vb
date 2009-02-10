@@ -23,9 +23,9 @@ Partial Class statna_prislusnost
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(statna_prislusnost))
         Dim SkratkaLabel As System.Windows.Forms.Label
         Dim NazovLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(statna_prislusnost))
         Me.Statna_prislusnostDataSet1 = New evidencia_spz.statna_prislusnostDataSet1
         Me.Statna_prislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Statna_prislusnostTableAdapter = New evidencia_spz.statna_prislusnostDataSet1TableAdapters.statna_prislusnostTableAdapter
@@ -60,6 +60,24 @@ Partial Class statna_prislusnost
         Me.Statna_prislusnostBindingNavigator.SuspendLayout()
         CType(Me.Statna_prislusnostDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'SkratkaLabel
+        '
+        SkratkaLabel.AutoSize = True
+        SkratkaLabel.Location = New System.Drawing.Point(95, 72)
+        SkratkaLabel.Name = "SkratkaLabel"
+        SkratkaLabel.Size = New System.Drawing.Size(45, 13)
+        SkratkaLabel.TabIndex = 6
+        SkratkaLabel.Text = "skratka:"
+        '
+        'NazovLabel
+        '
+        NazovLabel.AutoSize = True
+        NazovLabel.Location = New System.Drawing.Point(95, 98)
+        NazovLabel.Name = "NazovLabel"
+        NazovLabel.Size = New System.Drawing.Size(39, 13)
+        NazovLabel.TabIndex = 8
+        NazovLabel.Text = "nazov:"
         '
         'Statna_prislusnostDataSet1
         '
@@ -223,31 +241,26 @@ Partial Class statna_prislusnost
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(501, 66)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Koniec"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'uloz
         '
+        Me.uloz.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.uloz.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.uloz.Location = New System.Drawing.Point(501, 98)
         Me.uloz.Name = "uloz"
         Me.uloz.Size = New System.Drawing.Size(75, 23)
         Me.uloz.TabIndex = 3
         Me.uloz.Text = "Ulož"
-        Me.uloz.UseVisualStyleBackColor = True
+        Me.uloz.UseVisualStyleBackColor = False
         Me.uloz.Visible = False
-        '
-        'SkratkaLabel
-        '
-        SkratkaLabel.AutoSize = True
-        SkratkaLabel.Location = New System.Drawing.Point(95, 72)
-        SkratkaLabel.Name = "SkratkaLabel"
-        SkratkaLabel.Size = New System.Drawing.Size(45, 13)
-        SkratkaLabel.TabIndex = 6
-        SkratkaLabel.Text = "skratka:"
         '
         'SkratkaTextBox
         '
@@ -257,15 +270,6 @@ Partial Class statna_prislusnost
         Me.SkratkaTextBox.ReadOnly = True
         Me.SkratkaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SkratkaTextBox.TabIndex = 7
-        '
-        'NazovLabel
-        '
-        NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(95, 98)
-        NazovLabel.Name = "NazovLabel"
-        NazovLabel.Size = New System.Drawing.Size(39, 13)
-        NazovLabel.TabIndex = 8
-        NazovLabel.Text = "nazov:"
         '
         'NazovTextBox
         '
@@ -278,21 +282,25 @@ Partial Class statna_prislusnost
         '
         'pridaj
         '
+        Me.pridaj.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.pridaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.pridaj.Location = New System.Drawing.Point(501, 127)
         Me.pridaj.Name = "pridaj"
         Me.pridaj.Size = New System.Drawing.Size(75, 23)
         Me.pridaj.TabIndex = 10
         Me.pridaj.Text = "Pridaj"
-        Me.pridaj.UseVisualStyleBackColor = True
+        Me.pridaj.UseVisualStyleBackColor = False
         '
         'zmaz
         '
+        Me.zmaz.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.zmaz.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.zmaz.Location = New System.Drawing.Point(501, 156)
         Me.zmaz.Name = "zmaz"
         Me.zmaz.Size = New System.Drawing.Size(75, 23)
         Me.zmaz.TabIndex = 11
         Me.zmaz.Text = "Zmaž"
-        Me.zmaz.UseVisualStyleBackColor = True
+        Me.zmaz.UseVisualStyleBackColor = False
         '
         'statna_prislusnost
         '

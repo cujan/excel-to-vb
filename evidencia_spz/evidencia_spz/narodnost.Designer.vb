@@ -23,27 +23,27 @@ Partial Class narodnost
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(narodnost))
         Dim SkratkaLabel As System.Windows.Forms.Label
         Dim NazovLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(narodnost))
         Me.NarodnostDataSet = New evidencia_spz.narodnostDataSet
         Me.NarodnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.NarodnostTableAdapter = New evidencia_spz.narodnostDataSetTableAdapters.narodnostTableAdapter
         Me.TableAdapterManager = New evidencia_spz.narodnostDataSetTableAdapters.TableAdapterManager
         Me.NarodnostBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.NarodnostDataGridView = New System.Windows.Forms.DataGridView
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.NarodnostBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
+        Me.NarodnostDataGridView = New System.Windows.Forms.DataGridView
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.SkratkaTextBox = New System.Windows.Forms.TextBox
@@ -60,6 +60,24 @@ Partial Class narodnost
         Me.NarodnostBindingNavigator.SuspendLayout()
         CType(Me.NarodnostDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'SkratkaLabel
+        '
+        SkratkaLabel.AutoSize = True
+        SkratkaLabel.Location = New System.Drawing.Point(66, 85)
+        SkratkaLabel.Name = "SkratkaLabel"
+        SkratkaLabel.Size = New System.Drawing.Size(45, 13)
+        SkratkaLabel.TabIndex = 4
+        SkratkaLabel.Text = "skratka:"
+        '
+        'NazovLabel
+        '
+        NazovLabel.AutoSize = True
+        NazovLabel.Location = New System.Drawing.Point(66, 111)
+        NazovLabel.Name = "NazovLabel"
+        NazovLabel.Size = New System.Drawing.Size(39, 13)
+        NazovLabel.TabIndex = 6
+        NazovLabel.Text = "nazov:"
         '
         'NarodnostDataSet
         '
@@ -99,51 +117,6 @@ Partial Class narodnost
         Me.NarodnostBindingNavigator.TabIndex = 0
         Me.NarodnostBindingNavigator.Text = "BindingNavigator1"
         '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'NarodnostDataGridView
-        '
-        Me.NarodnostDataGridView.AllowUserToAddRows = False
-        Me.NarodnostDataGridView.AllowUserToDeleteRows = False
-        Me.NarodnostDataGridView.AutoGenerateColumns = False
-        Me.NarodnostDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.NarodnostDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
-        Me.NarodnostDataGridView.DataSource = Me.NarodnostBindingSource
-        Me.NarodnostDataGridView.Location = New System.Drawing.Point(12, 186)
-        Me.NarodnostDataGridView.Name = "NarodnostDataGridView"
-        Me.NarodnostDataGridView.ReadOnly = True
-        Me.NarodnostDataGridView.Size = New System.Drawing.Size(300, 220)
-        Me.NarodnostDataGridView.TabIndex = 1
-        '
         'BindingNavigatorAddNewItem
         '
         Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -152,6 +125,13 @@ Partial Class narodnost
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorDeleteItem
         '
@@ -180,6 +160,25 @@ Partial Class narodnost
         Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
         '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
         'BindingNavigatorMoveNextItem
         '
         Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -198,6 +197,11 @@ Partial Class narodnost
         Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
         'NarodnostBindingNavigatorSaveItem
         '
         Me.NarodnostBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -205,6 +209,20 @@ Partial Class narodnost
         Me.NarodnostBindingNavigatorSaveItem.Name = "NarodnostBindingNavigatorSaveItem"
         Me.NarodnostBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.NarodnostBindingNavigatorSaveItem.Text = "Save Data"
+        '
+        'NarodnostDataGridView
+        '
+        Me.NarodnostDataGridView.AllowUserToAddRows = False
+        Me.NarodnostDataGridView.AllowUserToDeleteRows = False
+        Me.NarodnostDataGridView.AutoGenerateColumns = False
+        Me.NarodnostDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.NarodnostDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
+        Me.NarodnostDataGridView.DataSource = Me.NarodnostBindingSource
+        Me.NarodnostDataGridView.Location = New System.Drawing.Point(12, 186)
+        Me.NarodnostDataGridView.Name = "NarodnostDataGridView"
+        Me.NarodnostDataGridView.ReadOnly = True
+        Me.NarodnostDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.NarodnostDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn2
         '
@@ -220,15 +238,6 @@ Partial Class narodnost
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
-        'SkratkaLabel
-        '
-        SkratkaLabel.AutoSize = True
-        SkratkaLabel.Location = New System.Drawing.Point(66, 85)
-        SkratkaLabel.Name = "SkratkaLabel"
-        SkratkaLabel.Size = New System.Drawing.Size(45, 13)
-        SkratkaLabel.TabIndex = 4
-        SkratkaLabel.Text = "skratka:"
-        '
         'SkratkaTextBox
         '
         Me.SkratkaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NarodnostBindingSource, "skratka", True))
@@ -236,15 +245,6 @@ Partial Class narodnost
         Me.SkratkaTextBox.Name = "SkratkaTextBox"
         Me.SkratkaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SkratkaTextBox.TabIndex = 5
-        '
-        'NazovLabel
-        '
-        NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(66, 111)
-        NazovLabel.Name = "NazovLabel"
-        NazovLabel.Size = New System.Drawing.Size(39, 13)
-        NazovLabel.TabIndex = 6
-        NazovLabel.Text = "nazov:"
         '
         'NazovTextBox
         '
@@ -256,44 +256,53 @@ Partial Class narodnost
         '
         'koniec
         '
+        Me.koniec.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.koniec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.koniec.Location = New System.Drawing.Point(402, 63)
         Me.koniec.Name = "koniec"
         Me.koniec.Size = New System.Drawing.Size(75, 23)
         Me.koniec.TabIndex = 8
         Me.koniec.Text = "koniec"
-        Me.koniec.UseVisualStyleBackColor = True
+        Me.koniec.UseVisualStyleBackColor = False
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Location = New System.Drawing.Point(402, 100)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 9
         Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
+        Me.Button3.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Location = New System.Drawing.Point(402, 130)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 10
         Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Button4
         '
+        Me.Button4.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Location = New System.Drawing.Point(402, 160)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 11
         Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.UseVisualStyleBackColor = False
         '
         'narodnost
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(539, 437)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -305,6 +314,7 @@ Partial Class narodnost
         Me.Controls.Add(Me.NazovTextBox)
         Me.Controls.Add(Me.NarodnostDataGridView)
         Me.Controls.Add(Me.NarodnostBindingNavigator)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "narodnost"
         Me.Text = "narodnost"
         CType(Me.NarodnostDataSet, System.ComponentModel.ISupportInitialize).EndInit()
