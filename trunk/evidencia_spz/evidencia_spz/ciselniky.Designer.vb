@@ -23,10 +23,11 @@ Partial Class ciselniky
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ciselniky_splitter = New System.Windows.Forms.SplitContainer
-        Me.tituly_button = New System.Windows.Forms.Button
-        Me.st_prisl_button = New System.Windows.Forms.Button
-        Me.titul_za_button = New System.Windows.Forms.Button
         Me.zavriet_button = New System.Windows.Forms.Button
+        Me.titul_za_button = New System.Windows.Forms.Button
+        Me.st_prisl_button = New System.Windows.Forms.Button
+        Me.tituly_button = New System.Windows.Forms.Button
+        Me.narodnost_button = New System.Windows.Forms.Button
         Me.ciselniky_splitter.Panel1.SuspendLayout()
         Me.ciselniky_splitter.SuspendLayout()
         Me.SuspendLayout()
@@ -41,6 +42,7 @@ Partial Class ciselniky
         '
         'ciselniky_splitter.Panel1
         '
+        Me.ciselniky_splitter.Panel1.Controls.Add(Me.narodnost_button)
         Me.ciselniky_splitter.Panel1.Controls.Add(Me.zavriet_button)
         Me.ciselniky_splitter.Panel1.Controls.Add(Me.titul_za_button)
         Me.ciselniky_splitter.Panel1.Controls.Add(Me.st_prisl_button)
@@ -52,27 +54,16 @@ Partial Class ciselniky
         Me.ciselniky_splitter.SplitterDistance = 53
         Me.ciselniky_splitter.TabIndex = 0
         '
-        'tituly_button
+        'zavriet_button
         '
-        Me.tituly_button.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.tituly_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.tituly_button.Location = New System.Drawing.Point(184, 12)
-        Me.tituly_button.Name = "tituly_button"
-        Me.tituly_button.Size = New System.Drawing.Size(75, 23)
-        Me.tituly_button.TabIndex = 0
-        Me.tituly_button.Text = "Tituly"
-        Me.tituly_button.UseVisualStyleBackColor = False
-        '
-        'st_prisl_button
-        '
-        Me.st_prisl_button.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.st_prisl_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.st_prisl_button.Location = New System.Drawing.Point(265, 12)
-        Me.st_prisl_button.Name = "st_prisl_button"
-        Me.st_prisl_button.Size = New System.Drawing.Size(103, 23)
-        Me.st_prisl_button.TabIndex = 1
-        Me.st_prisl_button.Text = "Štátna príslušnosť"
-        Me.st_prisl_button.UseVisualStyleBackColor = False
+        Me.zavriet_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.zavriet_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.zavriet_button.Location = New System.Drawing.Point(560, 12)
+        Me.zavriet_button.Name = "zavriet_button"
+        Me.zavriet_button.Size = New System.Drawing.Size(82, 23)
+        Me.zavriet_button.TabIndex = 3
+        Me.zavriet_button.Text = "Zavrieť kartu"
+        Me.zavriet_button.UseVisualStyleBackColor = False
         '
         'titul_za_button
         '
@@ -85,16 +76,38 @@ Partial Class ciselniky
         Me.titul_za_button.Text = "Titul za menom"
         Me.titul_za_button.UseVisualStyleBackColor = False
         '
-        'zavriet_button
+        'st_prisl_button
         '
-        Me.zavriet_button.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.zavriet_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.zavriet_button.Location = New System.Drawing.Point(479, 12)
-        Me.zavriet_button.Name = "zavriet_button"
-        Me.zavriet_button.Size = New System.Drawing.Size(82, 23)
-        Me.zavriet_button.TabIndex = 3
-        Me.zavriet_button.Text = "Zavrieť kartu"
-        Me.zavriet_button.UseVisualStyleBackColor = False
+        Me.st_prisl_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.st_prisl_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.st_prisl_button.Location = New System.Drawing.Point(265, 12)
+        Me.st_prisl_button.Name = "st_prisl_button"
+        Me.st_prisl_button.Size = New System.Drawing.Size(103, 23)
+        Me.st_prisl_button.TabIndex = 1
+        Me.st_prisl_button.Text = "Štátna príslušnosť"
+        Me.st_prisl_button.UseVisualStyleBackColor = False
+        '
+        'tituly_button
+        '
+        Me.tituly_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.tituly_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.tituly_button.Location = New System.Drawing.Point(184, 12)
+        Me.tituly_button.Name = "tituly_button"
+        Me.tituly_button.Size = New System.Drawing.Size(75, 23)
+        Me.tituly_button.TabIndex = 0
+        Me.tituly_button.Text = "Tituly"
+        Me.tituly_button.UseVisualStyleBackColor = False
+        '
+        'narodnost_button
+        '
+        Me.narodnost_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.narodnost_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.narodnost_button.Location = New System.Drawing.Point(479, 12)
+        Me.narodnost_button.Name = "narodnost_button"
+        Me.narodnost_button.Size = New System.Drawing.Size(75, 23)
+        Me.narodnost_button.TabIndex = 4
+        Me.narodnost_button.Text = "Národnosť"
+        Me.narodnost_button.UseVisualStyleBackColor = False
         '
         'ciselniky
         '
@@ -116,4 +129,5 @@ Partial Class ciselniky
     Friend WithEvents st_prisl_button As System.Windows.Forms.Button
     Friend WithEvents tituly_button As System.Windows.Forms.Button
     Friend WithEvents zavriet_button As System.Windows.Forms.Button
+    Friend WithEvents narodnost_button As System.Windows.Forms.Button
 End Class

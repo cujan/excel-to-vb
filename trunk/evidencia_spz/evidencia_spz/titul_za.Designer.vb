@@ -23,8 +23,8 @@ Partial Class titul_za
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(titul_za))
         Dim NazovLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(titul_za))
         Me.TitulzaDataSet = New evidencia_spz.titulzaDataSet
         Me.Titul_zaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Titul_zaTableAdapter = New evidencia_spz.titulzaDataSetTableAdapters.titul_zaTableAdapter
@@ -56,6 +56,15 @@ Partial Class titul_za
         Me.Titul_zaBindingNavigator.SuspendLayout()
         CType(Me.Titul_zaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'NazovLabel
+        '
+        NazovLabel.AutoSize = True
+        NazovLabel.Location = New System.Drawing.Point(78, 96)
+        NazovLabel.Name = "NazovLabel"
+        NazovLabel.Size = New System.Drawing.Size(39, 13)
+        NazovLabel.TabIndex = 8
+        NazovLabel.Text = "nazov:"
         '
         'TitulzaDataSet
         '
@@ -212,49 +221,48 @@ Partial Class titul_za
         '
         'koniec
         '
+        Me.koniec.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.koniec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.koniec.Location = New System.Drawing.Point(435, 65)
         Me.koniec.Name = "koniec"
         Me.koniec.Size = New System.Drawing.Size(75, 23)
         Me.koniec.TabIndex = 2
         Me.koniec.Text = "koniec"
-        Me.koniec.UseVisualStyleBackColor = True
+        Me.koniec.UseVisualStyleBackColor = False
         '
         'pridaj
         '
+        Me.pridaj.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.pridaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.pridaj.Location = New System.Drawing.Point(435, 95)
         Me.pridaj.Name = "pridaj"
         Me.pridaj.Size = New System.Drawing.Size(75, 23)
         Me.pridaj.TabIndex = 3
         Me.pridaj.Text = "Pridaj"
-        Me.pridaj.UseVisualStyleBackColor = True
+        Me.pridaj.UseVisualStyleBackColor = False
         '
         'uloz
         '
+        Me.uloz.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.uloz.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.uloz.Location = New System.Drawing.Point(435, 125)
         Me.uloz.Name = "uloz"
         Me.uloz.Size = New System.Drawing.Size(75, 23)
         Me.uloz.TabIndex = 4
         Me.uloz.Text = "Uloz"
-        Me.uloz.UseVisualStyleBackColor = True
+        Me.uloz.UseVisualStyleBackColor = False
         Me.uloz.Visible = False
         '
         'zmaz
         '
+        Me.zmaz.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.zmaz.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.zmaz.Location = New System.Drawing.Point(435, 155)
         Me.zmaz.Name = "zmaz"
         Me.zmaz.Size = New System.Drawing.Size(75, 23)
         Me.zmaz.TabIndex = 5
         Me.zmaz.Text = "zmaz"
-        Me.zmaz.UseVisualStyleBackColor = True
-        '
-        'NazovLabel
-        '
-        NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(78, 96)
-        NazovLabel.Name = "NazovLabel"
-        NazovLabel.Size = New System.Drawing.Size(39, 13)
-        NazovLabel.TabIndex = 8
-        NazovLabel.Text = "nazov:"
+        Me.zmaz.UseVisualStyleBackColor = False
         '
         'NazovTextBox
         '

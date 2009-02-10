@@ -221,21 +221,25 @@ Partial Class titul
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(586, 56)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Koniec"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'uloz
         '
+        Me.uloz.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.uloz.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.uloz.Location = New System.Drawing.Point(586, 99)
         Me.uloz.Name = "uloz"
         Me.uloz.Size = New System.Drawing.Size(75, 23)
         Me.uloz.TabIndex = 3
         Me.uloz.Text = "Ulož"
-        Me.uloz.UseVisualStyleBackColor = True
+        Me.uloz.UseVisualStyleBackColor = False
         Me.uloz.Visible = False
         '
         'SkratkaTextBox
@@ -258,12 +262,14 @@ Partial Class titul
         '
         'pridaj_titul
         '
+        Me.pridaj_titul.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.pridaj_titul.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.pridaj_titul.Location = New System.Drawing.Point(586, 166)
         Me.pridaj_titul.Name = "pridaj_titul"
         Me.pridaj_titul.Size = New System.Drawing.Size(75, 23)
         Me.pridaj_titul.TabIndex = 10
         Me.pridaj_titul.Text = "Pridaj titul"
-        Me.pridaj_titul.UseVisualStyleBackColor = True
+        Me.pridaj_titul.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -285,12 +291,14 @@ Partial Class titul
         '
         'zmaz
         '
+        Me.zmaz.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.zmaz.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.zmaz.Location = New System.Drawing.Point(586, 206)
         Me.zmaz.Name = "zmaz"
         Me.zmaz.Size = New System.Drawing.Size(75, 23)
         Me.zmaz.TabIndex = 13
         Me.zmaz.Text = "Zmaž titul"
-        Me.zmaz.UseVisualStyleBackColor = True
+        Me.zmaz.UseVisualStyleBackColor = False
         '
         'titul
         '

@@ -31,4 +31,10 @@
     Private Sub SplitContainer1_Panel2_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles ciselniky_splitter.Panel2.Paint
 
     End Sub
+
+    Private Sub narodnost_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles narodnost_button.Click
+        narodnost.Show()
+        narodnost.BringToFront()
+
+    End Sub
 End Class

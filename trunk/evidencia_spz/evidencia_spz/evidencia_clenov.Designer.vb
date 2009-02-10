@@ -100,7 +100,7 @@ Partial Class evidencia_clenov
         '
         Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(370, 37)
+        Me.Button1.Location = New System.Drawing.Point(466, 37)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(98, 23)
         Me.Button1.TabIndex = 2
@@ -578,7 +578,7 @@ Partial Class evidencia_clenov
         '
         Me.Button2.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(474, 37)
+        Me.Button2.Location = New System.Drawing.Point(370, 37)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(90, 23)
         Me.Button2.TabIndex = 6
