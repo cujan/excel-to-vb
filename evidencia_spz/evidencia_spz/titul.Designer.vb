@@ -45,7 +45,13 @@ Partial Class titul
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
+        Me.uloz = New System.Windows.Forms.Button
+        Me.SkratkaTextBox = New System.Windows.Forms.TextBox
+        Me.NazovTextBox = New System.Windows.Forms.TextBox
+        Me.pridaj_titul = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.zmaz = New System.Windows.Forms.Button
         CType(Me.TitulDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,7 +93,7 @@ Partial Class titul
         Me.TitulBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.TitulBindingNavigator.Name = "TitulBindingNavigator"
         Me.TitulBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.TitulBindingNavigator.Size = New System.Drawing.Size(645, 25)
+        Me.TitulBindingNavigator.Size = New System.Drawing.Size(766, 25)
         Me.TitulBindingNavigator.TabIndex = 0
         Me.TitulBindingNavigator.Text = "BindingNavigator1"
         '
@@ -186,12 +192,15 @@ Partial Class titul
         '
         'TitulDataGridView
         '
+        Me.TitulDataGridView.AllowUserToAddRows = False
+        Me.TitulDataGridView.AllowUserToDeleteRows = False
         Me.TitulDataGridView.AutoGenerateColumns = False
         Me.TitulDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TitulDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.TitulDataGridView.DataSource = Me.TitulBindingSource
-        Me.TitulDataGridView.Location = New System.Drawing.Point(122, 81)
+        Me.TitulDataGridView.Location = New System.Drawing.Point(116, 206)
         Me.TitulDataGridView.Name = "TitulDataGridView"
+        Me.TitulDataGridView.ReadOnly = True
         Me.TitulDataGridView.Size = New System.Drawing.Size(300, 220)
         Me.TitulDataGridView.TabIndex = 1
         '
@@ -200,37 +209,100 @@ Partial Class titul
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "skratka"
         Me.DataGridViewTextBoxColumn2.HeaderText = "skratka"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "nazov"
         Me.DataGridViewTextBoxColumn3.HeaderText = "nazov"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(506, 57)
+        Me.Button1.Location = New System.Drawing.Point(586, 56)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Koniec"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'uloz
         '
-        Me.Button2.Location = New System.Drawing.Point(506, 99)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Ulož"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.uloz.Location = New System.Drawing.Point(586, 99)
+        Me.uloz.Name = "uloz"
+        Me.uloz.Size = New System.Drawing.Size(75, 23)
+        Me.uloz.TabIndex = 3
+        Me.uloz.Text = "Ulož"
+        Me.uloz.UseVisualStyleBackColor = True
+        Me.uloz.Visible = False
+        '
+        'SkratkaTextBox
+        '
+        Me.SkratkaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TitulBindingSource, "skratka", True))
+        Me.SkratkaTextBox.Location = New System.Drawing.Point(158, 84)
+        Me.SkratkaTextBox.Name = "SkratkaTextBox"
+        Me.SkratkaTextBox.ReadOnly = True
+        Me.SkratkaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.SkratkaTextBox.TabIndex = 7
+        '
+        'NazovTextBox
+        '
+        Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TitulBindingSource, "nazov", True))
+        Me.NazovTextBox.Location = New System.Drawing.Point(158, 110)
+        Me.NazovTextBox.Name = "NazovTextBox"
+        Me.NazovTextBox.ReadOnly = True
+        Me.NazovTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NazovTextBox.TabIndex = 9
+        '
+        'pridaj_titul
+        '
+        Me.pridaj_titul.Location = New System.Drawing.Point(586, 166)
+        Me.pridaj_titul.Name = "pridaj_titul"
+        Me.pridaj_titul.Size = New System.Drawing.Size(75, 23)
+        Me.pridaj_titul.TabIndex = 10
+        Me.pridaj_titul.Text = "Pridaj titul"
+        Me.pridaj_titul.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(89, 84)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(44, 13)
+        Me.Label1.TabIndex = 11
+        Me.Label1.Text = "Skratka"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(92, 116)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(38, 13)
+        Me.Label2.TabIndex = 12
+        Me.Label2.Text = "Názov"
+        '
+        'zmaz
+        '
+        Me.zmaz.Location = New System.Drawing.Point(586, 206)
+        Me.zmaz.Name = "zmaz"
+        Me.zmaz.Size = New System.Drawing.Size(75, 23)
+        Me.zmaz.TabIndex = 13
+        Me.zmaz.Text = "Zmaž titul"
+        Me.zmaz.UseVisualStyleBackColor = True
         '
         'titul
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(645, 321)
-        Me.Controls.Add(Me.Button2)
+        Me.ClientSize = New System.Drawing.Size(766, 488)
+        Me.Controls.Add(Me.zmaz)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.pridaj_titul)
+        Me.Controls.Add(Me.SkratkaTextBox)
+        Me.Controls.Add(Me.NazovTextBox)
+        Me.Controls.Add(Me.uloz)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TitulDataGridView)
         Me.Controls.Add(Me.TitulBindingNavigator)
@@ -267,5 +339,11 @@ Partial Class titul
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents uloz As System.Windows.Forms.Button
+    Friend WithEvents SkratkaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents NazovTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents pridaj_titul As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents zmaz As System.Windows.Forms.Button
 End Class
