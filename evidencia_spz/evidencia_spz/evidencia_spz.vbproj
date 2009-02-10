@@ -99,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="ciselniky.Designer.vb">
+      <DependentUpon>ciselniky.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ciselniky.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="clenoviaDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -276,6 +282,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ciselniky.resx">
+      <DependentUpon>ciselniky.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="detaily_clena.resx">
       <DependentUpon>detaily_clena.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -507,7 +517,8 @@
     <None Include="spz_clenovia_report_a4.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>spz_clenovia_report_a4.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
+      <SubType>
+      </SubType>
     </None>
     <None Include="spz_clenovia_report_a4.xss">
       <DependentUpon>spz_clenovia_report_a4.xsd</DependentUpon>
