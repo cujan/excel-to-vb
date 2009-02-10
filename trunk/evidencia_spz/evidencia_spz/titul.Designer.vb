@@ -96,6 +96,7 @@ Partial Class titul
         Me.TitulBindingNavigator.Size = New System.Drawing.Size(766, 25)
         Me.TitulBindingNavigator.TabIndex = 0
         Me.TitulBindingNavigator.Text = "BindingNavigator1"
+        Me.TitulBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
@@ -109,7 +110,7 @@ Partial Class titul
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '

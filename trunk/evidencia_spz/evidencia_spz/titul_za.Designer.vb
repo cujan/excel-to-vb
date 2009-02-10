@@ -24,6 +24,7 @@ Partial Class titul_za
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(titul_za))
+        Dim NazovLabel As System.Windows.Forms.Label
         Me.TitulzaDataSet = New evidencia_spz.titulzaDataSet
         Me.Titul_zaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Titul_zaTableAdapter = New evidencia_spz.titulzaDataSetTableAdapters.titul_zaTableAdapter
@@ -43,6 +44,12 @@ Partial Class titul_za
         Me.Titul_zaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.Titul_zaDataGridView = New System.Windows.Forms.DataGridView
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.koniec = New System.Windows.Forms.Button
+        Me.pridaj = New System.Windows.Forms.Button
+        Me.uloz = New System.Windows.Forms.Button
+        Me.zmaz = New System.Windows.Forms.Button
+        Me.NazovTextBox = New System.Windows.Forms.TextBox
+        NazovLabel = New System.Windows.Forms.Label
         CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Titul_zaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Titul_zaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,6 +94,7 @@ Partial Class titul_za
         Me.Titul_zaBindingNavigator.Size = New System.Drawing.Size(633, 25)
         Me.Titul_zaBindingNavigator.TabIndex = 0
         Me.Titul_zaBindingNavigator.Text = "BindingNavigator1"
+        Me.Titul_zaBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
@@ -100,7 +108,7 @@ Partial Class titul_za
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -183,12 +191,15 @@ Partial Class titul_za
         '
         'Titul_zaDataGridView
         '
+        Me.Titul_zaDataGridView.AllowUserToAddRows = False
+        Me.Titul_zaDataGridView.AllowUserToDeleteRows = False
         Me.Titul_zaDataGridView.AutoGenerateColumns = False
         Me.Titul_zaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Titul_zaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2})
         Me.Titul_zaDataGridView.DataSource = Me.Titul_zaBindingSource
-        Me.Titul_zaDataGridView.Location = New System.Drawing.Point(45, 115)
+        Me.Titul_zaDataGridView.Location = New System.Drawing.Point(12, 176)
         Me.Titul_zaDataGridView.Name = "Titul_zaDataGridView"
+        Me.Titul_zaDataGridView.ReadOnly = True
         Me.Titul_zaDataGridView.Size = New System.Drawing.Size(300, 220)
         Me.Titul_zaDataGridView.TabIndex = 1
         '
@@ -197,6 +208,62 @@ Partial Class titul_za
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "nazov"
         Me.DataGridViewTextBoxColumn2.HeaderText = "nazov"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'koniec
+        '
+        Me.koniec.Location = New System.Drawing.Point(435, 65)
+        Me.koniec.Name = "koniec"
+        Me.koniec.Size = New System.Drawing.Size(75, 23)
+        Me.koniec.TabIndex = 2
+        Me.koniec.Text = "koniec"
+        Me.koniec.UseVisualStyleBackColor = True
+        '
+        'pridaj
+        '
+        Me.pridaj.Location = New System.Drawing.Point(435, 95)
+        Me.pridaj.Name = "pridaj"
+        Me.pridaj.Size = New System.Drawing.Size(75, 23)
+        Me.pridaj.TabIndex = 3
+        Me.pridaj.Text = "Pridaj"
+        Me.pridaj.UseVisualStyleBackColor = True
+        '
+        'uloz
+        '
+        Me.uloz.Location = New System.Drawing.Point(435, 125)
+        Me.uloz.Name = "uloz"
+        Me.uloz.Size = New System.Drawing.Size(75, 23)
+        Me.uloz.TabIndex = 4
+        Me.uloz.Text = "Uloz"
+        Me.uloz.UseVisualStyleBackColor = True
+        Me.uloz.Visible = False
+        '
+        'zmaz
+        '
+        Me.zmaz.Location = New System.Drawing.Point(435, 155)
+        Me.zmaz.Name = "zmaz"
+        Me.zmaz.Size = New System.Drawing.Size(75, 23)
+        Me.zmaz.TabIndex = 5
+        Me.zmaz.Text = "zmaz"
+        Me.zmaz.UseVisualStyleBackColor = True
+        '
+        'NazovLabel
+        '
+        NazovLabel.AutoSize = True
+        NazovLabel.Location = New System.Drawing.Point(78, 96)
+        NazovLabel.Name = "NazovLabel"
+        NazovLabel.Size = New System.Drawing.Size(39, 13)
+        NazovLabel.TabIndex = 8
+        NazovLabel.Text = "nazov:"
+        '
+        'NazovTextBox
+        '
+        Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Titul_zaBindingSource, "nazov", True))
+        Me.NazovTextBox.Location = New System.Drawing.Point(123, 93)
+        Me.NazovTextBox.Name = "NazovTextBox"
+        Me.NazovTextBox.ReadOnly = True
+        Me.NazovTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NazovTextBox.TabIndex = 9
         '
         'titul_za
         '
@@ -204,6 +271,12 @@ Partial Class titul_za
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(633, 519)
+        Me.Controls.Add(NazovLabel)
+        Me.Controls.Add(Me.NazovTextBox)
+        Me.Controls.Add(Me.zmaz)
+        Me.Controls.Add(Me.uloz)
+        Me.Controls.Add(Me.pridaj)
+        Me.Controls.Add(Me.koniec)
         Me.Controls.Add(Me.Titul_zaDataGridView)
         Me.Controls.Add(Me.Titul_zaBindingNavigator)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -238,4 +311,9 @@ Partial Class titul_za
     Friend WithEvents Titul_zaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents Titul_zaDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents koniec As System.Windows.Forms.Button
+    Friend WithEvents pridaj As System.Windows.Forms.Button
+    Friend WithEvents uloz As System.Windows.Forms.Button
+    Friend WithEvents zmaz As System.Windows.Forms.Button
+    Friend WithEvents NazovTextBox As System.Windows.Forms.TextBox
 End Class
