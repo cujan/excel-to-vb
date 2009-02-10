@@ -17,7 +17,39 @@
         Me.Close()
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles uloz.Click
+        Me.Validate()
+        Me.TitulBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.TitulDataSet1)
+        Me.pridaj_titul.Visible = True
+        Me.uloz.Visible = False
+        Me.SkratkaTextBox.ReadOnly = True
+        Me.NazovTextBox.ReadOnly = True
+
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pridaj_titul.Click
+        Me.TitulBindingSource.AddNew()
+        Me.uloz.Visible = True
+        Me.SkratkaTextBox.ReadOnly = False
+        Me.NazovTextBox.ReadOnly = False
+        Me.pridaj_titul.Visible = False
+
+
+    End Sub
+
+    Private Sub uprav_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.SkratkaTextBox.ReadOnly = False
+        Me.NazovTextBox.ReadOnly = False
+        Me.uloz.Visible = True
+    End Sub
+
+    Private Sub BindingNavigatorDeleteItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BindingNavigatorDeleteItem.Click
+
+    End Sub
+
+    Private Sub zmaz_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zmaz.Click
+        Me.TitulBindingSource.RemoveCurrent()
         Me.Validate()
         Me.TitulBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.TitulDataSet1)
