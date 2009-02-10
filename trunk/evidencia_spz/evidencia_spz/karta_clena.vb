@@ -6,6 +6,8 @@
     End Sub
 
     Private Sub karta_clena_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'ClenoviaDataSet1.clenovia' table. You can move, or remove it, as needed.
+        Me.ClenoviaTableAdapter.Fill(Me.ClenoviaDataSet1.clenovia)
         'TODO: This line of code loads data into the 'Spz_evidenciaDataSet.clenovia' table. You can move, or remove it, as needed.
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
@@ -258,6 +260,13 @@
     End Sub
 
     Private Sub TitulTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub ClenoviaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClenoviaBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.ClenoviaBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.ClenoviaDataSet1)
 
     End Sub
 End Class
