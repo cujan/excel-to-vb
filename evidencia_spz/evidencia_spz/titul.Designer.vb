@@ -109,7 +109,7 @@ Partial Class titul
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -295,6 +295,7 @@ Partial Class titul
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(766, 488)
         Me.Controls.Add(Me.zmaz)
         Me.Controls.Add(Me.Label2)
@@ -306,6 +307,7 @@ Partial Class titul
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TitulDataGridView)
         Me.Controls.Add(Me.TitulBindingNavigator)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "titul"
         Me.Text = "titul"
         CType(Me.TitulDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
