@@ -162,6 +162,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="narodnost.Designer.vb">
+      <DependentUpon>narodnost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="narodnost.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="narodnostDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -314,6 +320,10 @@
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="narodnost.resx">
+      <DependentUpon>narodnost.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="nove_zdruzenie.resx">
