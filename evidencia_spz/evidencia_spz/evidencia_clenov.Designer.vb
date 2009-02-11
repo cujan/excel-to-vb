@@ -24,8 +24,6 @@ Partial Class evidencia_clenov
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(evidencia_clenov))
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.button_report_zoznam_clenov = New System.Windows.Forms.Button
         Me.Prehlad_clenovDataSet = New evidencia_spz.prehlad_clenovDataSet
         Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClenoviaTableAdapter = New evidencia_spz.prehlad_clenovDataSetTableAdapters.clenoviaTableAdapter
@@ -52,35 +50,12 @@ Partial Class evidencia_clenov
         Me.DataGridViewTextBoxColumn53 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn88 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Button2 = New System.Windows.Forms.Button
-        Me.karta_clena_tlac_button = New System.Windows.Forms.Button
         CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClenoviaBindingNavigator.SuspendLayout()
         CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(506, 35)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(98, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Zavrieť kartu"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'button_report_zoznam_clenov
-        '
-        Me.button_report_zoznam_clenov.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.button_report_zoznam_clenov.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.button_report_zoznam_clenov.Location = New System.Drawing.Point(114, 35)
-        Me.button_report_zoznam_clenov.Name = "button_report_zoznam_clenov"
-        Me.button_report_zoznam_clenov.Size = New System.Drawing.Size(167, 23)
-        Me.button_report_zoznam_clenov.TabIndex = 4
-        Me.button_report_zoznam_clenov.Text = "Vytvoriť tlačovú formu zoznamu členov"
-        Me.button_report_zoznam_clenov.UseVisualStyleBackColor = False
         '
         'Prehlad_clenovDataSet
         '
@@ -133,7 +108,7 @@ Partial Class evidencia_clenov
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -225,10 +200,10 @@ Partial Class evidencia_clenov
         Me.ClenoviaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ClenoviaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn46, Me.DataGridViewTextBoxColumn48, Me.DataGridViewTextBoxColumn47, Me.DataGridViewTextBoxColumn49, Me.DataGridViewTextBoxColumn52, Me.DataGridViewTextBoxColumn53, Me.DataGridViewTextBoxColumn88})
         Me.ClenoviaDataGridView.DataSource = Me.ClenoviaBindingSource
-        Me.ClenoviaDataGridView.Location = New System.Drawing.Point(12, 77)
+        Me.ClenoviaDataGridView.Location = New System.Drawing.Point(12, 42)
         Me.ClenoviaDataGridView.Name = "ClenoviaDataGridView"
         Me.ClenoviaDataGridView.ReadOnly = True
-        Me.ClenoviaDataGridView.Size = New System.Drawing.Size(773, 335)
+        Me.ClenoviaDataGridView.Size = New System.Drawing.Size(759, 335)
         Me.ClenoviaDataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn46
@@ -284,36 +259,22 @@ Partial Class evidencia_clenov
         '
         Me.Button2.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(410, 35)
+        Me.Button2.Location = New System.Drawing.Point(127, 9)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(90, 23)
+        Me.Button2.Size = New System.Drawing.Size(402, 23)
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "Vymazať člena"
         Me.Button2.UseVisualStyleBackColor = False
-        '
-        'karta_clena_tlac_button
-        '
-        Me.karta_clena_tlac_button.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.karta_clena_tlac_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.karta_clena_tlac_button.Location = New System.Drawing.Point(287, 35)
-        Me.karta_clena_tlac_button.Name = "karta_clena_tlac_button"
-        Me.karta_clena_tlac_button.Size = New System.Drawing.Size(117, 23)
-        Me.karta_clena_tlac_button.TabIndex = 7
-        Me.karta_clena_tlac_button.Text = "Vytvoriť kartu člena"
-        Me.karta_clena_tlac_button.UseVisualStyleBackColor = False
         '
         'evidencia_clenov
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(757, 424)
-        Me.Controls.Add(Me.karta_clena_tlac_button)
+        Me.ClientSize = New System.Drawing.Size(774, 424)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ClenoviaDataGridView)
         Me.Controls.Add(Me.ClenoviaBindingNavigator)
-        Me.Controls.Add(Me.button_report_zoznam_clenov)
-        Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "evidencia_clenov"
         Me.Text = "evidencia_clenov"
@@ -327,8 +288,6 @@ Partial Class evidencia_clenov
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents button_report_zoznam_clenov As System.Windows.Forms.Button
 
 
 
@@ -402,5 +361,4 @@ Partial Class evidencia_clenov
     Friend WithEvents DataGridViewTextBoxColumn52 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn53 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn88 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents karta_clena_tlac_button As System.Windows.Forms.Button
 End Class
