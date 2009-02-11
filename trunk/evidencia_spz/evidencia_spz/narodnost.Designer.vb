@@ -49,9 +49,9 @@ Partial Class narodnost
         Me.SkratkaTextBox = New System.Windows.Forms.TextBox
         Me.NazovTextBox = New System.Windows.Forms.TextBox
         Me.koniec = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.Button4 = New System.Windows.Forms.Button
+        Me.pridajButton = New System.Windows.Forms.Button
+        Me.ulozButton = New System.Windows.Forms.Button
+        Me.zmazButton = New System.Windows.Forms.Button
         SkratkaLabel = New System.Windows.Forms.Label
         NazovLabel = New System.Windows.Forms.Label
         CType(Me.NarodnostDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -116,6 +116,7 @@ Partial Class narodnost
         Me.NarodnostBindingNavigator.Size = New System.Drawing.Size(539, 25)
         Me.NarodnostBindingNavigator.TabIndex = 0
         Me.NarodnostBindingNavigator.Text = "BindingNavigator1"
+        Me.NarodnostBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
@@ -243,6 +244,7 @@ Partial Class narodnost
         Me.SkratkaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NarodnostBindingSource, "skratka", True))
         Me.SkratkaTextBox.Location = New System.Drawing.Point(117, 82)
         Me.SkratkaTextBox.Name = "SkratkaTextBox"
+        Me.SkratkaTextBox.ReadOnly = True
         Me.SkratkaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SkratkaTextBox.TabIndex = 5
         '
@@ -251,6 +253,7 @@ Partial Class narodnost
         Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NarodnostBindingSource, "nazov", True))
         Me.NazovTextBox.Location = New System.Drawing.Point(117, 108)
         Me.NazovTextBox.Name = "NazovTextBox"
+        Me.NazovTextBox.ReadOnly = True
         Me.NazovTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NazovTextBox.TabIndex = 7
         '
@@ -265,38 +268,39 @@ Partial Class narodnost
         Me.koniec.Text = "koniec"
         Me.koniec.UseVisualStyleBackColor = False
         '
-        'Button2
+        'pridajButton
         '
-        Me.Button2.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(402, 100)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.pridajButton.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.pridajButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.pridajButton.Location = New System.Drawing.Point(402, 100)
+        Me.pridajButton.Name = "pridajButton"
+        Me.pridajButton.Size = New System.Drawing.Size(75, 23)
+        Me.pridajButton.TabIndex = 9
+        Me.pridajButton.Text = "Pridaj"
+        Me.pridajButton.UseVisualStyleBackColor = False
         '
-        'Button3
+        'ulozButton
         '
-        Me.Button3.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(402, 130)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 10
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.ulozButton.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.ulozButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ulozButton.Location = New System.Drawing.Point(402, 130)
+        Me.ulozButton.Name = "ulozButton"
+        Me.ulozButton.Size = New System.Drawing.Size(75, 23)
+        Me.ulozButton.TabIndex = 10
+        Me.ulozButton.Text = "Uloz"
+        Me.ulozButton.UseVisualStyleBackColor = False
+        Me.ulozButton.Visible = False
         '
-        'Button4
+        'zmazButton
         '
-        Me.Button4.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(402, 160)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 11
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.zmazButton.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.zmazButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.zmazButton.Location = New System.Drawing.Point(402, 160)
+        Me.zmazButton.Name = "zmazButton"
+        Me.zmazButton.Size = New System.Drawing.Size(75, 23)
+        Me.zmazButton.TabIndex = 11
+        Me.zmazButton.Text = "Zmaz"
+        Me.zmazButton.UseVisualStyleBackColor = False
         '
         'narodnost
         '
@@ -304,9 +308,9 @@ Partial Class narodnost
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(539, 437)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.zmazButton)
+        Me.Controls.Add(Me.ulozButton)
+        Me.Controls.Add(Me.pridajButton)
         Me.Controls.Add(Me.koniec)
         Me.Controls.Add(SkratkaLabel)
         Me.Controls.Add(Me.SkratkaTextBox)
@@ -350,7 +354,7 @@ Partial Class narodnost
     Friend WithEvents SkratkaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents NazovTextBox As System.Windows.Forms.TextBox
     Friend WithEvents koniec As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents pridajButton As System.Windows.Forms.Button
+    Friend WithEvents ulozButton As System.Windows.Forms.Button
+    Friend WithEvents zmazButton As System.Windows.Forms.Button
 End Class
