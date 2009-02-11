@@ -39,11 +39,18 @@ Partial Class vseobecne_udaje
         Me.Vseobecne_udajeTableAdapter = New evidencia_spz.spz_vseobecne_udajeTableAdapters.vseobecne_udajeTableAdapter
         Me.TableAdapterManager = New evidencia_spz.spz_vseobecne_udajeTableAdapters.TableAdapterManager
         Me.Vseobecne_udajeBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
+        Me.Vseobecne_udajeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.Nazov_organizacieTextBox = New System.Windows.Forms.TextBox
         Me.IcoTextBox = New System.Windows.Forms.TextBox
         Me.DicTextBox = New System.Windows.Forms.TextBox
@@ -54,16 +61,11 @@ Partial Class vseobecne_udaje
         Me.FaxTextBox = New System.Windows.Forms.TextBox
         Me.EmailTextBox = New System.Windows.Forms.TextBox
         Me.WebTextBox = New System.Windows.Forms.TextBox
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
-        Me.Vseobecne_udajeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.upravButton = New System.Windows.Forms.Button
         Me.ulozButton = New System.Windows.Forms.Button
         Me.koniecButton = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
         Nazov_organizacieLabel = New System.Windows.Forms.Label
         IcoLabel = New System.Windows.Forms.Label
         DicLabel = New System.Windows.Forms.Label
@@ -79,6 +81,98 @@ Partial Class vseobecne_udaje
         CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Vseobecne_udajeBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'Nazov_organizacieLabel
+        '
+        Nazov_organizacieLabel.AutoSize = True
+        Nazov_organizacieLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Nazov_organizacieLabel.Location = New System.Drawing.Point(205, 93)
+        Nazov_organizacieLabel.Name = "Nazov_organizacieLabel"
+        Nazov_organizacieLabel.Size = New System.Drawing.Size(112, 13)
+        Nazov_organizacieLabel.TabIndex = 3
+        Nazov_organizacieLabel.Text = "Názov organizácie"
+        '
+        'IcoLabel
+        '
+        IcoLabel.AutoSize = True
+        IcoLabel.Location = New System.Drawing.Point(292, 119)
+        IcoLabel.Name = "IcoLabel"
+        IcoLabel.Size = New System.Drawing.Size(25, 13)
+        IcoLabel.TabIndex = 5
+        IcoLabel.Text = "IČO"
+        '
+        'DicLabel
+        '
+        DicLabel.AutoSize = True
+        DicLabel.Location = New System.Drawing.Point(292, 145)
+        DicLabel.Name = "DicLabel"
+        DicLabel.Size = New System.Drawing.Size(25, 13)
+        DicLabel.TabIndex = 7
+        DicLabel.Text = "DIČ"
+        '
+        'UlicaLabel
+        '
+        UlicaLabel.AutoSize = True
+        UlicaLabel.Location = New System.Drawing.Point(187, 203)
+        UlicaLabel.Name = "UlicaLabel"
+        UlicaLabel.Size = New System.Drawing.Size(31, 13)
+        UlicaLabel.TabIndex = 9
+        UlicaLabel.Text = "Ulica"
+        '
+        'MestoLabel
+        '
+        MestoLabel.AutoSize = True
+        MestoLabel.Location = New System.Drawing.Point(181, 232)
+        MestoLabel.Name = "MestoLabel"
+        MestoLabel.Size = New System.Drawing.Size(36, 13)
+        MestoLabel.TabIndex = 11
+        MestoLabel.Text = "Mesto"
+        '
+        'PscLabel
+        '
+        PscLabel.AutoSize = True
+        PscLabel.Location = New System.Drawing.Point(190, 258)
+        PscLabel.Name = "PscLabel"
+        PscLabel.Size = New System.Drawing.Size(28, 13)
+        PscLabel.TabIndex = 13
+        PscLabel.Text = "PSČ"
+        '
+        'TelefonLabel
+        '
+        TelefonLabel.AutoSize = True
+        TelefonLabel.Location = New System.Drawing.Point(427, 206)
+        TelefonLabel.Name = "TelefonLabel"
+        TelefonLabel.Size = New System.Drawing.Size(43, 13)
+        TelefonLabel.TabIndex = 15
+        TelefonLabel.Text = "Telefón"
+        '
+        'FaxLabel
+        '
+        FaxLabel.AutoSize = True
+        FaxLabel.Location = New System.Drawing.Point(445, 232)
+        FaxLabel.Name = "FaxLabel"
+        FaxLabel.Size = New System.Drawing.Size(24, 13)
+        FaxLabel.TabIndex = 17
+        FaxLabel.Text = "Fax"
+        '
+        'EmailLabel
+        '
+        EmailLabel.AutoSize = True
+        EmailLabel.Location = New System.Drawing.Point(438, 258)
+        EmailLabel.Name = "EmailLabel"
+        EmailLabel.Size = New System.Drawing.Size(32, 13)
+        EmailLabel.TabIndex = 19
+        EmailLabel.Text = "Email"
+        AddHandler EmailLabel.Click, AddressOf Me.EmailLabel_Click
+        '
+        'WebLabel
+        '
+        WebLabel.AutoSize = True
+        WebLabel.Location = New System.Drawing.Point(405, 284)
+        WebLabel.Name = "WebLabel"
+        WebLabel.Size = New System.Drawing.Size(65, 13)
+        WebLabel.TabIndex = 21
+        WebLabel.Text = "Webstránka"
         '
         'Spz_vseobecne_udaje
         '
@@ -119,217 +213,6 @@ Partial Class vseobecne_udaje
         Me.Vseobecne_udajeBindingNavigator.Text = "BindingNavigator1"
         Me.Vseobecne_udajeBindingNavigator.Visible = False
         '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'Nazov_organizacieLabel
-        '
-        Nazov_organizacieLabel.AutoSize = True
-        Nazov_organizacieLabel.Location = New System.Drawing.Point(84, 116)
-        Nazov_organizacieLabel.Name = "Nazov_organizacieLabel"
-        Nazov_organizacieLabel.Size = New System.Drawing.Size(96, 13)
-        Nazov_organizacieLabel.TabIndex = 3
-        Nazov_organizacieLabel.Text = "nazov organizacie:"
-        '
-        'Nazov_organizacieTextBox
-        '
-        Me.Nazov_organizacieTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "nazov_organizacie", True))
-        Me.Nazov_organizacieTextBox.Location = New System.Drawing.Point(186, 113)
-        Me.Nazov_organizacieTextBox.Name = "Nazov_organizacieTextBox"
-        Me.Nazov_organizacieTextBox.ReadOnly = True
-        Me.Nazov_organizacieTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Nazov_organizacieTextBox.TabIndex = 4
-        '
-        'IcoLabel
-        '
-        IcoLabel.AutoSize = True
-        IcoLabel.Location = New System.Drawing.Point(84, 142)
-        IcoLabel.Name = "IcoLabel"
-        IcoLabel.Size = New System.Drawing.Size(24, 13)
-        IcoLabel.TabIndex = 5
-        IcoLabel.Text = "ico:"
-        '
-        'IcoTextBox
-        '
-        Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "ico", True))
-        Me.IcoTextBox.Location = New System.Drawing.Point(186, 139)
-        Me.IcoTextBox.Name = "IcoTextBox"
-        Me.IcoTextBox.ReadOnly = True
-        Me.IcoTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.IcoTextBox.TabIndex = 6
-        '
-        'DicLabel
-        '
-        DicLabel.AutoSize = True
-        DicLabel.Location = New System.Drawing.Point(84, 168)
-        DicLabel.Name = "DicLabel"
-        DicLabel.Size = New System.Drawing.Size(24, 13)
-        DicLabel.TabIndex = 7
-        DicLabel.Text = "dic:"
-        '
-        'DicTextBox
-        '
-        Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "dic", True))
-        Me.DicTextBox.Location = New System.Drawing.Point(186, 165)
-        Me.DicTextBox.Name = "DicTextBox"
-        Me.DicTextBox.ReadOnly = True
-        Me.DicTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.DicTextBox.TabIndex = 8
-        '
-        'UlicaLabel
-        '
-        UlicaLabel.AutoSize = True
-        UlicaLabel.Location = New System.Drawing.Point(84, 194)
-        UlicaLabel.Name = "UlicaLabel"
-        UlicaLabel.Size = New System.Drawing.Size(32, 13)
-        UlicaLabel.TabIndex = 9
-        UlicaLabel.Text = "ulica:"
-        '
-        'UlicaTextBox
-        '
-        Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "ulica", True))
-        Me.UlicaTextBox.Location = New System.Drawing.Point(186, 191)
-        Me.UlicaTextBox.Name = "UlicaTextBox"
-        Me.UlicaTextBox.ReadOnly = True
-        Me.UlicaTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.UlicaTextBox.TabIndex = 10
-        '
-        'MestoLabel
-        '
-        MestoLabel.AutoSize = True
-        MestoLabel.Location = New System.Drawing.Point(84, 220)
-        MestoLabel.Name = "MestoLabel"
-        MestoLabel.Size = New System.Drawing.Size(38, 13)
-        MestoLabel.TabIndex = 11
-        MestoLabel.Text = "mesto:"
-        '
-        'MestoTextBox
-        '
-        Me.MestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "mesto", True))
-        Me.MestoTextBox.Location = New System.Drawing.Point(186, 217)
-        Me.MestoTextBox.Name = "MestoTextBox"
-        Me.MestoTextBox.ReadOnly = True
-        Me.MestoTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.MestoTextBox.TabIndex = 12
-        '
-        'PscLabel
-        '
-        PscLabel.AutoSize = True
-        PscLabel.Location = New System.Drawing.Point(84, 246)
-        PscLabel.Name = "PscLabel"
-        PscLabel.Size = New System.Drawing.Size(27, 13)
-        PscLabel.TabIndex = 13
-        PscLabel.Text = "psc:"
-        '
-        'PscTextBox
-        '
-        Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "psc", True))
-        Me.PscTextBox.Location = New System.Drawing.Point(186, 243)
-        Me.PscTextBox.Name = "PscTextBox"
-        Me.PscTextBox.ReadOnly = True
-        Me.PscTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.PscTextBox.TabIndex = 14
-        '
-        'TelefonLabel
-        '
-        TelefonLabel.AutoSize = True
-        TelefonLabel.Location = New System.Drawing.Point(84, 272)
-        TelefonLabel.Name = "TelefonLabel"
-        TelefonLabel.Size = New System.Drawing.Size(42, 13)
-        TelefonLabel.TabIndex = 15
-        TelefonLabel.Text = "telefon:"
-        '
-        'TelefonTextBox
-        '
-        Me.TelefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "telefon", True))
-        Me.TelefonTextBox.Location = New System.Drawing.Point(186, 269)
-        Me.TelefonTextBox.Name = "TelefonTextBox"
-        Me.TelefonTextBox.ReadOnly = True
-        Me.TelefonTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.TelefonTextBox.TabIndex = 16
-        '
-        'FaxLabel
-        '
-        FaxLabel.AutoSize = True
-        FaxLabel.Location = New System.Drawing.Point(84, 298)
-        FaxLabel.Name = "FaxLabel"
-        FaxLabel.Size = New System.Drawing.Size(24, 13)
-        FaxLabel.TabIndex = 17
-        FaxLabel.Text = "fax:"
-        '
-        'FaxTextBox
-        '
-        Me.FaxTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "fax", True))
-        Me.FaxTextBox.Location = New System.Drawing.Point(186, 295)
-        Me.FaxTextBox.Name = "FaxTextBox"
-        Me.FaxTextBox.ReadOnly = True
-        Me.FaxTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.FaxTextBox.TabIndex = 18
-        '
-        'EmailLabel
-        '
-        EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(84, 324)
-        EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New System.Drawing.Size(34, 13)
-        EmailLabel.TabIndex = 19
-        EmailLabel.Text = "email:"
-        '
-        'EmailTextBox
-        '
-        Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "email", True))
-        Me.EmailTextBox.Location = New System.Drawing.Point(186, 321)
-        Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.ReadOnly = True
-        Me.EmailTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.EmailTextBox.TabIndex = 20
-        '
-        'WebLabel
-        '
-        WebLabel.AutoSize = True
-        WebLabel.Location = New System.Drawing.Point(84, 350)
-        WebLabel.Name = "WebLabel"
-        WebLabel.Size = New System.Drawing.Size(30, 13)
-        WebLabel.TabIndex = 21
-        WebLabel.Text = "web:"
-        '
-        'WebTextBox
-        '
-        Me.WebTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "web", True))
-        Me.WebTextBox.Location = New System.Drawing.Point(186, 347)
-        Me.WebTextBox.Name = "WebTextBox"
-        Me.WebTextBox.ReadOnly = True
-        Me.WebTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.WebTextBox.TabIndex = 22
-        '
         'BindingNavigatorAddNewItem
         '
         Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -338,6 +221,13 @@ Partial Class vseobecne_udaje
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorDeleteItem
         '
@@ -366,6 +256,25 @@ Partial Class vseobecne_udaje
         Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
         '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
         'BindingNavigatorMoveNextItem
         '
         Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -384,6 +293,11 @@ Partial Class vseobecne_udaje
         Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
         'Vseobecne_udajeBindingNavigatorSaveItem
         '
         Me.Vseobecne_udajeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -392,39 +306,158 @@ Partial Class vseobecne_udaje
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Text = "Save Data"
         '
+        'Nazov_organizacieTextBox
+        '
+        Me.Nazov_organizacieTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "nazov_organizacie", True))
+        Me.Nazov_organizacieTextBox.Location = New System.Drawing.Point(323, 90)
+        Me.Nazov_organizacieTextBox.Name = "Nazov_organizacieTextBox"
+        Me.Nazov_organizacieTextBox.ReadOnly = True
+        Me.Nazov_organizacieTextBox.Size = New System.Drawing.Size(267, 20)
+        Me.Nazov_organizacieTextBox.TabIndex = 4
+        '
+        'IcoTextBox
+        '
+        Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "ico", True))
+        Me.IcoTextBox.Location = New System.Drawing.Point(323, 116)
+        Me.IcoTextBox.Name = "IcoTextBox"
+        Me.IcoTextBox.ReadOnly = True
+        Me.IcoTextBox.Size = New System.Drawing.Size(78, 20)
+        Me.IcoTextBox.TabIndex = 6
+        '
+        'DicTextBox
+        '
+        Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "dic", True))
+        Me.DicTextBox.Location = New System.Drawing.Point(323, 142)
+        Me.DicTextBox.Name = "DicTextBox"
+        Me.DicTextBox.ReadOnly = True
+        Me.DicTextBox.Size = New System.Drawing.Size(78, 20)
+        Me.DicTextBox.TabIndex = 8
+        '
+        'UlicaTextBox
+        '
+        Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "ulica", True))
+        Me.UlicaTextBox.Location = New System.Drawing.Point(224, 203)
+        Me.UlicaTextBox.Name = "UlicaTextBox"
+        Me.UlicaTextBox.ReadOnly = True
+        Me.UlicaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.UlicaTextBox.TabIndex = 10
+        '
+        'MestoTextBox
+        '
+        Me.MestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "mesto", True))
+        Me.MestoTextBox.Location = New System.Drawing.Point(224, 229)
+        Me.MestoTextBox.Name = "MestoTextBox"
+        Me.MestoTextBox.ReadOnly = True
+        Me.MestoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.MestoTextBox.TabIndex = 12
+        '
+        'PscTextBox
+        '
+        Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "psc", True))
+        Me.PscTextBox.Location = New System.Drawing.Point(224, 255)
+        Me.PscTextBox.Name = "PscTextBox"
+        Me.PscTextBox.ReadOnly = True
+        Me.PscTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.PscTextBox.TabIndex = 14
+        '
+        'TelefonTextBox
+        '
+        Me.TelefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "telefon", True))
+        Me.TelefonTextBox.Location = New System.Drawing.Point(476, 203)
+        Me.TelefonTextBox.Name = "TelefonTextBox"
+        Me.TelefonTextBox.ReadOnly = True
+        Me.TelefonTextBox.Size = New System.Drawing.Size(114, 20)
+        Me.TelefonTextBox.TabIndex = 16
+        '
+        'FaxTextBox
+        '
+        Me.FaxTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "fax", True))
+        Me.FaxTextBox.Location = New System.Drawing.Point(476, 229)
+        Me.FaxTextBox.Name = "FaxTextBox"
+        Me.FaxTextBox.ReadOnly = True
+        Me.FaxTextBox.Size = New System.Drawing.Size(114, 20)
+        Me.FaxTextBox.TabIndex = 18
+        '
+        'EmailTextBox
+        '
+        Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "email", True))
+        Me.EmailTextBox.Location = New System.Drawing.Point(476, 255)
+        Me.EmailTextBox.Name = "EmailTextBox"
+        Me.EmailTextBox.ReadOnly = True
+        Me.EmailTextBox.Size = New System.Drawing.Size(114, 20)
+        Me.EmailTextBox.TabIndex = 20
+        '
+        'WebTextBox
+        '
+        Me.WebTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "web", True))
+        Me.WebTextBox.Location = New System.Drawing.Point(476, 281)
+        Me.WebTextBox.Name = "WebTextBox"
+        Me.WebTextBox.ReadOnly = True
+        Me.WebTextBox.Size = New System.Drawing.Size(114, 20)
+        Me.WebTextBox.TabIndex = 22
+        '
         'upravButton
         '
-        Me.upravButton.Location = New System.Drawing.Point(431, 116)
+        Me.upravButton.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.upravButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.upravButton.Location = New System.Drawing.Point(218, 23)
         Me.upravButton.Name = "upravButton"
         Me.upravButton.Size = New System.Drawing.Size(75, 23)
         Me.upravButton.TabIndex = 23
-        Me.upravButton.Text = "Uprav"
-        Me.upravButton.UseVisualStyleBackColor = True
+        Me.upravButton.Text = "Upraviť"
+        Me.upravButton.UseVisualStyleBackColor = False
         '
         'ulozButton
         '
-        Me.ulozButton.Location = New System.Drawing.Point(431, 146)
+        Me.ulozButton.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.ulozButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ulozButton.Location = New System.Drawing.Point(299, 23)
         Me.ulozButton.Name = "ulozButton"
         Me.ulozButton.Size = New System.Drawing.Size(75, 23)
         Me.ulozButton.TabIndex = 24
-        Me.ulozButton.Text = "Uloz"
-        Me.ulozButton.UseVisualStyleBackColor = True
+        Me.ulozButton.Text = "Uložiť"
+        Me.ulozButton.UseVisualStyleBackColor = False
         Me.ulozButton.Visible = False
         '
         'koniecButton
         '
-        Me.koniecButton.Location = New System.Drawing.Point(431, 176)
+        Me.koniecButton.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.koniecButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.koniecButton.Location = New System.Drawing.Point(380, 23)
         Me.koniecButton.Name = "koniecButton"
-        Me.koniecButton.Size = New System.Drawing.Size(75, 23)
+        Me.koniecButton.Size = New System.Drawing.Size(90, 23)
         Me.koniecButton.TabIndex = 25
-        Me.koniecButton.Text = "Koniec"
-        Me.koniecButton.UseVisualStyleBackColor = True
+        Me.koniecButton.Text = "Zavrieť kartu"
+        Me.koniecButton.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(70, 180)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(148, 17)
+        Me.Label1.TabIndex = 26
+        Me.Label1.Text = "Adresa organizácie"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(408, 184)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(62, 16)
+        Me.Label2.TabIndex = 27
+        Me.Label2.Text = "Kontakt"
         '
         'vseobecne_udaje
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(768, 428)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.koniecButton)
         Me.Controls.Add(Me.ulozButton)
         Me.Controls.Add(Me.upravButton)
@@ -449,6 +482,7 @@ Partial Class vseobecne_udaje
         Me.Controls.Add(WebLabel)
         Me.Controls.Add(Me.WebTextBox)
         Me.Controls.Add(Me.Vseobecne_udajeBindingNavigator)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "vseobecne_udaje"
         Me.Text = "vseobecne_udaje"
         CType(Me.Spz_vseobecne_udaje, System.ComponentModel.ISupportInitialize).EndInit()
@@ -490,4 +524,6 @@ Partial Class vseobecne_udaje
     Friend WithEvents upravButton As System.Windows.Forms.Button
     Friend WithEvents ulozButton As System.Windows.Forms.Button
     Friend WithEvents koniecButton As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

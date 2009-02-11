@@ -247,5 +247,7 @@ Public Class hlavna_aplikacia
 
     Private Sub upravit_udaje_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles upravit_udaje_button.Click
         vseobecne_udaje.Show()
+        vseobecne_udaje.BringToFront()
+
     End Sub
 End Class
