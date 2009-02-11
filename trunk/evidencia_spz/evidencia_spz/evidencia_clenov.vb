@@ -118,4 +118,10 @@
         Me.ClenoviaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Prehlad_clenovDataSet)
     End Sub
+
+    Private Sub karta_clena_tlac_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles karta_clena_tlac_button.Click
+        tlacovy_vystup_clen_1.Show()
+        tlacovy_vystup_clen_1.BringToFront()
+
+    End Sub
 End Class
