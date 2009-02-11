@@ -1,14 +1,17 @@
 ﻿Public Class prehlad_clenov
 
     Private Sub karta_clena_tlac_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles karta_clena_tlac_button.Click
+
+        tlacovy_vystup_clen_1.Show()
+        tlacovy_vystup_clen_1.BringToFront()
         zoznam_clenov_report.Show()
         zoznam_clenov_report.BringToFront()
 
     End Sub
 
     Private Sub button_report_zoznam_clenov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button_report_zoznam_clenov.Click
-        tlacovy_vystup_clen_1.Show()
-        tlacovy_vystup_clen_1.BringToFront()
+        zoznam_clenov_report.Show()
+        zoznam_clenov_report.BringToFront()
 
     End Sub
 

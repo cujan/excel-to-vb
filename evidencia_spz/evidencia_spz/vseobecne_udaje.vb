@@ -11,6 +11,9 @@
         'TODO: This line of code loads data into the 'Spz_vseobecne_udaje.vseobecne_udaje' table. You can move, or remove it, as needed.
         Me.Vseobecne_udajeTableAdapter.Fill(Me.Spz_vseobecne_udaje.vseobecne_udaje)
 
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
     End Sub
 
     Private Sub upravButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles upravButton.Click
@@ -50,5 +53,9 @@
 
     Private Sub koniecButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles koniecButton.Click
         Me.Close()
+    End Sub
+
+    Private Sub EmailLabel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 End Class
