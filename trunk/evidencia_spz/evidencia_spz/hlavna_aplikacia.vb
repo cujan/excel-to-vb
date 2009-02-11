@@ -148,8 +148,8 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub prehlad_clenov_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles prehlad_clenov_button.Click
-        evidencia_clenov.Show()
-        evidencia_clenov.BringToFront()
+        prehlad_clenov.Show()
+        prehlad_clenov.BringToFront()
 
     End Sub
 

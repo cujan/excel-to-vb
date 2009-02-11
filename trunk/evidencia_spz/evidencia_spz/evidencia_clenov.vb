@@ -15,11 +15,13 @@
         'TODO: This line of code loads data into the 'Spz_evidenciaDataSet.clenovia' table. You can move, or remove it, as needed.
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
-        hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
+        'hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
+        prehlad_clenov.prehlad_clenov_splitter.Panel2.Controls.Add(Me)
+
         
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
     End Sub
 
@@ -59,7 +61,7 @@
 
     End Sub
 
-    Private Sub button_report_zoznam_clenov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button_report_zoznam_clenov.Click
+    Private Sub button_report_zoznam_clenov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         zoznam_clenov_report.Show()
         zoznam_clenov_report.BringToFront()
     End Sub
@@ -105,6 +107,8 @@
 
 
         detaily_clena.Show()
+        detaily_clena.BringToFront()
+
     End Sub
 
     Private Sub BindingNavigatorDeleteItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BindingNavigatorDeleteItem.Click
@@ -119,7 +123,7 @@
         Me.TableAdapterManager.UpdateAll(Me.Prehlad_clenovDataSet)
     End Sub
 
-    Private Sub karta_clena_tlac_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles karta_clena_tlac_button.Click
+    Private Sub karta_clena_tlac_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         tlacovy_vystup_clen_1.Show()
         tlacovy_vystup_clen_1.BringToFront()
 

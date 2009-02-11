@@ -18,6 +18,10 @@
         Dim pozicia As Integer = evidencia_clenov.ClenoviaBindingSource.Position
         Me.ClenoviaBindingSource.Position = pozicia
 
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        prehlad_clenov.prehlad_clenov_splitter.Panel2.Controls.Add(Me)
+
     End Sub
 
     Private Sub ClenoviaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClenoviaBindingNavigatorSaveItem.Click
