@@ -225,6 +225,11 @@
     <Compile Include="spz_evidenciaDataSet.vb">
       <DependentUpon>spz_evidenciaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="spz_vseobecne_udaje.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>spz_vseobecne_udaje.xsd</DependentUpon>
+    </Compile>
     <Compile Include="spz_zoznam_clenov_reportDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -545,6 +550,17 @@
     </None>
     <None Include="spz_clenovia_report_a4.xss">
       <DependentUpon>spz_clenovia_report_a4.xsd</DependentUpon>
+    </None>
+    <None Include="spz_vseobecne_udaje.xsc">
+      <DependentUpon>spz_vseobecne_udaje.xsd</DependentUpon>
+    </None>
+    <None Include="spz_vseobecne_udaje.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>spz_vseobecne_udaje.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="spz_vseobecne_udaje.xss">
+      <DependentUpon>spz_vseobecne_udaje.xsd</DependentUpon>
     </None>
     <None Include="titulzaDataSet.xsc">
       <DependentUpon>titulzaDataSet.xsd</DependentUpon>
