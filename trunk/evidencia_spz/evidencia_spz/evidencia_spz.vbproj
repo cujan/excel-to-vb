@@ -283,6 +283,12 @@
     <Compile Include="tlac_clen_a4.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vseobecne_udaje.Designer.vb">
+      <DependentUpon>vseobecne_udaje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vseobecne_udaje.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="zdruzenie.Designer.vb">
       <DependentUpon>zdruzenie.vb</DependentUpon>
     </Compile>
@@ -378,6 +384,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="tlac_clen_report_a4.rdlc" />
+    <EmbeddedResource Include="vseobecne_udaje.resx">
+      <DependentUpon>vseobecne_udaje.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="zdruzenie.resx">
       <DependentUpon>zdruzenie.vb</DependentUpon>
       <SubType>Designer</SubType>

@@ -24,13 +24,13 @@ Partial Class hlavna_aplikacia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(hlavna_aplikacia))
         Dim TelefonLabel As System.Windows.Forms.Label
         Dim FaxLabel As System.Windows.Forms.Label
         Dim EmailLabel As System.Windows.Forms.Label
         Dim WebLabel As System.Windows.Forms.Label
         Dim IcoLabel As System.Windows.Forms.Label
         Dim DicLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(hlavna_aplikacia))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip
         Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
@@ -102,37 +102,37 @@ Partial Class hlavna_aplikacia
         Me.karta_clena_button = New System.Windows.Forms.Button
         Me.edituj_clena_button = New System.Windows.Forms.Button
         Me.novy_clen_button = New System.Windows.Forms.Button
-        Me.Spz_vseobecne_udaje = New evidencia_spz.spz_vseobecne_udaje
+        Me.upravit_udaje_button = New System.Windows.Forms.Button
+        Me.lomene_label = New System.Windows.Forms.Label
+        Me.DicTextBox = New System.Windows.Forms.TextBox
         Me.Vseobecne_udajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Spz_vseobecne_udaje = New evidencia_spz.spz_vseobecne_udaje
+        Me.IcoTextBox = New System.Windows.Forms.TextBox
+        Me.WebTextBox = New System.Windows.Forms.TextBox
+        Me.EmailTextBox = New System.Windows.Forms.TextBox
+        Me.FaxTextBox = New System.Windows.Forms.TextBox
+        Me.TelefonTextBox = New System.Windows.Forms.TextBox
+        Me.kontakt_label = New System.Windows.Forms.Label
+        Me.PscTextBox = New System.Windows.Forms.TextBox
+        Me.MestoTextBox = New System.Windows.Forms.TextBox
+        Me.UlicaTextBox = New System.Windows.Forms.TextBox
+        Me.adresa_label = New System.Windows.Forms.Label
+        Me.Nazov_organizacieTextBox = New System.Windows.Forms.TextBox
         Me.Vseobecne_udajeTableAdapter = New evidencia_spz.spz_vseobecne_udajeTableAdapters.vseobecne_udajeTableAdapter
         Me.TableAdapterManager = New evidencia_spz.spz_vseobecne_udajeTableAdapters.TableAdapterManager
         Me.Vseobecne_udajeBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.Vseobecne_udajeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.Nazov_organizacieTextBox = New System.Windows.Forms.TextBox
-        Me.adresa_label = New System.Windows.Forms.Label
-        Me.UlicaTextBox = New System.Windows.Forms.TextBox
-        Me.MestoTextBox = New System.Windows.Forms.TextBox
-        Me.PscTextBox = New System.Windows.Forms.TextBox
-        Me.kontakt_label = New System.Windows.Forms.Label
-        Me.TelefonTextBox = New System.Windows.Forms.TextBox
-        Me.FaxTextBox = New System.Windows.Forms.TextBox
-        Me.EmailTextBox = New System.Windows.Forms.TextBox
-        Me.WebTextBox = New System.Windows.Forms.TextBox
-        Me.IcoTextBox = New System.Windows.Forms.TextBox
-        Me.DicTextBox = New System.Windows.Forms.TextBox
-        Me.lomene_label = New System.Windows.Forms.Label
-        Me.upravit_udaje_button = New System.Windows.Forms.Button
         TelefonLabel = New System.Windows.Forms.Label
         FaxLabel = New System.Windows.Forms.Label
         EmailLabel = New System.Windows.Forms.Label
@@ -153,11 +153,67 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_splitter.Panel1.SuspendLayout()
         Me.sprava_clenov_splitter.Panel2.SuspendLayout()
         Me.sprava_clenov_splitter.SuspendLayout()
-        CType(Me.Spz_vseobecne_udaje, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Spz_vseobecne_udaje, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Vseobecne_udajeBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'TelefonLabel
+        '
+        TelefonLabel.AutoSize = True
+        TelefonLabel.Location = New System.Drawing.Point(476, 178)
+        TelefonLabel.Name = "TelefonLabel"
+        TelefonLabel.Size = New System.Drawing.Size(25, 13)
+        TelefonLabel.TabIndex = 6
+        TelefonLabel.Text = "Tel."
+        '
+        'FaxLabel
+        '
+        FaxLabel.AutoSize = True
+        FaxLabel.Location = New System.Drawing.Point(477, 194)
+        FaxLabel.Name = "FaxLabel"
+        FaxLabel.Size = New System.Drawing.Size(24, 13)
+        FaxLabel.TabIndex = 8
+        FaxLabel.Text = "Fax"
+        '
+        'EmailLabel
+        '
+        EmailLabel.AutoSize = True
+        EmailLabel.Location = New System.Drawing.Point(469, 210)
+        EmailLabel.Name = "EmailLabel"
+        EmailLabel.Size = New System.Drawing.Size(32, 13)
+        EmailLabel.TabIndex = 10
+        EmailLabel.Text = "Email"
+        '
+        'WebLabel
+        '
+        WebLabel.AutoSize = True
+        WebLabel.Location = New System.Drawing.Point(436, 224)
+        WebLabel.Name = "WebLabel"
+        WebLabel.Size = New System.Drawing.Size(65, 13)
+        WebLabel.TabIndex = 12
+        WebLabel.Text = "Webstránka"
+        '
+        'IcoLabel
+        '
+        IcoLabel.AutoSize = True
+        IcoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        IcoLabel.Location = New System.Drawing.Point(308, 60)
+        IcoLabel.Name = "IcoLabel"
+        IcoLabel.Size = New System.Drawing.Size(25, 13)
+        IcoLabel.TabIndex = 14
+        IcoLabel.Text = "IČO"
+        '
+        'DicLabel
+        '
+        DicLabel.AutoSize = True
+        DicLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DicLabel.Location = New System.Drawing.Point(415, 60)
+        DicLabel.Name = "DicLabel"
+        DicLabel.Size = New System.Drawing.Size(25, 13)
+        DicLabel.TabIndex = 16
+        DicLabel.Text = "DIČ"
         '
         'MenuStrip
         '
@@ -813,15 +869,174 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
         '
-        'Spz_vseobecne_udaje
+        'upravit_udaje_button
         '
-        Me.Spz_vseobecne_udaje.DataSetName = "spz_vseobecne_udaje"
-        Me.Spz_vseobecne_udaje.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.upravit_udaje_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.upravit_udaje_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.upravit_udaje_button.Location = New System.Drawing.Point(555, 266)
+        Me.upravit_udaje_button.Name = "upravit_udaje_button"
+        Me.upravit_udaje_button.Size = New System.Drawing.Size(101, 23)
+        Me.upravit_udaje_button.TabIndex = 19
+        Me.upravit_udaje_button.Text = "Upraviť údaje"
+        Me.upravit_udaje_button.UseVisualStyleBackColor = False
+        '
+        'lomene_label
+        '
+        Me.lomene_label.AutoSize = True
+        Me.lomene_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lomene_label.Location = New System.Drawing.Point(403, 55)
+        Me.lomene_label.Name = "lomene_label"
+        Me.lomene_label.Size = New System.Drawing.Size(15, 24)
+        Me.lomene_label.TabIndex = 18
+        Me.lomene_label.Text = "/"
+        '
+        'DicTextBox
+        '
+        Me.DicTextBox.BackColor = System.Drawing.Color.PaleGreen
+        Me.DicTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "dic", True))
+        Me.DicTextBox.Location = New System.Drawing.Point(439, 60)
+        Me.DicTextBox.Name = "DicTextBox"
+        Me.DicTextBox.ReadOnly = True
+        Me.DicTextBox.Size = New System.Drawing.Size(88, 13)
+        Me.DicTextBox.TabIndex = 17
         '
         'Vseobecne_udajeBindingSource
         '
         Me.Vseobecne_udajeBindingSource.DataMember = "vseobecne_udaje"
         Me.Vseobecne_udajeBindingSource.DataSource = Me.Spz_vseobecne_udaje
+        '
+        'Spz_vseobecne_udaje
+        '
+        Me.Spz_vseobecne_udaje.DataSetName = "spz_vseobecne_udaje"
+        Me.Spz_vseobecne_udaje.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'IcoTextBox
+        '
+        Me.IcoTextBox.BackColor = System.Drawing.Color.PaleGreen
+        Me.IcoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "ico", True))
+        Me.IcoTextBox.Location = New System.Drawing.Point(335, 60)
+        Me.IcoTextBox.Name = "IcoTextBox"
+        Me.IcoTextBox.ReadOnly = True
+        Me.IcoTextBox.Size = New System.Drawing.Size(68, 13)
+        Me.IcoTextBox.TabIndex = 15
+        '
+        'WebTextBox
+        '
+        Me.WebTextBox.BackColor = System.Drawing.Color.PaleGreen
+        Me.WebTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.WebTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "web", True))
+        Me.WebTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WebTextBox.Location = New System.Drawing.Point(503, 224)
+        Me.WebTextBox.Name = "WebTextBox"
+        Me.WebTextBox.ReadOnly = True
+        Me.WebTextBox.Size = New System.Drawing.Size(140, 13)
+        Me.WebTextBox.TabIndex = 13
+        '
+        'EmailTextBox
+        '
+        Me.EmailTextBox.BackColor = System.Drawing.Color.PaleGreen
+        Me.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "email", True))
+        Me.EmailTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EmailTextBox.Location = New System.Drawing.Point(503, 209)
+        Me.EmailTextBox.Name = "EmailTextBox"
+        Me.EmailTextBox.ReadOnly = True
+        Me.EmailTextBox.Size = New System.Drawing.Size(140, 13)
+        Me.EmailTextBox.TabIndex = 11
+        '
+        'FaxTextBox
+        '
+        Me.FaxTextBox.BackColor = System.Drawing.Color.PaleGreen
+        Me.FaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.FaxTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "fax", True))
+        Me.FaxTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FaxTextBox.Location = New System.Drawing.Point(503, 194)
+        Me.FaxTextBox.Name = "FaxTextBox"
+        Me.FaxTextBox.ReadOnly = True
+        Me.FaxTextBox.Size = New System.Drawing.Size(140, 13)
+        Me.FaxTextBox.TabIndex = 9
+        '
+        'TelefonTextBox
+        '
+        Me.TelefonTextBox.BackColor = System.Drawing.Color.PaleGreen
+        Me.TelefonTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TelefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "telefon", True))
+        Me.TelefonTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TelefonTextBox.Location = New System.Drawing.Point(503, 178)
+        Me.TelefonTextBox.Name = "TelefonTextBox"
+        Me.TelefonTextBox.ReadOnly = True
+        Me.TelefonTextBox.Size = New System.Drawing.Size(140, 13)
+        Me.TelefonTextBox.TabIndex = 7
+        '
+        'kontakt_label
+        '
+        Me.kontakt_label.AutoSize = True
+        Me.kontakt_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.kontakt_label.Location = New System.Drawing.Point(430, 150)
+        Me.kontakt_label.Name = "kontakt_label"
+        Me.kontakt_label.Size = New System.Drawing.Size(71, 20)
+        Me.kontakt_label.TabIndex = 6
+        Me.kontakt_label.Text = "Kontakt"
+        '
+        'PscTextBox
+        '
+        Me.PscTextBox.BackColor = System.Drawing.Color.PaleGreen
+        Me.PscTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "psc", True))
+        Me.PscTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PscTextBox.Location = New System.Drawing.Point(313, 191)
+        Me.PscTextBox.Name = "PscTextBox"
+        Me.PscTextBox.ReadOnly = True
+        Me.PscTextBox.Size = New System.Drawing.Size(52, 13)
+        Me.PscTextBox.TabIndex = 5
+        '
+        'MestoTextBox
+        '
+        Me.MestoTextBox.BackColor = System.Drawing.Color.PaleGreen
+        Me.MestoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.MestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "mesto", True))
+        Me.MestoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MestoTextBox.Location = New System.Drawing.Point(235, 191)
+        Me.MestoTextBox.Name = "MestoTextBox"
+        Me.MestoTextBox.ReadOnly = True
+        Me.MestoTextBox.Size = New System.Drawing.Size(74, 13)
+        Me.MestoTextBox.TabIndex = 4
+        '
+        'UlicaTextBox
+        '
+        Me.UlicaTextBox.BackColor = System.Drawing.Color.PaleGreen
+        Me.UlicaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "ulica", True))
+        Me.UlicaTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UlicaTextBox.Location = New System.Drawing.Point(235, 173)
+        Me.UlicaTextBox.Name = "UlicaTextBox"
+        Me.UlicaTextBox.ReadOnly = True
+        Me.UlicaTextBox.Size = New System.Drawing.Size(83, 13)
+        Me.UlicaTextBox.TabIndex = 3
+        '
+        'adresa_label
+        '
+        Me.adresa_label.AutoSize = True
+        Me.adresa_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.adresa_label.Location = New System.Drawing.Point(166, 150)
+        Me.adresa_label.Name = "adresa_label"
+        Me.adresa_label.Size = New System.Drawing.Size(66, 20)
+        Me.adresa_label.TabIndex = 2
+        Me.adresa_label.Text = "Adresa"
+        '
+        'Nazov_organizacieTextBox
+        '
+        Me.Nazov_organizacieTextBox.BackColor = System.Drawing.Color.PaleGreen
+        Me.Nazov_organizacieTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Nazov_organizacieTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "nazov_organizacie", True))
+        Me.Nazov_organizacieTextBox.Font = New System.Drawing.Font("Candara", 22.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Nazov_organizacieTextBox.Location = New System.Drawing.Point(130, 20)
+        Me.Nazov_organizacieTextBox.Name = "Nazov_organizacieTextBox"
+        Me.Nazov_organizacieTextBox.ReadOnly = True
+        Me.Nazov_organizacieTextBox.Size = New System.Drawing.Size(604, 36)
+        Me.Nazov_organizacieTextBox.TabIndex = 1
         '
         'Vseobecne_udajeTableAdapter
         '
@@ -851,6 +1066,31 @@ Partial Class hlavna_aplikacia
         Me.Vseobecne_udajeBindingNavigator.TabIndex = 11
         Me.Vseobecne_udajeBindingNavigator.Text = "BindingNavigator1"
         Me.Vseobecne_udajeBindingNavigator.Visible = False
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -884,16 +1124,9 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -916,26 +1149,8 @@ Partial Class hlavna_aplikacia
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'Vseobecne_udajeBindingNavigatorSaveItem
         '
@@ -944,221 +1159,6 @@ Partial Class hlavna_aplikacia
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Name = "Vseobecne_udajeBindingNavigatorSaveItem"
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'Nazov_organizacieTextBox
-        '
-        Me.Nazov_organizacieTextBox.BackColor = System.Drawing.Color.PaleGreen
-        Me.Nazov_organizacieTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Nazov_organizacieTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "nazov_organizacie", True))
-        Me.Nazov_organizacieTextBox.Font = New System.Drawing.Font("Candara", 22.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Nazov_organizacieTextBox.Location = New System.Drawing.Point(130, 20)
-        Me.Nazov_organizacieTextBox.Name = "Nazov_organizacieTextBox"
-        Me.Nazov_organizacieTextBox.ReadOnly = True
-        Me.Nazov_organizacieTextBox.Size = New System.Drawing.Size(604, 36)
-        Me.Nazov_organizacieTextBox.TabIndex = 1
-        '
-        'adresa_label
-        '
-        Me.adresa_label.AutoSize = True
-        Me.adresa_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.adresa_label.Location = New System.Drawing.Point(166, 150)
-        Me.adresa_label.Name = "adresa_label"
-        Me.adresa_label.Size = New System.Drawing.Size(66, 20)
-        Me.adresa_label.TabIndex = 2
-        Me.adresa_label.Text = "Adresa"
-        '
-        'UlicaTextBox
-        '
-        Me.UlicaTextBox.BackColor = System.Drawing.Color.PaleGreen
-        Me.UlicaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "ulica", True))
-        Me.UlicaTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UlicaTextBox.Location = New System.Drawing.Point(235, 173)
-        Me.UlicaTextBox.Name = "UlicaTextBox"
-        Me.UlicaTextBox.ReadOnly = True
-        Me.UlicaTextBox.Size = New System.Drawing.Size(83, 13)
-        Me.UlicaTextBox.TabIndex = 3
-        '
-        'MestoTextBox
-        '
-        Me.MestoTextBox.BackColor = System.Drawing.Color.PaleGreen
-        Me.MestoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.MestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "mesto", True))
-        Me.MestoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MestoTextBox.Location = New System.Drawing.Point(235, 191)
-        Me.MestoTextBox.Name = "MestoTextBox"
-        Me.MestoTextBox.ReadOnly = True
-        Me.MestoTextBox.Size = New System.Drawing.Size(74, 13)
-        Me.MestoTextBox.TabIndex = 4
-        '
-        'PscTextBox
-        '
-        Me.PscTextBox.BackColor = System.Drawing.Color.PaleGreen
-        Me.PscTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "psc", True))
-        Me.PscTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PscTextBox.Location = New System.Drawing.Point(313, 191)
-        Me.PscTextBox.Name = "PscTextBox"
-        Me.PscTextBox.ReadOnly = True
-        Me.PscTextBox.Size = New System.Drawing.Size(52, 13)
-        Me.PscTextBox.TabIndex = 5
-        '
-        'kontakt_label
-        '
-        Me.kontakt_label.AutoSize = True
-        Me.kontakt_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.kontakt_label.Location = New System.Drawing.Point(430, 150)
-        Me.kontakt_label.Name = "kontakt_label"
-        Me.kontakt_label.Size = New System.Drawing.Size(71, 20)
-        Me.kontakt_label.TabIndex = 6
-        Me.kontakt_label.Text = "Kontakt"
-        '
-        'TelefonLabel
-        '
-        TelefonLabel.AutoSize = True
-        TelefonLabel.Location = New System.Drawing.Point(476, 178)
-        TelefonLabel.Name = "TelefonLabel"
-        TelefonLabel.Size = New System.Drawing.Size(25, 13)
-        TelefonLabel.TabIndex = 6
-        TelefonLabel.Text = "Tel."
-        '
-        'TelefonTextBox
-        '
-        Me.TelefonTextBox.BackColor = System.Drawing.Color.PaleGreen
-        Me.TelefonTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TelefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "telefon", True))
-        Me.TelefonTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TelefonTextBox.Location = New System.Drawing.Point(503, 178)
-        Me.TelefonTextBox.Name = "TelefonTextBox"
-        Me.TelefonTextBox.ReadOnly = True
-        Me.TelefonTextBox.Size = New System.Drawing.Size(140, 13)
-        Me.TelefonTextBox.TabIndex = 7
-        '
-        'FaxLabel
-        '
-        FaxLabel.AutoSize = True
-        FaxLabel.Location = New System.Drawing.Point(477, 194)
-        FaxLabel.Name = "FaxLabel"
-        FaxLabel.Size = New System.Drawing.Size(24, 13)
-        FaxLabel.TabIndex = 8
-        FaxLabel.Text = "Fax"
-        '
-        'FaxTextBox
-        '
-        Me.FaxTextBox.BackColor = System.Drawing.Color.PaleGreen
-        Me.FaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.FaxTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "fax", True))
-        Me.FaxTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FaxTextBox.Location = New System.Drawing.Point(503, 194)
-        Me.FaxTextBox.Name = "FaxTextBox"
-        Me.FaxTextBox.ReadOnly = True
-        Me.FaxTextBox.Size = New System.Drawing.Size(140, 13)
-        Me.FaxTextBox.TabIndex = 9
-        '
-        'EmailLabel
-        '
-        EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(469, 210)
-        EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New System.Drawing.Size(32, 13)
-        EmailLabel.TabIndex = 10
-        EmailLabel.Text = "Email"
-        '
-        'EmailTextBox
-        '
-        Me.EmailTextBox.BackColor = System.Drawing.Color.PaleGreen
-        Me.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "email", True))
-        Me.EmailTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EmailTextBox.Location = New System.Drawing.Point(503, 209)
-        Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.ReadOnly = True
-        Me.EmailTextBox.Size = New System.Drawing.Size(140, 13)
-        Me.EmailTextBox.TabIndex = 11
-        '
-        'WebLabel
-        '
-        WebLabel.AutoSize = True
-        WebLabel.Location = New System.Drawing.Point(436, 224)
-        WebLabel.Name = "WebLabel"
-        WebLabel.Size = New System.Drawing.Size(65, 13)
-        WebLabel.TabIndex = 12
-        WebLabel.Text = "Webstránka"
-        '
-        'WebTextBox
-        '
-        Me.WebTextBox.BackColor = System.Drawing.Color.PaleGreen
-        Me.WebTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.WebTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "web", True))
-        Me.WebTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.WebTextBox.Location = New System.Drawing.Point(503, 224)
-        Me.WebTextBox.Name = "WebTextBox"
-        Me.WebTextBox.ReadOnly = True
-        Me.WebTextBox.Size = New System.Drawing.Size(140, 13)
-        Me.WebTextBox.TabIndex = 13
-        '
-        'IcoLabel
-        '
-        IcoLabel.AutoSize = True
-        IcoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        IcoLabel.Location = New System.Drawing.Point(308, 60)
-        IcoLabel.Name = "IcoLabel"
-        IcoLabel.Size = New System.Drawing.Size(25, 13)
-        IcoLabel.TabIndex = 14
-        IcoLabel.Text = "IČO"
-        '
-        'IcoTextBox
-        '
-        Me.IcoTextBox.BackColor = System.Drawing.Color.PaleGreen
-        Me.IcoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "ico", True))
-        Me.IcoTextBox.Location = New System.Drawing.Point(335, 60)
-        Me.IcoTextBox.Name = "IcoTextBox"
-        Me.IcoTextBox.ReadOnly = True
-        Me.IcoTextBox.Size = New System.Drawing.Size(68, 13)
-        Me.IcoTextBox.TabIndex = 15
-        '
-        'DicLabel
-        '
-        DicLabel.AutoSize = True
-        DicLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DicLabel.Location = New System.Drawing.Point(415, 60)
-        DicLabel.Name = "DicLabel"
-        DicLabel.Size = New System.Drawing.Size(25, 13)
-        DicLabel.TabIndex = 16
-        DicLabel.Text = "DIČ"
-        '
-        'DicTextBox
-        '
-        Me.DicTextBox.BackColor = System.Drawing.Color.PaleGreen
-        Me.DicTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "dic", True))
-        Me.DicTextBox.Location = New System.Drawing.Point(439, 60)
-        Me.DicTextBox.Name = "DicTextBox"
-        Me.DicTextBox.ReadOnly = True
-        Me.DicTextBox.Size = New System.Drawing.Size(88, 13)
-        Me.DicTextBox.TabIndex = 17
-        '
-        'lomene_label
-        '
-        Me.lomene_label.AutoSize = True
-        Me.lomene_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lomene_label.Location = New System.Drawing.Point(403, 55)
-        Me.lomene_label.Name = "lomene_label"
-        Me.lomene_label.Size = New System.Drawing.Size(15, 24)
-        Me.lomene_label.TabIndex = 18
-        Me.lomene_label.Text = "/"
-        '
-        'upravit_udaje_button
-        '
-        Me.upravit_udaje_button.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.upravit_udaje_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.upravit_udaje_button.Location = New System.Drawing.Point(555, 266)
-        Me.upravit_udaje_button.Name = "upravit_udaje_button"
-        Me.upravit_udaje_button.Size = New System.Drawing.Size(101, 23)
-        Me.upravit_udaje_button.TabIndex = 19
-        Me.upravit_udaje_button.Text = "Upraviť údaje"
-        Me.upravit_udaje_button.UseVisualStyleBackColor = False
         '
         'hlavna_aplikacia
         '
@@ -1194,8 +1194,8 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_splitter.Panel1.ResumeLayout(False)
         Me.sprava_clenov_splitter.Panel2.ResumeLayout(False)
         Me.sprava_clenov_splitter.ResumeLayout(False)
-        CType(Me.Spz_vseobecne_udaje, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Spz_vseobecne_udaje, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Vseobecne_udajeBindingNavigator.ResumeLayout(False)
         Me.Vseobecne_udajeBindingNavigator.PerformLayout()
