@@ -94,13 +94,13 @@ Public Class hlavna_aplikacia
         If sprava_clenov_button.Text = "v" Then
             sprava_clenov_splitter.Panel2Collapsed = False
             sprava_clenov_button.Text = "^"
-            sprava_clenov_splitter_position.Y = sprava_clenov_splitter.Location.Y + 154
+            sprava_clenov_splitter_position.Y = sprava_clenov_splitter.Location.Y + 100
             sprava_clenov_splitter_position.X = sprava_clenov_splitter.Location.X
             sprava_zdruzeni_splitter.Location = sprava_clenov_splitter_position
 
             If sprava_zdruzeni_splitter.Panel2Collapsed = False Then
 
-                sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 154
+                sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 150
             Else
                 sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 34
             End If
@@ -117,7 +117,7 @@ Public Class hlavna_aplikacia
 
             If sprava_zdruzeni_splitter.Panel2Collapsed = False Then
 
-                sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 154
+                sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 150
             Else
                 sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 34
             End If
@@ -135,13 +135,13 @@ Public Class hlavna_aplikacia
 
     End Sub
 
-    Private Sub edituj_clena_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles edituj_clena_button.Click
+    Private Sub edituj_clena_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         edituj_clena.Show()
         edituj_clena.BringToFront()
 
     End Sub
 
-    Private Sub karta_clena_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles karta_clena_button.Click
+    Private Sub karta_clena_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         karta_clena.Show()
         karta_clena.BringToFront()
 
@@ -160,7 +160,7 @@ Public Class hlavna_aplikacia
         If sprava_zdruzeni_button.Text = "v" Then
             sprava_zdruzeni_button.Text = "^"
             sprava_zdruzeni_splitter.Panel2Collapsed = False
-            sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 154
+            sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 150
             sprava_zdruzeni_splitter_position.X = sprava_zdruzeni_splitter.Location.X
             nastavenia_splitter.Location = sprava_zdruzeni_splitter_position
         Else
@@ -261,6 +261,10 @@ Public Class hlavna_aplikacia
             url = "http://" & url
         End If
         Shell("explorer.exe " & url)
+
+    End Sub
+
+    Private Sub hlavny_splitter_Panel2_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles hlavny_splitter.Panel2.Paint
 
     End Sub
 End Class

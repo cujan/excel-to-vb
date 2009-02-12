@@ -60,11 +60,11 @@ Partial Class titul_za
         'NazovLabel
         '
         NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(78, 96)
+        NazovLabel.Location = New System.Drawing.Point(297, 44)
         NazovLabel.Name = "NazovLabel"
-        NazovLabel.Size = New System.Drawing.Size(39, 13)
+        NazovLabel.Size = New System.Drawing.Size(38, 13)
         NazovLabel.TabIndex = 8
-        NazovLabel.Text = "nazov:"
+        NazovLabel.Text = "Názov"
         '
         'TitulzaDataSet
         '
@@ -206,10 +206,10 @@ Partial Class titul_za
         Me.Titul_zaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Titul_zaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2})
         Me.Titul_zaDataGridView.DataSource = Me.Titul_zaBindingSource
-        Me.Titul_zaDataGridView.Location = New System.Drawing.Point(12, 176)
+        Me.Titul_zaDataGridView.Location = New System.Drawing.Point(342, 67)
         Me.Titul_zaDataGridView.Name = "Titul_zaDataGridView"
         Me.Titul_zaDataGridView.ReadOnly = True
-        Me.Titul_zaDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.Titul_zaDataGridView.Size = New System.Drawing.Size(145, 67)
         Me.Titul_zaDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn2
@@ -223,33 +223,33 @@ Partial Class titul_za
         '
         Me.koniec.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.koniec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.koniec.Location = New System.Drawing.Point(435, 65)
+        Me.koniec.Location = New System.Drawing.Point(493, 5)
         Me.koniec.Name = "koniec"
-        Me.koniec.Size = New System.Drawing.Size(75, 23)
+        Me.koniec.Size = New System.Drawing.Size(86, 23)
         Me.koniec.TabIndex = 2
-        Me.koniec.Text = "koniec"
+        Me.koniec.Text = "Zavrieť kartu"
         Me.koniec.UseVisualStyleBackColor = False
         '
         'pridaj
         '
         Me.pridaj.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.pridaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.pridaj.Location = New System.Drawing.Point(435, 95)
+        Me.pridaj.Location = New System.Drawing.Point(250, 5)
         Me.pridaj.Name = "pridaj"
         Me.pridaj.Size = New System.Drawing.Size(75, 23)
         Me.pridaj.TabIndex = 3
-        Me.pridaj.Text = "Pridaj"
+        Me.pridaj.Text = "Pridať"
         Me.pridaj.UseVisualStyleBackColor = False
         '
         'uloz
         '
         Me.uloz.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.uloz.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.uloz.Location = New System.Drawing.Point(435, 125)
+        Me.uloz.Location = New System.Drawing.Point(412, 5)
         Me.uloz.Name = "uloz"
         Me.uloz.Size = New System.Drawing.Size(75, 23)
         Me.uloz.TabIndex = 4
-        Me.uloz.Text = "Uloz"
+        Me.uloz.Text = "Uložiť"
         Me.uloz.UseVisualStyleBackColor = False
         Me.uloz.Visible = False
         '
@@ -257,17 +257,17 @@ Partial Class titul_za
         '
         Me.zmaz.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.zmaz.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.zmaz.Location = New System.Drawing.Point(435, 155)
+        Me.zmaz.Location = New System.Drawing.Point(331, 5)
         Me.zmaz.Name = "zmaz"
         Me.zmaz.Size = New System.Drawing.Size(75, 23)
         Me.zmaz.TabIndex = 5
-        Me.zmaz.Text = "zmaz"
+        Me.zmaz.Text = "Zmazať"
         Me.zmaz.UseVisualStyleBackColor = False
         '
         'NazovTextBox
         '
         Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Titul_zaBindingSource, "nazov", True))
-        Me.NazovTextBox.Location = New System.Drawing.Point(123, 93)
+        Me.NazovTextBox.Location = New System.Drawing.Point(342, 41)
         Me.NazovTextBox.Name = "NazovTextBox"
         Me.NazovTextBox.ReadOnly = True
         Me.NazovTextBox.Size = New System.Drawing.Size(100, 20)
@@ -278,7 +278,7 @@ Partial Class titul_za
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(633, 519)
+        Me.ClientSize = New System.Drawing.Size(774, 519)
         Me.Controls.Add(NazovLabel)
         Me.Controls.Add(Me.NazovTextBox)
         Me.Controls.Add(Me.zmaz)

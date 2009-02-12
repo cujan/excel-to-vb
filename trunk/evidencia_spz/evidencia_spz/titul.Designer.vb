@@ -199,10 +199,10 @@ Partial Class titul
         Me.TitulDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TitulDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.TitulDataGridView.DataSource = Me.TitulBindingSource
-        Me.TitulDataGridView.Location = New System.Drawing.Point(116, 206)
+        Me.TitulDataGridView.Location = New System.Drawing.Point(318, 67)
         Me.TitulDataGridView.Name = "TitulDataGridView"
         Me.TitulDataGridView.ReadOnly = True
-        Me.TitulDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.TitulDataGridView.Size = New System.Drawing.Size(243, 123)
         Me.TitulDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn2
@@ -223,18 +223,18 @@ Partial Class titul
         '
         Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(586, 56)
+        Me.Button1.Location = New System.Drawing.Point(493, 5)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(90, 23)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Koniec"
+        Me.Button1.Text = "Zavrieť kartu"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'uloz
         '
         Me.uloz.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.uloz.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.uloz.Location = New System.Drawing.Point(586, 99)
+        Me.uloz.Location = New System.Drawing.Point(412, 5)
         Me.uloz.Name = "uloz"
         Me.uloz.Size = New System.Drawing.Size(75, 23)
         Me.uloz.TabIndex = 3
@@ -245,26 +245,26 @@ Partial Class titul
         'SkratkaTextBox
         '
         Me.SkratkaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TitulBindingSource, "skratka", True))
-        Me.SkratkaTextBox.Location = New System.Drawing.Point(158, 84)
+        Me.SkratkaTextBox.Location = New System.Drawing.Point(318, 39)
         Me.SkratkaTextBox.Name = "SkratkaTextBox"
         Me.SkratkaTextBox.ReadOnly = True
-        Me.SkratkaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.SkratkaTextBox.Size = New System.Drawing.Size(81, 20)
         Me.SkratkaTextBox.TabIndex = 7
         '
         'NazovTextBox
         '
         Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TitulBindingSource, "nazov", True))
-        Me.NazovTextBox.Location = New System.Drawing.Point(158, 110)
+        Me.NazovTextBox.Location = New System.Drawing.Point(480, 39)
         Me.NazovTextBox.Name = "NazovTextBox"
         Me.NazovTextBox.ReadOnly = True
-        Me.NazovTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NazovTextBox.Size = New System.Drawing.Size(81, 20)
         Me.NazovTextBox.TabIndex = 9
         '
         'pridaj_titul
         '
         Me.pridaj_titul.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.pridaj_titul.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.pridaj_titul.Location = New System.Drawing.Point(586, 166)
+        Me.pridaj_titul.Location = New System.Drawing.Point(250, 5)
         Me.pridaj_titul.Name = "pridaj_titul"
         Me.pridaj_titul.Size = New System.Drawing.Size(75, 23)
         Me.pridaj_titul.TabIndex = 10
@@ -274,7 +274,7 @@ Partial Class titul
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(89, 84)
+        Me.Label1.Location = New System.Drawing.Point(268, 42)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 11
@@ -283,7 +283,7 @@ Partial Class titul
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(92, 116)
+        Me.Label2.Location = New System.Drawing.Point(436, 42)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(38, 13)
         Me.Label2.TabIndex = 12
@@ -293,7 +293,7 @@ Partial Class titul
         '
         Me.zmaz.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.zmaz.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.zmaz.Location = New System.Drawing.Point(586, 206)
+        Me.zmaz.Location = New System.Drawing.Point(331, 5)
         Me.zmaz.Name = "zmaz"
         Me.zmaz.Size = New System.Drawing.Size(75, 23)
         Me.zmaz.TabIndex = 13
