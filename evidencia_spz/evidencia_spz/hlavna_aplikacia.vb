@@ -250,4 +250,17 @@ Public Class hlavna_aplikacia
         vseobecne_udaje.BringToFront()
 
     End Sub
+
+
+    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
+        Dim url As String
+        url = Label1.Text
+        If url.Contains("http") Or url.Contains("HTTP") Then
+            url = url
+        Else
+            url = "http://" & url
+        End If
+        Shell("explorer.exe " & url)
+
+    End Sub
 End Class
