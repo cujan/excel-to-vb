@@ -3,5 +3,5 @@
 - osetrit problem pri ceselnikoch s ukladanim a mazanim
 <br>-vytvorit form na upravu vseobecnych udajov     <b>hotovo</b><br>
 - vymysliet refresh vseobecnych udajov po edite<br>
-- upravit jednotlive datove gridy - grafiku<b>ciastocne hotove</b><br>
-- vymazat nepotrebne prepojenia v lavom menu<b>hotovo</b><br>
+- upravit jednotlive datove gridy - grafiku <b>ciastocne hotove</b><br>
+- vymazat nepotrebne prepojenia v lavom menu <b>hotovo</b><br>
