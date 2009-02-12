@@ -64,20 +64,20 @@ Partial Class narodnost
         'SkratkaLabel
         '
         SkratkaLabel.AutoSize = True
-        SkratkaLabel.Location = New System.Drawing.Point(66, 85)
+        SkratkaLabel.Location = New System.Drawing.Point(293, 37)
         SkratkaLabel.Name = "SkratkaLabel"
-        SkratkaLabel.Size = New System.Drawing.Size(45, 13)
+        SkratkaLabel.Size = New System.Drawing.Size(44, 13)
         SkratkaLabel.TabIndex = 4
-        SkratkaLabel.Text = "skratka:"
+        SkratkaLabel.Text = "Skratka"
         '
         'NazovLabel
         '
         NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(66, 111)
+        NazovLabel.Location = New System.Drawing.Point(406, 37)
         NazovLabel.Name = "NazovLabel"
-        NazovLabel.Size = New System.Drawing.Size(39, 13)
+        NazovLabel.Size = New System.Drawing.Size(38, 13)
         NazovLabel.TabIndex = 6
-        NazovLabel.Text = "nazov:"
+        NazovLabel.Text = "Názov"
         '
         'NarodnostDataSet
         '
@@ -219,10 +219,10 @@ Partial Class narodnost
         Me.NarodnostDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.NarodnostDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.NarodnostDataGridView.DataSource = Me.NarodnostBindingSource
-        Me.NarodnostDataGridView.Location = New System.Drawing.Point(12, 186)
+        Me.NarodnostDataGridView.Location = New System.Drawing.Point(296, 60)
         Me.NarodnostDataGridView.Name = "NarodnostDataGridView"
         Me.NarodnostDataGridView.ReadOnly = True
-        Me.NarodnostDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.NarodnostDataGridView.Size = New System.Drawing.Size(244, 139)
         Me.NarodnostDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn2
@@ -242,52 +242,52 @@ Partial Class narodnost
         'SkratkaTextBox
         '
         Me.SkratkaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NarodnostBindingSource, "skratka", True))
-        Me.SkratkaTextBox.Location = New System.Drawing.Point(117, 82)
+        Me.SkratkaTextBox.Location = New System.Drawing.Point(344, 34)
         Me.SkratkaTextBox.Name = "SkratkaTextBox"
         Me.SkratkaTextBox.ReadOnly = True
-        Me.SkratkaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.SkratkaTextBox.Size = New System.Drawing.Size(49, 20)
         Me.SkratkaTextBox.TabIndex = 5
         '
         'NazovTextBox
         '
         Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NarodnostBindingSource, "nazov", True))
-        Me.NazovTextBox.Location = New System.Drawing.Point(117, 108)
+        Me.NazovTextBox.Location = New System.Drawing.Point(457, 34)
         Me.NazovTextBox.Name = "NazovTextBox"
         Me.NazovTextBox.ReadOnly = True
-        Me.NazovTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NazovTextBox.Size = New System.Drawing.Size(73, 20)
         Me.NazovTextBox.TabIndex = 7
         '
         'koniec
         '
         Me.koniec.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.koniec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.koniec.Location = New System.Drawing.Point(402, 63)
+        Me.koniec.Location = New System.Drawing.Point(493, 5)
         Me.koniec.Name = "koniec"
-        Me.koniec.Size = New System.Drawing.Size(75, 23)
+        Me.koniec.Size = New System.Drawing.Size(83, 23)
         Me.koniec.TabIndex = 8
-        Me.koniec.Text = "koniec"
+        Me.koniec.Text = "Zavrieť kartu"
         Me.koniec.UseVisualStyleBackColor = False
         '
         'pridajButton
         '
         Me.pridajButton.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.pridajButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.pridajButton.Location = New System.Drawing.Point(402, 100)
+        Me.pridajButton.Location = New System.Drawing.Point(250, 5)
         Me.pridajButton.Name = "pridajButton"
         Me.pridajButton.Size = New System.Drawing.Size(75, 23)
         Me.pridajButton.TabIndex = 9
-        Me.pridajButton.Text = "Pridaj"
+        Me.pridajButton.Text = "Pridať"
         Me.pridajButton.UseVisualStyleBackColor = False
         '
         'ulozButton
         '
         Me.ulozButton.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.ulozButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ulozButton.Location = New System.Drawing.Point(402, 130)
+        Me.ulozButton.Location = New System.Drawing.Point(412, 5)
         Me.ulozButton.Name = "ulozButton"
         Me.ulozButton.Size = New System.Drawing.Size(75, 23)
         Me.ulozButton.TabIndex = 10
-        Me.ulozButton.Text = "Uloz"
+        Me.ulozButton.Text = "Uložiť"
         Me.ulozButton.UseVisualStyleBackColor = False
         Me.ulozButton.Visible = False
         '
@@ -295,11 +295,11 @@ Partial Class narodnost
         '
         Me.zmazButton.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.zmazButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.zmazButton.Location = New System.Drawing.Point(402, 160)
+        Me.zmazButton.Location = New System.Drawing.Point(331, 5)
         Me.zmazButton.Name = "zmazButton"
         Me.zmazButton.Size = New System.Drawing.Size(75, 23)
         Me.zmazButton.TabIndex = 11
-        Me.zmazButton.Text = "Zmaz"
+        Me.zmazButton.Text = "Zmazať"
         Me.zmazButton.UseVisualStyleBackColor = False
         '
         'narodnost
@@ -307,7 +307,7 @@ Partial Class narodnost
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(539, 437)
+        Me.ClientSize = New System.Drawing.Size(779, 437)
         Me.Controls.Add(Me.zmazButton)
         Me.Controls.Add(Me.ulozButton)
         Me.Controls.Add(Me.pridajButton)

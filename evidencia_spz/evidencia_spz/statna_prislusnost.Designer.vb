@@ -64,20 +64,20 @@ Partial Class statna_prislusnost
         'SkratkaLabel
         '
         SkratkaLabel.AutoSize = True
-        SkratkaLabel.Location = New System.Drawing.Point(95, 72)
+        SkratkaLabel.Location = New System.Drawing.Point(267, 37)
         SkratkaLabel.Name = "SkratkaLabel"
-        SkratkaLabel.Size = New System.Drawing.Size(45, 13)
+        SkratkaLabel.Size = New System.Drawing.Size(44, 13)
         SkratkaLabel.TabIndex = 6
-        SkratkaLabel.Text = "skratka:"
+        SkratkaLabel.Text = "Skratka"
         '
         'NazovLabel
         '
         NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(95, 98)
+        NazovLabel.Location = New System.Drawing.Point(394, 37)
         NazovLabel.Name = "NazovLabel"
-        NazovLabel.Size = New System.Drawing.Size(39, 13)
+        NazovLabel.Size = New System.Drawing.Size(38, 13)
         NazovLabel.TabIndex = 8
-        NazovLabel.Text = "nazov:"
+        NazovLabel.Text = "Názov"
         '
         'Statna_prislusnostDataSet1
         '
@@ -219,10 +219,10 @@ Partial Class statna_prislusnost
         Me.Statna_prislusnostDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Statna_prislusnostDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.Statna_prislusnostDataGridView.DataSource = Me.Statna_prislusnostBindingSource
-        Me.Statna_prislusnostDataGridView.Location = New System.Drawing.Point(83, 124)
+        Me.Statna_prislusnostDataGridView.Location = New System.Drawing.Point(290, 60)
         Me.Statna_prislusnostDataGridView.Name = "Statna_prislusnostDataGridView"
         Me.Statna_prislusnostDataGridView.ReadOnly = True
-        Me.Statna_prislusnostDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.Statna_prislusnostDataGridView.Size = New System.Drawing.Size(249, 135)
         Me.Statna_prislusnostDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn2
@@ -243,63 +243,63 @@ Partial Class statna_prislusnost
         '
         Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(501, 66)
+        Me.Button1.Location = New System.Drawing.Point(493, 5)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(81, 23)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Koniec"
+        Me.Button1.Text = "Zavrieť kartu"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'uloz
         '
         Me.uloz.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.uloz.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.uloz.Location = New System.Drawing.Point(501, 98)
+        Me.uloz.Location = New System.Drawing.Point(412, 5)
         Me.uloz.Name = "uloz"
         Me.uloz.Size = New System.Drawing.Size(75, 23)
         Me.uloz.TabIndex = 3
-        Me.uloz.Text = "Ulož"
+        Me.uloz.Text = "Uložiť"
         Me.uloz.UseVisualStyleBackColor = False
         Me.uloz.Visible = False
         '
         'SkratkaTextBox
         '
         Me.SkratkaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Statna_prislusnostBindingSource, "skratka", True))
-        Me.SkratkaTextBox.Location = New System.Drawing.Point(146, 69)
+        Me.SkratkaTextBox.Location = New System.Drawing.Point(318, 34)
         Me.SkratkaTextBox.Name = "SkratkaTextBox"
         Me.SkratkaTextBox.ReadOnly = True
-        Me.SkratkaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.SkratkaTextBox.Size = New System.Drawing.Size(52, 20)
         Me.SkratkaTextBox.TabIndex = 7
         '
         'NazovTextBox
         '
         Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Statna_prislusnostBindingSource, "nazov", True))
-        Me.NazovTextBox.Location = New System.Drawing.Point(146, 95)
+        Me.NazovTextBox.Location = New System.Drawing.Point(445, 34)
         Me.NazovTextBox.Name = "NazovTextBox"
         Me.NazovTextBox.ReadOnly = True
-        Me.NazovTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NazovTextBox.Size = New System.Drawing.Size(77, 20)
         Me.NazovTextBox.TabIndex = 9
         '
         'pridaj
         '
         Me.pridaj.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.pridaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.pridaj.Location = New System.Drawing.Point(501, 127)
+        Me.pridaj.Location = New System.Drawing.Point(250, 5)
         Me.pridaj.Name = "pridaj"
         Me.pridaj.Size = New System.Drawing.Size(75, 23)
         Me.pridaj.TabIndex = 10
-        Me.pridaj.Text = "Pridaj"
+        Me.pridaj.Text = "Pridať"
         Me.pridaj.UseVisualStyleBackColor = False
         '
         'zmaz
         '
         Me.zmaz.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.zmaz.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.zmaz.Location = New System.Drawing.Point(501, 156)
+        Me.zmaz.Location = New System.Drawing.Point(331, 5)
         Me.zmaz.Name = "zmaz"
         Me.zmaz.Size = New System.Drawing.Size(75, 23)
         Me.zmaz.TabIndex = 11
-        Me.zmaz.Text = "Zmaž"
+        Me.zmaz.Text = "Zmazať"
         Me.zmaz.UseVisualStyleBackColor = False
         '
         'statna_prislusnost

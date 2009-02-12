@@ -42,6 +42,7 @@ Partial Class evidencia_clenov
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ClenoviaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.ClenoviaDataGridView = New System.Windows.Forms.DataGridView
+        Me.Button2 = New System.Windows.Forms.Button
         Me.DataGridViewTextBoxColumn46 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn48 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn47 = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -49,7 +50,6 @@ Partial Class evidencia_clenov
         Me.DataGridViewTextBoxColumn52 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn53 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn88 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Button2 = New System.Windows.Forms.Button
         CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -203,57 +203,8 @@ Partial Class evidencia_clenov
         Me.ClenoviaDataGridView.Location = New System.Drawing.Point(12, 42)
         Me.ClenoviaDataGridView.Name = "ClenoviaDataGridView"
         Me.ClenoviaDataGridView.ReadOnly = True
-        Me.ClenoviaDataGridView.Size = New System.Drawing.Size(759, 335)
+        Me.ClenoviaDataGridView.Size = New System.Drawing.Size(644, 335)
         Me.ClenoviaDataGridView.TabIndex = 5
-        '
-        'DataGridViewTextBoxColumn46
-        '
-        Me.DataGridViewTextBoxColumn46.DataPropertyName = "titul_pred"
-        Me.DataGridViewTextBoxColumn46.HeaderText = "titul_pred"
-        Me.DataGridViewTextBoxColumn46.Name = "DataGridViewTextBoxColumn46"
-        Me.DataGridViewTextBoxColumn46.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn48
-        '
-        Me.DataGridViewTextBoxColumn48.DataPropertyName = "priezvisko"
-        Me.DataGridViewTextBoxColumn48.HeaderText = "priezvisko"
-        Me.DataGridViewTextBoxColumn48.Name = "DataGridViewTextBoxColumn48"
-        Me.DataGridViewTextBoxColumn48.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn47
-        '
-        Me.DataGridViewTextBoxColumn47.DataPropertyName = "meno"
-        Me.DataGridViewTextBoxColumn47.HeaderText = "meno"
-        Me.DataGridViewTextBoxColumn47.Name = "DataGridViewTextBoxColumn47"
-        Me.DataGridViewTextBoxColumn47.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn49
-        '
-        Me.DataGridViewTextBoxColumn49.DataPropertyName = "rodne_cislo"
-        Me.DataGridViewTextBoxColumn49.HeaderText = "rodne_cislo"
-        Me.DataGridViewTextBoxColumn49.Name = "DataGridViewTextBoxColumn49"
-        Me.DataGridViewTextBoxColumn49.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn52
-        '
-        Me.DataGridViewTextBoxColumn52.DataPropertyName = "bydlisko"
-        Me.DataGridViewTextBoxColumn52.HeaderText = "bydlisko"
-        Me.DataGridViewTextBoxColumn52.Name = "DataGridViewTextBoxColumn52"
-        Me.DataGridViewTextBoxColumn52.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn53
-        '
-        Me.DataGridViewTextBoxColumn53.DataPropertyName = "psc"
-        Me.DataGridViewTextBoxColumn53.HeaderText = "psc"
-        Me.DataGridViewTextBoxColumn53.Name = "DataGridViewTextBoxColumn53"
-        Me.DataGridViewTextBoxColumn53.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn88
-        '
-        Me.DataGridViewTextBoxColumn88.DataPropertyName = "telefon"
-        Me.DataGridViewTextBoxColumn88.HeaderText = "telefon"
-        Me.DataGridViewTextBoxColumn88.Name = "DataGridViewTextBoxColumn88"
-        Me.DataGridViewTextBoxColumn88.ReadOnly = True
         '
         'Button2
         '
@@ -266,12 +217,67 @@ Partial Class evidencia_clenov
         Me.Button2.Text = "Vymazať člena"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'DataGridViewTextBoxColumn46
+        '
+        Me.DataGridViewTextBoxColumn46.DataPropertyName = "titul_pred"
+        Me.DataGridViewTextBoxColumn46.FillWeight = 50.0!
+        Me.DataGridViewTextBoxColumn46.HeaderText = "Titul"
+        Me.DataGridViewTextBoxColumn46.Name = "DataGridViewTextBoxColumn46"
+        Me.DataGridViewTextBoxColumn46.ReadOnly = True
+        Me.DataGridViewTextBoxColumn46.Width = 50
+        '
+        'DataGridViewTextBoxColumn48
+        '
+        Me.DataGridViewTextBoxColumn48.DataPropertyName = "priezvisko"
+        Me.DataGridViewTextBoxColumn48.HeaderText = "Priezvisko"
+        Me.DataGridViewTextBoxColumn48.Name = "DataGridViewTextBoxColumn48"
+        Me.DataGridViewTextBoxColumn48.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn47
+        '
+        Me.DataGridViewTextBoxColumn47.DataPropertyName = "meno"
+        Me.DataGridViewTextBoxColumn47.HeaderText = "Meno"
+        Me.DataGridViewTextBoxColumn47.Name = "DataGridViewTextBoxColumn47"
+        Me.DataGridViewTextBoxColumn47.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn49
+        '
+        Me.DataGridViewTextBoxColumn49.DataPropertyName = "rodne_cislo"
+        Me.DataGridViewTextBoxColumn49.HeaderText = "Rodné číslo"
+        Me.DataGridViewTextBoxColumn49.Name = "DataGridViewTextBoxColumn49"
+        Me.DataGridViewTextBoxColumn49.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn52
+        '
+        Me.DataGridViewTextBoxColumn52.DataPropertyName = "bydlisko"
+        Me.DataGridViewTextBoxColumn52.HeaderText = "Bydlisko"
+        Me.DataGridViewTextBoxColumn52.Name = "DataGridViewTextBoxColumn52"
+        Me.DataGridViewTextBoxColumn52.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn53
+        '
+        Me.DataGridViewTextBoxColumn53.DataPropertyName = "psc"
+        Me.DataGridViewTextBoxColumn53.FillWeight = 60.0!
+        Me.DataGridViewTextBoxColumn53.HeaderText = "PSČ"
+        Me.DataGridViewTextBoxColumn53.Name = "DataGridViewTextBoxColumn53"
+        Me.DataGridViewTextBoxColumn53.ReadOnly = True
+        Me.DataGridViewTextBoxColumn53.Width = 60
+        '
+        'DataGridViewTextBoxColumn88
+        '
+        Me.DataGridViewTextBoxColumn88.DataPropertyName = "telefon"
+        Me.DataGridViewTextBoxColumn88.FillWeight = 90.0!
+        Me.DataGridViewTextBoxColumn88.HeaderText = "Telefón"
+        Me.DataGridViewTextBoxColumn88.Name = "DataGridViewTextBoxColumn88"
+        Me.DataGridViewTextBoxColumn88.ReadOnly = True
+        Me.DataGridViewTextBoxColumn88.Width = 90
+        '
         'evidencia_clenov
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(774, 424)
+        Me.ClientSize = New System.Drawing.Size(792, 424)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ClenoviaDataGridView)
         Me.Controls.Add(Me.ClenoviaBindingNavigator)
