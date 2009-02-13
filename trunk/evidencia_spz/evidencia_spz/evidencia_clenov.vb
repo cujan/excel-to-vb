@@ -128,4 +128,8 @@
         tlacovy_vystup_clen_1.BringToFront()
 
     End Sub
+
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
 End Class
