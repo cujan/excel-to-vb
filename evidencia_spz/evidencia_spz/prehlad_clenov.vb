@@ -4,8 +4,8 @@
 
         tlacovy_vystup_clen_1.Show()
         tlacovy_vystup_clen_1.BringToFront()
-        zoznam_clenov_report.Show()
-        zoznam_clenov_report.BringToFront()
+        'zoznam_clenov_report.Show()
+        'zoznam_clenov_report.BringToFront()
 
     End Sub
 
