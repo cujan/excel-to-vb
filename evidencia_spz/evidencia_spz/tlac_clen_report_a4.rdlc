@@ -233,7 +233,7 @@
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>93</ZIndex>
+            <ZIndex>90</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -247,7 +247,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>92</ZIndex>
+            <ZIndex>89</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>2.75cm</Left>
             <Height>2.5cm</Height>
@@ -266,7 +266,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>91</ZIndex>
+            <ZIndex>88</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -283,7 +283,7 @@
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>90</ZIndex>
+            <ZIndex>87</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -298,7 +298,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>89</ZIndex>
+            <ZIndex>86</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>4.5cm</Left>
             <Height>0.63492cm</Height>
@@ -317,7 +317,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>88</ZIndex>
+            <ZIndex>85</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -331,7 +331,7 @@
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>87</ZIndex>
+            <ZIndex>84</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -347,7 +347,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>86</ZIndex>
+            <ZIndex>83</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>8.25cm</Left>
             <Height>0.63492cm</Height>
@@ -364,7 +364,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>85</ZIndex>
+            <ZIndex>82</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>5cm</Left>
             <Height>0.63492cm</Height>
@@ -383,7 +383,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>84</ZIndex>
+            <ZIndex>81</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -397,7 +397,7 @@
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>83</ZIndex>
+            <ZIndex>80</ZIndex>
             <Left>18cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -409,7 +409,7 @@
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>82</ZIndex>
+            <ZIndex>79</ZIndex>
             <Left>15.75cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -421,7 +421,7 @@
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>81</ZIndex>
+            <ZIndex>78</ZIndex>
             <Left>13.5cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -436,7 +436,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>80</ZIndex>
+            <ZIndex>77</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>11.5cm</Left>
             <Height>0.63492cm</Height>
@@ -453,7 +453,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>79</ZIndex>
+            <ZIndex>76</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>11.5cm</Left>
             <Height>0.63492cm</Height>
@@ -467,7 +467,7 @@
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>78</ZIndex>
+            <ZIndex>75</ZIndex>
             <Left>11.25cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -479,7 +479,7 @@
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>77</ZIndex>
+            <ZIndex>74</ZIndex>
             <Left>9.5cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -491,7 +491,7 @@
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>76</ZIndex>
+            <ZIndex>73</ZIndex>
             <Left>9.5cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -506,7 +506,7 @@
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>75</ZIndex>
+            <ZIndex>72</ZIndex>
             <Left>6cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -521,7 +521,7 @@
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>74</ZIndex>
+            <ZIndex>71</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -536,7 +536,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>73</ZIndex>
+            <ZIndex>70</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>3cm</Left>
             <Height>0.63492cm</Height>
@@ -553,7 +553,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>72</ZIndex>
+            <ZIndex>69</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>3cm</Left>
             <Height>0.63492cm</Height>
@@ -572,7 +572,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>71</ZIndex>
+            <ZIndex>68</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -591,7 +591,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>70</ZIndex>
+            <ZIndex>67</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -610,7 +610,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>69</ZIndex>
+            <ZIndex>66</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>6.25cm</Left>
             <Height>1cm</Height>
@@ -629,7 +629,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>68</ZIndex>
+            <ZIndex>65</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -648,7 +648,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>67</ZIndex>
+            <ZIndex>64</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -657,7 +657,7 @@
           <Textbox Name="miesto_vyzsia_skuska_z_polovnictva">
             <rd:DefaultName>miesto_vyzsia_skuska_z_polovnictva</rd:DefaultName>
             <Top>6.25cm</Top>
-            <Width>2.25cm</Width>
+            <Width>3.25cm</Width>
             <Style>
               <FontSize>9pt</FontSize>
               <TextAlign>Left</TextAlign>
@@ -666,16 +666,16 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>66</ZIndex>
+            <ZIndex>63</ZIndex>
             <CanGrow>true</CanGrow>
-            <Left>17.25cm</Left>
+            <Left>16.75cm</Left>
             <Height>0.63492cm</Height>
             <Value>=First(Fields!miesto_vyzsia_skuska_z_polovnictva.Value)</Value>
           </Textbox>
           <Textbox Name="miesto_skusky_pre_polovnych_hospodarov">
             <rd:DefaultName>miesto_skusky_pre_polovnych_hospodarov</rd:DefaultName>
             <Top>7cm</Top>
-            <Width>2.25cm</Width>
+            <Width>3.25cm</Width>
             <Style>
               <FontSize>9pt</FontSize>
               <TextAlign>Left</TextAlign>
@@ -684,16 +684,16 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>65</ZIndex>
+            <ZIndex>62</ZIndex>
             <CanGrow>true</CanGrow>
-            <Left>17.25cm</Left>
+            <Left>16.75cm</Left>
             <Height>0.63492cm</Height>
             <Value>=First(Fields!miesto_skusky_pre_polovnych_hospodarov.Value)</Value>
           </Textbox>
           <Textbox Name="miesto_skusky_z__polovnictva">
             <rd:DefaultName>miesto_skusky_z__polovnictva</rd:DefaultName>
             <Top>5.5cm</Top>
-            <Width>2.53968cm</Width>
+            <Width>3.25cm</Width>
             <Style>
               <FontSize>9pt</FontSize>
               <TextAlign>Left</TextAlign>
@@ -702,9 +702,9 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>64</ZIndex>
+            <ZIndex>61</ZIndex>
             <CanGrow>true</CanGrow>
-            <Left>17.25cm</Left>
+            <Left>16.75cm</Left>
             <Height>0.63492cm</Height>
             <Value>=First(Fields!miesto_skusky_z__polovnictva.Value)</Value>
           </Textbox>
@@ -721,7 +721,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>63</ZIndex>
+            <ZIndex>60</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>13.5cm</Left>
             <Height>0.63492cm</Height>
@@ -740,7 +740,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>62</ZIndex>
+            <ZIndex>59</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>13.5cm</Left>
             <Height>0.63492cm</Height>
@@ -759,7 +759,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>61</ZIndex>
+            <ZIndex>58</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>12.75cm</Left>
             <Height>0.63492cm</Height>
@@ -768,7 +768,7 @@
           <Textbox Name="clen_pz">
             <rd:DefaultName>clen_pz</rd:DefaultName>
             <Top>4.75cm</Top>
-            <Width>2.53968cm</Width>
+            <Width>5.5cm</Width>
             <Style>
               <FontSize>9pt</FontSize>
               <TextAlign>Left</TextAlign>
@@ -777,7 +777,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>60</ZIndex>
+            <ZIndex>57</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>11.5cm</Left>
             <Height>0.63492cm</Height>
@@ -795,9 +795,9 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>59</ZIndex>
+            <ZIndex>56</ZIndex>
             <CanGrow>true</CanGrow>
-            <Left>16cm</Left>
+            <Left>15.5cm</Left>
             <Height>0.63492cm</Height>
             <Value>miesto</Value>
           </Textbox>
@@ -813,9 +813,9 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>58</ZIndex>
+            <ZIndex>55</ZIndex>
             <CanGrow>true</CanGrow>
-            <Left>16cm</Left>
+            <Left>15.5cm</Left>
             <Height>0.63492cm</Height>
             <Value>miesto</Value>
           </Textbox>
@@ -832,9 +832,9 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>57</ZIndex>
+            <ZIndex>54</ZIndex>
             <CanGrow>true</CanGrow>
-            <Left>16cm</Left>
+            <Left>15.5cm</Left>
             <Height>0.63492cm</Height>
             <Value>miesto</Value>
           </Textbox>
@@ -851,7 +851,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>56</ZIndex>
+            <ZIndex>53</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -870,7 +870,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>55</ZIndex>
+            <ZIndex>52</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -889,7 +889,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>54</ZIndex>
+            <ZIndex>51</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -908,7 +908,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>53</ZIndex>
+            <ZIndex>50</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -925,7 +925,7 @@
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>52</ZIndex>
+            <ZIndex>49</ZIndex>
             <Left>9.5cm</Left>
             <Height>6.75cm</Height>
           </Line>
@@ -941,7 +941,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>51</ZIndex>
+            <ZIndex>48</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>2cm</Left>
             <Height>0.63492cm</Height>
@@ -960,7 +960,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>50</ZIndex>
+            <ZIndex>47</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -974,14 +974,14 @@
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>49</ZIndex>
+            <ZIndex>46</ZIndex>
             <Left>9.5cm</Left>
             <Height>0cm</Height>
           </Line>
           <Textbox Name="clenske_do">
             <rd:DefaultName>clenske_do</rd:DefaultName>
             <Top>4cm</Top>
-            <Width>2.53968cm</Width>
+            <Width>5cm</Width>
             <Style>
               <FontSize>9pt</FontSize>
               <Format>dd.MM.yyyy</Format>
@@ -991,7 +991,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>48</ZIndex>
+            <ZIndex>45</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>12cm</Left>
             <Height>0.63492cm</Height>
@@ -1000,7 +1000,7 @@
           <Textbox Name="cislo_dokladu_clenske">
             <rd:DefaultName>cislo_dokladu_clenske</rd:DefaultName>
             <Top>3.25cm</Top>
-            <Width>2.53968cm</Width>
+            <Width>5.49999cm</Width>
             <Style>
               <FontSize>9pt</FontSize>
               <PaddingLeft>2pt</PaddingLeft>
@@ -1008,7 +1008,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>47</ZIndex>
+            <ZIndex>44</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>13.50001cm</Left>
             <Height>0.63492cm</Height>
@@ -1027,7 +1027,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>46</ZIndex>
+            <ZIndex>43</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>17cm</Left>
             <Height>0.63492cm</Height>
@@ -1044,7 +1044,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>45</ZIndex>
+            <ZIndex>42</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>11.25cm</Left>
             <Height>0.63492cm</Height>
@@ -1063,7 +1063,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>44</ZIndex>
+            <ZIndex>41</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>16.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1080,7 +1080,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>43</ZIndex>
+            <ZIndex>40</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>11.25cm</Left>
             <Height>0.63492cm</Height>
@@ -1099,7 +1099,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>42</ZIndex>
+            <ZIndex>39</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>16.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1116,7 +1116,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>41</ZIndex>
+            <ZIndex>38</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>11.25cm</Left>
             <Height>0.63492cm</Height>
@@ -1135,7 +1135,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>40</ZIndex>
+            <ZIndex>37</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>14.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1154,7 +1154,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>39</ZIndex>
+            <ZIndex>36</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1173,7 +1173,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>38</ZIndex>
+            <ZIndex>35</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1192,7 +1192,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>37</ZIndex>
+            <ZIndex>34</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>15cm</Left>
             <Height>0.63492cm</Height>
@@ -1211,7 +1211,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>36</ZIndex>
+            <ZIndex>33</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1230,7 +1230,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>35</ZIndex>
+            <ZIndex>32</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1249,7 +1249,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>34</ZIndex>
+            <ZIndex>31</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>15cm</Left>
             <Height>0.63492cm</Height>
@@ -1268,7 +1268,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>33</ZIndex>
+            <ZIndex>30</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1285,7 +1285,7 @@
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>32</ZIndex>
+            <ZIndex>29</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -1300,7 +1300,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>31</ZIndex>
+            <ZIndex>28</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>2.5cm</Left>
             <Height>0.63492cm</Height>
@@ -1317,16 +1317,16 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>30</ZIndex>
+            <ZIndex>27</ZIndex>
             <CanGrow>true</CanGrow>
-            <Left>6.5cm</Left>
+            <Left>6.75cm</Left>
             <Height>0.63492cm</Height>
             <Value>=First(Fields!statna_prislusnost.Value)</Value>
           </Textbox>
           <Textbox Name="datum_vydania_op">
             <rd:DefaultName>datum_vydania_op</rd:DefaultName>
             <Top>6.25cm</Top>
-            <Width>2.53968cm</Width>
+            <Width>2.28968cm</Width>
             <Style>
               <FontSize>9pt</FontSize>
               <Format>dd.MM.yyyy</Format>
@@ -1336,16 +1336,16 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>29</ZIndex>
+            <ZIndex>26</ZIndex>
             <CanGrow>true</CanGrow>
-            <Left>6.25cm</Left>
+            <Left>6.75cm</Left>
             <Height>0.63492cm</Height>
             <Value>=First(Fields!datum_vydania_op.Value)</Value>
           </Textbox>
           <Textbox Name="cislo_op">
             <rd:DefaultName>cislo_op</rd:DefaultName>
             <Top>6.25cm</Top>
-            <Width>2.25cm</Width>
+            <Width>2.75cm</Width>
             <Style>
               <FontSize>9pt</FontSize>
               <TextAlign>Left</TextAlign>
@@ -1354,7 +1354,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>28</ZIndex>
+            <ZIndex>25</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>2.25cm</Left>
             <Height>0.63492cm</Height>
@@ -1373,9 +1373,9 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>27</ZIndex>
+            <ZIndex>24</ZIndex>
             <CanGrow>true</CanGrow>
-            <Left>5cm</Left>
+            <Left>5.25cm</Left>
             <Height>0.63492cm</Height>
             <Value>Št. prísl.</Value>
           </Textbox>
@@ -1392,7 +1392,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>26</ZIndex>
+            <ZIndex>23</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -1412,9 +1412,9 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>25</ZIndex>
+            <ZIndex>22</ZIndex>
             <CanGrow>true</CanGrow>
-            <Left>4.5cm</Left>
+            <Left>5cm</Left>
             <Height>0.63492cm</Height>
             <Value>Vyd. dňa</Value>
           </Textbox>
@@ -1431,7 +1431,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>24</ZIndex>
+            <ZIndex>21</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -1445,7 +1445,7 @@
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>23</ZIndex>
+            <ZIndex>20</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -1460,7 +1460,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>22</ZIndex>
+            <ZIndex>19</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>3cm</Left>
             <Height>0.63492cm</Height>
@@ -1477,7 +1477,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>21</ZIndex>
+            <ZIndex>18</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>3cm</Left>
             <Height>1cm</Height>
@@ -1496,7 +1496,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>20</ZIndex>
+            <ZIndex>17</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -1510,7 +1510,7 @@
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>19</ZIndex>
+            <ZIndex>16</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -1525,7 +1525,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>18</ZIndex>
+            <ZIndex>15</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>6cm</Left>
             <Height>0.63492cm</Height>
@@ -1542,7 +1542,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>17</ZIndex>
+            <ZIndex>14</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>1cm</Left>
             <Height>0.63492cm</Height>
@@ -1560,7 +1560,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>16</ZIndex>
+            <ZIndex>13</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>6.25cm</Left>
             <Height>0.63492cm</Height>
@@ -1579,7 +1579,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>15</ZIndex>
+            <ZIndex>12</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>2.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1598,7 +1598,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>14</ZIndex>
+            <ZIndex>11</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>4.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1617,7 +1617,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>13</ZIndex>
+            <ZIndex>10</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -1636,7 +1636,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>12</ZIndex>
+            <ZIndex>9</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>5.25cm</Left>
             <Height>0.63492cm</Height>
@@ -1655,7 +1655,7 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>11</ZIndex>
+            <ZIndex>8</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -1669,7 +1669,7 @@
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>10</ZIndex>
+            <ZIndex>7</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -1684,75 +1684,18 @@
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>9</ZIndex>
+            <ZIndex>6</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>5cm</Left>
             <Height>0.63492cm</Height>
             <Value>=Fields!id.Value</Value>
           </Textbox>
-          <Textbox Name="titul_za">
-            <rd:DefaultName>titul_za</rd:DefaultName>
-            <Top>1.5cm</Top>
-            <Width>1.5cm</Width>
-            <Style>
-              <FontSize>14pt</FontSize>
-              <FontWeight>700</FontWeight>
-              <TextAlign>Left</TextAlign>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-            <ZIndex>8</ZIndex>
-            <CanGrow>true</CanGrow>
-            <Left>8cm</Left>
-            <Height>0.63492cm</Height>
-            <Value>=Fields!titul_za.Value</Value>
-          </Textbox>
-          <Textbox Name="priezvisko">
-            <rd:DefaultName>priezvisko</rd:DefaultName>
-            <Top>1.5cm</Top>
-            <Width>2.75cm</Width>
-            <Style>
-              <FontSize>14pt</FontSize>
-              <FontWeight>700</FontWeight>
-              <TextAlign>Left</TextAlign>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-            <ZIndex>7</ZIndex>
-            <CanGrow>true</CanGrow>
-            <Left>5.25cm</Left>
-            <Height>0.63492cm</Height>
-            <Value>=Fields!priezvisko.Value</Value>
-          </Textbox>
           <Textbox Name="meno">
             <rd:DefaultName>meno</rd:DefaultName>
             <Top>1.5cm</Top>
-            <Width>2.75cm</Width>
+            <Width>8.25cm</Width>
             <Style>
-              <FontSize>14pt</FontSize>
-              <FontWeight>700</FontWeight>
-              <TextAlign>Right</TextAlign>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-            <ZIndex>6</ZIndex>
-            <CanGrow>true</CanGrow>
-            <Left>2.5cm</Left>
-            <Height>0.63492cm</Height>
-            <Value>=Fields!meno.Value</Value>
-          </Textbox>
-          <Textbox Name="titul_pred">
-            <rd:DefaultName>titul_pred</rd:DefaultName>
-            <Top>1.5cm</Top>
-            <Width>1.75cm</Width>
-            <Style>
-              <FontSize>14pt</FontSize>
+              <FontSize>13pt</FontSize>
               <FontWeight>700</FontWeight>
               <TextAlign>Right</TextAlign>
               <PaddingLeft>2pt</PaddingLeft>
@@ -1764,7 +1707,7 @@
             <CanGrow>true</CanGrow>
             <Left>0.75cm</Left>
             <Height>0.63492cm</Height>
-            <Value>=Fields!titul_pred.Value</Value>
+            <Value>=Fields!titul_pred.Value &amp; " " &amp; Fields!meno.Value &amp; " " &amp; Fields!priezvisko.Value &amp; " " &amp; Fields!titul_za.Value</Value>
           </Textbox>
           <Textbox Name="textbox2">
             <rd:DefaultName>textbox2</rd:DefaultName>
@@ -1854,6 +1797,7 @@
           <FontFamily>Times New Roman</FontFamily>
           <FontSize>9pt</FontSize>
           <FontWeight>700</FontWeight>
+          <TextAlign>Right</TextAlign>
         </Style>
         <Grouping Name="list1_Details_Group">
           <Label>=Fields!meno.Value &amp; " " &amp; Fields!priezvisko.Value</Label>
