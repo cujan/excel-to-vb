@@ -9,14 +9,14 @@
       </ConnectionProperties>
     </DataSource>
   </DataSources>
-  <InteractiveHeight>11in</InteractiveHeight>
+  <InteractiveHeight>10.5in</InteractiveHeight>
   <rd:DrawGrid>true</rd:DrawGrid>
   <InteractiveWidth>8.5in</InteractiveWidth>
   <rd:GridSpacing>0.25cm</rd:GridSpacing>
   <rd:SnapToGrid>true</rd:SnapToGrid>
   <RightMargin>1.5cm</RightMargin>
   <LeftMargin>1.5cm</LeftMargin>
-  <BottomMargin>2.5cm</BottomMargin>
+  <BottomMargin>1.5cm</BottomMargin>
   <rd:ReportID>aa382146-e6db-411d-8efb-45c77fed01ab</rd:ReportID>
   <PageWidth>21cm</PageWidth>
   <DataSets>
@@ -609,5 +609,5 @@
   </Body>
   <Language>en-US</Language>
   <TopMargin>2.5cm</TopMargin>
-  <PageHeight>29.7cm</PageHeight>
+  <PageHeight>29cm</PageHeight>
 </Report>
