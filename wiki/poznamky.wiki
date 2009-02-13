@@ -5,3 +5,4 @@
 - vymysliet refresh vseobecnych udajov po edite<br>
 - upravit jednotlive datove gridy - grafiku <b>ciastocne hotove</b><br>
 - vymazat nepotrebne prepojenia v lavom menu <b>hotovo</b><br>
+- upravit tlacovu zostavu vsetkych clenov aby radilo zaznamy podla abecedy podla priezviska <br>
