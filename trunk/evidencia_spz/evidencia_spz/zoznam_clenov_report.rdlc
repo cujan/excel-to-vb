@@ -434,6 +434,12 @@
               <Height>0.5cm</Height>
             </TableRow>
           </TableRows>
+          <Sorting>
+            <SortBy>
+              <SortExpression>=Fields!priezvisko.Value</SortExpression>
+              <Direction>Ascending</Direction>
+            </SortBy>
+          </Sorting>
         </Details>
         <Header>
           <TableRows>
