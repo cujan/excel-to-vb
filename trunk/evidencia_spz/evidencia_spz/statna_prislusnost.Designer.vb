@@ -44,14 +44,14 @@ Partial Class statna_prislusnost
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.Statna_prislusnostBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.Statna_prislusnostDataGridView = New System.Windows.Forms.DataGridView
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Button1 = New System.Windows.Forms.Button
         Me.uloz = New System.Windows.Forms.Button
         Me.SkratkaTextBox = New System.Windows.Forms.TextBox
         Me.NazovTextBox = New System.Windows.Forms.TextBox
         Me.pridaj = New System.Windows.Forms.Button
         Me.zmaz = New System.Windows.Forms.Button
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         SkratkaLabel = New System.Windows.Forms.Label
         NazovLabel = New System.Windows.Forms.Label
         CType(Me.Statna_prislusnostDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -130,7 +130,7 @@ Partial Class statna_prislusnost
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -219,25 +219,11 @@ Partial Class statna_prislusnost
         Me.Statna_prislusnostDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Statna_prislusnostDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.Statna_prislusnostDataGridView.DataSource = Me.Statna_prislusnostBindingSource
-        Me.Statna_prislusnostDataGridView.Location = New System.Drawing.Point(290, 60)
+        Me.Statna_prislusnostDataGridView.Location = New System.Drawing.Point(296, 60)
         Me.Statna_prislusnostDataGridView.Name = "Statna_prislusnostDataGridView"
         Me.Statna_prislusnostDataGridView.ReadOnly = True
-        Me.Statna_prislusnostDataGridView.Size = New System.Drawing.Size(249, 135)
+        Me.Statna_prislusnostDataGridView.Size = New System.Drawing.Size(214, 135)
         Me.Statna_prislusnostDataGridView.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "skratka"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "skratka"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "nazov"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'Button1
         '
@@ -245,9 +231,9 @@ Partial Class statna_prislusnost
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(493, 5)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(81, 23)
+        Me.Button1.Size = New System.Drawing.Size(97, 23)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Zavrieť kartu"
+        Me.Button1.Text = "Zavrieť podkartu"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'uloz
@@ -302,6 +288,22 @@ Partial Class statna_prislusnost
         Me.zmaz.Text = "Zmazať"
         Me.zmaz.UseVisualStyleBackColor = False
         '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "skratka"
+        Me.DataGridViewTextBoxColumn2.FillWeight = 70.0!
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Skratka"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 70
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "nazov"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Názov"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
         'statna_prislusnost
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -349,12 +351,12 @@ Partial Class statna_prislusnost
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents Statna_prislusnostBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents Statna_prislusnostDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents uloz As System.Windows.Forms.Button
     Friend WithEvents SkratkaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents NazovTextBox As System.Windows.Forms.TextBox
     Friend WithEvents pridaj As System.Windows.Forms.Button
     Friend WithEvents zmaz As System.Windows.Forms.Button
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

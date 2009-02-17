@@ -100,7 +100,7 @@ Public Class hlavna_aplikacia
 
             If sprava_zdruzeni_splitter.Panel2Collapsed = False Then
 
-                sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 150
+                sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 100
             Else
                 sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 34
             End If
@@ -117,7 +117,7 @@ Public Class hlavna_aplikacia
 
             If sprava_zdruzeni_splitter.Panel2Collapsed = False Then
 
-                sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 150
+                sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 100
             Else
                 sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 34
             End If
@@ -160,7 +160,7 @@ Public Class hlavna_aplikacia
         If sprava_zdruzeni_button.Text = "v" Then
             sprava_zdruzeni_button.Text = "^"
             sprava_zdruzeni_splitter.Panel2Collapsed = False
-            sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 150
+            sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 100
             sprava_zdruzeni_splitter_position.X = sprava_zdruzeni_splitter.Location.X
             nastavenia_splitter.Location = sprava_zdruzeni_splitter_position
         Else

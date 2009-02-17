@@ -219,6 +219,12 @@
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
       <List Name="list1">
+        <Sorting>
+          <SortBy>
+            <SortExpression>=Fields!priezvisko.Value</SortExpression>
+            <Direction>Ascending</Direction>
+          </SortBy>
+        </Sorting>
         <Left>0.25cm</Left>
         <DataSetName>spz_clenovia_report_a4_clenovia</DataSetName>
         <ReportItems>
