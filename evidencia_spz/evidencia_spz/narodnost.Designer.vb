@@ -44,14 +44,14 @@ Partial Class narodnost
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.NarodnostBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.NarodnostDataGridView = New System.Windows.Forms.DataGridView
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.SkratkaTextBox = New System.Windows.Forms.TextBox
         Me.NazovTextBox = New System.Windows.Forms.TextBox
         Me.koniec = New System.Windows.Forms.Button
         Me.pridajButton = New System.Windows.Forms.Button
         Me.ulozButton = New System.Windows.Forms.Button
         Me.zmazButton = New System.Windows.Forms.Button
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         SkratkaLabel = New System.Windows.Forms.Label
         NazovLabel = New System.Windows.Forms.Label
         CType(Me.NarodnostDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -130,7 +130,7 @@ Partial Class narodnost
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -222,22 +222,8 @@ Partial Class narodnost
         Me.NarodnostDataGridView.Location = New System.Drawing.Point(296, 60)
         Me.NarodnostDataGridView.Name = "NarodnostDataGridView"
         Me.NarodnostDataGridView.ReadOnly = True
-        Me.NarodnostDataGridView.Size = New System.Drawing.Size(244, 139)
+        Me.NarodnostDataGridView.Size = New System.Drawing.Size(214, 139)
         Me.NarodnostDataGridView.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "skratka"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "skratka"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "nazov"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'SkratkaTextBox
         '
@@ -263,9 +249,9 @@ Partial Class narodnost
         Me.koniec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.koniec.Location = New System.Drawing.Point(493, 5)
         Me.koniec.Name = "koniec"
-        Me.koniec.Size = New System.Drawing.Size(83, 23)
+        Me.koniec.Size = New System.Drawing.Size(97, 23)
         Me.koniec.TabIndex = 8
-        Me.koniec.Text = "Zavrieť kartu"
+        Me.koniec.Text = "Zavrieť podkartu"
         Me.koniec.UseVisualStyleBackColor = False
         '
         'pridajButton
@@ -301,6 +287,22 @@ Partial Class narodnost
         Me.zmazButton.TabIndex = 11
         Me.zmazButton.Text = "Zmazať"
         Me.zmazButton.UseVisualStyleBackColor = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "skratka"
+        Me.DataGridViewTextBoxColumn2.FillWeight = 70.0!
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Skratka"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 70
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "nazov"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Názov"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'narodnost
         '
@@ -349,12 +351,12 @@ Partial Class narodnost
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents NarodnostBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents NarodnostDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents SkratkaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents NazovTextBox As System.Windows.Forms.TextBox
     Friend WithEvents koniec As System.Windows.Forms.Button
     Friend WithEvents pridajButton As System.Windows.Forms.Button
     Friend WithEvents ulozButton As System.Windows.Forms.Button
     Friend WithEvents zmazButton As System.Windows.Forms.Button
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

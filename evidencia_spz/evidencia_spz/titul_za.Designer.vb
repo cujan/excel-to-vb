@@ -43,12 +43,12 @@ Partial Class titul_za
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.Titul_zaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.Titul_zaDataGridView = New System.Windows.Forms.DataGridView
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.koniec = New System.Windows.Forms.Button
         Me.pridaj = New System.Windows.Forms.Button
         Me.uloz = New System.Windows.Forms.Button
         Me.zmaz = New System.Windows.Forms.Button
         Me.NazovTextBox = New System.Windows.Forms.TextBox
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         NazovLabel = New System.Windows.Forms.Label
         CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Titul_zaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,7 +117,7 @@ Partial Class titul_za
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -212,22 +212,15 @@ Partial Class titul_za
         Me.Titul_zaDataGridView.Size = New System.Drawing.Size(145, 67)
         Me.Titul_zaDataGridView.TabIndex = 1
         '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "nazov"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
         'koniec
         '
         Me.koniec.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.koniec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.koniec.Location = New System.Drawing.Point(493, 5)
         Me.koniec.Name = "koniec"
-        Me.koniec.Size = New System.Drawing.Size(86, 23)
+        Me.koniec.Size = New System.Drawing.Size(97, 23)
         Me.koniec.TabIndex = 2
-        Me.koniec.Text = "Zavrieť kartu"
+        Me.koniec.Text = "Zavrieť podkartu"
         Me.koniec.UseVisualStyleBackColor = False
         '
         'pridaj
@@ -272,6 +265,13 @@ Partial Class titul_za
         Me.NazovTextBox.ReadOnly = True
         Me.NazovTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NazovTextBox.TabIndex = 9
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nazov"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Názov"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'titul_za
         '
@@ -318,10 +318,10 @@ Partial Class titul_za
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents Titul_zaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents Titul_zaDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents koniec As System.Windows.Forms.Button
     Friend WithEvents pridaj As System.Windows.Forms.Button
     Friend WithEvents uloz As System.Windows.Forms.Button
     Friend WithEvents zmaz As System.Windows.Forms.Button
     Friend WithEvents NazovTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
