@@ -3,6 +3,11 @@
 - osetrit problem pri ceselnikoch s ukladanim a mazanim
 <br>-vytvorit form na upravu vseobecnych udajov     <b>hotovo</b><br>
 - vymysliet refresh vseobecnych udajov po edite<br>
-- upravit jednotlive datove gridy - grafiku <b>ciastocne hotove</b><br>
+- upravit jednotlive datove gridy - grafiku <b>hotove</b><br>
 - vymazat nepotrebne prepojenia v lavom menu <b>hotovo</b><br>
 - upravit tlacovu zostavu vsetkych clenov aby radilo zaznamy podla abecedy podla priezviska <b>HOTOVO</b><br>
+- pridat form na vytvorenie zdruzeni <br>
+- pridat form na prehlad zdruzeni <br>
+- pridat form na upravu zdruzeni <br>
+- pridat tlacovy vystup pre zoznam zdruzeni <br>
+- pridat tlac. vystup pre jednotlive zdruzenia (ak to je potrebne) <br>
