@@ -110,6 +110,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>clenoviaDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="prehlad_zdruzeni.Designer.vb">
+      <DependentUpon>prehlad_zdruzeni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prehlad_zdruzeni.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="detaily_clena.Designer.vb">
       <DependentUpon>detaily_clena.vb</DependentUpon>
     </Compile>
@@ -310,6 +316,10 @@
   <ItemGroup>
     <EmbeddedResource Include="ciselniky.resx">
       <DependentUpon>ciselniky.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prehlad_zdruzeni.resx">
+      <DependentUpon>prehlad_zdruzeni.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="detaily_clena.resx">

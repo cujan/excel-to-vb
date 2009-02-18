@@ -95,6 +95,8 @@ Partial Class hlavna_aplikacia
         Me.sprava_zdruzeni_splitter = New System.Windows.Forms.SplitContainer
         Me.sprava_zdruzeni_button = New System.Windows.Forms.Button
         Me.sprava_zdruzeni_label = New System.Windows.Forms.Label
+        Me.prehlad_zdruzeni_button = New System.Windows.Forms.Button
+        Me.nove_zdruzenie_button = New System.Windows.Forms.Button
         Me.sprava_clenov_splitter = New System.Windows.Forms.SplitContainer
         Me.sprava_clenov_button = New System.Windows.Forms.Button
         Me.sprava_clenov_label = New System.Windows.Forms.Label
@@ -131,8 +133,6 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.Vseobecne_udajeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.nove_zdruzenie_button = New System.Windows.Forms.Button
-        Me.prehlad_zdruzeni_button = New System.Windows.Forms.Button
         TelefonLabel = New System.Windows.Forms.Label
         FaxLabel = New System.Windows.Forms.Label
         EmailLabel = New System.Windows.Forms.Label
@@ -778,6 +778,28 @@ Partial Class hlavna_aplikacia
         Me.sprava_zdruzeni_label.Text = "Správa združení"
         Me.sprava_zdruzeni_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'prehlad_zdruzeni_button
+        '
+        Me.prehlad_zdruzeni_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.prehlad_zdruzeni_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.prehlad_zdruzeni_button.Location = New System.Drawing.Point(4, 35)
+        Me.prehlad_zdruzeni_button.Name = "prehlad_zdruzeni_button"
+        Me.prehlad_zdruzeni_button.Size = New System.Drawing.Size(130, 21)
+        Me.prehlad_zdruzeni_button.TabIndex = 1
+        Me.prehlad_zdruzeni_button.Text = "Prehľad združení"
+        Me.prehlad_zdruzeni_button.UseVisualStyleBackColor = False
+        '
+        'nove_zdruzenie_button
+        '
+        Me.nove_zdruzenie_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.nove_zdruzenie_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.nove_zdruzenie_button.Location = New System.Drawing.Point(4, 7)
+        Me.nove_zdruzenie_button.Name = "nove_zdruzenie_button"
+        Me.nove_zdruzenie_button.Size = New System.Drawing.Size(130, 21)
+        Me.nove_zdruzenie_button.TabIndex = 0
+        Me.nove_zdruzenie_button.Text = "Pridať nové združenie"
+        Me.nove_zdruzenie_button.UseVisualStyleBackColor = False
+        '
         'sprava_clenov_splitter
         '
         Me.sprava_clenov_splitter.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
@@ -1137,28 +1159,6 @@ Partial Class hlavna_aplikacia
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Name = "Vseobecne_udajeBindingNavigatorSaveItem"
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'nove_zdruzenie_button
-        '
-        Me.nove_zdruzenie_button.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.nove_zdruzenie_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.nove_zdruzenie_button.Location = New System.Drawing.Point(4, 7)
-        Me.nove_zdruzenie_button.Name = "nove_zdruzenie_button"
-        Me.nove_zdruzenie_button.Size = New System.Drawing.Size(130, 21)
-        Me.nove_zdruzenie_button.TabIndex = 0
-        Me.nove_zdruzenie_button.Text = "Pridať nové združenie"
-        Me.nove_zdruzenie_button.UseVisualStyleBackColor = False
-        '
-        'prehlad_zdruzeni_button
-        '
-        Me.prehlad_zdruzeni_button.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.prehlad_zdruzeni_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.prehlad_zdruzeni_button.Location = New System.Drawing.Point(4, 35)
-        Me.prehlad_zdruzeni_button.Name = "prehlad_zdruzeni_button"
-        Me.prehlad_zdruzeni_button.Size = New System.Drawing.Size(130, 21)
-        Me.prehlad_zdruzeni_button.TabIndex = 1
-        Me.prehlad_zdruzeni_button.Text = "Prehľad združení"
-        Me.prehlad_zdruzeni_button.UseVisualStyleBackColor = False
         '
         'hlavna_aplikacia
         '
