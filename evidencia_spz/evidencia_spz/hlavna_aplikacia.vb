@@ -154,6 +154,8 @@ Public Class hlavna_aplikacia
     End Sub
 
 
+
+
     Private Sub sprava_zdruzeni_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sprava_zdruzeni_button.Click
         Dim sprava_zdruzeni_splitter_position As New System.Drawing.Point
 
@@ -265,6 +267,16 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub hlavny_splitter_Panel2_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles hlavny_splitter.Panel2.Paint
+
+    End Sub
+
+    Private Sub nastavenia_splitter_Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles nastavenia_splitter.Panel1.Paint
+
+    End Sub
+
+    Private Sub prehlad_zdruzeni_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles prehlad_zdruzeni_button.Click
+        prehlad_zdruzeni.Show()
+        prehlad_zdruzeni.BringToFront()
 
     End Sub
 End Class
