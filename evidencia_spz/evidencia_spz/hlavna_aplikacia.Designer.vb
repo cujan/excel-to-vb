@@ -1062,7 +1062,7 @@ Partial Class hlavna_aplikacia
         Me.Vseobecne_udajeBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Vseobecne_udajeBindingNavigator.Name = "Vseobecne_udajeBindingNavigator"
         Me.Vseobecne_udajeBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Vseobecne_udajeBindingNavigator.Size = New System.Drawing.Size(712, 25)
+        Me.Vseobecne_udajeBindingNavigator.Size = New System.Drawing.Size(903, 25)
         Me.Vseobecne_udajeBindingNavigator.TabIndex = 11
         Me.Vseobecne_udajeBindingNavigator.Text = "BindingNavigator1"
         Me.Vseobecne_udajeBindingNavigator.Visible = False
