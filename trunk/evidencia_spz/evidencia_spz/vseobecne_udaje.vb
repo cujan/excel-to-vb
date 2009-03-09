@@ -49,6 +49,8 @@
         Me.FaxTextBox.ReadOnly = True
         Me.EmailTextBox.ReadOnly = True
         Me.WebTextBox.ReadOnly = True
+
+
     End Sub
 
     Private Sub koniecButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles koniecButton.Click
