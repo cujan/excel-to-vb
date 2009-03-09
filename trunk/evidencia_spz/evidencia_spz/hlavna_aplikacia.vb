@@ -279,4 +279,10 @@ Public Class hlavna_aplikacia
         prehlad_zdruzeni.BringToFront()
 
     End Sub
+
+    Private Sub nove_zdruzenie_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nove_zdruzenie_button.Click
+        nove_zdruzenie.Show()
+        nove_zdruzenie.BringToFront()
+
+    End Sub
 End Class

@@ -15,6 +15,12 @@
         'TODO: This line of code loads data into the 'ZdruzenieDataSet.zdruzenie' table. You can move, or remove it, as needed.
         Me.ZdruzenieTableAdapter.Fill(Me.ZdruzenieDataSet.zdruzenie)
 
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
+
+
+
     End Sub
 
     Private Sub ZdruzenieBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)

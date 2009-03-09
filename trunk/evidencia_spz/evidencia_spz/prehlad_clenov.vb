@@ -27,4 +27,8 @@
         evidencia_clenov.Show()
         evidencia_clenov.BringToFront()
     End Sub
+
+    Private Sub prehlad_clenov_splitter_Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles prehlad_clenov_splitter.Panel1.Paint
+
+    End Sub
 End Class
