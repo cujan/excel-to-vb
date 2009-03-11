@@ -155,7 +155,7 @@ Partial Class prehlad_zdruzeni
         Me.ZdruzenieDataGridView.Location = New System.Drawing.Point(12, 34)
         Me.ZdruzenieDataGridView.Name = "ZdruzenieDataGridView"
         Me.ZdruzenieDataGridView.ReadOnly = True
-        Me.ZdruzenieDataGridView.Size = New System.Drawing.Size(747, 302)
+        Me.ZdruzenieDataGridView.Size = New System.Drawing.Size(726, 302)
         Me.ZdruzenieDataGridView.TabIndex = 0
         '
         'DataGridViewTextBoxColumn2
@@ -413,6 +413,7 @@ Partial Class prehlad_zdruzeni
         Me.ZdruzenieBindingNavigator.Size = New System.Drawing.Size(762, 25)
         Me.ZdruzenieBindingNavigator.TabIndex = 1
         Me.ZdruzenieBindingNavigator.Text = "BindingNavigator1"
+        Me.ZdruzenieBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '

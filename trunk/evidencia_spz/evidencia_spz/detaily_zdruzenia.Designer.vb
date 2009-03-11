@@ -469,6 +469,7 @@ Partial Class detaily_zdruzenia
         Me.ZdruzenieBindingNavigator.Size = New System.Drawing.Size(629, 25)
         Me.ZdruzenieBindingNavigator.TabIndex = 0
         Me.ZdruzenieBindingNavigator.Text = "BindingNavigator1"
+        Me.ZdruzenieBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
