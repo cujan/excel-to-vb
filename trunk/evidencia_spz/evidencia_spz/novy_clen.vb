@@ -110,4 +110,16 @@
     Private Sub Brokova_zbranComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
+
+    Private Sub Rodne_cisloTextBox_Validating1(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Rodne_cisloTextBox.Validating
+        Dim chyba As String
+
+        If Not kontrola_rc(Rodne_cisloTextBox.Text, chyba) Then
+            'nastav a zobraz chybu
+            ErrorProvider1.SetError(Rodne_cisloTextBox, chyba)
+        Else
+            'zrus chybu
+            ErrorProvider1.SetError(Rodne_cisloTextBox, Nothing)
+        End If
+    End Sub
 End Class
