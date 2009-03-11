@@ -55,10 +55,6 @@ Partial Class nove_zdruzenie
         Dim Pes_malaLabel As System.Windows.Forms.Label
         Dim Platnost_najomnej_zmluvy_doLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(nove_zdruzenie))
-        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
-        Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
-        Me.TableAdapterManager = New evidencia_spz.zdruzenieDataSetTableAdapters.TableAdapterManager
         Me.ZdruzenieBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
@@ -74,7 +70,6 @@ Partial Class nove_zdruzenie
         Me.ZdruzenieBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.NazovTextBox = New System.Windows.Forms.TextBox
         Me.SidloTextBox = New System.Windows.Forms.TextBox
-        Me.PredsedaTextBox = New System.Windows.Forms.TextBox
         Me.Predseda_telefonTextBox = New System.Windows.Forms.TextBox
         Me.Polovnicky_hospodarTextBox = New System.Windows.Forms.TextBox
         Me.Polovnicky_hospodar_telefonTextBox = New System.Windows.Forms.TextBox
@@ -102,7 +97,18 @@ Partial Class nove_zdruzenie
         Me.Pes_diviaciaTextBox = New System.Windows.Forms.TextBox
         Me.Pes_srnciaTextBox = New System.Windows.Forms.TextBox
         Me.Pes_malaTextBox = New System.Windows.Forms.TextBox
-        Me.Platnost_najomnej_zmluvy_doDateTimePicker = New System.Windows.Forms.DateTimePicker
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
+        Me.ClenoviaDataSet1 = New evidencia_spz.clenoviaDataSet1
+        Me.ClenoviaDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ClenoviaTableAdapter = New evidencia_spz.clenoviaDataSet1TableAdapters.clenoviaTableAdapter
+        Me.PredsedaTextBox = New System.Windows.Forms.TextBox
+        Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
+        Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
+        Me.TableAdapterManager = New evidencia_spz.zdruzenieDataSetTableAdapters.TableAdapterManager
+        Me.Platnost_najomnej_zmluvy_doTextBox = New System.Windows.Forms.TextBox
         NazovLabel = New System.Windows.Forms.Label
         SidloLabel = New System.Windows.Forms.Label
         PredsedaLabel = New System.Windows.Forms.Label
@@ -134,10 +140,13 @@ Partial Class nove_zdruzenie
         Pes_srnciaLabel = New System.Windows.Forms.Label
         Pes_malaLabel = New System.Windows.Forms.Label
         Platnost_najomnej_zmluvy_doLabel = New System.Windows.Forms.Label
-        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzenieBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ZdruzenieBindingNavigator.SuspendLayout()
+        CType(Me.ClenoviaDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClenoviaDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NazovLabel
@@ -419,26 +428,6 @@ Partial Class nove_zdruzenie
         Platnost_najomnej_zmluvy_doLabel.TabIndex = 63
         Platnost_najomnej_zmluvy_doLabel.Text = "platnost najomnej zmluvy do:"
         '
-        'ZdruzenieDataSet
-        '
-        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
-        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ZdruzenieBindingSource
-        '
-        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
-        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSet
-        '
-        'ZdruzenieTableAdapter
-        '
-        Me.ZdruzenieTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.UpdateOrder = evidencia_spz.zdruzenieDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.zdruzenieTableAdapter = Me.ZdruzenieTableAdapter
-        '
         'ZdruzenieBindingNavigator
         '
         Me.ZdruzenieBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -453,7 +442,7 @@ Partial Class nove_zdruzenie
         Me.ZdruzenieBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ZdruzenieBindingNavigator.Name = "ZdruzenieBindingNavigator"
         Me.ZdruzenieBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ZdruzenieBindingNavigator.Size = New System.Drawing.Size(636, 25)
+        Me.ZdruzenieBindingNavigator.Size = New System.Drawing.Size(670, 25)
         Me.ZdruzenieBindingNavigator.TabIndex = 0
         Me.ZdruzenieBindingNavigator.Text = "BindingNavigator1"
         '
@@ -565,14 +554,6 @@ Partial Class nove_zdruzenie
         Me.SidloTextBox.Name = "SidloTextBox"
         Me.SidloTextBox.Size = New System.Drawing.Size(200, 20)
         Me.SidloTextBox.TabIndex = 6
-        '
-        'PredsedaTextBox
-        '
-        Me.PredsedaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "predseda", True))
-        Me.PredsedaTextBox.Location = New System.Drawing.Point(184, 109)
-        Me.PredsedaTextBox.Name = "PredsedaTextBox"
-        Me.PredsedaTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.PredsedaTextBox.TabIndex = 8
         '
         'Predseda_telefonTextBox
         '
@@ -790,13 +771,78 @@ Partial Class nove_zdruzenie
         Me.Pes_malaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Pes_malaTextBox.TabIndex = 62
         '
-        'Platnost_najomnej_zmluvy_doDateTimePicker
+        'Button1
         '
-        Me.Platnost_najomnej_zmluvy_doDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ZdruzenieBindingSource, "platnost_najomnej_zmluvy_do", True))
-        Me.Platnost_najomnej_zmluvy_doDateTimePicker.Location = New System.Drawing.Point(184, 837)
-        Me.Platnost_najomnej_zmluvy_doDateTimePicker.Name = "Platnost_najomnej_zmluvy_doDateTimePicker"
-        Me.Platnost_najomnej_zmluvy_doDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Platnost_najomnej_zmluvy_doDateTimePicker.TabIndex = 64
+        Me.Button1.Location = New System.Drawing.Point(523, 60)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 65
+        Me.Button1.Text = "Ulož"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(523, 112)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 66
+        Me.Button2.Text = "Koniec"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'ClenoviaDataSet1
+        '
+        Me.ClenoviaDataSet1.DataSetName = "clenoviaDataSet1"
+        Me.ClenoviaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ClenoviaDataSet1BindingSource
+        '
+        Me.ClenoviaDataSet1BindingSource.DataSource = Me.ClenoviaDataSet1
+        Me.ClenoviaDataSet1BindingSource.Position = 0
+        '
+        'ClenoviaBindingSource
+        '
+        Me.ClenoviaBindingSource.DataMember = "clenovia"
+        Me.ClenoviaBindingSource.DataSource = Me.ClenoviaDataSet1BindingSource
+        '
+        'ClenoviaTableAdapter
+        '
+        Me.ClenoviaTableAdapter.ClearBeforeFill = True
+        '
+        'PredsedaTextBox
+        '
+        Me.PredsedaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "predseda", True))
+        Me.PredsedaTextBox.Location = New System.Drawing.Point(184, 109)
+        Me.PredsedaTextBox.Name = "PredsedaTextBox"
+        Me.PredsedaTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.PredsedaTextBox.TabIndex = 67
+        '
+        'ZdruzenieBindingSource
+        '
+        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
+        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSet
+        '
+        'ZdruzenieDataSet
+        '
+        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
+        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ZdruzenieTableAdapter
+        '
+        Me.ZdruzenieTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.UpdateOrder = evidencia_spz.zdruzenieDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.zdruzenieTableAdapter = Me.ZdruzenieTableAdapter
+        '
+        'Platnost_najomnej_zmluvy_doTextBox
+        '
+        Me.Platnost_najomnej_zmluvy_doTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "platnost_najomnej_zmluvy_do", True))
+        Me.Platnost_najomnej_zmluvy_doTextBox.Location = New System.Drawing.Point(184, 834)
+        Me.Platnost_najomnej_zmluvy_doTextBox.Name = "Platnost_najomnej_zmluvy_doTextBox"
+        Me.Platnost_najomnej_zmluvy_doTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Platnost_najomnej_zmluvy_doTextBox.TabIndex = 68
         '
         'nove_zdruzenie
         '
@@ -804,13 +850,16 @@ Partial Class nove_zdruzenie
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(670, 778)
+        Me.ClientSize = New System.Drawing.Size(670, 879)
+        Me.Controls.Add(Me.Platnost_najomnej_zmluvy_doTextBox)
+        Me.Controls.Add(Me.PredsedaTextBox)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(NazovLabel)
         Me.Controls.Add(Me.NazovTextBox)
         Me.Controls.Add(SidloLabel)
         Me.Controls.Add(Me.SidloTextBox)
         Me.Controls.Add(PredsedaLabel)
-        Me.Controls.Add(Me.PredsedaTextBox)
         Me.Controls.Add(Predseda_telefonLabel)
         Me.Controls.Add(Me.Predseda_telefonTextBox)
         Me.Controls.Add(Polovnicky_hospodarLabel)
@@ -866,16 +915,18 @@ Partial Class nove_zdruzenie
         Me.Controls.Add(Pes_malaLabel)
         Me.Controls.Add(Me.Pes_malaTextBox)
         Me.Controls.Add(Platnost_najomnej_zmluvy_doLabel)
-        Me.Controls.Add(Me.Platnost_najomnej_zmluvy_doDateTimePicker)
         Me.Controls.Add(Me.ZdruzenieBindingNavigator)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "nove_zdruzenie"
         Me.Text = "nove_zdruzenie"
-        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ZdruzenieBindingNavigator.ResumeLayout(False)
         Me.ZdruzenieBindingNavigator.PerformLayout()
+        CType(Me.ClenoviaDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClenoviaDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -899,7 +950,6 @@ Partial Class nove_zdruzenie
     Friend WithEvents ZdruzenieBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents NazovTextBox As System.Windows.Forms.TextBox
     Friend WithEvents SidloTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents PredsedaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Predseda_telefonTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Polovnicky_hospodarTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Polovnicky_hospodar_telefonTextBox As System.Windows.Forms.TextBox
@@ -927,5 +977,12 @@ Partial Class nove_zdruzenie
     Friend WithEvents Pes_diviaciaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Pes_srnciaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Pes_malaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Platnost_najomnej_zmluvy_doDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents ClenoviaDataSet1BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ClenoviaDataSet1 As evidencia_spz.clenoviaDataSet1
+    Friend WithEvents ClenoviaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ClenoviaTableAdapter As evidencia_spz.clenoviaDataSet1TableAdapters.clenoviaTableAdapter
+    Friend WithEvents PredsedaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Platnost_najomnej_zmluvy_doTextBox As System.Windows.Forms.TextBox
 End Class
