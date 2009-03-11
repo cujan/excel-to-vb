@@ -57,6 +57,8 @@ Partial Class nove_zdruzenie
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(nove_zdruzenie))
         Me.ZdruzenieBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
@@ -104,8 +106,6 @@ Partial Class nove_zdruzenie
         Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClenoviaTableAdapter = New evidencia_spz.clenoviaDataSet1TableAdapters.clenoviaTableAdapter
         Me.PredsedaTextBox = New System.Windows.Forms.TextBox
-        Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
         Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
         Me.TableAdapterManager = New evidencia_spz.zdruzenieDataSetTableAdapters.TableAdapterManager
         Me.Platnost_najomnej_zmluvy_doTextBox = New System.Windows.Forms.TextBox
@@ -142,11 +142,11 @@ Partial Class nove_zdruzenie
         Platnost_najomnej_zmluvy_doLabel = New System.Windows.Forms.Label
         CType(Me.ZdruzenieBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ZdruzenieBindingNavigator.SuspendLayout()
+        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NazovLabel
@@ -442,9 +442,10 @@ Partial Class nove_zdruzenie
         Me.ZdruzenieBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ZdruzenieBindingNavigator.Name = "ZdruzenieBindingNavigator"
         Me.ZdruzenieBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ZdruzenieBindingNavigator.Size = New System.Drawing.Size(670, 25)
+        Me.ZdruzenieBindingNavigator.Size = New System.Drawing.Size(653, 25)
         Me.ZdruzenieBindingNavigator.TabIndex = 0
         Me.ZdruzenieBindingNavigator.Text = "BindingNavigator1"
+        Me.ZdruzenieBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
@@ -454,6 +455,16 @@ Partial Class nove_zdruzenie
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'ZdruzenieBindingSource
+        '
+        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
+        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSet
+        '
+        'ZdruzenieDataSet
+        '
+        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
+        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -816,16 +827,6 @@ Partial Class nove_zdruzenie
         Me.PredsedaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.PredsedaTextBox.TabIndex = 67
         '
-        'ZdruzenieBindingSource
-        '
-        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
-        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSet
-        '
-        'ZdruzenieDataSet
-        '
-        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
-        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ZdruzenieTableAdapter
         '
         Me.ZdruzenieTableAdapter.ClearBeforeFill = True
@@ -850,7 +851,7 @@ Partial Class nove_zdruzenie
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(670, 879)
+        Me.ClientSize = New System.Drawing.Size(670, 812)
         Me.Controls.Add(Me.Platnost_najomnej_zmluvy_doTextBox)
         Me.Controls.Add(Me.PredsedaTextBox)
         Me.Controls.Add(Me.Button2)
@@ -922,11 +923,11 @@ Partial Class nove_zdruzenie
         CType(Me.ZdruzenieBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ZdruzenieBindingNavigator.ResumeLayout(False)
         Me.ZdruzenieBindingNavigator.PerformLayout()
+        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClenoviaDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClenoviaDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

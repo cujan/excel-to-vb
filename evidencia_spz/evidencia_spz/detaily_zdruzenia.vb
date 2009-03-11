@@ -13,6 +13,11 @@
 
         Dim pozicia_zdruzenia As Integer = prehlad_zdruzeni.ZdruzenieBindingSource.Position
         Me.ZdruzenieBindingSource.Position = pozicia_zdruzenia
+
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        prehlad_zdruzeni.prehlad_clenov_splitter.Panel2.Controls.Add(Me)
+
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
