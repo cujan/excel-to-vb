@@ -99,4 +99,14 @@
         Me.StavaceTextBox.ReadOnly = True
         Me.VymeraTextBox.ReadOnly = True
     End Sub
+
+    Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Me.Close()
+
+
+    End Sub
+
+    Private Sub Nazov_polovneho_reviruTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Nazov_polovneho_reviruTextBox.TextChanged
+
+    End Sub
 End Class
