@@ -142,6 +142,7 @@ Partial Class novy_clen
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Titul_predLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -197,6 +198,7 @@ Partial Class novy_clen
         CType(Me.ClenoviaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Titul_predLabel
@@ -1151,6 +1153,10 @@ Partial Class novy_clen
         Me.LineShape1.Y1 = 284
         Me.LineShape1.Y2 = 284
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'novy_clen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1260,6 +1266,7 @@ Partial Class novy_clen
         CType(Me.ClenoviaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1343,4 +1350,5 @@ Partial Class novy_clen
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class
