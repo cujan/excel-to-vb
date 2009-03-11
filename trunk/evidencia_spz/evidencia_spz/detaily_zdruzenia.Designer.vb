@@ -105,6 +105,7 @@ Partial Class detaily_zdruzenia
         Me.Pes_srnciaTextBox = New System.Windows.Forms.TextBox
         Me.Pes_malaTextBox = New System.Windows.Forms.TextBox
         Me.Platnost_najomnej_zmluvy_doDateTimePicker = New System.Windows.Forms.DateTimePicker
+        Me.Button1 = New System.Windows.Forms.Button
         IDLabel = New System.Windows.Forms.Label
         NazovLabel = New System.Windows.Forms.Label
         SidloLabel = New System.Windows.Forms.Label
@@ -818,12 +819,22 @@ Partial Class detaily_zdruzenia
         Me.Platnost_najomnej_zmluvy_doDateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.Platnost_najomnej_zmluvy_doDateTimePicker.TabIndex = 64
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(499, 225)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 65
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'detaily_zdruzenia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(629, 778)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(IDLabel)
         Me.Controls.Add(Me.IDTextBox)
         Me.Controls.Add(NazovLabel)
@@ -950,4 +961,5 @@ Partial Class detaily_zdruzenia
     Friend WithEvents Pes_srnciaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Pes_malaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Platnost_najomnej_zmluvy_doDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

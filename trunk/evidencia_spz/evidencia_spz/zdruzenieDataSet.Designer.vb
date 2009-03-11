@@ -646,7 +646,7 @@ Partial Public Class zdruzenieDataSet
                     ByVal pes_diviacia As Integer,  _
                     ByVal pes_srncia As Integer,  _
                     ByVal pes_mala As Integer,  _
-                    ByVal platnost_najomnej_zmluvy_do As Date) As zdruzenieRow
+                    ByVal platnost_najomnej_zmluvy_do As String) As zdruzenieRow
             Dim rowzdruzenieRow As zdruzenieRow = CType(Me.NewRow,zdruzenieRow)
             Dim columnValuesArray() As Object = New Object() {Nothing, nazov, sidlo, predseda, predseda_telefon, polovnicky_hospodar, polovnicky_hospodar_telefon, ico, dic, banka, cislo_uctu, nazov_polovneho_reviru, chovatelska_oblast, cislo_reviru, vymera, les, jelenia, srncia, diviacia, bazant, ina, stavace, sliedice, slovensky_kopov, ostatne_durice, brlohare, farbiare, pes_jelenia, pes_diviacia, pes_srncia, pes_mala, platnost_najomnej_zmluvy_do}
             rowzdruzenieRow.ItemArray = columnValuesArray
@@ -771,7 +771,7 @@ Partial Public Class zdruzenieDataSet
             MyBase.Columns.Add(Me.columnpes_srncia)
             Me.columnpes_mala = New Global.System.Data.DataColumn("pes_mala", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpes_mala)
-            Me.columnplatnost_najomnej_zmluvy_do = New Global.System.Data.DataColumn("platnost_najomnej_zmluvy_do", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnplatnost_najomnej_zmluvy_do = New Global.System.Data.DataColumn("platnost_najomnej_zmluvy_do", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnplatnost_najomnej_zmluvy_do)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
@@ -792,6 +792,7 @@ Partial Public Class zdruzenieDataSet
             Me.columnnazov_polovneho_reviru.MaxLength = 255
             Me.columnchovatelska_oblast.MaxLength = 255
             Me.columncislo_reviru.MaxLength = 255
+            Me.columnplatnost_najomnej_zmluvy_do.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1359,10 +1360,10 @@ Partial Public Class zdruzenieDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property platnost_najomnej_zmluvy_do() As Date
+        Public Property platnost_najomnej_zmluvy_do() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablezdruzenie.platnost_najomnej_zmluvy_doColumn),Date)
+                    Return CType(Me(Me.tablezdruzenie.platnost_najomnej_zmluvy_doColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'platnost_najomnej_zmluvy_do' in table 'zdruzenie' is DBNull"& _ 
                             ".", e)
@@ -1964,7 +1965,7 @@ Namespace zdruzenieDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_pes_mala", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pes_mala", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_pes_mala", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pes_mala", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_platnost_najomnej_zmluvy_do", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "platnost_najomnej_zmluvy_do", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_platnost_najomnej_zmluvy_do", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "platnost_najomnej_zmluvy_do", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_platnost_najomnej_zmluvy_do", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "platnost_najomnej_zmluvy_do", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `zdruzenie` (`nazov`, `sidlo`, `predseda`, `predseda_telefon`, `polov"& _ 
@@ -2006,7 +2007,7 @@ Namespace zdruzenieDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("pes_diviacia", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pes_diviacia", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("pes_srncia", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pes_srncia", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("pes_mala", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pes_mala", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("platnost_najomnej_zmluvy_do", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "platnost_najomnej_zmluvy_do", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("platnost_najomnej_zmluvy_do", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "platnost_najomnej_zmluvy_do", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `zdruzenie` SET `nazov` = ?, `sidlo` = ?, `predseda` = ?, `predseda_telefo"& _ 
@@ -2072,7 +2073,7 @@ Namespace zdruzenieDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("pes_diviacia", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pes_diviacia", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("pes_srncia", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pes_srncia", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("pes_mala", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pes_mala", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("platnost_najomnej_zmluvy_do", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "platnost_najomnej_zmluvy_do", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("platnost_najomnej_zmluvy_do", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "platnost_najomnej_zmluvy_do", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_nazov", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nazov", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_nazov", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nazov", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -2135,7 +2136,7 @@ Namespace zdruzenieDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_pes_mala", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pes_mala", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_pes_mala", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pes_mala", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_platnost_najomnej_zmluvy_do", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "platnost_najomnej_zmluvy_do", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_platnost_najomnej_zmluvy_do", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "platnost_najomnej_zmluvy_do", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_platnost_najomnej_zmluvy_do", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "platnost_najomnej_zmluvy_do", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -2239,7 +2240,7 @@ Namespace zdruzenieDataSetTableAdapters
                     ByVal Original_pes_diviacia As Global.System.Nullable(Of Integer),  _
                     ByVal Original_pes_srncia As Global.System.Nullable(Of Integer),  _
                     ByVal Original_pes_mala As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_platnost_najomnej_zmluvy_do As Global.System.Nullable(Of Date)) As Integer
+                    ByVal Original_platnost_najomnej_zmluvy_do As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
             If (Original_nazov Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
@@ -2451,12 +2452,12 @@ Namespace zdruzenieDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(59).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(60).Value = Global.System.DBNull.Value
             End If
-            If (Original_platnost_najomnej_zmluvy_do.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(61).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(62).Value = CType(Original_platnost_najomnej_zmluvy_do.Value,Date)
-            Else
+            If (Original_platnost_najomnej_zmluvy_do Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(61).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(62).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(61).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(62).Value = CType(Original_platnost_najomnej_zmluvy_do,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -2507,7 +2508,7 @@ Namespace zdruzenieDataSetTableAdapters
                     ByVal pes_diviacia As Global.System.Nullable(Of Integer),  _
                     ByVal pes_srncia As Global.System.Nullable(Of Integer),  _
                     ByVal pes_mala As Global.System.Nullable(Of Integer),  _
-                    ByVal platnost_najomnej_zmluvy_do As Global.System.Nullable(Of Date)) As Integer
+                    ByVal platnost_najomnej_zmluvy_do As String) As Integer
             If (nazov Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -2658,10 +2659,10 @@ Namespace zdruzenieDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
-            If (platnost_najomnej_zmluvy_do.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(30).Value = CType(platnost_najomnej_zmluvy_do.Value,Date)
-            Else
+            If (platnost_najomnej_zmluvy_do Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(30).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(30).Value = CType(platnost_najomnej_zmluvy_do,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -2712,7 +2713,7 @@ Namespace zdruzenieDataSetTableAdapters
                     ByVal pes_diviacia As Global.System.Nullable(Of Integer),  _
                     ByVal pes_srncia As Global.System.Nullable(Of Integer),  _
                     ByVal pes_mala As Global.System.Nullable(Of Integer),  _
-                    ByVal platnost_najomnej_zmluvy_do As Global.System.Nullable(Of Date),  _
+                    ByVal platnost_najomnej_zmluvy_do As String,  _
                     ByVal Original_ID As Integer,  _
                     ByVal Original_nazov As String,  _
                     ByVal Original_sidlo As String,  _
@@ -2744,7 +2745,7 @@ Namespace zdruzenieDataSetTableAdapters
                     ByVal Original_pes_diviacia As Global.System.Nullable(Of Integer),  _
                     ByVal Original_pes_srncia As Global.System.Nullable(Of Integer),  _
                     ByVal Original_pes_mala As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_platnost_najomnej_zmluvy_do As Global.System.Nullable(Of Date)) As Integer
+                    ByVal Original_platnost_najomnej_zmluvy_do As String) As Integer
             If (nazov Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -2895,10 +2896,10 @@ Namespace zdruzenieDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
-            If (platnost_najomnej_zmluvy_do.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(platnost_najomnej_zmluvy_do.Value,Date)
-            Else
+            If (platnost_najomnej_zmluvy_do Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(platnost_najomnej_zmluvy_do,String)
             End If
             Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_ID,Integer)
             If (Original_nazov Is Nothing) Then
@@ -3111,12 +3112,12 @@ Namespace zdruzenieDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(90).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(91).Value = Global.System.DBNull.Value
             End If
-            If (Original_platnost_najomnej_zmluvy_do.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(Original_platnost_najomnej_zmluvy_do.Value,Date)
-            Else
+            If (Original_platnost_najomnej_zmluvy_do Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(92).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(93).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(Original_platnost_najomnej_zmluvy_do,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _

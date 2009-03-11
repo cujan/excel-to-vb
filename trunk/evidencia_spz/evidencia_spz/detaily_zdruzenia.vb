@@ -14,4 +14,8 @@
         Dim pozicia_zdruzenia As Integer = prehlad_zdruzeni.ZdruzenieBindingSource.Position
         Me.ZdruzenieBindingSource.Position = pozicia_zdruzenia
     End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
 End Class
