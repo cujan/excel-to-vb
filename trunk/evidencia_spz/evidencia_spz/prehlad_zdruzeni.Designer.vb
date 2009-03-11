@@ -28,6 +28,7 @@ Partial Class prehlad_zdruzeni
         Me.karta_clena_tlac_button = New System.Windows.Forms.Button
         Me.button_report_zoznam_clenov = New System.Windows.Forms.Button
         Me.zavriet_kartu = New System.Windows.Forms.Button
+        Me.Button1 = New System.Windows.Forms.Button
         Me.ZdruzenieDataGridView = New System.Windows.Forms.DataGridView
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -77,7 +78,6 @@ Partial Class prehlad_zdruzeni
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ZdruzenieBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.Button1 = New System.Windows.Forms.Button
         Me.prehlad_clenov_splitter.Panel1.SuspendLayout()
         Me.prehlad_clenov_splitter.Panel2.SuspendLayout()
         Me.prehlad_clenov_splitter.SuspendLayout()
@@ -142,6 +142,17 @@ Partial Class prehlad_zdruzeni
         Me.zavriet_kartu.TabIndex = 0
         Me.zavriet_kartu.Text = "Zavrieť kartu"
         Me.zavriet_kartu.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(127, 5)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(400, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Vymazať združenie"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'ZdruzenieDataGridView
         '
@@ -509,15 +520,6 @@ Partial Class prehlad_zdruzeni
         Me.ZdruzenieBindingNavigatorSaveItem.Name = "ZdruzenieBindingNavigatorSaveItem"
         Me.ZdruzenieBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ZdruzenieBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(245, 5)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "zmaz zdruzenie"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'prehlad_zdruzeni
         '
