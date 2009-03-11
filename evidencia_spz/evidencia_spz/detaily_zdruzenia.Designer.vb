@@ -23,7 +23,6 @@ Partial Class detaily_zdruzenia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim IDLabel As System.Windows.Forms.Label
         Dim NazovLabel As System.Windows.Forms.Label
         Dim SidloLabel As System.Windows.Forms.Label
         Dim PredsedaLabel As System.Windows.Forms.Label
@@ -73,7 +72,6 @@ Partial Class detaily_zdruzenia
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ZdruzenieBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.IDTextBox = New System.Windows.Forms.TextBox
         Me.NazovTextBox = New System.Windows.Forms.TextBox
         Me.SidloTextBox = New System.Windows.Forms.TextBox
         Me.PredsedaTextBox = New System.Windows.Forms.TextBox
@@ -105,8 +103,8 @@ Partial Class detaily_zdruzenia
         Me.Pes_srnciaTextBox = New System.Windows.Forms.TextBox
         Me.Pes_malaTextBox = New System.Windows.Forms.TextBox
         Me.Platnost_najomnej_zmluvy_doDateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.Button1 = New System.Windows.Forms.Button
-        IDLabel = New System.Windows.Forms.Label
+        Me.upravitButton = New System.Windows.Forms.Button
+        Me.ulozButton = New System.Windows.Forms.Button
         NazovLabel = New System.Windows.Forms.Label
         SidloLabel = New System.Windows.Forms.Label
         PredsedaLabel = New System.Windows.Forms.Label
@@ -143,15 +141,6 @@ Partial Class detaily_zdruzenia
         CType(Me.ZdruzenieBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ZdruzenieBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'IDLabel
-        '
-        IDLabel.AutoSize = True
-        IDLabel.Location = New System.Drawing.Point(75, 82)
-        IDLabel.Name = "IDLabel"
-        IDLabel.Size = New System.Drawing.Size(21, 13)
-        IDLabel.TabIndex = 1
-        IDLabel.Text = "ID:"
         '
         'NazovLabel
         '
@@ -564,19 +553,12 @@ Partial Class detaily_zdruzenia
         Me.ZdruzenieBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ZdruzenieBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'IDTextBox
-        '
-        Me.IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "ID", True))
-        Me.IDTextBox.Location = New System.Drawing.Point(224, 79)
-        Me.IDTextBox.Name = "IDTextBox"
-        Me.IDTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.IDTextBox.TabIndex = 2
-        '
         'NazovTextBox
         '
         Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "nazov", True))
         Me.NazovTextBox.Location = New System.Drawing.Point(224, 105)
         Me.NazovTextBox.Name = "NazovTextBox"
+        Me.NazovTextBox.ReadOnly = True
         Me.NazovTextBox.Size = New System.Drawing.Size(200, 20)
         Me.NazovTextBox.TabIndex = 4
         '
@@ -585,6 +567,7 @@ Partial Class detaily_zdruzenia
         Me.SidloTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "sidlo", True))
         Me.SidloTextBox.Location = New System.Drawing.Point(224, 131)
         Me.SidloTextBox.Name = "SidloTextBox"
+        Me.SidloTextBox.ReadOnly = True
         Me.SidloTextBox.Size = New System.Drawing.Size(200, 20)
         Me.SidloTextBox.TabIndex = 6
         '
@@ -593,6 +576,7 @@ Partial Class detaily_zdruzenia
         Me.PredsedaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "predseda", True))
         Me.PredsedaTextBox.Location = New System.Drawing.Point(224, 157)
         Me.PredsedaTextBox.Name = "PredsedaTextBox"
+        Me.PredsedaTextBox.ReadOnly = True
         Me.PredsedaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.PredsedaTextBox.TabIndex = 8
         '
@@ -601,6 +585,7 @@ Partial Class detaily_zdruzenia
         Me.Predseda_telefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "predseda_telefon", True))
         Me.Predseda_telefonTextBox.Location = New System.Drawing.Point(224, 183)
         Me.Predseda_telefonTextBox.Name = "Predseda_telefonTextBox"
+        Me.Predseda_telefonTextBox.ReadOnly = True
         Me.Predseda_telefonTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Predseda_telefonTextBox.TabIndex = 10
         '
@@ -609,6 +594,7 @@ Partial Class detaily_zdruzenia
         Me.Polovnicky_hospodarTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "polovnicky_hospodar", True))
         Me.Polovnicky_hospodarTextBox.Location = New System.Drawing.Point(224, 209)
         Me.Polovnicky_hospodarTextBox.Name = "Polovnicky_hospodarTextBox"
+        Me.Polovnicky_hospodarTextBox.ReadOnly = True
         Me.Polovnicky_hospodarTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Polovnicky_hospodarTextBox.TabIndex = 12
         '
@@ -617,6 +603,7 @@ Partial Class detaily_zdruzenia
         Me.Polovnicky_hospodar_telefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "polovnicky_hospodar_telefon", True))
         Me.Polovnicky_hospodar_telefonTextBox.Location = New System.Drawing.Point(224, 235)
         Me.Polovnicky_hospodar_telefonTextBox.Name = "Polovnicky_hospodar_telefonTextBox"
+        Me.Polovnicky_hospodar_telefonTextBox.ReadOnly = True
         Me.Polovnicky_hospodar_telefonTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Polovnicky_hospodar_telefonTextBox.TabIndex = 14
         '
@@ -625,6 +612,7 @@ Partial Class detaily_zdruzenia
         Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "ico", True))
         Me.IcoTextBox.Location = New System.Drawing.Point(224, 261)
         Me.IcoTextBox.Name = "IcoTextBox"
+        Me.IcoTextBox.ReadOnly = True
         Me.IcoTextBox.Size = New System.Drawing.Size(200, 20)
         Me.IcoTextBox.TabIndex = 16
         '
@@ -633,6 +621,7 @@ Partial Class detaily_zdruzenia
         Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "dic", True))
         Me.DicTextBox.Location = New System.Drawing.Point(224, 287)
         Me.DicTextBox.Name = "DicTextBox"
+        Me.DicTextBox.ReadOnly = True
         Me.DicTextBox.Size = New System.Drawing.Size(200, 20)
         Me.DicTextBox.TabIndex = 18
         '
@@ -641,6 +630,7 @@ Partial Class detaily_zdruzenia
         Me.BankaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "banka", True))
         Me.BankaTextBox.Location = New System.Drawing.Point(224, 313)
         Me.BankaTextBox.Name = "BankaTextBox"
+        Me.BankaTextBox.ReadOnly = True
         Me.BankaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.BankaTextBox.TabIndex = 20
         '
@@ -649,6 +639,7 @@ Partial Class detaily_zdruzenia
         Me.Cislo_uctuTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "cislo_uctu", True))
         Me.Cislo_uctuTextBox.Location = New System.Drawing.Point(224, 339)
         Me.Cislo_uctuTextBox.Name = "Cislo_uctuTextBox"
+        Me.Cislo_uctuTextBox.ReadOnly = True
         Me.Cislo_uctuTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Cislo_uctuTextBox.TabIndex = 22
         '
@@ -657,6 +648,7 @@ Partial Class detaily_zdruzenia
         Me.Nazov_polovneho_reviruTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "nazov_polovneho_reviru", True))
         Me.Nazov_polovneho_reviruTextBox.Location = New System.Drawing.Point(224, 365)
         Me.Nazov_polovneho_reviruTextBox.Name = "Nazov_polovneho_reviruTextBox"
+        Me.Nazov_polovneho_reviruTextBox.ReadOnly = True
         Me.Nazov_polovneho_reviruTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Nazov_polovneho_reviruTextBox.TabIndex = 24
         '
@@ -665,6 +657,7 @@ Partial Class detaily_zdruzenia
         Me.Chovatelska_oblastTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "chovatelska_oblast", True))
         Me.Chovatelska_oblastTextBox.Location = New System.Drawing.Point(224, 391)
         Me.Chovatelska_oblastTextBox.Name = "Chovatelska_oblastTextBox"
+        Me.Chovatelska_oblastTextBox.ReadOnly = True
         Me.Chovatelska_oblastTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Chovatelska_oblastTextBox.TabIndex = 26
         '
@@ -673,6 +666,7 @@ Partial Class detaily_zdruzenia
         Me.Cislo_reviruTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "cislo_reviru", True))
         Me.Cislo_reviruTextBox.Location = New System.Drawing.Point(224, 417)
         Me.Cislo_reviruTextBox.Name = "Cislo_reviruTextBox"
+        Me.Cislo_reviruTextBox.ReadOnly = True
         Me.Cislo_reviruTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Cislo_reviruTextBox.TabIndex = 28
         '
@@ -681,6 +675,7 @@ Partial Class detaily_zdruzenia
         Me.VymeraTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "vymera", True))
         Me.VymeraTextBox.Location = New System.Drawing.Point(224, 443)
         Me.VymeraTextBox.Name = "VymeraTextBox"
+        Me.VymeraTextBox.ReadOnly = True
         Me.VymeraTextBox.Size = New System.Drawing.Size(200, 20)
         Me.VymeraTextBox.TabIndex = 30
         '
@@ -689,6 +684,7 @@ Partial Class detaily_zdruzenia
         Me.LesTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "les", True))
         Me.LesTextBox.Location = New System.Drawing.Point(224, 469)
         Me.LesTextBox.Name = "LesTextBox"
+        Me.LesTextBox.ReadOnly = True
         Me.LesTextBox.Size = New System.Drawing.Size(200, 20)
         Me.LesTextBox.TabIndex = 32
         '
@@ -697,6 +693,7 @@ Partial Class detaily_zdruzenia
         Me.JeleniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "jelenia", True))
         Me.JeleniaTextBox.Location = New System.Drawing.Point(224, 495)
         Me.JeleniaTextBox.Name = "JeleniaTextBox"
+        Me.JeleniaTextBox.ReadOnly = True
         Me.JeleniaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.JeleniaTextBox.TabIndex = 34
         '
@@ -705,6 +702,7 @@ Partial Class detaily_zdruzenia
         Me.SrnciaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "srncia", True))
         Me.SrnciaTextBox.Location = New System.Drawing.Point(224, 521)
         Me.SrnciaTextBox.Name = "SrnciaTextBox"
+        Me.SrnciaTextBox.ReadOnly = True
         Me.SrnciaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.SrnciaTextBox.TabIndex = 36
         '
@@ -713,6 +711,7 @@ Partial Class detaily_zdruzenia
         Me.DiviaciaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "diviacia", True))
         Me.DiviaciaTextBox.Location = New System.Drawing.Point(224, 547)
         Me.DiviaciaTextBox.Name = "DiviaciaTextBox"
+        Me.DiviaciaTextBox.ReadOnly = True
         Me.DiviaciaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.DiviaciaTextBox.TabIndex = 38
         '
@@ -721,6 +720,7 @@ Partial Class detaily_zdruzenia
         Me.BazantTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "bazant", True))
         Me.BazantTextBox.Location = New System.Drawing.Point(224, 573)
         Me.BazantTextBox.Name = "BazantTextBox"
+        Me.BazantTextBox.ReadOnly = True
         Me.BazantTextBox.Size = New System.Drawing.Size(200, 20)
         Me.BazantTextBox.TabIndex = 40
         '
@@ -729,6 +729,7 @@ Partial Class detaily_zdruzenia
         Me.InaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "ina", True))
         Me.InaTextBox.Location = New System.Drawing.Point(224, 599)
         Me.InaTextBox.Name = "InaTextBox"
+        Me.InaTextBox.ReadOnly = True
         Me.InaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.InaTextBox.TabIndex = 42
         '
@@ -737,6 +738,7 @@ Partial Class detaily_zdruzenia
         Me.StavaceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "stavace", True))
         Me.StavaceTextBox.Location = New System.Drawing.Point(224, 625)
         Me.StavaceTextBox.Name = "StavaceTextBox"
+        Me.StavaceTextBox.ReadOnly = True
         Me.StavaceTextBox.Size = New System.Drawing.Size(200, 20)
         Me.StavaceTextBox.TabIndex = 44
         '
@@ -745,6 +747,7 @@ Partial Class detaily_zdruzenia
         Me.SliediceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "sliedice", True))
         Me.SliediceTextBox.Location = New System.Drawing.Point(224, 651)
         Me.SliediceTextBox.Name = "SliediceTextBox"
+        Me.SliediceTextBox.ReadOnly = True
         Me.SliediceTextBox.Size = New System.Drawing.Size(200, 20)
         Me.SliediceTextBox.TabIndex = 46
         '
@@ -753,6 +756,7 @@ Partial Class detaily_zdruzenia
         Me.Slovensky_kopovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "slovensky_kopov", True))
         Me.Slovensky_kopovTextBox.Location = New System.Drawing.Point(224, 677)
         Me.Slovensky_kopovTextBox.Name = "Slovensky_kopovTextBox"
+        Me.Slovensky_kopovTextBox.ReadOnly = True
         Me.Slovensky_kopovTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Slovensky_kopovTextBox.TabIndex = 48
         '
@@ -761,6 +765,7 @@ Partial Class detaily_zdruzenia
         Me.Ostatne_duriceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "ostatne_durice", True))
         Me.Ostatne_duriceTextBox.Location = New System.Drawing.Point(224, 703)
         Me.Ostatne_duriceTextBox.Name = "Ostatne_duriceTextBox"
+        Me.Ostatne_duriceTextBox.ReadOnly = True
         Me.Ostatne_duriceTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Ostatne_duriceTextBox.TabIndex = 50
         '
@@ -769,6 +774,7 @@ Partial Class detaily_zdruzenia
         Me.BrlohareTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "brlohare", True))
         Me.BrlohareTextBox.Location = New System.Drawing.Point(224, 729)
         Me.BrlohareTextBox.Name = "BrlohareTextBox"
+        Me.BrlohareTextBox.ReadOnly = True
         Me.BrlohareTextBox.Size = New System.Drawing.Size(200, 20)
         Me.BrlohareTextBox.TabIndex = 52
         '
@@ -777,6 +783,7 @@ Partial Class detaily_zdruzenia
         Me.FarbiareTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "farbiare", True))
         Me.FarbiareTextBox.Location = New System.Drawing.Point(224, 755)
         Me.FarbiareTextBox.Name = "FarbiareTextBox"
+        Me.FarbiareTextBox.ReadOnly = True
         Me.FarbiareTextBox.Size = New System.Drawing.Size(200, 20)
         Me.FarbiareTextBox.TabIndex = 54
         '
@@ -820,14 +827,24 @@ Partial Class detaily_zdruzenia
         Me.Platnost_najomnej_zmluvy_doDateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.Platnost_najomnej_zmluvy_doDateTimePicker.TabIndex = 64
         '
-        'Button1
+        'upravitButton
         '
-        Me.Button1.Location = New System.Drawing.Point(499, 225)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 65
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.upravitButton.Location = New System.Drawing.Point(489, 108)
+        Me.upravitButton.Name = "upravitButton"
+        Me.upravitButton.Size = New System.Drawing.Size(75, 23)
+        Me.upravitButton.TabIndex = 65
+        Me.upravitButton.Text = "Upravit"
+        Me.upravitButton.UseVisualStyleBackColor = True
+        '
+        'ulozButton
+        '
+        Me.ulozButton.Location = New System.Drawing.Point(489, 149)
+        Me.ulozButton.Name = "ulozButton"
+        Me.ulozButton.Size = New System.Drawing.Size(75, 23)
+        Me.ulozButton.TabIndex = 66
+        Me.ulozButton.Text = "Uloz"
+        Me.ulozButton.UseVisualStyleBackColor = True
+        Me.ulozButton.Visible = False
         '
         'detaily_zdruzenia
         '
@@ -835,9 +852,8 @@ Partial Class detaily_zdruzenia
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(629, 778)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(IDLabel)
-        Me.Controls.Add(Me.IDTextBox)
+        Me.Controls.Add(Me.ulozButton)
+        Me.Controls.Add(Me.upravitButton)
         Me.Controls.Add(NazovLabel)
         Me.Controls.Add(Me.NazovTextBox)
         Me.Controls.Add(SidloLabel)
@@ -930,7 +946,6 @@ Partial Class detaily_zdruzenia
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ZdruzenieBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents IDTextBox As System.Windows.Forms.TextBox
     Friend WithEvents NazovTextBox As System.Windows.Forms.TextBox
     Friend WithEvents SidloTextBox As System.Windows.Forms.TextBox
     Friend WithEvents PredsedaTextBox As System.Windows.Forms.TextBox
@@ -962,5 +977,6 @@ Partial Class detaily_zdruzenia
     Friend WithEvents Pes_srnciaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Pes_malaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Platnost_najomnej_zmluvy_doDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents upravitButton As System.Windows.Forms.Button
+    Friend WithEvents ulozButton As System.Windows.Forms.Button
 End Class

@@ -44,4 +44,12 @@
         detaily_zdruzenia.Show()
         detaily_zdruzenia.BringToFront()
     End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Me.ZdruzenieBindingSource.RemoveCurrent()
+        Me.Validate()
+        Me.ZdruzenieBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.ZdruzenieDataSet)
+
+    End Sub
 End Class
