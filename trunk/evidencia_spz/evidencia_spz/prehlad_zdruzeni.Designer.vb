@@ -77,6 +77,7 @@ Partial Class prehlad_zdruzeni
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ZdruzenieBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
+        Me.Button1 = New System.Windows.Forms.Button
         Me.prehlad_clenov_splitter.Panel1.SuspendLayout()
         Me.prehlad_clenov_splitter.Panel2.SuspendLayout()
         Me.prehlad_clenov_splitter.SuspendLayout()
@@ -103,6 +104,7 @@ Partial Class prehlad_zdruzeni
         '
         'prehlad_clenov_splitter.Panel2
         '
+        Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.Button1)
         Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.ZdruzenieDataGridView)
         Me.prehlad_clenov_splitter.Size = New System.Drawing.Size(762, 400)
         Me.prehlad_clenov_splitter.SplitterDistance = 48
@@ -508,6 +510,15 @@ Partial Class prehlad_zdruzeni
         Me.ZdruzenieBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ZdruzenieBindingNavigatorSaveItem.Text = "Save Data"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(245, 5)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "zmaz zdruzenie"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'prehlad_zdruzeni
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -585,4 +596,5 @@ Partial Class prehlad_zdruzeni
     Friend WithEvents DataGridViewTextBoxColumn30 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn31 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn32 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
