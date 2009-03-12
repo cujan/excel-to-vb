@@ -46,10 +46,21 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Me.ZdruzenieBindingSource.RemoveCurrent()
-        Me.Validate()
-        Me.ZdruzenieBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.ZdruzenieDataSet)
+
+
+        If MsgBox("Naozaj chete zmazat zaznam?", MsgBoxStyle.OkCancel, "POZOR!!!") = MsgBoxResult.Ok Then
+            Me.ZdruzenieBindingSource.RemoveCurrent()
+            Me.Validate()
+            Me.ZdruzenieBindingSource.EndEdit()
+            Me.TableAdapterManager.UpdateAll(Me.ZdruzenieDataSet)
+        End If
+
+
+
+        'Me.ZdruzenieBindingSource.RemoveCurrent()
+        'Me.Validate()
+        'Me.ZdruzenieBindingSource.EndEdit()
+        'Me.TableAdapterManager.UpdateAll(Me.ZdruzenieDataSet)
 
     End Sub
 End Class

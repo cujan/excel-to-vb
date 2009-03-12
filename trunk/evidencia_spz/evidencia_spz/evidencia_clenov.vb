@@ -116,11 +116,14 @@
     End Sub
 
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        'podmienka na zmazanie zaznamu
+        If MsgBox("Naozaj chcete zmazat zaznam?", MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
+            Me.ClenoviaBindingSource.RemoveCurrent()
+            Me.Validate()
+            Me.ClenoviaBindingSource.EndEdit()
+            Me.TableAdapterManager.UpdateAll(Me.Prehlad_clenovDataSet)
+        End If
 
-        Me.ClenoviaBindingSource.RemoveCurrent()
-        Me.Validate()
-        Me.ClenoviaBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.Prehlad_clenovDataSet)
     End Sub
 
     Private Sub karta_clena_tlac_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
