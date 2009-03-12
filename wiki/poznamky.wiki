@@ -8,6 +8,6 @@
 - upravit tlacovu zostavu vsetkych clenov aby radilo zaznamy podla abecedy podla priezviska <b>HOTOVO</b><br>
 - pridat form na vytvorenie zdruzeni<b>HOTOVO</b> <br>
 - pridat form na prehlad zdruzeni <b>HOTOVO</b><br>
-- pridat form na upravu zdruzeni <br>
+- pridat form na upravu zdruzeni <b>HOTOVO</b> <br>
 - pridat tlacovy vystup pre zoznam zdruzeni <br>
 - pridat tlac. vystup pre jednotlive zdruzenia (ak to je potrebne) <br>
