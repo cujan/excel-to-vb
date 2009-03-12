@@ -110,8 +110,8 @@ Partial Class detaily_zdruzenia
         Me.Label2 = New System.Windows.Forms.Label
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         NazovLabel = New System.Windows.Forms.Label
         SidloLabel = New System.Windows.Forms.Label
         PredsedaLabel = New System.Windows.Forms.Label
@@ -479,7 +479,7 @@ Partial Class detaily_zdruzenia
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -799,6 +799,7 @@ Partial Class detaily_zdruzenia
         Me.Pes_jeleniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_jelenia", True))
         Me.Pes_jeleniaTextBox.Location = New System.Drawing.Point(190, 678)
         Me.Pes_jeleniaTextBox.Name = "Pes_jeleniaTextBox"
+        Me.Pes_jeleniaTextBox.ReadOnly = True
         Me.Pes_jeleniaTextBox.Size = New System.Drawing.Size(131, 20)
         Me.Pes_jeleniaTextBox.TabIndex = 56
         '
@@ -807,6 +808,7 @@ Partial Class detaily_zdruzenia
         Me.Pes_diviaciaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_diviacia", True))
         Me.Pes_diviaciaTextBox.Location = New System.Drawing.Point(190, 704)
         Me.Pes_diviaciaTextBox.Name = "Pes_diviaciaTextBox"
+        Me.Pes_diviaciaTextBox.ReadOnly = True
         Me.Pes_diviaciaTextBox.Size = New System.Drawing.Size(131, 20)
         Me.Pes_diviaciaTextBox.TabIndex = 58
         '
@@ -815,6 +817,7 @@ Partial Class detaily_zdruzenia
         Me.Pes_srnciaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_srncia", True))
         Me.Pes_srnciaTextBox.Location = New System.Drawing.Point(190, 730)
         Me.Pes_srnciaTextBox.Name = "Pes_srnciaTextBox"
+        Me.Pes_srnciaTextBox.ReadOnly = True
         Me.Pes_srnciaTextBox.Size = New System.Drawing.Size(131, 20)
         Me.Pes_srnciaTextBox.TabIndex = 60
         '
@@ -823,6 +826,7 @@ Partial Class detaily_zdruzenia
         Me.Pes_malaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_mala", True))
         Me.Pes_malaTextBox.Location = New System.Drawing.Point(190, 756)
         Me.Pes_malaTextBox.Name = "Pes_malaTextBox"
+        Me.Pes_malaTextBox.ReadOnly = True
         Me.Pes_malaTextBox.Size = New System.Drawing.Size(131, 20)
         Me.Pes_malaTextBox.TabIndex = 62
         '
@@ -907,15 +911,6 @@ Partial Class detaily_zdruzenia
         Me.ShapeContainer1.TabIndex = 70
         Me.ShapeContainer1.TabStop = False
         '
-        'LineShape2
-        '
-        Me.LineShape2.BorderWidth = 2
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 54
-        Me.LineShape2.X2 = 554
-        Me.LineShape2.Y1 = 323
-        Me.LineShape2.Y2 = 324
-        '
         'LineShape3
         '
         Me.LineShape3.BorderWidth = 2
@@ -924,6 +919,15 @@ Partial Class detaily_zdruzenia
         Me.LineShape3.X2 = 554
         Me.LineShape3.Y1 = 507
         Me.LineShape3.Y2 = 508
+        '
+        'LineShape2
+        '
+        Me.LineShape2.BorderWidth = 2
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 54
+        Me.LineShape2.X2 = 554
+        Me.LineShape2.Y1 = 323
+        Me.LineShape2.Y2 = 324
         '
         'detaily_zdruzenia
         '
