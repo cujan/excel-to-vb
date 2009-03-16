@@ -83,18 +83,18 @@ Partial Class evidencia_clenov
         Me.ClenoviaBindingNavigator.BindingSource = Me.ClenoviaBindingSource
         Me.ClenoviaBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.ClenoviaBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.ClenoviaBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.ClenoviaBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ClenoviaBindingNavigatorSaveItem})
-        Me.ClenoviaBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.ClenoviaBindingNavigator.Location = New System.Drawing.Point(12, 390)
         Me.ClenoviaBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.ClenoviaBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.ClenoviaBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
         Me.ClenoviaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ClenoviaBindingNavigator.Name = "ClenoviaBindingNavigator"
         Me.ClenoviaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(728, 25)
+        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(279, 25)
         Me.ClenoviaBindingNavigator.TabIndex = 5
         Me.ClenoviaBindingNavigator.Text = "BindingNavigator1"
-        Me.ClenoviaBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
@@ -108,7 +108,7 @@ Partial Class evidencia_clenov
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
