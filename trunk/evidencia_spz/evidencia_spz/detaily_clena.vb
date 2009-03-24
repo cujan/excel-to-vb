@@ -16,7 +16,10 @@
         Me.ClenoviaTableAdapter.Fill(Me.Prehlad_clenovDataSet.clenovia)
         'TODO: This line of code loads data into the 'PrehladDataSet.clenovia' table. You can move, or remove it, as needed.
         Dim pozicia As Integer = evidencia_clenov.ClenoviaBindingSource.Position
-        Me.ClenoviaBindingSource.Position = pozicia
+
+        Me.ClenoviaBindingSource.Position = evidencia_clenov.Label2.Text - 1
+
+        'Me.ClenoviaBindingSource.Position = pozicia
 
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
