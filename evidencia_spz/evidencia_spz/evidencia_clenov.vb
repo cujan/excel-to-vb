@@ -106,6 +106,11 @@
         Dim aktualna_pozicia As Integer = Me.ClenoviaBindingSource.Position + 1
 
 
+
+        Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "id", True))
+        Label2.Text = Label1.Text
+        Label1.DataBindings.Clear()
+
         detaily_clena.Show()
         detaily_clena.BringToFront()
 
