@@ -15,20 +15,26 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_4C68EBFAFEDA85465642C62682CF0D85"
-        "OwnerKey" = "8:_FCF65FA339FC441885A5CB0763632DF2"
+        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_63193BAF7C7AF15504DC6F0411DFC81B"
-        "OwnerKey" = "8:_FCF65FA339FC441885A5CB0763632DF2"
+        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_76536CEEAB037192680D608B7640B5BF"
-        "OwnerKey" = "8:_FCF65FA339FC441885A5CB0763632DF2"
+        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -40,31 +46,25 @@
         "Entry"
         {
         "MsmKey" = "8:_80ACC7F8C63573A81BCEB67AD120473D"
-        "OwnerKey" = "8:_FCF65FA339FC441885A5CB0763632DF2"
+        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_8986001D8972F70D3FFFDCBB1FD0D560"
-        "OwnerKey" = "8:_FCF65FA339FC441885A5CB0763632DF2"
+        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_A80A6A32233C304B7B396725D9ED0529"
-        "OwnerKey" = "8:_FCF65FA339FC441885A5CB0763632DF2"
+        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_A80A6A32233C304B7B396725D9ED0529"
         "OwnerKey" = "8:_76536CEEAB037192680D608B7640B5BF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FCF65FA339FC441885A5CB0763632DF2"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FCF65FA339FC441885A5CB0763632DF2"
+        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -127,6 +127,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -143,6 +151,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -933,7 +949,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_FCF65FA339FC441885A5CB0763632DF2"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3A36E1CAFA5E496FB9451370E39A42E2"
             {
             "SourcePath" = "8:..\\evidencia_spz\\obj\\Debug\\evidencia_spz.exe"
             "TargetName" = "8:"
