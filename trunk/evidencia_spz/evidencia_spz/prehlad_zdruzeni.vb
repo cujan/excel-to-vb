@@ -41,6 +41,11 @@
     End Sub
 
     Private Sub ZdruzenieDataGridView_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ZdruzenieDataGridView.CellDoubleClick
+
+        Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "ID", True))
+        Label2.Text = Label1.Text
+        Label1.DataBindings.Clear()
+
         detaily_zdruzenia.Show()
         detaily_zdruzenia.BringToFront()
     End Sub

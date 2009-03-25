@@ -95,7 +95,7 @@ Partial Class evidencia_clenov
         Me.ClenoviaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ClenoviaBindingNavigator.Name = "ClenoviaBindingNavigator"
         Me.ClenoviaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(279, 25)
+        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(274, 25)
         Me.ClenoviaBindingNavigator.TabIndex = 5
         Me.ClenoviaBindingNavigator.Text = "BindingNavigator1"
         '
@@ -111,7 +111,7 @@ Partial Class evidencia_clenov
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '

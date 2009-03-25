@@ -78,6 +78,9 @@ Partial Class prehlad_zdruzeni
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ZdruzenieBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
         Me.prehlad_clenov_splitter.Panel1.SuspendLayout()
         Me.prehlad_clenov_splitter.Panel2.SuspendLayout()
         Me.prehlad_clenov_splitter.SuspendLayout()
@@ -104,6 +107,9 @@ Partial Class prehlad_zdruzeni
         '
         'prehlad_clenov_splitter.Panel2
         '
+        Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.Label3)
+        Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.Label2)
+        Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.Label1)
         Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.Button1)
         Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.ZdruzenieDataGridView)
         Me.prehlad_clenov_splitter.Size = New System.Drawing.Size(762, 400)
@@ -440,7 +446,7 @@ Partial Class prehlad_zdruzeni
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -521,6 +527,34 @@ Partial Class prehlad_zdruzeni
         Me.ZdruzenieBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ZdruzenieBindingNavigatorSaveItem.Text = "Save Data"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(669, 10)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(27, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "N/A"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(723, 10)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(27, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "N/A"
+        Me.Label2.Visible = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(544, 10)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(119, 13)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "ID vybraného združenia"
+        '
         'prehlad_zdruzeni
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -534,6 +568,7 @@ Partial Class prehlad_zdruzeni
         Me.Text = "prehlad_clenov"
         Me.prehlad_clenov_splitter.Panel1.ResumeLayout(False)
         Me.prehlad_clenov_splitter.Panel2.ResumeLayout(False)
+        Me.prehlad_clenov_splitter.Panel2.PerformLayout()
         Me.prehlad_clenov_splitter.ResumeLayout(False)
         CType(Me.ZdruzenieDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -599,4 +634,7 @@ Partial Class prehlad_zdruzeni
     Friend WithEvents DataGridViewTextBoxColumn31 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn32 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
