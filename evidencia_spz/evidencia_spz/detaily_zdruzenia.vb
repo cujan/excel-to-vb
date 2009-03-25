@@ -12,7 +12,8 @@
         Me.ZdruzenieTableAdapter.Fill(Me.ZdruzenieDataSet.zdruzenie)
 
         Dim pozicia_zdruzenia As Integer = prehlad_zdruzeni.ZdruzenieBindingSource.Position
-        Me.ZdruzenieBindingSource.Position = pozicia_zdruzenia
+        'Me.ZdruzenieBindingSource.Position = pozicia_zdruzenia
+        Me.ZdruzenieBindingSource.Position = prehlad_zdruzeni.Label2.Text - 1
 
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
