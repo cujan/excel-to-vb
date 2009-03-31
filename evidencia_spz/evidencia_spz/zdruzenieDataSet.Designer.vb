@@ -2150,12 +2150,13 @@ Namespace zdruzenieDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID, nazov, sidlo, predseda, predseda_telefon, polovnicky_hospodar, polovni"& _ 
-                "cky_hospodar_telefon, ico, dic, banka, cislo_uctu, nazov_polovneho_reviru, chova"& _ 
-                "telska_oblast, cislo_reviru, vymera, les, jelenia, srncia, diviacia, bazant, ina"& _ 
-                ", stavace, sliedice, slovensky_kopov, ostatne_durice, brlohare, farbiare, pes_je"& _ 
-                "lenia, pes_diviacia, pes_srncia, pes_mala, platnost_najomnej_zmluvy_do FROM zdru"& _ 
-                "zenie"
+            Me._commandCollection(0).CommandText = "SELECT     ID, nazov, sidlo, predseda, predseda_telefon, polovnicky_hospodar, pol"& _ 
+                "ovnicky_hospodar_telefon, ico, dic, banka, cislo_uctu, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      n"& _ 
+                "azov_polovneho_reviru, chovatelska_oblast, cislo_reviru, vymera, les, jelenia, s"& _ 
+                "rncia, diviacia, bazant, ina, stavace, sliedice, slovensky_kopov, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"            "& _ 
+                "          ostatne_durice, brlohare, farbiare, pes_jelenia, pes_diviacia, pes_srn"& _ 
+                "cia, pes_mala, platnost_najomnej_zmluvy_do"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         zdruzenie"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY naz"& _ 
+                "ov"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
