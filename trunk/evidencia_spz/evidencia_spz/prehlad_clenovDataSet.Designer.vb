@@ -2800,16 +2800,18 @@ Namespace prehlad_clenovDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT id, titul_pred, meno, priezvisko, rodne_cislo, miesto_narodenia, okres_nar"& _ 
-                "odenia, bydlisko, psc, statna_prislusnost, cislo_op, datum_vydania_op, cislo_pl,"& _ 
-                " datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, cle"& _ 
-                "n_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, [mie"& _ 
-                "sto_skusky_z _polovnictva], skuska_pre_polovnych_hospodarov, miesto_skusky_pre_p"& _ 
-                "olovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsia_skuska_z_polovni"& _ 
-                "ctva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gul"& _ 
-                "ova_zbran, vyznamenanie_III, vyznamenanie_II, vyznamenanie_I, vyznamenanie_ZK, v"& _ 
-                "yznamenanie_ine, udelene_tresty, poznamky, datum_narodenia, narodnost, okres_byd"& _ 
-                "liska, najv_vyznamenanie, vyznamenany_kedy, telefon, titul_za FROM clenovia"
+            Me._commandCollection(0).CommandText = "SELECT     id, titul_pred, meno, priezvisko, rodne_cislo, miesto_narodenia, okres"& _ 
+                "_narodenia, bydlisko, psc, statna_prislusnost, cislo_op, datum_vydania_op, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"   "& _ 
+                "                   cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo"& _ 
+                "_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz"& _ 
+                ", "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      skuska_z_polovnictva, [miesto_skusky_z _polovnictva], "& _ 
+                "skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"     "& _ 
+                "                 vyzsia_skuska_z_polovnictva, miesto_vyzsia_skuska_z_polovnictva"& _ 
+                ", brokova_zbran, kontrolne_strelby_brok, gulova_zbran, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      k"& _ 
+                "ontrolne_strelby_gulova_zbran, vyznamenanie_III, vyznamenanie_II, vyznamenanie_I"& _ 
+                ", vyznamenanie_ZK, vyznamenanie_ine, udelene_tresty, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      poz"& _ 
+                "namky, datum_narodenia, narodnost, okres_bydliska, najv_vyznamenanie, vyznamenan"& _ 
+                "y_kedy, telefon, titul_za"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         clenovia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
