@@ -121,6 +121,7 @@ Partial Class detaily_clena
         Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        Me.Label5 = New System.Windows.Forms.Label
         Rodne_cisloLabel = New System.Windows.Forms.Label
         Miesto_narodeniaLabel = New System.Windows.Forms.Label
         Okres_narodeniaLabel = New System.Windows.Forms.Label
@@ -1022,6 +1023,15 @@ Partial Class detaily_clena
         Me.LineShape1.Y1 = 270
         Me.LineShape1.Y2 = 270
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(153, 206)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(28, 13)
+        Me.Label5.TabIndex = 100
+        Me.Label5.Text = "Psč:"
+        '
         'detaily_clena
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1029,6 +1039,7 @@ Partial Class detaily_clena
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(782, 778)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.ulozButton)
         Me.Controls.Add(Me.upravbutton)
         Me.Controls.Add(Label4)
@@ -1182,4 +1193,5 @@ Partial Class detaily_clena
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents LineShape3 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

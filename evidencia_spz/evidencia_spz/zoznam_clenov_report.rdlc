@@ -469,7 +469,7 @@
                       </Style>
                       <ZIndex>9</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value />
+                      <Value>P. č.</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>

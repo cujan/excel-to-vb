@@ -97,7 +97,6 @@ Partial Class novy_clen
         Me.Clen_spz_odTextBox = New System.Windows.Forms.TextBox
         Me.Clenske_doTextBox = New System.Windows.Forms.TextBox
         Me.Cislo_dokladu_clenskeTextBox = New System.Windows.Forms.TextBox
-        Me.Clen_pzTextBox = New System.Windows.Forms.TextBox
         Me.Skuska_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
         Me.Miesto_skusky_z__polovnictvaTextBox = New System.Windows.Forms.TextBox
         Me.Skuska_pre_polovnych_hospodarovTextBox = New System.Windows.Forms.TextBox
@@ -143,6 +142,11 @@ Partial Class novy_clen
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Clen_pzComboBox = New System.Windows.Forms.ComboBox
+        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
+        Me.ZdruzenieDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
         Titul_predLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -199,6 +203,9 @@ Partial Class novy_clen
         CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Titul_predLabel
@@ -820,14 +827,6 @@ Partial Class novy_clen
         Me.Cislo_dokladu_clenskeTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Cislo_dokladu_clenskeTextBox.TabIndex = 40
         '
-        'Clen_pzTextBox
-        '
-        Me.Clen_pzTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "clen_pz", True))
-        Me.Clen_pzTextBox.Location = New System.Drawing.Point(190, 407)
-        Me.Clen_pzTextBox.Name = "Clen_pzTextBox"
-        Me.Clen_pzTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Clen_pzTextBox.TabIndex = 42
-        '
         'Skuska_z_polovnictvaTextBox
         '
         Me.Skuska_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "skuska_z_polovnictva", True))
@@ -1157,6 +1156,37 @@ Partial Class novy_clen
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'Clen_pzComboBox
+        '
+        Me.Clen_pzComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "clen_pz", True))
+        Me.Clen_pzComboBox.DataSource = Me.ZdruzenieBindingSource
+        Me.Clen_pzComboBox.DisplayMember = "nazov"
+        Me.Clen_pzComboBox.FormattingEnabled = True
+        Me.Clen_pzComboBox.Location = New System.Drawing.Point(190, 407)
+        Me.Clen_pzComboBox.Name = "Clen_pzComboBox"
+        Me.Clen_pzComboBox.Size = New System.Drawing.Size(100, 21)
+        Me.Clen_pzComboBox.TabIndex = 1
+        Me.Clen_pzComboBox.ValueMember = "nazov"
+        '
+        'ZdruzenieDataSet
+        '
+        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
+        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ZdruzenieDataSetBindingSource
+        '
+        Me.ZdruzenieDataSetBindingSource.DataSource = Me.ZdruzenieDataSet
+        Me.ZdruzenieDataSetBindingSource.Position = 0
+        '
+        'ZdruzenieBindingSource
+        '
+        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
+        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSetBindingSource
+        '
+        'ZdruzenieTableAdapter
+        '
+        Me.ZdruzenieTableAdapter.ClearBeforeFill = True
+        '
         'novy_clen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1164,6 +1194,7 @@ Partial Class novy_clen
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(1292, 812)
+        Me.Controls.Add(Me.Clen_pzComboBox)
         Me.Controls.Add(Me.Gulova_zbranComboBox)
         Me.Controls.Add(Me.Brokova_zbranComboBox)
         Me.Controls.Add(Me.Titul_zaComboBox)
@@ -1209,7 +1240,6 @@ Partial Class novy_clen
         Me.Controls.Add(Cislo_dokladu_clenskeLabel)
         Me.Controls.Add(Me.Cislo_dokladu_clenskeTextBox)
         Me.Controls.Add(Clen_pzLabel)
-        Me.Controls.Add(Me.Clen_pzTextBox)
         Me.Controls.Add(Skuska_z_polovnictvaLabel)
         Me.Controls.Add(Me.Skuska_z_polovnictvaTextBox)
         Me.Controls.Add(Miesto_skusky_z__polovnictvaLabel)
@@ -1267,6 +1297,9 @@ Partial Class novy_clen
         CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1305,7 +1338,6 @@ Partial Class novy_clen
     Friend WithEvents Clen_spz_odTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Clenske_doTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Cislo_dokladu_clenskeTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Clen_pzTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Skuska_z_polovnictvaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Miesto_skusky_z__polovnictvaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Skuska_pre_polovnych_hospodarovTextBox As System.Windows.Forms.TextBox
@@ -1351,4 +1383,9 @@ Partial Class novy_clen
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents Clen_pzComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents ZdruzenieDataSetBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ZdruzenieDataSet As evidencia_spz.zdruzenieDataSet
+    Friend WithEvents ZdruzenieBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ZdruzenieTableAdapter As evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
 End Class
