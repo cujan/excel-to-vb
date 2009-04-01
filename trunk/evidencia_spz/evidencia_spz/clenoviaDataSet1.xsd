@@ -158,8 +158,15 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, titul_pred, meno, priezvisko, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, psc, statna_prislusnost, cislo_op, datum_vydania_op, cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, [miesto_skusky_z _polovnictva], skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsia_skuska_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gulova_zbran, vyznamenanie_III, vyznamenanie_II, vyznamenanie_I, vyznamenanie_ZK, vyznamenanie_ine, udelene_tresty, poznamky, datum_narodenia, narodnost, okres_bydliska, najv_vyznamenanie, vyznamenany_kedy, telefon, titul_za FROM clenovia</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     id, titul_pred, meno, priezvisko, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, psc, statna_prislusnost, cislo_op, datum_vydania_op, 
+                      cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, 
+                      skuska_z_polovnictva, [miesto_skusky_z _polovnictva], skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, 
+                      vyzsia_skuska_z_polovnictva, miesto_vyzsia_skuska_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, 
+                      kontrolne_strelby_gulova_zbran, vyznamenanie_III, vyznamenanie_II, vyznamenanie_I, vyznamenanie_ZK, vyznamenanie_ine, udelene_tresty, 
+                      poznamky, datum_narodenia, narodnost, okres_bydliska, najv_vyznamenanie, vyznamenany_kedy, telefon, titul_za
+FROM         clenovia
+</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -359,10 +366,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="clenoviaDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="clenoviaDataSet1" msprop:Generator_UserDSName="clenoviaDataSet1" msprop:EnableTableAdapterManager="True">
+  <xs:element name="clenoviaDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="clenoviaDataSet1" msprop:Generator_DataSetName="clenoviaDataSet1" msprop:EnableTableAdapterManager="True">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="clenovia" msprop:Generator_UserTableName="clenovia" msprop:Generator_RowDeletedName="clenoviaRowDeleted" msprop:Generator_TableClassName="clenoviaDataTable" msprop:Generator_RowChangedName="clenoviaRowChanged" msprop:Generator_RowClassName="clenoviaRow" msprop:Generator_RowChangingName="clenoviaRowChanging" msprop:Generator_RowEvArgName="clenoviaRowChangeEvent" msprop:Generator_RowEvHandlerName="clenoviaRowChangeEventHandler" msprop:Generator_TablePropName="clenovia" msprop:Generator_TableVarName="tableclenovia" msprop:Generator_RowDeletingName="clenoviaRowDeleting">
+        <xs:element name="clenovia" msprop:Generator_UserTableName="clenovia" msprop:Generator_RowDeletedName="clenoviaRowDeleted" msprop:Generator_RowChangedName="clenoviaRowChanged" msprop:Generator_RowClassName="clenoviaRow" msprop:Generator_RowChangingName="clenoviaRowChanging" msprop:Generator_RowEvArgName="clenoviaRowChangeEvent" msprop:Generator_RowEvHandlerName="clenoviaRowChangeEventHandler" msprop:Generator_TableClassName="clenoviaDataTable" msprop:Generator_TableVarName="tableclenovia" msprop:Generator_RowDeletingName="clenoviaRowDeleting" msprop:Generator_TablePropName="clenovia">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:int" />
