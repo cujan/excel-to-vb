@@ -12,4 +12,34 @@
 - pridat tlacovy vystup pre zoznam zdruzeni <br>
 - pridat tlac. vystup pre jednotlive zdruzenia (ak to je potrebne) <br>
 1.4.2009<br>
-- upravit poradove cislo v talcovej zostave tlacova forma zoznamu
+- upravit poradove cislo v talcovej zostave tlacova forma zoznamu<br>
+
+Sedlak pridal tieto veci
+
+Potreboval by som v evidencii členov: 
+
+     -      Výber podľa:     PZ - zoznamy členov PZ
+
+                                        - kto z PZ má absolvovať kontrolné streľby v roku x    
+
+                                    Dátumu narodenia – jubilanti do Spravodaja
+
+                                    Kontrolných strelieb - kto má absolvovať v roku x
+
+                                    Členského do – komu končí členstvo v roku x
+
+-          Číslovanie v tlačenej forme sa zobrazuje na kartách a nie je podľa abecedy.
+
+-          Najvyššie vyznamenanie – y
+
+-          Pri udelených trestoch väčšia kolonka – jeden riadok, ale na šírku celej strany
+
+-          V tlačenej forme je zoznam podľa angl. abecedy – 1. Achimovič má byť Adam, v zozname je 1. Adam. 
+
+V evidencii PZ:
+
+-          predseda a PH – širšia kolonka aby k menu vošla aj adresa
+
+-          tlačidlo vytvoriť karty členov prepísať na vytvoriť karty PZ
+
+-          psy - rozdeliť kolonky na polovicu - plán a skutočnosť.
