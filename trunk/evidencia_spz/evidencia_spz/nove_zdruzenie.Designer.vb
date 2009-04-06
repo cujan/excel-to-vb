@@ -23,7 +23,6 @@ Partial Class nove_zdruzenie
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(nove_zdruzenie))
         Dim Label1 As System.Windows.Forms.Label
         Dim Label2 As System.Windows.Forms.Label
         Dim Label3 As System.Windows.Forms.Label
@@ -55,6 +54,7 @@ Partial Class nove_zdruzenie
         Dim Label30 As System.Windows.Forms.Label
         Dim Label31 As System.Windows.Forms.Label
         Dim Label32 As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(nove_zdruzenie))
         Me.ZdruzenieBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -112,9 +112,9 @@ Partial Class nove_zdruzenie
         Me.Label21 = New System.Windows.Forms.Label
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.Label33 = New System.Windows.Forms.Label
-        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Label1 = New System.Windows.Forms.Label
         Label2 = New System.Windows.Forms.Label
         Label3 = New System.Windows.Forms.Label
@@ -154,6 +154,285 @@ Partial Class nove_zdruzenie
         CType(Me.ClenoviaDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Location = New System.Drawing.Point(89, 57)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(38, 13)
+        Label1.TabIndex = 69
+        Label1.Text = "Názov"
+        '
+        'Label2
+        '
+        Label2.AutoSize = True
+        Label2.Location = New System.Drawing.Point(75, 132)
+        Label2.Name = "Label2"
+        Label2.Size = New System.Drawing.Size(52, 13)
+        Label2.TabIndex = 70
+        Label2.Text = "Predseda"
+        '
+        'Label3
+        '
+        Label3.AutoSize = True
+        Label3.Location = New System.Drawing.Point(53, 158)
+        Label3.Name = "Label3"
+        Label3.Size = New System.Drawing.Size(74, 13)
+        Label3.TabIndex = 71
+        Label3.Text = "Poľ. hospodár"
+        '
+        'Label4
+        '
+        Label4.AutoSize = True
+        Label4.Location = New System.Drawing.Point(102, 83)
+        Label4.Name = "Label4"
+        Label4.Size = New System.Drawing.Size(25, 13)
+        Label4.TabIndex = 72
+        Label4.Text = "IČO"
+        '
+        'Label5
+        '
+        Label5.AutoSize = True
+        Label5.Location = New System.Drawing.Point(90, 107)
+        Label5.Name = "Label5"
+        Label5.Size = New System.Drawing.Size(38, 13)
+        Label5.TabIndex = 73
+        Label5.Text = "Banka"
+        '
+        'Label6
+        '
+        Label6.AutoSize = True
+        Label6.Location = New System.Drawing.Point(401, 57)
+        Label6.Name = "Label6"
+        Label6.Size = New System.Drawing.Size(32, 13)
+        Label6.TabIndex = 74
+        Label6.Text = "Sídlo"
+        '
+        'Label7
+        '
+        Label7.AutoSize = True
+        Label7.Location = New System.Drawing.Point(408, 132)
+        Label7.Name = "Label7"
+        Label7.Size = New System.Drawing.Size(25, 13)
+        Label7.TabIndex = 75
+        Label7.Text = "Tel."
+        '
+        'Label8
+        '
+        Label8.AutoSize = True
+        Label8.Location = New System.Drawing.Point(408, 158)
+        Label8.Name = "Label8"
+        Label8.Size = New System.Drawing.Size(25, 13)
+        Label8.TabIndex = 76
+        Label8.Text = "Tel."
+        '
+        'Label9
+        '
+        Label9.AutoSize = True
+        Label9.Location = New System.Drawing.Point(408, 83)
+        Label9.Name = "Label9"
+        Label9.Size = New System.Drawing.Size(25, 13)
+        Label9.TabIndex = 77
+        Label9.Text = "DIČ"
+        '
+        'Label10
+        '
+        Label10.AutoSize = True
+        Label10.Location = New System.Drawing.Point(378, 107)
+        Label10.Name = "Label10"
+        Label10.Size = New System.Drawing.Size(55, 13)
+        Label10.TabIndex = 78
+        Label10.Text = "Číslo účtu"
+        '
+        'Label11
+        '
+        Label11.AutoSize = True
+        Label11.Location = New System.Drawing.Point(53, 207)
+        Label11.Name = "Label11"
+        Label11.Size = New System.Drawing.Size(124, 13)
+        Label11.TabIndex = 79
+        Label11.Text = "Názov poľovného revíru"
+        '
+        'Label12
+        '
+        Label12.AutoSize = True
+        Label12.Location = New System.Drawing.Point(78, 233)
+        Label12.Name = "Label12"
+        Label12.Size = New System.Drawing.Size(100, 13)
+        Label12.TabIndex = 80
+        Label12.Text = "Chovateľská oblasť"
+        '
+        'Label13
+        '
+        Label13.AutoSize = True
+        Label13.Location = New System.Drawing.Point(152, 259)
+        Label13.Name = "Label13"
+        Label13.Size = New System.Drawing.Size(24, 13)
+        Label13.TabIndex = 81
+        Label13.Text = "Les"
+        '
+        'Label14
+        '
+        Label14.AutoSize = True
+        Label14.Location = New System.Drawing.Point(371, 207)
+        Label14.Name = "Label14"
+        Label14.Size = New System.Drawing.Size(62, 13)
+        Label14.TabIndex = 82
+        Label14.Text = "Číslo revíru"
+        '
+        'Label15
+        '
+        Label15.AutoSize = True
+        Label15.Location = New System.Drawing.Point(391, 233)
+        Label15.Name = "Label15"
+        Label15.Size = New System.Drawing.Size(42, 13)
+        Label15.TabIndex = 83
+        Label15.Text = "Výmera"
+        '
+        'Label16
+        '
+        Label16.AutoSize = True
+        Label16.Location = New System.Drawing.Point(137, 334)
+        Label16.Name = "Label16"
+        Label16.Size = New System.Drawing.Size(40, 13)
+        Label16.TabIndex = 84
+        Label16.Text = "Jelenia"
+        '
+        'Label17
+        '
+        Label17.AutoSize = True
+        Label17.Location = New System.Drawing.Point(139, 360)
+        Label17.Name = "Label17"
+        Label17.Size = New System.Drawing.Size(37, 13)
+        Label17.TabIndex = 85
+        Label17.Text = "Srnčia"
+        '
+        'Label18
+        '
+        Label18.AutoSize = True
+        Label18.Location = New System.Drawing.Point(133, 386)
+        Label18.Name = "Label18"
+        Label18.Size = New System.Drawing.Size(45, 13)
+        Label18.TabIndex = 86
+        Label18.Text = "Diviačia"
+        '
+        'Label19
+        '
+        Label19.AutoSize = True
+        Label19.Location = New System.Drawing.Point(137, 412)
+        Label19.Name = "Label19"
+        Label19.Size = New System.Drawing.Size(40, 13)
+        Label19.TabIndex = 87
+        Label19.Text = "Bažant"
+        '
+        'Label20
+        '
+        Label20.AutoSize = True
+        Label20.Location = New System.Drawing.Point(152, 438)
+        Label20.Name = "Label20"
+        Label20.Size = New System.Drawing.Size(22, 13)
+        Label20.TabIndex = 88
+        Label20.Text = "Iná"
+        '
+        'Label22
+        '
+        Label22.AutoSize = True
+        Label22.Location = New System.Drawing.Point(126, 505)
+        Label22.Name = "Label22"
+        Label22.Size = New System.Drawing.Size(47, 13)
+        Label22.TabIndex = 91
+        Label22.Text = "Stavače"
+        '
+        'Label23
+        '
+        Label23.AutoSize = True
+        Label23.Location = New System.Drawing.Point(130, 531)
+        Label23.Name = "Label23"
+        Label23.Size = New System.Drawing.Size(44, 13)
+        Label23.TabIndex = 92
+        Label23.Text = "Sliediče"
+        '
+        'Label24
+        '
+        Label24.AutoSize = True
+        Label24.Location = New System.Drawing.Point(89, 557)
+        Label24.Name = "Label24"
+        Label24.Size = New System.Drawing.Size(89, 13)
+        Label24.TabIndex = 93
+        Label24.Text = "Slovenský kopov"
+        '
+        'Label25
+        '
+        Label25.AutoSize = True
+        Label25.Location = New System.Drawing.Point(101, 583)
+        Label25.Name = "Label25"
+        Label25.Size = New System.Drawing.Size(76, 13)
+        Label25.TabIndex = 94
+        Label25.Text = "Ostatné duriče"
+        '
+        'Label26
+        '
+        Label26.AutoSize = True
+        Label26.Location = New System.Drawing.Point(128, 609)
+        Label26.Name = "Label26"
+        Label26.Size = New System.Drawing.Size(49, 13)
+        Label26.TabIndex = 95
+        Label26.Text = "Brloháče"
+        '
+        'Label27
+        '
+        Label27.AutoSize = True
+        Label27.Location = New System.Drawing.Point(130, 635)
+        Label27.Name = "Label27"
+        Label27.Size = New System.Drawing.Size(45, 13)
+        Label27.TabIndex = 96
+        Label27.Text = "Farbiare"
+        '
+        'Label28
+        '
+        Label28.AutoSize = True
+        Label28.Location = New System.Drawing.Point(119, 661)
+        Label28.Name = "Label28"
+        Label28.Size = New System.Drawing.Size(58, 13)
+        Label28.TabIndex = 97
+        Label28.Text = "Pes jelenia"
+        '
+        'Label29
+        '
+        Label29.AutoSize = True
+        Label29.Location = New System.Drawing.Point(113, 687)
+        Label29.Name = "Label29"
+        Label29.Size = New System.Drawing.Size(64, 13)
+        Label29.TabIndex = 98
+        Label29.Text = "Pes diviačia"
+        '
+        'Label30
+        '
+        Label30.AutoSize = True
+        Label30.Location = New System.Drawing.Point(117, 713)
+        Label30.Name = "Label30"
+        Label30.Size = New System.Drawing.Size(56, 13)
+        Label30.TabIndex = 99
+        Label30.Text = "Pes srnčia"
+        '
+        'Label31
+        '
+        Label31.AutoSize = True
+        Label31.Location = New System.Drawing.Point(123, 739)
+        Label31.Name = "Label31"
+        Label31.Size = New System.Drawing.Size(50, 13)
+        Label31.TabIndex = 100
+        Label31.Text = "Pes malá"
+        '
+        'Label32
+        '
+        Label32.AutoSize = True
+        Label32.Location = New System.Drawing.Point(50, 764)
+        Label32.Name = "Label32"
+        Label32.Size = New System.Drawing.Size(126, 13)
+        Label32.TabIndex = 101
+        Label32.Text = "Platnosť nájomnej zmluvy"
         '
         'ZdruzenieBindingNavigator
         '
@@ -280,7 +559,7 @@ Partial Class nove_zdruzenie
         'NazovTextBox
         '
         Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "nazov", True))
-        Me.NazovTextBox.Location = New System.Drawing.Point(184, 54)
+        Me.NazovTextBox.Location = New System.Drawing.Point(133, 54)
         Me.NazovTextBox.Name = "NazovTextBox"
         Me.NazovTextBox.Size = New System.Drawing.Size(93, 20)
         Me.NazovTextBox.TabIndex = 4
@@ -304,9 +583,9 @@ Partial Class nove_zdruzenie
         'Polovnicky_hospodarTextBox
         '
         Me.Polovnicky_hospodarTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "polovnicky_hospodar", True))
-        Me.Polovnicky_hospodarTextBox.Location = New System.Drawing.Point(184, 155)
+        Me.Polovnicky_hospodarTextBox.Location = New System.Drawing.Point(133, 155)
         Me.Polovnicky_hospodarTextBox.Name = "Polovnicky_hospodarTextBox"
-        Me.Polovnicky_hospodarTextBox.Size = New System.Drawing.Size(93, 20)
+        Me.Polovnicky_hospodarTextBox.Size = New System.Drawing.Size(232, 20)
         Me.Polovnicky_hospodarTextBox.TabIndex = 12
         '
         'Polovnicky_hospodar_telefonTextBox
@@ -320,7 +599,7 @@ Partial Class nove_zdruzenie
         'IcoTextBox
         '
         Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "ico", True))
-        Me.IcoTextBox.Location = New System.Drawing.Point(184, 80)
+        Me.IcoTextBox.Location = New System.Drawing.Point(133, 80)
         Me.IcoTextBox.Name = "IcoTextBox"
         Me.IcoTextBox.Size = New System.Drawing.Size(93, 20)
         Me.IcoTextBox.TabIndex = 16
@@ -336,7 +615,7 @@ Partial Class nove_zdruzenie
         'BankaTextBox
         '
         Me.BankaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "banka", True))
-        Me.BankaTextBox.Location = New System.Drawing.Point(184, 104)
+        Me.BankaTextBox.Location = New System.Drawing.Point(133, 104)
         Me.BankaTextBox.Name = "BankaTextBox"
         Me.BankaTextBox.Size = New System.Drawing.Size(93, 20)
         Me.BankaTextBox.TabIndex = 20
@@ -553,9 +832,9 @@ Partial Class nove_zdruzenie
         'PredsedaTextBox
         '
         Me.PredsedaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "predseda", True))
-        Me.PredsedaTextBox.Location = New System.Drawing.Point(184, 129)
+        Me.PredsedaTextBox.Location = New System.Drawing.Point(133, 129)
         Me.PredsedaTextBox.Name = "PredsedaTextBox"
-        Me.PredsedaTextBox.Size = New System.Drawing.Size(93, 20)
+        Me.PredsedaTextBox.Size = New System.Drawing.Size(232, 20)
         Me.PredsedaTextBox.TabIndex = 67
         '
         'ZdruzenieTableAdapter
@@ -575,186 +854,6 @@ Partial Class nove_zdruzenie
         Me.Platnost_najomnej_zmluvy_doTextBox.Name = "Platnost_najomnej_zmluvy_doTextBox"
         Me.Platnost_najomnej_zmluvy_doTextBox.Size = New System.Drawing.Size(95, 20)
         Me.Platnost_najomnej_zmluvy_doTextBox.TabIndex = 68
-        '
-        'Label1
-        '
-        Label1.AutoSize = True
-        Label1.Location = New System.Drawing.Point(140, 57)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(38, 13)
-        Label1.TabIndex = 69
-        Label1.Text = "Názov"
-        '
-        'Label2
-        '
-        Label2.AutoSize = True
-        Label2.Location = New System.Drawing.Point(126, 132)
-        Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(52, 13)
-        Label2.TabIndex = 70
-        Label2.Text = "Predseda"
-        '
-        'Label3
-        '
-        Label3.AutoSize = True
-        Label3.Location = New System.Drawing.Point(104, 158)
-        Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(74, 13)
-        Label3.TabIndex = 71
-        Label3.Text = "Poľ. hospodár"
-        '
-        'Label4
-        '
-        Label4.AutoSize = True
-        Label4.Location = New System.Drawing.Point(153, 83)
-        Label4.Name = "Label4"
-        Label4.Size = New System.Drawing.Size(25, 13)
-        Label4.TabIndex = 72
-        Label4.Text = "IČO"
-        '
-        'Label5
-        '
-        Label5.AutoSize = True
-        Label5.Location = New System.Drawing.Point(141, 107)
-        Label5.Name = "Label5"
-        Label5.Size = New System.Drawing.Size(38, 13)
-        Label5.TabIndex = 73
-        Label5.Text = "Banka"
-        '
-        'Label6
-        '
-        Label6.AutoSize = True
-        Label6.Location = New System.Drawing.Point(401, 57)
-        Label6.Name = "Label6"
-        Label6.Size = New System.Drawing.Size(32, 13)
-        Label6.TabIndex = 74
-        Label6.Text = "Sídlo"
-        '
-        'Label7
-        '
-        Label7.AutoSize = True
-        Label7.Location = New System.Drawing.Point(408, 132)
-        Label7.Name = "Label7"
-        Label7.Size = New System.Drawing.Size(25, 13)
-        Label7.TabIndex = 75
-        Label7.Text = "Tel."
-        '
-        'Label8
-        '
-        Label8.AutoSize = True
-        Label8.Location = New System.Drawing.Point(408, 158)
-        Label8.Name = "Label8"
-        Label8.Size = New System.Drawing.Size(25, 13)
-        Label8.TabIndex = 76
-        Label8.Text = "Tel."
-        '
-        'Label9
-        '
-        Label9.AutoSize = True
-        Label9.Location = New System.Drawing.Point(408, 83)
-        Label9.Name = "Label9"
-        Label9.Size = New System.Drawing.Size(25, 13)
-        Label9.TabIndex = 77
-        Label9.Text = "DIČ"
-        '
-        'Label10
-        '
-        Label10.AutoSize = True
-        Label10.Location = New System.Drawing.Point(378, 107)
-        Label10.Name = "Label10"
-        Label10.Size = New System.Drawing.Size(55, 13)
-        Label10.TabIndex = 78
-        Label10.Text = "Číslo účtu"
-        '
-        'Label11
-        '
-        Label11.AutoSize = True
-        Label11.Location = New System.Drawing.Point(53, 207)
-        Label11.Name = "Label11"
-        Label11.Size = New System.Drawing.Size(124, 13)
-        Label11.TabIndex = 79
-        Label11.Text = "Názov poľovného revíru"
-        '
-        'Label12
-        '
-        Label12.AutoSize = True
-        Label12.Location = New System.Drawing.Point(78, 233)
-        Label12.Name = "Label12"
-        Label12.Size = New System.Drawing.Size(100, 13)
-        Label12.TabIndex = 80
-        Label12.Text = "Chovateľská oblasť"
-        '
-        'Label13
-        '
-        Label13.AutoSize = True
-        Label13.Location = New System.Drawing.Point(152, 259)
-        Label13.Name = "Label13"
-        Label13.Size = New System.Drawing.Size(24, 13)
-        Label13.TabIndex = 81
-        Label13.Text = "Les"
-        '
-        'Label14
-        '
-        Label14.AutoSize = True
-        Label14.Location = New System.Drawing.Point(371, 207)
-        Label14.Name = "Label14"
-        Label14.Size = New System.Drawing.Size(62, 13)
-        Label14.TabIndex = 82
-        Label14.Text = "Číslo revíru"
-        '
-        'Label15
-        '
-        Label15.AutoSize = True
-        Label15.Location = New System.Drawing.Point(391, 233)
-        Label15.Name = "Label15"
-        Label15.Size = New System.Drawing.Size(42, 13)
-        Label15.TabIndex = 83
-        Label15.Text = "Výmera"
-        '
-        'Label16
-        '
-        Label16.AutoSize = True
-        Label16.Location = New System.Drawing.Point(137, 334)
-        Label16.Name = "Label16"
-        Label16.Size = New System.Drawing.Size(40, 13)
-        Label16.TabIndex = 84
-        Label16.Text = "Jelenia"
-        '
-        'Label17
-        '
-        Label17.AutoSize = True
-        Label17.Location = New System.Drawing.Point(139, 360)
-        Label17.Name = "Label17"
-        Label17.Size = New System.Drawing.Size(37, 13)
-        Label17.TabIndex = 85
-        Label17.Text = "Srnčia"
-        '
-        'Label18
-        '
-        Label18.AutoSize = True
-        Label18.Location = New System.Drawing.Point(133, 386)
-        Label18.Name = "Label18"
-        Label18.Size = New System.Drawing.Size(45, 13)
-        Label18.TabIndex = 86
-        Label18.Text = "Diviačia"
-        '
-        'Label19
-        '
-        Label19.AutoSize = True
-        Label19.Location = New System.Drawing.Point(137, 412)
-        Label19.Name = "Label19"
-        Label19.Size = New System.Drawing.Size(40, 13)
-        Label19.TabIndex = 87
-        Label19.Text = "Bažant"
-        '
-        'Label20
-        '
-        Label20.AutoSize = True
-        Label20.Location = New System.Drawing.Point(152, 438)
-        Label20.Name = "Label20"
-        Label20.Size = New System.Drawing.Size(22, 13)
-        Label20.TabIndex = 88
-        Label20.Text = "Iná"
         '
         'Label21
         '
@@ -785,104 +884,14 @@ Partial Class nove_zdruzenie
         Me.ShapeContainer1.TabIndex = 90
         Me.ShapeContainer1.TabStop = False
         '
-        'Label22
+        'LineShape3
         '
-        Label22.AutoSize = True
-        Label22.Location = New System.Drawing.Point(126, 505)
-        Label22.Name = "Label22"
-        Label22.Size = New System.Drawing.Size(47, 13)
-        Label22.TabIndex = 91
-        Label22.Text = "Stavače"
-        '
-        'Label23
-        '
-        Label23.AutoSize = True
-        Label23.Location = New System.Drawing.Point(130, 531)
-        Label23.Name = "Label23"
-        Label23.Size = New System.Drawing.Size(44, 13)
-        Label23.TabIndex = 92
-        Label23.Text = "Sliediče"
-        '
-        'Label24
-        '
-        Label24.AutoSize = True
-        Label24.Location = New System.Drawing.Point(89, 557)
-        Label24.Name = "Label24"
-        Label24.Size = New System.Drawing.Size(89, 13)
-        Label24.TabIndex = 93
-        Label24.Text = "Slovenský kopov"
-        '
-        'Label25
-        '
-        Label25.AutoSize = True
-        Label25.Location = New System.Drawing.Point(101, 583)
-        Label25.Name = "Label25"
-        Label25.Size = New System.Drawing.Size(76, 13)
-        Label25.TabIndex = 94
-        Label25.Text = "Ostatné duriče"
-        '
-        'Label26
-        '
-        Label26.AutoSize = True
-        Label26.Location = New System.Drawing.Point(128, 609)
-        Label26.Name = "Label26"
-        Label26.Size = New System.Drawing.Size(49, 13)
-        Label26.TabIndex = 95
-        Label26.Text = "Brloháče"
-        '
-        'Label27
-        '
-        Label27.AutoSize = True
-        Label27.Location = New System.Drawing.Point(130, 635)
-        Label27.Name = "Label27"
-        Label27.Size = New System.Drawing.Size(45, 13)
-        Label27.TabIndex = 96
-        Label27.Text = "Farbiare"
-        '
-        'Label28
-        '
-        Label28.AutoSize = True
-        Label28.Location = New System.Drawing.Point(119, 661)
-        Label28.Name = "Label28"
-        Label28.Size = New System.Drawing.Size(58, 13)
-        Label28.TabIndex = 97
-        Label28.Text = "Pes jelenia"
-        '
-        'Label29
-        '
-        Label29.AutoSize = True
-        Label29.Location = New System.Drawing.Point(113, 687)
-        Label29.Name = "Label29"
-        Label29.Size = New System.Drawing.Size(64, 13)
-        Label29.TabIndex = 98
-        Label29.Text = "Pes diviačia"
-        '
-        'Label30
-        '
-        Label30.AutoSize = True
-        Label30.Location = New System.Drawing.Point(117, 713)
-        Label30.Name = "Label30"
-        Label30.Size = New System.Drawing.Size(56, 13)
-        Label30.TabIndex = 99
-        Label30.Text = "Pes srnčia"
-        '
-        'Label31
-        '
-        Label31.AutoSize = True
-        Label31.Location = New System.Drawing.Point(123, 739)
-        Label31.Name = "Label31"
-        Label31.Size = New System.Drawing.Size(50, 13)
-        Label31.TabIndex = 100
-        Label31.Text = "Pes malá"
-        '
-        'Label32
-        '
-        Label32.AutoSize = True
-        Label32.Location = New System.Drawing.Point(50, 764)
-        Label32.Name = "Label32"
-        Label32.Size = New System.Drawing.Size(126, 13)
-        Label32.TabIndex = 101
-        Label32.Text = "Platnosť nájomnej zmluvy"
+        Me.LineShape3.BorderWidth = 2
+        Me.LineShape3.Name = "LineShape3"
+        Me.LineShape3.X1 = 54
+        Me.LineShape3.X2 = 554
+        Me.LineShape3.Y1 = 185
+        Me.LineShape3.Y2 = 186
         '
         'LineShape1
         '
@@ -902,15 +911,6 @@ Partial Class nove_zdruzenie
         Me.Label33.Size = New System.Drawing.Size(27, 13)
         Me.Label33.TabIndex = 102
         Me.Label33.Text = "Psy"
-        '
-        'LineShape3
-        '
-        Me.LineShape3.BorderWidth = 2
-        Me.LineShape3.Name = "LineShape3"
-        Me.LineShape3.X1 = 54
-        Me.LineShape3.X2 = 554
-        Me.LineShape3.Y1 = 185
-        Me.LineShape3.Y2 = 186
         '
         'nove_zdruzenie
         '

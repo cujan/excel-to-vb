@@ -143,9 +143,9 @@ Partial Class novy_clen
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Clen_pzComboBox = New System.Windows.Forms.ComboBox
-        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
-        Me.ZdruzenieDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
         Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
         Titul_predLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
@@ -203,9 +203,9 @@ Partial Class novy_clen
         CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Titul_predLabel
@@ -490,7 +490,7 @@ Partial Class novy_clen
         'PoznamkyLabel
         '
         PoznamkyLabel.AutoSize = True
-        PoznamkyLabel.Location = New System.Drawing.Point(126, 677)
+        PoznamkyLabel.Location = New System.Drawing.Point(126, 697)
         PoznamkyLabel.Name = "PoznamkyLabel"
         PoznamkyLabel.Size = New System.Drawing.Size(56, 13)
         PoznamkyLabel.TabIndex = 75
@@ -895,14 +895,15 @@ Partial Class novy_clen
         '
         Me.Udelene_trestyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "udelene_tresty", True))
         Me.Udelene_trestyTextBox.Location = New System.Drawing.Point(190, 648)
+        Me.Udelene_trestyTextBox.Multiline = True
         Me.Udelene_trestyTextBox.Name = "Udelene_trestyTextBox"
-        Me.Udelene_trestyTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Udelene_trestyTextBox.Size = New System.Drawing.Size(391, 40)
         Me.Udelene_trestyTextBox.TabIndex = 74
         '
         'PoznamkyTextBox
         '
         Me.PoznamkyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "poznamky", True))
-        Me.PoznamkyTextBox.Location = New System.Drawing.Point(190, 674)
+        Me.PoznamkyTextBox.Location = New System.Drawing.Point(190, 694)
         Me.PoznamkyTextBox.Multiline = True
         Me.PoznamkyTextBox.Name = "PoznamkyTextBox"
         Me.PoznamkyTextBox.Size = New System.Drawing.Size(391, 99)
@@ -1168,20 +1169,20 @@ Partial Class novy_clen
         Me.Clen_pzComboBox.TabIndex = 1
         Me.Clen_pzComboBox.ValueMember = "nazov"
         '
-        'ZdruzenieDataSet
+        'ZdruzenieBindingSource
         '
-        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
-        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
+        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSetBindingSource
         '
         'ZdruzenieDataSetBindingSource
         '
         Me.ZdruzenieDataSetBindingSource.DataSource = Me.ZdruzenieDataSet
         Me.ZdruzenieDataSetBindingSource.Position = 0
         '
-        'ZdruzenieBindingSource
+        'ZdruzenieDataSet
         '
-        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
-        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSetBindingSource
+        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
+        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ZdruzenieTableAdapter
         '
@@ -1297,9 +1298,9 @@ Partial Class novy_clen
         CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -55,7 +55,7 @@ Partial Class prehlad_clenov
         Me.karta_clena_tlac_button.Name = "karta_clena_tlac_button"
         Me.karta_clena_tlac_button.Size = New System.Drawing.Size(139, 23)
         Me.karta_clena_tlac_button.TabIndex = 9
-        Me.karta_clena_tlac_button.Text = "Vytvoriť karty členov"
+        Me.karta_clena_tlac_button.Text = "Vytvoriť karty PZ"
         Me.karta_clena_tlac_button.UseVisualStyleBackColor = False
         '
         'button_report_zoznam_clenov
