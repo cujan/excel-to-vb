@@ -30,16 +30,16 @@ Potreboval by som v evidencii členov:
 
 -          Číslovanie v tlačenej forme sa zobrazuje na kartách a nie je podľa abecedy.
 
--          Najvyššie vyznamenanie – y
+-          <s>Najvyššie vyznamenanie – y</s>
 
--          Pri udelených trestoch väčšia kolonka – jeden riadok, ale na šírku celej strany
+-          <s>Pri udelených trestoch väčšia kolonka – jeden riadok, ale na šírku celej strany </s>
 
 -          V tlačenej forme je zoznam podľa angl. abecedy – 1. Achimovič má byť Adam, v zozname je 1. Adam. 
 
 V evidencii PZ:
 
--          predseda a PH – širšia kolonka aby k menu vošla aj adresa
+-         <s> predseda a PH – širšia kolonka aby k menu vošla aj adresa</s>
 
--          tlačidlo vytvoriť karty členov prepísať na vytvoriť karty PZ
+-          <s>tlačidlo vytvoriť karty členov prepísať na vytvoriť karty PZ</s>
 
 -          psy - rozdeliť kolonky na polovicu - plán a skutočnosť.
