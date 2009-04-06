@@ -54,7 +54,7 @@ Partial Class tlacovy_vystup_clen_1
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(792, 873)
+        Me.ReportViewer1.Size = New System.Drawing.Size(792, 778)
         Me.ReportViewer1.TabIndex = 0
         '
         'clenoviaTableAdapter
@@ -70,7 +70,7 @@ Partial Class tlacovy_vystup_clen_1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(792, 873)
+        Me.ClientSize = New System.Drawing.Size(792, 778)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "tlacovy_vystup_clen_1"
         Me.Text = "Tlačový výstup - Člen"

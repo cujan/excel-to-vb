@@ -152,7 +152,7 @@ Partial Class detaily_zdruzenia
         'NazovLabel
         '
         NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(147, 59)
+        NazovLabel.Location = New System.Drawing.Point(96, 59)
         NazovLabel.Name = "NazovLabel"
         NazovLabel.Size = New System.Drawing.Size(38, 13)
         NazovLabel.TabIndex = 3
@@ -170,7 +170,7 @@ Partial Class detaily_zdruzenia
         'PredsedaLabel
         '
         PredsedaLabel.AutoSize = True
-        PredsedaLabel.Location = New System.Drawing.Point(133, 134)
+        PredsedaLabel.Location = New System.Drawing.Point(82, 134)
         PredsedaLabel.Name = "PredsedaLabel"
         PredsedaLabel.Size = New System.Drawing.Size(52, 13)
         PredsedaLabel.TabIndex = 7
@@ -188,7 +188,7 @@ Partial Class detaily_zdruzenia
         'Polovnicky_hospodarLabel
         '
         Polovnicky_hospodarLabel.AutoSize = True
-        Polovnicky_hospodarLabel.Location = New System.Drawing.Point(111, 160)
+        Polovnicky_hospodarLabel.Location = New System.Drawing.Point(60, 160)
         Polovnicky_hospodarLabel.Name = "Polovnicky_hospodarLabel"
         Polovnicky_hospodarLabel.Size = New System.Drawing.Size(74, 13)
         Polovnicky_hospodarLabel.TabIndex = 11
@@ -206,7 +206,7 @@ Partial Class detaily_zdruzenia
         'IcoLabel
         '
         IcoLabel.AutoSize = True
-        IcoLabel.Location = New System.Drawing.Point(160, 85)
+        IcoLabel.Location = New System.Drawing.Point(109, 85)
         IcoLabel.Name = "IcoLabel"
         IcoLabel.Size = New System.Drawing.Size(25, 13)
         IcoLabel.TabIndex = 15
@@ -224,7 +224,7 @@ Partial Class detaily_zdruzenia
         'BankaLabel
         '
         BankaLabel.AutoSize = True
-        BankaLabel.Location = New System.Drawing.Point(148, 109)
+        BankaLabel.Location = New System.Drawing.Point(97, 109)
         BankaLabel.Name = "BankaLabel"
         BankaLabel.Size = New System.Drawing.Size(38, 13)
         BankaLabel.TabIndex = 19
@@ -479,7 +479,7 @@ Partial Class detaily_zdruzenia
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -563,7 +563,7 @@ Partial Class detaily_zdruzenia
         'NazovTextBox
         '
         Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "nazov", True))
-        Me.NazovTextBox.Location = New System.Drawing.Point(191, 56)
+        Me.NazovTextBox.Location = New System.Drawing.Point(140, 56)
         Me.NazovTextBox.Name = "NazovTextBox"
         Me.NazovTextBox.ReadOnly = True
         Me.NazovTextBox.Size = New System.Drawing.Size(130, 20)
@@ -581,10 +581,10 @@ Partial Class detaily_zdruzenia
         'PredsedaTextBox
         '
         Me.PredsedaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "predseda", True))
-        Me.PredsedaTextBox.Location = New System.Drawing.Point(191, 131)
+        Me.PredsedaTextBox.Location = New System.Drawing.Point(140, 131)
         Me.PredsedaTextBox.Name = "PredsedaTextBox"
         Me.PredsedaTextBox.ReadOnly = True
-        Me.PredsedaTextBox.Size = New System.Drawing.Size(130, 20)
+        Me.PredsedaTextBox.Size = New System.Drawing.Size(215, 20)
         Me.PredsedaTextBox.TabIndex = 8
         '
         'Predseda_telefonTextBox
@@ -599,10 +599,10 @@ Partial Class detaily_zdruzenia
         'Polovnicky_hospodarTextBox
         '
         Me.Polovnicky_hospodarTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "polovnicky_hospodar", True))
-        Me.Polovnicky_hospodarTextBox.Location = New System.Drawing.Point(191, 157)
+        Me.Polovnicky_hospodarTextBox.Location = New System.Drawing.Point(140, 157)
         Me.Polovnicky_hospodarTextBox.Name = "Polovnicky_hospodarTextBox"
         Me.Polovnicky_hospodarTextBox.ReadOnly = True
-        Me.Polovnicky_hospodarTextBox.Size = New System.Drawing.Size(130, 20)
+        Me.Polovnicky_hospodarTextBox.Size = New System.Drawing.Size(215, 20)
         Me.Polovnicky_hospodarTextBox.TabIndex = 12
         '
         'Polovnicky_hospodar_telefonTextBox
@@ -617,7 +617,7 @@ Partial Class detaily_zdruzenia
         'IcoTextBox
         '
         Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "ico", True))
-        Me.IcoTextBox.Location = New System.Drawing.Point(191, 82)
+        Me.IcoTextBox.Location = New System.Drawing.Point(140, 82)
         Me.IcoTextBox.Name = "IcoTextBox"
         Me.IcoTextBox.ReadOnly = True
         Me.IcoTextBox.Size = New System.Drawing.Size(130, 20)
@@ -635,7 +635,7 @@ Partial Class detaily_zdruzenia
         'BankaTextBox
         '
         Me.BankaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "banka", True))
-        Me.BankaTextBox.Location = New System.Drawing.Point(191, 106)
+        Me.BankaTextBox.Location = New System.Drawing.Point(140, 106)
         Me.BankaTextBox.Name = "BankaTextBox"
         Me.BankaTextBox.ReadOnly = True
         Me.BankaTextBox.Size = New System.Drawing.Size(130, 20)

@@ -372,7 +372,7 @@ Partial Class detaily_clena
         'PoznamkyLabel
         '
         PoznamkyLabel.AutoSize = True
-        PoznamkyLabel.Location = New System.Drawing.Point(127, 669)
+        PoznamkyLabel.Location = New System.Drawing.Point(127, 689)
         PoznamkyLabel.Name = "PoznamkyLabel"
         PoznamkyLabel.Size = New System.Drawing.Size(56, 13)
         PoznamkyLabel.TabIndex = 77
@@ -410,9 +410,9 @@ Partial Class detaily_clena
         Najv_vyznamenanieLabel.AutoSize = True
         Najv_vyznamenanieLabel.Location = New System.Drawing.Point(63, 608)
         Najv_vyznamenanieLabel.Name = "Najv_vyznamenanieLabel"
-        Najv_vyznamenanieLabel.Size = New System.Drawing.Size(120, 13)
+        Najv_vyznamenanieLabel.Size = New System.Drawing.Size(123, 13)
         Najv_vyznamenanieLabel.TabIndex = 85
-        Najv_vyznamenanieLabel.Text = "Najviššie vyznamenanie"
+        Najv_vyznamenanieLabel.Text = "Najvyššie vyznamenanie"
         '
         'Vyznamenany_kedyLabel
         '
@@ -885,15 +885,16 @@ Partial Class detaily_clena
         '
         Me.Udelene_trestyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "udelene_tresty", True))
         Me.Udelene_trestyTextBox.Location = New System.Drawing.Point(187, 631)
+        Me.Udelene_trestyTextBox.Multiline = True
         Me.Udelene_trestyTextBox.Name = "Udelene_trestyTextBox"
         Me.Udelene_trestyTextBox.ReadOnly = True
-        Me.Udelene_trestyTextBox.Size = New System.Drawing.Size(76, 20)
+        Me.Udelene_trestyTextBox.Size = New System.Drawing.Size(276, 52)
         Me.Udelene_trestyTextBox.TabIndex = 76
         '
         'PoznamkyTextBox
         '
         Me.PoznamkyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "poznamky", True))
-        Me.PoznamkyTextBox.Location = New System.Drawing.Point(189, 669)
+        Me.PoznamkyTextBox.Location = New System.Drawing.Point(189, 689)
         Me.PoznamkyTextBox.Multiline = True
         Me.PoznamkyTextBox.Name = "PoznamkyTextBox"
         Me.PoznamkyTextBox.ReadOnly = True
