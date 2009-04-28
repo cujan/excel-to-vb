@@ -99,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="chybajuce_kontrolne_strelby_brok.Designer.vb">
+      <DependentUpon>chybajuce_kontrolne_strelby_brok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="chybajuce_kontrolne_strelby_brok.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ciselniky.Designer.vb">
       <DependentUpon>ciselniky.vb</DependentUpon>
     </Compile>
@@ -365,6 +371,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="chybajuce_kontrolne_strelby_brok.resx">
+      <DependentUpon>chybajuce_kontrolne_strelby_brok.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chybajuce_kontr_strelby_brok.rdlc" />
     <EmbeddedResource Include="ciselniky.resx">
       <DependentUpon>ciselniky.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -670,7 +681,8 @@
     <None Include="spz_clenovia_report_a4.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>spz_clenovia_report_a4.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
+      <SubType>
+      </SubType>
     </None>
     <None Include="spz_clenovia_report_a4.xss">
       <DependentUpon>spz_clenovia_report_a4.xsd</DependentUpon>
