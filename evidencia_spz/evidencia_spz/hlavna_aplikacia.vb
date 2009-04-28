@@ -287,7 +287,9 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        koniec_clenstva.Show()
+        'koniec_clenstva.Show()
+        platnost_clenstva.Show()
+
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
