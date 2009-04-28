@@ -1,14 +1,14 @@
 11.2.2009 <br>
 <s>- pridat tabulku vseobecne udaje</s>         <b>hotovo</b><br>
 - osetrit problem pri ceselnikoch s ukladanim a mazanim
-<br>-vytvorit form na upravu vseobecnych udajov     <b>hotovo</b><br>
+<s><br>-vytvorit form na upravu vseobecnych udajov     </s><b>hotovo</b><br>
 - vymysliet refresh vseobecnych udajov po edite<br>
-- upravit jednotlive datove gridy - grafiku <b>hotove</b><br>
-- vymazat nepotrebne prepojenia v lavom menu <b>hotovo</b><br>
-- upravit tlacovu zostavu vsetkych clenov aby radilo zaznamy podla abecedy podla priezviska <b>HOTOVO</b><br>
-- pridat form na vytvorenie zdruzeni<b>HOTOVO</b> <br>
-- pridat form na prehlad zdruzeni <b>HOTOVO</b><br>
-- pridat form na upravu zdruzeni <b>HOTOVO</b> <br>
+<s>- upravit jednotlive datove gridy - grafiku </s><b>hotove</b><br>
+<s>- vymazat nepotrebne prepojenia v lavom menu</s> <b>hotovo</b><br>
+<s>- upravit tlacovu zostavu vsetkych clenov aby radilo zaznamy podla abecedy podla priezviska</s> <b>HOTOVO</b><br>
+<s>- pridat form na vytvorenie zdruzeni</s><b>HOTOVO</b> <br>
+<s>- pridat form na prehlad zdruzeni</s> <b>HOTOVO</b><br>
+<s>- pridat form na upravu zdruzeni</s> <b>HOTOVO</b> <br>
 - pridat tlacovy vystup pre zoznam zdruzeni <br>
 - pridat tlac. vystup pre jednotlive zdruzenia (ak to je potrebne) <br>
 1.4.2009<br>
