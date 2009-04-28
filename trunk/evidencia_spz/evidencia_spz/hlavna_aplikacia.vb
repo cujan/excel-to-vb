@@ -298,6 +298,8 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        kontrolne_strelby_gula.show()
+        'kontrolne_strelby_gula.show()
+        chybajuce_kontrolne_strelby_gula.Show()
+
     End Sub
 End Class
