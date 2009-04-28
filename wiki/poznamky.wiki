@@ -1,5 +1,5 @@
 11.2.2009 <br>
-- pridat tabulku vseobecne udaje         <b>hotovo</b><br>
+<s>- pridat tabulku vseobecne udaje<s>         <b>hotovo</b><br>
 - osetrit problem pri ceselnikoch s ukladanim a mazanim
 <br>-vytvorit form na upravu vseobecnych udajov     <b>hotovo</b><br>
 - vymysliet refresh vseobecnych udajov po edite<br>
