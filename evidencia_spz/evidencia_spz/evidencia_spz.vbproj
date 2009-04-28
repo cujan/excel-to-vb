@@ -119,6 +119,42 @@
     <Compile Include="detaily_zdruzenia.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="koniec_clenstva.Designer.vb">
+      <DependentUpon>koniec_clenstva.vb</DependentUpon>
+    </Compile>
+    <Compile Include="koniec_clenstva.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="koniec_clenstvaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>koniec_clenstvaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="koniec_clenstvaDataSet1.vb">
+      <DependentUpon>koniec_clenstvaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kontrolne_strelby_brok.Designer.vb">
+      <DependentUpon>kontrolne_strelby_brok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="kontrolne_strelby_brok.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kontrolne_strelby_brokDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kontrolne_strelby_brokDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kontrolne_strelby_gula.Designer.vb">
+      <DependentUpon>kontrolne_strelby_gula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="kontrolne_strelby_gula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kontrolne_strelby_gulaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kontrolne_strelby_gulaDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="prehlad_zdruzeni.Designer.vb">
       <DependentUpon>prehlad_zdruzeni.vb</DependentUpon>
     </Compile>
@@ -329,6 +365,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="detaily_zdruzenia.resx">
       <DependentUpon>detaily_zdruzenia.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="koniec_clenstva.resx">
+      <DependentUpon>koniec_clenstva.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kontrolne_strelby_brok.resx">
+      <DependentUpon>kontrolne_strelby_brok.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kontrolne_strelby_gula.resx">
+      <DependentUpon>kontrolne_strelby_gula.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="prehlad_zdruzeni.resx">
@@ -549,6 +597,39 @@
     <None Include="clenoviaDataSet1.xss">
       <DependentUpon>clenoviaDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="koniec_clenstvaDataSet1.xsc">
+      <DependentUpon>koniec_clenstvaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="koniec_clenstvaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>koniec_clenstvaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="koniec_clenstvaDataSet1.xss">
+      <DependentUpon>koniec_clenstvaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Kontrolne_strelby_brokDataSet1.xsc">
+      <DependentUpon>Kontrolne_strelby_brokDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Kontrolne_strelby_brokDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Kontrolne_strelby_brokDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Kontrolne_strelby_brokDataSet1.xss">
+      <DependentUpon>Kontrolne_strelby_brokDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="kontrolne_strelby_gulaDataSet1.xsc">
+      <DependentUpon>kontrolne_strelby_gulaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="kontrolne_strelby_gulaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kontrolne_strelby_gulaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kontrolne_strelby_gulaDataSet1.xss">
+      <DependentUpon>kontrolne_strelby_gulaDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="novy_clenDataSet.xsc">
       <DependentUpon>novy_clenDataSet.xsd</DependentUpon>
     </None>
@@ -578,7 +659,8 @@
     <None Include="spz_clenovia_report_a4.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>spz_clenovia_report_a4.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
+      <SubType>
+      </SubType>
     </None>
     <None Include="spz_clenovia_report_a4.xss">
       <DependentUpon>spz_clenovia_report_a4.xsd</DependentUpon>

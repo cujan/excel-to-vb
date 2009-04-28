@@ -95,13 +95,15 @@ Partial Class hlavna_aplikacia
         Me.sprava_zdruzeni_splitter = New System.Windows.Forms.SplitContainer
         Me.sprava_zdruzeni_button = New System.Windows.Forms.Button
         Me.sprava_zdruzeni_label = New System.Windows.Forms.Label
-        Me.prehlad_zdruzeni_button = New System.Windows.Forms.Button
         Me.nove_zdruzenie_button = New System.Windows.Forms.Button
+        Me.prehlad_zdruzeni_button = New System.Windows.Forms.Button
         Me.sprava_clenov_splitter = New System.Windows.Forms.SplitContainer
         Me.sprava_clenov_button = New System.Windows.Forms.Button
         Me.sprava_clenov_label = New System.Windows.Forms.Label
         Me.prehlad_clenov_button = New System.Windows.Forms.Button
         Me.novy_clen_button = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
+        Me.Button1 = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.Vseobecne_udajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Spz_vseobecne_udaje = New evidencia_spz.spz_vseobecne_udaje
@@ -133,6 +135,7 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.Vseobecne_udajeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
+        Me.Button3 = New System.Windows.Forms.Button
         TelefonLabel = New System.Windows.Forms.Label
         FaxLabel = New System.Windows.Forms.Label
         EmailLabel = New System.Windows.Forms.Label
@@ -649,6 +652,9 @@ Partial Class hlavna_aplikacia
         'hlavny_splitter.Panel2
         '
         Me.hlavny_splitter.Panel2.BackColor = System.Drawing.Color.PaleGreen
+        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button3)
+        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button2)
+        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button1)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Label1)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.upravit_udaje_button)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.lomene_label)
@@ -778,17 +784,6 @@ Partial Class hlavna_aplikacia
         Me.sprava_zdruzeni_label.Text = "Správa združení"
         Me.sprava_zdruzeni_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'prehlad_zdruzeni_button
-        '
-        Me.prehlad_zdruzeni_button.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.prehlad_zdruzeni_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.prehlad_zdruzeni_button.Location = New System.Drawing.Point(4, 35)
-        Me.prehlad_zdruzeni_button.Name = "prehlad_zdruzeni_button"
-        Me.prehlad_zdruzeni_button.Size = New System.Drawing.Size(130, 21)
-        Me.prehlad_zdruzeni_button.TabIndex = 1
-        Me.prehlad_zdruzeni_button.Text = "Prehľad združení"
-        Me.prehlad_zdruzeni_button.UseVisualStyleBackColor = False
-        '
         'nove_zdruzenie_button
         '
         Me.nove_zdruzenie_button.BackColor = System.Drawing.Color.DarkSeaGreen
@@ -799,6 +794,17 @@ Partial Class hlavna_aplikacia
         Me.nove_zdruzenie_button.TabIndex = 0
         Me.nove_zdruzenie_button.Text = "Pridať nové združenie"
         Me.nove_zdruzenie_button.UseVisualStyleBackColor = False
+        '
+        'prehlad_zdruzeni_button
+        '
+        Me.prehlad_zdruzeni_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.prehlad_zdruzeni_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.prehlad_zdruzeni_button.Location = New System.Drawing.Point(4, 35)
+        Me.prehlad_zdruzeni_button.Name = "prehlad_zdruzeni_button"
+        Me.prehlad_zdruzeni_button.Size = New System.Drawing.Size(130, 21)
+        Me.prehlad_zdruzeni_button.TabIndex = 1
+        Me.prehlad_zdruzeni_button.Text = "Prehľad združení"
+        Me.prehlad_zdruzeni_button.UseVisualStyleBackColor = False
         '
         'sprava_clenov_splitter
         '
@@ -869,6 +875,24 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.TabIndex = 0
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(143, 409)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(207, 23)
+        Me.Button2.TabIndex = 13
+        Me.Button2.Text = "Kontrolne strelby brok"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(143, 357)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(166, 23)
+        Me.Button1.TabIndex = 13
+        Me.Button1.Text = "koniec clenstva"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -1160,6 +1184,15 @@ Partial Class hlavna_aplikacia
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Text = "Save Data"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(143, 438)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(207, 23)
+        Me.Button3.TabIndex = 21
+        Me.Button3.Text = "Kontrolne strelby gula"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1306,5 +1339,8 @@ Partial Class hlavna_aplikacia
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents prehlad_zdruzeni_button As System.Windows.Forms.Button
     Friend WithEvents nove_zdruzenie_button As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 
 End Class
