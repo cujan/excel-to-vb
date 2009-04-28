@@ -2,14 +2,16 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <DataSources>
     <DataSource Name="spz_evidenciaConnectionString">
-      <rd:DataSourceID>c51457b0-e22b-4044-bfb6-e9b7f8d2f092</rd:DataSourceID>
+      <rd:DataSourceID>0dac1d89-703e-43dc-9f6e-a09958425b1d</rd:DataSourceID>
       <ConnectionProperties>
-        <DataProvider>OLEDB</DataProvider>
-        <ConnectString>Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\spz_evidencia.accdb</ConnectString>
+        <DataProvider>
+        </DataProvider>
+        <ConnectString>
+        </ConnectString>
       </ConnectionProperties>
     </DataSource>
   </DataSources>
-  <InteractiveHeight>10.5in</InteractiveHeight>
+  <InteractiveHeight>11in</InteractiveHeight>
   <rd:DrawGrid>true</rd:DrawGrid>
   <InteractiveWidth>8.5in</InteractiveWidth>
   <rd:GridSpacing>0.25cm</rd:GridSpacing>
@@ -17,50 +19,10 @@
   <RightMargin>1cm</RightMargin>
   <LeftMargin>1cm</LeftMargin>
   <BottomMargin>1cm</BottomMargin>
-  <rd:ReportID>aa382146-e6db-411d-8efb-45c77fed01ab</rd:ReportID>
+  <rd:ReportID>deada6d7-e86b-4129-a80d-f23fa9053293</rd:ReportID>
   <PageWidth>21cm</PageWidth>
   <DataSets>
-    <DataSet Name="spz_zoznam_clenov_reportDataSet1_clenovia">
-      <Fields>
-        <Field Name="ID">
-          <DataField>ID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="meno">
-          <DataField>meno</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="priezvisko">
-          <DataField>priezvisko</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="rodne_cislo">
-          <DataField>rodne_cislo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="bydlisko">
-          <DataField>bydlisko</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="datum_narodenia">
-          <DataField>datum_narodenia</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>spz_evidenciaConnectionString</DataSourceName>
-        <CommandText>SELECT ID, meno, priezvisko, rodne_cislo, bydlisko,datum_narodenia FROM clenovia</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <rd:DataSetInfo>
-        <rd:DataSetName>spz_zoznam_clenov_reportDataSet1</rd:DataSetName>
-        <rd:TableName>clenovia</rd:TableName>
-        <rd:TableAdapterName>clenoviaTableAdapter</rd:TableAdapterName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="spz_clenovia_report_a4_clenovia">
+    <DataSet Name="koniec_clenstvaDataSet1_clenovia">
       <Fields>
         <Field Name="id">
           <DataField>id</DataField>
@@ -245,11 +207,18 @@
       </Fields>
       <Query>
         <DataSourceName>spz_evidenciaConnectionString</DataSourceName>
-        <CommandText>SELECT id, titul_pred, meno, priezvisko, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, psc, statna_prislusnost, cislo_op, datum_vydania_op, cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, [miesto_skusky_z _polovnictva], skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsia_skuska_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gulova_zbran, vyznamenanie_III, vyznamenanie_II, vyznamenanie_I, vyznamenanie_ZK, vyznamenanie_ine, udelene_tresty, poznamky, datum_narodenia, narodnost, okres_bydliska, najv_vyznamenanie, vyznamenany_kedy, telefon, titul_za FROM clenovia</CommandText>
+        <CommandText>SELECT     id, titul_pred, meno, priezvisko, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, psc, statna_prislusnost, cislo_op, datum_vydania_op, 
+                      cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, 
+                      skuska_z_polovnictva, [miesto_skusky_z _polovnictva], skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, 
+                      vyzsia_skuska_z_polovnictva, miesto_vyzsia_skuska_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, 
+                      kontrolne_strelby_gulova_zbran, vyznamenanie_III, vyznamenanie_II, vyznamenanie_I, vyznamenanie_ZK, vyznamenanie_ine, udelene_tresty, 
+                      poznamky, datum_narodenia, narodnost, okres_bydliska, najv_vyznamenanie, vyznamenany_kedy, telefon, titul_za
+FROM         clenovia
+WHERE     (clenske_do = '2009')</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>spz_clenovia_report_a4</rd:DataSetName>
+        <rd:DataSetName>koniec_clenstvaDataSet1</rd:DataSetName>
         <rd:TableName>clenovia</rd:TableName>
         <rd:TableAdapterName>clenoviaTableAdapter</rd:TableAdapterName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
@@ -258,7 +227,7 @@
     </DataSet>
   </DataSets>
   <Code />
-  <Width>20.28968cm</Width>
+  <Width>19cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
@@ -268,9 +237,7 @@
         <Style>
           <Color>#365838</Color>
           <FontFamily>Times New Roman</FontFamily>
-          <FontSize>12pt</FontSize>
-          <FontWeight>700</FontWeight>
-          <Format>dd.MM.yyyy</Format>
+          <FontSize>18pt</FontSize>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
@@ -278,18 +245,17 @@
         </Style>
         <ZIndex>2</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>13cm</Left>
-        <Height>0.63492cm</Height>
-        <Value>=Day(Now())&amp;"."&amp;Month(now())&amp;"."&amp;Year(now())</Value>
+        <Left>6cm</Left>
+        <Height>0.75cm</Height>
+        <Value>=First(Fields!clenske_do.Value, "koniec_clenstvaDataSet1_clenovia")</Value>
       </Textbox>
       <Textbox Name="textbox1">
         <rd:DefaultName>textbox1</rd:DefaultName>
-        <Width>13cm</Width>
+        <Width>6cm</Width>
         <Style>
           <Color>#365838</Color>
           <FontFamily>Times New Roman</FontFamily>
-          <FontSize>12pt</FontSize>
-          <FontWeight>700</FontWeight>
+          <FontSize>18pt</FontSize>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
@@ -298,41 +264,16 @@
         <ZIndex>1</ZIndex>
         <CanGrow>true</CanGrow>
         <Height>0.8381cm</Height>
-        <Value> Zoznam členov SPZ (okres Prešov a Sabinov)   ŠRO SPZ Prešov</Value>
+        <Value>Platnosť členstva do </Value>
       </Textbox>
       <Table Name="table1">
-        <DataSetName>spz_zoznam_clenov_reportDataSet1_clenovia</DataSetName>
-        <Top>1cm</Top>
-        <Width>17cm</Width>
+        <DataSetName>koniec_clenstvaDataSet1_clenovia</DataSetName>
+        <Top>0.8381cm</Top>
+        <Width>15.75cm</Width>
         <Details>
           <TableRows>
             <TableRow>
               <TableCells>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="ID">
-                      <rd:DefaultName>ID</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Left</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>4</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!ID.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
                 <TableCell>
                   <ReportItems>
                     <Textbox Name="meno">
@@ -345,14 +286,13 @@
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Left</TextAlign>
+                        <FontSize>9pt</FontSize>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>3</ZIndex>
+                      <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!meno.Value</Value>
                     </Textbox>
@@ -370,14 +310,13 @@
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Left</TextAlign>
+                        <FontSize>9pt</FontSize>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>2</ZIndex>
+                      <ZIndex>3</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!priezvisko.Value</Value>
                     </Textbox>
@@ -385,8 +324,8 @@
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="datum_narodenia_2">
-                      <rd:DefaultName>datum_narodenia_2</rd:DefaultName>
+                    <Textbox Name="rodne_cislo">
+                      <rd:DefaultName>rodne_cislo</rd:DefaultName>
                       <Style>
                         <BorderColor>
                           <Default>DarkGray</Default>
@@ -395,15 +334,15 @@
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>8pt</FontSize>
+                        <FontSize>9pt</FontSize>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>1</ZIndex>
+                      <ZIndex>2</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!datum_narodenia.Value</Value>
+                      <Value>=Fields!rodne_cislo.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -419,28 +358,45 @@
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Left</TextAlign>
+                        <FontSize>9pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!bydlisko.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="clenske_do">
+                      <rd:DefaultName>clenske_do</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!bydlisko.Value</Value>
+                      <Value>=Fields!clenske_do.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
               </TableCells>
-              <Height>0.5cm</Height>
+              <Height>0.53844cm</Height>
             </TableRow>
           </TableRows>
-          <Sorting>
-            <SortBy>
-              <SortExpression>=Fields!priezvisko.Value</SortExpression>
-              <Direction>Ascending</Direction>
-            </SortBy>
-          </Sorting>
         </Details>
         <Header>
           <TableRows>
@@ -460,17 +416,15 @@
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>1pt</PaddingBottom>
+                        <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <ZIndex>9</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>P. č.</Value>
+                      <Value>Meno</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -488,17 +442,15 @@
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>1pt</PaddingBottom>
+                        <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <ZIndex>8</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>Meno</Value>
+                      <Value>Priezvisko</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -516,24 +468,22 @@
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>1pt</PaddingBottom>
+                        <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>Priezvisko</Value>
+                      <Value>RČ</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="datum_narodenia">
-                      <rd:DefaultName>datum_narodenia</rd:DefaultName>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
                       <Style>
                         <Color>White</Color>
                         <BackgroundColor>#365838</BackgroundColor>
@@ -544,16 +494,15 @@
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>1pt</PaddingBottom>
+                        <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>Dátum narodenia</Value>
+                      <Value>Bydlisko</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -571,50 +520,46 @@
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>1pt</PaddingBottom>
+                        <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>Bydlisko</Value>
+                      <Value>Členské do</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
               </TableCells>
-              <Height>0.5cm</Height>
+              <Height>0.62346cm</Height>
             </TableRow>
           </TableRows>
           <RepeatOnNewPage>true</RepeatOnNewPage>
         </Header>
         <TableColumns>
           <TableColumn>
-            <Width>1cm</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>3.25cm</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>3.25cm</Width>
+            <Width>2cm</Width>
           </TableColumn>
           <TableColumn>
             <Width>2.75cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>6.75cm</Width>
+            <Width>2cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>7cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2cm</Width>
           </TableColumn>
         </TableColumns>
-        <Height>1cm</Height>
-        <Left>0.25cm</Left>
       </Table>
     </ReportItems>
-    <Height>2.75cm</Height>
+    <Height>2cm</Height>
   </Body>
   <Language>en-US</Language>
   <TopMargin>1cm</TopMargin>
-  <PageHeight>29cm</PageHeight>
+  <PageHeight>29.7cm</PageHeight>
 </Report>

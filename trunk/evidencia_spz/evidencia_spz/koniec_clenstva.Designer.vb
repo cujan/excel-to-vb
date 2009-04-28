@@ -199,7 +199,7 @@ Partial Class koniec_clenstva
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.clenoviaTableAdapter = Me.ClenoviaTableAdapter
+        'Me.TableAdapterManager.clenoviaTableAdapter = Me.ClenoviaTableAdapter
         Me.TableAdapterManager.UpdateOrder = evidencia_spz.koniec_clenstvaDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'DataGridViewTextBoxColumn2
