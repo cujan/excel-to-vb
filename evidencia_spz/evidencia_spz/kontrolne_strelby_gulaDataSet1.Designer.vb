@@ -2801,26 +2801,32 @@ Namespace kontrolne_strelby_gulaDataSet1TableAdapters
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT     id, titul_pred, meno, priezvisko, rodne_cislo, miesto_narodenia, okres"& _ 
-                "_narodenia, bydlisko, psc, statna_prislusnost, cislo_op, datum_vydania_op, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"   "& _ 
-                "                   cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo"& _ 
+                "_narodenia, bydlisko, psc, statna_prislusnost, cislo_op, datum_vydania_op, cislo"& _ 
+                "_pl, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo"& _ 
                 "_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz"& _ 
                 ", "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      skuska_z_polovnictva, [miesto_skusky_z _polovnictva], "& _ 
                 "skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"     "& _ 
                 "                 vyzsia_skuska_z_polovnictva, miesto_vyzsia_skuska_z_polovnictva"& _ 
-                ", brokova_zbran, kontrolne_strelby_brok, gulova_zbran, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      k"& _ 
-                "ontrolne_strelby_gulova_zbran, vyznamenanie_III, vyznamenanie_II, vyznamenanie_I"& _ 
-                ", vyznamenanie_ZK, vyznamenanie_ine, udelene_tresty, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      poz"& _ 
-                "namky, datum_narodenia, narodnost, okres_bydliska, najv_vyznamenanie, vyznamenan"& _ 
+                ", brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gulova_"& _ 
+                "zbran, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      vyznamenanie_III, vyznamenanie_II, vyznamenanie_I"& _ 
+                ", vyznamenanie_ZK, vyznamenanie_ine, udelene_tresty, poznamky, datum_narodenia, "& _ 
+                "narodnost, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      okres_bydliska, najv_vyznamenanie, vyznamenan"& _ 
                 "y_kedy, telefon, titul_za"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         clenovia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (gulova_zbran = 'ANO"& _ 
-                "') AND (2009 - kontrolne_strelby_gulova_zbran >= 5)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY priezvisko"
+                "') AND (? - kontrolne_strelby_gulova_zbran >= 5)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY priezvisko"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Param1", Global.System.Data.OleDb.OleDbType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As kontrolne_strelby_gulaDataSet1.clenoviaDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As kontrolne_strelby_gulaDataSet1.clenoviaDataTable, ByVal Param1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -2831,8 +2837,13 @@ Namespace kontrolne_strelby_gulaDataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As kontrolne_strelby_gulaDataSet1.clenoviaDataTable
+        Public Overloads Overridable Function GetData(ByVal Param1 As String) As kontrolne_strelby_gulaDataSet1.clenoviaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
             Dim dataTable As kontrolne_strelby_gulaDataSet1.clenoviaDataTable = New kontrolne_strelby_gulaDataSet1.clenoviaDataTable
             Me.Adapter.Fill(dataTable)
             Return dataTable
