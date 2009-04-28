@@ -24,7 +24,7 @@ Potreboval by som v evidencii členov:
 
                                     Dátumu narodenia – jubilanti do Spravodaja
 
-                                    Kontrolných strelieb - kto má absolvovať v roku x
+                                    Kontrolných strelieb - kto má absolvovať v roku x <b>urobene formulare a urobena selekcia, potrebne vytvorit tlacovu formu, parameter rok natvrdo</b>
 
                                     Členského do – komu končí členstvo v roku x <b>UROBENY FORM KONIEC CLENSKE JE POTREBNE UROBIT TLACOVU YOSTAVU, YATIAL JE SELEKCIA IBA NA TVRDO HODENY ROK AKO CISLO 2009</b>
 
