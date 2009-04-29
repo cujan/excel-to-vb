@@ -5,9 +5,10 @@
         'TODO: This line of code loads data into the 'koniec_clenstvaDataSet1.clenovia' table. You can move, or remove it, as needed.
         Dim rok As String
         rok = Date.Today.Year.ToString
-        If ComboBox1.SelectedItem <> "" Then
-            rok = ComboBox1.SelectedItem.ToString
-        End If
+        'If ComboBox1.SelectedItem <> "" Then
+        '    rok = ComboBox1.SelectedItem.ToString
+        'End If
+        ComboBox1.SelectedItem = rok
         Me.clenoviaTableAdapter.Fill(Me.koniec_clenstvaDataSet1.clenovia, rok)
         'TODO: This line of code loads data into the 'Kontrolne_strelby_brokDataSet1.clenovia' table. You can move, or remove it, as needed.
         Me.ReportViewer1.RefreshReport()
