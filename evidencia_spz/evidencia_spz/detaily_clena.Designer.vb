@@ -58,6 +58,7 @@ Partial Class detaily_clena
         Dim Label3 As System.Windows.Forms.Label
         Dim Label4 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(detaily_clena))
+        Dim Clen_pz_idLabel As System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
         Me.Prehlad_clenovDataSet = New evidencia_spz.prehlad_clenovDataSet
         Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -122,6 +123,7 @@ Partial Class detaily_clena
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.Label5 = New System.Windows.Forms.Label
+        Me.Clen_pz_idTextBox = New System.Windows.Forms.TextBox
         Rodne_cisloLabel = New System.Windows.Forms.Label
         Miesto_narodeniaLabel = New System.Windows.Forms.Label
         Okres_narodeniaLabel = New System.Windows.Forms.Label
@@ -156,10 +158,12 @@ Partial Class detaily_clena
         Label2 = New System.Windows.Forms.Label
         Label3 = New System.Windows.Forms.Label
         Label4 = New System.Windows.Forms.Label
+        Clen_pz_idLabel = New System.Windows.Forms.Label
         CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClenoviaBindingNavigator.SuspendLayout()
+        Me.ShapeContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Rodne_cisloLabel
@@ -989,6 +993,8 @@ Partial Class detaily_clena
         '
         'ShapeContainer1
         '
+        Me.ShapeContainer1.Controls.Add(Clen_pz_idLabel)
+        Me.ShapeContainer1.Controls.Add(Me.Clen_pz_idTextBox)
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
@@ -1032,6 +1038,23 @@ Partial Class detaily_clena
         Me.Label5.Size = New System.Drawing.Size(28, 13)
         Me.Label5.TabIndex = 100
         Me.Label5.Text = "Psč:"
+        '
+        'Clen_pz_idLabel
+        '
+        Clen_pz_idLabel.AutoSize = True
+        Clen_pz_idLabel.Location = New System.Drawing.Point(578, 408)
+        Clen_pz_idLabel.Name = "Clen_pz_idLabel"
+        Clen_pz_idLabel.Size = New System.Drawing.Size(55, 13)
+        Clen_pz_idLabel.TabIndex = 0
+        Clen_pz_idLabel.Text = "clen pz id:"
+        '
+        'Clen_pz_idTextBox
+        '
+        Me.Clen_pz_idTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "clen_pz_id", True))
+        Me.Clen_pz_idTextBox.Location = New System.Drawing.Point(639, 405)
+        Me.Clen_pz_idTextBox.Name = "Clen_pz_idTextBox"
+        Me.Clen_pz_idTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Clen_pz_idTextBox.TabIndex = 1
         '
         'detaily_clena
         '
@@ -1127,6 +1150,8 @@ Partial Class detaily_clena
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ClenoviaBindingNavigator.ResumeLayout(False)
         Me.ClenoviaBindingNavigator.PerformLayout()
+        Me.ShapeContainer1.ResumeLayout(False)
+        Me.ShapeContainer1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1195,4 +1220,5 @@ Partial Class detaily_clena
     Friend WithEvents LineShape3 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Clen_pz_idTextBox As System.Windows.Forms.TextBox
 End Class
