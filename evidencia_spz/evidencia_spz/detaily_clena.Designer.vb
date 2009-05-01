@@ -497,7 +497,7 @@ Partial Class detaily_clena
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.clenoviaTableAdapter = Me.ClenoviaTableAdapter
         Me.TableAdapterManager.UpdateOrder = evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.zdruzenieTableAdapter = Nothing
+
         '
         'ClenoviaBindingNavigator
         '

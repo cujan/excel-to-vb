@@ -161,8 +161,15 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, titul_pred, meno, priezvisko, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, psc, statna_prislusnost, cislo_op, datum_vydania_op, cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, [miesto_skusky_z _polovnictva], skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsia_skuska_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gulova_zbran, vyznamenanie_III, vyznamenanie_II, vyznamenanie_I, vyznamenanie_ZK, vyznamenanie_ine, udelene_tresty, poznamky, datum_narodenia, narodnost, okres_bydliska, najv_vyznamenanie, vyznamenany_kedy, telefon, titul_za, clen_pz_id FROM clenovia</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     id, titul_pred, meno, priezvisko, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, psc, statna_prislusnost, cislo_op, datum_vydania_op, 
+                      cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, 
+                      skuska_z_polovnictva, [miesto_skusky_z _polovnictva], skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, 
+                      vyzsia_skuska_z_polovnictva, miesto_vyzsia_skuska_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, 
+                      kontrolne_strelby_gulova_zbran, vyznamenanie_III, vyznamenanie_II, vyznamenanie_I, vyznamenanie_ZK, vyznamenanie_ine, udelene_tresty, 
+                      poznamky, datum_narodenia, narodnost, okres_bydliska, najv_vyznamenanie, vyznamenany_kedy, telefon, titul_za, clen_pz_id
+FROM         clenovia
+ORDER BY priezvisko</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -361,262 +368,6 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="zdruzenieTableAdapter" GeneratorDataComponentClassName="zdruzenieTableAdapter" Name="zdruzenie" UserDataComponentName="zdruzenieTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="spz_evidenciaConnectionString (MySettings)" DbObjectName="zdruzenie" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <DeleteCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `zdruzenie` WHERE ((`id` = ?) AND ((? = 1 AND `nazov` IS NULL) OR (`nazov` = ?)) AND ((? = 1 AND `sidlo` IS NULL) OR (`sidlo` = ?)) AND ((? = 1 AND `predseda` IS NULL) OR (`predseda` = ?)) AND ((? = 1 AND `predseda_telefon` IS NULL) OR (`predseda_telefon` = ?)) AND ((? = 1 AND `polovnicky_hospodar` IS NULL) OR (`polovnicky_hospodar` = ?)) AND ((? = 1 AND `polovnicky_hospodar_telefon` IS NULL) OR (`polovnicky_hospodar_telefon` = ?)) AND ((? = 1 AND `ico` IS NULL) OR (`ico` = ?)) AND ((? = 1 AND `dic` IS NULL) OR (`dic` = ?)) AND ((? = 1 AND `banka` IS NULL) OR (`banka` = ?)) AND ((? = 1 AND `cislo_uctu` IS NULL) OR (`cislo_uctu` = ?)) AND ((? = 1 AND `nazov_polovneho_reviru` IS NULL) OR (`nazov_polovneho_reviru` = ?)) AND ((? = 1 AND `chovatelska_oblast` IS NULL) OR (`chovatelska_oblast` = ?)) AND ((? = 1 AND `cislo_reviru` IS NULL) OR (`cislo_reviru` = ?)) AND ((? = 1 AND `vymera` IS NULL) OR (`vymera` = ?)) AND ((? = 1 AND `les` IS NULL) OR (`les` = ?)) AND ((? = 1 AND `jelenia` IS NULL) OR (`jelenia` = ?)) AND ((? = 1 AND `srncia` IS NULL) OR (`srncia` = ?)) AND ((? = 1 AND `diviacia` IS NULL) OR (`diviacia` = ?)) AND ((? = 1 AND `bazant` IS NULL) OR (`bazant` = ?)) AND ((? = 1 AND `ina` IS NULL) OR (`ina` = ?)) AND ((? = 1 AND `stavace` IS NULL) OR (`stavace` = ?)) AND ((? = 1 AND `sliedice` IS NULL) OR (`sliedice` = ?)) AND ((? = 1 AND `slovensky_kopov` IS NULL) OR (`slovensky_kopov` = ?)) AND ((? = 1 AND `ostatne_durice` IS NULL) OR (`ostatne_durice` = ?)) AND ((? = 1 AND `brlohare` IS NULL) OR (`brlohare` = ?)) AND ((? = 1 AND `farbiare` IS NULL) OR (`farbiare` = ?)) AND ((? = 1 AND `pes_jelenia` IS NULL) OR (`pes_jelenia` = ?)) AND ((? = 1 AND `pes_diviacia` IS NULL) OR (`pes_diviacia` = ?)) AND ((? = 1 AND `pes_srncia` IS NULL) OR (`pes_srncia` = ?)) AND ((? = 1 AND `pes_mala` IS NULL) OR (`pes_mala` = ?)) AND ((? = 1 AND `platnost_najomnej_zmluvy_do` IS NULL) OR (`platnost_najomnej_zmluvy_do` = ?)))</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_nazov" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="nazov" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_nazov" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="nazov" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_sidlo" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="sidlo" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_sidlo" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="sidlo" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_predseda" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="predseda" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_predseda" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="predseda" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_predseda_telefon" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="predseda_telefon" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_predseda_telefon" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="predseda_telefon" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_polovnicky_hospodar" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="polovnicky_hospodar" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_polovnicky_hospodar" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="polovnicky_hospodar" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_polovnicky_hospodar_telefon" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="polovnicky_hospodar_telefon" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_polovnicky_hospodar_telefon" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="polovnicky_hospodar_telefon" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ico" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ico" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_ico" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="ico" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_dic" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="dic" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_dic" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="dic" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_banka" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="banka" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_banka" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="banka" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_cislo_uctu" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="cislo_uctu" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_cislo_uctu" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="cislo_uctu" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_nazov_polovneho_reviru" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="nazov_polovneho_reviru" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_nazov_polovneho_reviru" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="nazov_polovneho_reviru" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_chovatelska_oblast" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="chovatelska_oblast" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_chovatelska_oblast" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="chovatelska_oblast" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_cislo_reviru" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="cislo_reviru" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_cislo_reviru" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="cislo_reviru" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_vymera" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="vymera" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_vymera" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="vymera" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_les" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="les" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_les" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="les" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_jelenia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jelenia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_jelenia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jelenia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_srncia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="srncia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_srncia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="srncia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_diviacia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="diviacia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_diviacia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="diviacia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_bazant" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="bazant" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_bazant" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="bazant" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ina" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ina" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ina" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ina" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_stavace" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="stavace" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_stavace" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="stavace" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_sliedice" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="sliedice" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_sliedice" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="sliedice" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_slovensky_kopov" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="slovensky_kopov" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_slovensky_kopov" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="slovensky_kopov" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ostatne_durice" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ostatne_durice" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ostatne_durice" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ostatne_durice" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_brlohare" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="brlohare" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_brlohare" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="brlohare" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_farbiare" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="farbiare" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_farbiare" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="farbiare" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_pes_jelenia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_jelenia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_pes_jelenia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_jelenia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_pes_diviacia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_diviacia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_pes_diviacia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_diviacia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_pes_srncia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_srncia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_pes_srncia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_srncia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_pes_mala" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_mala" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_pes_mala" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_mala" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_platnost_najomnej_zmluvy_do" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="platnost_najomnej_zmluvy_do" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_platnost_najomnej_zmluvy_do" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="platnost_najomnej_zmluvy_do" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </DeleteCommand>
-                <InsertCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `zdruzenie` (`nazov`, `sidlo`, `predseda`, `predseda_telefon`, `polovnicky_hospodar`, `polovnicky_hospodar_telefon`, `ico`, `dic`, `banka`, `cislo_uctu`, `nazov_polovneho_reviru`, `chovatelska_oblast`, `cislo_reviru`, `vymera`, `les`, `jelenia`, `srncia`, `diviacia`, `bazant`, `ina`, `stavace`, `sliedice`, `slovensky_kopov`, `ostatne_durice`, `brlohare`, `farbiare`, `pes_jelenia`, `pes_diviacia`, `pes_srncia`, `pes_mala`, `platnost_najomnej_zmluvy_do`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="nazov" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="nazov" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="sidlo" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="sidlo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="predseda" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="predseda" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="predseda_telefon" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="predseda_telefon" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="polovnicky_hospodar" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="polovnicky_hospodar" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="polovnicky_hospodar_telefon" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="polovnicky_hospodar_telefon" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="ico" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="ico" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="dic" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="dic" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="banka" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="banka" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="cislo_uctu" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="cislo_uctu" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="nazov_polovneho_reviru" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="nazov_polovneho_reviru" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="chovatelska_oblast" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="chovatelska_oblast" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="cislo_reviru" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="cislo_reviru" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="vymera" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="vymera" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="les" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="les" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="jelenia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jelenia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="srncia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="srncia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="diviacia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="diviacia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="bazant" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="bazant" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="ina" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ina" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="stavace" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="stavace" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="sliedice" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="sliedice" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="slovensky_kopov" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="slovensky_kopov" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="ostatne_durice" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ostatne_durice" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="brlohare" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="brlohare" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="farbiare" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="farbiare" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="pes_jelenia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_jelenia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="pes_diviacia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_diviacia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="pes_srncia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_srncia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="pes_mala" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_mala" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="platnost_najomnej_zmluvy_do" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="platnost_najomnej_zmluvy_do" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </InsertCommand>
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, nazov, sidlo, predseda, predseda_telefon, polovnicky_hospodar, polovnicky_hospodar_telefon, ico, dic, banka, cislo_uctu, nazov_polovneho_reviru, chovatelska_oblast, cislo_reviru, vymera, les, jelenia, srncia, diviacia, bazant, ina, stavace, sliedice, slovensky_kopov, ostatne_durice, brlohare, farbiare, pes_jelenia, pes_diviacia, pes_srncia, pes_mala, platnost_najomnej_zmluvy_do FROM zdruzenie</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-                <UpdateCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `zdruzenie` SET `nazov` = ?, `sidlo` = ?, `predseda` = ?, `predseda_telefon` = ?, `polovnicky_hospodar` = ?, `polovnicky_hospodar_telefon` = ?, `ico` = ?, `dic` = ?, `banka` = ?, `cislo_uctu` = ?, `nazov_polovneho_reviru` = ?, `chovatelska_oblast` = ?, `cislo_reviru` = ?, `vymera` = ?, `les` = ?, `jelenia` = ?, `srncia` = ?, `diviacia` = ?, `bazant` = ?, `ina` = ?, `stavace` = ?, `sliedice` = ?, `slovensky_kopov` = ?, `ostatne_durice` = ?, `brlohare` = ?, `farbiare` = ?, `pes_jelenia` = ?, `pes_diviacia` = ?, `pes_srncia` = ?, `pes_mala` = ?, `platnost_najomnej_zmluvy_do` = ? WHERE ((`id` = ?) AND ((? = 1 AND `nazov` IS NULL) OR (`nazov` = ?)) AND ((? = 1 AND `sidlo` IS NULL) OR (`sidlo` = ?)) AND ((? = 1 AND `predseda` IS NULL) OR (`predseda` = ?)) AND ((? = 1 AND `predseda_telefon` IS NULL) OR (`predseda_telefon` = ?)) AND ((? = 1 AND `polovnicky_hospodar` IS NULL) OR (`polovnicky_hospodar` = ?)) AND ((? = 1 AND `polovnicky_hospodar_telefon` IS NULL) OR (`polovnicky_hospodar_telefon` = ?)) AND ((? = 1 AND `ico` IS NULL) OR (`ico` = ?)) AND ((? = 1 AND `dic` IS NULL) OR (`dic` = ?)) AND ((? = 1 AND `banka` IS NULL) OR (`banka` = ?)) AND ((? = 1 AND `cislo_uctu` IS NULL) OR (`cislo_uctu` = ?)) AND ((? = 1 AND `nazov_polovneho_reviru` IS NULL) OR (`nazov_polovneho_reviru` = ?)) AND ((? = 1 AND `chovatelska_oblast` IS NULL) OR (`chovatelska_oblast` = ?)) AND ((? = 1 AND `cislo_reviru` IS NULL) OR (`cislo_reviru` = ?)) AND ((? = 1 AND `vymera` IS NULL) OR (`vymera` = ?)) AND ((? = 1 AND `les` IS NULL) OR (`les` = ?)) AND ((? = 1 AND `jelenia` IS NULL) OR (`jelenia` = ?)) AND ((? = 1 AND `srncia` IS NULL) OR (`srncia` = ?)) AND ((? = 1 AND `diviacia` IS NULL) OR (`diviacia` = ?)) AND ((? = 1 AND `bazant` IS NULL) OR (`bazant` = ?)) AND ((? = 1 AND `ina` IS NULL) OR (`ina` = ?)) AND ((? = 1 AND `stavace` IS NULL) OR (`stavace` = ?)) AND ((? = 1 AND `sliedice` IS NULL) OR (`sliedice` = ?)) AND ((? = 1 AND `slovensky_kopov` IS NULL) OR (`slovensky_kopov` = ?)) AND ((? = 1 AND `ostatne_durice` IS NULL) OR (`ostatne_durice` = ?)) AND ((? = 1 AND `brlohare` IS NULL) OR (`brlohare` = ?)) AND ((? = 1 AND `farbiare` IS NULL) OR (`farbiare` = ?)) AND ((? = 1 AND `pes_jelenia` IS NULL) OR (`pes_jelenia` = ?)) AND ((? = 1 AND `pes_diviacia` IS NULL) OR (`pes_diviacia` = ?)) AND ((? = 1 AND `pes_srncia` IS NULL) OR (`pes_srncia` = ?)) AND ((? = 1 AND `pes_mala` IS NULL) OR (`pes_mala` = ?)) AND ((? = 1 AND `platnost_najomnej_zmluvy_do` IS NULL) OR (`platnost_najomnej_zmluvy_do` = ?)))</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="nazov" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="nazov" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="sidlo" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="sidlo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="predseda" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="predseda" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="predseda_telefon" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="predseda_telefon" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="polovnicky_hospodar" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="polovnicky_hospodar" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="polovnicky_hospodar_telefon" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="polovnicky_hospodar_telefon" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="ico" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="ico" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="dic" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="dic" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="banka" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="banka" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="cislo_uctu" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="cislo_uctu" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="nazov_polovneho_reviru" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="nazov_polovneho_reviru" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="chovatelska_oblast" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="chovatelska_oblast" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="cislo_reviru" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="cislo_reviru" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="vymera" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="vymera" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="les" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="les" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="jelenia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jelenia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="srncia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="srncia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="diviacia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="diviacia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="bazant" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="bazant" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="ina" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ina" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="stavace" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="stavace" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="sliedice" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="sliedice" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="slovensky_kopov" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="slovensky_kopov" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="ostatne_durice" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ostatne_durice" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="brlohare" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="brlohare" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="farbiare" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="farbiare" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="pes_jelenia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_jelenia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="pes_diviacia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_diviacia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="pes_srncia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_srncia" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="pes_mala" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_mala" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="platnost_najomnej_zmluvy_do" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="platnost_najomnej_zmluvy_do" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_id" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_nazov" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="nazov" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_nazov" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="nazov" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_sidlo" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="sidlo" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_sidlo" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="sidlo" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_predseda" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="predseda" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_predseda" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="predseda" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_predseda_telefon" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="predseda_telefon" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_predseda_telefon" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="predseda_telefon" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_polovnicky_hospodar" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="polovnicky_hospodar" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_polovnicky_hospodar" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="polovnicky_hospodar" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_polovnicky_hospodar_telefon" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="polovnicky_hospodar_telefon" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_polovnicky_hospodar_telefon" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="polovnicky_hospodar_telefon" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ico" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ico" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_ico" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="ico" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_dic" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="dic" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_dic" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="dic" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_banka" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="banka" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_banka" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="banka" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_cislo_uctu" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="cislo_uctu" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_cislo_uctu" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="cislo_uctu" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_nazov_polovneho_reviru" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="nazov_polovneho_reviru" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_nazov_polovneho_reviru" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="nazov_polovneho_reviru" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_chovatelska_oblast" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="chovatelska_oblast" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_chovatelska_oblast" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="chovatelska_oblast" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_cislo_reviru" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="cislo_reviru" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_cislo_reviru" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="cislo_reviru" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_vymera" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="vymera" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_vymera" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="vymera" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_les" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="les" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_les" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="les" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_jelenia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jelenia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_jelenia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="jelenia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_srncia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="srncia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_srncia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="srncia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_diviacia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="diviacia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_diviacia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="diviacia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_bazant" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="bazant" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_bazant" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="bazant" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ina" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ina" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ina" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ina" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_stavace" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="stavace" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_stavace" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="stavace" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_sliedice" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="sliedice" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_sliedice" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="sliedice" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_slovensky_kopov" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="slovensky_kopov" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_slovensky_kopov" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="slovensky_kopov" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ostatne_durice" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ostatne_durice" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ostatne_durice" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ostatne_durice" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_brlohare" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="brlohare" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_brlohare" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="brlohare" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_farbiare" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="farbiare" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_farbiare" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="farbiare" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_pes_jelenia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_jelenia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_pes_jelenia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_jelenia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_pes_diviacia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_diviacia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_pes_diviacia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_diviacia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_pes_srncia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_srncia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_pes_srncia" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_srncia" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_pes_mala" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_mala" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_pes_mala" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="pes_mala" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_platnost_najomnej_zmluvy_do" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="platnost_najomnej_zmluvy_do" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_platnost_najomnej_zmluvy_do" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="platnost_najomnej_zmluvy_do" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </UpdateCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="nazov" DataSetColumn="nazov" />
-              <Mapping SourceColumn="sidlo" DataSetColumn="sidlo" />
-              <Mapping SourceColumn="predseda" DataSetColumn="predseda" />
-              <Mapping SourceColumn="predseda_telefon" DataSetColumn="predseda_telefon" />
-              <Mapping SourceColumn="polovnicky_hospodar" DataSetColumn="polovnicky_hospodar" />
-              <Mapping SourceColumn="polovnicky_hospodar_telefon" DataSetColumn="polovnicky_hospodar_telefon" />
-              <Mapping SourceColumn="ico" DataSetColumn="ico" />
-              <Mapping SourceColumn="dic" DataSetColumn="dic" />
-              <Mapping SourceColumn="banka" DataSetColumn="banka" />
-              <Mapping SourceColumn="cislo_uctu" DataSetColumn="cislo_uctu" />
-              <Mapping SourceColumn="nazov_polovneho_reviru" DataSetColumn="nazov_polovneho_reviru" />
-              <Mapping SourceColumn="chovatelska_oblast" DataSetColumn="chovatelska_oblast" />
-              <Mapping SourceColumn="cislo_reviru" DataSetColumn="cislo_reviru" />
-              <Mapping SourceColumn="vymera" DataSetColumn="vymera" />
-              <Mapping SourceColumn="les" DataSetColumn="les" />
-              <Mapping SourceColumn="jelenia" DataSetColumn="jelenia" />
-              <Mapping SourceColumn="srncia" DataSetColumn="srncia" />
-              <Mapping SourceColumn="diviacia" DataSetColumn="diviacia" />
-              <Mapping SourceColumn="bazant" DataSetColumn="bazant" />
-              <Mapping SourceColumn="ina" DataSetColumn="ina" />
-              <Mapping SourceColumn="stavace" DataSetColumn="stavace" />
-              <Mapping SourceColumn="sliedice" DataSetColumn="sliedice" />
-              <Mapping SourceColumn="slovensky_kopov" DataSetColumn="slovensky_kopov" />
-              <Mapping SourceColumn="ostatne_durice" DataSetColumn="ostatne_durice" />
-              <Mapping SourceColumn="brlohare" DataSetColumn="brlohare" />
-              <Mapping SourceColumn="farbiare" DataSetColumn="farbiare" />
-              <Mapping SourceColumn="pes_jelenia" DataSetColumn="pes_jelenia" />
-              <Mapping SourceColumn="pes_diviacia" DataSetColumn="pes_diviacia" />
-              <Mapping SourceColumn="pes_srncia" DataSetColumn="pes_srncia" />
-              <Mapping SourceColumn="pes_mala" DataSetColumn="pes_mala" />
-              <Mapping SourceColumn="platnost_najomnej_zmluvy_do" DataSetColumn="platnost_najomnej_zmluvy_do" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -628,438 +379,316 @@
         <xs:element name="clenovia" msprop:Generator_UserTableName="clenovia" msprop:Generator_RowDeletedName="clenoviaRowDeleted" msprop:Generator_RowChangedName="clenoviaRowChanged" msprop:Generator_RowClassName="clenoviaRow" msprop:Generator_RowChangingName="clenoviaRowChanging" msprop:Generator_RowEvArgName="clenoviaRowChangeEvent" msprop:Generator_RowEvHandlerName="clenoviaRowChangeEventHandler" msprop:Generator_TableClassName="clenoviaDataTable" msprop:Generator_TableVarName="tableclenovia" msprop:Generator_RowDeletingName="clenoviaRowDeleting" msprop:Generator_TablePropName="clenovia">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:int" />
-              <xs:element name="titul_pred" msprop:Generator_UserColumnName="titul_pred" msprop:Generator_ColumnVarNameInTable="columntitul_pred" msprop:Generator_ColumnPropNameInRow="titul_pred" msprop:Generator_ColumnPropNameInTable="titul_predColumn" minOccurs="0">
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:int" />
+              <xs:element name="titul_pred" msprop:Generator_UserColumnName="titul_pred" msprop:Generator_ColumnPropNameInRow="titul_pred" msprop:Generator_ColumnVarNameInTable="columntitul_pred" msprop:Generator_ColumnPropNameInTable="titul_predColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="meno" msprop:Generator_UserColumnName="meno" msprop:Generator_ColumnVarNameInTable="columnmeno" msprop:Generator_ColumnPropNameInRow="meno" msprop:Generator_ColumnPropNameInTable="menoColumn" minOccurs="0">
+              <xs:element name="meno" msprop:Generator_UserColumnName="meno" msprop:Generator_ColumnPropNameInRow="meno" msprop:Generator_ColumnVarNameInTable="columnmeno" msprop:Generator_ColumnPropNameInTable="menoColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="priezvisko" msprop:Generator_UserColumnName="priezvisko" msprop:Generator_ColumnVarNameInTable="columnpriezvisko" msprop:Generator_ColumnPropNameInRow="priezvisko" msprop:Generator_ColumnPropNameInTable="priezviskoColumn" minOccurs="0">
+              <xs:element name="priezvisko" msprop:Generator_UserColumnName="priezvisko" msprop:Generator_ColumnPropNameInRow="priezvisko" msprop:Generator_ColumnVarNameInTable="columnpriezvisko" msprop:Generator_ColumnPropNameInTable="priezviskoColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="rodne_cislo" msprop:Generator_UserColumnName="rodne_cislo" msprop:Generator_ColumnVarNameInTable="columnrodne_cislo" msprop:Generator_ColumnPropNameInRow="rodne_cislo" msprop:Generator_ColumnPropNameInTable="rodne_cisloColumn" minOccurs="0">
+              <xs:element name="rodne_cislo" msprop:Generator_UserColumnName="rodne_cislo" msprop:Generator_ColumnPropNameInRow="rodne_cislo" msprop:Generator_ColumnVarNameInTable="columnrodne_cislo" msprop:Generator_ColumnPropNameInTable="rodne_cisloColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="miesto_narodenia" msprop:Generator_UserColumnName="miesto_narodenia" msprop:Generator_ColumnVarNameInTable="columnmiesto_narodenia" msprop:Generator_ColumnPropNameInRow="miesto_narodenia" msprop:Generator_ColumnPropNameInTable="miesto_narodeniaColumn" minOccurs="0">
+              <xs:element name="miesto_narodenia" msprop:Generator_UserColumnName="miesto_narodenia" msprop:Generator_ColumnPropNameInRow="miesto_narodenia" msprop:Generator_ColumnVarNameInTable="columnmiesto_narodenia" msprop:Generator_ColumnPropNameInTable="miesto_narodeniaColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="okres_narodenia" msprop:Generator_UserColumnName="okres_narodenia" msprop:Generator_ColumnVarNameInTable="columnokres_narodenia" msprop:Generator_ColumnPropNameInRow="okres_narodenia" msprop:Generator_ColumnPropNameInTable="okres_narodeniaColumn" minOccurs="0">
+              <xs:element name="okres_narodenia" msprop:Generator_UserColumnName="okres_narodenia" msprop:Generator_ColumnPropNameInRow="okres_narodenia" msprop:Generator_ColumnVarNameInTable="columnokres_narodenia" msprop:Generator_ColumnPropNameInTable="okres_narodeniaColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="bydlisko" msprop:Generator_UserColumnName="bydlisko" msprop:Generator_ColumnVarNameInTable="columnbydlisko" msprop:Generator_ColumnPropNameInRow="bydlisko" msprop:Generator_ColumnPropNameInTable="bydliskoColumn" minOccurs="0">
+              <xs:element name="bydlisko" msprop:Generator_UserColumnName="bydlisko" msprop:Generator_ColumnPropNameInRow="bydlisko" msprop:Generator_ColumnVarNameInTable="columnbydlisko" msprop:Generator_ColumnPropNameInTable="bydliskoColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="psc" msprop:Generator_UserColumnName="psc" msprop:Generator_ColumnVarNameInTable="columnpsc" msprop:Generator_ColumnPropNameInRow="psc" msprop:Generator_ColumnPropNameInTable="pscColumn" minOccurs="0">
+              <xs:element name="psc" msprop:Generator_UserColumnName="psc" msprop:Generator_ColumnPropNameInRow="psc" msprop:Generator_ColumnVarNameInTable="columnpsc" msprop:Generator_ColumnPropNameInTable="pscColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="statna_prislusnost" msprop:Generator_UserColumnName="statna_prislusnost" msprop:Generator_ColumnVarNameInTable="columnstatna_prislusnost" msprop:Generator_ColumnPropNameInRow="statna_prislusnost" msprop:Generator_ColumnPropNameInTable="statna_prislusnostColumn" minOccurs="0">
+              <xs:element name="statna_prislusnost" msprop:Generator_UserColumnName="statna_prislusnost" msprop:Generator_ColumnPropNameInRow="statna_prislusnost" msprop:Generator_ColumnVarNameInTable="columnstatna_prislusnost" msprop:Generator_ColumnPropNameInTable="statna_prislusnostColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="cislo_op" msprop:Generator_UserColumnName="cislo_op" msprop:Generator_ColumnVarNameInTable="columncislo_op" msprop:Generator_ColumnPropNameInRow="cislo_op" msprop:Generator_ColumnPropNameInTable="cislo_opColumn" minOccurs="0">
+              <xs:element name="cislo_op" msprop:Generator_UserColumnName="cislo_op" msprop:Generator_ColumnPropNameInRow="cislo_op" msprop:Generator_ColumnVarNameInTable="columncislo_op" msprop:Generator_ColumnPropNameInTable="cislo_opColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="datum_vydania_op" msprop:Generator_UserColumnName="datum_vydania_op" msprop:Generator_ColumnVarNameInTable="columndatum_vydania_op" msprop:Generator_ColumnPropNameInRow="datum_vydania_op" msprop:Generator_ColumnPropNameInTable="datum_vydania_opColumn" minOccurs="0">
+              <xs:element name="datum_vydania_op" msprop:Generator_UserColumnName="datum_vydania_op" msprop:Generator_ColumnPropNameInRow="datum_vydania_op" msprop:Generator_ColumnVarNameInTable="columndatum_vydania_op" msprop:Generator_ColumnPropNameInTable="datum_vydania_opColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="cislo_pl" msprop:Generator_UserColumnName="cislo_pl" msprop:Generator_ColumnVarNameInTable="columncislo_pl" msprop:Generator_ColumnPropNameInRow="cislo_pl" msprop:Generator_ColumnPropNameInTable="cislo_plColumn" minOccurs="0">
+              <xs:element name="cislo_pl" msprop:Generator_UserColumnName="cislo_pl" msprop:Generator_ColumnPropNameInRow="cislo_pl" msprop:Generator_ColumnVarNameInTable="columncislo_pl" msprop:Generator_ColumnPropNameInTable="cislo_plColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="datum_vydania_pl" msprop:Generator_UserColumnName="datum_vydania_pl" msprop:Generator_ColumnVarNameInTable="columndatum_vydania_pl" msprop:Generator_ColumnPropNameInRow="datum_vydania_pl" msprop:Generator_ColumnPropNameInTable="datum_vydania_plColumn" minOccurs="0">
+              <xs:element name="datum_vydania_pl" msprop:Generator_UserColumnName="datum_vydania_pl" msprop:Generator_ColumnPropNameInRow="datum_vydania_pl" msprop:Generator_ColumnVarNameInTable="columndatum_vydania_pl" msprop:Generator_ColumnPropNameInTable="datum_vydania_plColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="cislo_zp" msprop:Generator_UserColumnName="cislo_zp" msprop:Generator_ColumnVarNameInTable="columncislo_zp" msprop:Generator_ColumnPropNameInRow="cislo_zp" msprop:Generator_ColumnPropNameInTable="cislo_zpColumn" minOccurs="0">
+              <xs:element name="cislo_zp" msprop:Generator_UserColumnName="cislo_zp" msprop:Generator_ColumnPropNameInRow="cislo_zp" msprop:Generator_ColumnVarNameInTable="columncislo_zp" msprop:Generator_ColumnPropNameInTable="cislo_zpColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="datum_vydania_zp" msprop:Generator_UserColumnName="datum_vydania_zp" msprop:Generator_ColumnVarNameInTable="columndatum_vydania_zp" msprop:Generator_ColumnPropNameInRow="datum_vydania_zp" msprop:Generator_ColumnPropNameInTable="datum_vydania_zpColumn" minOccurs="0">
+              <xs:element name="datum_vydania_zp" msprop:Generator_UserColumnName="datum_vydania_zp" msprop:Generator_ColumnPropNameInRow="datum_vydania_zp" msprop:Generator_ColumnVarNameInTable="columndatum_vydania_zp" msprop:Generator_ColumnPropNameInTable="datum_vydania_zpColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="cislo_clenskeho_preukazu_spz" msprop:Generator_UserColumnName="cislo_clenskeho_preukazu_spz" msprop:Generator_ColumnVarNameInTable="columncislo_clenskeho_preukazu_spz" msprop:Generator_ColumnPropNameInRow="cislo_clenskeho_preukazu_spz" msprop:Generator_ColumnPropNameInTable="cislo_clenskeho_preukazu_spzColumn" minOccurs="0">
+              <xs:element name="cislo_clenskeho_preukazu_spz" msprop:Generator_UserColumnName="cislo_clenskeho_preukazu_spz" msprop:Generator_ColumnPropNameInRow="cislo_clenskeho_preukazu_spz" msprop:Generator_ColumnVarNameInTable="columncislo_clenskeho_preukazu_spz" msprop:Generator_ColumnPropNameInTable="cislo_clenskeho_preukazu_spzColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="clen_spz_od" msprop:Generator_UserColumnName="clen_spz_od" msprop:Generator_ColumnVarNameInTable="columnclen_spz_od" msprop:Generator_ColumnPropNameInRow="clen_spz_od" msprop:Generator_ColumnPropNameInTable="clen_spz_odColumn" minOccurs="0">
+              <xs:element name="clen_spz_od" msprop:Generator_UserColumnName="clen_spz_od" msprop:Generator_ColumnPropNameInRow="clen_spz_od" msprop:Generator_ColumnVarNameInTable="columnclen_spz_od" msprop:Generator_ColumnPropNameInTable="clen_spz_odColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="clenske_do" msprop:Generator_UserColumnName="clenske_do" msprop:Generator_ColumnVarNameInTable="columnclenske_do" msprop:Generator_ColumnPropNameInRow="clenske_do" msprop:Generator_ColumnPropNameInTable="clenske_doColumn" minOccurs="0">
+              <xs:element name="clenske_do" msprop:Generator_UserColumnName="clenske_do" msprop:Generator_ColumnPropNameInRow="clenske_do" msprop:Generator_ColumnVarNameInTable="columnclenske_do" msprop:Generator_ColumnPropNameInTable="clenske_doColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="cislo_dokladu_clenske" msprop:Generator_UserColumnName="cislo_dokladu_clenske" msprop:Generator_ColumnVarNameInTable="columncislo_dokladu_clenske" msprop:Generator_ColumnPropNameInRow="cislo_dokladu_clenske" msprop:Generator_ColumnPropNameInTable="cislo_dokladu_clenskeColumn" minOccurs="0">
+              <xs:element name="cislo_dokladu_clenske" msprop:Generator_UserColumnName="cislo_dokladu_clenske" msprop:Generator_ColumnPropNameInRow="cislo_dokladu_clenske" msprop:Generator_ColumnVarNameInTable="columncislo_dokladu_clenske" msprop:Generator_ColumnPropNameInTable="cislo_dokladu_clenskeColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="clen_pz" msprop:Generator_UserColumnName="clen_pz" msprop:Generator_ColumnVarNameInTable="columnclen_pz" msprop:Generator_ColumnPropNameInRow="clen_pz" msprop:Generator_ColumnPropNameInTable="clen_pzColumn" minOccurs="0">
+              <xs:element name="clen_pz" msprop:Generator_UserColumnName="clen_pz" msprop:Generator_ColumnPropNameInRow="clen_pz" msprop:Generator_ColumnVarNameInTable="columnclen_pz" msprop:Generator_ColumnPropNameInTable="clen_pzColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="skuska_z_polovnictva" msprop:Generator_UserColumnName="skuska_z_polovnictva" msprop:Generator_ColumnVarNameInTable="columnskuska_z_polovnictva" msprop:Generator_ColumnPropNameInRow="skuska_z_polovnictva" msprop:Generator_ColumnPropNameInTable="skuska_z_polovnictvaColumn" minOccurs="0">
+              <xs:element name="skuska_z_polovnictva" msprop:Generator_UserColumnName="skuska_z_polovnictva" msprop:Generator_ColumnPropNameInRow="skuska_z_polovnictva" msprop:Generator_ColumnVarNameInTable="columnskuska_z_polovnictva" msprop:Generator_ColumnPropNameInTable="skuska_z_polovnictvaColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="miesto_skusky_z_x0020__polovnictva" msprop:Generator_UserColumnName="miesto_skusky_z _polovnictva" msprop:Generator_ColumnVarNameInTable="columnmiesto_skusky_z__polovnictva" msprop:Generator_ColumnPropNameInRow="miesto_skusky_z__polovnictva" msprop:Generator_ColumnPropNameInTable="miesto_skusky_z__polovnictvaColumn" minOccurs="0">
+              <xs:element name="miesto_skusky_z_x0020__polovnictva" msprop:Generator_UserColumnName="miesto_skusky_z _polovnictva" msprop:Generator_ColumnPropNameInRow="miesto_skusky_z__polovnictva" msprop:Generator_ColumnVarNameInTable="columnmiesto_skusky_z__polovnictva" msprop:Generator_ColumnPropNameInTable="miesto_skusky_z__polovnictvaColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="skuska_pre_polovnych_hospodarov" msprop:Generator_UserColumnName="skuska_pre_polovnych_hospodarov" msprop:Generator_ColumnVarNameInTable="columnskuska_pre_polovnych_hospodarov" msprop:Generator_ColumnPropNameInRow="skuska_pre_polovnych_hospodarov" msprop:Generator_ColumnPropNameInTable="skuska_pre_polovnych_hospodarovColumn" minOccurs="0">
+              <xs:element name="skuska_pre_polovnych_hospodarov" msprop:Generator_UserColumnName="skuska_pre_polovnych_hospodarov" msprop:Generator_ColumnPropNameInRow="skuska_pre_polovnych_hospodarov" msprop:Generator_ColumnVarNameInTable="columnskuska_pre_polovnych_hospodarov" msprop:Generator_ColumnPropNameInTable="skuska_pre_polovnych_hospodarovColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="miesto_skusky_pre_polovnych_hospodarov" msprop:Generator_UserColumnName="miesto_skusky_pre_polovnych_hospodarov" msprop:Generator_ColumnVarNameInTable="columnmiesto_skusky_pre_polovnych_hospodarov" msprop:Generator_ColumnPropNameInRow="miesto_skusky_pre_polovnych_hospodarov" msprop:Generator_ColumnPropNameInTable="miesto_skusky_pre_polovnych_hospodarovColumn" minOccurs="0">
+              <xs:element name="miesto_skusky_pre_polovnych_hospodarov" msprop:Generator_UserColumnName="miesto_skusky_pre_polovnych_hospodarov" msprop:Generator_ColumnPropNameInRow="miesto_skusky_pre_polovnych_hospodarov" msprop:Generator_ColumnVarNameInTable="columnmiesto_skusky_pre_polovnych_hospodarov" msprop:Generator_ColumnPropNameInTable="miesto_skusky_pre_polovnych_hospodarovColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="vyzsia_skuska_z_polovnictva" msprop:Generator_UserColumnName="vyzsia_skuska_z_polovnictva" msprop:Generator_ColumnVarNameInTable="columnvyzsia_skuska_z_polovnictva" msprop:Generator_ColumnPropNameInRow="vyzsia_skuska_z_polovnictva" msprop:Generator_ColumnPropNameInTable="vyzsia_skuska_z_polovnictvaColumn" minOccurs="0">
+              <xs:element name="vyzsia_skuska_z_polovnictva" msprop:Generator_UserColumnName="vyzsia_skuska_z_polovnictva" msprop:Generator_ColumnPropNameInRow="vyzsia_skuska_z_polovnictva" msprop:Generator_ColumnVarNameInTable="columnvyzsia_skuska_z_polovnictva" msprop:Generator_ColumnPropNameInTable="vyzsia_skuska_z_polovnictvaColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="miesto_vyzsia_skuska_z_polovnictva" msprop:Generator_UserColumnName="miesto_vyzsia_skuska_z_polovnictva" msprop:Generator_ColumnVarNameInTable="columnmiesto_vyzsia_skuska_z_polovnictva" msprop:Generator_ColumnPropNameInRow="miesto_vyzsia_skuska_z_polovnictva" msprop:Generator_ColumnPropNameInTable="miesto_vyzsia_skuska_z_polovnictvaColumn" minOccurs="0">
+              <xs:element name="miesto_vyzsia_skuska_z_polovnictva" msprop:Generator_UserColumnName="miesto_vyzsia_skuska_z_polovnictva" msprop:Generator_ColumnPropNameInRow="miesto_vyzsia_skuska_z_polovnictva" msprop:Generator_ColumnVarNameInTable="columnmiesto_vyzsia_skuska_z_polovnictva" msprop:Generator_ColumnPropNameInTable="miesto_vyzsia_skuska_z_polovnictvaColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="brokova_zbran" msprop:Generator_UserColumnName="brokova_zbran" msprop:Generator_ColumnVarNameInTable="columnbrokova_zbran" msprop:Generator_ColumnPropNameInRow="brokova_zbran" msprop:Generator_ColumnPropNameInTable="brokova_zbranColumn" minOccurs="0">
+              <xs:element name="brokova_zbran" msprop:Generator_UserColumnName="brokova_zbran" msprop:Generator_ColumnPropNameInRow="brokova_zbran" msprop:Generator_ColumnVarNameInTable="columnbrokova_zbran" msprop:Generator_ColumnPropNameInTable="brokova_zbranColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="kontrolne_strelby_brok" msprop:Generator_UserColumnName="kontrolne_strelby_brok" msprop:Generator_ColumnVarNameInTable="columnkontrolne_strelby_brok" msprop:Generator_ColumnPropNameInRow="kontrolne_strelby_brok" msprop:Generator_ColumnPropNameInTable="kontrolne_strelby_brokColumn" minOccurs="0">
+              <xs:element name="kontrolne_strelby_brok" msprop:Generator_UserColumnName="kontrolne_strelby_brok" msprop:Generator_ColumnPropNameInRow="kontrolne_strelby_brok" msprop:Generator_ColumnVarNameInTable="columnkontrolne_strelby_brok" msprop:Generator_ColumnPropNameInTable="kontrolne_strelby_brokColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="gulova_zbran" msprop:Generator_UserColumnName="gulova_zbran" msprop:Generator_ColumnVarNameInTable="columngulova_zbran" msprop:Generator_ColumnPropNameInRow="gulova_zbran" msprop:Generator_ColumnPropNameInTable="gulova_zbranColumn" minOccurs="0">
+              <xs:element name="gulova_zbran" msprop:Generator_UserColumnName="gulova_zbran" msprop:Generator_ColumnPropNameInRow="gulova_zbran" msprop:Generator_ColumnVarNameInTable="columngulova_zbran" msprop:Generator_ColumnPropNameInTable="gulova_zbranColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="kontrolne_strelby_gulova_zbran" msprop:Generator_UserColumnName="kontrolne_strelby_gulova_zbran" msprop:Generator_ColumnVarNameInTable="columnkontrolne_strelby_gulova_zbran" msprop:Generator_ColumnPropNameInRow="kontrolne_strelby_gulova_zbran" msprop:Generator_ColumnPropNameInTable="kontrolne_strelby_gulova_zbranColumn" minOccurs="0">
+              <xs:element name="kontrolne_strelby_gulova_zbran" msprop:Generator_UserColumnName="kontrolne_strelby_gulova_zbran" msprop:Generator_ColumnPropNameInRow="kontrolne_strelby_gulova_zbran" msprop:Generator_ColumnVarNameInTable="columnkontrolne_strelby_gulova_zbran" msprop:Generator_ColumnPropNameInTable="kontrolne_strelby_gulova_zbranColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="vyznamenanie_III" msprop:Generator_UserColumnName="vyznamenanie_III" msprop:Generator_ColumnVarNameInTable="columnvyznamenanie_III" msprop:Generator_ColumnPropNameInRow="vyznamenanie_III" msprop:Generator_ColumnPropNameInTable="vyznamenanie_IIIColumn" minOccurs="0">
+              <xs:element name="vyznamenanie_III" msprop:Generator_UserColumnName="vyznamenanie_III" msprop:Generator_ColumnPropNameInRow="vyznamenanie_III" msprop:Generator_ColumnVarNameInTable="columnvyznamenanie_III" msprop:Generator_ColumnPropNameInTable="vyznamenanie_IIIColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="vyznamenanie_II" msprop:Generator_UserColumnName="vyznamenanie_II" msprop:Generator_ColumnVarNameInTable="columnvyznamenanie_II" msprop:Generator_ColumnPropNameInRow="vyznamenanie_II" msprop:Generator_ColumnPropNameInTable="vyznamenanie_IIColumn" minOccurs="0">
+              <xs:element name="vyznamenanie_II" msprop:Generator_UserColumnName="vyznamenanie_II" msprop:Generator_ColumnPropNameInRow="vyznamenanie_II" msprop:Generator_ColumnVarNameInTable="columnvyznamenanie_II" msprop:Generator_ColumnPropNameInTable="vyznamenanie_IIColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="vyznamenanie_I" msprop:Generator_UserColumnName="vyznamenanie_I" msprop:Generator_ColumnVarNameInTable="columnvyznamenanie_I" msprop:Generator_ColumnPropNameInRow="vyznamenanie_I" msprop:Generator_ColumnPropNameInTable="vyznamenanie_IColumn" minOccurs="0">
+              <xs:element name="vyznamenanie_I" msprop:Generator_UserColumnName="vyznamenanie_I" msprop:Generator_ColumnPropNameInRow="vyznamenanie_I" msprop:Generator_ColumnVarNameInTable="columnvyznamenanie_I" msprop:Generator_ColumnPropNameInTable="vyznamenanie_IColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="vyznamenanie_ZK" msprop:Generator_UserColumnName="vyznamenanie_ZK" msprop:Generator_ColumnVarNameInTable="columnvyznamenanie_ZK" msprop:Generator_ColumnPropNameInRow="vyznamenanie_ZK" msprop:Generator_ColumnPropNameInTable="vyznamenanie_ZKColumn" minOccurs="0">
+              <xs:element name="vyznamenanie_ZK" msprop:Generator_UserColumnName="vyznamenanie_ZK" msprop:Generator_ColumnPropNameInRow="vyznamenanie_ZK" msprop:Generator_ColumnVarNameInTable="columnvyznamenanie_ZK" msprop:Generator_ColumnPropNameInTable="vyznamenanie_ZKColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="vyznamenanie_ine" msprop:Generator_UserColumnName="vyznamenanie_ine" msprop:Generator_ColumnVarNameInTable="columnvyznamenanie_ine" msprop:Generator_ColumnPropNameInRow="vyznamenanie_ine" msprop:Generator_ColumnPropNameInTable="vyznamenanie_ineColumn" minOccurs="0">
+              <xs:element name="vyznamenanie_ine" msprop:Generator_UserColumnName="vyznamenanie_ine" msprop:Generator_ColumnPropNameInRow="vyznamenanie_ine" msprop:Generator_ColumnVarNameInTable="columnvyznamenanie_ine" msprop:Generator_ColumnPropNameInTable="vyznamenanie_ineColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="udelene_tresty" msprop:Generator_UserColumnName="udelene_tresty" msprop:Generator_ColumnVarNameInTable="columnudelene_tresty" msprop:Generator_ColumnPropNameInRow="udelene_tresty" msprop:Generator_ColumnPropNameInTable="udelene_trestyColumn" minOccurs="0">
+              <xs:element name="udelene_tresty" msprop:Generator_UserColumnName="udelene_tresty" msprop:Generator_ColumnPropNameInRow="udelene_tresty" msprop:Generator_ColumnVarNameInTable="columnudelene_tresty" msprop:Generator_ColumnPropNameInTable="udelene_trestyColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="poznamky" msprop:Generator_UserColumnName="poznamky" msprop:Generator_ColumnVarNameInTable="columnpoznamky" msprop:Generator_ColumnPropNameInRow="poznamky" msprop:Generator_ColumnPropNameInTable="poznamkyColumn" minOccurs="0">
+              <xs:element name="poznamky" msprop:Generator_UserColumnName="poznamky" msprop:Generator_ColumnPropNameInRow="poznamky" msprop:Generator_ColumnVarNameInTable="columnpoznamky" msprop:Generator_ColumnPropNameInTable="poznamkyColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="datum_narodenia" msprop:Generator_UserColumnName="datum_narodenia" msprop:Generator_ColumnVarNameInTable="columndatum_narodenia" msprop:Generator_ColumnPropNameInRow="datum_narodenia" msprop:Generator_ColumnPropNameInTable="datum_narodeniaColumn" minOccurs="0">
+              <xs:element name="datum_narodenia" msprop:Generator_UserColumnName="datum_narodenia" msprop:Generator_ColumnPropNameInRow="datum_narodenia" msprop:Generator_ColumnVarNameInTable="columndatum_narodenia" msprop:Generator_ColumnPropNameInTable="datum_narodeniaColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="narodnost" msprop:Generator_UserColumnName="narodnost" msprop:Generator_ColumnVarNameInTable="columnnarodnost" msprop:Generator_ColumnPropNameInRow="narodnost" msprop:Generator_ColumnPropNameInTable="narodnostColumn" minOccurs="0">
+              <xs:element name="narodnost" msprop:Generator_UserColumnName="narodnost" msprop:Generator_ColumnPropNameInRow="narodnost" msprop:Generator_ColumnVarNameInTable="columnnarodnost" msprop:Generator_ColumnPropNameInTable="narodnostColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="okres_bydliska" msprop:Generator_UserColumnName="okres_bydliska" msprop:Generator_ColumnVarNameInTable="columnokres_bydliska" msprop:Generator_ColumnPropNameInRow="okres_bydliska" msprop:Generator_ColumnPropNameInTable="okres_bydliskaColumn" minOccurs="0">
+              <xs:element name="okres_bydliska" msprop:Generator_UserColumnName="okres_bydliska" msprop:Generator_ColumnPropNameInRow="okres_bydliska" msprop:Generator_ColumnVarNameInTable="columnokres_bydliska" msprop:Generator_ColumnPropNameInTable="okres_bydliskaColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="najv_vyznamenanie" msprop:Generator_UserColumnName="najv_vyznamenanie" msprop:Generator_ColumnVarNameInTable="columnnajv_vyznamenanie" msprop:Generator_ColumnPropNameInRow="najv_vyznamenanie" msprop:Generator_ColumnPropNameInTable="najv_vyznamenanieColumn" minOccurs="0">
+              <xs:element name="najv_vyznamenanie" msprop:Generator_UserColumnName="najv_vyznamenanie" msprop:Generator_ColumnPropNameInRow="najv_vyznamenanie" msprop:Generator_ColumnVarNameInTable="columnnajv_vyznamenanie" msprop:Generator_ColumnPropNameInTable="najv_vyznamenanieColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="vyznamenany_kedy" msprop:Generator_UserColumnName="vyznamenany_kedy" msprop:Generator_ColumnVarNameInTable="columnvyznamenany_kedy" msprop:Generator_ColumnPropNameInRow="vyznamenany_kedy" msprop:Generator_ColumnPropNameInTable="vyznamenany_kedyColumn" minOccurs="0">
+              <xs:element name="vyznamenany_kedy" msprop:Generator_UserColumnName="vyznamenany_kedy" msprop:Generator_ColumnPropNameInRow="vyznamenany_kedy" msprop:Generator_ColumnVarNameInTable="columnvyznamenany_kedy" msprop:Generator_ColumnPropNameInTable="vyznamenany_kedyColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="telefon" msprop:Generator_UserColumnName="telefon" msprop:Generator_ColumnVarNameInTable="columntelefon" msprop:Generator_ColumnPropNameInRow="telefon" msprop:Generator_ColumnPropNameInTable="telefonColumn" minOccurs="0">
+              <xs:element name="telefon" msprop:Generator_UserColumnName="telefon" msprop:Generator_ColumnPropNameInRow="telefon" msprop:Generator_ColumnVarNameInTable="columntelefon" msprop:Generator_ColumnPropNameInTable="telefonColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="titul_za" msprop:Generator_UserColumnName="titul_za" msprop:Generator_ColumnVarNameInTable="columntitul_za" msprop:Generator_ColumnPropNameInRow="titul_za" msprop:Generator_ColumnPropNameInTable="titul_zaColumn" minOccurs="0">
+              <xs:element name="titul_za" msprop:Generator_UserColumnName="titul_za" msprop:Generator_ColumnPropNameInRow="titul_za" msprop:Generator_ColumnVarNameInTable="columntitul_za" msprop:Generator_ColumnPropNameInTable="titul_zaColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="clen_pz_id" msprop:Generator_UserColumnName="clen_pz_id" msprop:Generator_ColumnVarNameInTable="columnclen_pz_id" msprop:Generator_ColumnPropNameInRow="clen_pz_id" msprop:Generator_ColumnPropNameInTable="clen_pz_idColumn" type="xs:int" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="zdruzenie" msprop:Generator_UserTableName="zdruzenie" msprop:Generator_RowDeletedName="zdruzenieRowDeleted" msprop:Generator_TableClassName="zdruzenieDataTable" msprop:Generator_RowChangedName="zdruzenieRowChanged" msprop:Generator_RowClassName="zdruzenieRow" msprop:Generator_RowChangingName="zdruzenieRowChanging" msprop:Generator_RowEvArgName="zdruzenieRowChangeEvent" msprop:Generator_RowEvHandlerName="zdruzenieRowChangeEventHandler" msprop:Generator_TablePropName="zdruzenie" msprop:Generator_TableVarName="tablezdruzenie" msprop:Generator_RowDeletingName="zdruzenieRowDeleting">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:int" />
-              <xs:element name="nazov" msprop:Generator_UserColumnName="nazov" msprop:Generator_ColumnPropNameInRow="nazov" msprop:Generator_ColumnVarNameInTable="columnnazov" msprop:Generator_ColumnPropNameInTable="nazovColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="sidlo" msprop:Generator_UserColumnName="sidlo" msprop:Generator_ColumnPropNameInRow="sidlo" msprop:Generator_ColumnVarNameInTable="columnsidlo" msprop:Generator_ColumnPropNameInTable="sidloColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="predseda" msprop:Generator_UserColumnName="predseda" msprop:Generator_ColumnPropNameInRow="predseda" msprop:Generator_ColumnVarNameInTable="columnpredseda" msprop:Generator_ColumnPropNameInTable="predsedaColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="predseda_telefon" msprop:Generator_UserColumnName="predseda_telefon" msprop:Generator_ColumnPropNameInRow="predseda_telefon" msprop:Generator_ColumnVarNameInTable="columnpredseda_telefon" msprop:Generator_ColumnPropNameInTable="predseda_telefonColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="polovnicky_hospodar" msprop:Generator_UserColumnName="polovnicky_hospodar" msprop:Generator_ColumnPropNameInRow="polovnicky_hospodar" msprop:Generator_ColumnVarNameInTable="columnpolovnicky_hospodar" msprop:Generator_ColumnPropNameInTable="polovnicky_hospodarColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="polovnicky_hospodar_telefon" msprop:Generator_UserColumnName="polovnicky_hospodar_telefon" msprop:Generator_ColumnPropNameInRow="polovnicky_hospodar_telefon" msprop:Generator_ColumnVarNameInTable="columnpolovnicky_hospodar_telefon" msprop:Generator_ColumnPropNameInTable="polovnicky_hospodar_telefonColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="ico" msprop:Generator_UserColumnName="ico" msprop:Generator_ColumnPropNameInRow="ico" msprop:Generator_ColumnVarNameInTable="columnico" msprop:Generator_ColumnPropNameInTable="icoColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="dic" msprop:Generator_UserColumnName="dic" msprop:Generator_ColumnPropNameInRow="dic" msprop:Generator_ColumnVarNameInTable="columndic" msprop:Generator_ColumnPropNameInTable="dicColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="banka" msprop:Generator_UserColumnName="banka" msprop:Generator_ColumnPropNameInRow="banka" msprop:Generator_ColumnVarNameInTable="columnbanka" msprop:Generator_ColumnPropNameInTable="bankaColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="cislo_uctu" msprop:Generator_UserColumnName="cislo_uctu" msprop:Generator_ColumnPropNameInRow="cislo_uctu" msprop:Generator_ColumnVarNameInTable="columncislo_uctu" msprop:Generator_ColumnPropNameInTable="cislo_uctuColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="nazov_polovneho_reviru" msprop:Generator_UserColumnName="nazov_polovneho_reviru" msprop:Generator_ColumnPropNameInRow="nazov_polovneho_reviru" msprop:Generator_ColumnVarNameInTable="columnnazov_polovneho_reviru" msprop:Generator_ColumnPropNameInTable="nazov_polovneho_reviruColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="chovatelska_oblast" msprop:Generator_UserColumnName="chovatelska_oblast" msprop:Generator_ColumnPropNameInRow="chovatelska_oblast" msprop:Generator_ColumnVarNameInTable="columnchovatelska_oblast" msprop:Generator_ColumnPropNameInTable="chovatelska_oblastColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="cislo_reviru" msprop:Generator_UserColumnName="cislo_reviru" msprop:Generator_ColumnPropNameInRow="cislo_reviru" msprop:Generator_ColumnVarNameInTable="columncislo_reviru" msprop:Generator_ColumnPropNameInTable="cislo_reviruColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="vymera" msprop:Generator_UserColumnName="vymera" msprop:Generator_ColumnPropNameInRow="vymera" msprop:Generator_ColumnVarNameInTable="columnvymera" msprop:Generator_ColumnPropNameInTable="vymeraColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="les" msprop:Generator_UserColumnName="les" msprop:Generator_ColumnPropNameInRow="les" msprop:Generator_ColumnVarNameInTable="columnles" msprop:Generator_ColumnPropNameInTable="lesColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="jelenia" msprop:Generator_UserColumnName="jelenia" msprop:Generator_ColumnPropNameInRow="jelenia" msprop:Generator_ColumnVarNameInTable="columnjelenia" msprop:Generator_ColumnPropNameInTable="jeleniaColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="srncia" msprop:Generator_UserColumnName="srncia" msprop:Generator_ColumnPropNameInRow="srncia" msprop:Generator_ColumnVarNameInTable="columnsrncia" msprop:Generator_ColumnPropNameInTable="srnciaColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="diviacia" msprop:Generator_UserColumnName="diviacia" msprop:Generator_ColumnPropNameInRow="diviacia" msprop:Generator_ColumnVarNameInTable="columndiviacia" msprop:Generator_ColumnPropNameInTable="diviaciaColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="bazant" msprop:Generator_UserColumnName="bazant" msprop:Generator_ColumnPropNameInRow="bazant" msprop:Generator_ColumnVarNameInTable="columnbazant" msprop:Generator_ColumnPropNameInTable="bazantColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="ina" msprop:Generator_UserColumnName="ina" msprop:Generator_ColumnPropNameInRow="ina" msprop:Generator_ColumnVarNameInTable="columnina" msprop:Generator_ColumnPropNameInTable="inaColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="stavace" msprop:Generator_UserColumnName="stavace" msprop:Generator_ColumnPropNameInRow="stavace" msprop:Generator_ColumnVarNameInTable="columnstavace" msprop:Generator_ColumnPropNameInTable="stavaceColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="sliedice" msprop:Generator_UserColumnName="sliedice" msprop:Generator_ColumnPropNameInRow="sliedice" msprop:Generator_ColumnVarNameInTable="columnsliedice" msprop:Generator_ColumnPropNameInTable="sliediceColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="slovensky_kopov" msprop:Generator_UserColumnName="slovensky_kopov" msprop:Generator_ColumnPropNameInRow="slovensky_kopov" msprop:Generator_ColumnVarNameInTable="columnslovensky_kopov" msprop:Generator_ColumnPropNameInTable="slovensky_kopovColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="ostatne_durice" msprop:Generator_UserColumnName="ostatne_durice" msprop:Generator_ColumnPropNameInRow="ostatne_durice" msprop:Generator_ColumnVarNameInTable="columnostatne_durice" msprop:Generator_ColumnPropNameInTable="ostatne_duriceColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="brlohare" msprop:Generator_UserColumnName="brlohare" msprop:Generator_ColumnPropNameInRow="brlohare" msprop:Generator_ColumnVarNameInTable="columnbrlohare" msprop:Generator_ColumnPropNameInTable="brlohareColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="farbiare" msprop:Generator_UserColumnName="farbiare" msprop:Generator_ColumnPropNameInRow="farbiare" msprop:Generator_ColumnVarNameInTable="columnfarbiare" msprop:Generator_ColumnPropNameInTable="farbiareColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="pes_jelenia" msprop:Generator_UserColumnName="pes_jelenia" msprop:Generator_ColumnPropNameInRow="pes_jelenia" msprop:Generator_ColumnVarNameInTable="columnpes_jelenia" msprop:Generator_ColumnPropNameInTable="pes_jeleniaColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="pes_diviacia" msprop:Generator_UserColumnName="pes_diviacia" msprop:Generator_ColumnPropNameInRow="pes_diviacia" msprop:Generator_ColumnVarNameInTable="columnpes_diviacia" msprop:Generator_ColumnPropNameInTable="pes_diviaciaColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="pes_srncia" msprop:Generator_UserColumnName="pes_srncia" msprop:Generator_ColumnPropNameInRow="pes_srncia" msprop:Generator_ColumnVarNameInTable="columnpes_srncia" msprop:Generator_ColumnPropNameInTable="pes_srnciaColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="pes_mala" msprop:Generator_UserColumnName="pes_mala" msprop:Generator_ColumnPropNameInRow="pes_mala" msprop:Generator_ColumnVarNameInTable="columnpes_mala" msprop:Generator_ColumnPropNameInTable="pes_malaColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="platnost_najomnej_zmluvy_do" msprop:Generator_UserColumnName="platnost_najomnej_zmluvy_do" msprop:Generator_ColumnPropNameInRow="platnost_najomnej_zmluvy_do" msprop:Generator_ColumnVarNameInTable="columnplatnost_najomnej_zmluvy_do" msprop:Generator_ColumnPropNameInTable="platnost_najomnej_zmluvy_doColumn" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="clen_pz_id" msprop:Generator_UserColumnName="clen_pz_id" msprop:Generator_ColumnPropNameInRow="clen_pz_id" msprop:Generator_ColumnVarNameInTable="columnclen_pz_id" msprop:Generator_ColumnPropNameInTable="clen_pz_idColumn" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1069,14 +698,5 @@
       <xs:selector xpath=".//mstns:clenovia" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
-    <xs:unique name="zdruzenie_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:zdruzenie" />
-      <xs:field xpath="mstns:id" />
-    </xs:unique>
   </xs:element>
-  <xs:annotation>
-    <xs:appinfo>
-      <msdata:Relationship name="zdruzenieclenovia" msdata:parent="zdruzenie" msdata:child="clenovia" msdata:parentkey="id" msdata:childkey="clen_pz_id" msprop:Generator_UserRelationName="zdruzenieclenovia" msprop:Generator_RelationVarName="relationzdruzenieclenovia" msprop:Generator_UserChildTable="clenovia" msprop:Generator_UserParentTable="zdruzenie" msprop:Generator_ParentPropName="zdruzenieRow" msprop:Generator_ChildPropName="GetclenoviaRows" />
-    </xs:appinfo>
-  </xs:annotation>
 </xs:schema>
