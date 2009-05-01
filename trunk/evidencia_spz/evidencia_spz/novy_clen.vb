@@ -124,4 +124,12 @@
             ErrorProvider1.SetError(Rodne_cisloTextBox, Nothing)
         End If
     End Sub
+
+    Private Sub NarodnostComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NarodnostComboBox.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Clen_pz_idComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Clen_pz_idComboBox.SelectedIndexChanged
+
+    End Sub
 End Class

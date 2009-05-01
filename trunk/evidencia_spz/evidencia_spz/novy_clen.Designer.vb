@@ -62,6 +62,7 @@ Partial Class novy_clen
         Dim Vyznamenany_kedyLabel As System.Windows.Forms.Label
         Dim TelefonLabel As System.Windows.Forms.Label
         Dim Titul_zaLabel As System.Windows.Forms.Label
+        Dim Clen_pz_idLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(novy_clen))
         Me.Novy_clenDataSet = New evidencia_spz.novy_clenDataSet
         Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -139,13 +140,14 @@ Partial Class novy_clen
         Me.Brokova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.Clen_pz_idComboBox = New System.Windows.Forms.ComboBox
+        Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Clen_pzComboBox = New System.Windows.Forms.ComboBox
-        Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ZdruzenieDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
         Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
         Titul_predLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
@@ -186,6 +188,7 @@ Partial Class novy_clen
         Vyznamenany_kedyLabel = New System.Windows.Forms.Label
         TelefonLabel = New System.Windows.Forms.Label
         Titul_zaLabel = New System.Windows.Forms.Label
+        Clen_pz_idLabel = New System.Windows.Forms.Label
         CType(Me.Novy_clenDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -202,10 +205,10 @@ Partial Class novy_clen
         CType(Me.ClenoviaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Titul_predLabel
@@ -558,6 +561,15 @@ Partial Class novy_clen
         Titul_zaLabel.Size = New System.Drawing.Size(41, 13)
         Titul_zaLabel.TabIndex = 89
         Titul_zaLabel.Text = "Titul za"
+        '
+        'Clen_pz_idLabel
+        '
+        Clen_pz_idLabel.AutoSize = True
+        Clen_pz_idLabel.Location = New System.Drawing.Point(591, 423)
+        Clen_pz_idLabel.Name = "Clen_pz_idLabel"
+        Clen_pz_idLabel.Size = New System.Drawing.Size(55, 13)
+        Clen_pz_idLabel.TabIndex = 0
+        Clen_pz_idLabel.Text = "clen pz id:"
         '
         'Novy_clenDataSet
         '
@@ -1135,6 +1147,33 @@ Partial Class novy_clen
         Me.ShapeContainer1.TabIndex = 99
         Me.ShapeContainer1.TabStop = False
         '
+        'Clen_pz_idComboBox
+        '
+        Me.Clen_pz_idComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "clen_pz_id", True))
+        Me.Clen_pz_idComboBox.DataSource = Me.ZdruzenieBindingSource
+        Me.Clen_pz_idComboBox.DisplayMember = "ID"
+        Me.Clen_pz_idComboBox.FormattingEnabled = True
+        Me.Clen_pz_idComboBox.Location = New System.Drawing.Point(652, 415)
+        Me.Clen_pz_idComboBox.Name = "Clen_pz_idComboBox"
+        Me.Clen_pz_idComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Clen_pz_idComboBox.TabIndex = 1
+        Me.Clen_pz_idComboBox.ValueMember = "ID"
+        '
+        'ZdruzenieBindingSource
+        '
+        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
+        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSetBindingSource
+        '
+        'ZdruzenieDataSetBindingSource
+        '
+        Me.ZdruzenieDataSetBindingSource.DataSource = Me.ZdruzenieDataSet
+        Me.ZdruzenieDataSetBindingSource.Position = 0
+        '
+        'ZdruzenieDataSet
+        '
+        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
+        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'LineShape2
         '
         Me.LineShape2.BorderWidth = 2
@@ -1167,22 +1206,7 @@ Partial Class novy_clen
         Me.Clen_pzComboBox.Name = "Clen_pzComboBox"
         Me.Clen_pzComboBox.Size = New System.Drawing.Size(100, 21)
         Me.Clen_pzComboBox.TabIndex = 1
-        Me.Clen_pzComboBox.ValueMember = "nazov"
-        '
-        'ZdruzenieBindingSource
-        '
-        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
-        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSetBindingSource
-        '
-        'ZdruzenieDataSetBindingSource
-        '
-        Me.ZdruzenieDataSetBindingSource.DataSource = Me.ZdruzenieDataSet
-        Me.ZdruzenieDataSetBindingSource.Position = 0
-        '
-        'ZdruzenieDataSet
-        '
-        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
-        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Clen_pzComboBox.ValueMember = "ID"
         '
         'ZdruzenieTableAdapter
         '
@@ -1195,6 +1219,8 @@ Partial Class novy_clen
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(1292, 812)
+        Me.Controls.Add(Clen_pz_idLabel)
+        Me.Controls.Add(Me.Clen_pz_idComboBox)
         Me.Controls.Add(Me.Clen_pzComboBox)
         Me.Controls.Add(Me.Gulova_zbranComboBox)
         Me.Controls.Add(Me.Brokova_zbranComboBox)
@@ -1297,10 +1323,10 @@ Partial Class novy_clen
         CType(Me.ClenoviaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1389,4 +1415,5 @@ Partial Class novy_clen
     Friend WithEvents ZdruzenieDataSet As evidencia_spz.zdruzenieDataSet
     Friend WithEvents ZdruzenieBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ZdruzenieTableAdapter As evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
+    Friend WithEvents Clen_pz_idComboBox As System.Windows.Forms.ComboBox
 End Class
