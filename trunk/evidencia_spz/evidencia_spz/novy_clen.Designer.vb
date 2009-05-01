@@ -140,12 +140,12 @@ Partial Class novy_clen
         Me.Brokova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.Clen_pz_idComboBox = New System.Windows.Forms.ComboBox
         Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ZdruzenieDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Clen_pzComboBox = New System.Windows.Forms.ComboBox
         Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
@@ -1147,11 +1147,29 @@ Partial Class novy_clen
         Me.ShapeContainer1.TabIndex = 99
         Me.ShapeContainer1.TabStop = False
         '
+        'LineShape2
+        '
+        Me.LineShape2.BorderWidth = 2
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 41
+        Me.LineShape2.X2 = 617
+        Me.LineShape2.Y1 = 441
+        Me.LineShape2.Y2 = 441
+        '
+        'LineShape1
+        '
+        Me.LineShape1.BorderWidth = 2
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 41
+        Me.LineShape1.X2 = 617
+        Me.LineShape1.Y1 = 284
+        Me.LineShape1.Y2 = 284
+        '
         'Clen_pz_idComboBox
         '
         Me.Clen_pz_idComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "clen_pz_id", True))
         Me.Clen_pz_idComboBox.DataSource = Me.ZdruzenieBindingSource
-        Me.Clen_pz_idComboBox.DisplayMember = "ID"
+        Me.Clen_pz_idComboBox.DisplayMember = "nazov"
         Me.Clen_pz_idComboBox.FormattingEnabled = True
         Me.Clen_pz_idComboBox.Location = New System.Drawing.Point(652, 415)
         Me.Clen_pz_idComboBox.Name = "Clen_pz_idComboBox"
@@ -1173,24 +1191,6 @@ Partial Class novy_clen
         '
         Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
         Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'LineShape2
-        '
-        Me.LineShape2.BorderWidth = 2
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 41
-        Me.LineShape2.X2 = 617
-        Me.LineShape2.Y1 = 441
-        Me.LineShape2.Y2 = 441
-        '
-        'LineShape1
-        '
-        Me.LineShape1.BorderWidth = 2
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 41
-        Me.LineShape1.X2 = 617
-        Me.LineShape1.Y1 = 284
-        Me.LineShape1.Y2 = 284
         '
         'ErrorProvider1
         '
