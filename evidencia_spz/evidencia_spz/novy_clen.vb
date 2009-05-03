@@ -6,6 +6,8 @@
     End Sub
 
     Private Sub novy_clen_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Pohlad_zdruzenieDataSet1.zdruzenie' table. You can move, or remove it, as needed.
+        Me.ZdruzenieTableAdapter1.Fill(Me.Pohlad_zdruzenieDataSet1.zdruzenie)
         'TODO: This line of code loads data into the 'ZdruzenieDataSet.zdruzenie' table. You can move, or remove it, as needed.
         Me.ZdruzenieTableAdapter.Fill(Me.ZdruzenieDataSet.zdruzenie)
         'TODO: This line of code loads data into the 'TitulzaDataSet.titul_za' table. You can move, or remove it, as needed.
@@ -129,7 +131,11 @@
 
     End Sub
 
-    Private Sub Clen_pz_idComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Clen_pz_idComboBox.SelectedIndexChanged
+    Private Sub Clen_pz_idComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Clen_pz_idComboBox_SelectedIndexChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Clen_pz_idComboBox.SelectedIndexChanged
 
     End Sub
 End Class
