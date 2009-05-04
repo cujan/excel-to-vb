@@ -33,6 +33,12 @@ Partial Class prehlad_zdruzeni
         Me.Label1 = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
         Me.ZdruzenieDataGridView = New System.Windows.Forms.DataGridView
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
         Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
@@ -50,12 +56,6 @@ Partial Class prehlad_zdruzeni
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ZdruzenieBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.prehlad_clenov_splitter.Panel1.SuspendLayout()
         Me.prehlad_clenov_splitter.Panel2.SuspendLayout()
         Me.prehlad_clenov_splitter.SuspendLayout()
@@ -99,7 +99,7 @@ Partial Class prehlad_zdruzeni
         Me.karta_clena_tlac_button.Name = "karta_clena_tlac_button"
         Me.karta_clena_tlac_button.Size = New System.Drawing.Size(139, 23)
         Me.karta_clena_tlac_button.TabIndex = 9
-        Me.karta_clena_tlac_button.Text = "Vytvoriť karty členov"
+        Me.karta_clena_tlac_button.Text = "Vytvoriť karty združení"
         Me.karta_clena_tlac_button.UseVisualStyleBackColor = False
         '
         'button_report_zoznam_clenov
@@ -180,6 +180,50 @@ Partial Class prehlad_zdruzeni
         Me.ZdruzenieDataGridView.Size = New System.Drawing.Size(726, 302)
         Me.ZdruzenieDataGridView.TabIndex = 0
         '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nazov"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Názov"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "sidlo"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Sídlo"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "predseda"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Predseda"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "polovnicky_hospodar"
+        Me.DataGridViewTextBoxColumn6.FillWeight = 150.0!
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Poľovnícky hospodár"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 150
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "ico"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "IČO"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "dic"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "DIČ"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        '
         'ZdruzenieBindingSource
         '
         Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
@@ -232,7 +276,7 @@ Partial Class prehlad_zdruzeni
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -312,50 +356,6 @@ Partial Class prehlad_zdruzeni
         Me.ZdruzenieBindingNavigatorSaveItem.Name = "ZdruzenieBindingNavigatorSaveItem"
         Me.ZdruzenieBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ZdruzenieBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Názov"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "sidlo"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Sídlo"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "predseda"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Predseda"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "polovnicky_hospodar"
-        Me.DataGridViewTextBoxColumn6.FillWeight = 150.0!
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Poľovnícky hospodár"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Width = 150
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "ico"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "IČO"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "dic"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "DIČ"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
         '
         'prehlad_zdruzeni
         '
