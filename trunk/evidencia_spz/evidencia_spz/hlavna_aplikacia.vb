@@ -90,6 +90,7 @@ Public Class hlavna_aplikacia
     Private Sub sprava_clenov_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sprava_clenov_button.Click
         Dim sprava_clenov_splitter_position As New System.Drawing.Point
         Dim sprava_zdruzeni_splitter_position As New System.Drawing.Point
+        Dim tl_zostavy_splitter_position As New System.Drawing.Point
 
         If sprava_clenov_button.Text = "v" Then
             sprava_clenov_splitter.Panel2Collapsed = False
@@ -106,7 +107,17 @@ Public Class hlavna_aplikacia
             End If
 
             sprava_zdruzeni_splitter_position.X = sprava_zdruzeni_splitter.Location.X
-            nastavenia_splitter.Location = sprava_zdruzeni_splitter_position
+            tl_zostavy_splitter.Location = sprava_zdruzeni_splitter_position
+
+            If tl_zostavy_splitter.Panel2Collapsed = False Then
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 210
+
+            Else
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 34
+
+            End If
+            tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
+            nastavenia_splitter.Location = tl_zostavy_splitter_position
 
         Else
             sprava_clenov_splitter.Panel2Collapsed = True
@@ -121,8 +132,19 @@ Public Class hlavna_aplikacia
             Else
                 sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 34
             End If
+
             sprava_zdruzeni_splitter_position.X = sprava_zdruzeni_splitter.Location.X
-            nastavenia_splitter.Location = sprava_zdruzeni_splitter_position
+            tl_zostavy_splitter.Location = sprava_zdruzeni_splitter_position
+
+            If tl_zostavy_splitter.Panel2Collapsed = False Then
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 210
+
+            Else
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 34
+
+            End If
+            tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
+            nastavenia_splitter.Location = tl_zostavy_splitter_position
 
         End If
 
@@ -158,20 +180,41 @@ Public Class hlavna_aplikacia
 
     Private Sub sprava_zdruzeni_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sprava_zdruzeni_button.Click
         Dim sprava_zdruzeni_splitter_position As New System.Drawing.Point
-
+        Dim tl_zostavy_splitter_position As New System.Drawing.Point
         If sprava_zdruzeni_button.Text = "v" Then
             sprava_zdruzeni_button.Text = "^"
             sprava_zdruzeni_splitter.Panel2Collapsed = False
             sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 100
             sprava_zdruzeni_splitter_position.X = sprava_zdruzeni_splitter.Location.X
-            nastavenia_splitter.Location = sprava_zdruzeni_splitter_position
+            tl_zostavy_splitter.Location = sprava_zdruzeni_splitter_position
+
+            If tl_zostavy_splitter.Panel2Collapsed = False Then
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 210
+
+            Else
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 34
+
+            End If
+            tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
+            nastavenia_splitter.Location = tl_zostavy_splitter_position
+
         Else
             sprava_zdruzeni_button.Text = "v"
             sprava_zdruzeni_splitter.Panel2Collapsed = True
 
             sprava_zdruzeni_splitter_position.Y = sprava_zdruzeni_splitter.Location.Y + 34
             sprava_zdruzeni_splitter_position.X = sprava_zdruzeni_splitter.Location.X
-            nastavenia_splitter.Location = sprava_zdruzeni_splitter_position
+            tl_zostavy_splitter.Location = sprava_zdruzeni_splitter_position
+
+            If tl_zostavy_splitter.Panel2Collapsed = False Then
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 210
+
+            Else
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 34
+
+            End If
+            tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
+            nastavenia_splitter.Location = tl_zostavy_splitter_position
 
         End If
 
@@ -270,7 +313,7 @@ Public Class hlavna_aplikacia
 
     End Sub
 
-    Private Sub nastavenia_splitter_Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles nastavenia_splitter.Panel1.Paint
+    Private Sub nastavenia_splitter_Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles nastavenia_splitter.Panel1.Paint, tl_zostavy_splitter.Panel1.Paint
 
     End Sub
 
@@ -286,19 +329,76 @@ Public Class hlavna_aplikacia
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         'koniec_clenstva.Show()
         platnost_clenstva.Show()
 
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         chybajuce_kontrolne_strelby_brok.Show()
 
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         'kontrolne_strelby_gula.show()
+        chybajuce_kontrolne_strelby_gula.Show()
+
+    End Sub
+
+    Private Sub tl_zostavy_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tl_zostavy_button.Click
+
+
+        Dim tl_zostavy_splitter_position As New System.Drawing.Point
+        If tl_zostavy_button.Text = "v" Then
+            tl_zostavy_button.Text = "^"
+            tl_zostavy_splitter.Panel2Collapsed = False
+            tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 210
+            tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
+            nastavenia_splitter.Location = tl_zostavy_splitter_position
+
+        Else
+            tl_zostavy_button.Text = "v"
+            tl_zostavy_splitter.Panel2Collapsed = True
+            tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 34
+            tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
+
+            nastavenia_splitter.Location = tl_zostavy_splitter_position
+
+        End If
+
+    End Sub
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles karty_clenov_button.Click
+        tlacovy_vystup_clen_1.BringToFront()
+        tlacovy_vystup_clen_1.Show()
+
+    End Sub
+
+    Private Sub zoznam_clenov_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zoznam_clenov_button.Click
+        zoznam_clenov_report.BringToFront()
+        zoznam_clenov_report.Show()
+
+    End Sub
+
+    Private Sub zoznam_zdruzeni_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zoznam_zdruzeni_button.Click
+
+    End Sub
+
+    Private Sub platnost_clenstva_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles platnost_clenstva_button.Click
+        platnost_clenstva.BringToFront()
+        platnost_clenstva.Show()
+
+    End Sub
+
+    Private Sub kont_strelby_brok_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles kont_strelby_brok_button.Click
+        chybajuce_kontrolne_strelby_brok.BringToFront()
+        chybajuce_kontrolne_strelby_brok.Show()
+
+    End Sub
+
+    Private Sub kont_strelby_gula_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles kont_strelby_gula_button.Click
+        chybajuce_kontrolne_strelby_gula.BringToFront()
         chybajuce_kontrolne_strelby_gula.Show()
 
     End Sub

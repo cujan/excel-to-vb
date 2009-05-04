@@ -102,8 +102,6 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_label = New System.Windows.Forms.Label
         Me.prehlad_clenov_button = New System.Windows.Forms.Button
         Me.novy_clen_button = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.Vseobecne_udajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Spz_vseobecne_udaje = New evidencia_spz.spz_vseobecne_udaje
@@ -135,7 +133,15 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.Vseobecne_udajeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.Button3 = New System.Windows.Forms.Button
+        Me.tl_zostavy_splitter = New System.Windows.Forms.SplitContainer
+        Me.tl_zostavy_button = New System.Windows.Forms.Button
+        Me.tl_zostavy_label = New System.Windows.Forms.Label
+        Me.karty_clenov_button = New System.Windows.Forms.Button
+        Me.zoznam_clenov_button = New System.Windows.Forms.Button
+        Me.zoznam_zdruzeni_button = New System.Windows.Forms.Button
+        Me.platnost_clenstva_button = New System.Windows.Forms.Button
+        Me.kont_strelby_brok_button = New System.Windows.Forms.Button
+        Me.kont_strelby_gula_button = New System.Windows.Forms.Button
         TelefonLabel = New System.Windows.Forms.Label
         FaxLabel = New System.Windows.Forms.Label
         EmailLabel = New System.Windows.Forms.Label
@@ -161,6 +167,9 @@ Partial Class hlavna_aplikacia
         CType(Me.Spz_vseobecne_udaje, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Vseobecne_udajeBindingNavigator.SuspendLayout()
+        Me.tl_zostavy_splitter.Panel1.SuspendLayout()
+        Me.tl_zostavy_splitter.Panel2.SuspendLayout()
+        Me.tl_zostavy_splitter.SuspendLayout()
         Me.SuspendLayout()
         '
         'TelefonLabel
@@ -245,7 +254,7 @@ Partial Class hlavna_aplikacia
         Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewToolStripMenuItem.Text = "&New"
         '
         'OpenToolStripMenuItem
@@ -254,13 +263,13 @@ Partial Class hlavna_aplikacia
         Me.OpenToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
         Me.OpenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OpenToolStripMenuItem.Text = "&Open"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(148, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(149, 6)
         '
         'SaveToolStripMenuItem
         '
@@ -268,19 +277,19 @@ Partial Class hlavna_aplikacia
         Me.SaveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveToolStripMenuItem.Text = "&Save"
         '
         'SaveAsToolStripMenuItem
         '
         Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveAsToolStripMenuItem.Text = "Save &As"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(148, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(149, 6)
         '
         'PrintToolStripMenuItem
         '
@@ -288,7 +297,7 @@ Partial Class hlavna_aplikacia
         Me.PrintToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
         Me.PrintToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
-        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PrintToolStripMenuItem.Text = "&Print"
         '
         'PrintPreviewToolStripMenuItem
@@ -296,24 +305,24 @@ Partial Class hlavna_aplikacia
         Me.PrintPreviewToolStripMenuItem.Image = CType(resources.GetObject("PrintPreviewToolStripMenuItem.Image"), System.Drawing.Image)
         Me.PrintPreviewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.PrintPreviewToolStripMenuItem.Name = "PrintPreviewToolStripMenuItem"
-        Me.PrintPreviewToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.PrintPreviewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PrintPreviewToolStripMenuItem.Text = "Print Pre&view"
         '
         'PrintSetupToolStripMenuItem
         '
         Me.PrintSetupToolStripMenuItem.Name = "PrintSetupToolStripMenuItem"
-        Me.PrintSetupToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.PrintSetupToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PrintSetupToolStripMenuItem.Text = "Print Setup"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(148, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(149, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'EditMenu
@@ -542,7 +551,7 @@ Partial Class hlavna_aplikacia
         Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton})
         Me.ToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip.Name = "ToolStrip"
-        Me.ToolStrip.Size = New System.Drawing.Size(712, 25)
+        Me.ToolStrip.Size = New System.Drawing.Size(903, 25)
         Me.ToolStrip.TabIndex = 6
         Me.ToolStrip.Text = "ToolStrip"
         Me.ToolStrip.Visible = False
@@ -646,15 +655,13 @@ Partial Class hlavna_aplikacia
         '
         Me.hlavny_splitter.Panel1.BackColor = System.Drawing.Color.DarkGreen
         Me.hlavny_splitter.Panel1.Controls.Add(Me.nastavenia_splitter)
+        Me.hlavny_splitter.Panel1.Controls.Add(Me.tl_zostavy_splitter)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.sprava_zdruzeni_splitter)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.sprava_clenov_splitter)
         '
         'hlavny_splitter.Panel2
         '
         Me.hlavny_splitter.Panel2.BackColor = System.Drawing.Color.PaleGreen
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button3)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button2)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button1)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Label1)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.upravit_udaje_button)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.lomene_label)
@@ -683,7 +690,7 @@ Partial Class hlavna_aplikacia
         'nastavenia_splitter
         '
         Me.nastavenia_splitter.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
-        Me.nastavenia_splitter.Location = New System.Drawing.Point(12, 82)
+        Me.nastavenia_splitter.Location = New System.Drawing.Point(12, 111)
         Me.nastavenia_splitter.Name = "nastavenia_splitter"
         Me.nastavenia_splitter.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -875,24 +882,6 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.TabIndex = 0
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(143, 409)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(207, 23)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Kontrolne strelby brok"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(143, 357)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(166, 23)
-        Me.Button1.TabIndex = 13
-        Me.Button1.Text = "koniec clenstva"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -1184,14 +1173,122 @@ Partial Class hlavna_aplikacia
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'Button3
+        'tl_zostavy_splitter
         '
-        Me.Button3.Location = New System.Drawing.Point(143, 438)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(207, 23)
-        Me.Button3.TabIndex = 21
-        Me.Button3.Text = "Kontrolne strelby gula"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.tl_zostavy_splitter.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.tl_zostavy_splitter.Location = New System.Drawing.Point(12, 81)
+        Me.tl_zostavy_splitter.Name = "tl_zostavy_splitter"
+        Me.tl_zostavy_splitter.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'tl_zostavy_splitter.Panel1
+        '
+        Me.tl_zostavy_splitter.Panel1.Controls.Add(Me.tl_zostavy_button)
+        Me.tl_zostavy_splitter.Panel1.Controls.Add(Me.tl_zostavy_label)
+        '
+        'tl_zostavy_splitter.Panel2
+        '
+        Me.tl_zostavy_splitter.Panel2.BackColor = System.Drawing.Color.PaleGreen
+        Me.tl_zostavy_splitter.Panel2.Controls.Add(Me.kont_strelby_gula_button)
+        Me.tl_zostavy_splitter.Panel2.Controls.Add(Me.kont_strelby_brok_button)
+        Me.tl_zostavy_splitter.Panel2.Controls.Add(Me.platnost_clenstva_button)
+        Me.tl_zostavy_splitter.Panel2.Controls.Add(Me.zoznam_zdruzeni_button)
+        Me.tl_zostavy_splitter.Panel2.Controls.Add(Me.zoznam_clenov_button)
+        Me.tl_zostavy_splitter.Panel2.Controls.Add(Me.karty_clenov_button)
+        Me.tl_zostavy_splitter.Panel2Collapsed = True
+        Me.tl_zostavy_splitter.Size = New System.Drawing.Size(138, 200)
+        Me.tl_zostavy_splitter.SplitterDistance = 25
+        Me.tl_zostavy_splitter.SplitterWidth = 1
+        Me.tl_zostavy_splitter.TabIndex = 3
+        '
+        'tl_zostavy_button
+        '
+        Me.tl_zostavy_button.BackColor = System.Drawing.Color.DarkOliveGreen
+        Me.tl_zostavy_button.FlatAppearance.BorderSize = 0
+        Me.tl_zostavy_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.tl_zostavy_button.ForeColor = System.Drawing.Color.White
+        Me.tl_zostavy_button.Location = New System.Drawing.Point(113, 2)
+        Me.tl_zostavy_button.Name = "tl_zostavy_button"
+        Me.tl_zostavy_button.Size = New System.Drawing.Size(22, 22)
+        Me.tl_zostavy_button.TabIndex = 1
+        Me.tl_zostavy_button.Text = "v"
+        Me.tl_zostavy_button.UseVisualStyleBackColor = False
+        '
+        'tl_zostavy_label
+        '
+        Me.tl_zostavy_label.BackColor = System.Drawing.Color.OliveDrab
+        Me.tl_zostavy_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tl_zostavy_label.Location = New System.Drawing.Point(0, 0)
+        Me.tl_zostavy_label.Name = "tl_zostavy_label"
+        Me.tl_zostavy_label.Size = New System.Drawing.Size(138, 25)
+        Me.tl_zostavy_label.TabIndex = 0
+        Me.tl_zostavy_label.Text = "Tlač. zostavy"
+        Me.tl_zostavy_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'karty_clenov_button
+        '
+        Me.karty_clenov_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.karty_clenov_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.karty_clenov_button.Location = New System.Drawing.Point(4, 5)
+        Me.karty_clenov_button.Name = "karty_clenov_button"
+        Me.karty_clenov_button.Size = New System.Drawing.Size(130, 21)
+        Me.karty_clenov_button.TabIndex = 0
+        Me.karty_clenov_button.Text = "Karty členov"
+        Me.karty_clenov_button.UseVisualStyleBackColor = False
+        '
+        'zoznam_clenov_button
+        '
+        Me.zoznam_clenov_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.zoznam_clenov_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.zoznam_clenov_button.Location = New System.Drawing.Point(4, 30)
+        Me.zoznam_clenov_button.Name = "zoznam_clenov_button"
+        Me.zoznam_clenov_button.Size = New System.Drawing.Size(130, 21)
+        Me.zoznam_clenov_button.TabIndex = 1
+        Me.zoznam_clenov_button.Text = "Zoznam členov"
+        Me.zoznam_clenov_button.UseVisualStyleBackColor = False
+        '
+        'zoznam_zdruzeni_button
+        '
+        Me.zoznam_zdruzeni_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.zoznam_zdruzeni_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.zoznam_zdruzeni_button.Location = New System.Drawing.Point(4, 54)
+        Me.zoznam_zdruzeni_button.Name = "zoznam_zdruzeni_button"
+        Me.zoznam_zdruzeni_button.Size = New System.Drawing.Size(130, 21)
+        Me.zoznam_zdruzeni_button.TabIndex = 2
+        Me.zoznam_zdruzeni_button.Text = "Zoznam združení"
+        Me.zoznam_zdruzeni_button.UseVisualStyleBackColor = False
+        '
+        'platnost_clenstva_button
+        '
+        Me.platnost_clenstva_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.platnost_clenstva_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.platnost_clenstva_button.Location = New System.Drawing.Point(4, 78)
+        Me.platnost_clenstva_button.Name = "platnost_clenstva_button"
+        Me.platnost_clenstva_button.Size = New System.Drawing.Size(130, 21)
+        Me.platnost_clenstva_button.TabIndex = 3
+        Me.platnost_clenstva_button.Text = "Platnosť členstva"
+        Me.platnost_clenstva_button.UseVisualStyleBackColor = False
+        '
+        'kont_strelby_brok_button
+        '
+        Me.kont_strelby_brok_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.kont_strelby_brok_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.kont_strelby_brok_button.Location = New System.Drawing.Point(4, 102)
+        Me.kont_strelby_brok_button.Name = "kont_strelby_brok_button"
+        Me.kont_strelby_brok_button.Size = New System.Drawing.Size(130, 21)
+        Me.kont_strelby_brok_button.TabIndex = 4
+        Me.kont_strelby_brok_button.Text = "Kont. streľby - Brok"
+        Me.kont_strelby_brok_button.UseVisualStyleBackColor = False
+        '
+        'kont_strelby_gula_button
+        '
+        Me.kont_strelby_gula_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.kont_strelby_gula_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.kont_strelby_gula_button.Location = New System.Drawing.Point(4, 126)
+        Me.kont_strelby_gula_button.Name = "kont_strelby_gula_button"
+        Me.kont_strelby_gula_button.Size = New System.Drawing.Size(130, 21)
+        Me.kont_strelby_gula_button.TabIndex = 5
+        Me.kont_strelby_gula_button.Text = "Kont. streľby - Guľa"
+        Me.kont_strelby_gula_button.UseVisualStyleBackColor = False
         '
         'hlavna_aplikacia
         '
@@ -1201,8 +1298,8 @@ Partial Class hlavna_aplikacia
         Me.ClientSize = New System.Drawing.Size(903, 516)
         Me.Controls.Add(Me.Vseobecne_udajeBindingNavigator)
         Me.Controls.Add(Me.hlavny_splitter)
-        Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.ToolStrip)
+        Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.StatusStrip)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
@@ -1233,6 +1330,9 @@ Partial Class hlavna_aplikacia
         CType(Me.Vseobecne_udajeBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Vseobecne_udajeBindingNavigator.ResumeLayout(False)
         Me.Vseobecne_udajeBindingNavigator.PerformLayout()
+        Me.tl_zostavy_splitter.Panel1.ResumeLayout(False)
+        Me.tl_zostavy_splitter.Panel2.ResumeLayout(False)
+        Me.tl_zostavy_splitter.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1339,8 +1439,14 @@ Partial Class hlavna_aplikacia
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents prehlad_zdruzeni_button As System.Windows.Forms.Button
     Friend WithEvents nove_zdruzenie_button As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents tl_zostavy_splitter As System.Windows.Forms.SplitContainer
+    Friend WithEvents tl_zostavy_button As System.Windows.Forms.Button
+    Friend WithEvents tl_zostavy_label As System.Windows.Forms.Label
+    Friend WithEvents karty_clenov_button As System.Windows.Forms.Button
+    Friend WithEvents zoznam_clenov_button As System.Windows.Forms.Button
+    Friend WithEvents zoznam_zdruzeni_button As System.Windows.Forms.Button
+    Friend WithEvents platnost_clenstva_button As System.Windows.Forms.Button
+    Friend WithEvents kont_strelby_brok_button As System.Windows.Forms.Button
+    Friend WithEvents kont_strelby_gula_button As System.Windows.Forms.Button
 
 End Class
