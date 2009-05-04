@@ -329,7 +329,7 @@
                       </Style>
                       <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!ID.Value</Value>
+                      <Value>=RowNumber("table1")</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
