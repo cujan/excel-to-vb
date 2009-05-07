@@ -42,6 +42,8 @@ Partial Class titul
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.TitulBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.TitulDataGridView = New System.Windows.Forms.DataGridView
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Button1 = New System.Windows.Forms.Button
         Me.uloz = New System.Windows.Forms.Button
         Me.SkratkaTextBox = New System.Windows.Forms.TextBox
@@ -50,8 +52,6 @@ Partial Class titul
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.zmaz = New System.Windows.Forms.Button
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.TitulDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,7 +110,7 @@ Partial Class titul
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -205,6 +205,22 @@ Partial Class titul
         Me.TitulDataGridView.Size = New System.Drawing.Size(214, 123)
         Me.TitulDataGridView.TabIndex = 1
         '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "skratka"
+        Me.DataGridViewTextBoxColumn2.FillWeight = 70.0!
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Skratka"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 70
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "nazov"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Názov"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
@@ -230,7 +246,6 @@ Partial Class titul
         '
         'SkratkaTextBox
         '
-        Me.SkratkaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TitulBindingSource, "skratka", True))
         Me.SkratkaTextBox.Location = New System.Drawing.Point(318, 39)
         Me.SkratkaTextBox.Name = "SkratkaTextBox"
         Me.SkratkaTextBox.ReadOnly = True
@@ -239,7 +254,6 @@ Partial Class titul
         '
         'NazovTextBox
         '
-        Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TitulBindingSource, "nazov", True))
         Me.NazovTextBox.Location = New System.Drawing.Point(480, 39)
         Me.NazovTextBox.Name = "NazovTextBox"
         Me.NazovTextBox.ReadOnly = True
@@ -285,22 +299,6 @@ Partial Class titul
         Me.zmaz.TabIndex = 13
         Me.zmaz.Text = "Zmaž titul"
         Me.zmaz.UseVisualStyleBackColor = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "skratka"
-        Me.DataGridViewTextBoxColumn2.FillWeight = 70.0!
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Skratka"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Width = 70
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Názov"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'titul
         '

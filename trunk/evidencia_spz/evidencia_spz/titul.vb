@@ -21,22 +21,30 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles uloz.Click
-        Me.Validate()
-        Me.TitulBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.TitulDataSet1)
+
+        Dim skratka As String = SkratkaTextBox.Text
+        Dim nazov As String = NazovTextBox.Text
+
+        Dim con As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\spz_evidencia.accdb")
+        con.Open()
+
+        Dim com As New OleDb.OleDbCommand("INSERT INTO titul (skratka, nazov) VALUES ('" & skratka & "','" & nazov & "')", con)
+        com.ExecuteNonQuery()
+        con.Close()
+
+        Me.TitulTableAdapter.Fill(Me.TitulDataSet1.titul)
+
         Me.pridaj_titul.Visible = True
         Me.uloz.Visible = False
         Me.SkratkaTextBox.ReadOnly = True
         Me.NazovTextBox.ReadOnly = True
-        Me.Close()
-
+        Me.SkratkaTextBox.Text = ""
+        Me.NazovTextBox.Text = ""
 
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pridaj_titul.Click
-        Me.TitulBindingSource.AddNew()
-        Me.Validate()
-        Me.TitulBindingSource.EndEdit()
+        
         Me.uloz.Visible = True
         Me.SkratkaTextBox.ReadOnly = False
         Me.NazovTextBox.ReadOnly = False
