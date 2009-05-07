@@ -25,6 +25,7 @@ Partial Class titul_za
         Me.components = New System.ComponentModel.Container
         Dim NazovLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(titul_za))
+        Dim SkratkaLabel As System.Windows.Forms.Label
         Me.TitulzaDataSet = New evidencia_spz.titulzaDataSet
         Me.Titul_zaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Titul_zaTableAdapter = New evidencia_spz.titulzaDataSetTableAdapters.titul_zaTableAdapter
@@ -43,13 +44,16 @@ Partial Class titul_za
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.Titul_zaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.Titul_zaDataGridView = New System.Windows.Forms.DataGridView
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.koniec = New System.Windows.Forms.Button
         Me.pridaj = New System.Windows.Forms.Button
         Me.uloz = New System.Windows.Forms.Button
         Me.zmaz = New System.Windows.Forms.Button
         Me.NazovTextBox = New System.Windows.Forms.TextBox
+        Me.skratka = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.SkratkaTextBox = New System.Windows.Forms.TextBox
         NazovLabel = New System.Windows.Forms.Label
+        SkratkaLabel = New System.Windows.Forms.Label
         CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Titul_zaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Titul_zaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,7 +64,7 @@ Partial Class titul_za
         'NazovLabel
         '
         NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(297, 44)
+        NazovLabel.Location = New System.Drawing.Point(446, 44)
         NazovLabel.Name = "NazovLabel"
         NazovLabel.Size = New System.Drawing.Size(38, 13)
         NazovLabel.TabIndex = 8
@@ -204,20 +208,13 @@ Partial Class titul_za
         Me.Titul_zaDataGridView.AllowUserToDeleteRows = False
         Me.Titul_zaDataGridView.AutoGenerateColumns = False
         Me.Titul_zaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Titul_zaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2})
+        Me.Titul_zaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.skratka, Me.DataGridViewTextBoxColumn2})
         Me.Titul_zaDataGridView.DataSource = Me.Titul_zaBindingSource
-        Me.Titul_zaDataGridView.Location = New System.Drawing.Point(342, 67)
+        Me.Titul_zaDataGridView.Location = New System.Drawing.Point(276, 87)
         Me.Titul_zaDataGridView.Name = "Titul_zaDataGridView"
         Me.Titul_zaDataGridView.ReadOnly = True
-        Me.Titul_zaDataGridView.Size = New System.Drawing.Size(145, 67)
+        Me.Titul_zaDataGridView.Size = New System.Drawing.Size(245, 276)
         Me.Titul_zaDataGridView.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Názov"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'koniec
         '
@@ -266,11 +263,42 @@ Partial Class titul_za
         '
         'NazovTextBox
         '
-        Me.NazovTextBox.Location = New System.Drawing.Point(342, 41)
+        Me.NazovTextBox.Location = New System.Drawing.Point(490, 44)
         Me.NazovTextBox.Name = "NazovTextBox"
         Me.NazovTextBox.ReadOnly = True
         Me.NazovTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NazovTextBox.TabIndex = 9
+        '
+        'skratka
+        '
+        Me.skratka.DataPropertyName = "skratka"
+        Me.skratka.HeaderText = "skratka"
+        Me.skratka.Name = "skratka"
+        Me.skratka.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nazov"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Názov"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'SkratkaLabel
+        '
+        SkratkaLabel.AutoSize = True
+        SkratkaLabel.Location = New System.Drawing.Point(262, 48)
+        SkratkaLabel.Name = "SkratkaLabel"
+        SkratkaLabel.Size = New System.Drawing.Size(45, 13)
+        SkratkaLabel.TabIndex = 9
+        SkratkaLabel.Text = "skratka:"
+        '
+        'SkratkaTextBox
+        '
+        Me.SkratkaTextBox.Location = New System.Drawing.Point(313, 45)
+        Me.SkratkaTextBox.Name = "SkratkaTextBox"
+        Me.SkratkaTextBox.ReadOnly = True
+        Me.SkratkaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.SkratkaTextBox.TabIndex = 10
         '
         'titul_za
         '
@@ -278,6 +306,8 @@ Partial Class titul_za
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(774, 519)
+        Me.Controls.Add(SkratkaLabel)
+        Me.Controls.Add(Me.SkratkaTextBox)
         Me.Controls.Add(NazovLabel)
         Me.Controls.Add(Me.NazovTextBox)
         Me.Controls.Add(Me.zmaz)
@@ -322,5 +352,7 @@ Partial Class titul_za
     Friend WithEvents uloz As System.Windows.Forms.Button
     Friend WithEvents zmaz As System.Windows.Forms.Button
     Friend WithEvents NazovTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents skratka As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SkratkaTextBox As System.Windows.Forms.TextBox
 End Class
