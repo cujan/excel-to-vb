@@ -44,14 +44,14 @@ Partial Class narodnost
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.NarodnostBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.NarodnostDataGridView = New System.Windows.Forms.DataGridView
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.SkratkaTextBox = New System.Windows.Forms.TextBox
         Me.NazovTextBox = New System.Windows.Forms.TextBox
         Me.koniec = New System.Windows.Forms.Button
         Me.pridajButton = New System.Windows.Forms.Button
         Me.ulozButton = New System.Windows.Forms.Button
         Me.zmazButton = New System.Windows.Forms.Button
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         SkratkaLabel = New System.Windows.Forms.Label
         NazovLabel = New System.Windows.Forms.Label
         CType(Me.NarodnostDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -130,7 +130,7 @@ Partial Class narodnost
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -225,9 +225,24 @@ Partial Class narodnost
         Me.NarodnostDataGridView.Size = New System.Drawing.Size(214, 139)
         Me.NarodnostDataGridView.TabIndex = 1
         '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "skratka"
+        Me.DataGridViewTextBoxColumn2.FillWeight = 70.0!
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Skratka"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 70
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "nazov"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Názov"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
         'SkratkaTextBox
         '
-        Me.SkratkaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NarodnostBindingSource, "skratka", True))
         Me.SkratkaTextBox.Location = New System.Drawing.Point(344, 34)
         Me.SkratkaTextBox.Name = "SkratkaTextBox"
         Me.SkratkaTextBox.ReadOnly = True
@@ -236,7 +251,6 @@ Partial Class narodnost
         '
         'NazovTextBox
         '
-        Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NarodnostBindingSource, "nazov", True))
         Me.NazovTextBox.Location = New System.Drawing.Point(457, 34)
         Me.NazovTextBox.Name = "NazovTextBox"
         Me.NazovTextBox.ReadOnly = True
@@ -287,22 +301,6 @@ Partial Class narodnost
         Me.zmazButton.TabIndex = 11
         Me.zmazButton.Text = "Zmazať"
         Me.zmazButton.UseVisualStyleBackColor = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "skratka"
-        Me.DataGridViewTextBoxColumn2.FillWeight = 70.0!
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Skratka"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Width = 70
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Názov"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'narodnost
         '

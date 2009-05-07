@@ -23,20 +23,28 @@
         Me.SkratkaTextBox.ReadOnly = False
         Me.NazovTextBox.ReadOnly = False
         Me.ulozButton.Visible = True
-        Me.NarodnostBindingSource.AddNew()
         Me.pridajButton.Visible = False
     End Sub
 
     Private Sub ulozButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ulozButton.Click
-        Me.Validate()
-        Me.NarodnostBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.NarodnostDataSet)
+
+        Dim skratka As String = SkratkaTextBox.Text
+        Dim nazov As String = NazovTextBox.Text
+
+        Dim con As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\spz_evidencia.accdb")
+        con.Open()
+
+        Dim com As New OleDb.OleDbCommand("INSERT INTO narodnost (skratka, nazov) VALUES ('" & skratka & "','" & nazov & "')", con)
+        com.ExecuteNonQuery()
+        con.Close()
+
+        Me.NarodnostTableAdapter.Fill(Me.NarodnostDataSet.narodnost)
 
         Me.ulozButton.Visible = False
         Me.pridajButton.Visible = True
         Me.SkratkaTextBox.ReadOnly = True
         Me.NazovTextBox.ReadOnly = True
-        Me.Close()
+
     End Sub
 
     Private Sub zmazButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zmazButton.Click
