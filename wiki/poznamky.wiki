@@ -12,7 +12,7 @@
 - pridat tlacovy vystup pre zoznam zdruzeni <br>
 - pridat tlac. vystup pre jednotlive zdruzenia (ak to je potrebne) <br>
 1.4.2009<br>
-<s>- upravit poradove cislo v talcovej zostave tlacova forma zoznamu<br></s>
+- <s>upravit poradove cislo v talcovej zostave tlacova forma zoznamu</s><br>
 
 Sedlak pridal tieto veci
 
