@@ -43,12 +43,12 @@ Partial Class titul_za
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.Titul_zaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.Titul_zaDataGridView = New System.Windows.Forms.DataGridView
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.koniec = New System.Windows.Forms.Button
         Me.pridaj = New System.Windows.Forms.Button
         Me.uloz = New System.Windows.Forms.Button
         Me.zmaz = New System.Windows.Forms.Button
         Me.NazovTextBox = New System.Windows.Forms.TextBox
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         NazovLabel = New System.Windows.Forms.Label
         CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Titul_zaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,7 +117,7 @@ Partial Class titul_za
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -212,6 +212,13 @@ Partial Class titul_za
         Me.Titul_zaDataGridView.Size = New System.Drawing.Size(145, 67)
         Me.Titul_zaDataGridView.TabIndex = 1
         '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nazov"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Názov"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
         'koniec
         '
         Me.koniec.BackColor = System.Drawing.Color.DarkSeaGreen
@@ -259,19 +266,11 @@ Partial Class titul_za
         '
         'NazovTextBox
         '
-        Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Titul_zaBindingSource, "nazov", True))
         Me.NazovTextBox.Location = New System.Drawing.Point(342, 41)
         Me.NazovTextBox.Name = "NazovTextBox"
         Me.NazovTextBox.ReadOnly = True
         Me.NazovTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NazovTextBox.TabIndex = 9
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Názov"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'titul_za
         '
