@@ -20,20 +20,27 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pridaj.Click
-        Me.Titul_zaBindingSource.AddNew()
         Me.pridaj.Visible = False
         Me.uloz.Visible = True
         Me.NazovTextBox.ReadOnly = False
     End Sub
 
     Private Sub uloz_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles uloz.Click
-        Me.Validate()
-        Me.Titul_zaBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.TitulzaDataSet)
+        Dim nazov As String = NazovTextBox.Text
+
+        Dim con As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\spz_evidencia.accdb")
+        con.Open()
+
+        Dim com As New OleDb.OleDbCommand("INSERT INTO titul_za (nazov) VALUES ('" & nazov & "')", con)
+        com.ExecuteNonQuery()
+        con.Close()
+
+        Me.Titul_zaTableAdapter.Fill(Me.TitulzaDataSet.titul_za)
+
         Me.uloz.Visible = False
         Me.NazovTextBox.ReadOnly = True
         Me.pridaj.Visible = True
-        Me.Close()
+        Me.NazovTextBox.Text = ""
     End Sub
 
     Private Sub zmaz_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zmaz.Click
