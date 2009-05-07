@@ -54,6 +54,7 @@
     End Sub
 
     Private Sub koniecButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles koniecButton.Click
+        hlavna_aplikacia.Vseobecne_udajeTableAdapter.Fill(hlavna_aplikacia.Spz_vseobecne_udaje.vseobecne_udaje)
         Me.Close()
     End Sub
 
