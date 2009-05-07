@@ -12,7 +12,7 @@
 - pridat tlacovy vystup pre zoznam zdruzeni <br>
 - pridat tlac. vystup pre jednotlive zdruzenia (ak to je potrebne) <br>
 1.4.2009<br>
-- upravit poradove cislo v talcovej zostave tlacova forma zoznamu<br>
+<s>- upravit poradove cislo v talcovej zostave tlacova forma zoznamu<br></s>
 
 Sedlak pridal tieto veci
 
@@ -20,13 +20,13 @@ Potreboval by som v evidencii členov:
 
      -      Výber podľa:     PZ - zoznamy členov PZ
 
-                                        - kto z PZ má absolvovať kontrolné streľby v roku x    
+                                       <s> - kto z PZ má absolvovať kontrolné streľby v roku x    </s>
 
                                     Dátumu narodenia – jubilanti do Spravodaja
 
-                                    Kontrolných strelieb - kto má absolvovať v roku x <b>urobene formulare a urobena selekcia, potrebne vytvorit tlacovu formu, parameter rok natvrdo</b>
+                                    <s>Kontrolných strelieb - kto má absolvovať v roku x <b>urobene formulare a urobena selekcia, potrebne vytvorit tlacovu formu, parameter rok natvrdo</b></s>
 
-                                    Členského do – komu končí členstvo v roku x <b>UROBENY FORM KONIEC CLENSKE JE POTREBNE UROBIT TLACOVU YOSTAVU, YATIAL JE SELEKCIA IBA NA TVRDO HODENY ROK AKO CISLO 2009</b>
+                                    <s>Členského do – komu končí členstvo v roku x <b>UROBENY FORM KONIEC CLENSKE JE POTREBNE UROBIT TLACOVU YOSTAVU, YATIAL JE SELEKCIA IBA NA TVRDO HODENY ROK AKO CISLO 2009</b></s>
 
 -          Číslovanie v tlačenej forme sa zobrazuje na kartách a nie je podľa abecedy.
 
