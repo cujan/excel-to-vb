@@ -1,6 +1,6 @@
 11.2.2009 <br>
 <s>- pridat tabulku vseobecne udaje</s>         <b>hotovo</b><br>
-- osetrit problem pri ceselnikoch s ukladanim a mazanim
+<s>- osetrit problem pri ceselnikoch s ukladanim a mazanim</s>
 <br><s>-vytvorit form na upravu vseobecnych udajov</s><b>hotovo</b><br>
 - vymysliet refresh vseobecnych udajov po edite<br>
 <s>- upravit jednotlive datove gridy - grafiku </s><b>hotove</b><br>
