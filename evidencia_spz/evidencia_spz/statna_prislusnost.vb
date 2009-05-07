@@ -29,20 +29,27 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles uloz.Click
-        Me.Validate()
-        Me.Statna_prislusnostBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.Statna_prislusnostDataSet1)
+        Dim skratka As String = SkratkaTextBox.Text
+        Dim nazov As String = NazovTextBox.Text
 
+        Dim con As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\spz_evidencia.accdb")
+        con.Open()
+
+        Dim com As New OleDb.OleDbCommand("INSERT INTO statna_prislusnost (skratka, nazov) VALUES ('" & skratka & "','" & nazov & "')", con)
+        com.ExecuteNonQuery()
+        con.Close()
+
+        Me.Statna_prislusnostTableAdapter.Fill(Me.Statna_prislusnostDataSet1.statna_prislusnost)
         Me.pridaj.Visible = True
         Me.uloz.Visible = False
         Me.SkratkaTextBox.ReadOnly = True
         Me.NazovTextBox.ReadOnly = True
-        Me.Close()
+        Me.SkratkaTextBox.Text = ""
+        Me.NazovTextBox.Text = ""
 
     End Sub
 
     Private Sub pridaj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pridaj.Click
-        Me.Statna_prislusnostBindingSource.AddNew()
         Me.pridaj.Visible = False
         Me.SkratkaTextBox.ReadOnly = False
         Me.NazovTextBox.ReadOnly = False
