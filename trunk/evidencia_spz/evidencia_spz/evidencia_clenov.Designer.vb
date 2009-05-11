@@ -261,42 +261,42 @@ Partial Class evidencia_clenov
         'DataGridViewTextBoxColumn48
         '
         Me.DataGridViewTextBoxColumn48.DataPropertyName = "priezvisko"
-        Me.DataGridViewTextBoxColumn48.HeaderText = "priezvisko"
+        Me.DataGridViewTextBoxColumn48.HeaderText = "Priezvisko"
         Me.DataGridViewTextBoxColumn48.Name = "DataGridViewTextBoxColumn48"
         Me.DataGridViewTextBoxColumn48.ReadOnly = True
         '
         'DataGridViewTextBoxColumn47
         '
         Me.DataGridViewTextBoxColumn47.DataPropertyName = "meno"
-        Me.DataGridViewTextBoxColumn47.HeaderText = "meno"
+        Me.DataGridViewTextBoxColumn47.HeaderText = "Meno"
         Me.DataGridViewTextBoxColumn47.Name = "DataGridViewTextBoxColumn47"
         Me.DataGridViewTextBoxColumn47.ReadOnly = True
         '
         'DataGridViewTextBoxColumn55
         '
         Me.DataGridViewTextBoxColumn55.DataPropertyName = "titul za"
-        Me.DataGridViewTextBoxColumn55.HeaderText = "titul za"
+        Me.DataGridViewTextBoxColumn55.HeaderText = "Titul za"
         Me.DataGridViewTextBoxColumn55.Name = "DataGridViewTextBoxColumn55"
         Me.DataGridViewTextBoxColumn55.ReadOnly = True
         '
         'DataGridViewTextBoxColumn49
         '
         Me.DataGridViewTextBoxColumn49.DataPropertyName = "rodne_cislo"
-        Me.DataGridViewTextBoxColumn49.HeaderText = "rodne_cislo"
+        Me.DataGridViewTextBoxColumn49.HeaderText = "Rodné číslo"
         Me.DataGridViewTextBoxColumn49.Name = "DataGridViewTextBoxColumn49"
         Me.DataGridViewTextBoxColumn49.ReadOnly = True
         '
         'datum_narodenia1
         '
         Me.datum_narodenia1.DataPropertyName = "datum_narodenia1"
-        Me.datum_narodenia1.HeaderText = "datum_narodenia1"
+        Me.datum_narodenia1.HeaderText = "Dátum narodenia"
         Me.datum_narodenia1.Name = "datum_narodenia1"
         Me.datum_narodenia1.ReadOnly = True
         '
         'DataGridViewTextBoxColumn56
         '
         Me.DataGridViewTextBoxColumn56.DataPropertyName = "Zdruzenie"
-        Me.DataGridViewTextBoxColumn56.HeaderText = "Zdruzenie"
+        Me.DataGridViewTextBoxColumn56.HeaderText = "Združenie"
         Me.DataGridViewTextBoxColumn56.Name = "DataGridViewTextBoxColumn56"
         Me.DataGridViewTextBoxColumn56.ReadOnly = True
         '
