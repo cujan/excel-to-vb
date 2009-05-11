@@ -495,7 +495,7 @@ Partial Class detaily_clena
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.clenoviaTableAdapter = Me.ClenoviaTableAdapter
+        'Me.TableAdapterManager.clenoviaTableAdapter = Me.ClenoviaTableAdapter
         Me.TableAdapterManager.UpdateOrder = evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
 
         '
