@@ -80,7 +80,7 @@ Partial Class novy_clen
         Me.Clenske_doTextBox = New System.Windows.Forms.TextBox
         Me.Cislo_dokladu_clenskeTextBox = New System.Windows.Forms.TextBox
         Me.Skuska_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
-        Me.Miesto_skusky_z__polovnictvaTextBox = New System.Windows.Forms.TextBox
+        Me.Miesto_skusky_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
         Me.Skuska_pre_polovnych_hospodarovTextBox = New System.Windows.Forms.TextBox
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox = New System.Windows.Forms.TextBox
         Me.Vyzsia_skuska_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
@@ -97,32 +97,33 @@ Partial Class novy_clen
         Me.Button1 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
         Me.Titul_predComboBox = New System.Windows.Forms.ComboBox
+        Me.TitulBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TitulDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TitulDataSet1 = New evidencia_spz.titulDataSet1
         Me.Statna_prislusnostComboBox = New System.Windows.Forms.ComboBox
+        Me.StatnaprislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StatnaprislusnostDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Statna_prislusnostDataSet1 = New evidencia_spz.statna_prislusnostDataSet1
         Me.NarodnostComboBox = New System.Windows.Forms.ComboBox
+        Me.NarodnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.NarodnostDataSet = New evidencia_spz.narodnostDataSet
         Me.Titul_zaComboBox = New System.Windows.Forms.ComboBox
+        Me.TitulzaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TitulzaDataSet = New evidencia_spz.titulzaDataSet
         Me.Brokova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.Clen_pzComboBox = New System.Windows.Forms.ComboBox
-        Me.TitulDataSet1 = New evidencia_spz.titulDataSet1
-        Me.TitulDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TitulBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TitulTableAdapter = New evidencia_spz.titulDataSet1TableAdapters.titulTableAdapter
-        Me.TitulzaDataSet = New evidencia_spz.titulzaDataSet
-        Me.TitulzaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Titul_zaTableAdapter = New evidencia_spz.titulzaDataSetTableAdapters.titul_zaTableAdapter
-        Me.NarodnostDataSet = New evidencia_spz.narodnostDataSet
-        Me.NarodnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.NarodnostTableAdapter = New evidencia_spz.narodnostDataSetTableAdapters.narodnostTableAdapter
-        Me.Statna_prislusnostDataSet1 = New evidencia_spz.statna_prislusnostDataSet1
-        Me.StatnaprislusnostDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.StatnaprislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Statna_prislusnostTableAdapter = New evidencia_spz.statna_prislusnostDataSet1TableAdapters.statna_prislusnostTableAdapter
-        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
         Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
+        Me.TitulTableAdapter = New evidencia_spz.titulDataSet1TableAdapters.titulTableAdapter
+        Me.Titul_zaTableAdapter = New evidencia_spz.titulzaDataSetTableAdapters.titul_zaTableAdapter
+        Me.NarodnostTableAdapter = New evidencia_spz.narodnostDataSetTableAdapters.narodnostTableAdapter
+        Me.Statna_prislusnostTableAdapter = New evidencia_spz.statna_prislusnostDataSet1TableAdapters.statna_prislusnostTableAdapter
         Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Titul_predLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -162,18 +163,19 @@ Partial Class novy_clen
         Vyznamenany_kedyLabel = New System.Windows.Forms.Label
         TelefonLabel = New System.Windows.Forms.Label
         Titul_zaLabel = New System.Windows.Forms.Label
-        CType(Me.TitulDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TitulDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NarodnostDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Statna_prislusnostDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.StatnaprislusnostDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StatnaprislusnostDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Statna_prislusnostDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NarodnostDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Titul_predLabel
@@ -653,12 +655,12 @@ Partial Class novy_clen
         Me.Skuska_z_polovnictvaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Skuska_z_polovnictvaTextBox.TabIndex = 44
         '
-        'Miesto_skusky_z__polovnictvaTextBox
+        'Miesto_skusky_z_polovnictvaTextBox
         '
-        Me.Miesto_skusky_z__polovnictvaTextBox.Location = New System.Drawing.Point(481, 456)
-        Me.Miesto_skusky_z__polovnictvaTextBox.Name = "Miesto_skusky_z__polovnictvaTextBox"
-        Me.Miesto_skusky_z__polovnictvaTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Miesto_skusky_z__polovnictvaTextBox.TabIndex = 46
+        Me.Miesto_skusky_z_polovnictvaTextBox.Location = New System.Drawing.Point(481, 456)
+        Me.Miesto_skusky_z_polovnictvaTextBox.Name = "Miesto_skusky_z_polovnictvaTextBox"
+        Me.Miesto_skusky_z_polovnictvaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Miesto_skusky_z_polovnictvaTextBox.TabIndex = 46
         '
         'Skuska_pre_polovnych_hospodarovTextBox
         '
@@ -724,6 +726,7 @@ Partial Class novy_clen
         Me.Datum_narodeniaTextBox.Name = "Datum_narodeniaTextBox"
         Me.Datum_narodeniaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Datum_narodeniaTextBox.TabIndex = 78
+        Me.Datum_narodeniaTextBox.Text = "11.11.1111"
         '
         'Okres_bydliskaTextBox
         '
@@ -786,6 +789,21 @@ Partial Class novy_clen
         Me.Titul_predComboBox.TabIndex = 93
         Me.Titul_predComboBox.ValueMember = "ID"
         '
+        'TitulBindingSource
+        '
+        Me.TitulBindingSource.DataMember = "titul"
+        Me.TitulBindingSource.DataSource = Me.TitulDataSet1BindingSource
+        '
+        'TitulDataSet1BindingSource
+        '
+        Me.TitulDataSet1BindingSource.DataSource = Me.TitulDataSet1
+        Me.TitulDataSet1BindingSource.Position = 0
+        '
+        'TitulDataSet1
+        '
+        Me.TitulDataSet1.DataSetName = "titulDataSet1"
+        Me.TitulDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Statna_prislusnostComboBox
         '
         Me.Statna_prislusnostComboBox.DataSource = Me.StatnaprislusnostBindingSource
@@ -796,6 +814,21 @@ Partial Class novy_clen
         Me.Statna_prislusnostComboBox.Size = New System.Drawing.Size(41, 21)
         Me.Statna_prislusnostComboBox.TabIndex = 94
         Me.Statna_prislusnostComboBox.ValueMember = "ID"
+        '
+        'StatnaprislusnostBindingSource
+        '
+        Me.StatnaprislusnostBindingSource.DataMember = "statna_prislusnost"
+        Me.StatnaprislusnostBindingSource.DataSource = Me.StatnaprislusnostDataSet1BindingSource
+        '
+        'StatnaprislusnostDataSet1BindingSource
+        '
+        Me.StatnaprislusnostDataSet1BindingSource.DataSource = Me.Statna_prislusnostDataSet1
+        Me.StatnaprislusnostDataSet1BindingSource.Position = 0
+        '
+        'Statna_prislusnostDataSet1
+        '
+        Me.Statna_prislusnostDataSet1.DataSetName = "statna_prislusnostDataSet1"
+        Me.Statna_prislusnostDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'NarodnostComboBox
         '
@@ -808,6 +841,16 @@ Partial Class novy_clen
         Me.NarodnostComboBox.TabIndex = 95
         Me.NarodnostComboBox.ValueMember = "ID"
         '
+        'NarodnostBindingSource
+        '
+        Me.NarodnostBindingSource.DataMember = "narodnost"
+        Me.NarodnostBindingSource.DataSource = Me.NarodnostDataSet
+        '
+        'NarodnostDataSet
+        '
+        Me.NarodnostDataSet.DataSetName = "narodnostDataSet"
+        Me.NarodnostDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Titul_zaComboBox
         '
         Me.Titul_zaComboBox.DataSource = Me.TitulzaBindingSource
@@ -818,6 +861,16 @@ Partial Class novy_clen
         Me.Titul_zaComboBox.Size = New System.Drawing.Size(44, 21)
         Me.Titul_zaComboBox.TabIndex = 96
         Me.Titul_zaComboBox.ValueMember = "ID"
+        '
+        'TitulzaBindingSource
+        '
+        Me.TitulzaBindingSource.DataMember = "titul_za"
+        Me.TitulzaBindingSource.DataSource = Me.TitulzaDataSet
+        '
+        'TitulzaDataSet
+        '
+        Me.TitulzaDataSet.DataSetName = "titulzaDataSet"
+        Me.TitulzaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Brokova_zbranComboBox
         '
@@ -876,85 +929,39 @@ Partial Class novy_clen
         Me.Clen_pzComboBox.TabIndex = 1
         Me.Clen_pzComboBox.ValueMember = "ID"
         '
-        'TitulDataSet1
+        'ZdruzenieBindingSource
         '
-        Me.TitulDataSet1.DataSetName = "titulDataSet1"
-        Me.TitulDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TitulDataSet1BindingSource
-        '
-        Me.TitulDataSet1BindingSource.DataSource = Me.TitulDataSet1
-        Me.TitulDataSet1BindingSource.Position = 0
-        '
-        'TitulBindingSource
-        '
-        Me.TitulBindingSource.DataMember = "titul"
-        Me.TitulBindingSource.DataSource = Me.TitulDataSet1BindingSource
-        '
-        'TitulTableAdapter
-        '
-        Me.TitulTableAdapter.ClearBeforeFill = True
-        '
-        'TitulzaDataSet
-        '
-        Me.TitulzaDataSet.DataSetName = "titulzaDataSet"
-        Me.TitulzaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TitulzaBindingSource
-        '
-        Me.TitulzaBindingSource.DataMember = "titul_za"
-        Me.TitulzaBindingSource.DataSource = Me.TitulzaDataSet
-        '
-        'Titul_zaTableAdapter
-        '
-        Me.Titul_zaTableAdapter.ClearBeforeFill = True
-        '
-        'NarodnostDataSet
-        '
-        Me.NarodnostDataSet.DataSetName = "narodnostDataSet"
-        Me.NarodnostDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'NarodnostBindingSource
-        '
-        Me.NarodnostBindingSource.DataMember = "narodnost"
-        Me.NarodnostBindingSource.DataSource = Me.NarodnostDataSet
-        '
-        'NarodnostTableAdapter
-        '
-        Me.NarodnostTableAdapter.ClearBeforeFill = True
-        '
-        'Statna_prislusnostDataSet1
-        '
-        Me.Statna_prislusnostDataSet1.DataSetName = "statna_prislusnostDataSet1"
-        Me.Statna_prislusnostDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'StatnaprislusnostDataSet1BindingSource
-        '
-        Me.StatnaprislusnostDataSet1BindingSource.DataSource = Me.Statna_prislusnostDataSet1
-        Me.StatnaprislusnostDataSet1BindingSource.Position = 0
-        '
-        'StatnaprislusnostBindingSource
-        '
-        Me.StatnaprislusnostBindingSource.DataMember = "statna_prislusnost"
-        Me.StatnaprislusnostBindingSource.DataSource = Me.StatnaprislusnostDataSet1BindingSource
-        '
-        'Statna_prislusnostTableAdapter
-        '
-        Me.Statna_prislusnostTableAdapter.ClearBeforeFill = True
+        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
+        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSet
         '
         'ZdruzenieDataSet
         '
         Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
         Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ZdruzenieBindingSource
+        'TitulTableAdapter
         '
-        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
-        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSet
+        Me.TitulTableAdapter.ClearBeforeFill = True
+        '
+        'Titul_zaTableAdapter
+        '
+        Me.Titul_zaTableAdapter.ClearBeforeFill = True
+        '
+        'NarodnostTableAdapter
+        '
+        Me.NarodnostTableAdapter.ClearBeforeFill = True
+        '
+        'Statna_prislusnostTableAdapter
+        '
+        Me.Statna_prislusnostTableAdapter.ClearBeforeFill = True
         '
         'ZdruzenieTableAdapter
         '
         Me.ZdruzenieTableAdapter.ClearBeforeFill = True
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'novy_clen
         '
@@ -1012,7 +1019,7 @@ Partial Class novy_clen
         Me.Controls.Add(Skuska_z_polovnictvaLabel)
         Me.Controls.Add(Me.Skuska_z_polovnictvaTextBox)
         Me.Controls.Add(Miesto_skusky_z__polovnictvaLabel)
-        Me.Controls.Add(Me.Miesto_skusky_z__polovnictvaTextBox)
+        Me.Controls.Add(Me.Miesto_skusky_z_polovnictvaTextBox)
         Me.Controls.Add(Skuska_pre_polovnych_hospodarovLabel)
         Me.Controls.Add(Me.Skuska_pre_polovnych_hospodarovTextBox)
         Me.Controls.Add(Miesto_skusky_pre_polovnych_hospodarovLabel)
@@ -1047,18 +1054,19 @@ Partial Class novy_clen
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "novy_clen"
         Me.Text = "novy_clen"
-        CType(Me.TitulDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TitulDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TitulBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NarodnostDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Statna_prislusnostDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.StatnaprislusnostDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StatnaprislusnostDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Statna_prislusnostDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NarodnostDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1081,7 +1089,7 @@ Partial Class novy_clen
     Friend WithEvents Clenske_doTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Cislo_dokladu_clenskeTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Skuska_z_polovnictvaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Miesto_skusky_z__polovnictvaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Miesto_skusky_z_polovnictvaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Skuska_pre_polovnych_hospodarovTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Miesto_skusky_pre_polovnych_hospodarovTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Vyzsia_skuska_z_polovnictvaTextBox As System.Windows.Forms.TextBox
@@ -1124,4 +1132,5 @@ Partial Class novy_clen
     Friend WithEvents ZdruzenieDataSet As evidencia_spz.zdruzenieDataSet
     Friend WithEvents ZdruzenieBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ZdruzenieTableAdapter As evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

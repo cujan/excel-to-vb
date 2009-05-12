@@ -35,5 +35,18 @@
         Return True
     End Function
 
+    'kontrola priezviska
+    Public Function kontrola_priezviska(ByVal priezvisko As String, ByRef strError As String) As Boolean
+
+        'kontrola dlzky priezviska
+        If priezvisko.Length = 0 Then
+            strError = "Nezadali ste priezvisko !!!"
+            Return False
+        End If
+
+        'ak je vsetko v poriadku
+        Return True
+    End Function
+
     
 End Module

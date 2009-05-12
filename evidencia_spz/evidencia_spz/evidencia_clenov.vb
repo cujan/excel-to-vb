@@ -8,6 +8,8 @@
     Private Sub evidencia_clenov_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Prehlad_clenovDataSet.clenovia' table. You can move, or remove it, as needed.
         Me.ClenoviaTableAdapter.Fill(Me.Prehlad_clenovDataSet.clenovia)
+        'TODO: This line of code loads data into the 'Prehlad_clenovDataSet.clenovia' table. You can move, or remove it, as needed.
+        Me.ClenoviaTableAdapter.Fill(Me.Prehlad_clenovDataSet.clenovia)
         'TODO: This line of code loads data into the 'Pohlad_zdruzenieDataSet1.zdruzenie' table. You can move, or remove it, as needed.
 
         'TODO: This line of code loads data into the 'Prehlad_clenovDataSet.clenovia' table. You can move, or remove it, as needed.
@@ -126,12 +128,14 @@
 
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         'podmienka na zmazanie zaznamu
-        If MsgBox("Naozaj chcete zmazat zaznam?", MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
-            Me.ClenoviaBindingSource.RemoveCurrent()
-            Me.Validate()
-            Me.ClenoviaBindingSource.EndEdit()
-            Me.TableAdapterManager.UpdateAll(Me.Prehlad_clenovDataSet)
-        End If
+        'If MsgBox("Naozaj chcete zmazat zaznam?", MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
+        'Me.ClenoviaBindingSource.RemoveCurrent()
+        'Me.Validate()
+        'Me.ClenoviaBindingSource.EndEdit()
+        'Me.TableAdapterManager.UpdateAll(Me.Prehlad_clenovDataSet)
+
+        'End If
+
 
     End Sub
 
@@ -146,6 +150,10 @@
     End Sub
 
     Private Sub Label3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub BindingNavigatorDeleteItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 End Class
