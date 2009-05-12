@@ -48,5 +48,17 @@
         Return True
     End Function
 
-    
+    'kontrola nazvu zdruzenia
+    Public Function kontrola_nazvu_zdruzenia(ByVal nazov_zdruzenia As String, ByRef strError As String) As Boolean
+
+        'kontrola dlzky priezviska
+        If nazov_zdruzenia.Length = 0 Then
+            strError = "Nezadali ste nazov zdruzenia !!!"
+            Return False
+        End If
+
+        'ak je vsetko v poriadku
+        Return True
+    End Function
+
 End Module
