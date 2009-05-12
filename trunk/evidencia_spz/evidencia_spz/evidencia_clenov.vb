@@ -133,9 +133,8 @@
         'Me.Validate()
         'Me.ClenoviaBindingSource.EndEdit()
         'Me.TableAdapterManager.UpdateAll(Me.Prehlad_clenovDataSet)
-
         'End If
-
+       
 
     End Sub
 
