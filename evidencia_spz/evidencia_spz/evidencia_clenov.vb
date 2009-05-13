@@ -85,13 +85,9 @@
 
     End Sub
 
-    Private Sub ClenoviaDataGridView_CellContentDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
+    
 
-    End Sub
-
-    Private Sub ClenoviaDataGridView_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
-        
-    End Sub
+    
 
     Private Sub BindingNavigatorPositionItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
@@ -108,19 +104,19 @@
 
     End Sub
 
-    Private Sub ClenoviaDataGridView_CellDoubleClick1(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
-        Dim aktualna_pozicia As Integer = Me.ClenoviaBindingSource.Position + 1
+    'Private Sub ClenoviaDataGridView_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
+    'Dim aktualna_pozicia As Integer = Me.ClenoviaBindingSource.Position + 1
 
 
 
-        Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "id", True))
-        Label2.Text = Label1.Text
-        Label1.DataBindings.Clear()
+    '   Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "id", True))
+    '  Label2.Text = Label1.Text
+    ' Label1.DataBindings.Clear()
+    '
+    '   detaily_clena.Show()
+    '  detaily_clena.BringToFront()
 
-        detaily_clena.Show()
-        detaily_clena.BringToFront()
-
-    End Sub
+    'End Sub
 
     Private Sub BindingNavigatorDeleteItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
@@ -175,10 +171,16 @@
 
     End Sub
 
-    
 
-   
+
+
     Private Sub ClenoviaDataGridView_CellContentClick_2(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ClenoviaDataGridView.CellContentClick
 
+    End Sub
+
+    Private Sub ClenoviaDataGridView_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ClenoviaDataGridView.CellDoubleClick
+
+        detaily_clena.Show()
+        detaily_clena.BringToFront()
     End Sub
 End Class

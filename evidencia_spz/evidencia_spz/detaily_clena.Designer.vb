@@ -57,26 +57,14 @@ Partial Class detaily_clena
         Dim Label2 As System.Windows.Forms.Label
         Dim Label3 As System.Windows.Forms.Label
         Dim Label4 As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(detaily_clena))
         Me.Button1 = New System.Windows.Forms.Button
         Me.Prehlad_clenovDataSet = New evidencia_spz.prehlad_clenovDataSet
         Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClenoviaTableAdapter = New evidencia_spz.prehlad_clenovDataSetTableAdapters.clenoviaTableAdapter
         Me.TableAdapterManager = New evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager
-        Me.ClenoviaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.ClenoviaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.Titul_predTextBox = New System.Windows.Forms.TextBox
+        Me.ClenoviaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DetailClenaDataSet = New evidencia_spz.detailClenaDataSet
         Me.MenoTextBox = New System.Windows.Forms.TextBox
         Me.PriezviskoTextBox = New System.Windows.Forms.TextBox
         Me.Rodne_cisloTextBox = New System.Windows.Forms.TextBox
@@ -121,6 +109,8 @@ Partial Class detaily_clena
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.Label5 = New System.Windows.Forms.Label
+        Me.ClenoviaTableAdapter1 = New evidencia_spz.detailClenaDataSetTableAdapters.clenoviaTableAdapter
+        Me.TableAdapterManager1 = New evidencia_spz.detailClenaDataSetTableAdapters.TableAdapterManager
         Rodne_cisloLabel = New System.Windows.Forms.Label
         Miesto_narodeniaLabel = New System.Windows.Forms.Label
         Okres_narodeniaLabel = New System.Windows.Forms.Label
@@ -157,8 +147,8 @@ Partial Class detaily_clena
         Label4 = New System.Windows.Forms.Label
         CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ClenoviaBindingNavigator.SuspendLayout()
+        CType(Me.ClenoviaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DetailClenaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Rodne_cisloLabel
@@ -495,134 +485,31 @@ Partial Class detaily_clena
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        'Me.TableAdapterManager.clenoviaTableAdapter = Me.ClenoviaTableAdapter
+        Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.UpdateOrder = evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-
-        '
-        'ClenoviaBindingNavigator
-        '
-        Me.ClenoviaBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.ClenoviaBindingNavigator.BindingSource = Me.ClenoviaBindingSource
-        Me.ClenoviaBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.ClenoviaBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.ClenoviaBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ClenoviaBindingNavigatorSaveItem})
-        Me.ClenoviaBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.ClenoviaBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.ClenoviaBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.ClenoviaBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.ClenoviaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.ClenoviaBindingNavigator.Name = "ClenoviaBindingNavigator"
-        Me.ClenoviaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(782, 25)
-        Me.ClenoviaBindingNavigator.TabIndex = 2
-        Me.ClenoviaBindingNavigator.Text = "BindingNavigator1"
-        Me.ClenoviaBindingNavigator.Visible = False
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'ClenoviaBindingNavigatorSaveItem
-        '
-        Me.ClenoviaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ClenoviaBindingNavigatorSaveItem.Image = CType(resources.GetObject("ClenoviaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.ClenoviaBindingNavigatorSaveItem.Name = "ClenoviaBindingNavigatorSaveItem"
-        Me.ClenoviaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.ClenoviaBindingNavigatorSaveItem.Text = "Save Data"
         '
         'Titul_predTextBox
         '
-        Me.Titul_predTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "titul_pred", True))
+        Me.Titul_predTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "titul_pred", True))
         Me.Titul_predTextBox.Location = New System.Drawing.Point(126, 42)
         Me.Titul_predTextBox.Name = "Titul_predTextBox"
         Me.Titul_predTextBox.ReadOnly = True
         Me.Titul_predTextBox.Size = New System.Drawing.Size(59, 20)
         Me.Titul_predTextBox.TabIndex = 6
         '
+        'ClenoviaBindingSource1
+        '
+        Me.ClenoviaBindingSource1.DataMember = "clenovia"
+        Me.ClenoviaBindingSource1.DataSource = Me.DetailClenaDataSet
+        '
+        'DetailClenaDataSet
+        '
+        Me.DetailClenaDataSet.DataSetName = "detailClenaDataSet"
+        Me.DetailClenaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'MenoTextBox
         '
-        Me.MenoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "meno", True))
+        Me.MenoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "meno", True))
         Me.MenoTextBox.Location = New System.Drawing.Point(191, 42)
         Me.MenoTextBox.Name = "MenoTextBox"
         Me.MenoTextBox.ReadOnly = True
@@ -631,7 +518,7 @@ Partial Class detaily_clena
         '
         'PriezviskoTextBox
         '
-        Me.PriezviskoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "priezvisko", True))
+        Me.PriezviskoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "priezvisko", True))
         Me.PriezviskoTextBox.Location = New System.Drawing.Point(297, 42)
         Me.PriezviskoTextBox.Name = "PriezviskoTextBox"
         Me.PriezviskoTextBox.ReadOnly = True
@@ -640,7 +527,7 @@ Partial Class detaily_clena
         '
         'Rodne_cisloTextBox
         '
-        Me.Rodne_cisloTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "rodne_cislo", True))
+        Me.Rodne_cisloTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "rodne_cislo", True))
         Me.Rodne_cisloTextBox.Location = New System.Drawing.Point(367, 68)
         Me.Rodne_cisloTextBox.Name = "Rodne_cisloTextBox"
         Me.Rodne_cisloTextBox.ReadOnly = True
@@ -649,7 +536,7 @@ Partial Class detaily_clena
         '
         'Miesto_narodeniaTextBox
         '
-        Me.Miesto_narodeniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "miesto_narodenia", True))
+        Me.Miesto_narodeniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "miesto_narodenia", True))
         Me.Miesto_narodeniaTextBox.Location = New System.Drawing.Point(191, 98)
         Me.Miesto_narodeniaTextBox.Name = "Miesto_narodeniaTextBox"
         Me.Miesto_narodeniaTextBox.ReadOnly = True
@@ -658,7 +545,7 @@ Partial Class detaily_clena
         '
         'Okres_narodeniaTextBox
         '
-        Me.Okres_narodeniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "okres_narodenia", True))
+        Me.Okres_narodeniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "okres_narodenia", True))
         Me.Okres_narodeniaTextBox.Location = New System.Drawing.Point(367, 94)
         Me.Okres_narodeniaTextBox.Name = "Okres_narodeniaTextBox"
         Me.Okres_narodeniaTextBox.ReadOnly = True
@@ -667,7 +554,7 @@ Partial Class detaily_clena
         '
         'BydliskoTextBox
         '
-        Me.BydliskoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "bydlisko", True))
+        Me.BydliskoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "bydlisko", True))
         Me.BydliskoTextBox.Location = New System.Drawing.Point(191, 177)
         Me.BydliskoTextBox.Name = "BydliskoTextBox"
         Me.BydliskoTextBox.ReadOnly = True
@@ -676,7 +563,7 @@ Partial Class detaily_clena
         '
         'PscTextBox
         '
-        Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "psc", True))
+        Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "psc", True))
         Me.PscTextBox.Location = New System.Drawing.Point(191, 203)
         Me.PscTextBox.Name = "PscTextBox"
         Me.PscTextBox.ReadOnly = True
@@ -685,7 +572,7 @@ Partial Class detaily_clena
         '
         'Statna_prislusnostTextBox
         '
-        Me.Statna_prislusnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "statna_prislusnost", True))
+        Me.Statna_prislusnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "statna_prislusnost", True))
         Me.Statna_prislusnostTextBox.Location = New System.Drawing.Point(191, 125)
         Me.Statna_prislusnostTextBox.Name = "Statna_prislusnostTextBox"
         Me.Statna_prislusnostTextBox.ReadOnly = True
@@ -694,7 +581,7 @@ Partial Class detaily_clena
         '
         'Cislo_opTextBox
         '
-        Me.Cislo_opTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "cislo_op", True))
+        Me.Cislo_opTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "cislo_op", True))
         Me.Cislo_opTextBox.Location = New System.Drawing.Point(191, 151)
         Me.Cislo_opTextBox.Name = "Cislo_opTextBox"
         Me.Cislo_opTextBox.ReadOnly = True
@@ -703,7 +590,7 @@ Partial Class detaily_clena
         '
         'Datum_vydania_opTextBox
         '
-        Me.Datum_vydania_opTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "datum_vydania_op", True))
+        Me.Datum_vydania_opTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "datum_vydania_op", True))
         Me.Datum_vydania_opTextBox.Location = New System.Drawing.Point(367, 151)
         Me.Datum_vydania_opTextBox.Name = "Datum_vydania_opTextBox"
         Me.Datum_vydania_opTextBox.ReadOnly = True
@@ -712,7 +599,7 @@ Partial Class detaily_clena
         '
         'Cislo_plTextBox
         '
-        Me.Cislo_plTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "cislo_pl", True))
+        Me.Cislo_plTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "cislo_pl", True))
         Me.Cislo_plTextBox.Location = New System.Drawing.Point(189, 296)
         Me.Cislo_plTextBox.Name = "Cislo_plTextBox"
         Me.Cislo_plTextBox.ReadOnly = True
@@ -721,7 +608,7 @@ Partial Class detaily_clena
         '
         'Datum_vydania_plTextBox
         '
-        Me.Datum_vydania_plTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "datum_vydania_pl", True))
+        Me.Datum_vydania_plTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "datum_vydania_pl", True))
         Me.Datum_vydania_plTextBox.Location = New System.Drawing.Point(365, 296)
         Me.Datum_vydania_plTextBox.Name = "Datum_vydania_plTextBox"
         Me.Datum_vydania_plTextBox.ReadOnly = True
@@ -730,7 +617,7 @@ Partial Class detaily_clena
         '
         'Cislo_zpTextBox
         '
-        Me.Cislo_zpTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "cislo_zp", True))
+        Me.Cislo_zpTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "cislo_zp", True))
         Me.Cislo_zpTextBox.Location = New System.Drawing.Point(189, 322)
         Me.Cislo_zpTextBox.Name = "Cislo_zpTextBox"
         Me.Cislo_zpTextBox.ReadOnly = True
@@ -739,7 +626,7 @@ Partial Class detaily_clena
         '
         'Datum_vydania_zpTextBox
         '
-        Me.Datum_vydania_zpTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "datum_vydania_zp", True))
+        Me.Datum_vydania_zpTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "datum_vydania_zp", True))
         Me.Datum_vydania_zpTextBox.Location = New System.Drawing.Point(365, 322)
         Me.Datum_vydania_zpTextBox.Name = "Datum_vydania_zpTextBox"
         Me.Datum_vydania_zpTextBox.ReadOnly = True
@@ -748,7 +635,7 @@ Partial Class detaily_clena
         '
         'Cislo_clenskeho_preukazu_spzTextBox
         '
-        Me.Cislo_clenskeho_preukazu_spzTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "cislo_clenskeho_preukazu_spz", True))
+        Me.Cislo_clenskeho_preukazu_spzTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "cislo_clenskeho_preukazu_spz", True))
         Me.Cislo_clenskeho_preukazu_spzTextBox.Location = New System.Drawing.Point(189, 348)
         Me.Cislo_clenskeho_preukazu_spzTextBox.Name = "Cislo_clenskeho_preukazu_spzTextBox"
         Me.Cislo_clenskeho_preukazu_spzTextBox.ReadOnly = True
@@ -757,7 +644,7 @@ Partial Class detaily_clena
         '
         'Clen_spz_odTextBox
         '
-        Me.Clen_spz_odTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "clen_spz_od", True))
+        Me.Clen_spz_odTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "clen_spz_od", True))
         Me.Clen_spz_odTextBox.Location = New System.Drawing.Point(365, 348)
         Me.Clen_spz_odTextBox.Name = "Clen_spz_odTextBox"
         Me.Clen_spz_odTextBox.ReadOnly = True
@@ -766,7 +653,7 @@ Partial Class detaily_clena
         '
         'Clenske_doTextBox
         '
-        Me.Clenske_doTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "clenske_do", True))
+        Me.Clenske_doTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "clenske_do", True))
         Me.Clenske_doTextBox.Location = New System.Drawing.Point(365, 377)
         Me.Clenske_doTextBox.Name = "Clenske_doTextBox"
         Me.Clenske_doTextBox.ReadOnly = True
@@ -775,7 +662,7 @@ Partial Class detaily_clena
         '
         'Cislo_dokladu_clenskeTextBox
         '
-        Me.Cislo_dokladu_clenskeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "cislo_dokladu_clenske", True))
+        Me.Cislo_dokladu_clenskeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "cislo_dokladu_clenske", True))
         Me.Cislo_dokladu_clenskeTextBox.Location = New System.Drawing.Point(189, 374)
         Me.Cislo_dokladu_clenskeTextBox.Name = "Cislo_dokladu_clenskeTextBox"
         Me.Cislo_dokladu_clenskeTextBox.ReadOnly = True
@@ -784,7 +671,7 @@ Partial Class detaily_clena
         '
         'Clen_pzTextBox
         '
-        Me.Clen_pzTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "clen_pz", True))
+        Me.Clen_pzTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "clen_pz", True))
         Me.Clen_pzTextBox.Location = New System.Drawing.Point(189, 400)
         Me.Clen_pzTextBox.Name = "Clen_pzTextBox"
         Me.Clen_pzTextBox.ReadOnly = True
@@ -793,7 +680,7 @@ Partial Class detaily_clena
         '
         'Skuska_z_polovnictvaTextBox
         '
-        Me.Skuska_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "skuska_z_polovnictva", True))
+        Me.Skuska_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "skuska_z_polovnictva", True))
         Me.Skuska_z_polovnictvaTextBox.Location = New System.Drawing.Point(189, 451)
         Me.Skuska_z_polovnictvaTextBox.Name = "Skuska_z_polovnictvaTextBox"
         Me.Skuska_z_polovnictvaTextBox.ReadOnly = True
@@ -802,7 +689,7 @@ Partial Class detaily_clena
         '
         'Miesto_skusky_z__polovnictvaTextBox
         '
-        Me.Miesto_skusky_z__polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "miesto_skusky_z _polovnictva", True))
+        Me.Miesto_skusky_z__polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "miesto_skusky_z_polovnictva", True))
         Me.Miesto_skusky_z__polovnictvaTextBox.Location = New System.Drawing.Point(365, 451)
         Me.Miesto_skusky_z__polovnictvaTextBox.Name = "Miesto_skusky_z__polovnictvaTextBox"
         Me.Miesto_skusky_z__polovnictvaTextBox.ReadOnly = True
@@ -811,7 +698,7 @@ Partial Class detaily_clena
         '
         'Skuska_pre_polovnych_hospodarovTextBox
         '
-        Me.Skuska_pre_polovnych_hospodarovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "skuska_pre_polovnych_hospodarov", True))
+        Me.Skuska_pre_polovnych_hospodarovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "skuska_pre_polovnych_hospodarov", True))
         Me.Skuska_pre_polovnych_hospodarovTextBox.Location = New System.Drawing.Point(189, 477)
         Me.Skuska_pre_polovnych_hospodarovTextBox.Name = "Skuska_pre_polovnych_hospodarovTextBox"
         Me.Skuska_pre_polovnych_hospodarovTextBox.ReadOnly = True
@@ -820,7 +707,7 @@ Partial Class detaily_clena
         '
         'Miesto_skusky_pre_polovnych_hospodarovTextBox
         '
-        Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "miesto_skusky_pre_polovnych_hospodarov", True))
+        Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "miesto_skusky_pre_polovnych_hospodarov", True))
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.Location = New System.Drawing.Point(365, 477)
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.Name = "Miesto_skusky_pre_polovnych_hospodarovTextBox"
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.ReadOnly = True
@@ -829,7 +716,7 @@ Partial Class detaily_clena
         '
         'Vyzsia_skuska_z_polovnictvaTextBox
         '
-        Me.Vyzsia_skuska_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "vyzsia_skuska_z_polovnictva", True))
+        Me.Vyzsia_skuska_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "vyzsia_skuska_z_polovnictva", True))
         Me.Vyzsia_skuska_z_polovnictvaTextBox.Location = New System.Drawing.Point(189, 503)
         Me.Vyzsia_skuska_z_polovnictvaTextBox.Name = "Vyzsia_skuska_z_polovnictvaTextBox"
         Me.Vyzsia_skuska_z_polovnictvaTextBox.ReadOnly = True
@@ -838,7 +725,7 @@ Partial Class detaily_clena
         '
         'Miesto_vyzsia_skuska_z_polovnictvaTextBox
         '
-        Me.Miesto_vyzsia_skuska_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "miesto_vyzsia_skuska_z_polovnictva", True))
+        Me.Miesto_vyzsia_skuska_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "miesto_vyzsia_skuska_z_polovnictva", True))
         Me.Miesto_vyzsia_skuska_z_polovnictvaTextBox.Location = New System.Drawing.Point(365, 503)
         Me.Miesto_vyzsia_skuska_z_polovnictvaTextBox.Name = "Miesto_vyzsia_skuska_z_polovnictvaTextBox"
         Me.Miesto_vyzsia_skuska_z_polovnictvaTextBox.ReadOnly = True
@@ -847,7 +734,7 @@ Partial Class detaily_clena
         '
         'Brokova_zbranTextBox
         '
-        Me.Brokova_zbranTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "brokova_zbran", True))
+        Me.Brokova_zbranTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "brokova_zbran", True))
         Me.Brokova_zbranTextBox.Location = New System.Drawing.Point(189, 528)
         Me.Brokova_zbranTextBox.Name = "Brokova_zbranTextBox"
         Me.Brokova_zbranTextBox.ReadOnly = True
@@ -856,7 +743,7 @@ Partial Class detaily_clena
         '
         'Kontrolne_strelby_brokTextBox
         '
-        Me.Kontrolne_strelby_brokTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "kontrolne_strelby_brok", True))
+        Me.Kontrolne_strelby_brokTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "kontrolne_strelby_brok", True))
         Me.Kontrolne_strelby_brokTextBox.Location = New System.Drawing.Point(365, 528)
         Me.Kontrolne_strelby_brokTextBox.Name = "Kontrolne_strelby_brokTextBox"
         Me.Kontrolne_strelby_brokTextBox.ReadOnly = True
@@ -865,7 +752,7 @@ Partial Class detaily_clena
         '
         'Gulova_zbranTextBox
         '
-        Me.Gulova_zbranTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "gulova_zbran", True))
+        Me.Gulova_zbranTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "gulova_zbran", True))
         Me.Gulova_zbranTextBox.Location = New System.Drawing.Point(189, 554)
         Me.Gulova_zbranTextBox.Name = "Gulova_zbranTextBox"
         Me.Gulova_zbranTextBox.ReadOnly = True
@@ -874,7 +761,7 @@ Partial Class detaily_clena
         '
         'Kontrolne_strelby_gulova_zbranTextBox
         '
-        Me.Kontrolne_strelby_gulova_zbranTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "kontrolne_strelby_gulova_zbran", True))
+        Me.Kontrolne_strelby_gulova_zbranTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "kontrolne_strelby_gulova_zbran", True))
         Me.Kontrolne_strelby_gulova_zbranTextBox.Location = New System.Drawing.Point(366, 554)
         Me.Kontrolne_strelby_gulova_zbranTextBox.Name = "Kontrolne_strelby_gulova_zbranTextBox"
         Me.Kontrolne_strelby_gulova_zbranTextBox.ReadOnly = True
@@ -883,7 +770,7 @@ Partial Class detaily_clena
         '
         'Udelene_trestyTextBox
         '
-        Me.Udelene_trestyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "udelene_tresty", True))
+        Me.Udelene_trestyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "udelene_tresty", True))
         Me.Udelene_trestyTextBox.Location = New System.Drawing.Point(187, 631)
         Me.Udelene_trestyTextBox.Multiline = True
         Me.Udelene_trestyTextBox.Name = "Udelene_trestyTextBox"
@@ -893,7 +780,7 @@ Partial Class detaily_clena
         '
         'PoznamkyTextBox
         '
-        Me.PoznamkyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "poznamky", True))
+        Me.PoznamkyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "poznamky", True))
         Me.PoznamkyTextBox.Location = New System.Drawing.Point(189, 689)
         Me.PoznamkyTextBox.Multiline = True
         Me.PoznamkyTextBox.Name = "PoznamkyTextBox"
@@ -903,7 +790,7 @@ Partial Class detaily_clena
         '
         'Datum_narodeniaTextBox
         '
-        Me.Datum_narodeniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "datum_narodenia", True))
+        Me.Datum_narodeniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "datum_narodenia", True))
         Me.Datum_narodeniaTextBox.Location = New System.Drawing.Point(191, 72)
         Me.Datum_narodeniaTextBox.Name = "Datum_narodeniaTextBox"
         Me.Datum_narodeniaTextBox.ReadOnly = True
@@ -912,7 +799,7 @@ Partial Class detaily_clena
         '
         'NarodnostTextBox
         '
-        Me.NarodnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "narodnost", True))
+        Me.NarodnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "narodnost", True))
         Me.NarodnostTextBox.Location = New System.Drawing.Point(367, 125)
         Me.NarodnostTextBox.Name = "NarodnostTextBox"
         Me.NarodnostTextBox.ReadOnly = True
@@ -921,7 +808,7 @@ Partial Class detaily_clena
         '
         'Okres_bydliskaTextBox
         '
-        Me.Okres_bydliskaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "okres_bydliska", True))
+        Me.Okres_bydliskaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "okres_bydliska", True))
         Me.Okres_bydliskaTextBox.Location = New System.Drawing.Point(367, 203)
         Me.Okres_bydliskaTextBox.Name = "Okres_bydliskaTextBox"
         Me.Okres_bydliskaTextBox.ReadOnly = True
@@ -930,7 +817,7 @@ Partial Class detaily_clena
         '
         'Najv_vyznamenanieTextBox
         '
-        Me.Najv_vyznamenanieTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "najv_vyznamenanie", True))
+        Me.Najv_vyznamenanieTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "najv_vyznamenanie", True))
         Me.Najv_vyznamenanieTextBox.Location = New System.Drawing.Point(187, 605)
         Me.Najv_vyznamenanieTextBox.Name = "Najv_vyznamenanieTextBox"
         Me.Najv_vyznamenanieTextBox.ReadOnly = True
@@ -939,7 +826,7 @@ Partial Class detaily_clena
         '
         'Vyznamenany_kedyTextBox
         '
-        Me.Vyznamenany_kedyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "vyznamenany_kedy", True))
+        Me.Vyznamenany_kedyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "vyznamenany_kedy", True))
         Me.Vyznamenany_kedyTextBox.Location = New System.Drawing.Point(363, 605)
         Me.Vyznamenany_kedyTextBox.Name = "Vyznamenany_kedyTextBox"
         Me.Vyznamenany_kedyTextBox.ReadOnly = True
@@ -948,7 +835,7 @@ Partial Class detaily_clena
         '
         'TelefonTextBox
         '
-        Me.TelefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "telefon", True))
+        Me.TelefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "telefon", True))
         Me.TelefonTextBox.Location = New System.Drawing.Point(191, 229)
         Me.TelefonTextBox.Name = "TelefonTextBox"
         Me.TelefonTextBox.ReadOnly = True
@@ -957,7 +844,7 @@ Partial Class detaily_clena
         '
         'Titul_zaTextBox
         '
-        Me.Titul_zaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "titul_za", True))
+        Me.Titul_zaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "titul_za", True))
         Me.Titul_zaTextBox.Location = New System.Drawing.Point(458, 42)
         Me.Titul_zaTextBox.Name = "Titul_zaTextBox"
         Me.Titul_zaTextBox.ReadOnly = True
@@ -993,7 +880,7 @@ Partial Class detaily_clena
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(782, 778)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(825, 778)
         Me.ShapeContainer1.TabIndex = 99
         Me.ShapeContainer1.TabStop = False
         '
@@ -1024,13 +911,23 @@ Partial Class detaily_clena
         Me.Label5.TabIndex = 100
         Me.Label5.Text = "Psč:"
         '
+        'ClenoviaTableAdapter1
+        '
+        Me.ClenoviaTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.clenoviaTableAdapter = Me.ClenoviaTableAdapter1
+        Me.TableAdapterManager1.UpdateOrder = evidencia_spz.detailClenaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'detaily_clena
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(782, 778)
+        Me.ClientSize = New System.Drawing.Size(825, 778)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.ulozButton)
         Me.Controls.Add(Me.upravbutton)
@@ -1107,7 +1004,6 @@ Partial Class detaily_clena
         Me.Controls.Add(TelefonLabel)
         Me.Controls.Add(Me.TelefonTextBox)
         Me.Controls.Add(Me.Titul_zaTextBox)
-        Me.Controls.Add(Me.ClenoviaBindingNavigator)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -1115,9 +1011,8 @@ Partial Class detaily_clena
         Me.Text = "Detaily člena"
         CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ClenoviaBindingNavigator.ResumeLayout(False)
-        Me.ClenoviaBindingNavigator.PerformLayout()
+        CType(Me.ClenoviaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DetailClenaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1127,19 +1022,6 @@ Partial Class detaily_clena
     Friend WithEvents ClenoviaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ClenoviaTableAdapter As evidencia_spz.prehlad_clenovDataSetTableAdapters.clenoviaTableAdapter
     Friend WithEvents TableAdapterManager As evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents ClenoviaBindingNavigator As System.Windows.Forms.BindingNavigator
-    Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents BindingNavigatorDeleteItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMoveFirstItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As System.Windows.Forms.ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents BindingNavigatorMoveNextItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ClenoviaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents Titul_predTextBox As System.Windows.Forms.TextBox
     Friend WithEvents MenoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents PriezviskoTextBox As System.Windows.Forms.TextBox
@@ -1185,4 +1067,8 @@ Partial Class detaily_clena
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents DetailClenaDataSet As evidencia_spz.detailClenaDataSet
+    Friend WithEvents ClenoviaBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents ClenoviaTableAdapter1 As evidencia_spz.detailClenaDataSetTableAdapters.clenoviaTableAdapter
+    Friend WithEvents TableAdapterManager1 As evidencia_spz.detailClenaDataSetTableAdapters.TableAdapterManager
 End Class
