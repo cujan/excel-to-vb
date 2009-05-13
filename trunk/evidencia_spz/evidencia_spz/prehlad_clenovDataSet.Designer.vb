@@ -276,8 +276,6 @@ Partial Public Class prehlad_clenovDataSet
         
         Private columndatum_narodenia As Global.System.Data.DataColumn
         
-        Private columndatum_narodenia1 As Global.System.Data.DataColumn
-        
         Private columnTitul_pred As Global.System.Data.DataColumn
         
         Private columntitul_za As Global.System.Data.DataColumn
@@ -352,13 +350,6 @@ Partial Public Class prehlad_clenovDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property datum_narodenia1Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columndatum_narodenia1
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public ReadOnly Property Titul_predColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnTitul_pred
@@ -408,9 +399,9 @@ Partial Public Class prehlad_clenovDataSet
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overloads Function AddclenoviaRow(ByVal meno As String, ByVal priezvisko As String, ByVal rodne_cislo As String, ByVal datum_narodenia As String, ByVal datum_narodenia1 As Date, ByVal Titul_pred As String, ByVal titul_za As String, ByVal Zdruzenie As String) As clenoviaRow
+        Public Overloads Function AddclenoviaRow(ByVal meno As String, ByVal priezvisko As String, ByVal rodne_cislo As String, ByVal datum_narodenia As String, ByVal Titul_pred As String, ByVal titul_za As String, ByVal Zdruzenie As String) As clenoviaRow
             Dim rowclenoviaRow As clenoviaRow = CType(Me.NewRow,clenoviaRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, meno, priezvisko, rodne_cislo, datum_narodenia, datum_narodenia1, Titul_pred, titul_za, Zdruzenie}
+            Dim columnValuesArray() As Object = New Object() {Nothing, meno, priezvisko, rodne_cislo, datum_narodenia, Titul_pred, titul_za, Zdruzenie}
             rowclenoviaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowclenoviaRow)
             Return rowclenoviaRow
@@ -440,7 +431,6 @@ Partial Public Class prehlad_clenovDataSet
             Me.columnpriezvisko = MyBase.Columns("priezvisko")
             Me.columnrodne_cislo = MyBase.Columns("rodne_cislo")
             Me.columndatum_narodenia = MyBase.Columns("datum_narodenia")
-            Me.columndatum_narodenia1 = MyBase.Columns("datum_narodenia1")
             Me.columnTitul_pred = MyBase.Columns("Titul pred")
             Me.columntitul_za = MyBase.Columns("titul za")
             Me.columnZdruzenie = MyBase.Columns("Zdruzenie")
@@ -458,8 +448,6 @@ Partial Public Class prehlad_clenovDataSet
             MyBase.Columns.Add(Me.columnrodne_cislo)
             Me.columndatum_narodenia = New Global.System.Data.DataColumn("datum_narodenia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndatum_narodenia)
-            Me.columndatum_narodenia1 = New Global.System.Data.DataColumn("datum_narodenia1", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndatum_narodenia1)
             Me.columnTitul_pred = New Global.System.Data.DataColumn("Titul pred", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTitul_pred)
             Me.columntitul_za = New Global.System.Data.DataColumn("titul za", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -476,7 +464,6 @@ Partial Public Class prehlad_clenovDataSet
             Me.columnpriezvisko.MaxLength = 255
             Me.columnrodne_cislo.MaxLength = 255
             Me.columndatum_narodenia.MaxLength = 255
-            Me.columndatum_narodenia1.Caption = "datum_narodenia"
             Me.columnTitul_pred.MaxLength = 255
             Me.columntitul_za.MaxLength = 255
             Me.columnZdruzenie.MaxLength = 255
@@ -682,20 +669,6 @@ Partial Public Class prehlad_clenovDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property datum_narodenia1() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableclenovia.datum_narodenia1Column),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'datum_narodenia1' in table 'clenovia' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableclenovia.datum_narodenia1Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Property Titul_pred() As String
             Get
                 Try 
@@ -775,16 +748,6 @@ Partial Public Class prehlad_clenovDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub Setdatum_narodeniaNull()
             Me(Me.tableclenovia.datum_narodeniaColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function Isdatum_narodenia1Null() As Boolean
-            Return Me.IsNull(Me.tableclenovia.datum_narodenia1Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub Setdatum_narodenia1Null()
-            Me(Me.tableclenovia.datum_narodenia1Column) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -979,10 +942,10 @@ Namespace prehlad_clenovDataSetTableAdapters
             tableMapping.ColumnMappings.Add("meno", "meno")
             tableMapping.ColumnMappings.Add("priezvisko", "priezvisko")
             tableMapping.ColumnMappings.Add("rodne_cislo", "rodne_cislo")
-            tableMapping.ColumnMappings.Add("datum_narodenia", "datum_narodenia1")
             tableMapping.ColumnMappings.Add("Titul pred", "Titul pred")
             tableMapping.ColumnMappings.Add("titul za", "titul za")
             tableMapping.ColumnMappings.Add("Zdruzenie", "Zdruzenie")
+            tableMapping.ColumnMappings.Add("datum_narodenia", "datum_narodenia")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -997,9 +960,9 @@ Namespace prehlad_clenovDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT     clenovia.id, clenovia.meno, clenovia.priezvisko, clenovia.datum_narode"& _ 
-                "nia, clenovia.rodne_cislo, titul.skratka AS [Titul pred], "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                    "& _ 
-                "  titul_za.skratka AS [titul za], zdruzenie.nazov AS Zdruzenie"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         ((("& _ 
+            Me._commandCollection(0).CommandText = "SELECT     clenovia.id, clenovia.meno, clenovia.priezvisko, clenovia.rodne_cislo,"& _ 
+                " titul.skratka AS [Titul pred], titul_za.skratka AS [titul za], "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
+                "        zdruzenie.nazov AS Zdruzenie, clenovia.datum_narodenia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         ((("& _ 
                 "clenovia LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      zdruzenie ON clenovia.clen_pz_id"& _ 
                 " = zdruzenie.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      titul_za ON clenovia.tit"& _ 
                 "ul_za = titul_za.ID) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      titul ON clenovia.ti"& _ 

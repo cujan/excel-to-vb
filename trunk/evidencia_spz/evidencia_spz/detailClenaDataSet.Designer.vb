@@ -276,8 +276,6 @@ Partial Public Class detailClenaDataSet
         
         Private columntitul_za As Global.System.Data.DataColumn
         
-        Private columndatum_narodenia As Global.System.Data.DataColumn
-        
         Private columnrodne_cislo As Global.System.Data.DataColumn
         
         Private columnmiesto_narodenia As Global.System.Data.DataColumn
@@ -298,15 +296,9 @@ Partial Public Class detailClenaDataSet
         
         Private columncislo_op As Global.System.Data.DataColumn
         
-        Private columndatum_vydania_op As Global.System.Data.DataColumn
-        
         Private columncislo_pl As Global.System.Data.DataColumn
         
-        Private columndatum_vydania_pl As Global.System.Data.DataColumn
-        
         Private columncislo_zp As Global.System.Data.DataColumn
-        
-        Private columndatum_vydania_zp As Global.System.Data.DataColumn
         
         Private columncislo_clenskeho_preukazu_spz As Global.System.Data.DataColumn
         
@@ -320,15 +312,9 @@ Partial Public Class detailClenaDataSet
         
         Private columnclen_pz_id As Global.System.Data.DataColumn
         
-        Private columnskuska_z_polovnictva As Global.System.Data.DataColumn
-        
         Private columnmiesto_skusky_z_polovnictva As Global.System.Data.DataColumn
         
-        Private columnskuska_pre_polovnych_hospodarov As Global.System.Data.DataColumn
-        
         Private columnmiesto_skusky_pre_polovnych_hospodarov As Global.System.Data.DataColumn
-        
-        Private columnvyzsia_skuska_z_polovnictva As Global.System.Data.DataColumn
         
         Private columnmiesto_vyzsia_skuska_z_polovnictva As Global.System.Data.DataColumn
         
@@ -342,11 +328,25 @@ Partial Public Class detailClenaDataSet
         
         Private columnnajv_vyznamenanie As Global.System.Data.DataColumn
         
-        Private columnvyznamenany_kedy As Global.System.Data.DataColumn
-        
         Private columnudelene_tresty As Global.System.Data.DataColumn
         
         Private columnpoznamky As Global.System.Data.DataColumn
+        
+        Private columndatum_narodenia As Global.System.Data.DataColumn
+        
+        Private columndatum_vydania_op As Global.System.Data.DataColumn
+        
+        Private columndatum_vydania_pl As Global.System.Data.DataColumn
+        
+        Private columndatum_vydania_zp As Global.System.Data.DataColumn
+        
+        Private columnskuska_z_polovnictva As Global.System.Data.DataColumn
+        
+        Private columnskuska_pre_polovnych_hospodarov As Global.System.Data.DataColumn
+        
+        Private columnvyzsia_skuska_z_polovnictva As Global.System.Data.DataColumn
+        
+        Private columnvyznamenany_kedy As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub New()
@@ -412,13 +412,6 @@ Partial Public Class detailClenaDataSet
         Public ReadOnly Property titul_zaColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columntitul_za
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property datum_narodeniaColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columndatum_narodenia
             End Get
         End Property
         
@@ -493,13 +486,6 @@ Partial Public Class detailClenaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property datum_vydania_opColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columndatum_vydania_op
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public ReadOnly Property cislo_plColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columncislo_pl
@@ -507,23 +493,9 @@ Partial Public Class detailClenaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property datum_vydania_plColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columndatum_vydania_pl
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public ReadOnly Property cislo_zpColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columncislo_zp
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property datum_vydania_zpColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columndatum_vydania_zp
             End Get
         End Property
         
@@ -570,13 +542,6 @@ Partial Public Class detailClenaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property skuska_z_polovnictvaColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnskuska_z_polovnictva
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public ReadOnly Property miesto_skusky_z_polovnictvaColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnmiesto_skusky_z_polovnictva
@@ -584,23 +549,9 @@ Partial Public Class detailClenaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property skuska_pre_polovnych_hospodarovColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnskuska_pre_polovnych_hospodarov
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public ReadOnly Property miesto_skusky_pre_polovnych_hospodarovColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnmiesto_skusky_pre_polovnych_hospodarov
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property vyzsia_skuska_z_polovnictvaColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnvyzsia_skuska_z_polovnictva
             End Get
         End Property
         
@@ -647,13 +598,6 @@ Partial Public Class detailClenaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property vyznamenany_kedyColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnvyznamenany_kedy
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public ReadOnly Property udelene_trestyColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnudelene_tresty
@@ -664,6 +608,62 @@ Partial Public Class detailClenaDataSet
         Public ReadOnly Property poznamkyColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnpoznamky
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property datum_narodeniaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndatum_narodenia
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property datum_vydania_opColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndatum_vydania_op
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property datum_vydania_plColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndatum_vydania_pl
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property datum_vydania_zpColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndatum_vydania_zp
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property skuska_z_polovnictvaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnskuska_z_polovnictva
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property skuska_pre_polovnych_hospodarovColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnskuska_pre_polovnych_hospodarov
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property vyzsia_skuska_z_polovnictvaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnvyzsia_skuska_z_polovnictva
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property vyznamenany_kedyColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnvyznamenany_kedy
             End Get
         End Property
         
@@ -701,7 +701,6 @@ Partial Public Class detailClenaDataSet
                     ByVal meno As String,  _
                     ByVal priezvisko As String,  _
                     ByVal titul_za As Integer,  _
-                    ByVal datum_narodenia As Date,  _
                     ByVal rodne_cislo As String,  _
                     ByVal miesto_narodenia As String,  _
                     ByVal okres_narodenia As String,  _
@@ -712,33 +711,34 @@ Partial Public Class detailClenaDataSet
                     ByVal statna_prislusnost As Integer,  _
                     ByVal narodnost As Integer,  _
                     ByVal cislo_op As String,  _
-                    ByVal datum_vydania_op As Date,  _
                     ByVal cislo_pl As String,  _
-                    ByVal datum_vydania_pl As Date,  _
                     ByVal cislo_zp As String,  _
-                    ByVal datum_vydania_zp As Date,  _
                     ByVal cislo_clenskeho_preukazu_spz As String,  _
                     ByVal clen_spz_od As String,  _
                     ByVal clenske_do As String,  _
                     ByVal cislo_dokladu_clenske As String,  _
                     ByVal clen_pz As String,  _
                     ByVal clen_pz_id As Integer,  _
-                    ByVal skuska_z_polovnictva As Date,  _
                     ByVal miesto_skusky_z_polovnictva As String,  _
-                    ByVal skuska_pre_polovnych_hospodarov As Date,  _
                     ByVal miesto_skusky_pre_polovnych_hospodarov As String,  _
-                    ByVal vyzsia_skuska_z_polovnictva As Date,  _
                     ByVal miesto_vyzsia_skuska_z_polovnictva As String,  _
                     ByVal brokova_zbran As String,  _
                     ByVal kontrolne_strelby_brok As String,  _
                     ByVal gulova_zbran As String,  _
                     ByVal kontrolne_strelby_gulova_zbran As String,  _
                     ByVal najv_vyznamenanie As String,  _
-                    ByVal vyznamenany_kedy As Date,  _
                     ByVal udelene_tresty As String,  _
-                    ByVal poznamky As String) As clenoviaRow
+                    ByVal poznamky As String,  _
+                    ByVal datum_narodenia As String,  _
+                    ByVal datum_vydania_op As String,  _
+                    ByVal datum_vydania_pl As String,  _
+                    ByVal datum_vydania_zp As String,  _
+                    ByVal skuska_z_polovnictva As String,  _
+                    ByVal skuska_pre_polovnych_hospodarov As String,  _
+                    ByVal vyzsia_skuska_z_polovnictva As String,  _
+                    ByVal vyznamenany_kedy As String) As clenoviaRow
             Dim rowclenoviaRow As clenoviaRow = CType(Me.NewRow,clenoviaRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, titul_pred, meno, priezvisko, titul_za, datum_narodenia, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, okres_bydliska, psc, telefon, statna_prislusnost, narodnost, cislo_op, datum_vydania_op, cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, clen_pz_id, skuska_z_polovnictva, miesto_skusky_z_polovnictva, skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsia_skuska_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gulova_zbran, najv_vyznamenanie, vyznamenany_kedy, udelene_tresty, poznamky}
+            Dim columnValuesArray() As Object = New Object() {Nothing, titul_pred, meno, priezvisko, titul_za, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, okres_bydliska, psc, telefon, statna_prislusnost, narodnost, cislo_op, cislo_pl, cislo_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, clen_pz_id, miesto_skusky_z_polovnictva, miesto_skusky_pre_polovnych_hospodarov, miesto_vyzsia_skuska_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gulova_zbran, najv_vyznamenanie, udelene_tresty, poznamky, datum_narodenia, datum_vydania_op, datum_vydania_pl, datum_vydania_zp, skuska_z_polovnictva, skuska_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, vyznamenany_kedy}
             rowclenoviaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowclenoviaRow)
             Return rowclenoviaRow
@@ -768,7 +768,6 @@ Partial Public Class detailClenaDataSet
             Me.columnmeno = MyBase.Columns("meno")
             Me.columnpriezvisko = MyBase.Columns("priezvisko")
             Me.columntitul_za = MyBase.Columns("titul_za")
-            Me.columndatum_narodenia = MyBase.Columns("datum_narodenia")
             Me.columnrodne_cislo = MyBase.Columns("rodne_cislo")
             Me.columnmiesto_narodenia = MyBase.Columns("miesto_narodenia")
             Me.columnokres_narodenia = MyBase.Columns("okres_narodenia")
@@ -779,31 +778,32 @@ Partial Public Class detailClenaDataSet
             Me.columnstatna_prislusnost = MyBase.Columns("statna_prislusnost")
             Me.columnnarodnost = MyBase.Columns("narodnost")
             Me.columncislo_op = MyBase.Columns("cislo_op")
-            Me.columndatum_vydania_op = MyBase.Columns("datum_vydania_op")
             Me.columncislo_pl = MyBase.Columns("cislo_pl")
-            Me.columndatum_vydania_pl = MyBase.Columns("datum_vydania_pl")
             Me.columncislo_zp = MyBase.Columns("cislo_zp")
-            Me.columndatum_vydania_zp = MyBase.Columns("datum_vydania_zp")
             Me.columncislo_clenskeho_preukazu_spz = MyBase.Columns("cislo_clenskeho_preukazu_spz")
             Me.columnclen_spz_od = MyBase.Columns("clen_spz_od")
             Me.columnclenske_do = MyBase.Columns("clenske_do")
             Me.columncislo_dokladu_clenske = MyBase.Columns("cislo_dokladu_clenske")
             Me.columnclen_pz = MyBase.Columns("clen_pz")
             Me.columnclen_pz_id = MyBase.Columns("clen_pz_id")
-            Me.columnskuska_z_polovnictva = MyBase.Columns("skuska_z_polovnictva")
             Me.columnmiesto_skusky_z_polovnictva = MyBase.Columns("miesto_skusky_z_polovnictva")
-            Me.columnskuska_pre_polovnych_hospodarov = MyBase.Columns("skuska_pre_polovnych_hospodarov")
             Me.columnmiesto_skusky_pre_polovnych_hospodarov = MyBase.Columns("miesto_skusky_pre_polovnych_hospodarov")
-            Me.columnvyzsia_skuska_z_polovnictva = MyBase.Columns("vyzsia_skuska_z_polovnictva")
             Me.columnmiesto_vyzsia_skuska_z_polovnictva = MyBase.Columns("miesto_vyzsia_skuska_z_polovnictva")
             Me.columnbrokova_zbran = MyBase.Columns("brokova_zbran")
             Me.columnkontrolne_strelby_brok = MyBase.Columns("kontrolne_strelby_brok")
             Me.columngulova_zbran = MyBase.Columns("gulova_zbran")
             Me.columnkontrolne_strelby_gulova_zbran = MyBase.Columns("kontrolne_strelby_gulova_zbran")
             Me.columnnajv_vyznamenanie = MyBase.Columns("najv_vyznamenanie")
-            Me.columnvyznamenany_kedy = MyBase.Columns("vyznamenany_kedy")
             Me.columnudelene_tresty = MyBase.Columns("udelene_tresty")
             Me.columnpoznamky = MyBase.Columns("poznamky")
+            Me.columndatum_narodenia = MyBase.Columns("datum_narodenia")
+            Me.columndatum_vydania_op = MyBase.Columns("datum_vydania_op")
+            Me.columndatum_vydania_pl = MyBase.Columns("datum_vydania_pl")
+            Me.columndatum_vydania_zp = MyBase.Columns("datum_vydania_zp")
+            Me.columnskuska_z_polovnictva = MyBase.Columns("skuska_z_polovnictva")
+            Me.columnskuska_pre_polovnych_hospodarov = MyBase.Columns("skuska_pre_polovnych_hospodarov")
+            Me.columnvyzsia_skuska_z_polovnictva = MyBase.Columns("vyzsia_skuska_z_polovnictva")
+            Me.columnvyznamenany_kedy = MyBase.Columns("vyznamenany_kedy")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -818,8 +818,6 @@ Partial Public Class detailClenaDataSet
             MyBase.Columns.Add(Me.columnpriezvisko)
             Me.columntitul_za = New Global.System.Data.DataColumn("titul_za", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntitul_za)
-            Me.columndatum_narodenia = New Global.System.Data.DataColumn("datum_narodenia", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndatum_narodenia)
             Me.columnrodne_cislo = New Global.System.Data.DataColumn("rodne_cislo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnrodne_cislo)
             Me.columnmiesto_narodenia = New Global.System.Data.DataColumn("miesto_narodenia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -840,16 +838,10 @@ Partial Public Class detailClenaDataSet
             MyBase.Columns.Add(Me.columnnarodnost)
             Me.columncislo_op = New Global.System.Data.DataColumn("cislo_op", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncislo_op)
-            Me.columndatum_vydania_op = New Global.System.Data.DataColumn("datum_vydania_op", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndatum_vydania_op)
             Me.columncislo_pl = New Global.System.Data.DataColumn("cislo_pl", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncislo_pl)
-            Me.columndatum_vydania_pl = New Global.System.Data.DataColumn("datum_vydania_pl", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndatum_vydania_pl)
             Me.columncislo_zp = New Global.System.Data.DataColumn("cislo_zp", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncislo_zp)
-            Me.columndatum_vydania_zp = New Global.System.Data.DataColumn("datum_vydania_zp", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndatum_vydania_zp)
             Me.columncislo_clenskeho_preukazu_spz = New Global.System.Data.DataColumn("cislo_clenskeho_preukazu_spz", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncislo_clenskeho_preukazu_spz)
             Me.columnclen_spz_od = New Global.System.Data.DataColumn("clen_spz_od", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -862,16 +854,10 @@ Partial Public Class detailClenaDataSet
             MyBase.Columns.Add(Me.columnclen_pz)
             Me.columnclen_pz_id = New Global.System.Data.DataColumn("clen_pz_id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnclen_pz_id)
-            Me.columnskuska_z_polovnictva = New Global.System.Data.DataColumn("skuska_z_polovnictva", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnskuska_z_polovnictva)
             Me.columnmiesto_skusky_z_polovnictva = New Global.System.Data.DataColumn("miesto_skusky_z_polovnictva", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnmiesto_skusky_z_polovnictva)
-            Me.columnskuska_pre_polovnych_hospodarov = New Global.System.Data.DataColumn("skuska_pre_polovnych_hospodarov", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnskuska_pre_polovnych_hospodarov)
             Me.columnmiesto_skusky_pre_polovnych_hospodarov = New Global.System.Data.DataColumn("miesto_skusky_pre_polovnych_hospodarov", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnmiesto_skusky_pre_polovnych_hospodarov)
-            Me.columnvyzsia_skuska_z_polovnictva = New Global.System.Data.DataColumn("vyzsia_skuska_z_polovnictva", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnvyzsia_skuska_z_polovnictva)
             Me.columnmiesto_vyzsia_skuska_z_polovnictva = New Global.System.Data.DataColumn("miesto_vyzsia_skuska_z_polovnictva", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnmiesto_vyzsia_skuska_z_polovnictva)
             Me.columnbrokova_zbran = New Global.System.Data.DataColumn("brokova_zbran", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -884,12 +870,26 @@ Partial Public Class detailClenaDataSet
             MyBase.Columns.Add(Me.columnkontrolne_strelby_gulova_zbran)
             Me.columnnajv_vyznamenanie = New Global.System.Data.DataColumn("najv_vyznamenanie", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnnajv_vyznamenanie)
-            Me.columnvyznamenany_kedy = New Global.System.Data.DataColumn("vyznamenany_kedy", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnvyznamenany_kedy)
             Me.columnudelene_tresty = New Global.System.Data.DataColumn("udelene_tresty", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnudelene_tresty)
             Me.columnpoznamky = New Global.System.Data.DataColumn("poznamky", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpoznamky)
+            Me.columndatum_narodenia = New Global.System.Data.DataColumn("datum_narodenia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndatum_narodenia)
+            Me.columndatum_vydania_op = New Global.System.Data.DataColumn("datum_vydania_op", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndatum_vydania_op)
+            Me.columndatum_vydania_pl = New Global.System.Data.DataColumn("datum_vydania_pl", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndatum_vydania_pl)
+            Me.columndatum_vydania_zp = New Global.System.Data.DataColumn("datum_vydania_zp", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndatum_vydania_zp)
+            Me.columnskuska_z_polovnictva = New Global.System.Data.DataColumn("skuska_z_polovnictva", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnskuska_z_polovnictva)
+            Me.columnskuska_pre_polovnych_hospodarov = New Global.System.Data.DataColumn("skuska_pre_polovnych_hospodarov", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnskuska_pre_polovnych_hospodarov)
+            Me.columnvyzsia_skuska_z_polovnictva = New Global.System.Data.DataColumn("vyzsia_skuska_z_polovnictva", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnvyzsia_skuska_z_polovnictva)
+            Me.columnvyznamenany_kedy = New Global.System.Data.DataColumn("vyznamenany_kedy", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnvyznamenany_kedy)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
             Me.columnid.AutoIncrement = true
             Me.columnid.AutoIncrementSeed = -1
@@ -923,6 +923,14 @@ Partial Public Class detailClenaDataSet
             Me.columnnajv_vyznamenanie.MaxLength = 255
             Me.columnudelene_tresty.MaxLength = 255
             Me.columnpoznamky.MaxLength = 255
+            Me.columndatum_narodenia.MaxLength = 255
+            Me.columndatum_vydania_op.MaxLength = 255
+            Me.columndatum_vydania_pl.MaxLength = 255
+            Me.columndatum_vydania_zp.MaxLength = 255
+            Me.columnskuska_z_polovnictva.MaxLength = 255
+            Me.columnskuska_pre_polovnych_hospodarov.MaxLength = 255
+            Me.columnvyzsia_skuska_z_polovnictva.MaxLength = 255
+            Me.columnvyznamenany_kedy.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1125,20 +1133,6 @@ Partial Public Class detailClenaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property datum_narodenia() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableclenovia.datum_narodeniaColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'datum_narodenia' in table 'clenovia' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableclenovia.datum_narodeniaColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Property rodne_cislo() As String
             Get
                 Try 
@@ -1279,20 +1273,6 @@ Partial Public Class detailClenaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property datum_vydania_op() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableclenovia.datum_vydania_opColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'datum_vydania_op' in table 'clenovia' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableclenovia.datum_vydania_opColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Property cislo_pl() As String
             Get
                 Try 
@@ -1307,20 +1287,6 @@ Partial Public Class detailClenaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property datum_vydania_pl() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableclenovia.datum_vydania_plColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'datum_vydania_pl' in table 'clenovia' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableclenovia.datum_vydania_plColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Property cislo_zp() As String
             Get
                 Try 
@@ -1331,20 +1297,6 @@ Partial Public Class detailClenaDataSet
             End Get
             Set
                 Me(Me.tableclenovia.cislo_zpColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property datum_vydania_zp() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableclenovia.datum_vydania_zpColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'datum_vydania_zp' in table 'clenovia' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableclenovia.datum_vydania_zpColumn) = value
             End Set
         End Property
         
@@ -1434,20 +1386,6 @@ Partial Public Class detailClenaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property skuska_z_polovnictva() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableclenovia.skuska_z_polovnictvaColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'skuska_z_polovnictva' in table 'clenovia' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableclenovia.skuska_z_polovnictvaColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Property miesto_skusky_z_polovnictva() As String
             Get
                 Try 
@@ -1463,21 +1401,6 @@ Partial Public Class detailClenaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property skuska_pre_polovnych_hospodarov() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableclenovia.skuska_pre_polovnych_hospodarovColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'skuska_pre_polovnych_hospodarov' in table 'clenovia' is DBN"& _ 
-                            "ull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableclenovia.skuska_pre_polovnych_hospodarovColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Property miesto_skusky_pre_polovnych_hospodarov() As String
             Get
                 Try 
@@ -1489,21 +1412,6 @@ Partial Public Class detailClenaDataSet
             End Get
             Set
                 Me(Me.tableclenovia.miesto_skusky_pre_polovnych_hospodarovColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property vyzsia_skuska_z_polovnictva() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableclenovia.vyzsia_skuska_z_polovnictvaColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'vyzsia_skuska_z_polovnictva' in table 'clenovia' is DBNull."& _ 
-                            "", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableclenovia.vyzsia_skuska_z_polovnictvaColumn) = value
             End Set
         End Property
         
@@ -1594,20 +1502,6 @@ Partial Public Class detailClenaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property vyznamenany_kedy() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableclenovia.vyznamenany_kedyColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'vyznamenany_kedy' in table 'clenovia' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableclenovia.vyznamenany_kedyColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Property udelene_tresty() As String
             Get
                 Try 
@@ -1632,6 +1526,120 @@ Partial Public Class detailClenaDataSet
             End Get
             Set
                 Me(Me.tableclenovia.poznamkyColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property datum_narodenia() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableclenovia.datum_narodeniaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'datum_narodenia' in table 'clenovia' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableclenovia.datum_narodeniaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property datum_vydania_op() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableclenovia.datum_vydania_opColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'datum_vydania_op' in table 'clenovia' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableclenovia.datum_vydania_opColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property datum_vydania_pl() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableclenovia.datum_vydania_plColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'datum_vydania_pl' in table 'clenovia' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableclenovia.datum_vydania_plColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property datum_vydania_zp() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableclenovia.datum_vydania_zpColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'datum_vydania_zp' in table 'clenovia' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableclenovia.datum_vydania_zpColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property skuska_z_polovnictva() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableclenovia.skuska_z_polovnictvaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'skuska_z_polovnictva' in table 'clenovia' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableclenovia.skuska_z_polovnictvaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property skuska_pre_polovnych_hospodarov() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableclenovia.skuska_pre_polovnych_hospodarovColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'skuska_pre_polovnych_hospodarov' in table 'clenovia' is DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableclenovia.skuska_pre_polovnych_hospodarovColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property vyzsia_skuska_z_polovnictva() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableclenovia.vyzsia_skuska_z_polovnictvaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'vyzsia_skuska_z_polovnictva' in table 'clenovia' is DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableclenovia.vyzsia_skuska_z_polovnictvaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property vyznamenany_kedy() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableclenovia.vyznamenany_kedyColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'vyznamenany_kedy' in table 'clenovia' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableclenovia.vyznamenany_kedyColumn) = value
             End Set
         End Property
         
@@ -1673,16 +1681,6 @@ Partial Public Class detailClenaDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub Settitul_zaNull()
             Me(Me.tableclenovia.titul_zaColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function Isdatum_narodeniaNull() As Boolean
-            Return Me.IsNull(Me.tableclenovia.datum_narodeniaColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub Setdatum_narodeniaNull()
-            Me(Me.tableclenovia.datum_narodeniaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1786,16 +1784,6 @@ Partial Public Class detailClenaDataSet
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function Isdatum_vydania_opNull() As Boolean
-            Return Me.IsNull(Me.tableclenovia.datum_vydania_opColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub Setdatum_vydania_opNull()
-            Me(Me.tableclenovia.datum_vydania_opColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function Iscislo_plNull() As Boolean
             Return Me.IsNull(Me.tableclenovia.cislo_plColumn)
         End Function
@@ -1806,16 +1794,6 @@ Partial Public Class detailClenaDataSet
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function Isdatum_vydania_plNull() As Boolean
-            Return Me.IsNull(Me.tableclenovia.datum_vydania_plColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub Setdatum_vydania_plNull()
-            Me(Me.tableclenovia.datum_vydania_plColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function Iscislo_zpNull() As Boolean
             Return Me.IsNull(Me.tableclenovia.cislo_zpColumn)
         End Function
@@ -1823,16 +1801,6 @@ Partial Public Class detailClenaDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub Setcislo_zpNull()
             Me(Me.tableclenovia.cislo_zpColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function Isdatum_vydania_zpNull() As Boolean
-            Return Me.IsNull(Me.tableclenovia.datum_vydania_zpColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub Setdatum_vydania_zpNull()
-            Me(Me.tableclenovia.datum_vydania_zpColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1896,16 +1864,6 @@ Partial Public Class detailClenaDataSet
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function Isskuska_z_polovnictvaNull() As Boolean
-            Return Me.IsNull(Me.tableclenovia.skuska_z_polovnictvaColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub Setskuska_z_polovnictvaNull()
-            Me(Me.tableclenovia.skuska_z_polovnictvaColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function Ismiesto_skusky_z_polovnictvaNull() As Boolean
             Return Me.IsNull(Me.tableclenovia.miesto_skusky_z_polovnictvaColumn)
         End Function
@@ -1916,16 +1874,6 @@ Partial Public Class detailClenaDataSet
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function Isskuska_pre_polovnych_hospodarovNull() As Boolean
-            Return Me.IsNull(Me.tableclenovia.skuska_pre_polovnych_hospodarovColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub Setskuska_pre_polovnych_hospodarovNull()
-            Me(Me.tableclenovia.skuska_pre_polovnych_hospodarovColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function Ismiesto_skusky_pre_polovnych_hospodarovNull() As Boolean
             Return Me.IsNull(Me.tableclenovia.miesto_skusky_pre_polovnych_hospodarovColumn)
         End Function
@@ -1933,16 +1881,6 @@ Partial Public Class detailClenaDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub Setmiesto_skusky_pre_polovnych_hospodarovNull()
             Me(Me.tableclenovia.miesto_skusky_pre_polovnych_hospodarovColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function Isvyzsia_skuska_z_polovnictvaNull() As Boolean
-            Return Me.IsNull(Me.tableclenovia.vyzsia_skuska_z_polovnictvaColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub Setvyzsia_skuska_z_polovnictvaNull()
-            Me(Me.tableclenovia.vyzsia_skuska_z_polovnictvaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -2006,16 +1944,6 @@ Partial Public Class detailClenaDataSet
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function Isvyznamenany_kedyNull() As Boolean
-            Return Me.IsNull(Me.tableclenovia.vyznamenany_kedyColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub Setvyznamenany_kedyNull()
-            Me(Me.tableclenovia.vyznamenany_kedyColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function Isudelene_trestyNull() As Boolean
             Return Me.IsNull(Me.tableclenovia.udelene_trestyColumn)
         End Function
@@ -2033,6 +1961,86 @@ Partial Public Class detailClenaDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub SetpoznamkyNull()
             Me(Me.tableclenovia.poznamkyColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isdatum_narodeniaNull() As Boolean
+            Return Me.IsNull(Me.tableclenovia.datum_narodeniaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setdatum_narodeniaNull()
+            Me(Me.tableclenovia.datum_narodeniaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isdatum_vydania_opNull() As Boolean
+            Return Me.IsNull(Me.tableclenovia.datum_vydania_opColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setdatum_vydania_opNull()
+            Me(Me.tableclenovia.datum_vydania_opColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isdatum_vydania_plNull() As Boolean
+            Return Me.IsNull(Me.tableclenovia.datum_vydania_plColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setdatum_vydania_plNull()
+            Me(Me.tableclenovia.datum_vydania_plColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isdatum_vydania_zpNull() As Boolean
+            Return Me.IsNull(Me.tableclenovia.datum_vydania_zpColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setdatum_vydania_zpNull()
+            Me(Me.tableclenovia.datum_vydania_zpColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isskuska_z_polovnictvaNull() As Boolean
+            Return Me.IsNull(Me.tableclenovia.skuska_z_polovnictvaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setskuska_z_polovnictvaNull()
+            Me(Me.tableclenovia.skuska_z_polovnictvaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isskuska_pre_polovnych_hospodarovNull() As Boolean
+            Return Me.IsNull(Me.tableclenovia.skuska_pre_polovnych_hospodarovColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setskuska_pre_polovnych_hospodarovNull()
+            Me(Me.tableclenovia.skuska_pre_polovnych_hospodarovColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isvyzsia_skuska_z_polovnictvaNull() As Boolean
+            Return Me.IsNull(Me.tableclenovia.vyzsia_skuska_z_polovnictvaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setvyzsia_skuska_z_polovnictvaNull()
+            Me(Me.tableclenovia.vyzsia_skuska_z_polovnictvaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isvyznamenany_kedyNull() As Boolean
+            Return Me.IsNull(Me.tableclenovia.vyznamenany_kedyColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setvyznamenany_kedyNull()
+            Me(Me.tableclenovia.vyznamenany_kedyColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -2198,7 +2206,6 @@ Namespace detailClenaDataSetTableAdapters
             tableMapping.ColumnMappings.Add("meno", "meno")
             tableMapping.ColumnMappings.Add("priezvisko", "priezvisko")
             tableMapping.ColumnMappings.Add("titul_za", "titul_za")
-            tableMapping.ColumnMappings.Add("datum_narodenia", "datum_narodenia")
             tableMapping.ColumnMappings.Add("rodne_cislo", "rodne_cislo")
             tableMapping.ColumnMappings.Add("miesto_narodenia", "miesto_narodenia")
             tableMapping.ColumnMappings.Add("okres_narodenia", "okres_narodenia")
@@ -2209,71 +2216,72 @@ Namespace detailClenaDataSetTableAdapters
             tableMapping.ColumnMappings.Add("statna_prislusnost", "statna_prislusnost")
             tableMapping.ColumnMappings.Add("narodnost", "narodnost")
             tableMapping.ColumnMappings.Add("cislo_op", "cislo_op")
-            tableMapping.ColumnMappings.Add("datum_vydania_op", "datum_vydania_op")
             tableMapping.ColumnMappings.Add("cislo_pl", "cislo_pl")
-            tableMapping.ColumnMappings.Add("datum_vydania_pl", "datum_vydania_pl")
             tableMapping.ColumnMappings.Add("cislo_zp", "cislo_zp")
-            tableMapping.ColumnMappings.Add("datum_vydania_zp", "datum_vydania_zp")
             tableMapping.ColumnMappings.Add("cislo_clenskeho_preukazu_spz", "cislo_clenskeho_preukazu_spz")
             tableMapping.ColumnMappings.Add("clen_spz_od", "clen_spz_od")
             tableMapping.ColumnMappings.Add("clenske_do", "clenske_do")
             tableMapping.ColumnMappings.Add("cislo_dokladu_clenske", "cislo_dokladu_clenske")
             tableMapping.ColumnMappings.Add("clen_pz", "clen_pz")
             tableMapping.ColumnMappings.Add("clen_pz_id", "clen_pz_id")
-            tableMapping.ColumnMappings.Add("skuska_z_polovnictva", "skuska_z_polovnictva")
             tableMapping.ColumnMappings.Add("miesto_skusky_z_polovnictva", "miesto_skusky_z_polovnictva")
-            tableMapping.ColumnMappings.Add("skuska_pre_polovnych_hospodarov", "skuska_pre_polovnych_hospodarov")
             tableMapping.ColumnMappings.Add("miesto_skusky_pre_polovnych_hospodarov", "miesto_skusky_pre_polovnych_hospodarov")
-            tableMapping.ColumnMappings.Add("vyzsia_skuska_z_polovnictva", "vyzsia_skuska_z_polovnictva")
             tableMapping.ColumnMappings.Add("miesto_vyzsia_skuska_z_polovnictva", "miesto_vyzsia_skuska_z_polovnictva")
             tableMapping.ColumnMappings.Add("brokova_zbran", "brokova_zbran")
             tableMapping.ColumnMappings.Add("kontrolne_strelby_brok", "kontrolne_strelby_brok")
             tableMapping.ColumnMappings.Add("gulova_zbran", "gulova_zbran")
             tableMapping.ColumnMappings.Add("kontrolne_strelby_gulova_zbran", "kontrolne_strelby_gulova_zbran")
             tableMapping.ColumnMappings.Add("najv_vyznamenanie", "najv_vyznamenanie")
-            tableMapping.ColumnMappings.Add("vyznamenany_kedy", "vyznamenany_kedy")
             tableMapping.ColumnMappings.Add("udelene_tresty", "udelene_tresty")
             tableMapping.ColumnMappings.Add("poznamky", "poznamky")
+            tableMapping.ColumnMappings.Add("datum_narodenia", "datum_narodenia")
+            tableMapping.ColumnMappings.Add("datum_vydania_op", "datum_vydania_op")
+            tableMapping.ColumnMappings.Add("datum_vydania_pl", "datum_vydania_pl")
+            tableMapping.ColumnMappings.Add("datum_vydania_zp", "datum_vydania_zp")
+            tableMapping.ColumnMappings.Add("skuska_z_polovnictva", "skuska_z_polovnictva")
+            tableMapping.ColumnMappings.Add("skuska_pre_polovnych_hospodarov", "skuska_pre_polovnych_hospodarov")
+            tableMapping.ColumnMappings.Add("vyzsia_skuska_z_polovnictva", "vyzsia_skuska_z_polovnictva")
+            tableMapping.ColumnMappings.Add("vyznamenany_kedy", "vyznamenany_kedy")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `clenovia` WHERE ((`id` = ?) AND ((? = 1 AND `titul_pred` IS NULL) OR"& _ 
                 " (`titul_pred` = ?)) AND ((? = 1 AND `meno` IS NULL) OR (`meno` = ?)) AND ((? = "& _ 
                 "1 AND `priezvisko` IS NULL) OR (`priezvisko` = ?)) AND ((? = 1 AND `titul_za` IS"& _ 
-                " NULL) OR (`titul_za` = ?)) AND ((? = 1 AND `datum_narodenia` IS NULL) OR (`datu"& _ 
-                "m_narodenia` = ?)) AND ((? = 1 AND `rodne_cislo` IS NULL) OR (`rodne_cislo` = ?)"& _ 
-                ") AND ((? = 1 AND `miesto_narodenia` IS NULL) OR (`miesto_narodenia` = ?)) AND ("& _ 
-                "(? = 1 AND `okres_narodenia` IS NULL) OR (`okres_narodenia` = ?)) AND ((? = 1 AN"& _ 
-                "D `bydlisko` IS NULL) OR (`bydlisko` = ?)) AND ((? = 1 AND `okres_bydliska` IS N"& _ 
-                "ULL) OR (`okres_bydliska` = ?)) AND ((? = 1 AND `psc` IS NULL) OR (`psc` = ?)) A"& _ 
-                "ND ((? = 1 AND `telefon` IS NULL) OR (`telefon` = ?)) AND ((? = 1 AND `statna_pr"& _ 
-                "islusnost` IS NULL) OR (`statna_prislusnost` = ?)) AND ((? = 1 AND `narodnost` I"& _ 
-                "S NULL) OR (`narodnost` = ?)) AND ((? = 1 AND `cislo_op` IS NULL) OR (`cislo_op`"& _ 
-                " = ?)) AND ((? = 1 AND `datum_vydania_op` IS NULL) OR (`datum_vydania_op` = ?)) "& _ 
-                "AND ((? = 1 AND `cislo_pl` IS NULL) OR (`cislo_pl` = ?)) AND ((? = 1 AND `datum_"& _ 
-                "vydania_pl` IS NULL) OR (`datum_vydania_pl` = ?)) AND ((? = 1 AND `cislo_zp` IS "& _ 
-                "NULL) OR (`cislo_zp` = ?)) AND ((? = 1 AND `datum_vydania_zp` IS NULL) OR (`datu"& _ 
-                "m_vydania_zp` = ?)) AND ((? = 1 AND `cislo_clenskeho_preukazu_spz` IS NULL) OR ("& _ 
-                "`cislo_clenskeho_preukazu_spz` = ?)) AND ((? = 1 AND `clen_spz_od` IS NULL) OR ("& _ 
-                "`clen_spz_od` = ?)) AND ((? = 1 AND `clenske_do` IS NULL) OR (`clenske_do` = ?))"& _ 
-                " AND ((? = 1 AND `cislo_dokladu_clenske` IS NULL) OR (`cislo_dokladu_clenske` = "& _ 
-                "?)) AND ((? = 1 AND `clen_pz` IS NULL) OR (`clen_pz` = ?)) AND ((? = 1 AND `clen"& _ 
-                "_pz_id` IS NULL) OR (`clen_pz_id` = ?)) AND ((? = 1 AND `skuska_z_polovnictva` I"& _ 
-                "S NULL) OR (`skuska_z_polovnictva` = ?)) AND ((? = 1 AND `miesto_skusky_z_polovn"& _ 
-                "ictva` IS NULL) OR (`miesto_skusky_z_polovnictva` = ?)) AND ((? = 1 AND `skuska_"& _ 
-                "pre_polovnych_hospodarov` IS NULL) OR (`skuska_pre_polovnych_hospodarov` = ?)) A"& _ 
-                "ND ((? = 1 AND `miesto_skusky_pre_polovnych_hospodarov` IS NULL) OR (`miesto_sku"& _ 
-                "sky_pre_polovnych_hospodarov` = ?)) AND ((? = 1 AND `vyzsia_skuska_z_polovnictva"& _ 
-                "` IS NULL) OR (`vyzsia_skuska_z_polovnictva` = ?)) AND ((? = 1 AND `miesto_vyzsi"& _ 
-                "a_skuska_z_polovnictva` IS NULL) OR (`miesto_vyzsia_skuska_z_polovnictva` = ?)) "& _ 
-                "AND ((? = 1 AND `brokova_zbran` IS NULL) OR (`brokova_zbran` = ?)) AND ((? = 1 A"& _ 
-                "ND `kontrolne_strelby_brok` IS NULL) OR (`kontrolne_strelby_brok` = ?)) AND ((? "& _ 
-                "= 1 AND `gulova_zbran` IS NULL) OR (`gulova_zbran` = ?)) AND ((? = 1 AND `kontro"& _ 
-                "lne_strelby_gulova_zbran` IS NULL) OR (`kontrolne_strelby_gulova_zbran` = ?)) AN"& _ 
-                "D ((? = 1 AND `najv_vyznamenanie` IS NULL) OR (`najv_vyznamenanie` = ?)) AND ((?"& _ 
-                " = 1 AND `vyznamenany_kedy` IS NULL) OR (`vyznamenany_kedy` = ?)) AND ((? = 1 AN"& _ 
-                "D `udelene_tresty` IS NULL) OR (`udelene_tresty` = ?)) AND ((? = 1 AND `poznamky"& _ 
-                "` IS NULL) OR (`poznamky` = ?)))"
+                " NULL) OR (`titul_za` = ?)) AND ((? = 1 AND `rodne_cislo` IS NULL) OR (`rodne_ci"& _ 
+                "slo` = ?)) AND ((? = 1 AND `miesto_narodenia` IS NULL) OR (`miesto_narodenia` = "& _ 
+                "?)) AND ((? = 1 AND `okres_narodenia` IS NULL) OR (`okres_narodenia` = ?)) AND ("& _ 
+                "(? = 1 AND `bydlisko` IS NULL) OR (`bydlisko` = ?)) AND ((? = 1 AND `okres_bydli"& _ 
+                "ska` IS NULL) OR (`okres_bydliska` = ?)) AND ((? = 1 AND `psc` IS NULL) OR (`psc"& _ 
+                "` = ?)) AND ((? = 1 AND `telefon` IS NULL) OR (`telefon` = ?)) AND ((? = 1 AND `"& _ 
+                "statna_prislusnost` IS NULL) OR (`statna_prislusnost` = ?)) AND ((? = 1 AND `nar"& _ 
+                "odnost` IS NULL) OR (`narodnost` = ?)) AND ((? = 1 AND `cislo_op` IS NULL) OR (`"& _ 
+                "cislo_op` = ?)) AND ((? = 1 AND `cislo_pl` IS NULL) OR (`cislo_pl` = ?)) AND ((?"& _ 
+                " = 1 AND `cislo_zp` IS NULL) OR (`cislo_zp` = ?)) AND ((? = 1 AND `cislo_clenske"& _ 
+                "ho_preukazu_spz` IS NULL) OR (`cislo_clenskeho_preukazu_spz` = ?)) AND ((? = 1 A"& _ 
+                "ND `clen_spz_od` IS NULL) OR (`clen_spz_od` = ?)) AND ((? = 1 AND `clenske_do` I"& _ 
+                "S NULL) OR (`clenske_do` = ?)) AND ((? = 1 AND `cislo_dokladu_clenske` IS NULL) "& _ 
+                "OR (`cislo_dokladu_clenske` = ?)) AND ((? = 1 AND `clen_pz` IS NULL) OR (`clen_p"& _ 
+                "z` = ?)) AND ((? = 1 AND `clen_pz_id` IS NULL) OR (`clen_pz_id` = ?)) AND ((? = "& _ 
+                "1 AND `miesto_skusky_z_polovnictva` IS NULL) OR (`miesto_skusky_z_polovnictva` ="& _ 
+                " ?)) AND ((? = 1 AND `miesto_skusky_pre_polovnych_hospodarov` IS NULL) OR (`mies"& _ 
+                "to_skusky_pre_polovnych_hospodarov` = ?)) AND ((? = 1 AND `miesto_vyzsia_skuska_"& _ 
+                "z_polovnictva` IS NULL) OR (`miesto_vyzsia_skuska_z_polovnictva` = ?)) AND ((? ="& _ 
+                " 1 AND `brokova_zbran` IS NULL) OR (`brokova_zbran` = ?)) AND ((? = 1 AND `kontr"& _ 
+                "olne_strelby_brok` IS NULL) OR (`kontrolne_strelby_brok` = ?)) AND ((? = 1 AND `"& _ 
+                "gulova_zbran` IS NULL) OR (`gulova_zbran` = ?)) AND ((? = 1 AND `kontrolne_strel"& _ 
+                "by_gulova_zbran` IS NULL) OR (`kontrolne_strelby_gulova_zbran` = ?)) AND ((? = 1"& _ 
+                " AND `najv_vyznamenanie` IS NULL) OR (`najv_vyznamenanie` = ?)) AND ((? = 1 AND "& _ 
+                "`udelene_tresty` IS NULL) OR (`udelene_tresty` = ?)) AND ((? = 1 AND `poznamky` "& _ 
+                "IS NULL) OR (`poznamky` = ?)) AND ((? = 1 AND `datum_narodenia` IS NULL) OR (`da"& _ 
+                "tum_narodenia` = ?)) AND ((? = 1 AND `datum_vydania_op` IS NULL) OR (`datum_vyda"& _ 
+                "nia_op` = ?)) AND ((? = 1 AND `datum_vydania_pl` IS NULL) OR (`datum_vydania_pl`"& _ 
+                " = ?)) AND ((? = 1 AND `datum_vydania_zp` IS NULL) OR (`datum_vydania_zp` = ?)) "& _ 
+                "AND ((? = 1 AND `skuska_pre_polovnych_hospodarov` IS NULL) OR (`skuska_pre_polov"& _ 
+                "nych_hospodarov` = ?)) AND ((? = 1 AND `skuska_z_polovnictva` IS NULL) OR (`skus"& _ 
+                "ka_z_polovnictva` = ?)) AND ((? = 1 AND `vyznamenany_kedy` IS NULL) OR (`vyzname"& _ 
+                "nany_kedy` = ?)) AND ((? = 1 AND `vyzsia_skuska_z_polovnictva` IS NULL) OR (`vyz"& _ 
+                "sia_skuska_z_polovnictva` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_titul_pred", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "titul_pred", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2284,8 +2292,6 @@ Namespace detailClenaDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_priezvisko", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "priezvisko", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_titul_za", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "titul_za", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_titul_za", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "titul_za", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_narodenia", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_narodenia", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_narodenia", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_narodenia", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_rodne_cislo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "rodne_cislo", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_rodne_cislo", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "rodne_cislo", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_miesto_narodenia", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_narodenia", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2306,16 +2312,10 @@ Namespace detailClenaDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_narodnost", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "narodnost", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_cislo_op", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_op", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_cislo_op", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_op", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_vydania_op", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_op", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_vydania_op", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_op", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_cislo_pl", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_pl", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_cislo_pl", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_pl", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_vydania_pl", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_pl", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_vydania_pl", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_pl", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_cislo_zp", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_zp", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_cislo_zp", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_zp", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_vydania_zp", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_zp", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_vydania_zp", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_zp", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_cislo_clenskeho_preukazu_spz", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_clenskeho_preukazu_spz", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_cislo_clenskeho_preukazu_spz", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_clenskeho_preukazu_spz", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_clen_spz_od", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_spz_od", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2328,16 +2328,10 @@ Namespace detailClenaDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_clen_pz", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_pz", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_clen_pz_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_pz_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_clen_pz_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_pz_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_miesto_skusky_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_skusky_z_polovnictva", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_miesto_skusky_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_skusky_z_polovnictva", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_skuska_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_skuska_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_miesto_skusky_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_skusky_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_miesto_skusky_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_skusky_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_miesto_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_miesto_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_brokova_zbran", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "brokova_zbran", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2350,24 +2344,38 @@ Namespace detailClenaDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_kontrolne_strelby_gulova_zbran", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kontrolne_strelby_gulova_zbran", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_najv_vyznamenanie", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "najv_vyznamenanie", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_najv_vyznamenanie", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "najv_vyznamenanie", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_vyznamenany_kedy", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyznamenany_kedy", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_vyznamenany_kedy", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyznamenany_kedy", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_udelene_tresty", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "udelene_tresty", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_udelene_tresty", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "udelene_tresty", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_poznamky", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "poznamky", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_poznamky", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "poznamky", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_narodenia", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_narodenia", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_narodenia", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_narodenia", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_vydania_op", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_op", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_vydania_op", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_op", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_vydania_pl", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_pl", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_vydania_pl", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_pl", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_vydania_zp", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_zp", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_vydania_zp", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_zp", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_skuska_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_skuska_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_vyznamenany_kedy", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyznamenany_kedy", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_vyznamenany_kedy", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyznamenany_kedy", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `clenovia` (`titul_pred`, `meno`, `priezvisko`, `titul_za`, `datum_na"& _ 
-                "rodenia`, `rodne_cislo`, `miesto_narodenia`, `okres_narodenia`, `bydlisko`, `okr"& _ 
-                "es_bydliska`, `psc`, `telefon`, `statna_prislusnost`, `narodnost`, `cislo_op`, `"& _ 
-                "datum_vydania_op`, `cislo_pl`, `datum_vydania_pl`, `cislo_zp`, `datum_vydania_zp"& _ 
-                "`, `cislo_clenskeho_preukazu_spz`, `clen_spz_od`, `clenske_do`, `cislo_dokladu_c"& _ 
-                "lenske`, `clen_pz`, `clen_pz_id`, `skuska_z_polovnictva`, `miesto_skusky_z_polov"& _ 
-                "nictva`, `skuska_pre_polovnych_hospodarov`, `miesto_skusky_pre_polovnych_hospoda"& _ 
-                "rov`, `vyzsia_skuska_z_polovnictva`, `miesto_vyzsia_skuska_z_polovnictva`, `brok"& _ 
-                "ova_zbran`, `kontrolne_strelby_brok`, `gulova_zbran`, `kontrolne_strelby_gulova_"& _ 
-                "zbran`, `najv_vyznamenanie`, `vyznamenany_kedy`, `udelene_tresty`, `poznamky`) V"& _ 
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `clenovia` (`titul_pred`, `meno`, `priezvisko`, `titul_za`, `rodne_ci"& _ 
+                "slo`, `miesto_narodenia`, `okres_narodenia`, `bydlisko`, `okres_bydliska`, `psc`"& _ 
+                ", `telefon`, `statna_prislusnost`, `narodnost`, `cislo_op`, `cislo_pl`, `cislo_z"& _ 
+                "p`, `cislo_clenskeho_preukazu_spz`, `clen_spz_od`, `clenske_do`, `cislo_dokladu_"& _ 
+                "clenske`, `clen_pz`, `clen_pz_id`, `miesto_skusky_z_polovnictva`, `miesto_skusky"& _ 
+                "_pre_polovnych_hospodarov`, `miesto_vyzsia_skuska_z_polovnictva`, `brokova_zbran"& _ 
+                "`, `kontrolne_strelby_brok`, `gulova_zbran`, `kontrolne_strelby_gulova_zbran`, `"& _ 
+                "najv_vyznamenanie`, `udelene_tresty`, `poznamky`, `datum_narodenia`, `datum_vyda"& _ 
+                "nia_op`, `datum_vydania_pl`, `datum_vydania_zp`, `skuska_pre_polovnych_hospodaro"& _ 
+                "v`, `skuska_z_polovnictva`, `vyznamenany_kedy`, `vyzsia_skuska_z_polovnictva`) V"& _ 
                 "ALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
                 ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
@@ -2375,7 +2383,6 @@ Namespace detailClenaDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("meno", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "meno", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("priezvisko", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "priezvisko", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("titul_za", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "titul_za", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_narodenia", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_narodenia", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("rodne_cislo", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "rodne_cislo", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("miesto_narodenia", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_narodenia", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("okres_narodenia", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "okres_narodenia", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -2386,88 +2393,88 @@ Namespace detailClenaDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("statna_prislusnost", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "statna_prislusnost", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("narodnost", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "narodnost", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("cislo_op", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_op", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_vydania_op", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_op", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("cislo_pl", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_pl", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_vydania_pl", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_pl", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("cislo_zp", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_zp", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_vydania_zp", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_zp", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("cislo_clenskeho_preukazu_spz", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_clenskeho_preukazu_spz", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("clen_spz_od", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_spz_od", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("clenske_do", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clenske_do", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("cislo_dokladu_clenske", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_dokladu_clenske", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("clen_pz", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_pz", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("clen_pz_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_pz_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("miesto_skusky_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_skusky_z_polovnictva", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("skuska_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("miesto_skusky_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_skusky_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("miesto_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("brokova_zbran", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "brokova_zbran", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kontrolne_strelby_brok", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kontrolne_strelby_brok", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("gulova_zbran", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "gulova_zbran", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kontrolne_strelby_gulova_zbran", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kontrolne_strelby_gulova_zbran", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("najv_vyznamenanie", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "najv_vyznamenanie", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("vyznamenany_kedy", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyznamenany_kedy", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("udelene_tresty", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "udelene_tresty", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("poznamky", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "poznamky", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_narodenia", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_narodenia", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_vydania_op", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_op", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_vydania_pl", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_pl", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_vydania_zp", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_zp", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("skuska_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("vyznamenany_kedy", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyznamenany_kedy", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `clenovia` SET `titul_pred` = ?, `meno` = ?, `priezvisko` = ?, `titul_za` "& _ 
-                "= ?, `datum_narodenia` = ?, `rodne_cislo` = ?, `miesto_narodenia` = ?, `okres_na"& _ 
-                "rodenia` = ?, `bydlisko` = ?, `okres_bydliska` = ?, `psc` = ?, `telefon` = ?, `s"& _ 
-                "tatna_prislusnost` = ?, `narodnost` = ?, `cislo_op` = ?, `datum_vydania_op` = ?,"& _ 
-                " `cislo_pl` = ?, `datum_vydania_pl` = ?, `cislo_zp` = ?, `datum_vydania_zp` = ?,"& _ 
-                " `cislo_clenskeho_preukazu_spz` = ?, `clen_spz_od` = ?, `clenske_do` = ?, `cislo"& _ 
-                "_dokladu_clenske` = ?, `clen_pz` = ?, `clen_pz_id` = ?, `skuska_z_polovnictva` ="& _ 
-                " ?, `miesto_skusky_z_polovnictva` = ?, `skuska_pre_polovnych_hospodarov` = ?, `m"& _ 
-                "iesto_skusky_pre_polovnych_hospodarov` = ?, `vyzsia_skuska_z_polovnictva` = ?, `"& _ 
-                "miesto_vyzsia_skuska_z_polovnictva` = ?, `brokova_zbran` = ?, `kontrolne_strelby"& _ 
-                "_brok` = ?, `gulova_zbran` = ?, `kontrolne_strelby_gulova_zbran` = ?, `najv_vyzn"& _ 
-                "amenanie` = ?, `vyznamenany_kedy` = ?, `udelene_tresty` = ?, `poznamky` = ? WHER"& _ 
+                "= ?, `rodne_cislo` = ?, `miesto_narodenia` = ?, `okres_narodenia` = ?, `bydlisko"& _ 
+                "` = ?, `okres_bydliska` = ?, `psc` = ?, `telefon` = ?, `statna_prislusnost` = ?,"& _ 
+                " `narodnost` = ?, `cislo_op` = ?, `cislo_pl` = ?, `cislo_zp` = ?, `cislo_clenske"& _ 
+                "ho_preukazu_spz` = ?, `clen_spz_od` = ?, `clenske_do` = ?, `cislo_dokladu_clensk"& _ 
+                "e` = ?, `clen_pz` = ?, `clen_pz_id` = ?, `miesto_skusky_z_polovnictva` = ?, `mie"& _ 
+                "sto_skusky_pre_polovnych_hospodarov` = ?, `miesto_vyzsia_skuska_z_polovnictva` ="& _ 
+                " ?, `brokova_zbran` = ?, `kontrolne_strelby_brok` = ?, `gulova_zbran` = ?, `kont"& _ 
+                "rolne_strelby_gulova_zbran` = ?, `najv_vyznamenanie` = ?, `udelene_tresty` = ?, "& _ 
+                "`poznamky` = ?, `datum_narodenia` = ?, `datum_vydania_op` = ?, `datum_vydania_pl"& _ 
+                "` = ?, `datum_vydania_zp` = ?, `skuska_pre_polovnych_hospodarov` = ?, `skuska_z_"& _ 
+                "polovnictva` = ?, `vyznamenany_kedy` = ?, `vyzsia_skuska_z_polovnictva` = ? WHER"& _ 
                 "E ((`id` = ?) AND ((? = 1 AND `titul_pred` IS NULL) OR (`titul_pred` = ?)) AND ("& _ 
                 "(? = 1 AND `meno` IS NULL) OR (`meno` = ?)) AND ((? = 1 AND `priezvisko` IS NULL"& _ 
                 ") OR (`priezvisko` = ?)) AND ((? = 1 AND `titul_za` IS NULL) OR (`titul_za` = ?)"& _ 
-                ") AND ((? = 1 AND `datum_narodenia` IS NULL) OR (`datum_narodenia` = ?)) AND ((?"& _ 
-                " = 1 AND `rodne_cislo` IS NULL) OR (`rodne_cislo` = ?)) AND ((? = 1 AND `miesto_"& _ 
-                "narodenia` IS NULL) OR (`miesto_narodenia` = ?)) AND ((? = 1 AND `okres_narodeni"& _ 
-                "a` IS NULL) OR (`okres_narodenia` = ?)) AND ((? = 1 AND `bydlisko` IS NULL) OR ("& _ 
-                "`bydlisko` = ?)) AND ((? = 1 AND `okres_bydliska` IS NULL) OR (`okres_bydliska` "& _ 
-                "= ?)) AND ((? = 1 AND `psc` IS NULL) OR (`psc` = ?)) AND ((? = 1 AND `telefon` I"& _ 
-                "S NULL) OR (`telefon` = ?)) AND ((? = 1 AND `statna_prislusnost` IS NULL) OR (`s"& _ 
-                "tatna_prislusnost` = ?)) AND ((? = 1 AND `narodnost` IS NULL) OR (`narodnost` = "& _ 
-                "?)) AND ((? = 1 AND `cislo_op` IS NULL) OR (`cislo_op` = ?)) AND ((? = 1 AND `da"& _ 
-                "tum_vydania_op` IS NULL) OR (`datum_vydania_op` = ?)) AND ((? = 1 AND `cislo_pl`"& _ 
-                " IS NULL) OR (`cislo_pl` = ?)) AND ((? = 1 AND `datum_vydania_pl` IS NULL) OR (`"& _ 
-                "datum_vydania_pl` = ?)) AND ((? = 1 AND `cislo_zp` IS NULL) OR (`cislo_zp` = ?))"& _ 
-                " AND ((? = 1 AND `datum_vydania_zp` IS NULL) OR (`datum_vydania_zp` = ?)) AND (("& _ 
-                "? = 1 AND `cislo_clenskeho_preukazu_spz` IS NULL) OR (`cislo_clenskeho_preukazu_"& _ 
-                "spz` = ?)) AND ((? = 1 AND `clen_spz_od` IS NULL) OR (`clen_spz_od` = ?)) AND (("& _ 
-                "? = 1 AND `clenske_do` IS NULL) OR (`clenske_do` = ?)) AND ((? = 1 AND `cislo_do"& _ 
-                "kladu_clenske` IS NULL) OR (`cislo_dokladu_clenske` = ?)) AND ((? = 1 AND `clen_"& _ 
-                "pz` IS NULL) OR (`clen_pz` = ?)) AND ((? = 1 AND `clen_pz_id` IS NULL) OR (`clen"& _ 
-                "_pz_id` = ?)) AND ((? = 1 AND `skuska_z_polovnictva` IS NULL) OR (`skuska_z_polo"& _ 
-                "vnictva` = ?)) AND ((? = 1 AND `miesto_skusky_z_polovnictva` IS NULL) OR (`miest"& _ 
-                "o_skusky_z_polovnictva` = ?)) AND ((? = 1 AND `skuska_pre_polovnych_hospodarov` "& _ 
-                "IS NULL) OR (`skuska_pre_polovnych_hospodarov` = ?)) AND ((? = 1 AND `miesto_sku"& _ 
-                "sky_pre_polovnych_hospodarov` IS NULL) OR (`miesto_skusky_pre_polovnych_hospodar"& _ 
-                "ov` = ?)) AND ((? = 1 AND `vyzsia_skuska_z_polovnictva` IS NULL) OR (`vyzsia_sku"& _ 
-                "ska_z_polovnictva` = ?)) AND ((? = 1 AND `miesto_vyzsia_skuska_z_polovnictva` IS"& _ 
-                " NULL) OR (`miesto_vyzsia_skuska_z_polovnictva` = ?)) AND ((? = 1 AND `brokova_z"& _ 
-                "bran` IS NULL) OR (`brokova_zbran` = ?)) AND ((? = 1 AND `kontrolne_strelby_brok"& _ 
-                "` IS NULL) OR (`kontrolne_strelby_brok` = ?)) AND ((? = 1 AND `gulova_zbran` IS "& _ 
-                "NULL) OR (`gulova_zbran` = ?)) AND ((? = 1 AND `kontrolne_strelby_gulova_zbran` "& _ 
-                "IS NULL) OR (`kontrolne_strelby_gulova_zbran` = ?)) AND ((? = 1 AND `najv_vyznam"& _ 
-                "enanie` IS NULL) OR (`najv_vyznamenanie` = ?)) AND ((? = 1 AND `vyznamenany_kedy"& _ 
-                "` IS NULL) OR (`vyznamenany_kedy` = ?)) AND ((? = 1 AND `udelene_tresty` IS NULL"& _ 
-                ") OR (`udelene_tresty` = ?)) AND ((? = 1 AND `poznamky` IS NULL) OR (`poznamky` "& _ 
+                ") AND ((? = 1 AND `rodne_cislo` IS NULL) OR (`rodne_cislo` = ?)) AND ((? = 1 AND"& _ 
+                " `miesto_narodenia` IS NULL) OR (`miesto_narodenia` = ?)) AND ((? = 1 AND `okres"& _ 
+                "_narodenia` IS NULL) OR (`okres_narodenia` = ?)) AND ((? = 1 AND `bydlisko` IS N"& _ 
+                "ULL) OR (`bydlisko` = ?)) AND ((? = 1 AND `okres_bydliska` IS NULL) OR (`okres_b"& _ 
+                "ydliska` = ?)) AND ((? = 1 AND `psc` IS NULL) OR (`psc` = ?)) AND ((? = 1 AND `t"& _ 
+                "elefon` IS NULL) OR (`telefon` = ?)) AND ((? = 1 AND `statna_prislusnost` IS NUL"& _ 
+                "L) OR (`statna_prislusnost` = ?)) AND ((? = 1 AND `narodnost` IS NULL) OR (`naro"& _ 
+                "dnost` = ?)) AND ((? = 1 AND `cislo_op` IS NULL) OR (`cislo_op` = ?)) AND ((? = "& _ 
+                "1 AND `cislo_pl` IS NULL) OR (`cislo_pl` = ?)) AND ((? = 1 AND `cislo_zp` IS NUL"& _ 
+                "L) OR (`cislo_zp` = ?)) AND ((? = 1 AND `cislo_clenskeho_preukazu_spz` IS NULL) "& _ 
+                "OR (`cislo_clenskeho_preukazu_spz` = ?)) AND ((? = 1 AND `clen_spz_od` IS NULL) "& _ 
+                "OR (`clen_spz_od` = ?)) AND ((? = 1 AND `clenske_do` IS NULL) OR (`clenske_do` ="& _ 
+                " ?)) AND ((? = 1 AND `cislo_dokladu_clenske` IS NULL) OR (`cislo_dokladu_clenske"& _ 
+                "` = ?)) AND ((? = 1 AND `clen_pz` IS NULL) OR (`clen_pz` = ?)) AND ((? = 1 AND `"& _ 
+                "clen_pz_id` IS NULL) OR (`clen_pz_id` = ?)) AND ((? = 1 AND `miesto_skusky_z_pol"& _ 
+                "ovnictva` IS NULL) OR (`miesto_skusky_z_polovnictva` = ?)) AND ((? = 1 AND `mies"& _ 
+                "to_skusky_pre_polovnych_hospodarov` IS NULL) OR (`miesto_skusky_pre_polovnych_ho"& _ 
+                "spodarov` = ?)) AND ((? = 1 AND `miesto_vyzsia_skuska_z_polovnictva` IS NULL) OR"& _ 
+                " (`miesto_vyzsia_skuska_z_polovnictva` = ?)) AND ((? = 1 AND `brokova_zbran` IS "& _ 
+                "NULL) OR (`brokova_zbran` = ?)) AND ((? = 1 AND `kontrolne_strelby_brok` IS NULL"& _ 
+                ") OR (`kontrolne_strelby_brok` = ?)) AND ((? = 1 AND `gulova_zbran` IS NULL) OR "& _ 
+                "(`gulova_zbran` = ?)) AND ((? = 1 AND `kontrolne_strelby_gulova_zbran` IS NULL) "& _ 
+                "OR (`kontrolne_strelby_gulova_zbran` = ?)) AND ((? = 1 AND `najv_vyznamenanie` I"& _ 
+                "S NULL) OR (`najv_vyznamenanie` = ?)) AND ((? = 1 AND `udelene_tresty` IS NULL) "& _ 
+                "OR (`udelene_tresty` = ?)) AND ((? = 1 AND `poznamky` IS NULL) OR (`poznamky` = "& _ 
+                "?)) AND ((? = 1 AND `datum_narodenia` IS NULL) OR (`datum_narodenia` = ?)) AND ("& _ 
+                "(? = 1 AND `datum_vydania_op` IS NULL) OR (`datum_vydania_op` = ?)) AND ((? = 1 "& _ 
+                "AND `datum_vydania_pl` IS NULL) OR (`datum_vydania_pl` = ?)) AND ((? = 1 AND `da"& _ 
+                "tum_vydania_zp` IS NULL) OR (`datum_vydania_zp` = ?)) AND ((? = 1 AND `skuska_pr"& _ 
+                "e_polovnych_hospodarov` IS NULL) OR (`skuska_pre_polovnych_hospodarov` = ?)) AND"& _ 
+                " ((? = 1 AND `skuska_z_polovnictva` IS NULL) OR (`skuska_z_polovnictva` = ?)) AN"& _ 
+                "D ((? = 1 AND `vyznamenany_kedy` IS NULL) OR (`vyznamenany_kedy` = ?)) AND ((? ="& _ 
+                " 1 AND `vyzsia_skuska_z_polovnictva` IS NULL) OR (`vyzsia_skuska_z_polovnictva` "& _ 
                 "= ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("titul_pred", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "titul_pred", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("meno", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "meno", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("priezvisko", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "priezvisko", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("titul_za", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "titul_za", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_narodenia", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_narodenia", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("rodne_cislo", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "rodne_cislo", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("miesto_narodenia", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_narodenia", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("okres_narodenia", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "okres_narodenia", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -2478,31 +2485,32 @@ Namespace detailClenaDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("statna_prislusnost", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "statna_prislusnost", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("narodnost", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "narodnost", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("cislo_op", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_op", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_vydania_op", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_op", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("cislo_pl", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_pl", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_vydania_pl", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_pl", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("cislo_zp", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_zp", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_vydania_zp", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_zp", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("cislo_clenskeho_preukazu_spz", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_clenskeho_preukazu_spz", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("clen_spz_od", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_spz_od", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("clenske_do", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clenske_do", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("cislo_dokladu_clenske", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_dokladu_clenske", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("clen_pz", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_pz", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("clen_pz_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_pz_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("miesto_skusky_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_skusky_z_polovnictva", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("skuska_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("miesto_skusky_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_skusky_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("miesto_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("brokova_zbran", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "brokova_zbran", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kontrolne_strelby_brok", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kontrolne_strelby_brok", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("gulova_zbran", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "gulova_zbran", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kontrolne_strelby_gulova_zbran", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kontrolne_strelby_gulova_zbran", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("najv_vyznamenanie", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "najv_vyznamenanie", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("vyznamenany_kedy", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyznamenany_kedy", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("udelene_tresty", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "udelene_tresty", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("poznamky", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "poznamky", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_narodenia", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_narodenia", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_vydania_op", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_op", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_vydania_pl", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_pl", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("datum_vydania_zp", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_zp", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("skuska_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("vyznamenany_kedy", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyznamenany_kedy", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_titul_pred", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "titul_pred", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_titul_pred", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "titul_pred", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -2512,8 +2520,6 @@ Namespace detailClenaDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_priezvisko", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "priezvisko", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_titul_za", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "titul_za", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_titul_za", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "titul_za", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_narodenia", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_narodenia", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_narodenia", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_narodenia", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_rodne_cislo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "rodne_cislo", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_rodne_cislo", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "rodne_cislo", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_miesto_narodenia", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_narodenia", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2534,16 +2540,10 @@ Namespace detailClenaDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_narodnost", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "narodnost", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_cislo_op", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_op", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_cislo_op", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_op", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_vydania_op", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_op", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_vydania_op", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_op", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_cislo_pl", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_pl", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_cislo_pl", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_pl", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_vydania_pl", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_pl", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_vydania_pl", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_pl", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_cislo_zp", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_zp", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_cislo_zp", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_zp", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_vydania_zp", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_zp", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_vydania_zp", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_zp", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_cislo_clenskeho_preukazu_spz", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_clenskeho_preukazu_spz", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_cislo_clenskeho_preukazu_spz", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "cislo_clenskeho_preukazu_spz", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_clen_spz_od", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_spz_od", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2556,16 +2556,10 @@ Namespace detailClenaDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_clen_pz", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_pz", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_clen_pz_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_pz_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_clen_pz_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "clen_pz_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_miesto_skusky_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_skusky_z_polovnictva", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_miesto_skusky_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_skusky_z_polovnictva", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_skuska_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_skuska_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_miesto_skusky_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_skusky_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_miesto_skusky_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_skusky_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_miesto_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_miesto_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "miesto_vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_brokova_zbran", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "brokova_zbran", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2578,12 +2572,26 @@ Namespace detailClenaDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_kontrolne_strelby_gulova_zbran", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kontrolne_strelby_gulova_zbran", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_najv_vyznamenanie", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "najv_vyznamenanie", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_najv_vyznamenanie", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "najv_vyznamenanie", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_vyznamenany_kedy", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyznamenany_kedy", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_vyznamenany_kedy", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyznamenany_kedy", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_udelene_tresty", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "udelene_tresty", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_udelene_tresty", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "udelene_tresty", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_poznamky", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "poznamky", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_poznamky", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "poznamky", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_narodenia", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_narodenia", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_narodenia", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_narodenia", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_vydania_op", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_op", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_vydania_op", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_op", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_vydania_pl", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_pl", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_vydania_pl", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_pl", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_datum_vydania_zp", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_zp", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_datum_vydania_zp", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "datum_vydania_zp", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_skuska_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_skuska_pre_polovnych_hospodarov", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_vyznamenany_kedy", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyznamenany_kedy", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_vyznamenany_kedy", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyznamenany_kedy", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_vyzsia_skuska_z_polovnictva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -2597,16 +2605,16 @@ Namespace detailClenaDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT     id, titul_pred, meno, priezvisko, titul_za, datum_narodenia, rodne_cis"& _ 
-                "lo, miesto_narodenia, okres_narodenia, bydlisko, okres_bydliska, psc, telefon, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      statna_prislusnost, narodnost, cislo_op, datum_vydania_op"& _ 
-                ", cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                    "& _ 
-                "  cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, "& _ 
-                "clen_pz, clen_pz_id, skuska_z_polovnictva, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      miesto_skusky"& _ 
-                "_z_polovnictva, skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hos"& _ 
-                "podarov, vyzsia_skuska_z_polovnictva, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      miesto_vyzsia_skus"& _ 
-                "ka_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne"& _ 
-                "_strelby_gulova_zbran, najv_vyznamenanie, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      vyznamenany_ke"& _ 
-                "dy, udelene_tresty, poznamky"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         clenovia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (id = ?)"
+            Me._commandCollection(0).CommandText = "SELECT id, titul_pred, meno, priezvisko, titul_za, rodne_cislo, miesto_narodenia,"& _ 
+                " okres_narodenia, bydlisko, okres_bydliska, psc, telefon, statna_prislusnost, na"& _ 
+                "rodnost, cislo_op, cislo_pl, cislo_zp, cislo_clenskeho_preukazu_spz, clen_spz_od"& _ 
+                ", clenske_do, cislo_dokladu_clenske, clen_pz, clen_pz_id, miesto_skusky_z_polovn"& _ 
+                "ictva, miesto_skusky_pre_polovnych_hospodarov, miesto_vyzsia_skuska_z_polovnictv"& _ 
+                "a, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gulova"& _ 
+                "_zbran, najv_vyznamenanie, udelene_tresty, poznamky, datum_narodenia, datum_vyda"& _ 
+                "nia_op, datum_vydania_pl, datum_vydania_zp, skuska_pre_polovnych_hospodarov, sku"& _ 
+                "ska_z_polovnictva, vyznamenany_kedy, vyzsia_skuska_z_polovnictva FROM clenovia W"& _ 
+                "HERE (id = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -2668,7 +2676,6 @@ Namespace detailClenaDataSetTableAdapters
                     ByVal Original_meno As String,  _
                     ByVal Original_priezvisko As String,  _
                     ByVal Original_titul_za As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_datum_narodenia As Global.System.Nullable(Of Date),  _
                     ByVal Original_rodne_cislo As String,  _
                     ByVal Original_miesto_narodenia As String,  _
                     ByVal Original_okres_narodenia As String,  _
@@ -2679,31 +2686,32 @@ Namespace detailClenaDataSetTableAdapters
                     ByVal Original_statna_prislusnost As Global.System.Nullable(Of Integer),  _
                     ByVal Original_narodnost As Global.System.Nullable(Of Integer),  _
                     ByVal Original_cislo_op As String,  _
-                    ByVal Original_datum_vydania_op As Global.System.Nullable(Of Date),  _
                     ByVal Original_cislo_pl As String,  _
-                    ByVal Original_datum_vydania_pl As Global.System.Nullable(Of Date),  _
                     ByVal Original_cislo_zp As String,  _
-                    ByVal Original_datum_vydania_zp As Global.System.Nullable(Of Date),  _
                     ByVal Original_cislo_clenskeho_preukazu_spz As String,  _
                     ByVal Original_clen_spz_od As String,  _
                     ByVal Original_clenske_do As String,  _
                     ByVal Original_cislo_dokladu_clenske As String,  _
                     ByVal Original_clen_pz As String,  _
                     ByVal Original_clen_pz_id As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_skuska_z_polovnictva As Global.System.Nullable(Of Date),  _
                     ByVal Original_miesto_skusky_z_polovnictva As String,  _
-                    ByVal Original_skuska_pre_polovnych_hospodarov As Global.System.Nullable(Of Date),  _
                     ByVal Original_miesto_skusky_pre_polovnych_hospodarov As String,  _
-                    ByVal Original_vyzsia_skuska_z_polovnictva As Global.System.Nullable(Of Date),  _
                     ByVal Original_miesto_vyzsia_skuska_z_polovnictva As String,  _
                     ByVal Original_brokova_zbran As String,  _
                     ByVal Original_kontrolne_strelby_brok As String,  _
                     ByVal Original_gulova_zbran As String,  _
                     ByVal Original_kontrolne_strelby_gulova_zbran As String,  _
                     ByVal Original_najv_vyznamenanie As String,  _
-                    ByVal Original_vyznamenany_kedy As Global.System.Nullable(Of Date),  _
                     ByVal Original_udelene_tresty As String,  _
-                    ByVal Original_poznamky As String) As Integer
+                    ByVal Original_poznamky As String,  _
+                    ByVal Original_datum_narodenia As String,  _
+                    ByVal Original_datum_vydania_op As String,  _
+                    ByVal Original_datum_vydania_pl As String,  _
+                    ByVal Original_datum_vydania_zp As String,  _
+                    ByVal Original_skuska_pre_polovnych_hospodarov As String,  _
+                    ByVal Original_skuska_z_polovnictva As String,  _
+                    ByVal Original_vyznamenany_kedy As String,  _
+                    ByVal Original_vyzsia_skuska_z_polovnictva As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_id,Integer)
             If (Original_titul_pred.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -2733,257 +2741,257 @@ Namespace detailClenaDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
-            If (Original_datum_narodenia.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_datum_narodenia.Value,Date)
-            Else
+            If (Original_rodne_cislo Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_rodne_cislo,String)
             End If
-            If (Original_rodne_cislo Is Nothing) Then
+            If (Original_miesto_narodenia Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_rodne_cislo,String)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_miesto_narodenia,String)
             End If
-            If (Original_miesto_narodenia Is Nothing) Then
+            If (Original_okres_narodenia Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_miesto_narodenia,String)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_okres_narodenia,String)
             End If
-            If (Original_okres_narodenia Is Nothing) Then
+            If (Original_bydlisko Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_okres_narodenia,String)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_bydlisko,String)
             End If
-            If (Original_bydlisko Is Nothing) Then
+            If (Original_okres_bydliska Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_bydlisko,String)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_okres_bydliska,String)
             End If
-            If (Original_okres_bydliska Is Nothing) Then
+            If (Original_psc Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_okres_bydliska,String)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_psc,String)
             End If
-            If (Original_psc Is Nothing) Then
+            If (Original_telefon Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_psc,String)
-            End If
-            If (Original_telefon Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_telefon,String)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_telefon,String)
             End If
             If (Original_statna_prislusnost.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_statna_prislusnost.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            If (Original_narodnost.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_statna_prislusnost.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_narodnost.Value,Integer)
             Else
                 Me.Adapter.DeleteCommand.Parameters(25).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(26).Value = Global.System.DBNull.Value
             End If
-            If (Original_narodnost.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_narodnost.Value,Integer)
-            Else
+            If (Original_cislo_op Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(27).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(28).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_cislo_op,String)
             End If
-            If (Original_cislo_op Is Nothing) Then
+            If (Original_cislo_pl Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(29).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(30).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_cislo_op,String)
+                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_cislo_pl,String)
             End If
-            If (Original_datum_vydania_op.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(Original_datum_vydania_op.Value,Date)
-            Else
+            If (Original_cislo_zp Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(31).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(32).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(Original_cislo_zp,String)
             End If
-            If (Original_cislo_pl Is Nothing) Then
+            If (Original_cislo_clenskeho_preukazu_spz Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(33).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(34).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(33).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(34).Value = CType(Original_cislo_pl,String)
+                Me.Adapter.DeleteCommand.Parameters(34).Value = CType(Original_cislo_clenskeho_preukazu_spz,String)
             End If
-            If (Original_datum_vydania_pl.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(36).Value = CType(Original_datum_vydania_pl.Value,Date)
-            Else
+            If (Original_clen_spz_od Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(35).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(36).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(36).Value = CType(Original_clen_spz_od,String)
             End If
-            If (Original_cislo_zp Is Nothing) Then
+            If (Original_clenske_do Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(37).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(38).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(37).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(38).Value = CType(Original_cislo_zp,String)
+                Me.Adapter.DeleteCommand.Parameters(38).Value = CType(Original_clenske_do,String)
             End If
-            If (Original_datum_vydania_zp.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(40).Value = CType(Original_datum_vydania_zp.Value,Date)
-            Else
+            If (Original_cislo_dokladu_clenske Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(39).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(40).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(40).Value = CType(Original_cislo_dokladu_clenske,String)
             End If
-            If (Original_cislo_clenskeho_preukazu_spz Is Nothing) Then
+            If (Original_clen_pz Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(41).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(42).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(41).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(Original_cislo_clenskeho_preukazu_spz,String)
+                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(Original_clen_pz,String)
             End If
-            If (Original_clen_spz_od Is Nothing) Then
+            If (Original_clen_pz_id.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(44).Value = CType(Original_clen_pz_id.Value,Integer)
+            Else
                 Me.Adapter.DeleteCommand.Parameters(43).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(44).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(44).Value = CType(Original_clen_spz_od,String)
             End If
-            If (Original_clenske_do Is Nothing) Then
+            If (Original_miesto_skusky_z_polovnictva Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(45).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(46).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(45).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(46).Value = CType(Original_clenske_do,String)
+                Me.Adapter.DeleteCommand.Parameters(46).Value = CType(Original_miesto_skusky_z_polovnictva,String)
             End If
-            If (Original_cislo_dokladu_clenske Is Nothing) Then
+            If (Original_miesto_skusky_pre_polovnych_hospodarov Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(47).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(48).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(47).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_cislo_dokladu_clenske,String)
+                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_miesto_skusky_pre_polovnych_hospodarov,String)
             End If
-            If (Original_clen_pz Is Nothing) Then
+            If (Original_miesto_vyzsia_skuska_z_polovnictva Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(49).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(50).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(49).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(50).Value = CType(Original_clen_pz,String)
+                Me.Adapter.DeleteCommand.Parameters(50).Value = CType(Original_miesto_vyzsia_skuska_z_polovnictva,String)
             End If
-            If (Original_clen_pz_id.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(51).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(52).Value = CType(Original_clen_pz_id.Value,Integer)
-            Else
+            If (Original_brokova_zbran Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(51).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(52).Value = Global.System.DBNull.Value
-            End If
-            If (Original_skuska_z_polovnictva.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(53).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(54).Value = CType(Original_skuska_z_polovnictva.Value,Date)
             Else
+                Me.Adapter.DeleteCommand.Parameters(51).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(52).Value = CType(Original_brokova_zbran,String)
+            End If
+            If (Original_kontrolne_strelby_brok Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(53).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(54).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(53).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(54).Value = CType(Original_kontrolne_strelby_brok,String)
             End If
-            If (Original_miesto_skusky_z_polovnictva Is Nothing) Then
+            If (Original_gulova_zbran Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(55).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(56).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(55).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(56).Value = CType(Original_miesto_skusky_z_polovnictva,String)
+                Me.Adapter.DeleteCommand.Parameters(56).Value = CType(Original_gulova_zbran,String)
             End If
-            If (Original_skuska_pre_polovnych_hospodarov.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(57).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(58).Value = CType(Original_skuska_pre_polovnych_hospodarov.Value,Date)
-            Else
+            If (Original_kontrolne_strelby_gulova_zbran Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(57).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(58).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(57).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(58).Value = CType(Original_kontrolne_strelby_gulova_zbran,String)
             End If
-            If (Original_miesto_skusky_pre_polovnych_hospodarov Is Nothing) Then
+            If (Original_najv_vyznamenanie Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(59).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(60).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(59).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(60).Value = CType(Original_miesto_skusky_pre_polovnych_hospodarov,String)
+                Me.Adapter.DeleteCommand.Parameters(60).Value = CType(Original_najv_vyznamenanie,String)
             End If
-            If (Original_vyzsia_skuska_z_polovnictva.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(61).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(62).Value = CType(Original_vyzsia_skuska_z_polovnictva.Value,Date)
-            Else
+            If (Original_udelene_tresty Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(61).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(62).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(61).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(62).Value = CType(Original_udelene_tresty,String)
             End If
-            If (Original_miesto_vyzsia_skuska_z_polovnictva Is Nothing) Then
+            If (Original_poznamky Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(63).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(64).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(63).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(64).Value = CType(Original_miesto_vyzsia_skuska_z_polovnictva,String)
+                Me.Adapter.DeleteCommand.Parameters(64).Value = CType(Original_poznamky,String)
             End If
-            If (Original_brokova_zbran Is Nothing) Then
+            If (Original_datum_narodenia Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(65).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(66).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(65).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(66).Value = CType(Original_brokova_zbran,String)
+                Me.Adapter.DeleteCommand.Parameters(66).Value = CType(Original_datum_narodenia,String)
             End If
-            If (Original_kontrolne_strelby_brok Is Nothing) Then
+            If (Original_datum_vydania_op Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(67).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(68).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(67).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(68).Value = CType(Original_kontrolne_strelby_brok,String)
+                Me.Adapter.DeleteCommand.Parameters(68).Value = CType(Original_datum_vydania_op,String)
             End If
-            If (Original_gulova_zbran Is Nothing) Then
+            If (Original_datum_vydania_pl Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(69).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(70).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(69).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(70).Value = CType(Original_gulova_zbran,String)
+                Me.Adapter.DeleteCommand.Parameters(70).Value = CType(Original_datum_vydania_pl,String)
             End If
-            If (Original_kontrolne_strelby_gulova_zbran Is Nothing) Then
+            If (Original_datum_vydania_zp Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(71).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(72).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(71).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(72).Value = CType(Original_kontrolne_strelby_gulova_zbran,String)
+                Me.Adapter.DeleteCommand.Parameters(72).Value = CType(Original_datum_vydania_zp,String)
             End If
-            If (Original_najv_vyznamenanie Is Nothing) Then
+            If (Original_skuska_pre_polovnych_hospodarov Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(73).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(74).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(73).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(74).Value = CType(Original_najv_vyznamenanie,String)
+                Me.Adapter.DeleteCommand.Parameters(74).Value = CType(Original_skuska_pre_polovnych_hospodarov,String)
             End If
-            If (Original_vyznamenany_kedy.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(75).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(76).Value = CType(Original_vyznamenany_kedy.Value,Date)
-            Else
+            If (Original_skuska_z_polovnictva Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(75).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(76).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(75).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(76).Value = CType(Original_skuska_z_polovnictva,String)
             End If
-            If (Original_udelene_tresty Is Nothing) Then
+            If (Original_vyznamenany_kedy Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(77).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(78).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(77).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(78).Value = CType(Original_udelene_tresty,String)
+                Me.Adapter.DeleteCommand.Parameters(78).Value = CType(Original_vyznamenany_kedy,String)
             End If
-            If (Original_poznamky Is Nothing) Then
+            If (Original_vyzsia_skuska_z_polovnictva Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(79).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(80).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(79).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(80).Value = CType(Original_poznamky,String)
+                Me.Adapter.DeleteCommand.Parameters(80).Value = CType(Original_vyzsia_skuska_z_polovnictva,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3008,7 +3016,6 @@ Namespace detailClenaDataSetTableAdapters
                     ByVal meno As String,  _
                     ByVal priezvisko As String,  _
                     ByVal titul_za As Global.System.Nullable(Of Integer),  _
-                    ByVal datum_narodenia As Global.System.Nullable(Of Date),  _
                     ByVal rodne_cislo As String,  _
                     ByVal miesto_narodenia As String,  _
                     ByVal okres_narodenia As String,  _
@@ -3019,31 +3026,32 @@ Namespace detailClenaDataSetTableAdapters
                     ByVal statna_prislusnost As Global.System.Nullable(Of Integer),  _
                     ByVal narodnost As Global.System.Nullable(Of Integer),  _
                     ByVal cislo_op As String,  _
-                    ByVal datum_vydania_op As Global.System.Nullable(Of Date),  _
                     ByVal cislo_pl As String,  _
-                    ByVal datum_vydania_pl As Global.System.Nullable(Of Date),  _
                     ByVal cislo_zp As String,  _
-                    ByVal datum_vydania_zp As Global.System.Nullable(Of Date),  _
                     ByVal cislo_clenskeho_preukazu_spz As String,  _
                     ByVal clen_spz_od As String,  _
                     ByVal clenske_do As String,  _
                     ByVal cislo_dokladu_clenske As String,  _
                     ByVal clen_pz As String,  _
                     ByVal clen_pz_id As Global.System.Nullable(Of Integer),  _
-                    ByVal skuska_z_polovnictva As Global.System.Nullable(Of Date),  _
                     ByVal miesto_skusky_z_polovnictva As String,  _
-                    ByVal skuska_pre_polovnych_hospodarov As Global.System.Nullable(Of Date),  _
                     ByVal miesto_skusky_pre_polovnych_hospodarov As String,  _
-                    ByVal vyzsia_skuska_z_polovnictva As Global.System.Nullable(Of Date),  _
                     ByVal miesto_vyzsia_skuska_z_polovnictva As String,  _
                     ByVal brokova_zbran As String,  _
                     ByVal kontrolne_strelby_brok As String,  _
                     ByVal gulova_zbran As String,  _
                     ByVal kontrolne_strelby_gulova_zbran As String,  _
                     ByVal najv_vyznamenanie As String,  _
-                    ByVal vyznamenany_kedy As Global.System.Nullable(Of Date),  _
                     ByVal udelene_tresty As String,  _
-                    ByVal poznamky As String) As Integer
+                    ByVal poznamky As String,  _
+                    ByVal datum_narodenia As String,  _
+                    ByVal datum_vydania_op As String,  _
+                    ByVal datum_vydania_pl As String,  _
+                    ByVal datum_vydania_zp As String,  _
+                    ByVal skuska_pre_polovnych_hospodarov As String,  _
+                    ByVal skuska_z_polovnictva As String,  _
+                    ByVal vyznamenany_kedy As String,  _
+                    ByVal vyzsia_skuska_z_polovnictva As String) As Integer
             If (titul_pred.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(titul_pred.Value,Integer)
             Else
@@ -3064,185 +3072,185 @@ Namespace detailClenaDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
-            If (datum_narodenia.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(datum_narodenia.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
             If (rodne_cislo Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(rodne_cislo,String)
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(rodne_cislo,String)
             End If
             If (miesto_narodenia Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(miesto_narodenia,String)
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(miesto_narodenia,String)
             End If
             If (okres_narodenia Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(okres_narodenia,String)
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(okres_narodenia,String)
             End If
             If (bydlisko Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(bydlisko,String)
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(bydlisko,String)
             End If
             If (okres_bydliska Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(9).Value = CType(okres_bydliska,String)
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(okres_bydliska,String)
             End If
             If (psc Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(psc,String)
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(psc,String)
             End If
             If (telefon Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(11).Value = CType(telefon,String)
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(telefon,String)
             End If
             If (statna_prislusnost.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(12).Value = CType(statna_prislusnost.Value,Integer)
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(statna_prislusnost.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (narodnost.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(12).Value = CType(narodnost.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
             End If
-            If (narodnost.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(13).Value = CType(narodnost.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
-            End If
             If (cislo_op Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(14).Value = CType(cislo_op,String)
-            End If
-            If (datum_vydania_op.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(15).Value = CType(datum_vydania_op.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(13).Value = CType(cislo_op,String)
             End If
             If (cislo_pl Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(16).Value = CType(cislo_pl,String)
-            End If
-            If (datum_vydania_pl.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(17).Value = CType(datum_vydania_pl.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(14).Value = CType(cislo_pl,String)
             End If
             If (cislo_zp Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(18).Value = CType(cislo_zp,String)
-            End If
-            If (datum_vydania_zp.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(19).Value = CType(datum_vydania_zp.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(15).Value = CType(cislo_zp,String)
             End If
             If (cislo_clenskeho_preukazu_spz Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(20).Value = CType(cislo_clenskeho_preukazu_spz,String)
+                Me.Adapter.InsertCommand.Parameters(16).Value = CType(cislo_clenskeho_preukazu_spz,String)
             End If
             If (clen_spz_od Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(21).Value = CType(clen_spz_od,String)
+                Me.Adapter.InsertCommand.Parameters(17).Value = CType(clen_spz_od,String)
             End If
             If (clenske_do Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(22).Value = CType(clenske_do,String)
+                Me.Adapter.InsertCommand.Parameters(18).Value = CType(clenske_do,String)
             End If
             If (cislo_dokladu_clenske Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(23).Value = CType(cislo_dokladu_clenske,String)
+                Me.Adapter.InsertCommand.Parameters(19).Value = CType(cislo_dokladu_clenske,String)
             End If
             If (clen_pz Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(24).Value = CType(clen_pz,String)
+                Me.Adapter.InsertCommand.Parameters(20).Value = CType(clen_pz,String)
             End If
             If (clen_pz_id.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(25).Value = CType(clen_pz_id.Value,Integer)
+                Me.Adapter.InsertCommand.Parameters(21).Value = CType(clen_pz_id.Value,Integer)
             Else
-                Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
-            End If
-            If (skuska_z_polovnictva.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(26).Value = CType(skuska_z_polovnictva.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
             End If
             If (miesto_skusky_z_polovnictva Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(27).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(27).Value = CType(miesto_skusky_z_polovnictva,String)
-            End If
-            If (skuska_pre_polovnych_hospodarov.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(28).Value = CType(skuska_pre_polovnych_hospodarov.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(28).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(22).Value = CType(miesto_skusky_z_polovnictva,String)
             End If
             If (miesto_skusky_pre_polovnych_hospodarov Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(29).Value = CType(miesto_skusky_pre_polovnych_hospodarov,String)
-            End If
-            If (vyzsia_skuska_z_polovnictva.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(30).Value = CType(vyzsia_skuska_z_polovnictva.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(30).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(23).Value = CType(miesto_skusky_pre_polovnych_hospodarov,String)
             End If
             If (miesto_vyzsia_skuska_z_polovnictva Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(31).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(31).Value = CType(miesto_vyzsia_skuska_z_polovnictva,String)
+                Me.Adapter.InsertCommand.Parameters(24).Value = CType(miesto_vyzsia_skuska_z_polovnictva,String)
             End If
             If (brokova_zbran Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(32).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(32).Value = CType(brokova_zbran,String)
+                Me.Adapter.InsertCommand.Parameters(25).Value = CType(brokova_zbran,String)
             End If
             If (kontrolne_strelby_brok Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(33).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(26).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(33).Value = CType(kontrolne_strelby_brok,String)
+                Me.Adapter.InsertCommand.Parameters(26).Value = CType(kontrolne_strelby_brok,String)
             End If
             If (gulova_zbran Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(34).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(27).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(34).Value = CType(gulova_zbran,String)
+                Me.Adapter.InsertCommand.Parameters(27).Value = CType(gulova_zbran,String)
             End If
             If (kontrolne_strelby_gulova_zbran Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(35).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(28).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(35).Value = CType(kontrolne_strelby_gulova_zbran,String)
+                Me.Adapter.InsertCommand.Parameters(28).Value = CType(kontrolne_strelby_gulova_zbran,String)
             End If
             If (najv_vyznamenanie Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(36).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(36).Value = CType(najv_vyznamenanie,String)
-            End If
-            If (vyznamenany_kedy.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(37).Value = CType(vyznamenany_kedy.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(37).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(29).Value = CType(najv_vyznamenanie,String)
             End If
             If (udelene_tresty Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(38).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(30).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(38).Value = CType(udelene_tresty,String)
+                Me.Adapter.InsertCommand.Parameters(30).Value = CType(udelene_tresty,String)
             End If
             If (poznamky Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(31).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(31).Value = CType(poznamky,String)
+            End If
+            If (datum_narodenia Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(32).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(32).Value = CType(datum_narodenia,String)
+            End If
+            If (datum_vydania_op Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(33).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(33).Value = CType(datum_vydania_op,String)
+            End If
+            If (datum_vydania_pl Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(34).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(34).Value = CType(datum_vydania_pl,String)
+            End If
+            If (datum_vydania_zp Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(35).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(35).Value = CType(datum_vydania_zp,String)
+            End If
+            If (skuska_pre_polovnych_hospodarov Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(36).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(36).Value = CType(skuska_pre_polovnych_hospodarov,String)
+            End If
+            If (skuska_z_polovnictva Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(37).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(37).Value = CType(skuska_z_polovnictva,String)
+            End If
+            If (vyznamenany_kedy Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(38).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(38).Value = CType(vyznamenany_kedy,String)
+            End If
+            If (vyzsia_skuska_z_polovnictva Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(39).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(39).Value = CType(poznamky,String)
+                Me.Adapter.InsertCommand.Parameters(39).Value = CType(vyzsia_skuska_z_polovnictva,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3267,7 +3275,6 @@ Namespace detailClenaDataSetTableAdapters
                     ByVal meno As String,  _
                     ByVal priezvisko As String,  _
                     ByVal titul_za As Global.System.Nullable(Of Integer),  _
-                    ByVal datum_narodenia As Global.System.Nullable(Of Date),  _
                     ByVal rodne_cislo As String,  _
                     ByVal miesto_narodenia As String,  _
                     ByVal okres_narodenia As String,  _
@@ -3278,37 +3285,37 @@ Namespace detailClenaDataSetTableAdapters
                     ByVal statna_prislusnost As Global.System.Nullable(Of Integer),  _
                     ByVal narodnost As Global.System.Nullable(Of Integer),  _
                     ByVal cislo_op As String,  _
-                    ByVal datum_vydania_op As Global.System.Nullable(Of Date),  _
                     ByVal cislo_pl As String,  _
-                    ByVal datum_vydania_pl As Global.System.Nullable(Of Date),  _
                     ByVal cislo_zp As String,  _
-                    ByVal datum_vydania_zp As Global.System.Nullable(Of Date),  _
                     ByVal cislo_clenskeho_preukazu_spz As String,  _
                     ByVal clen_spz_od As String,  _
                     ByVal clenske_do As String,  _
                     ByVal cislo_dokladu_clenske As String,  _
                     ByVal clen_pz As String,  _
                     ByVal clen_pz_id As Global.System.Nullable(Of Integer),  _
-                    ByVal skuska_z_polovnictva As Global.System.Nullable(Of Date),  _
                     ByVal miesto_skusky_z_polovnictva As String,  _
-                    ByVal skuska_pre_polovnych_hospodarov As Global.System.Nullable(Of Date),  _
                     ByVal miesto_skusky_pre_polovnych_hospodarov As String,  _
-                    ByVal vyzsia_skuska_z_polovnictva As Global.System.Nullable(Of Date),  _
                     ByVal miesto_vyzsia_skuska_z_polovnictva As String,  _
                     ByVal brokova_zbran As String,  _
                     ByVal kontrolne_strelby_brok As String,  _
                     ByVal gulova_zbran As String,  _
                     ByVal kontrolne_strelby_gulova_zbran As String,  _
                     ByVal najv_vyznamenanie As String,  _
-                    ByVal vyznamenany_kedy As Global.System.Nullable(Of Date),  _
                     ByVal udelene_tresty As String,  _
                     ByVal poznamky As String,  _
+                    ByVal datum_narodenia As String,  _
+                    ByVal datum_vydania_op As String,  _
+                    ByVal datum_vydania_pl As String,  _
+                    ByVal datum_vydania_zp As String,  _
+                    ByVal skuska_pre_polovnych_hospodarov As String,  _
+                    ByVal skuska_z_polovnictva As String,  _
+                    ByVal vyznamenany_kedy As String,  _
+                    ByVal vyzsia_skuska_z_polovnictva As String,  _
                     ByVal Original_id As Integer,  _
                     ByVal Original_titul_pred As Global.System.Nullable(Of Integer),  _
                     ByVal Original_meno As String,  _
                     ByVal Original_priezvisko As String,  _
                     ByVal Original_titul_za As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_datum_narodenia As Global.System.Nullable(Of Date),  _
                     ByVal Original_rodne_cislo As String,  _
                     ByVal Original_miesto_narodenia As String,  _
                     ByVal Original_okres_narodenia As String,  _
@@ -3319,31 +3326,32 @@ Namespace detailClenaDataSetTableAdapters
                     ByVal Original_statna_prislusnost As Global.System.Nullable(Of Integer),  _
                     ByVal Original_narodnost As Global.System.Nullable(Of Integer),  _
                     ByVal Original_cislo_op As String,  _
-                    ByVal Original_datum_vydania_op As Global.System.Nullable(Of Date),  _
                     ByVal Original_cislo_pl As String,  _
-                    ByVal Original_datum_vydania_pl As Global.System.Nullable(Of Date),  _
                     ByVal Original_cislo_zp As String,  _
-                    ByVal Original_datum_vydania_zp As Global.System.Nullable(Of Date),  _
                     ByVal Original_cislo_clenskeho_preukazu_spz As String,  _
                     ByVal Original_clen_spz_od As String,  _
                     ByVal Original_clenske_do As String,  _
                     ByVal Original_cislo_dokladu_clenske As String,  _
                     ByVal Original_clen_pz As String,  _
                     ByVal Original_clen_pz_id As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_skuska_z_polovnictva As Global.System.Nullable(Of Date),  _
                     ByVal Original_miesto_skusky_z_polovnictva As String,  _
-                    ByVal Original_skuska_pre_polovnych_hospodarov As Global.System.Nullable(Of Date),  _
                     ByVal Original_miesto_skusky_pre_polovnych_hospodarov As String,  _
-                    ByVal Original_vyzsia_skuska_z_polovnictva As Global.System.Nullable(Of Date),  _
                     ByVal Original_miesto_vyzsia_skuska_z_polovnictva As String,  _
                     ByVal Original_brokova_zbran As String,  _
                     ByVal Original_kontrolne_strelby_brok As String,  _
                     ByVal Original_gulova_zbran As String,  _
                     ByVal Original_kontrolne_strelby_gulova_zbran As String,  _
                     ByVal Original_najv_vyznamenanie As String,  _
-                    ByVal Original_vyznamenany_kedy As Global.System.Nullable(Of Date),  _
                     ByVal Original_udelene_tresty As String,  _
-                    ByVal Original_poznamky As String) As Integer
+                    ByVal Original_poznamky As String,  _
+                    ByVal Original_datum_narodenia As String,  _
+                    ByVal Original_datum_vydania_op As String,  _
+                    ByVal Original_datum_vydania_pl As String,  _
+                    ByVal Original_datum_vydania_zp As String,  _
+                    ByVal Original_skuska_pre_polovnych_hospodarov As String,  _
+                    ByVal Original_skuska_z_polovnictva As String,  _
+                    ByVal Original_vyznamenany_kedy As String,  _
+                    ByVal Original_vyzsia_skuska_z_polovnictva As String) As Integer
             If (titul_pred.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(titul_pred.Value,Integer)
             Else
@@ -3364,185 +3372,185 @@ Namespace detailClenaDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
-            If (datum_narodenia.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(datum_narodenia.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
             If (rodne_cislo Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(rodne_cislo,String)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(rodne_cislo,String)
             End If
             If (miesto_narodenia Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(miesto_narodenia,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(miesto_narodenia,String)
             End If
             If (okres_narodenia Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(okres_narodenia,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(okres_narodenia,String)
             End If
             If (bydlisko Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(bydlisko,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(bydlisko,String)
             End If
             If (okres_bydliska Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(okres_bydliska,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(okres_bydliska,String)
             End If
             If (psc Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(psc,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(psc,String)
             End If
             If (telefon Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(telefon,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(telefon,String)
             End If
             If (statna_prislusnost.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(statna_prislusnost.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(statna_prislusnost.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (narodnost.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(narodnost.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             End If
-            If (narodnost.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(narodnost.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
-            End If
             If (cislo_op Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(cislo_op,String)
-            End If
-            If (datum_vydania_op.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(datum_vydania_op.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(cislo_op,String)
             End If
             If (cislo_pl Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(cislo_pl,String)
-            End If
-            If (datum_vydania_pl.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(datum_vydania_pl.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(cislo_pl,String)
             End If
             If (cislo_zp Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(cislo_zp,String)
-            End If
-            If (datum_vydania_zp.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(datum_vydania_zp.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(cislo_zp,String)
             End If
             If (cislo_clenskeho_preukazu_spz Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(cislo_clenskeho_preukazu_spz,String)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(cislo_clenskeho_preukazu_spz,String)
             End If
             If (clen_spz_od Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(clen_spz_od,String)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(clen_spz_od,String)
             End If
             If (clenske_do Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(clenske_do,String)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(clenske_do,String)
             End If
             If (cislo_dokladu_clenske Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(cislo_dokladu_clenske,String)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(cislo_dokladu_clenske,String)
             End If
             If (clen_pz Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(clen_pz,String)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(clen_pz,String)
             End If
             If (clen_pz_id.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(clen_pz_id.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(clen_pz_id.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
-            End If
-            If (skuska_z_polovnictva.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(skuska_z_polovnictva.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             End If
             If (miesto_skusky_z_polovnictva Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(miesto_skusky_z_polovnictva,String)
-            End If
-            If (skuska_pre_polovnych_hospodarov.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(skuska_pre_polovnych_hospodarov.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(miesto_skusky_z_polovnictva,String)
             End If
             If (miesto_skusky_pre_polovnych_hospodarov Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(miesto_skusky_pre_polovnych_hospodarov,String)
-            End If
-            If (vyzsia_skuska_z_polovnictva.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(vyzsia_skuska_z_polovnictva.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(miesto_skusky_pre_polovnych_hospodarov,String)
             End If
             If (miesto_vyzsia_skuska_z_polovnictva Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(miesto_vyzsia_skuska_z_polovnictva,String)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(miesto_vyzsia_skuska_z_polovnictva,String)
             End If
             If (brokova_zbran Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(brokova_zbran,String)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(brokova_zbran,String)
             End If
             If (kontrolne_strelby_brok Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(kontrolne_strelby_brok,String)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(kontrolne_strelby_brok,String)
             End If
             If (gulova_zbran Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(gulova_zbran,String)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(gulova_zbran,String)
             End If
             If (kontrolne_strelby_gulova_zbran Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(kontrolne_strelby_gulova_zbran,String)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(kontrolne_strelby_gulova_zbran,String)
             End If
             If (najv_vyznamenanie Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(najv_vyznamenanie,String)
-            End If
-            If (vyznamenany_kedy.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(vyznamenany_kedy.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(najv_vyznamenanie,String)
             End If
             If (udelene_tresty Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(udelene_tresty,String)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(udelene_tresty,String)
             End If
             If (poznamky Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(poznamky,String)
+            End If
+            If (datum_narodenia Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(datum_narodenia,String)
+            End If
+            If (datum_vydania_op Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(datum_vydania_op,String)
+            End If
+            If (datum_vydania_pl Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(datum_vydania_pl,String)
+            End If
+            If (datum_vydania_zp Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(datum_vydania_zp,String)
+            End If
+            If (skuska_pre_polovnych_hospodarov Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(skuska_pre_polovnych_hospodarov,String)
+            End If
+            If (skuska_z_polovnictva Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(skuska_z_polovnictva,String)
+            End If
+            If (vyznamenany_kedy Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(vyznamenany_kedy,String)
+            End If
+            If (vyzsia_skuska_z_polovnictva Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(poznamky,String)
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(vyzsia_skuska_z_polovnictva,String)
             End If
             Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_id,Integer)
             If (Original_titul_pred.HasValue = true) Then
@@ -3573,257 +3581,257 @@ Namespace detailClenaDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(47).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(48).Value = Global.System.DBNull.Value
             End If
-            If (Original_datum_narodenia.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(Original_datum_narodenia.Value,Date)
-            Else
+            If (Original_rodne_cislo Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(49).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(50).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(Original_rodne_cislo,String)
             End If
-            If (Original_rodne_cislo Is Nothing) Then
+            If (Original_miesto_narodenia Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(51).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(52).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(51).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(Original_rodne_cislo,String)
+                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(Original_miesto_narodenia,String)
             End If
-            If (Original_miesto_narodenia Is Nothing) Then
+            If (Original_okres_narodenia Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(53).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(54).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(53).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(Original_miesto_narodenia,String)
+                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(Original_okres_narodenia,String)
             End If
-            If (Original_okres_narodenia Is Nothing) Then
+            If (Original_bydlisko Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(55).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(56).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(55).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(Original_okres_narodenia,String)
+                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(Original_bydlisko,String)
             End If
-            If (Original_bydlisko Is Nothing) Then
+            If (Original_okres_bydliska Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(57).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(58).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(57).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(Original_bydlisko,String)
+                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(Original_okres_bydliska,String)
             End If
-            If (Original_okres_bydliska Is Nothing) Then
+            If (Original_psc Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(59).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(60).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(59).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(Original_okres_bydliska,String)
+                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(Original_psc,String)
             End If
-            If (Original_psc Is Nothing) Then
+            If (Original_telefon Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(61).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(62).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(61).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(Original_psc,String)
-            End If
-            If (Original_telefon Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(64).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(Original_telefon,String)
+                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(Original_telefon,String)
             End If
             If (Original_statna_prislusnost.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(Original_statna_prislusnost.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(64).Value = Global.System.DBNull.Value
+            End If
+            If (Original_narodnost.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(65).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(Original_statna_prislusnost.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(Original_narodnost.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(65).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(66).Value = Global.System.DBNull.Value
             End If
-            If (Original_narodnost.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(Original_narodnost.Value,Integer)
-            Else
+            If (Original_cislo_op Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(67).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(68).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(Original_cislo_op,String)
             End If
-            If (Original_cislo_op Is Nothing) Then
+            If (Original_cislo_pl Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(69).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(70).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(69).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(Original_cislo_op,String)
+                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(Original_cislo_pl,String)
             End If
-            If (Original_datum_vydania_op.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(Original_datum_vydania_op.Value,Date)
-            Else
+            If (Original_cislo_zp Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(71).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(72).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(Original_cislo_zp,String)
             End If
-            If (Original_cislo_pl Is Nothing) Then
+            If (Original_cislo_clenskeho_preukazu_spz Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(73).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(74).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(73).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(Original_cislo_pl,String)
+                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(Original_cislo_clenskeho_preukazu_spz,String)
             End If
-            If (Original_datum_vydania_pl.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(Original_datum_vydania_pl.Value,Date)
-            Else
+            If (Original_clen_spz_od Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(75).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(76).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(Original_clen_spz_od,String)
             End If
-            If (Original_cislo_zp Is Nothing) Then
+            If (Original_clenske_do Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(77).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(78).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(77).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_cislo_zp,String)
+                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_clenske_do,String)
             End If
-            If (Original_datum_vydania_zp.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(Original_datum_vydania_zp.Value,Date)
-            Else
+            If (Original_cislo_dokladu_clenske Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(79).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(80).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(Original_cislo_dokladu_clenske,String)
             End If
-            If (Original_cislo_clenskeho_preukazu_spz Is Nothing) Then
+            If (Original_clen_pz Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(81).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(82).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(81).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(Original_cislo_clenskeho_preukazu_spz,String)
+                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(Original_clen_pz,String)
             End If
-            If (Original_clen_spz_od Is Nothing) Then
+            If (Original_clen_pz_id.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(Original_clen_pz_id.Value,Integer)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(83).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(84).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(Original_clen_spz_od,String)
             End If
-            If (Original_clenske_do Is Nothing) Then
+            If (Original_miesto_skusky_z_polovnictva Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(85).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(86).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(85).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(Original_clenske_do,String)
+                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(Original_miesto_skusky_z_polovnictva,String)
             End If
-            If (Original_cislo_dokladu_clenske Is Nothing) Then
+            If (Original_miesto_skusky_pre_polovnych_hospodarov Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(87).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(88).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(87).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(Original_cislo_dokladu_clenske,String)
+                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(Original_miesto_skusky_pre_polovnych_hospodarov,String)
             End If
-            If (Original_clen_pz Is Nothing) Then
+            If (Original_miesto_vyzsia_skuska_z_polovnictva Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(89).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(90).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(89).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(Original_clen_pz,String)
+                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(Original_miesto_vyzsia_skuska_z_polovnictva,String)
             End If
-            If (Original_clen_pz_id.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(Original_clen_pz_id.Value,Integer)
-            Else
+            If (Original_brokova_zbran Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(91).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(92).Value = Global.System.DBNull.Value
-            End If
-            If (Original_skuska_z_polovnictva.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(Original_skuska_z_polovnictva.Value,Date)
             Else
+                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(Original_brokova_zbran,String)
+            End If
+            If (Original_kontrolne_strelby_brok Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(93).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(94).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(Original_kontrolne_strelby_brok,String)
             End If
-            If (Original_miesto_skusky_z_polovnictva Is Nothing) Then
+            If (Original_gulova_zbran Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(95).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(96).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(95).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(Original_miesto_skusky_z_polovnictva,String)
+                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(Original_gulova_zbran,String)
             End If
-            If (Original_skuska_pre_polovnych_hospodarov.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(Original_skuska_pre_polovnych_hospodarov.Value,Date)
-            Else
+            If (Original_kontrolne_strelby_gulova_zbran Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(97).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(98).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(Original_kontrolne_strelby_gulova_zbran,String)
             End If
-            If (Original_miesto_skusky_pre_polovnych_hospodarov Is Nothing) Then
+            If (Original_najv_vyznamenanie Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(99).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(100).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(99).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(Original_miesto_skusky_pre_polovnych_hospodarov,String)
+                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(Original_najv_vyznamenanie,String)
             End If
-            If (Original_vyzsia_skuska_z_polovnictva.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(Original_vyzsia_skuska_z_polovnictva.Value,Date)
-            Else
+            If (Original_udelene_tresty Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(101).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(102).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(Original_udelene_tresty,String)
             End If
-            If (Original_miesto_vyzsia_skuska_z_polovnictva Is Nothing) Then
+            If (Original_poznamky Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(103).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(104).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(103).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(Original_miesto_vyzsia_skuska_z_polovnictva,String)
+                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(Original_poznamky,String)
             End If
-            If (Original_brokova_zbran Is Nothing) Then
+            If (Original_datum_narodenia Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(105).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(106).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(105).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(Original_brokova_zbran,String)
+                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(Original_datum_narodenia,String)
             End If
-            If (Original_kontrolne_strelby_brok Is Nothing) Then
+            If (Original_datum_vydania_op Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(107).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(108).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(107).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(Original_kontrolne_strelby_brok,String)
+                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(Original_datum_vydania_op,String)
             End If
-            If (Original_gulova_zbran Is Nothing) Then
+            If (Original_datum_vydania_pl Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(109).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(110).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(109).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(Original_gulova_zbran,String)
+                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(Original_datum_vydania_pl,String)
             End If
-            If (Original_kontrolne_strelby_gulova_zbran Is Nothing) Then
+            If (Original_datum_vydania_zp Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(111).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(112).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(111).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(Original_kontrolne_strelby_gulova_zbran,String)
+                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(Original_datum_vydania_zp,String)
             End If
-            If (Original_najv_vyznamenanie Is Nothing) Then
+            If (Original_skuska_pre_polovnych_hospodarov Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(113).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(114).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(113).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(Original_najv_vyznamenanie,String)
+                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(Original_skuska_pre_polovnych_hospodarov,String)
             End If
-            If (Original_vyznamenany_kedy.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(Original_vyznamenany_kedy.Value,Date)
-            Else
+            If (Original_skuska_z_polovnictva Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(115).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(116).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(Original_skuska_z_polovnictva,String)
             End If
-            If (Original_udelene_tresty Is Nothing) Then
+            If (Original_vyznamenany_kedy Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(117).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(118).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(117).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(Original_udelene_tresty,String)
+                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(Original_vyznamenany_kedy,String)
             End If
-            If (Original_poznamky Is Nothing) Then
+            If (Original_vyzsia_skuska_z_polovnictva Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(119).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(120).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(119).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(Original_poznamky,String)
+                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(Original_vyzsia_skuska_z_polovnictva,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _

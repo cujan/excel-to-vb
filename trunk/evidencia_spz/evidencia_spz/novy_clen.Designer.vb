@@ -726,7 +726,6 @@ Partial Class novy_clen
         Me.Datum_narodeniaTextBox.Name = "Datum_narodeniaTextBox"
         Me.Datum_narodeniaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Datum_narodeniaTextBox.TabIndex = 78
-        Me.Datum_narodeniaTextBox.Text = "11.11.1111"
         '
         'Okres_bydliskaTextBox
         '

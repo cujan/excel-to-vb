@@ -12,8 +12,8 @@
               <DbSource ConnectionRef="spz_evidenciaConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT     clenovia.id, clenovia.meno, clenovia.priezvisko, clenovia.datum_narodenia, clenovia.rodne_cislo, titul.skratka AS [Titul pred], 
-                      titul_za.skratka AS [titul za], zdruzenie.nazov AS Zdruzenie
+                    <CommandText>SELECT     clenovia.id, clenovia.meno, clenovia.priezvisko, clenovia.rodne_cislo, titul.skratka AS [Titul pred], titul_za.skratka AS [titul za], 
+                      zdruzenie.nazov AS Zdruzenie, clenovia.datum_narodenia
 FROM         (((clenovia LEFT OUTER JOIN
                       zdruzenie ON clenovia.clen_pz_id = zdruzenie.id) LEFT OUTER JOIN
                       titul_za ON clenovia.titul_za = titul_za.ID) LEFT OUTER JOIN
@@ -29,10 +29,10 @@ ORDER BY clenovia.priezvisko</CommandText>
               <Mapping SourceColumn="meno" DataSetColumn="meno" />
               <Mapping SourceColumn="priezvisko" DataSetColumn="priezvisko" />
               <Mapping SourceColumn="rodne_cislo" DataSetColumn="rodne_cislo" />
-              <Mapping SourceColumn="datum_narodenia" DataSetColumn="datum_narodenia1" />
               <Mapping SourceColumn="Titul pred" DataSetColumn="Titul pred" />
               <Mapping SourceColumn="titul za" DataSetColumn="titul za" />
               <Mapping SourceColumn="Zdruzenie" DataSetColumn="Zdruzenie" />
+              <Mapping SourceColumn="datum_narodenia" DataSetColumn="datum_narodenia" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -47,51 +47,50 @@ ORDER BY clenovia.priezvisko</CommandText>
         <xs:element name="clenovia" msprop:Generator_UserTableName="clenovia" msprop:Generator_RowDeletedName="clenoviaRowDeleted" msprop:Generator_RowChangedName="clenoviaRowChanged" msprop:Generator_RowClassName="clenoviaRow" msprop:Generator_RowChangingName="clenoviaRowChanging" msprop:Generator_RowEvArgName="clenoviaRowChangeEvent" msprop:Generator_RowEvHandlerName="clenoviaRowChangeEventHandler" msprop:Generator_TableClassName="clenoviaDataTable" msprop:Generator_TableVarName="tableclenovia" msprop:Generator_RowDeletingName="clenoviaRowDeleting" msprop:Generator_TablePropName="clenovia">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="meno" msprop:Generator_UserColumnName="meno" msprop:Generator_ColumnVarNameInTable="columnmeno" msprop:Generator_ColumnPropNameInRow="meno" msprop:Generator_ColumnPropNameInTable="menoColumn" minOccurs="0">
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="meno" msprop:Generator_UserColumnName="meno" msprop:Generator_ColumnPropNameInRow="meno" msprop:Generator_ColumnVarNameInTable="columnmeno" msprop:Generator_ColumnPropNameInTable="menoColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="priezvisko" msprop:Generator_UserColumnName="priezvisko" msprop:Generator_ColumnVarNameInTable="columnpriezvisko" msprop:Generator_ColumnPropNameInRow="priezvisko" msprop:Generator_ColumnPropNameInTable="priezviskoColumn" minOccurs="0">
+              <xs:element name="priezvisko" msprop:Generator_UserColumnName="priezvisko" msprop:Generator_ColumnPropNameInRow="priezvisko" msprop:Generator_ColumnVarNameInTable="columnpriezvisko" msprop:Generator_ColumnPropNameInTable="priezviskoColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="rodne_cislo" msprop:Generator_UserColumnName="rodne_cislo" msprop:Generator_ColumnVarNameInTable="columnrodne_cislo" msprop:Generator_ColumnPropNameInRow="rodne_cislo" msprop:Generator_ColumnPropNameInTable="rodne_cisloColumn" minOccurs="0">
+              <xs:element name="rodne_cislo" msprop:Generator_UserColumnName="rodne_cislo" msprop:Generator_ColumnPropNameInRow="rodne_cislo" msprop:Generator_ColumnVarNameInTable="columnrodne_cislo" msprop:Generator_ColumnPropNameInTable="rodne_cisloColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="datum_narodenia" msprop:Generator_UserColumnName="datum_narodenia" msprop:Generator_ColumnVarNameInTable="columndatum_narodenia" msprop:Generator_ColumnPropNameInRow="datum_narodenia" msprop:Generator_ColumnPropNameInTable="datum_narodeniaColumn" minOccurs="0">
+              <xs:element name="datum_narodenia" msprop:Generator_UserColumnName="datum_narodenia" msprop:Generator_ColumnPropNameInRow="datum_narodenia" msprop:Generator_ColumnVarNameInTable="columndatum_narodenia" msprop:Generator_ColumnPropNameInTable="datum_narodeniaColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="datum_narodenia1" msdata:Caption="datum_narodenia" msprop:Generator_UserColumnName="datum_narodenia1" msprop:Generator_ColumnPropNameInRow="datum_narodenia1" msprop:Generator_ColumnVarNameInTable="columndatum_narodenia1" msprop:Generator_ColumnPropNameInTable="datum_narodenia1Column" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Titul_x0020_pred" msprop:Generator_UserColumnName="Titul pred" msprop:Generator_ColumnVarNameInTable="columnTitul_pred" msprop:Generator_ColumnPropNameInRow="Titul_pred" msprop:Generator_ColumnPropNameInTable="Titul_predColumn" minOccurs="0">
+              <xs:element name="Titul_x0020_pred" msprop:Generator_UserColumnName="Titul pred" msprop:Generator_ColumnPropNameInRow="Titul_pred" msprop:Generator_ColumnVarNameInTable="columnTitul_pred" msprop:Generator_ColumnPropNameInTable="Titul_predColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="titul_x0020_za" msprop:Generator_UserColumnName="titul za" msprop:Generator_ColumnVarNameInTable="columntitul_za" msprop:Generator_ColumnPropNameInRow="titul_za" msprop:Generator_ColumnPropNameInTable="titul_zaColumn" minOccurs="0">
+              <xs:element name="titul_x0020_za" msprop:Generator_UserColumnName="titul za" msprop:Generator_ColumnPropNameInRow="titul_za" msprop:Generator_ColumnVarNameInTable="columntitul_za" msprop:Generator_ColumnPropNameInTable="titul_zaColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Zdruzenie" msprop:Generator_UserColumnName="Zdruzenie" msprop:Generator_ColumnVarNameInTable="columnZdruzenie" msprop:Generator_ColumnPropNameInRow="Zdruzenie" msprop:Generator_ColumnPropNameInTable="ZdruzenieColumn" minOccurs="0">
+              <xs:element name="Zdruzenie" msprop:Generator_UserColumnName="Zdruzenie" msprop:Generator_ColumnPropNameInRow="Zdruzenie" msprop:Generator_ColumnVarNameInTable="columnZdruzenie" msprop:Generator_ColumnPropNameInTable="ZdruzenieColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />

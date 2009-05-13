@@ -140,7 +140,7 @@
                 Me.ClenoviaTableAdapter.Fill(Me.Prehlad_clenovDataSet.clenovia)
             End If
         Catch
-            MsgBox("chyba!!!", MsgBoxStyle.Critical)
+            MsgBox("Nemate vybraneho clena!!!", MsgBoxStyle.Critical)
         End Try
 
 

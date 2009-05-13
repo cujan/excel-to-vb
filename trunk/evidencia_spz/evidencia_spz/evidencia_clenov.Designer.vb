@@ -51,7 +51,6 @@ Partial Class evidencia_clenov
         Me.DataGridViewTextBoxColumn47 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn55 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn49 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn51 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn56 = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -244,7 +243,7 @@ Partial Class evidencia_clenov
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ClenoviaDataGridView.AutoGenerateColumns = False
         Me.ClenoviaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ClenoviaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn54, Me.DataGridViewTextBoxColumn48, Me.DataGridViewTextBoxColumn47, Me.DataGridViewTextBoxColumn55, Me.DataGridViewTextBoxColumn49, Me.DataGridViewTextBoxColumn51, Me.DataGridViewTextBoxColumn56})
+        Me.ClenoviaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn54, Me.DataGridViewTextBoxColumn48, Me.DataGridViewTextBoxColumn47, Me.DataGridViewTextBoxColumn55, Me.DataGridViewTextBoxColumn49, Me.DataGridViewTextBoxColumn56})
         Me.ClenoviaDataGridView.DataSource = Me.ClenoviaBindingSource
         Me.ClenoviaDataGridView.Location = New System.Drawing.Point(12, 91)
         Me.ClenoviaDataGridView.Name = "ClenoviaDataGridView"
@@ -286,13 +285,6 @@ Partial Class evidencia_clenov
         Me.DataGridViewTextBoxColumn49.HeaderText = "rodne_cislo"
         Me.DataGridViewTextBoxColumn49.Name = "DataGridViewTextBoxColumn49"
         Me.DataGridViewTextBoxColumn49.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn51
-        '
-        Me.DataGridViewTextBoxColumn51.DataPropertyName = "datum_narodenia1"
-        Me.DataGridViewTextBoxColumn51.HeaderText = "datum_narodenia1"
-        Me.DataGridViewTextBoxColumn51.Name = "DataGridViewTextBoxColumn51"
-        Me.DataGridViewTextBoxColumn51.ReadOnly = True
         '
         'DataGridViewTextBoxColumn56
         '
@@ -404,6 +396,5 @@ Partial Class evidencia_clenov
     Friend WithEvents DataGridViewTextBoxColumn47 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn55 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn49 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn51 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn56 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

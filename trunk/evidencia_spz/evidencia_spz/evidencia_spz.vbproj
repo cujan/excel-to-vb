@@ -189,6 +189,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>pohlad_zdruzenieDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="prehlad_clenovDataSet.vb">
+      <DependentUpon>prehlad_clenovDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="prehlad_zdruzeni.Designer.vb">
       <DependentUpon>prehlad_zdruzeni.vb</DependentUpon>
     </Compile>
@@ -734,8 +737,7 @@
     <None Include="spz_clenovia_report_a4.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>spz_clenovia_report_a4.Designer.vb</LastGenOutput>
-      <SubType>
-      </SubType>
+      <SubType>Designer</SubType>
     </None>
     <None Include="spz_clenovia_report_a4.xss">
       <DependentUpon>spz_clenovia_report_a4.xsd</DependentUpon>
