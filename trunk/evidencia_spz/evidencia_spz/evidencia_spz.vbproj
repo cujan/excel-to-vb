@@ -125,10 +125,21 @@
     <Compile Include="clenoviaDataSet1.vb">
       <DependentUpon>clenoviaDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="detailClenaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>detailClenaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="detaily_zdruzenia.Designer.vb">
       <DependentUpon>detaily_zdruzenia.vb</DependentUpon>
     </Compile>
     <Compile Include="detaily_zdruzenia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detail_clena1.Designer.vb">
+      <DependentUpon>detail_clena1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="detail_clena1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="koniec_clenstva.Designer.vb">
@@ -400,6 +411,10 @@
       <DependentUpon>detaily_zdruzenia.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="detail_clena1.resx">
+      <DependentUpon>detail_clena1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="koniec_clenstva.resx">
       <DependentUpon>koniec_clenstva.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -634,6 +649,17 @@
     </None>
     <None Include="clenoviaDataSet1.xss">
       <DependentUpon>clenoviaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="detailClenaDataSet.xsc">
+      <DependentUpon>detailClenaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="detailClenaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>detailClenaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="detailClenaDataSet.xss">
+      <DependentUpon>detailClenaDataSet.xsd</DependentUpon>
     </None>
     <None Include="koniec_clenstvaDataSet1.xsc">
       <DependentUpon>koniec_clenstvaDataSet1.xsd</DependentUpon>

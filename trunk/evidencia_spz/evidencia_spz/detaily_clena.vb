@@ -13,11 +13,11 @@
 
     Private Sub detaily_clena_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Prehlad_clenovDataSet.clenovia' table. You can move, or remove it, as needed.
-        Me.ClenoviaTableAdapter.Fill(Me.Prehlad_clenovDataSet.clenovia)
-        'TODO: This line of code loads data into the 'PrehladDataSet.clenovia' table. You can move, or remove it, as needed.
-        Dim pozicia As Integer = evidencia_clenov.ClenoviaBindingSource.Position
 
-        Me.ClenoviaBindingSource.Position = evidencia_clenov.Label2.Text - 1
+        'TODO: This line of code loads data into the 'PrehladDataSet.clenovia' table. You can move, or remove it, as needed.
+        Dim id_clena As Integer = evidencia_clenov.Label1.Text
+        Me.ClenoviaTableAdapter1.Fill(Me.DetailClenaDataSet.clenovia, id_clena)
+
 
         'Me.ClenoviaBindingSource.Position = pozicia
 
@@ -27,7 +27,7 @@
 
     End Sub
 
-    Private Sub ClenoviaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClenoviaBindingNavigatorSaveItem.Click
+    Private Sub ClenoviaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.ClenoviaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Prehlad_clenovDataSet)
@@ -128,5 +128,14 @@
         Me.Vyznamenany_kedyTextBox.ReadOnly = True
         Me.Vyzsia_skuska_z_polovnictvaTextBox.ReadOnly = True
         Me.Clen_pzTextBox.ReadOnly = True
+    End Sub
+
+    Private Sub FillToolStripButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        
+
+    End Sub
+
+    Private Sub FillToolStrip_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs)
+
     End Sub
 End Class
