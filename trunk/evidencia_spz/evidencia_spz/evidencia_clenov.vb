@@ -127,14 +127,26 @@
     End Sub
 
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        'podmienka na zmazanie zaznamu
-        'If MsgBox("Naozaj chcete zmazat zaznam?", MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
-        'Me.ClenoviaBindingSource.RemoveCurrent()
-        'Me.Validate()
-        'Me.ClenoviaBindingSource.EndEdit()
-        'Me.TableAdapterManager.UpdateAll(Me.Prehlad_clenovDataSet)
-        'End If
-       
+
+
+        Try
+            Dim id_clena As Integer = Me.Label1.Text
+            'podmienka na zmazanie zaznamu
+            If MsgBox("Naozaj chcete zmazat zaznam?", MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
+
+                Dim con As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\spz_evidencia.accdb")
+                con.Open()
+
+                Dim com As New OleDb.OleDbCommand("DELETE FROM clenovia WHERE id =" & id_clena, con)
+
+                com.ExecuteNonQuery()
+                con.Close()
+                Me.ClenoviaTableAdapter.Fill(Me.Prehlad_clenovDataSet.clenovia)
+            End If
+        Catch
+            MsgBox("chyba!!!", MsgBoxStyle.Critical)
+        End Try
+
 
     End Sub
 
@@ -153,6 +165,20 @@
     End Sub
 
     Private Sub BindingNavigatorDeleteItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub ClenoviaDataGridView_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ClenoviaDataGridView.CellClick
+        Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource, "id", True))
+        Label2.Text = Label1.Text
+        Label1.DataBindings.Clear()
+
+    End Sub
+
+    
+
+   
+    Private Sub ClenoviaDataGridView_CellContentClick_2(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ClenoviaDataGridView.CellContentClick
 
     End Sub
 End Class
