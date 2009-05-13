@@ -58,10 +58,6 @@ Partial Class detaily_clena
         Dim Label3 As System.Windows.Forms.Label
         Dim Label4 As System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
-        Me.Prehlad_clenovDataSet = New evidencia_spz.prehlad_clenovDataSet
-        Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ClenoviaTableAdapter = New evidencia_spz.prehlad_clenovDataSetTableAdapters.clenoviaTableAdapter
-        Me.TableAdapterManager = New evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager
         Me.Titul_predTextBox = New System.Windows.Forms.TextBox
         Me.ClenoviaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DetailClenaDataSet = New evidencia_spz.detailClenaDataSet
@@ -85,7 +81,7 @@ Partial Class detaily_clena
         Me.Cislo_dokladu_clenskeTextBox = New System.Windows.Forms.TextBox
         Me.Clen_pzTextBox = New System.Windows.Forms.TextBox
         Me.Skuska_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
-        Me.Miesto_skusky_z__polovnictvaTextBox = New System.Windows.Forms.TextBox
+        Me.Miesto_skusky_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
         Me.Skuska_pre_polovnych_hospodarovTextBox = New System.Windows.Forms.TextBox
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox = New System.Windows.Forms.TextBox
         Me.Vyzsia_skuska_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
@@ -111,6 +107,30 @@ Partial Class detaily_clena
         Me.Label5 = New System.Windows.Forms.Label
         Me.ClenoviaTableAdapter1 = New evidencia_spz.detailClenaDataSetTableAdapters.clenoviaTableAdapter
         Me.TableAdapterManager1 = New evidencia_spz.detailClenaDataSetTableAdapters.TableAdapterManager
+        Me.Prehlad_clenovDataSet = New evidencia_spz.prehlad_clenovDataSet
+        Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ClenoviaTableAdapter = New evidencia_spz.prehlad_clenovDataSetTableAdapters.clenoviaTableAdapter
+        Me.TableAdapterManager = New evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager
+        Me.Titul_predComboBox = New System.Windows.Forms.ComboBox
+        Me.TitulBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TitulDataSet1 = New evidencia_spz.titulDataSet1
+        Me.TitulTableAdapter = New evidencia_spz.titulDataSet1TableAdapters.titulTableAdapter
+        Me.Titul_zaComboBox = New System.Windows.Forms.ComboBox
+        Me.TitulzaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TitulzaDataSet = New evidencia_spz.titulzaDataSet
+        Me.Titul_zaTableAdapter = New evidencia_spz.titulzaDataSetTableAdapters.titul_zaTableAdapter
+        Me.Statna_prislusnostComboBox = New System.Windows.Forms.ComboBox
+        Me.StatnaprislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Statna_prislusnostDataSet1 = New evidencia_spz.statna_prislusnostDataSet1
+        Me.NarodnostComboBox = New System.Windows.Forms.ComboBox
+        Me.NarodnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.NarodnostDataSet = New evidencia_spz.narodnostDataSet
+        Me.Clen_pzComboBox = New System.Windows.Forms.ComboBox
+        Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
+        Me.Statna_prislusnostTableAdapter = New evidencia_spz.statna_prislusnostDataSet1TableAdapters.statna_prislusnostTableAdapter
+        Me.NarodnostTableAdapter = New evidencia_spz.narodnostDataSetTableAdapters.narodnostTableAdapter
+        Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
         Rodne_cisloLabel = New System.Windows.Forms.Label
         Miesto_narodeniaLabel = New System.Windows.Forms.Label
         Okres_narodeniaLabel = New System.Windows.Forms.Label
@@ -145,10 +165,20 @@ Partial Class detaily_clena
         Label2 = New System.Windows.Forms.Label
         Label3 = New System.Windows.Forms.Label
         Label4 = New System.Windows.Forms.Label
-        CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DetailClenaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Statna_prislusnostDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NarodnostDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Rodne_cisloLabel
@@ -468,26 +498,6 @@ Partial Class detaily_clena
         Me.Button1.Text = "Zavrieť kartu"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Prehlad_clenovDataSet
-        '
-        Me.Prehlad_clenovDataSet.DataSetName = "prehlad_clenovDataSet"
-        Me.Prehlad_clenovDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ClenoviaBindingSource
-        '
-        Me.ClenoviaBindingSource.DataMember = "clenovia"
-        Me.ClenoviaBindingSource.DataSource = Me.Prehlad_clenovDataSet
-        '
-        'ClenoviaTableAdapter
-        '
-        Me.ClenoviaTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.UpdateOrder = evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'Titul_predTextBox
         '
         Me.Titul_predTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "titul_pred", True))
@@ -671,7 +681,7 @@ Partial Class detaily_clena
         '
         'Clen_pzTextBox
         '
-        Me.Clen_pzTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "clen_pz", True))
+        Me.Clen_pzTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "clen_pz_id", True))
         Me.Clen_pzTextBox.Location = New System.Drawing.Point(189, 400)
         Me.Clen_pzTextBox.Name = "Clen_pzTextBox"
         Me.Clen_pzTextBox.ReadOnly = True
@@ -687,14 +697,14 @@ Partial Class detaily_clena
         Me.Skuska_z_polovnictvaTextBox.Size = New System.Drawing.Size(76, 20)
         Me.Skuska_z_polovnictvaTextBox.TabIndex = 46
         '
-        'Miesto_skusky_z__polovnictvaTextBox
+        'Miesto_skusky_z_polovnictvaTextBox
         '
-        Me.Miesto_skusky_z__polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "miesto_skusky_z_polovnictva", True))
-        Me.Miesto_skusky_z__polovnictvaTextBox.Location = New System.Drawing.Point(365, 451)
-        Me.Miesto_skusky_z__polovnictvaTextBox.Name = "Miesto_skusky_z__polovnictvaTextBox"
-        Me.Miesto_skusky_z__polovnictvaTextBox.ReadOnly = True
-        Me.Miesto_skusky_z__polovnictvaTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Miesto_skusky_z__polovnictvaTextBox.TabIndex = 48
+        Me.Miesto_skusky_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "miesto_skusky_z_polovnictva", True))
+        Me.Miesto_skusky_z_polovnictvaTextBox.Location = New System.Drawing.Point(365, 451)
+        Me.Miesto_skusky_z_polovnictvaTextBox.Name = "Miesto_skusky_z_polovnictvaTextBox"
+        Me.Miesto_skusky_z_polovnictvaTextBox.ReadOnly = True
+        Me.Miesto_skusky_z_polovnictvaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Miesto_skusky_z_polovnictvaTextBox.TabIndex = 48
         '
         'Skuska_pre_polovnych_hospodarovTextBox
         '
@@ -921,6 +931,156 @@ Partial Class detaily_clena
         Me.TableAdapterManager1.clenoviaTableAdapter = Me.ClenoviaTableAdapter1
         Me.TableAdapterManager1.UpdateOrder = evidencia_spz.detailClenaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'Prehlad_clenovDataSet
+        '
+        Me.Prehlad_clenovDataSet.DataSetName = "prehlad_clenovDataSet"
+        Me.Prehlad_clenovDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ClenoviaBindingSource
+        '
+        Me.ClenoviaBindingSource.DataMember = "clenovia"
+        Me.ClenoviaBindingSource.DataSource = Me.Prehlad_clenovDataSet
+        '
+        'ClenoviaTableAdapter
+        '
+        Me.ClenoviaTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.UpdateOrder = evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Titul_predComboBox
+        '
+        Me.Titul_predComboBox.DataSource = Me.TitulBindingSource
+        Me.Titul_predComboBox.DisplayMember = "skratka"
+        Me.Titul_predComboBox.Enabled = False
+        Me.Titul_predComboBox.FormattingEnabled = True
+        Me.Titul_predComboBox.Location = New System.Drawing.Point(115, 42)
+        Me.Titul_predComboBox.Name = "Titul_predComboBox"
+        Me.Titul_predComboBox.Size = New System.Drawing.Size(71, 21)
+        Me.Titul_predComboBox.TabIndex = 101
+        Me.Titul_predComboBox.ValueMember = "ID"
+        '
+        'TitulBindingSource
+        '
+        Me.TitulBindingSource.DataMember = "titul"
+        Me.TitulBindingSource.DataSource = Me.TitulDataSet1
+        '
+        'TitulDataSet1
+        '
+        Me.TitulDataSet1.DataSetName = "titulDataSet1"
+        Me.TitulDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TitulTableAdapter
+        '
+        Me.TitulTableAdapter.ClearBeforeFill = True
+        '
+        'Titul_zaComboBox
+        '
+        Me.Titul_zaComboBox.DataSource = Me.TitulzaBindingSource
+        Me.Titul_zaComboBox.DisplayMember = "skratka"
+        Me.Titul_zaComboBox.Enabled = False
+        Me.Titul_zaComboBox.FormattingEnabled = True
+        Me.Titul_zaComboBox.Location = New System.Drawing.Point(458, 42)
+        Me.Titul_zaComboBox.Name = "Titul_zaComboBox"
+        Me.Titul_zaComboBox.Size = New System.Drawing.Size(91, 21)
+        Me.Titul_zaComboBox.TabIndex = 102
+        Me.Titul_zaComboBox.ValueMember = "ID"
+        '
+        'TitulzaBindingSource
+        '
+        Me.TitulzaBindingSource.DataMember = "titul_za"
+        Me.TitulzaBindingSource.DataSource = Me.TitulzaDataSet
+        '
+        'TitulzaDataSet
+        '
+        Me.TitulzaDataSet.DataSetName = "titulzaDataSet"
+        Me.TitulzaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Titul_zaTableAdapter
+        '
+        Me.Titul_zaTableAdapter.ClearBeforeFill = True
+        '
+        'Statna_prislusnostComboBox
+        '
+        Me.Statna_prislusnostComboBox.DataSource = Me.StatnaprislusnostBindingSource
+        Me.Statna_prislusnostComboBox.DisplayMember = "skratka"
+        Me.Statna_prislusnostComboBox.Enabled = False
+        Me.Statna_prislusnostComboBox.FormattingEnabled = True
+        Me.Statna_prislusnostComboBox.Location = New System.Drawing.Point(191, 125)
+        Me.Statna_prislusnostComboBox.Name = "Statna_prislusnostComboBox"
+        Me.Statna_prislusnostComboBox.Size = New System.Drawing.Size(100, 21)
+        Me.Statna_prislusnostComboBox.TabIndex = 103
+        Me.Statna_prislusnostComboBox.ValueMember = "ID"
+        '
+        'StatnaprislusnostBindingSource
+        '
+        Me.StatnaprislusnostBindingSource.DataMember = "statna_prislusnost"
+        Me.StatnaprislusnostBindingSource.DataSource = Me.Statna_prislusnostDataSet1
+        '
+        'Statna_prislusnostDataSet1
+        '
+        Me.Statna_prislusnostDataSet1.DataSetName = "statna_prislusnostDataSet1"
+        Me.Statna_prislusnostDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'NarodnostComboBox
+        '
+        Me.NarodnostComboBox.DataSource = Me.NarodnostBindingSource
+        Me.NarodnostComboBox.DisplayMember = "skratka"
+        Me.NarodnostComboBox.Enabled = False
+        Me.NarodnostComboBox.FormattingEnabled = True
+        Me.NarodnostComboBox.Location = New System.Drawing.Point(367, 124)
+        Me.NarodnostComboBox.Name = "NarodnostComboBox"
+        Me.NarodnostComboBox.Size = New System.Drawing.Size(85, 21)
+        Me.NarodnostComboBox.TabIndex = 104
+        Me.NarodnostComboBox.ValueMember = "ID"
+        '
+        'NarodnostBindingSource
+        '
+        Me.NarodnostBindingSource.DataMember = "narodnost"
+        Me.NarodnostBindingSource.DataSource = Me.NarodnostDataSet
+        '
+        'NarodnostDataSet
+        '
+        Me.NarodnostDataSet.DataSetName = "narodnostDataSet"
+        Me.NarodnostDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Clen_pzComboBox
+        '
+        Me.Clen_pzComboBox.DataSource = Me.ZdruzenieBindingSource
+        Me.Clen_pzComboBox.DisplayMember = "nazov"
+        Me.Clen_pzComboBox.Enabled = False
+        Me.Clen_pzComboBox.FormattingEnabled = True
+        Me.Clen_pzComboBox.Location = New System.Drawing.Point(189, 400)
+        Me.Clen_pzComboBox.Name = "Clen_pzComboBox"
+        Me.Clen_pzComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Clen_pzComboBox.TabIndex = 105
+        Me.Clen_pzComboBox.ValueMember = "ID"
+        '
+        'ZdruzenieBindingSource
+        '
+        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
+        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSet
+        '
+        'ZdruzenieDataSet
+        '
+        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
+        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Statna_prislusnostTableAdapter
+        '
+        Me.Statna_prislusnostTableAdapter.ClearBeforeFill = True
+        '
+        'NarodnostTableAdapter
+        '
+        Me.NarodnostTableAdapter.ClearBeforeFill = True
+        '
+        'ZdruzenieTableAdapter
+        '
+        Me.ZdruzenieTableAdapter.ClearBeforeFill = True
+        '
         'detaily_clena
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -928,6 +1088,11 @@ Partial Class detaily_clena
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(825, 778)
+        Me.Controls.Add(Me.Clen_pzComboBox)
+        Me.Controls.Add(Me.NarodnostComboBox)
+        Me.Controls.Add(Me.Statna_prislusnostComboBox)
+        Me.Controls.Add(Me.Titul_zaComboBox)
+        Me.Controls.Add(Me.Titul_predComboBox)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.ulozButton)
         Me.Controls.Add(Me.upravbutton)
@@ -973,7 +1138,7 @@ Partial Class detaily_clena
         Me.Controls.Add(Skuska_z_polovnictvaLabel)
         Me.Controls.Add(Me.Skuska_z_polovnictvaTextBox)
         Me.Controls.Add(Miesto_skusky_z__polovnictvaLabel)
-        Me.Controls.Add(Me.Miesto_skusky_z__polovnictvaTextBox)
+        Me.Controls.Add(Me.Miesto_skusky_z_polovnictvaTextBox)
         Me.Controls.Add(Skuska_pre_polovnych_hospodarovLabel)
         Me.Controls.Add(Me.Skuska_pre_polovnych_hospodarovTextBox)
         Me.Controls.Add(Me.Miesto_skusky_pre_polovnych_hospodarovTextBox)
@@ -1009,10 +1174,20 @@ Partial Class detaily_clena
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "detaily_clena"
         Me.Text = "Detaily člena"
-        CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClenoviaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DetailClenaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulzaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Statna_prislusnostDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NarodnostDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1043,7 +1218,7 @@ Partial Class detaily_clena
     Friend WithEvents Cislo_dokladu_clenskeTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Clen_pzTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Skuska_z_polovnictvaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Miesto_skusky_z__polovnictvaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Miesto_skusky_z_polovnictvaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Skuska_pre_polovnych_hospodarovTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Miesto_skusky_pre_polovnych_hospodarovTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Vyzsia_skuska_z_polovnictvaTextBox As System.Windows.Forms.TextBox
@@ -1071,4 +1246,24 @@ Partial Class detaily_clena
     Friend WithEvents ClenoviaBindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents ClenoviaTableAdapter1 As evidencia_spz.detailClenaDataSetTableAdapters.clenoviaTableAdapter
     Friend WithEvents TableAdapterManager1 As evidencia_spz.detailClenaDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Titul_predComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents TitulDataSet1 As evidencia_spz.titulDataSet1
+    Friend WithEvents TitulBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents TitulTableAdapter As evidencia_spz.titulDataSet1TableAdapters.titulTableAdapter
+    Friend WithEvents Titul_zaComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents TitulzaDataSet As evidencia_spz.titulzaDataSet
+    Friend WithEvents TitulzaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Titul_zaTableAdapter As evidencia_spz.titulzaDataSetTableAdapters.titul_zaTableAdapter
+    Friend WithEvents Statna_prislusnostComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents NarodnostComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Clen_pzComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Statna_prislusnostDataSet1 As evidencia_spz.statna_prislusnostDataSet1
+    Friend WithEvents StatnaprislusnostBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Statna_prislusnostTableAdapter As evidencia_spz.statna_prislusnostDataSet1TableAdapters.statna_prislusnostTableAdapter
+    Friend WithEvents NarodnostDataSet As evidencia_spz.narodnostDataSet
+    Friend WithEvents NarodnostBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents NarodnostTableAdapter As evidencia_spz.narodnostDataSetTableAdapters.narodnostTableAdapter
+    Friend WithEvents ZdruzenieDataSet As evidencia_spz.zdruzenieDataSet
+    Friend WithEvents ZdruzenieBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ZdruzenieTableAdapter As evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
 End Class
