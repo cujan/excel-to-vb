@@ -55,10 +55,6 @@ Partial Class detaily_zdruzenia
         Dim Pes_malaLabel As System.Windows.Forms.Label
         Dim Platnost_najomnej_zmluvy_doLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(detaily_zdruzenia))
-        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
-        Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
-        Me.TableAdapterManager = New evidencia_spz.zdruzenieDataSetTableAdapters.TableAdapterManager
         Me.ZdruzenieBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
@@ -92,17 +88,6 @@ Partial Class detaily_zdruzenia
         Me.DiviaciaTextBox = New System.Windows.Forms.TextBox
         Me.BazantTextBox = New System.Windows.Forms.TextBox
         Me.InaTextBox = New System.Windows.Forms.TextBox
-        Me.StavaceTextBox = New System.Windows.Forms.TextBox
-        Me.SliediceTextBox = New System.Windows.Forms.TextBox
-        Me.Slovensky_kopovTextBox = New System.Windows.Forms.TextBox
-        Me.Ostatne_duriceTextBox = New System.Windows.Forms.TextBox
-        Me.BrlohareTextBox = New System.Windows.Forms.TextBox
-        Me.FarbiareTextBox = New System.Windows.Forms.TextBox
-        Me.Pes_jeleniaTextBox = New System.Windows.Forms.TextBox
-        Me.Pes_diviaciaTextBox = New System.Windows.Forms.TextBox
-        Me.Pes_srnciaTextBox = New System.Windows.Forms.TextBox
-        Me.Pes_malaTextBox = New System.Windows.Forms.TextBox
-        Me.Platnost_najomnej_zmluvy_doDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.upravitButton = New System.Windows.Forms.Button
         Me.ulozButton = New System.Windows.Forms.Button
         Me.Button1 = New System.Windows.Forms.Button
@@ -112,6 +97,33 @@ Partial Class detaily_zdruzenia
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        Me.Platnost_najomnej_zmluvy_doTextBox = New System.Windows.Forms.TextBox
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.Stavace_planTextBox = New System.Windows.Forms.TextBox
+        Me.Stavace_skutocnostTextBox = New System.Windows.Forms.TextBox
+        Me.Sliedice_planTextBox = New System.Windows.Forms.TextBox
+        Me.Sliedice_skutocnostTextBox = New System.Windows.Forms.TextBox
+        Me.Slovensky_kopov_planTextBox = New System.Windows.Forms.TextBox
+        Me.Slovensky_kopov_skutocnostTextBox = New System.Windows.Forms.TextBox
+        Me.Ostatne_durice_planTextBox = New System.Windows.Forms.TextBox
+        Me.Ostatne_durice_skutocnostTextBox = New System.Windows.Forms.TextBox
+        Me.Brlohare_planTextBox = New System.Windows.Forms.TextBox
+        Me.Brlohare_skutocnostTextBox = New System.Windows.Forms.TextBox
+        Me.Farbiare_planTextBox = New System.Windows.Forms.TextBox
+        Me.Farbiare_skutocnostTextBox = New System.Windows.Forms.TextBox
+        Me.Pes_jelenia_planTextBox = New System.Windows.Forms.TextBox
+        Me.Pes_jelenia_skutocnostTextBox = New System.Windows.Forms.TextBox
+        Me.Pes_diviacia_planTextBox = New System.Windows.Forms.TextBox
+        Me.Pes_diviacia_skutocnostTextBox = New System.Windows.Forms.TextBox
+        Me.Pes_srncia_planTextBox = New System.Windows.Forms.TextBox
+        Me.Pes_srncia_skutocnostTextBox = New System.Windows.Forms.TextBox
+        Me.Pes_mala_planTextBox = New System.Windows.Forms.TextBox
+        Me.Pes_mala_skutocnostTextBox = New System.Windows.Forms.TextBox
+        Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
+        Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
+        Me.TableAdapterManager = New evidencia_spz.zdruzenieDataSetTableAdapters.TableAdapterManager
         NazovLabel = New System.Windows.Forms.Label
         SidloLabel = New System.Windows.Forms.Label
         PredsedaLabel = New System.Windows.Forms.Label
@@ -143,10 +155,10 @@ Partial Class detaily_zdruzenia
         Pes_srnciaLabel = New System.Windows.Forms.Label
         Pes_malaLabel = New System.Windows.Forms.Label
         Platnost_najomnej_zmluvy_doLabel = New System.Windows.Forms.Label
-        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzenieBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ZdruzenieBindingNavigator.SuspendLayout()
+        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NazovLabel
@@ -422,31 +434,11 @@ Partial Class detaily_zdruzenia
         'Platnost_najomnej_zmluvy_doLabel
         '
         Platnost_najomnej_zmluvy_doLabel.AutoSize = True
-        Platnost_najomnej_zmluvy_doLabel.Location = New System.Drawing.Point(59, 784)
+        Platnost_najomnej_zmluvy_doLabel.Location = New System.Drawing.Point(61, 283)
         Platnost_najomnej_zmluvy_doLabel.Name = "Platnost_najomnej_zmluvy_doLabel"
         Platnost_najomnej_zmluvy_doLabel.Size = New System.Drawing.Size(126, 13)
         Platnost_najomnej_zmluvy_doLabel.TabIndex = 63
         Platnost_najomnej_zmluvy_doLabel.Text = "Platnosť nájomnej zmluvy"
-        '
-        'ZdruzenieDataSet
-        '
-        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
-        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ZdruzenieBindingSource
-        '
-        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
-        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSet
-        '
-        'ZdruzenieTableAdapter
-        '
-        Me.ZdruzenieTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.UpdateOrder = evidencia_spz.zdruzenieDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.zdruzenieTableAdapter = Me.ZdruzenieTableAdapter
         '
         'ZdruzenieBindingNavigator
         '
@@ -740,104 +732,6 @@ Partial Class detaily_zdruzenia
         Me.InaTextBox.Size = New System.Drawing.Size(130, 20)
         Me.InaTextBox.TabIndex = 42
         '
-        'StavaceTextBox
-        '
-        Me.StavaceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "stavace", True))
-        Me.StavaceTextBox.Location = New System.Drawing.Point(191, 522)
-        Me.StavaceTextBox.Name = "StavaceTextBox"
-        Me.StavaceTextBox.ReadOnly = True
-        Me.StavaceTextBox.Size = New System.Drawing.Size(129, 20)
-        Me.StavaceTextBox.TabIndex = 44
-        '
-        'SliediceTextBox
-        '
-        Me.SliediceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "sliedice", True))
-        Me.SliediceTextBox.Location = New System.Drawing.Point(191, 548)
-        Me.SliediceTextBox.Name = "SliediceTextBox"
-        Me.SliediceTextBox.ReadOnly = True
-        Me.SliediceTextBox.Size = New System.Drawing.Size(130, 20)
-        Me.SliediceTextBox.TabIndex = 46
-        '
-        'Slovensky_kopovTextBox
-        '
-        Me.Slovensky_kopovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "slovensky_kopov", True))
-        Me.Slovensky_kopovTextBox.Location = New System.Drawing.Point(190, 574)
-        Me.Slovensky_kopovTextBox.Name = "Slovensky_kopovTextBox"
-        Me.Slovensky_kopovTextBox.ReadOnly = True
-        Me.Slovensky_kopovTextBox.Size = New System.Drawing.Size(131, 20)
-        Me.Slovensky_kopovTextBox.TabIndex = 48
-        '
-        'Ostatne_duriceTextBox
-        '
-        Me.Ostatne_duriceTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "ostatne_durice", True))
-        Me.Ostatne_duriceTextBox.Location = New System.Drawing.Point(190, 600)
-        Me.Ostatne_duriceTextBox.Name = "Ostatne_duriceTextBox"
-        Me.Ostatne_duriceTextBox.ReadOnly = True
-        Me.Ostatne_duriceTextBox.Size = New System.Drawing.Size(131, 20)
-        Me.Ostatne_duriceTextBox.TabIndex = 50
-        '
-        'BrlohareTextBox
-        '
-        Me.BrlohareTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "brlohare", True))
-        Me.BrlohareTextBox.Location = New System.Drawing.Point(190, 626)
-        Me.BrlohareTextBox.Name = "BrlohareTextBox"
-        Me.BrlohareTextBox.ReadOnly = True
-        Me.BrlohareTextBox.Size = New System.Drawing.Size(131, 20)
-        Me.BrlohareTextBox.TabIndex = 52
-        '
-        'FarbiareTextBox
-        '
-        Me.FarbiareTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "farbiare", True))
-        Me.FarbiareTextBox.Location = New System.Drawing.Point(190, 652)
-        Me.FarbiareTextBox.Name = "FarbiareTextBox"
-        Me.FarbiareTextBox.ReadOnly = True
-        Me.FarbiareTextBox.Size = New System.Drawing.Size(131, 20)
-        Me.FarbiareTextBox.TabIndex = 54
-        '
-        'Pes_jeleniaTextBox
-        '
-        Me.Pes_jeleniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_jelenia", True))
-        Me.Pes_jeleniaTextBox.Location = New System.Drawing.Point(190, 678)
-        Me.Pes_jeleniaTextBox.Name = "Pes_jeleniaTextBox"
-        Me.Pes_jeleniaTextBox.ReadOnly = True
-        Me.Pes_jeleniaTextBox.Size = New System.Drawing.Size(131, 20)
-        Me.Pes_jeleniaTextBox.TabIndex = 56
-        '
-        'Pes_diviaciaTextBox
-        '
-        Me.Pes_diviaciaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_diviacia", True))
-        Me.Pes_diviaciaTextBox.Location = New System.Drawing.Point(190, 704)
-        Me.Pes_diviaciaTextBox.Name = "Pes_diviaciaTextBox"
-        Me.Pes_diviaciaTextBox.ReadOnly = True
-        Me.Pes_diviaciaTextBox.Size = New System.Drawing.Size(131, 20)
-        Me.Pes_diviaciaTextBox.TabIndex = 58
-        '
-        'Pes_srnciaTextBox
-        '
-        Me.Pes_srnciaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_srncia", True))
-        Me.Pes_srnciaTextBox.Location = New System.Drawing.Point(190, 730)
-        Me.Pes_srnciaTextBox.Name = "Pes_srnciaTextBox"
-        Me.Pes_srnciaTextBox.ReadOnly = True
-        Me.Pes_srnciaTextBox.Size = New System.Drawing.Size(131, 20)
-        Me.Pes_srnciaTextBox.TabIndex = 60
-        '
-        'Pes_malaTextBox
-        '
-        Me.Pes_malaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_mala", True))
-        Me.Pes_malaTextBox.Location = New System.Drawing.Point(190, 756)
-        Me.Pes_malaTextBox.Name = "Pes_malaTextBox"
-        Me.Pes_malaTextBox.ReadOnly = True
-        Me.Pes_malaTextBox.Size = New System.Drawing.Size(131, 20)
-        Me.Pes_malaTextBox.TabIndex = 62
-        '
-        'Platnost_najomnej_zmluvy_doDateTimePicker
-        '
-        Me.Platnost_najomnej_zmluvy_doDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ZdruzenieBindingSource, "platnost_najomnej_zmluvy_do", True))
-        Me.Platnost_najomnej_zmluvy_doDateTimePicker.Location = New System.Drawing.Point(191, 780)
-        Me.Platnost_najomnej_zmluvy_doDateTimePicker.Name = "Platnost_najomnej_zmluvy_doDateTimePicker"
-        Me.Platnost_najomnej_zmluvy_doDateTimePicker.Size = New System.Drawing.Size(130, 20)
-        Me.Platnost_najomnej_zmluvy_doDateTimePicker.TabIndex = 64
-        '
         'upravitButton
         '
         Me.upravitButton.BackColor = System.Drawing.Color.DarkSeaGreen
@@ -886,7 +780,7 @@ Partial Class detaily_zdruzenia
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(61, 491)
+        Me.Label2.Location = New System.Drawing.Point(61, 480)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(27, 13)
         Me.Label2.TabIndex = 69
@@ -907,7 +801,7 @@ Partial Class detaily_zdruzenia
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape3, Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(629, 812)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(862, 1036)
         Me.ShapeContainer1.TabIndex = 70
         Me.ShapeContainer1.TabStop = False
         '
@@ -915,10 +809,10 @@ Partial Class detaily_zdruzenia
         '
         Me.LineShape3.BorderWidth = 2
         Me.LineShape3.Name = "LineShape3"
-        Me.LineShape3.X1 = 54
-        Me.LineShape3.X2 = 554
-        Me.LineShape3.Y1 = 507
-        Me.LineShape3.Y2 = 508
+        Me.LineShape3.X1 = 56
+        Me.LineShape3.X2 = 556
+        Me.LineShape3.Y1 = 496
+        Me.LineShape3.Y2 = 497
         '
         'LineShape2
         '
@@ -929,13 +823,264 @@ Partial Class detaily_zdruzenia
         Me.LineShape2.Y1 = 323
         Me.LineShape2.Y2 = 324
         '
+        'Platnost_najomnej_zmluvy_doTextBox
+        '
+        Me.Platnost_najomnej_zmluvy_doTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "platnost_najomnej_zmluvy_do", True))
+        Me.Platnost_najomnej_zmluvy_doTextBox.Location = New System.Drawing.Point(193, 283)
+        Me.Platnost_najomnej_zmluvy_doTextBox.Name = "Platnost_najomnej_zmluvy_doTextBox"
+        Me.Platnost_najomnej_zmluvy_doTextBox.Size = New System.Drawing.Size(128, 20)
+        Me.Platnost_najomnej_zmluvy_doTextBox.TabIndex = 1
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(327, 505)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 13)
+        Me.Label3.TabIndex = 71
+        Me.Label3.Text = "Skutočnosť"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(243, 505)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(32, 13)
+        Me.Label4.TabIndex = 72
+        Me.Label4.Text = "Plán"
+        '
+        'Stavace_planTextBox
+        '
+        Me.Stavace_planTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "stavace_plan", True))
+        Me.Stavace_planTextBox.Location = New System.Drawing.Point(230, 521)
+        Me.Stavace_planTextBox.Name = "Stavace_planTextBox"
+        Me.Stavace_planTextBox.ReadOnly = True
+        Me.Stavace_planTextBox.Size = New System.Drawing.Size(45, 20)
+        Me.Stavace_planTextBox.TabIndex = 1
+        '
+        'Stavace_skutocnostTextBox
+        '
+        Me.Stavace_skutocnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "stavace_skutocnost", True))
+        Me.Stavace_skutocnostTextBox.Location = New System.Drawing.Point(341, 521)
+        Me.Stavace_skutocnostTextBox.Name = "Stavace_skutocnostTextBox"
+        Me.Stavace_skutocnostTextBox.ReadOnly = True
+        Me.Stavace_skutocnostTextBox.Size = New System.Drawing.Size(41, 20)
+        Me.Stavace_skutocnostTextBox.TabIndex = 3
+        '
+        'Sliedice_planTextBox
+        '
+        Me.Sliedice_planTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "sliedice_plan", True))
+        Me.Sliedice_planTextBox.Location = New System.Drawing.Point(230, 547)
+        Me.Sliedice_planTextBox.Name = "Sliedice_planTextBox"
+        Me.Sliedice_planTextBox.ReadOnly = True
+        Me.Sliedice_planTextBox.Size = New System.Drawing.Size(45, 20)
+        Me.Sliedice_planTextBox.TabIndex = 1
+        '
+        'Sliedice_skutocnostTextBox
+        '
+        Me.Sliedice_skutocnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "sliedice_skutocnost", True))
+        Me.Sliedice_skutocnostTextBox.Location = New System.Drawing.Point(341, 547)
+        Me.Sliedice_skutocnostTextBox.Name = "Sliedice_skutocnostTextBox"
+        Me.Sliedice_skutocnostTextBox.ReadOnly = True
+        Me.Sliedice_skutocnostTextBox.Size = New System.Drawing.Size(41, 20)
+        Me.Sliedice_skutocnostTextBox.TabIndex = 3
+        '
+        'Slovensky_kopov_planTextBox
+        '
+        Me.Slovensky_kopov_planTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "slovensky_kopov_plan", True))
+        Me.Slovensky_kopov_planTextBox.Location = New System.Drawing.Point(231, 573)
+        Me.Slovensky_kopov_planTextBox.Name = "Slovensky_kopov_planTextBox"
+        Me.Slovensky_kopov_planTextBox.ReadOnly = True
+        Me.Slovensky_kopov_planTextBox.Size = New System.Drawing.Size(45, 20)
+        Me.Slovensky_kopov_planTextBox.TabIndex = 5
+        '
+        'Slovensky_kopov_skutocnostTextBox
+        '
+        Me.Slovensky_kopov_skutocnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "slovensky_kopov_skutocnost", True))
+        Me.Slovensky_kopov_skutocnostTextBox.Location = New System.Drawing.Point(341, 573)
+        Me.Slovensky_kopov_skutocnostTextBox.Name = "Slovensky_kopov_skutocnostTextBox"
+        Me.Slovensky_kopov_skutocnostTextBox.ReadOnly = True
+        Me.Slovensky_kopov_skutocnostTextBox.Size = New System.Drawing.Size(41, 20)
+        Me.Slovensky_kopov_skutocnostTextBox.TabIndex = 7
+        '
+        'Ostatne_durice_planTextBox
+        '
+        Me.Ostatne_durice_planTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "ostatne_durice_plan", True))
+        Me.Ostatne_durice_planTextBox.Location = New System.Drawing.Point(231, 599)
+        Me.Ostatne_durice_planTextBox.Name = "Ostatne_durice_planTextBox"
+        Me.Ostatne_durice_planTextBox.ReadOnly = True
+        Me.Ostatne_durice_planTextBox.Size = New System.Drawing.Size(45, 20)
+        Me.Ostatne_durice_planTextBox.TabIndex = 9
+        '
+        'Ostatne_durice_skutocnostTextBox
+        '
+        Me.Ostatne_durice_skutocnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "ostatne_durice_skutocnost", True))
+        Me.Ostatne_durice_skutocnostTextBox.Location = New System.Drawing.Point(341, 600)
+        Me.Ostatne_durice_skutocnostTextBox.Name = "Ostatne_durice_skutocnostTextBox"
+        Me.Ostatne_durice_skutocnostTextBox.ReadOnly = True
+        Me.Ostatne_durice_skutocnostTextBox.Size = New System.Drawing.Size(41, 20)
+        Me.Ostatne_durice_skutocnostTextBox.TabIndex = 11
+        '
+        'Brlohare_planTextBox
+        '
+        Me.Brlohare_planTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "brlohare_plan", True))
+        Me.Brlohare_planTextBox.Location = New System.Drawing.Point(231, 622)
+        Me.Brlohare_planTextBox.Name = "Brlohare_planTextBox"
+        Me.Brlohare_planTextBox.ReadOnly = True
+        Me.Brlohare_planTextBox.Size = New System.Drawing.Size(45, 20)
+        Me.Brlohare_planTextBox.TabIndex = 13
+        '
+        'Brlohare_skutocnostTextBox
+        '
+        Me.Brlohare_skutocnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "brlohare_skutocnost", True))
+        Me.Brlohare_skutocnostTextBox.Location = New System.Drawing.Point(341, 622)
+        Me.Brlohare_skutocnostTextBox.Name = "Brlohare_skutocnostTextBox"
+        Me.Brlohare_skutocnostTextBox.ReadOnly = True
+        Me.Brlohare_skutocnostTextBox.Size = New System.Drawing.Size(41, 20)
+        Me.Brlohare_skutocnostTextBox.TabIndex = 15
+        '
+        'Farbiare_planTextBox
+        '
+        Me.Farbiare_planTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "farbiare_plan", True))
+        Me.Farbiare_planTextBox.Location = New System.Drawing.Point(231, 648)
+        Me.Farbiare_planTextBox.Name = "Farbiare_planTextBox"
+        Me.Farbiare_planTextBox.ReadOnly = True
+        Me.Farbiare_planTextBox.Size = New System.Drawing.Size(45, 20)
+        Me.Farbiare_planTextBox.TabIndex = 17
+        '
+        'Farbiare_skutocnostTextBox
+        '
+        Me.Farbiare_skutocnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "farbiare_skutocnost", True))
+        Me.Farbiare_skutocnostTextBox.Location = New System.Drawing.Point(341, 648)
+        Me.Farbiare_skutocnostTextBox.Name = "Farbiare_skutocnostTextBox"
+        Me.Farbiare_skutocnostTextBox.ReadOnly = True
+        Me.Farbiare_skutocnostTextBox.Size = New System.Drawing.Size(41, 20)
+        Me.Farbiare_skutocnostTextBox.TabIndex = 19
+        '
+        'Pes_jelenia_planTextBox
+        '
+        Me.Pes_jelenia_planTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_jelenia_plan", True))
+        Me.Pes_jelenia_planTextBox.Location = New System.Drawing.Point(231, 681)
+        Me.Pes_jelenia_planTextBox.Name = "Pes_jelenia_planTextBox"
+        Me.Pes_jelenia_planTextBox.ReadOnly = True
+        Me.Pes_jelenia_planTextBox.Size = New System.Drawing.Size(45, 20)
+        Me.Pes_jelenia_planTextBox.TabIndex = 21
+        '
+        'Pes_jelenia_skutocnostTextBox
+        '
+        Me.Pes_jelenia_skutocnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_jelenia_skutocnost", True))
+        Me.Pes_jelenia_skutocnostTextBox.Location = New System.Drawing.Point(341, 681)
+        Me.Pes_jelenia_skutocnostTextBox.Name = "Pes_jelenia_skutocnostTextBox"
+        Me.Pes_jelenia_skutocnostTextBox.ReadOnly = True
+        Me.Pes_jelenia_skutocnostTextBox.Size = New System.Drawing.Size(41, 20)
+        Me.Pes_jelenia_skutocnostTextBox.TabIndex = 23
+        '
+        'Pes_diviacia_planTextBox
+        '
+        Me.Pes_diviacia_planTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_diviacia_plan", True))
+        Me.Pes_diviacia_planTextBox.Location = New System.Drawing.Point(230, 707)
+        Me.Pes_diviacia_planTextBox.Name = "Pes_diviacia_planTextBox"
+        Me.Pes_diviacia_planTextBox.ReadOnly = True
+        Me.Pes_diviacia_planTextBox.Size = New System.Drawing.Size(45, 20)
+        Me.Pes_diviacia_planTextBox.TabIndex = 25
+        '
+        'Pes_diviacia_skutocnostTextBox
+        '
+        Me.Pes_diviacia_skutocnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_diviacia_skutocnost", True))
+        Me.Pes_diviacia_skutocnostTextBox.Location = New System.Drawing.Point(341, 707)
+        Me.Pes_diviacia_skutocnostTextBox.Name = "Pes_diviacia_skutocnostTextBox"
+        Me.Pes_diviacia_skutocnostTextBox.ReadOnly = True
+        Me.Pes_diviacia_skutocnostTextBox.Size = New System.Drawing.Size(41, 20)
+        Me.Pes_diviacia_skutocnostTextBox.TabIndex = 27
+        '
+        'Pes_srncia_planTextBox
+        '
+        Me.Pes_srncia_planTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_srncia_plan", True))
+        Me.Pes_srncia_planTextBox.Location = New System.Drawing.Point(230, 733)
+        Me.Pes_srncia_planTextBox.Name = "Pes_srncia_planTextBox"
+        Me.Pes_srncia_planTextBox.ReadOnly = True
+        Me.Pes_srncia_planTextBox.Size = New System.Drawing.Size(45, 20)
+        Me.Pes_srncia_planTextBox.TabIndex = 29
+        '
+        'Pes_srncia_skutocnostTextBox
+        '
+        Me.Pes_srncia_skutocnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_srncia_skutocnost", True))
+        Me.Pes_srncia_skutocnostTextBox.Location = New System.Drawing.Point(341, 733)
+        Me.Pes_srncia_skutocnostTextBox.Name = "Pes_srncia_skutocnostTextBox"
+        Me.Pes_srncia_skutocnostTextBox.ReadOnly = True
+        Me.Pes_srncia_skutocnostTextBox.Size = New System.Drawing.Size(41, 20)
+        Me.Pes_srncia_skutocnostTextBox.TabIndex = 31
+        '
+        'Pes_mala_planTextBox
+        '
+        Me.Pes_mala_planTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_mala_plan", True))
+        Me.Pes_mala_planTextBox.Location = New System.Drawing.Point(231, 759)
+        Me.Pes_mala_planTextBox.Name = "Pes_mala_planTextBox"
+        Me.Pes_mala_planTextBox.ReadOnly = True
+        Me.Pes_mala_planTextBox.Size = New System.Drawing.Size(45, 20)
+        Me.Pes_mala_planTextBox.TabIndex = 33
+        '
+        'Pes_mala_skutocnostTextBox
+        '
+        Me.Pes_mala_skutocnostTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "pes_mala_skutocnost", True))
+        Me.Pes_mala_skutocnostTextBox.Location = New System.Drawing.Point(341, 759)
+        Me.Pes_mala_skutocnostTextBox.Name = "Pes_mala_skutocnostTextBox"
+        Me.Pes_mala_skutocnostTextBox.ReadOnly = True
+        Me.Pes_mala_skutocnostTextBox.Size = New System.Drawing.Size(41, 20)
+        Me.Pes_mala_skutocnostTextBox.TabIndex = 35
+        '
+        'ZdruzenieBindingSource
+        '
+        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
+        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSet
+        '
+        'ZdruzenieDataSet
+        '
+        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
+        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ZdruzenieTableAdapter
+        '
+        Me.ZdruzenieTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.UpdateOrder = evidencia_spz.zdruzenieDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.zdruzenieTableAdapter = Me.ZdruzenieTableAdapter
+        '
         'detaily_zdruzenia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(629, 812)
+        Me.ClientSize = New System.Drawing.Size(862, 1036)
+        Me.Controls.Add(Me.Pes_mala_skutocnostTextBox)
+        Me.Controls.Add(Me.Pes_mala_planTextBox)
+        Me.Controls.Add(Me.Pes_srncia_skutocnostTextBox)
+        Me.Controls.Add(Me.Pes_srncia_planTextBox)
+        Me.Controls.Add(Me.Pes_diviacia_skutocnostTextBox)
+        Me.Controls.Add(Me.Pes_diviacia_planTextBox)
+        Me.Controls.Add(Me.Pes_jelenia_skutocnostTextBox)
+        Me.Controls.Add(Me.Pes_jelenia_planTextBox)
+        Me.Controls.Add(Me.Farbiare_skutocnostTextBox)
+        Me.Controls.Add(Me.Farbiare_planTextBox)
+        Me.Controls.Add(Me.Brlohare_skutocnostTextBox)
+        Me.Controls.Add(Me.Brlohare_planTextBox)
+        Me.Controls.Add(Me.Ostatne_durice_skutocnostTextBox)
+        Me.Controls.Add(Me.Ostatne_durice_planTextBox)
+        Me.Controls.Add(Me.Slovensky_kopov_skutocnostTextBox)
+        Me.Controls.Add(Me.Slovensky_kopov_planTextBox)
+        Me.Controls.Add(Me.Sliedice_skutocnostTextBox)
+        Me.Controls.Add(Me.Sliedice_planTextBox)
+        Me.Controls.Add(Me.Stavace_skutocnostTextBox)
+        Me.Controls.Add(Me.Stavace_planTextBox)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Platnost_najomnej_zmluvy_doTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
@@ -982,37 +1127,26 @@ Partial Class detaily_zdruzenia
         Me.Controls.Add(InaLabel)
         Me.Controls.Add(Me.InaTextBox)
         Me.Controls.Add(StavaceLabel)
-        Me.Controls.Add(Me.StavaceTextBox)
         Me.Controls.Add(SliediceLabel)
-        Me.Controls.Add(Me.SliediceTextBox)
         Me.Controls.Add(Slovensky_kopovLabel)
-        Me.Controls.Add(Me.Slovensky_kopovTextBox)
         Me.Controls.Add(Ostatne_duriceLabel)
-        Me.Controls.Add(Me.Ostatne_duriceTextBox)
         Me.Controls.Add(BrlohareLabel)
-        Me.Controls.Add(Me.BrlohareTextBox)
         Me.Controls.Add(FarbiareLabel)
-        Me.Controls.Add(Me.FarbiareTextBox)
         Me.Controls.Add(Pes_jeleniaLabel)
-        Me.Controls.Add(Me.Pes_jeleniaTextBox)
         Me.Controls.Add(Pes_diviaciaLabel)
-        Me.Controls.Add(Me.Pes_diviaciaTextBox)
         Me.Controls.Add(Pes_srnciaLabel)
-        Me.Controls.Add(Me.Pes_srnciaTextBox)
         Me.Controls.Add(Pes_malaLabel)
-        Me.Controls.Add(Me.Pes_malaTextBox)
         Me.Controls.Add(Platnost_najomnej_zmluvy_doLabel)
-        Me.Controls.Add(Me.Platnost_najomnej_zmluvy_doDateTimePicker)
         Me.Controls.Add(Me.ZdruzenieBindingNavigator)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "detaily_zdruzenia"
         Me.Text = "detaily_zdruzenia"
-        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ZdruzenieBindingNavigator.ResumeLayout(False)
         Me.ZdruzenieBindingNavigator.PerformLayout()
+        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1054,17 +1188,6 @@ Partial Class detaily_zdruzenia
     Friend WithEvents DiviaciaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents BazantTextBox As System.Windows.Forms.TextBox
     Friend WithEvents InaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents StavaceTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents SliediceTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Slovensky_kopovTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Ostatne_duriceTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents BrlohareTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents FarbiareTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Pes_jeleniaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Pes_diviaciaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Pes_srnciaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Pes_malaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Platnost_najomnej_zmluvy_doDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents upravitButton As System.Windows.Forms.Button
     Friend WithEvents ulozButton As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
@@ -1074,4 +1197,27 @@ Partial Class detaily_zdruzenia
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape3 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents Stavace_planTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Platnost_najomnej_zmluvy_doTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Stavace_skutocnostTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Sliedice_planTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Sliedice_skutocnostTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Slovensky_kopov_planTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Slovensky_kopov_skutocnostTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Ostatne_durice_planTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Ostatne_durice_skutocnostTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Brlohare_planTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Brlohare_skutocnostTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Farbiare_planTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Farbiare_skutocnostTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Pes_jelenia_planTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Pes_jelenia_skutocnostTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Pes_diviacia_planTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Pes_diviacia_skutocnostTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Pes_srncia_planTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Pes_srncia_skutocnostTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Pes_mala_planTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Pes_mala_skutocnostTextBox As System.Windows.Forms.TextBox
 End Class

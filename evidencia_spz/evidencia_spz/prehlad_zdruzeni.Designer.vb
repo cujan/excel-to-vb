@@ -177,6 +177,7 @@ Partial Class prehlad_zdruzeni
         Me.ZdruzenieDataGridView.Location = New System.Drawing.Point(12, 34)
         Me.ZdruzenieDataGridView.Name = "ZdruzenieDataGridView"
         Me.ZdruzenieDataGridView.ReadOnly = True
+        Me.ZdruzenieDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.ZdruzenieDataGridView.Size = New System.Drawing.Size(726, 302)
         Me.ZdruzenieDataGridView.TabIndex = 0
         '

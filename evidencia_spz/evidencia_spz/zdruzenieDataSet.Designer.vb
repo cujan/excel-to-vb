@@ -2620,7 +2620,7 @@ Namespace zdruzenieDataSetTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT id, nazov, sidlo, predseda, predseda_telefon, polovnicky_hospodar, polovni"& _ 
@@ -2633,6 +2633,21 @@ Namespace zdruzenieDataSetTableAdapters
                 "e_plan, sliedice_skutocnost, slovensky_kopov_plan, slovensky_kopov_skutocnost, s"& _ 
                 "tavace_plan, stavace_skutocnost FROM zdruzenie ORDER BY nazov"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT     id, nazov, sidlo, predseda, predseda_telefon, polovnicky_hospodar, pol"& _ 
+                "ovnicky_hospodar_telefon, ico, dic, banka, cislo_uctu, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      n"& _ 
+                "azov_polovneho_reviru, chovatelska_oblast, cislo_reviru, vymera, les, jelenia, s"& _ 
+                "rncia, diviacia, bazant, ina, platnost_najomnej_zmluvy_do, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                   "& _ 
+                "   brlohare_plan, brlohare_skutocnost, farbiare_plan, farbiare_skutocnost, ostat"& _ 
+                "ne_durice_plan, ostatne_durice_skutocnost, pes_diviacia_plan, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                "& _ 
+                "      pes_diviacia_skutocnost, pes_jelenia_plan, pes_jelenia_skutocnost, pes_mal"& _ 
+                "a_plan, pes_mala_skutocnost, pes_srncia_plan, pes_srncia_skutocnost, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"         "& _ 
+                "             sliedice_plan, sliedice_skutocnost, slovensky_kopov_plan, slovensky"& _ 
+                "_kopov_skutocnost, stavace_plan, stavace_skutocnost"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         zdruzenie"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHE"& _ 
+                "RE     (id = ?)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "id", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2652,6 +2667,30 @@ Namespace zdruzenieDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As zdruzenieDataSet.zdruzenieDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As zdruzenieDataSet.zdruzenieDataTable = New zdruzenieDataSet.zdruzenieDataTable
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy_id(ByVal dataTable As zdruzenieDataSet.zdruzenieDataTable, ByVal id As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(id,Integer)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy_id(ByVal id As Integer) As zdruzenieDataSet.zdruzenieDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(id,Integer)
             Dim dataTable As zdruzenieDataSet.zdruzenieDataTable = New zdruzenieDataSet.zdruzenieDataTable
             Me.Adapter.Fill(dataTable)
             Return dataTable
