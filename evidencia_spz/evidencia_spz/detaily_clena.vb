@@ -85,7 +85,7 @@
 
     Private Sub uprav_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles upravbutton.Click
         'nastavi readonly u texboxov na true
-        Me.Brokova_zbranTextBox.ReadOnly = False
+        Me.Brokova_zbranComboBox.Enabled = True
         Me.Cislo_clenskeho_preukazu_spzTextBox.ReadOnly = False
         Me.Cislo_dokladu_clenskeTextBox.ReadOnly = False
         Me.Cislo_opTextBox.ReadOnly = False
@@ -97,7 +97,7 @@
         Me.Datum_vydania_opTextBox.ReadOnly = False
         Me.Datum_vydania_plTextBox.ReadOnly = False
         Me.Datum_vydania_zpTextBox.ReadOnly = False
-        Me.Gulova_zbranTextBox.ReadOnly = False
+        Me.Gulova_zbranComboBox.Enabled = True
         Me.Kontrolne_strelby_brokTextBox.ReadOnly = False
         Me.Kontrolne_strelby_gulova_zbranTextBox.ReadOnly = False
         Me.MenoTextBox.ReadOnly = False
@@ -143,7 +143,7 @@
         Me.upravbutton.Visible = True
 
         'nastavi readonly u texboxov na true
-        Me.Brokova_zbranTextBox.ReadOnly = True
+        Me.Brokova_zbranComboBox.Enabled = False
         Me.Cislo_clenskeho_preukazu_spzTextBox.ReadOnly = True
         Me.Cislo_dokladu_clenskeTextBox.ReadOnly = True
         Me.Cislo_opTextBox.ReadOnly = True
@@ -155,7 +155,7 @@
         Me.Datum_vydania_opTextBox.ReadOnly = True
         Me.Datum_vydania_plTextBox.ReadOnly = True
         Me.Datum_vydania_zpTextBox.ReadOnly = True
-        Me.Gulova_zbranTextBox.ReadOnly = True
+        Me.Gulova_zbranComboBox.Enabled = False
         Me.Kontrolne_strelby_brokTextBox.ReadOnly = True
         Me.Kontrolne_strelby_gulova_zbranTextBox.ReadOnly = True
         Me.MenoTextBox.ReadOnly = True
@@ -259,9 +259,9 @@
             Dim miesto_skusky_pre_polovnych_hospodarov As String = Miesto_skusky_pre_polovnych_hospodarovTextBox.Text
             Dim vyssia_skuska_z_polovnictva As String = Vyzsia_skuska_z_polovnictvaTextBox.Text
             Dim miesto_vyzssej_skusky As String = Miesto_vyzsia_skuska_z_polovnictvaTextBox.Text
-            Dim brokova_zbran As String = Brokova_zbranTextBox.Text
+            Dim brokova_zbran As String = Brokova_zbranComboBox.Text
             Dim kontrolne_strelby_brok As String = Kontrolne_strelby_brokTextBox.Text
-            Dim gulova_zbran As String = Gulova_zbranTextBox.Text
+            Dim gulova_zbran As String = Gulova_zbranComboBox.Text
             Dim kontrolne_strelby_gula As String = Kontrolne_strelby_gulova_zbranTextBox.Text
             Dim najvyzsie_vyznamenanie As String = Najv_vyznamenanieTextBox.Text
             Dim vyznamenanie_kedy As String = Vyznamenany_kedyTextBox.Text

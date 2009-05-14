@@ -23,6 +23,7 @@
         Me.TopLevel = False
         'hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
         prehlad_clenov.prehlad_clenov_splitter.Panel2.Controls.Add(Me)
+        Me.ClenoviaDataGridView.CurrentCell = Nothing
 
         
     End Sub
