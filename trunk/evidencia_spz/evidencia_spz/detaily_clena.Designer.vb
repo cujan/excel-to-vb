@@ -86,9 +86,7 @@ Partial Class detaily_clena
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox = New System.Windows.Forms.TextBox
         Me.Vyzsia_skuska_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
         Me.Miesto_vyzsia_skuska_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
-        Me.Brokova_zbranTextBox = New System.Windows.Forms.TextBox
         Me.Kontrolne_strelby_brokTextBox = New System.Windows.Forms.TextBox
-        Me.Gulova_zbranTextBox = New System.Windows.Forms.TextBox
         Me.Kontrolne_strelby_gulova_zbranTextBox = New System.Windows.Forms.TextBox
         Me.Udelene_trestyTextBox = New System.Windows.Forms.TextBox
         Me.PoznamkyTextBox = New System.Windows.Forms.TextBox
@@ -131,6 +129,8 @@ Partial Class detaily_clena
         Me.Statna_prislusnostTableAdapter = New evidencia_spz.statna_prislusnostDataSet1TableAdapters.statna_prislusnostTableAdapter
         Me.NarodnostTableAdapter = New evidencia_spz.narodnostDataSetTableAdapters.narodnostTableAdapter
         Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
+        Me.Brokova_zbranComboBox = New System.Windows.Forms.ComboBox
+        Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
         Rodne_cisloLabel = New System.Windows.Forms.Label
         Miesto_narodeniaLabel = New System.Windows.Forms.Label
         Okres_narodeniaLabel = New System.Windows.Forms.Label
@@ -742,15 +742,6 @@ Partial Class detaily_clena
         Me.Miesto_vyzsia_skuska_z_polovnictvaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Miesto_vyzsia_skuska_z_polovnictvaTextBox.TabIndex = 56
         '
-        'Brokova_zbranTextBox
-        '
-        Me.Brokova_zbranTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "brokova_zbran", True))
-        Me.Brokova_zbranTextBox.Location = New System.Drawing.Point(189, 528)
-        Me.Brokova_zbranTextBox.Name = "Brokova_zbranTextBox"
-        Me.Brokova_zbranTextBox.ReadOnly = True
-        Me.Brokova_zbranTextBox.Size = New System.Drawing.Size(38, 20)
-        Me.Brokova_zbranTextBox.TabIndex = 58
-        '
         'Kontrolne_strelby_brokTextBox
         '
         Me.Kontrolne_strelby_brokTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "kontrolne_strelby_brok", True))
@@ -759,15 +750,6 @@ Partial Class detaily_clena
         Me.Kontrolne_strelby_brokTextBox.ReadOnly = True
         Me.Kontrolne_strelby_brokTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Kontrolne_strelby_brokTextBox.TabIndex = 60
-        '
-        'Gulova_zbranTextBox
-        '
-        Me.Gulova_zbranTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "gulova_zbran", True))
-        Me.Gulova_zbranTextBox.Location = New System.Drawing.Point(189, 554)
-        Me.Gulova_zbranTextBox.Name = "Gulova_zbranTextBox"
-        Me.Gulova_zbranTextBox.ReadOnly = True
-        Me.Gulova_zbranTextBox.Size = New System.Drawing.Size(38, 20)
-        Me.Gulova_zbranTextBox.TabIndex = 62
         '
         'Kontrolne_strelby_gulova_zbranTextBox
         '
@@ -1051,6 +1033,7 @@ Partial Class detaily_clena
         '
         Me.Clen_pzComboBox.DataSource = Me.ZdruzenieBindingSource
         Me.Clen_pzComboBox.DisplayMember = "nazov"
+        Me.Clen_pzComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Clen_pzComboBox.Enabled = False
         Me.Clen_pzComboBox.FormattingEnabled = True
         Me.Clen_pzComboBox.Location = New System.Drawing.Point(189, 400)
@@ -1081,6 +1064,30 @@ Partial Class detaily_clena
         '
         Me.ZdruzenieTableAdapter.ClearBeforeFill = True
         '
+        'Brokova_zbranComboBox
+        '
+        Me.Brokova_zbranComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "brokova_zbran", True))
+        Me.Brokova_zbranComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Brokova_zbranComboBox.Enabled = False
+        Me.Brokova_zbranComboBox.FormattingEnabled = True
+        Me.Brokova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ANO"})
+        Me.Brokova_zbranComboBox.Location = New System.Drawing.Point(189, 529)
+        Me.Brokova_zbranComboBox.Name = "Brokova_zbranComboBox"
+        Me.Brokova_zbranComboBox.Size = New System.Drawing.Size(56, 21)
+        Me.Brokova_zbranComboBox.TabIndex = 1
+        '
+        'Gulova_zbranComboBox
+        '
+        Me.Gulova_zbranComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClenoviaBindingSource1, "gulova_zbran", True))
+        Me.Gulova_zbranComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Gulova_zbranComboBox.Enabled = False
+        Me.Gulova_zbranComboBox.FormattingEnabled = True
+        Me.Gulova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ANO"})
+        Me.Gulova_zbranComboBox.Location = New System.Drawing.Point(189, 556)
+        Me.Gulova_zbranComboBox.Name = "Gulova_zbranComboBox"
+        Me.Gulova_zbranComboBox.Size = New System.Drawing.Size(56, 21)
+        Me.Gulova_zbranComboBox.TabIndex = 1
+        '
         'detaily_clena
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1088,6 +1095,8 @@ Partial Class detaily_clena
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(825, 778)
+        Me.Controls.Add(Me.Gulova_zbranComboBox)
+        Me.Controls.Add(Me.Brokova_zbranComboBox)
         Me.Controls.Add(Me.Clen_pzComboBox)
         Me.Controls.Add(Me.NarodnostComboBox)
         Me.Controls.Add(Me.Statna_prislusnostComboBox)
@@ -1146,11 +1155,9 @@ Partial Class detaily_clena
         Me.Controls.Add(Me.Vyzsia_skuska_z_polovnictvaTextBox)
         Me.Controls.Add(Me.Miesto_vyzsia_skuska_z_polovnictvaTextBox)
         Me.Controls.Add(Brokova_zbranLabel)
-        Me.Controls.Add(Me.Brokova_zbranTextBox)
         Me.Controls.Add(Kontrolne_strelby_brokLabel)
         Me.Controls.Add(Me.Kontrolne_strelby_brokTextBox)
         Me.Controls.Add(Gulova_zbranLabel)
-        Me.Controls.Add(Me.Gulova_zbranTextBox)
         Me.Controls.Add(Me.Kontrolne_strelby_gulova_zbranTextBox)
         Me.Controls.Add(Udelene_trestyLabel)
         Me.Controls.Add(Me.Udelene_trestyTextBox)
@@ -1223,9 +1230,7 @@ Partial Class detaily_clena
     Friend WithEvents Miesto_skusky_pre_polovnych_hospodarovTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Vyzsia_skuska_z_polovnictvaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Miesto_vyzsia_skuska_z_polovnictvaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Brokova_zbranTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Kontrolne_strelby_brokTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Gulova_zbranTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Kontrolne_strelby_gulova_zbranTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Udelene_trestyTextBox As System.Windows.Forms.TextBox
     Friend WithEvents PoznamkyTextBox As System.Windows.Forms.TextBox
@@ -1266,4 +1271,6 @@ Partial Class detaily_clena
     Friend WithEvents ZdruzenieDataSet As evidencia_spz.zdruzenieDataSet
     Friend WithEvents ZdruzenieBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ZdruzenieTableAdapter As evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
+    Friend WithEvents Brokova_zbranComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Gulova_zbranComboBox As System.Windows.Forms.ComboBox
 End Class

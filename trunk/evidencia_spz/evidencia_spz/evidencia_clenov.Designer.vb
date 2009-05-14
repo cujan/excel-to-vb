@@ -248,6 +248,7 @@ Partial Class evidencia_clenov
         Me.ClenoviaDataGridView.Location = New System.Drawing.Point(12, 91)
         Me.ClenoviaDataGridView.Name = "ClenoviaDataGridView"
         Me.ClenoviaDataGridView.ReadOnly = True
+        Me.ClenoviaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.ClenoviaDataGridView.Size = New System.Drawing.Size(768, 321)
         Me.ClenoviaDataGridView.TabIndex = 10
         '
