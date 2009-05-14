@@ -435,7 +435,7 @@ Partial Class nove_zdruzenie
         'Label32
         '
         Label32.AutoSize = True
-        Label32.Location = New System.Drawing.Point(48, 790)
+        Label32.Location = New System.Drawing.Point(48, 289)
         Label32.Name = "Label32"
         Label32.Size = New System.Drawing.Size(126, 13)
         Label32.TabIndex = 101
@@ -692,7 +692,7 @@ Partial Class nove_zdruzenie
         '
         'Platnost_najomnej_zmluvy_doTextBox
         '
-        Me.Platnost_najomnej_zmluvy_doTextBox.Location = New System.Drawing.Point(184, 783)
+        Me.Platnost_najomnej_zmluvy_doTextBox.Location = New System.Drawing.Point(184, 282)
         Me.Platnost_najomnej_zmluvy_doTextBox.Name = "Platnost_najomnej_zmluvy_doTextBox"
         Me.Platnost_najomnej_zmluvy_doTextBox.Size = New System.Drawing.Size(95, 20)
         Me.Platnost_najomnej_zmluvy_doTextBox.TabIndex = 68
@@ -701,7 +701,7 @@ Partial Class nove_zdruzenie
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(58, 291)
+        Me.Label21.Location = New System.Drawing.Point(58, 302)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(33, 13)
         Me.Label21.TabIndex = 89
@@ -713,8 +713,8 @@ Partial Class nove_zdruzenie
         Me.LineShape2.Name = "LineShape2"
         Me.LineShape2.X1 = 57
         Me.LineShape2.X2 = 557
-        Me.LineShape2.Y1 = 307
-        Me.LineShape2.Y2 = 308
+        Me.LineShape2.Y1 = 322
+        Me.LineShape2.Y2 = 323
         '
         'ShapeContainer1
         '
