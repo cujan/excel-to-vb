@@ -247,7 +247,7 @@ WHERE     (clenske_do = '2009')</CommandText>
         <CanGrow>true</CanGrow>
         <Left>6cm</Left>
         <Height>0.75cm</Height>
-        <Value>=First(Fields!clenske_do.Value, "koniec_clenstvaDataSet1_clenovia")</Value>
+        <Value>=Min(Fields!clenske_do.Value, "koniec_clenstvaDataSet1_clenovia")</Value>
       </Textbox>
       <Textbox Name="textbox1">
         <rd:DefaultName>textbox1</rd:DefaultName>
