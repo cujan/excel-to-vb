@@ -64,7 +64,7 @@ Partial Class narodnost
         'SkratkaLabel
         '
         SkratkaLabel.AutoSize = True
-        SkratkaLabel.Location = New System.Drawing.Point(293, 37)
+        SkratkaLabel.Location = New System.Drawing.Point(281, 37)
         SkratkaLabel.Name = "SkratkaLabel"
         SkratkaLabel.Size = New System.Drawing.Size(44, 13)
         SkratkaLabel.TabIndex = 4
@@ -73,7 +73,7 @@ Partial Class narodnost
         'NazovLabel
         '
         NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(406, 37)
+        NazovLabel.Location = New System.Drawing.Point(449, 37)
         NazovLabel.Name = "NazovLabel"
         NazovLabel.Size = New System.Drawing.Size(38, 13)
         NazovLabel.TabIndex = 6
@@ -130,7 +130,7 @@ Partial Class narodnost
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -216,13 +216,15 @@ Partial Class narodnost
         Me.NarodnostDataGridView.AllowUserToAddRows = False
         Me.NarodnostDataGridView.AllowUserToDeleteRows = False
         Me.NarodnostDataGridView.AutoGenerateColumns = False
+        Me.NarodnostDataGridView.BackgroundColor = System.Drawing.Color.PaleGreen
+        Me.NarodnostDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.NarodnostDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.NarodnostDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.NarodnostDataGridView.DataSource = Me.NarodnostBindingSource
-        Me.NarodnostDataGridView.Location = New System.Drawing.Point(296, 60)
+        Me.NarodnostDataGridView.Location = New System.Drawing.Point(318, 60)
         Me.NarodnostDataGridView.Name = "NarodnostDataGridView"
         Me.NarodnostDataGridView.ReadOnly = True
-        Me.NarodnostDataGridView.Size = New System.Drawing.Size(214, 139)
+        Me.NarodnostDataGridView.Size = New System.Drawing.Size(231, 239)
         Me.NarodnostDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn2
@@ -243,18 +245,18 @@ Partial Class narodnost
         '
         'SkratkaTextBox
         '
-        Me.SkratkaTextBox.Location = New System.Drawing.Point(344, 34)
+        Me.SkratkaTextBox.Location = New System.Drawing.Point(331, 34)
         Me.SkratkaTextBox.Name = "SkratkaTextBox"
         Me.SkratkaTextBox.ReadOnly = True
-        Me.SkratkaTextBox.Size = New System.Drawing.Size(49, 20)
+        Me.SkratkaTextBox.Size = New System.Drawing.Size(75, 20)
         Me.SkratkaTextBox.TabIndex = 5
         '
         'NazovTextBox
         '
-        Me.NazovTextBox.Location = New System.Drawing.Point(457, 34)
+        Me.NazovTextBox.Location = New System.Drawing.Point(493, 34)
         Me.NazovTextBox.Name = "NazovTextBox"
         Me.NazovTextBox.ReadOnly = True
-        Me.NazovTextBox.Size = New System.Drawing.Size(73, 20)
+        Me.NazovTextBox.Size = New System.Drawing.Size(97, 20)
         Me.NazovTextBox.TabIndex = 7
         '
         'koniec

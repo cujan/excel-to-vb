@@ -28,6 +28,8 @@ Partial Class prehlad_zdruzeni
         Me.karta_clena_tlac_button = New System.Windows.Forms.Button
         Me.button_report_zoznam_clenov = New System.Windows.Forms.Button
         Me.zavriet_kartu = New System.Windows.Forms.Button
+        Me.hladajTextBox = New System.Windows.Forms.TextBox
+        Me.Label4 = New System.Windows.Forms.Label
         Me.Label3 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
@@ -56,8 +58,6 @@ Partial Class prehlad_zdruzeni
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ZdruzenieBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.hladajTextBox = New System.Windows.Forms.TextBox
         Me.prehlad_clenov_splitter.Panel1.SuspendLayout()
         Me.prehlad_clenov_splitter.Panel2.SuspendLayout()
         Me.prehlad_clenov_splitter.SuspendLayout()
@@ -128,6 +128,23 @@ Partial Class prehlad_zdruzeni
         Me.zavriet_kartu.Text = "Zavrieť kartu"
         Me.zavriet_kartu.UseVisualStyleBackColor = False
         '
+        'hladajTextBox
+        '
+        Me.hladajTextBox.Location = New System.Drawing.Point(251, 34)
+        Me.hladajTextBox.Name = "hladajTextBox"
+        Me.hladajTextBox.Size = New System.Drawing.Size(276, 20)
+        Me.hladajTextBox.TabIndex = 6
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Label4.Location = New System.Drawing.Point(124, 37)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(121, 13)
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "Vyhľadať združenie:"
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -136,6 +153,7 @@ Partial Class prehlad_zdruzeni
         Me.Label3.Size = New System.Drawing.Size(119, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "ID vybraného združenia"
+        Me.Label3.Visible = False
         '
         'Label2
         '
@@ -150,6 +168,7 @@ Partial Class prehlad_zdruzeni
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.PaleGreen
         Me.Label1.Location = New System.Drawing.Point(669, 10)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(27, 13)
@@ -171,18 +190,19 @@ Partial Class prehlad_zdruzeni
         '
         Me.ZdruzenieDataGridView.AllowUserToAddRows = False
         Me.ZdruzenieDataGridView.AllowUserToDeleteRows = False
-        Me.ZdruzenieDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ZdruzenieDataGridView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ZdruzenieDataGridView.AutoGenerateColumns = False
+        Me.ZdruzenieDataGridView.BackgroundColor = System.Drawing.Color.PaleGreen
+        Me.ZdruzenieDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.ZdruzenieDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ZdruzenieDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
         Me.ZdruzenieDataGridView.DataSource = Me.ZdruzenieBindingSource
-        Me.ZdruzenieDataGridView.Location = New System.Drawing.Point(12, 92)
+        Me.ZdruzenieDataGridView.Location = New System.Drawing.Point(5, 60)
         Me.ZdruzenieDataGridView.Name = "ZdruzenieDataGridView"
         Me.ZdruzenieDataGridView.ReadOnly = True
         Me.ZdruzenieDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ZdruzenieDataGridView.Size = New System.Drawing.Size(726, 399)
+        Me.ZdruzenieDataGridView.Size = New System.Drawing.Size(704, 431)
         Me.ZdruzenieDataGridView.TabIndex = 0
         '
         'DataGridViewTextBoxColumn2
@@ -281,7 +301,7 @@ Partial Class prehlad_zdruzeni
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -361,22 +381,6 @@ Partial Class prehlad_zdruzeni
         Me.ZdruzenieBindingNavigatorSaveItem.Name = "ZdruzenieBindingNavigatorSaveItem"
         Me.ZdruzenieBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ZdruzenieBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(124, 50)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(87, 13)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "Hľadaj zdruzenie"
-        '
-        'hladajTextBox
-        '
-        Me.hladajTextBox.Location = New System.Drawing.Point(234, 47)
-        Me.hladajTextBox.Name = "hladajTextBox"
-        Me.hladajTextBox.Size = New System.Drawing.Size(159, 20)
-        Me.hladajTextBox.TabIndex = 6
         '
         'prehlad_zdruzeni
         '

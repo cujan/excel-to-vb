@@ -23,46 +23,17 @@ Partial Class platnost_clenstva
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Me.clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.koniec_clenstvaDataSet1 = New evidencia_spz.koniec_clenstvaDataSet1
         Me.Label1 = New System.Windows.Forms.Label
         Me.ComboBox1 = New System.Windows.Forms.ComboBox
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
-        Me.clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.koniec_clenstvaDataSet1 = New evidencia_spz.koniec_clenstvaDataSet1
         Me.clenoviaTableAdapter = New evidencia_spz.koniec_clenstvaDataSet1TableAdapters.clenoviaTableAdapter
         Me.upozornenie = New System.Windows.Forms.Label
         CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.koniec_clenstvaDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 13)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Plastnosť členstva do:"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"})
-        Me.ComboBox1.Location = New System.Drawing.Point(127, 10)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(71, 21)
-        Me.ComboBox1.TabIndex = 2
-        '
-        'ReportViewer1
-        '
-        ReportDataSource3.Name = "koniec_clenstvaDataSet1_clenovia"
-        ReportDataSource3.Value = Me.clenoviaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.platnost_clenstva.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 61)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(869, 491)
-        Me.ReportViewer1.TabIndex = 3
         '
         'clenoviaBindingSource
         '
@@ -73,6 +44,36 @@ Partial Class platnost_clenstva
         '
         Me.koniec_clenstvaDataSet1.DataSetName = "koniec_clenstvaDataSet1"
         Me.koniec_clenstvaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Label1.Location = New System.Drawing.Point(9, 13)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(134, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Plastnosť členstva do:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"})
+        Me.ComboBox1.Location = New System.Drawing.Point(149, 10)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(71, 21)
+        Me.ComboBox1.TabIndex = 2
+        '
+        'ReportViewer1
+        '
+        ReportDataSource1.Name = "koniec_clenstvaDataSet1_clenovia"
+        ReportDataSource1.Value = Me.clenoviaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.platnost_clenstva.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(12, 61)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.Size = New System.Drawing.Size(869, 491)
+        Me.ReportViewer1.TabIndex = 3
         '
         'clenoviaTableAdapter
         '
