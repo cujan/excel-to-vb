@@ -89,4 +89,10 @@
     Private Sub ZdruzenieDataGridView_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ZdruzenieDataGridView.Click
 
     End Sub
+
+    Private Sub hladajTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles hladajTextBox.TextChanged
+        Dim hladane_zdruzenie As String = hladajTextBox.Text
+        Me.ZdruzenieTableAdapter.FillBy_hladaj_zdruzenie(Me.ZdruzenieDataSet.zdruzenie, hladane_zdruzenie)
+
+    End Sub
 End Class

@@ -56,6 +56,8 @@ Partial Class prehlad_zdruzeni
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ZdruzenieBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.hladajTextBox = New System.Windows.Forms.TextBox
         Me.prehlad_clenov_splitter.Panel1.SuspendLayout()
         Me.prehlad_clenov_splitter.Panel2.SuspendLayout()
         Me.prehlad_clenov_splitter.SuspendLayout()
@@ -82,12 +84,14 @@ Partial Class prehlad_zdruzeni
         '
         'prehlad_clenov_splitter.Panel2
         '
+        Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.hladajTextBox)
+        Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.Label4)
         Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.Label3)
         Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.Label2)
         Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.Label1)
         Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.Button1)
         Me.prehlad_clenov_splitter.Panel2.Controls.Add(Me.ZdruzenieDataGridView)
-        Me.prehlad_clenov_splitter.Size = New System.Drawing.Size(762, 400)
+        Me.prehlad_clenov_splitter.Size = New System.Drawing.Size(762, 555)
         Me.prehlad_clenov_splitter.SplitterDistance = 48
         Me.prehlad_clenov_splitter.TabIndex = 0
         '
@@ -174,11 +178,11 @@ Partial Class prehlad_zdruzeni
         Me.ZdruzenieDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ZdruzenieDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
         Me.ZdruzenieDataGridView.DataSource = Me.ZdruzenieBindingSource
-        Me.ZdruzenieDataGridView.Location = New System.Drawing.Point(12, 34)
+        Me.ZdruzenieDataGridView.Location = New System.Drawing.Point(12, 92)
         Me.ZdruzenieDataGridView.Name = "ZdruzenieDataGridView"
         Me.ZdruzenieDataGridView.ReadOnly = True
         Me.ZdruzenieDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ZdruzenieDataGridView.Size = New System.Drawing.Size(726, 302)
+        Me.ZdruzenieDataGridView.Size = New System.Drawing.Size(726, 399)
         Me.ZdruzenieDataGridView.TabIndex = 0
         '
         'DataGridViewTextBoxColumn2
@@ -358,12 +362,28 @@ Partial Class prehlad_zdruzeni
         Me.ZdruzenieBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ZdruzenieBindingNavigatorSaveItem.Text = "Save Data"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(124, 50)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(87, 13)
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "Hľadaj zdruzenie"
+        '
+        'hladajTextBox
+        '
+        Me.hladajTextBox.Location = New System.Drawing.Point(234, 47)
+        Me.hladajTextBox.Name = "hladajTextBox"
+        Me.hladajTextBox.Size = New System.Drawing.Size(159, 20)
+        Me.hladajTextBox.TabIndex = 6
+        '
         'prehlad_zdruzeni
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(762, 400)
+        Me.ClientSize = New System.Drawing.Size(762, 555)
         Me.Controls.Add(Me.ZdruzenieBindingNavigator)
         Me.Controls.Add(Me.prehlad_clenov_splitter)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -415,4 +435,6 @@ Partial Class prehlad_zdruzeni
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents hladajTextBox As System.Windows.Forms.TextBox
 End Class

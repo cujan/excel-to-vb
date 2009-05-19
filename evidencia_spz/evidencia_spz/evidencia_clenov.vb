@@ -184,4 +184,15 @@
         detaily_clena.Show()
         detaily_clena.BringToFront()
     End Sub
+
+    Private Sub hladajButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim hladany_retazec As String = hladajTextBox1.Text
+        Me.ClenoviaTableAdapter.FillBy_hladaj_priezvisko(Me.Prehlad_clenovDataSet.clenovia, hladany_retazec)
+
+    End Sub
+
+    Private Sub hladajTextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles hladajTextBox1.TextChanged
+        Dim hladany_retazec As String = hladajTextBox1.Text
+        Me.ClenoviaTableAdapter.FillBy_hladaj_priezvisko(Me.Prehlad_clenovDataSet.clenovia, hladany_retazec)
+    End Sub
 End Class
