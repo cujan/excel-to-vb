@@ -110,7 +110,7 @@ Partial Class titul
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -196,13 +196,15 @@ Partial Class titul
         Me.TitulDataGridView.AllowUserToAddRows = False
         Me.TitulDataGridView.AllowUserToDeleteRows = False
         Me.TitulDataGridView.AutoGenerateColumns = False
+        Me.TitulDataGridView.BackgroundColor = System.Drawing.Color.PaleGreen
+        Me.TitulDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TitulDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TitulDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.TitulDataGridView.DataSource = Me.TitulBindingSource
-        Me.TitulDataGridView.Location = New System.Drawing.Point(318, 67)
+        Me.TitulDataGridView.Location = New System.Drawing.Point(320, 60)
         Me.TitulDataGridView.Name = "TitulDataGridView"
         Me.TitulDataGridView.ReadOnly = True
-        Me.TitulDataGridView.Size = New System.Drawing.Size(214, 123)
+        Me.TitulDataGridView.Size = New System.Drawing.Size(228, 268)
         Me.TitulDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn2
@@ -240,24 +242,24 @@ Partial Class titul
         Me.uloz.Name = "uloz"
         Me.uloz.Size = New System.Drawing.Size(75, 23)
         Me.uloz.TabIndex = 3
-        Me.uloz.Text = "Ulož"
+        Me.uloz.Text = "Uložiť"
         Me.uloz.UseVisualStyleBackColor = False
         Me.uloz.Visible = False
         '
         'SkratkaTextBox
         '
-        Me.SkratkaTextBox.Location = New System.Drawing.Point(318, 39)
+        Me.SkratkaTextBox.Location = New System.Drawing.Point(331, 34)
         Me.SkratkaTextBox.Name = "SkratkaTextBox"
         Me.SkratkaTextBox.ReadOnly = True
-        Me.SkratkaTextBox.Size = New System.Drawing.Size(81, 20)
+        Me.SkratkaTextBox.Size = New System.Drawing.Size(75, 20)
         Me.SkratkaTextBox.TabIndex = 7
         '
         'NazovTextBox
         '
-        Me.NazovTextBox.Location = New System.Drawing.Point(480, 39)
+        Me.NazovTextBox.Location = New System.Drawing.Point(493, 34)
         Me.NazovTextBox.Name = "NazovTextBox"
         Me.NazovTextBox.ReadOnly = True
-        Me.NazovTextBox.Size = New System.Drawing.Size(81, 20)
+        Me.NazovTextBox.Size = New System.Drawing.Size(98, 20)
         Me.NazovTextBox.TabIndex = 9
         '
         'pridaj_titul
@@ -268,13 +270,13 @@ Partial Class titul
         Me.pridaj_titul.Name = "pridaj_titul"
         Me.pridaj_titul.Size = New System.Drawing.Size(75, 23)
         Me.pridaj_titul.TabIndex = 10
-        Me.pridaj_titul.Text = "Pridaj titul"
+        Me.pridaj_titul.Text = "Pridať"
         Me.pridaj_titul.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(268, 42)
+        Me.Label1.Location = New System.Drawing.Point(281, 37)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 11
@@ -283,7 +285,7 @@ Partial Class titul
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(436, 42)
+        Me.Label2.Location = New System.Drawing.Point(449, 37)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(38, 13)
         Me.Label2.TabIndex = 12
@@ -297,7 +299,7 @@ Partial Class titul
         Me.zmaz.Name = "zmaz"
         Me.zmaz.Size = New System.Drawing.Size(75, 23)
         Me.zmaz.TabIndex = 13
-        Me.zmaz.Text = "Zmaž titul"
+        Me.zmaz.Text = "Zmazať"
         Me.zmaz.UseVisualStyleBackColor = False
         '
         'titul

@@ -57,6 +57,8 @@ Partial Class detaily_zdruzenia
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(detaily_zdruzenia))
         Me.ZdruzenieBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
@@ -120,8 +122,6 @@ Partial Class detaily_zdruzenia
         Me.Pes_srncia_skutocnostTextBox = New System.Windows.Forms.TextBox
         Me.Pes_mala_planTextBox = New System.Windows.Forms.TextBox
         Me.Pes_mala_skutocnostTextBox = New System.Windows.Forms.TextBox
-        Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
         Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
         Me.TableAdapterManager = New evidencia_spz.zdruzenieDataSetTableAdapters.TableAdapterManager
         NazovLabel = New System.Windows.Forms.Label
@@ -468,10 +468,20 @@ Partial Class detaily_zdruzenia
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
         '
+        'ZdruzenieBindingSource
+        '
+        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
+        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSet
+        '
+        'ZdruzenieDataSet
+        '
+        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
+        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -740,7 +750,7 @@ Partial Class detaily_zdruzenia
         Me.upravitButton.Name = "upravitButton"
         Me.upravitButton.Size = New System.Drawing.Size(136, 23)
         Me.upravitButton.TabIndex = 65
-        Me.upravitButton.Text = "Upraviť detajly združenia"
+        Me.upravitButton.Text = "Upraviť detaily združenia"
         Me.upravitButton.UseVisualStyleBackColor = False
         '
         'ulozButton
@@ -749,7 +759,7 @@ Partial Class detaily_zdruzenia
         Me.ulozButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ulozButton.Location = New System.Drawing.Point(293, 7)
         Me.ulozButton.Name = "ulozButton"
-        Me.ulozButton.Size = New System.Drawing.Size(75, 23)
+        Me.ulozButton.Size = New System.Drawing.Size(62, 23)
         Me.ulozButton.TabIndex = 66
         Me.ulozButton.Text = "Uložiť"
         Me.ulozButton.UseVisualStyleBackColor = False
@@ -759,11 +769,11 @@ Partial Class detaily_zdruzenia
         '
         Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(374, 7)
+        Me.Button1.Location = New System.Drawing.Point(361, 7)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(83, 23)
+        Me.Button1.Size = New System.Drawing.Size(96, 23)
         Me.Button1.TabIndex = 67
-        Me.Button1.Text = "Zavrieť kartu"
+        Me.Button1.Text = "Zavrieť podkartu"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Label1
@@ -828,6 +838,7 @@ Partial Class detaily_zdruzenia
         Me.Platnost_najomnej_zmluvy_doTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzenieBindingSource, "platnost_najomnej_zmluvy_do", True))
         Me.Platnost_najomnej_zmluvy_doTextBox.Location = New System.Drawing.Point(193, 283)
         Me.Platnost_najomnej_zmluvy_doTextBox.Name = "Platnost_najomnej_zmluvy_doTextBox"
+        Me.Platnost_najomnej_zmluvy_doTextBox.ReadOnly = True
         Me.Platnost_najomnej_zmluvy_doTextBox.Size = New System.Drawing.Size(128, 20)
         Me.Platnost_najomnej_zmluvy_doTextBox.TabIndex = 1
         '
@@ -1030,16 +1041,6 @@ Partial Class detaily_zdruzenia
         Me.Pes_mala_skutocnostTextBox.ReadOnly = True
         Me.Pes_mala_skutocnostTextBox.Size = New System.Drawing.Size(41, 20)
         Me.Pes_mala_skutocnostTextBox.TabIndex = 35
-        '
-        'ZdruzenieBindingSource
-        '
-        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
-        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSet
-        '
-        'ZdruzenieDataSet
-        '
-        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
-        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ZdruzenieTableAdapter
         '

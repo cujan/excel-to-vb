@@ -491,11 +491,11 @@ Partial Class detaily_clena
         '
         Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(383, 11)
+        Me.Button1.Location = New System.Drawing.Point(368, 11)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(91, 23)
+        Me.Button1.Size = New System.Drawing.Size(106, 23)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Zavrieť kartu"
+        Me.Button1.Text = "Zavrieť podkartu"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Titul_predTextBox
@@ -851,7 +851,7 @@ Partial Class detaily_clena
         Me.upravbutton.Name = "upravbutton"
         Me.upravbutton.Size = New System.Drawing.Size(117, 23)
         Me.upravbutton.TabIndex = 97
-        Me.upravbutton.Text = "Uprav detaily clena"
+        Me.upravbutton.Text = "Upraviť detaily člena"
         Me.upravbutton.UseVisualStyleBackColor = False
         '
         'ulozButton
@@ -860,9 +860,9 @@ Partial Class detaily_clena
         Me.ulozButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ulozButton.Location = New System.Drawing.Point(302, 11)
         Me.ulozButton.Name = "ulozButton"
-        Me.ulozButton.Size = New System.Drawing.Size(75, 23)
+        Me.ulozButton.Size = New System.Drawing.Size(60, 23)
         Me.ulozButton.TabIndex = 98
-        Me.ulozButton.Text = "Uloz zmeny"
+        Me.ulozButton.Text = "Uložiť"
         Me.ulozButton.UseVisualStyleBackColor = False
         Me.ulozButton.Visible = False
         '
