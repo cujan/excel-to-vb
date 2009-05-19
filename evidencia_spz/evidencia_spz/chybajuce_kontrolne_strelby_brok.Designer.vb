@@ -24,24 +24,13 @@ Partial Class chybajuce_kontrolne_strelby_brok
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
         Me.clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Kontrolne_strelby_brokDataSet1 = New evidencia_spz.Kontrolne_strelby_brokDataSet1
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
         Me.clenoviaTableAdapter = New evidencia_spz.Kontrolne_strelby_brokDataSet1TableAdapters.clenoviaTableAdapter
         CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Kontrolne_strelby_brokDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ReportViewer1
-        '
-        ReportDataSource1.Name = "Kontrolne_strelby_brokDataSet1_clenovia"
-        ReportDataSource1.Value = Me.clenoviaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.chybajuce_kontr_strelby_brok.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(760, 382)
-        Me.ReportViewer1.TabIndex = 0
         '
         'clenoviaBindingSource
         '
@@ -52,6 +41,18 @@ Partial Class chybajuce_kontrolne_strelby_brok
         '
         Me.Kontrolne_strelby_brokDataSet1.DataSetName = "Kontrolne_strelby_brokDataSet1"
         Me.Kontrolne_strelby_brokDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ReportViewer1
+        '
+        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource1.Name = "Kontrolne_strelby_brokDataSet1_clenovia"
+        ReportDataSource1.Value = Me.clenoviaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.chybajuce_kontr_strelby_brok.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.Size = New System.Drawing.Size(760, 382)
+        Me.ReportViewer1.TabIndex = 0
         '
         'clenoviaTableAdapter
         '

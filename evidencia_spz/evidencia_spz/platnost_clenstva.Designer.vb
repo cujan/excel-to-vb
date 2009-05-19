@@ -23,13 +23,14 @@ Partial Class platnost_clenstva
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
         Me.Label1 = New System.Windows.Forms.Label
         Me.ComboBox1 = New System.Windows.Forms.ComboBox
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
         Me.clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.koniec_clenstvaDataSet1 = New evidencia_spz.koniec_clenstvaDataSet1
         Me.clenoviaTableAdapter = New evidencia_spz.koniec_clenstvaDataSet1TableAdapters.clenoviaTableAdapter
+        Me.upozornenie = New System.Windows.Forms.Label
         CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.koniec_clenstvaDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -37,7 +38,7 @@ Partial Class platnost_clenstva
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 18)
+        Me.Label1.Location = New System.Drawing.Point(9, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(112, 13)
         Me.Label1.TabIndex = 1
@@ -47,20 +48,20 @@ Partial Class platnost_clenstva
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"})
-        Me.ComboBox1.Location = New System.Drawing.Point(127, 15)
+        Me.ComboBox1.Location = New System.Drawing.Point(127, 10)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(71, 21)
         Me.ComboBox1.TabIndex = 2
         '
         'ReportViewer1
         '
-        ReportDataSource1.Name = "koniec_clenstvaDataSet1_clenovia"
-        ReportDataSource1.Value = Me.clenoviaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        ReportDataSource3.Name = "koniec_clenstvaDataSet1_clenovia"
+        ReportDataSource3.Value = Me.clenoviaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.platnost_clenstva.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 42)
+        Me.ReportViewer1.Location = New System.Drawing.Point(12, 61)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(869, 510)
+        Me.ReportViewer1.Size = New System.Drawing.Size(869, 491)
         Me.ReportViewer1.TabIndex = 3
         '
         'clenoviaBindingSource
@@ -77,11 +78,24 @@ Partial Class platnost_clenstva
         '
         Me.clenoviaTableAdapter.ClearBeforeFill = True
         '
+        'upozornenie
+        '
+        Me.upozornenie.AutoSize = True
+        Me.upozornenie.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.upozornenie.ForeColor = System.Drawing.Color.DarkRed
+        Me.upozornenie.Location = New System.Drawing.Point(10, 37)
+        Me.upozornenie.Name = "upozornenie"
+        Me.upozornenie.Size = New System.Drawing.Size(752, 13)
+        Me.upozornenie.TabIndex = 4
+        Me.upozornenie.Text = "Upozornenie: Daný výstup zobrazí iba členov, ktorým členstvo končí v roku. Členov" & _
+            "ia, ktorým členstvo končí v predchádzajúcich rokoch tu nie sú zobrazení!"
+        '
         'platnost_clenstva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(893, 564)
+        Me.Controls.Add(Me.upozornenie)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label1)
@@ -99,4 +113,5 @@ Partial Class platnost_clenstva
     Friend WithEvents clenoviaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents koniec_clenstvaDataSet1 As evidencia_spz.koniec_clenstvaDataSet1
     Friend WithEvents clenoviaTableAdapter As evidencia_spz.koniec_clenstvaDataSet1TableAdapters.clenoviaTableAdapter
+    Friend WithEvents upozornenie As System.Windows.Forms.Label
 End Class

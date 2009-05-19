@@ -25,17 +25,19 @@ Partial Class kontrolne_strelby_brok
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(kontrolne_strelby_brok))
         Me.ClenoviaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Kontrolne_strelby_brokDataSet1 = New evidencia_spz.Kontrolne_strelby_brokDataSet1
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.ClenoviaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.ClenoviaDataGridView = New System.Windows.Forms.DataGridView
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -47,15 +49,13 @@ Partial Class kontrolne_strelby_brok
         Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Kontrolne_strelby_brokDataSet1 = New evidencia_spz.Kontrolne_strelby_brokDataSet1
         Me.ClenoviaTableAdapter = New evidencia_spz.Kontrolne_strelby_brokDataSet1TableAdapters.clenoviaTableAdapter
         Me.TableAdapterManager = New evidencia_spz.Kontrolne_strelby_brokDataSet1TableAdapters.TableAdapterManager
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClenoviaBindingNavigator.SuspendLayout()
-        CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Kontrolne_strelby_brokDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ClenoviaBindingNavigator
@@ -75,6 +75,41 @@ Partial Class kontrolne_strelby_brok
         Me.ClenoviaBindingNavigator.Size = New System.Drawing.Size(993, 25)
         Me.ClenoviaBindingNavigator.TabIndex = 0
         Me.ClenoviaBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'ClenoviaBindingSource
+        '
+        Me.ClenoviaBindingSource.DataMember = "clenovia"
+        Me.ClenoviaBindingSource.DataSource = Me.Kontrolne_strelby_brokDataSet1
+        '
+        'Kontrolne_strelby_brokDataSet1
+        '
+        Me.Kontrolne_strelby_brokDataSet1.DataSetName = "Kontrolne_strelby_brokDataSet1"
+        Me.Kontrolne_strelby_brokDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -108,16 +143,9 @@ Partial Class kontrolne_strelby_brok
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -140,26 +168,8 @@ Partial Class kontrolne_strelby_brok
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'ClenoviaBindingNavigatorSaveItem
         '
@@ -171,16 +181,14 @@ Partial Class kontrolne_strelby_brok
         '
         'ClenoviaDataGridView
         '
-        Me.ClenoviaDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ClenoviaDataGridView.AutoGenerateColumns = False
         Me.ClenoviaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ClenoviaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29})
         Me.ClenoviaDataGridView.DataSource = Me.ClenoviaBindingSource
-        Me.ClenoviaDataGridView.Location = New System.Drawing.Point(12, 28)
+        Me.ClenoviaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ClenoviaDataGridView.Location = New System.Drawing.Point(0, 25)
         Me.ClenoviaDataGridView.Name = "ClenoviaDataGridView"
-        Me.ClenoviaDataGridView.Size = New System.Drawing.Size(969, 543)
+        Me.ClenoviaDataGridView.Size = New System.Drawing.Size(993, 558)
         Me.ClenoviaDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn2
@@ -237,16 +245,6 @@ Partial Class kontrolne_strelby_brok
         Me.DataGridViewTextBoxColumn29.HeaderText = "kontrolne_strelby_brok"
         Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
         '
-        'ClenoviaBindingSource
-        '
-        Me.ClenoviaBindingSource.DataMember = "clenovia"
-        Me.ClenoviaBindingSource.DataSource = Me.Kontrolne_strelby_brokDataSet1
-        '
-        'Kontrolne_strelby_brokDataSet1
-        '
-        Me.Kontrolne_strelby_brokDataSet1.DataSetName = "Kontrolne_strelby_brokDataSet1"
-        Me.Kontrolne_strelby_brokDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ClenoviaTableAdapter
         '
         Me.ClenoviaTableAdapter.ClearBeforeFill = True
@@ -269,9 +267,9 @@ Partial Class kontrolne_strelby_brok
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ClenoviaBindingNavigator.ResumeLayout(False)
         Me.ClenoviaBindingNavigator.PerformLayout()
-        CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Kontrolne_strelby_brokDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
