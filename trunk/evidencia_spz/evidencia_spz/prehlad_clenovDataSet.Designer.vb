@@ -957,7 +957,7 @@ Namespace prehlad_clenovDataSetTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT     clenovia.id, clenovia.meno, clenovia.priezvisko, clenovia.rodne_cislo,"& _ 
@@ -968,6 +968,18 @@ Namespace prehlad_clenovDataSetTableAdapters
                 "ul_za = titul_za.ID) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      titul ON clenovia.ti"& _ 
                 "tul_pred = titul.ID)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY clenovia.priezvisko"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT     clenovia.id, clenovia.meno, clenovia.priezvisko, clenovia.rodne_cislo,"& _ 
+                " titul.skratka AS [Titul pred], titul_za.skratka AS [titul za], "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
+                "        zdruzenie.nazov AS Zdruzenie, clenovia.datum_narodenia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         ((("& _ 
+                "clenovia LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      zdruzenie ON clenovia.clen_pz_id"& _ 
+                " = zdruzenie.id) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      titul_za ON clenovia.tit"& _ 
+                "ul_za = titul_za.ID) LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      titul ON clenovia.ti"& _ 
+                "tul_pred = titul.ID)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (clenovia.priezvisko LIKE ? & '%')"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY cle"& _ 
+                "novia.priezvisko"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("priezvisko", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "priezvisko", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -987,6 +999,38 @@ Namespace prehlad_clenovDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As prehlad_clenovDataSet.clenoviaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As prehlad_clenovDataSet.clenoviaDataTable = New prehlad_clenovDataSet.clenoviaDataTable
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy_hladaj_priezvisko(ByVal dataTable As prehlad_clenovDataSet.clenoviaDataTable, ByVal priezvisko As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (priezvisko Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(priezvisko,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy_hladaj_priezvisko(ByVal priezvisko As String) As prehlad_clenovDataSet.clenoviaDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (priezvisko Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(priezvisko,String)
+            End If
             Dim dataTable As prehlad_clenovDataSet.clenoviaDataTable = New prehlad_clenovDataSet.clenoviaDataTable
             Me.Adapter.Fill(dataTable)
             Return dataTable

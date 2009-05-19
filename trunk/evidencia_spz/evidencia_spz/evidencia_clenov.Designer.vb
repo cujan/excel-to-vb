@@ -28,10 +28,6 @@ Partial Class evidencia_clenov
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label3 = New System.Windows.Forms.Label
-        Me.Prehlad_clenovDataSet = New evidencia_spz.prehlad_clenovDataSet
-        Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ClenoviaTableAdapter = New evidencia_spz.prehlad_clenovDataSetTableAdapters.clenoviaTableAdapter
-        Me.TableAdapterManager = New evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager
         Me.ClenoviaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
@@ -46,17 +42,23 @@ Partial Class evidencia_clenov
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ClenoviaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.ClenoviaDataGridView = New System.Windows.Forms.DataGridView
+        Me.hladajTextBox1 = New System.Windows.Forms.TextBox
         Me.DataGridViewTextBoxColumn54 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn48 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn47 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn55 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn49 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn56 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ClenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Prehlad_clenovDataSet = New evidencia_spz.prehlad_clenovDataSet
+        Me.ClenoviaTableAdapter = New evidencia_spz.prehlad_clenovDataSetTableAdapters.clenoviaTableAdapter
+        Me.TableAdapterManager = New evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager
+        Me.Label4 = New System.Windows.Forms.Label
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClenoviaBindingNavigator.SuspendLayout()
         CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button2
@@ -99,26 +101,6 @@ Partial Class evidencia_clenov
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "ID vybraného člena"
         Me.Label3.Visible = False
-        '
-        'Prehlad_clenovDataSet
-        '
-        Me.Prehlad_clenovDataSet.DataSetName = "prehlad_clenovDataSet"
-        Me.Prehlad_clenovDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ClenoviaBindingSource
-        '
-        Me.ClenoviaBindingSource.DataMember = "clenovia"
-        Me.ClenoviaBindingSource.DataSource = Me.Prehlad_clenovDataSet
-        '
-        'ClenoviaTableAdapter
-        '
-        Me.ClenoviaTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.UpdateOrder = evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'ClenoviaBindingNavigator
         '
@@ -252,6 +234,13 @@ Partial Class evidencia_clenov
         Me.ClenoviaDataGridView.Size = New System.Drawing.Size(768, 321)
         Me.ClenoviaDataGridView.TabIndex = 10
         '
+        'hladajTextBox1
+        '
+        Me.hladajTextBox1.Location = New System.Drawing.Point(180, 51)
+        Me.hladajTextBox1.Name = "hladajTextBox1"
+        Me.hladajTextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.hladajTextBox1.TabIndex = 11
+        '
         'DataGridViewTextBoxColumn54
         '
         Me.DataGridViewTextBoxColumn54.DataPropertyName = "Titul pred"
@@ -294,12 +283,43 @@ Partial Class evidencia_clenov
         Me.DataGridViewTextBoxColumn56.Name = "DataGridViewTextBoxColumn56"
         Me.DataGridViewTextBoxColumn56.ReadOnly = True
         '
+        'ClenoviaBindingSource
+        '
+        Me.ClenoviaBindingSource.DataMember = "clenovia"
+        Me.ClenoviaBindingSource.DataSource = Me.Prehlad_clenovDataSet
+        '
+        'Prehlad_clenovDataSet
+        '
+        Me.Prehlad_clenovDataSet.DataSetName = "prehlad_clenovDataSet"
+        Me.Prehlad_clenovDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ClenoviaTableAdapter
+        '
+        Me.ClenoviaTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.UpdateOrder = evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(85, 54)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(89, 13)
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "Hľadaj priezvisko"
+        '
         'evidencia_clenov
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(792, 424)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.hladajTextBox1)
         Me.Controls.Add(Me.ClenoviaDataGridView)
         Me.Controls.Add(Me.ClenoviaBindingNavigator)
         Me.Controls.Add(Me.Label3)
@@ -309,12 +329,12 @@ Partial Class evidencia_clenov
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "evidencia_clenov"
         Me.Text = "evidencia_clenov"
-        CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ClenoviaBindingNavigator.ResumeLayout(False)
         Me.ClenoviaBindingNavigator.PerformLayout()
         CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -398,4 +418,6 @@ Partial Class evidencia_clenov
     Friend WithEvents DataGridViewTextBoxColumn55 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn49 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn56 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents hladajTextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class
