@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="narodeniny_DataSet" targetNamespace="http://tempuri.org/narodeniny_DataSet.xsd" xmlns:mstns="http://tempuri.org/narodeniny_DataSet.xsd" xmlns="http://tempuri.org/narodeniny_DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="spz_evidenciaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="spz_evidenciaConnectionString (MySettings)" PropertyReference="ApplicationSettings.evidencia_spz.My.MySettings.GlobalReference.Default.spz_evidenciaConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clenoviaTableAdapter" GeneratorDataComponentClassName="clenoviaTableAdapter" Name="clenovia" UserDataComponentName="clenoviaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="spz_evidenciaConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     clenovia.meno, clenovia.priezvisko, clenovia.datum_narodenia, clenovia.bydlisko, zdruzenie.nazov
+FROM         (clenovia LEFT OUTER JOIN
+                      zdruzenie ON clenovia.clen_pz_id = zdruzenie.id)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="meno" DataSetColumn="meno" />
+              <Mapping SourceColumn="priezvisko" DataSetColumn="priezvisko" />
+              <Mapping SourceColumn="datum_narodenia" DataSetColumn="datum_narodenia" />
+              <Mapping SourceColumn="bydlisko" DataSetColumn="bydlisko" />
+              <Mapping SourceColumn="nazov" DataSetColumn="nazov" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="narodeniny_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="narodeniny_DataSet" msprop:Generator_DataSetName="narodeniny_DataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="clenovia" msprop:Generator_UserTableName="clenovia" msprop:Generator_RowDeletedName="clenoviaRowDeleted" msprop:Generator_RowChangedName="clenoviaRowChanged" msprop:Generator_RowClassName="clenoviaRow" msprop:Generator_RowChangingName="clenoviaRowChanging" msprop:Generator_RowEvArgName="clenoviaRowChangeEvent" msprop:Generator_RowEvHandlerName="clenoviaRowChangeEventHandler" msprop:Generator_TableClassName="clenoviaDataTable" msprop:Generator_TableVarName="tableclenovia" msprop:Generator_RowDeletingName="clenoviaRowDeleting" msprop:Generator_TablePropName="clenovia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="meno" msprop:Generator_UserColumnName="meno" msprop:Generator_ColumnVarNameInTable="columnmeno" msprop:Generator_ColumnPropNameInRow="meno" msprop:Generator_ColumnPropNameInTable="menoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="priezvisko" msprop:Generator_UserColumnName="priezvisko" msprop:Generator_ColumnVarNameInTable="columnpriezvisko" msprop:Generator_ColumnPropNameInRow="priezvisko" msprop:Generator_ColumnPropNameInTable="priezviskoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datum_narodenia" msprop:Generator_UserColumnName="datum_narodenia" msprop:Generator_ColumnVarNameInTable="columndatum_narodenia" msprop:Generator_ColumnPropNameInRow="datum_narodenia" msprop:Generator_ColumnPropNameInTable="datum_narodeniaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bydlisko" msprop:Generator_UserColumnName="bydlisko" msprop:Generator_ColumnVarNameInTable="columnbydlisko" msprop:Generator_ColumnPropNameInRow="bydlisko" msprop:Generator_ColumnPropNameInTable="bydliskoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nazov" msprop:Generator_UserColumnName="nazov" msprop:Generator_ColumnPropNameInRow="nazov" msprop:Generator_ColumnVarNameInTable="columnnazov" msprop:Generator_ColumnPropNameInTable="nazovColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
