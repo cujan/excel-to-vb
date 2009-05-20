@@ -371,6 +371,7 @@
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>8pt</FontSize>
+                        <Format>dd.MM.yy</Format>
                         <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>

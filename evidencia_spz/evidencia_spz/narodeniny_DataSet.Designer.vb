@@ -415,7 +415,6 @@ Partial Public Class narodeniny_DataSet
             MyBase.Columns.Add(Me.columnnazov)
             Me.columnmeno.MaxLength = 255
             Me.columnpriezvisko.MaxLength = 255
-            Me.columndatum_narodenia.MaxLength = 255
             Me.columnbydlisko.MaxLength = 255
             Me.columnnazov.MaxLength = 255
         End Sub

@@ -402,4 +402,10 @@ Public Class hlavna_aplikacia
         chybajuce_kontrolne_strelby_gula.Show()
 
     End Sub
+
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        narodeniny.Show()
+        narodeniny.BringToFront()
+
+    End Sub
 End Class
