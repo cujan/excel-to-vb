@@ -178,6 +178,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>kontrolne_strelby_gulaDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="narodeniny_DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>narodeniny_DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="platnost_clenstva.Designer.vb">
       <DependentUpon>platnost_clenstva.vb</DependentUpon>
     </Compile>
@@ -696,6 +701,17 @@
     </None>
     <None Include="kontrolne_strelby_gulaDataSet1.xss">
       <DependentUpon>kontrolne_strelby_gulaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="narodeniny_DataSet.xsc">
+      <DependentUpon>narodeniny_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="narodeniny_DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>narodeniny_DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="narodeniny_DataSet.xss">
+      <DependentUpon>narodeniny_DataSet.xsd</DependentUpon>
     </None>
     <None Include="novy_clenDataSet.xsc">
       <DependentUpon>novy_clenDataSet.xsd</DependentUpon>
