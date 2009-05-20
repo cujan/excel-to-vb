@@ -22,27 +22,57 @@ Partial Class tlac_clen_a4
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
+        Me.clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.spz_clenovia_report_a4 = New evidencia_spz.spz_clenovia_report_a4
+        Me.clenoviaTableAdapter = New evidencia_spz.spz_clenovia_report_a4TableAdapters.clenoviaTableAdapter
+        CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.spz_clenovia_report_a4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource2.Name = "spz_clenovia_report_a4_clenovia"
+        ReportDataSource2.Value = Me.clenoviaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.tlac_clen_report_a4.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(829, 1009)
+        Me.ReportViewer1.Size = New System.Drawing.Size(829, 778)
         Me.ReportViewer1.TabIndex = 0
+        '
+        'clenoviaBindingSource
+        '
+        Me.clenoviaBindingSource.DataMember = "clenovia"
+        Me.clenoviaBindingSource.DataSource = Me.spz_clenovia_report_a4
+        '
+        'spz_clenovia_report_a4
+        '
+        Me.spz_clenovia_report_a4.DataSetName = "spz_clenovia_report_a4"
+        Me.spz_clenovia_report_a4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'clenoviaTableAdapter
+        '
+        Me.clenoviaTableAdapter.ClearBeforeFill = True
         '
         'tlac_clen_a4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(829, 1009)
+        Me.ClientSize = New System.Drawing.Size(829, 778)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "tlac_clen_a4"
         Me.Text = "Tlačový výstup - Člen"
+        CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.spz_clenovia_report_a4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents clenoviaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents spz_clenovia_report_a4 As evidencia_spz.spz_clenovia_report_a4
+    Friend WithEvents clenoviaTableAdapter As evidencia_spz.spz_clenovia_report_a4TableAdapters.clenoviaTableAdapter
 End Class
