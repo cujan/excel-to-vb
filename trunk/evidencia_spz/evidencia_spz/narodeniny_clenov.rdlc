@@ -16,9 +16,9 @@
   <InteractiveWidth>8.5in</InteractiveWidth>
   <rd:GridSpacing>0.25cm</rd:GridSpacing>
   <rd:SnapToGrid>true</rd:SnapToGrid>
-  <RightMargin>2.5cm</RightMargin>
-  <LeftMargin>2.5cm</LeftMargin>
-  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>0.5cm</RightMargin>
+  <LeftMargin>0.5cm</LeftMargin>
+  <BottomMargin>0.5cm</BottomMargin>
   <rd:ReportID>3e9af87e-da6d-4bb7-8739-9bdbcbde7db1</rd:ReportID>
   <PageWidth>21cm</PageWidth>
   <DataSets>
@@ -66,6 +66,7 @@ WHERE        (Format(clenovia.datum_narodenia, 'MM') = ?)</CommandText>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <Code />
   <Width>21.5cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
@@ -90,7 +91,7 @@ WHERE        (Format(clenovia.datum_narodenia, 'MM') = ?)</CommandText>
       <Table Name="table1">
         <DataSetName>narodeniny_DataSet_clenovia</DataSetName>
         <Top>0.8381cm</Top>
-        <Width>18.68859cm</Width>
+        <Width>16.89431cm</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -372,10 +373,10 @@ WHERE        (Format(clenovia.datum_narodenia, 'MM') = ?)</CommandText>
         </Header>
         <TableColumns>
           <TableColumn>
-            <Width>3.64714cm</Width>
+            <Width>2.75cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>3.64714cm</Width>
+            <Width>2.75cm</Width>
           </TableColumn>
           <TableColumn>
             <Width>3.5cm</Width>
@@ -392,6 +393,6 @@ WHERE        (Format(clenovia.datum_narodenia, 'MM') = ?)</CommandText>
     <Height>1.87937cm</Height>
   </Body>
   <Language>en-US</Language>
-  <TopMargin>2.5cm</TopMargin>
+  <TopMargin>0.5cm</TopMargin>
   <PageHeight>29.7cm</PageHeight>
 </Report>
