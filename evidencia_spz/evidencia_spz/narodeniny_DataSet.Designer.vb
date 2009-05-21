@@ -276,6 +276,8 @@ Partial Public Class narodeniny_DataSet
         
         Private columnnazov As Global.System.Data.DataColumn
         
+        Private columndatum_narodenia1 As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub New()
             MyBase.New
@@ -343,6 +345,13 @@ Partial Public Class narodeniny_DataSet
             End Get
         End Property
         
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property datum_narodenia1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndatum_narodenia1
+            End Get
+        End Property
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -372,9 +381,9 @@ Partial Public Class narodeniny_DataSet
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overloads Function AddclenoviaRow(ByVal meno As String, ByVal priezvisko As String, ByVal datum_narodenia As String, ByVal bydlisko As String, ByVal nazov As String) As clenoviaRow
+        Public Overloads Function AddclenoviaRow(ByVal meno As String, ByVal priezvisko As String, ByVal datum_narodenia As Date, ByVal bydlisko As String, ByVal nazov As String, ByVal datum_narodenia1 As String) As clenoviaRow
             Dim rowclenoviaRow As clenoviaRow = CType(Me.NewRow,clenoviaRow)
-            Dim columnValuesArray() As Object = New Object() {meno, priezvisko, datum_narodenia, bydlisko, nazov}
+            Dim columnValuesArray() As Object = New Object() {meno, priezvisko, datum_narodenia, bydlisko, nazov, datum_narodenia1}
             rowclenoviaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowclenoviaRow)
             Return rowclenoviaRow
@@ -399,6 +408,7 @@ Partial Public Class narodeniny_DataSet
             Me.columndatum_narodenia = MyBase.Columns("datum_narodenia")
             Me.columnbydlisko = MyBase.Columns("bydlisko")
             Me.columnnazov = MyBase.Columns("nazov")
+            Me.columndatum_narodenia1 = MyBase.Columns("datum_narodenia1")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -407,16 +417,20 @@ Partial Public Class narodeniny_DataSet
             MyBase.Columns.Add(Me.columnmeno)
             Me.columnpriezvisko = New Global.System.Data.DataColumn("priezvisko", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpriezvisko)
-            Me.columndatum_narodenia = New Global.System.Data.DataColumn("datum_narodenia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columndatum_narodenia = New Global.System.Data.DataColumn("datum_narodenia", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndatum_narodenia)
             Me.columnbydlisko = New Global.System.Data.DataColumn("bydlisko", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnbydlisko)
             Me.columnnazov = New Global.System.Data.DataColumn("nazov", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnnazov)
+            Me.columndatum_narodenia1 = New Global.System.Data.DataColumn("datum_narodenia1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndatum_narodenia1)
             Me.columnmeno.MaxLength = 255
             Me.columnpriezvisko.MaxLength = 255
             Me.columnbydlisko.MaxLength = 255
             Me.columnnazov.MaxLength = 255
+            Me.columndatum_narodenia1.Caption = "datum_narodenia"
+            Me.columndatum_narodenia1.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -581,10 +595,10 @@ Partial Public Class narodeniny_DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property datum_narodenia() As String
+        Public Property datum_narodenia() As Date
             Get
                 Try 
-                    Return CType(Me(Me.tableclenovia.datum_narodeniaColumn),String)
+                    Return CType(Me(Me.tableclenovia.datum_narodeniaColumn),Date)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'datum_narodenia' in table 'clenovia' is DBNull.", e)
                 End Try
@@ -619,6 +633,20 @@ Partial Public Class narodeniny_DataSet
             End Get
             Set
                 Me(Me.tableclenovia.nazovColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property datum_narodenia1() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableclenovia.datum_narodenia1Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'datum_narodenia1' in table 'clenovia' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableclenovia.datum_narodenia1Column) = value
             End Set
         End Property
         
@@ -670,6 +698,16 @@ Partial Public Class narodeniny_DataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub SetnazovNull()
             Me(Me.tableclenovia.nazovColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isdatum_narodenia1Null() As Boolean
+            Return Me.IsNull(Me.tableclenovia.datum_narodenia1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setdatum_narodenia1Null()
+            Me(Me.tableclenovia.datum_narodenia1Column) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -832,9 +870,9 @@ Namespace narodeniny_DataSetTableAdapters
             tableMapping.DataSetTable = "clenovia"
             tableMapping.ColumnMappings.Add("meno", "meno")
             tableMapping.ColumnMappings.Add("priezvisko", "priezvisko")
-            tableMapping.ColumnMappings.Add("datum_narodenia", "datum_narodenia")
             tableMapping.ColumnMappings.Add("bydlisko", "bydlisko")
             tableMapping.ColumnMappings.Add("nazov", "nazov")
+            tableMapping.ColumnMappings.Add("datum_narodenia", "datum_narodenia1")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -849,17 +887,24 @@ Namespace narodeniny_DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT     clenovia.meno, clenovia.priezvisko, clenovia.datum_narodenia, clenovia"& _ 
-                ".bydlisko, zdruzenie.nazov"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         (clenovia LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"            "& _ 
-                "          zdruzenie ON clenovia.clen_pz_id = zdruzenie.id)"
+            Me._commandCollection(0).CommandText = "SELECT        clenovia.meno, clenovia.priezvisko, clenovia.datum_narodenia, cleno"& _ 
+                "via.bydlisko, zdruzenie.nazov"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            (clenovia LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"      "& _ 
+                "                   zdruzenie ON clenovia.clen_pz_id = zdruzenie.id)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE      "& _ 
+                "  (Format(clenovia.datum_narodenia, 'MM') = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Param1", Global.System.Data.OleDb.OleDbType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As narodeniny_DataSet.clenoviaDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As narodeniny_DataSet.clenoviaDataTable, ByVal Param1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -870,8 +915,13 @@ Namespace narodeniny_DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As narodeniny_DataSet.clenoviaDataTable
+        Public Overloads Overridable Function GetData(ByVal Param1 As String) As narodeniny_DataSet.clenoviaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
             Dim dataTable As narodeniny_DataSet.clenoviaDataTable = New narodeniny_DataSet.clenoviaDataTable
             Me.Adapter.Fill(dataTable)
             Return dataTable
