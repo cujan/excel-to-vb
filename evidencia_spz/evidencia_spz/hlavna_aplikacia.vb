@@ -408,4 +408,10 @@ Public Class hlavna_aplikacia
         narodeniny.BringToFront()
 
     End Sub
+
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        skuska_report_a4_form.BringToFront()
+        skuska_report_a4_form.Show()
+
+    End Sub
 End Class
