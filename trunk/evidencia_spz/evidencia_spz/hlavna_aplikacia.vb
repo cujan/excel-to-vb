@@ -254,6 +254,50 @@ Public Class hlavna_aplikacia
             '    kontrola_verzii.BringToFront()
             '    'MessageBox.Show("Runtime Access 2007 nie je nainstalovany.", "Varovanie", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
+
+
+        Dim mesiac As String
+        Dim mesiac_string As String
+        mesiac_string = ""
+
+        mesiac = Date.Today.Month
+        If mesiac = 1 Then
+            mesiac_string = "Január"
+        ElseIf mesiac = 2 Then
+            mesiac_string = "Február"
+        ElseIf mesiac = 3 Then
+            mesiac_string = "Marec"
+        ElseIf mesiac = 4 Then
+            mesiac_string = "Apríl"
+        ElseIf mesiac = 5 Then
+            mesiac_string = "Máj"
+        ElseIf mesiac = 6 Then
+            mesiac_string = "Jún"
+        ElseIf mesiac = 7 Then
+            mesiac_string = "Júl"
+        ElseIf mesiac = 8 Then
+            mesiac_string = "August"
+        ElseIf mesiac = 9 Then
+            mesiac_string = "September"
+        ElseIf mesiac = 10 Then
+            mesiac_string = "Október"
+        ElseIf mesiac = 11 Then
+            mesiac_string = "November"
+        ElseIf mesiac = 12 Then
+            mesiac_string = "December"
+        End If
+
+
+        If (mesiac <= 9) And (mesiac >= 1) Then
+            mesiac = "0" & mesiac
+
+        End If
+        'zaciatok = DateTime.Parse("1." & (mesiac.SelectedIndex + 1).ToString & ".1900")
+        'koniec = DateTime.Parse("31." & (mesiac.SelectedIndex + 1).ToString & "." & rok.Text)
+
+        narodeniny.clenoviaTableAdapter.Fill(narodeniny.narodeniny_DataSet.clenovia, mesiac)
+        Label2.Text = "V mesiaci " & mesiac_string & " má narodeniny " & narodeniny.clenoviaBindingSource.Count & " členov."
+
     End Sub
 
     Private Sub TitulZaMenomToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TitulZaMenomToolStripMenuItem.Click
