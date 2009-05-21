@@ -24,26 +24,15 @@ Partial Class narodeniny
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
-        Me.clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.narodeniny_DataSet = New evidencia_spz.narodeniny_DataSet
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
-        Me.clenoviaTableAdapter = New evidencia_spz.narodeniny_DataSetTableAdapters.clenoviaTableAdapter
         Me.mesiac = New System.Windows.Forms.ComboBox
-        Me.rok = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.narodeniny_DataSet = New evidencia_spz.narodeniny_DataSet
+        Me.clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.clenoviaTableAdapter = New evidencia_spz.narodeniny_DataSetTableAdapters.clenoviaTableAdapter
+        Me.mesiac_label = New System.Windows.Forms.Label
         CType(Me.narodeniny_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'clenoviaBindingSource
-        '
-        Me.clenoviaBindingSource.DataMember = "clenovia"
-        Me.clenoviaBindingSource.DataSource = Me.narodeniny_DataSet
-        '
-        'narodeniny_DataSet
-        '
-        Me.narodeniny_DataSet.DataSetName = "narodeniny_DataSet"
-        Me.narodeniny_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -53,62 +42,62 @@ Partial Class narodeniny
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.narodeniny_clenov.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(12, 45)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(746, 296)
+        Me.ReportViewer1.Size = New System.Drawing.Size(892, 560)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'clenoviaTableAdapter
-        '
-        Me.clenoviaTableAdapter.ClearBeforeFill = True
         '
         'mesiac
         '
         Me.mesiac.FormattingEnabled = True
         Me.mesiac.Items.AddRange(New Object() {"Január", "Február", "Marec", "Apríl", "Máj", "Jún", "Júl", "August", "September", "Október", "November", "December"})
-        Me.mesiac.Location = New System.Drawing.Point(44, 10)
+        Me.mesiac.Location = New System.Drawing.Point(128, 12)
         Me.mesiac.Name = "mesiac"
         Me.mesiac.Size = New System.Drawing.Size(104, 21)
         Me.mesiac.TabIndex = 1
         '
-        'rok
+        'narodeniny_DataSet
         '
-        Me.rok.AutoSize = True
-        Me.rok.Location = New System.Drawing.Point(154, 13)
-        Me.rok.Name = "rok"
-        Me.rok.Size = New System.Drawing.Size(39, 13)
-        Me.rok.TabIndex = 2
-        Me.rok.Text = "Label1"
+        Me.narodeniny_DataSet.DataSetName = "narodeniny_DataSet"
+        Me.narodeniny_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Label1
+        'clenoviaBindingSource
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(229, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Label1"
+        Me.clenoviaBindingSource.DataMember = "clenovia"
+        Me.clenoviaBindingSource.DataSource = Me.narodeniny_DataSet
+        '
+        'clenoviaTableAdapter
+        '
+        Me.clenoviaTableAdapter.ClearBeforeFill = True
+        '
+        'mesiac_label
+        '
+        Me.mesiac_label.AutoSize = True
+        Me.mesiac_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.mesiac_label.Location = New System.Drawing.Point(29, 15)
+        Me.mesiac_label.Name = "mesiac_label"
+        Me.mesiac_label.Size = New System.Drawing.Size(93, 13)
+        Me.mesiac_label.TabIndex = 2
+        Me.mesiac_label.Text = "Vyberte mesiac"
         '
         'narodeniny
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(770, 353)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.rok)
+        Me.ClientSize = New System.Drawing.Size(916, 617)
+        Me.Controls.Add(Me.mesiac_label)
         Me.Controls.Add(Me.mesiac)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "narodeniny"
         Me.Text = "Narodeniny členov"
-        CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.narodeniny_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents mesiac As System.Windows.Forms.ComboBox
     Friend WithEvents clenoviaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents narodeniny_DataSet As evidencia_spz.narodeniny_DataSet
     Friend WithEvents clenoviaTableAdapter As evidencia_spz.narodeniny_DataSetTableAdapters.clenoviaTableAdapter
-    Friend WithEvents mesiac As System.Windows.Forms.ComboBox
-    Friend WithEvents rok As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents mesiac_label As System.Windows.Forms.Label
 End Class
