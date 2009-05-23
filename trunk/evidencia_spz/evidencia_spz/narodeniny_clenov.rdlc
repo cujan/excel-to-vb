@@ -4,10 +4,8 @@
     <DataSource Name="spz_evidenciaConnectionString">
       <rd:DataSourceID>3744019e-740e-49bc-95e1-ece9371a5af9</rd:DataSourceID>
       <ConnectionProperties>
-        <DataProvider>
-        </DataProvider>
-        <ConnectString>
-        </ConnectString>
+        <DataProvider>OLEDB</DataProvider>
+        <ConnectString>Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\spz_evidencia.accdb</ConnectString>
       </ConnectionProperties>
     </DataSource>
   </DataSources>
@@ -48,13 +46,18 @@
           <DataField>datum_narodenia1</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="rok_narodenia">
+          <DataField>rok_narodenia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>spz_evidenciaConnectionString</DataSourceName>
-        <CommandText>SELECT        clenovia.meno, clenovia.priezvisko, clenovia.datum_narodenia, clenovia.bydlisko, zdruzenie.nazov
-FROM            (clenovia LEFT OUTER JOIN
-                         zdruzenie ON clenovia.clen_pz_id = zdruzenie.id)
-WHERE        (Format(clenovia.datum_narodenia, 'MM') = ?)</CommandText>
+        <CommandText>SELECT     clenovia.meno, clenovia.priezvisko, clenovia.datum_narodenia, clenovia.bydlisko, zdruzenie.nazov, Format(clenovia.datum_narodenia, 'yyyy') 
+                      AS rok_narodenia
+FROM         (clenovia LEFT OUTER JOIN
+                      zdruzenie ON clenovia.clen_pz_id = zdruzenie.id)
+WHERE     (Format(clenovia.datum_narodenia, 'MM') = ?)</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <rd:DataSetInfo>
@@ -67,7 +70,7 @@ WHERE        (Format(clenovia.datum_narodenia, 'MM') = ?)</CommandText>
     </DataSet>
   </DataSets>
   <Code />
-  <Width>21cm</Width>
+  <Width>23.83328cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
@@ -91,7 +94,8 @@ WHERE        (Format(clenovia.datum_narodenia, 'MM') = ?)</CommandText>
       <Table Name="table1">
         <DataSetName>narodeniny_DataSet_clenovia</DataSetName>
         <Top>0.8381cm</Top>
-        <Width>16.75cm</Width>
+        <PageBreakAtEnd>true</PageBreakAtEnd>
+        <Width>17.0299cm</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -164,7 +168,7 @@ WHERE        (Format(clenovia.datum_narodenia, 'MM') = ?)</CommandText>
                       </Style>
                       <ZIndex>2</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!datum_narodenia1.Value</Value>
+                      <Value>=Fields!datum_narodenia1.Value &amp; "  -  " &amp; Year(Today())-Fields!rok_narodenia.Value &amp; " rokov"</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -379,7 +383,7 @@ WHERE        (Format(clenovia.datum_narodenia, 'MM') = ?)</CommandText>
             <Width>2.72651cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>3.4701cm</Width>
+            <Width>3.75cm</Width>
           </TableColumn>
           <TableColumn>
             <Width>4.2137cm</Width>
