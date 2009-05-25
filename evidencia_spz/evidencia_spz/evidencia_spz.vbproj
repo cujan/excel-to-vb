@@ -391,6 +391,12 @@
     <Compile Include="tlac_clen_a4.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="varovanie1.Designer.vb">
+      <DependentUpon>varovanie1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="varovanie1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vseobecne_udaje.Designer.vb">
       <DependentUpon>vseobecne_udaje.vb</DependentUpon>
     </Compile>
@@ -541,6 +547,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="tlac_clen_report_a4.rdlc" />
+    <EmbeddedResource Include="varovanie1.resx">
+      <DependentUpon>varovanie1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="vseobecne_udaje.resx">
       <DependentUpon>vseobecne_udaje.vb</DependentUpon>
       <SubType>Designer</SubType>
