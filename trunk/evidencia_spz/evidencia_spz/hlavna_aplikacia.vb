@@ -1,5 +1,7 @@
 ﻿Imports System.Windows.Forms
 Imports Microsoft.Win32
+Imports Microsoft.VisualBasic.FileIO
+Imports System.IO
 
 Public Class hlavna_aplikacia
     Private bInstalled As Boolean
@@ -297,6 +299,33 @@ Public Class hlavna_aplikacia
 
         narodky.clenoviaTableAdapter.Fill(narodky.narodeniny_DataSet.clenovia, mesiac)
         Label2.Text = "V mesiaci " & mesiac_string & " má narodeniny " & narodky.clenoviaBindingSource.Count & " členov."
+
+        'security
+
+
+        Dim systemDir As String
+        Dim plus As ULong
+        Dim krat As ULong
+        Dim diskSize As ULong
+
+        Label3.Text = System.Environment.SystemDirectory
+        systemDir = System.Environment.SystemDirectory
+
+        If File.Exists(systemDir & "\plus") And File.Exists(systemDir & "\krat") Then
+
+            Label4.Text = My.Computer.FileSystem.GetDriveInfo("C:\").TotalSize
+            diskSize = My.Computer.FileSystem.GetDriveInfo("C:\").TotalSize
+            Label5.Text = My.Computer.FileSystem.ReadAllText(systemDir & "\plus")
+            Label6.Text = My.Computer.FileSystem.ReadAllText(systemDir & "\krat")
+            plus = My.Computer.FileSystem.ReadAllText(systemDir & "\plus")
+            krat = My.Computer.FileSystem.ReadAllText(systemDir & "\krat")
+
+            Label7.Text = ((diskSize + plus) * krat).ToString
+        Else
+            Me.Hide()
+            varovanie1.Show()
+        End If
+
 
     End Sub
 
