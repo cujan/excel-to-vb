@@ -295,8 +295,8 @@ Public Class hlavna_aplikacia
         'zaciatok = DateTime.Parse("1." & (mesiac.SelectedIndex + 1).ToString & ".1900")
         'koniec = DateTime.Parse("31." & (mesiac.SelectedIndex + 1).ToString & "." & rok.Text)
 
-        narodeniny.clenoviaTableAdapter.Fill(narodeniny.narodeniny_DataSet.clenovia, mesiac)
-        Label2.Text = "V mesiaci " & mesiac_string & " má narodeniny " & narodeniny.clenoviaBindingSource.Count & " členov."
+        narodky.clenoviaTableAdapter.Fill(narodky.narodeniny_DataSet.clenovia, mesiac)
+        Label2.Text = "V mesiaci " & mesiac_string & " má narodeniny " & narodky.clenoviaBindingSource.Count & " členov."
 
     End Sub
 
@@ -414,8 +414,9 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles karty_clenov_button.Click
-        tlacovy_vystup_clen_1.BringToFront()
-        tlacovy_vystup_clen_1.Show()
+        skuska_report_a4_form.BringToFront()
+        skuska_report_a4_form.Show()
+
 
     End Sub
 
@@ -447,15 +448,24 @@ Public Class hlavna_aplikacia
 
     End Sub
 
-    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        narodeniny.Show()
-        narodeniny.BringToFront()
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        narodky.BringToFront()
+        narodky.Show()
+
 
     End Sub
 
-    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        skuska_report_a4_form.BringToFront()
-        skuska_report_a4_form.Show()
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        narodky.BringToFront()
+        narodky.Show()
+
+
+    End Sub
+
+    Private Sub narodeniny_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles narodeniny.Click
+        narodky.BringToFront()
+        narodky.Show()
+
 
     End Sub
 End Class

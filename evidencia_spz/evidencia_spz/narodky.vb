@@ -1,6 +1,6 @@
-﻿Public Class narodeniny
+﻿Public Class narodky
 
-    Private Sub narodeniny_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub narodky_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'narodeniny_DataSet.clenovia' table. You can move, or remove it, as needed.
         Dim zaciatok As String
 
@@ -19,6 +19,8 @@
         'WHERE     (clenovia.datum_narodenia > ?) AND (clenovia.datum_narodenia < ?)
 
         Me.ReportViewer1.RefreshReport()
+
+
     End Sub
 
     Private Sub mesiac_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mesiac.SelectedIndexChanged
