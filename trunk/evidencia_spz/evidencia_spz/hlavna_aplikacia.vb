@@ -320,7 +320,7 @@ Public Class hlavna_aplikacia
             plus = My.Computer.FileSystem.ReadAllText(systemDir & "\plus")
             krat = My.Computer.FileSystem.ReadAllText(systemDir & "\krat")
 
-            Label7.Text = ((diskSize + plus) * krat).ToString
+            Label7.Text = (diskSize + plus).ToString
         Else
             Me.Hide()
             varovanie1.Show()

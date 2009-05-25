@@ -33,8 +33,8 @@ Partial Class varovanie1
         Me.varovanie_text.Size = New System.Drawing.Size(387, 55)
         Me.varovanie_text.TabIndex = 0
         Me.varovanie_text.Text = "Pri štarte aplikacie nastala chyba. Aplikácia je poškodená, alebo bola prenesená " & _
-            """na iný počítač bez inštalácie. Prosím preinštalujte danú aplikáciu, alebo konta" & _
-            "ktujte dodávateľa."
+            "na iný počítač bez inštalácie. Prosím preinštalujte danú aplikáciu, alebo kontak" & _
+            "tujte dodávateľa."
         Me.varovanie_text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ukoncit_button
