@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class narodeniny
+Partial Class narodky
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,36 +23,27 @@ Partial Class narodeniny
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
-        Me.mesiac = New System.Windows.Forms.ComboBox
         Me.narodeniny_DataSet = New evidencia_spz.narodeniny_DataSet
         Me.clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.clenoviaTableAdapter = New evidencia_spz.narodeniny_DataSetTableAdapters.clenoviaTableAdapter
         Me.mesiac_label = New System.Windows.Forms.Label
+        Me.mesiac = New System.Windows.Forms.ComboBox
         CType(Me.narodeniny_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ReportViewer1
         '
-        ReportDataSource1.Name = "narodeniny_DataSet_clenovia"
-        ReportDataSource1.Value = Me.clenoviaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        ReportDataSource3.Name = "narodeniny_DataSet_clenovia"
+        ReportDataSource3.Value = Me.clenoviaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.narodeniny_clenov.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 45)
+        Me.ReportViewer1.Location = New System.Drawing.Point(12, 41)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(892, 560)
+        Me.ReportViewer1.Size = New System.Drawing.Size(747, 451)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'mesiac
-        '
-        Me.mesiac.FormattingEnabled = True
-        Me.mesiac.Items.AddRange(New Object() {"Január", "Február", "Marec", "Apríl", "Máj", "Jún", "Júl", "August", "September", "Október", "November", "December"})
-        Me.mesiac.Location = New System.Drawing.Point(128, 12)
-        Me.mesiac.Name = "mesiac"
-        Me.mesiac.Size = New System.Drawing.Size(104, 21)
-        Me.mesiac.TabIndex = 1
         '
         'narodeniny_DataSet
         '
@@ -71,22 +62,31 @@ Partial Class narodeniny
         'mesiac_label
         '
         Me.mesiac_label.AutoSize = True
-        Me.mesiac_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.mesiac_label.Location = New System.Drawing.Point(29, 15)
+        Me.mesiac_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mesiac_label.Location = New System.Drawing.Point(35, 15)
         Me.mesiac_label.Name = "mesiac_label"
-        Me.mesiac_label.Size = New System.Drawing.Size(93, 13)
-        Me.mesiac_label.TabIndex = 2
-        Me.mesiac_label.Text = "Vyberte mesiac"
+        Me.mesiac_label.Size = New System.Drawing.Size(97, 13)
+        Me.mesiac_label.TabIndex = 1
+        Me.mesiac_label.Text = "Vyberte mesiac:"
         '
-        'narodeniny
+        'mesiac
+        '
+        Me.mesiac.FormattingEnabled = True
+        Me.mesiac.Items.AddRange(New Object() {"Január", "Február", "Marec", "Apríl", "Máj", "Jún", "Júl", "August", "September", "Október", "November", "December"})
+        Me.mesiac.Location = New System.Drawing.Point(138, 12)
+        Me.mesiac.Name = "mesiac"
+        Me.mesiac.Size = New System.Drawing.Size(91, 21)
+        Me.mesiac.TabIndex = 2
+        '
+        'narodky
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(916, 617)
-        Me.Controls.Add(Me.mesiac_label)
+        Me.ClientSize = New System.Drawing.Size(771, 504)
         Me.Controls.Add(Me.mesiac)
+        Me.Controls.Add(Me.mesiac_label)
         Me.Controls.Add(Me.ReportViewer1)
-        Me.Name = "narodeniny"
+        Me.Name = "narodky"
         Me.Text = "Narodeniny členov"
         CType(Me.narodeniny_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -95,9 +95,9 @@ Partial Class narodeniny
 
     End Sub
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents mesiac As System.Windows.Forms.ComboBox
     Friend WithEvents clenoviaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents narodeniny_DataSet As evidencia_spz.narodeniny_DataSet
     Friend WithEvents clenoviaTableAdapter As evidencia_spz.narodeniny_DataSetTableAdapters.clenoviaTableAdapter
     Friend WithEvents mesiac_label As System.Windows.Forms.Label
+    Friend WithEvents mesiac As System.Windows.Forms.ComboBox
 End Class

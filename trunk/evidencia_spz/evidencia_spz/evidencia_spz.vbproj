@@ -178,12 +178,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>kontrolne_strelby_gulaDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="narodeniny.Designer.vb">
-      <DependentUpon>narodeniny.vb</DependentUpon>
-    </Compile>
-    <Compile Include="narodeniny.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="narodeniny_DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,6 +185,12 @@
     </Compile>
     <Compile Include="narodeniny_DataSet.vb">
       <DependentUpon>narodeniny_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="narodky.Designer.vb">
+      <DependentUpon>narodky.vb</DependentUpon>
+    </Compile>
+    <Compile Include="narodky.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="platnost_clenstva.Designer.vb">
       <DependentUpon>platnost_clenstva.vb</DependentUpon>
@@ -451,11 +451,11 @@
       <DependentUpon>kontrolne_strelby_gula.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="narodeniny.resx">
-      <DependentUpon>narodeniny.vb</DependentUpon>
+    <EmbeddedResource Include="narodeniny_clenov.rdlc" />
+    <EmbeddedResource Include="narodky.resx">
+      <DependentUpon>narodky.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="narodeniny_clenov.rdlc" />
     <EmbeddedResource Include="platnost_clenstva.rdlc" />
     <EmbeddedResource Include="platnost_clenstva.resx">
       <DependentUpon>platnost_clenstva.vb</DependentUpon>
