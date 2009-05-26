@@ -92,6 +92,7 @@ Partial Class hlavna_aplikacia
         Me.nastavenia_splitter = New System.Windows.Forms.SplitContainer
         Me.nastavenia_button = New System.Windows.Forms.Button
         Me.nastavenia_label = New System.Windows.Forms.Label
+        Me.o_aplikacii_button = New System.Windows.Forms.Button
         Me.registracia = New System.Windows.Forms.Button
         Me.nastavenia_ciselniky_button = New System.Windows.Forms.Button
         Me.tl_zostavy_splitter = New System.Windows.Forms.SplitContainer
@@ -114,6 +115,10 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_label = New System.Windows.Forms.Label
         Me.prehlad_clenov_button = New System.Windows.Forms.Button
         Me.novy_clen_button = New System.Windows.Forms.Button
+        Me.registrovat = New System.Windows.Forms.Button
+        Me.poznamka2 = New System.Windows.Forms.Label
+        Me.ica_hodnota = New System.Windows.Forms.Label
+        Me.ica_cislo = New System.Windows.Forms.Label
         Me.Reg_cisloTextBox = New System.Windows.Forms.TextBox
         Me.Vseobecne_udajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Spz_vseobecne_udaje = New evidencia_spz.spz_vseobecne_udaje
@@ -150,10 +155,6 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.Vseobecne_udajeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.ica_cislo = New System.Windows.Forms.Label
-        Me.ica_hodnota = New System.Windows.Forms.Label
-        Me.poznamka2 = New System.Windows.Forms.Label
-        Me.registrovat = New System.Windows.Forms.Button
         TelefonLabel = New System.Windows.Forms.Label
         FaxLabel = New System.Windows.Forms.Label
         EmailLabel = New System.Windows.Forms.Label
@@ -277,7 +278,7 @@ Partial Class hlavna_aplikacia
         Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.NewToolStripMenuItem.Text = "&New"
         '
         'OpenToolStripMenuItem
@@ -286,13 +287,13 @@ Partial Class hlavna_aplikacia
         Me.OpenToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
         Me.OpenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.OpenToolStripMenuItem.Text = "&Open"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(136, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(148, 6)
         '
         'SaveToolStripMenuItem
         '
@@ -300,19 +301,19 @@ Partial Class hlavna_aplikacia
         Me.SaveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.SaveToolStripMenuItem.Text = "&Save"
         '
         'SaveAsToolStripMenuItem
         '
         Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.SaveAsToolStripMenuItem.Text = "Save &As"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(136, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(148, 6)
         '
         'PrintToolStripMenuItem
         '
@@ -320,7 +321,7 @@ Partial Class hlavna_aplikacia
         Me.PrintToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
         Me.PrintToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
-        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.PrintToolStripMenuItem.Text = "&Print"
         '
         'PrintPreviewToolStripMenuItem
@@ -328,24 +329,24 @@ Partial Class hlavna_aplikacia
         Me.PrintPreviewToolStripMenuItem.Image = CType(resources.GetObject("PrintPreviewToolStripMenuItem.Image"), System.Drawing.Image)
         Me.PrintPreviewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.PrintPreviewToolStripMenuItem.Name = "PrintPreviewToolStripMenuItem"
-        Me.PrintPreviewToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.PrintPreviewToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.PrintPreviewToolStripMenuItem.Text = "Print Pre&view"
         '
         'PrintSetupToolStripMenuItem
         '
         Me.PrintSetupToolStripMenuItem.Name = "PrintSetupToolStripMenuItem"
-        Me.PrintSetupToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.PrintSetupToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.PrintSetupToolStripMenuItem.Text = "Print Setup"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(136, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(148, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'EditMenu
@@ -362,7 +363,7 @@ Partial Class hlavna_aplikacia
         Me.UndoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
         Me.UndoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
-        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.UndoToolStripMenuItem.Text = "&Undo"
         '
         'RedoToolStripMenuItem
@@ -371,13 +372,13 @@ Partial Class hlavna_aplikacia
         Me.RedoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.RedoToolStripMenuItem.Name = "RedoToolStripMenuItem"
         Me.RedoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
-        Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.RedoToolStripMenuItem.Text = "&Redo"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(153, 6)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(164, 6)
         '
         'CutToolStripMenuItem
         '
@@ -385,7 +386,7 @@ Partial Class hlavna_aplikacia
         Me.CutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
         Me.CutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.CutToolStripMenuItem.Text = "Cu&t"
         '
         'CopyToolStripMenuItem
@@ -394,7 +395,7 @@ Partial Class hlavna_aplikacia
         Me.CopyToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
         Me.CopyToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.CopyToolStripMenuItem.Text = "&Copy"
         '
         'PasteToolStripMenuItem
@@ -403,26 +404,26 @@ Partial Class hlavna_aplikacia
         Me.PasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
         Me.PasteToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.PasteToolStripMenuItem.Text = "&Paste"
         '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(153, 6)
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(164, 6)
         '
         'SelectAllToolStripMenuItem
         '
         Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
         Me.SelectAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.SelectAllToolStripMenuItem.Text = "Select &All"
         '
         'ViewMenu
         '
         Me.ViewMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolBarToolStripMenuItem, Me.StatusBarToolStripMenuItem})
         Me.ViewMenu.Name = "ViewMenu"
-        Me.ViewMenu.Size = New System.Drawing.Size(42, 20)
+        Me.ViewMenu.Size = New System.Drawing.Size(41, 20)
         Me.ViewMenu.Text = "&View"
         Me.ViewMenu.Visible = False
         '
@@ -432,7 +433,7 @@ Partial Class hlavna_aplikacia
         Me.ToolBarToolStripMenuItem.CheckOnClick = True
         Me.ToolBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ToolBarToolStripMenuItem.Name = "ToolBarToolStripMenuItem"
-        Me.ToolBarToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
+        Me.ToolBarToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ToolBarToolStripMenuItem.Text = "&Toolbar"
         '
         'StatusBarToolStripMenuItem
@@ -441,72 +442,72 @@ Partial Class hlavna_aplikacia
         Me.StatusBarToolStripMenuItem.CheckOnClick = True
         Me.StatusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.StatusBarToolStripMenuItem.Name = "StatusBarToolStripMenuItem"
-        Me.StatusBarToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
+        Me.StatusBarToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.StatusBarToolStripMenuItem.Text = "&Status Bar"
         '
         'ToolsMenu
         '
         Me.ToolsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem})
         Me.ToolsMenu.Name = "ToolsMenu"
-        Me.ToolsMenu.Size = New System.Drawing.Size(45, 20)
+        Me.ToolsMenu.Size = New System.Drawing.Size(44, 20)
         Me.ToolsMenu.Text = "&Tools"
         Me.ToolsMenu.Visible = False
         '
         'OptionsToolStripMenuItem
         '
         Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.OptionsToolStripMenuItem.Text = "&Options"
         '
         'WindowsMenu
         '
         Me.WindowsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewWindowToolStripMenuItem, Me.CascadeToolStripMenuItem, Me.TileVerticalToolStripMenuItem, Me.TileHorizontalToolStripMenuItem, Me.CloseAllToolStripMenuItem, Me.ArrangeIconsToolStripMenuItem})
         Me.WindowsMenu.Name = "WindowsMenu"
-        Me.WindowsMenu.Size = New System.Drawing.Size(63, 20)
+        Me.WindowsMenu.Size = New System.Drawing.Size(62, 20)
         Me.WindowsMenu.Text = "&Windows"
         Me.WindowsMenu.Visible = False
         '
         'NewWindowToolStripMenuItem
         '
         Me.NewWindowToolStripMenuItem.Name = "NewWindowToolStripMenuItem"
-        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.NewWindowToolStripMenuItem.Text = "&New Window"
         '
         'CascadeToolStripMenuItem
         '
         Me.CascadeToolStripMenuItem.Name = "CascadeToolStripMenuItem"
-        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.CascadeToolStripMenuItem.Text = "&Cascade"
         '
         'TileVerticalToolStripMenuItem
         '
         Me.TileVerticalToolStripMenuItem.Name = "TileVerticalToolStripMenuItem"
-        Me.TileVerticalToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.TileVerticalToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.TileVerticalToolStripMenuItem.Text = "Tile &Vertical"
         '
         'TileHorizontalToolStripMenuItem
         '
         Me.TileHorizontalToolStripMenuItem.Name = "TileHorizontalToolStripMenuItem"
-        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.TileHorizontalToolStripMenuItem.Text = "Tile &Horizontal"
         '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.CloseAllToolStripMenuItem.Text = "C&lose All"
         '
         'ArrangeIconsToolStripMenuItem
         '
         Me.ArrangeIconsToolStripMenuItem.Name = "ArrangeIconsToolStripMenuItem"
-        Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.ArrangeIconsToolStripMenuItem.Text = "&Arrange Icons"
         '
         'HelpMenu
         '
         Me.HelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.IndexToolStripMenuItem, Me.SearchToolStripMenuItem, Me.ToolStripSeparator8, Me.AboutToolStripMenuItem})
         Me.HelpMenu.Name = "HelpMenu"
-        Me.HelpMenu.Size = New System.Drawing.Size(41, 20)
+        Me.HelpMenu.Size = New System.Drawing.Size(40, 20)
         Me.HelpMenu.Text = "&Help"
         Me.HelpMenu.Visible = False
         '
@@ -514,7 +515,7 @@ Partial Class hlavna_aplikacia
         '
         Me.ContentsToolStripMenuItem.Name = "ContentsToolStripMenuItem"
         Me.ContentsToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
-        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.ContentsToolStripMenuItem.Text = "&Contents"
         '
         'IndexToolStripMenuItem
@@ -522,7 +523,7 @@ Partial Class hlavna_aplikacia
         Me.IndexToolStripMenuItem.Image = CType(resources.GetObject("IndexToolStripMenuItem.Image"), System.Drawing.Image)
         Me.IndexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
-        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.IndexToolStripMenuItem.Text = "&Index"
         '
         'SearchToolStripMenuItem
@@ -530,43 +531,43 @@ Partial Class hlavna_aplikacia
         Me.SearchToolStripMenuItem.Image = CType(resources.GetObject("SearchToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SearchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
-        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.SearchToolStripMenuItem.Text = "&Search"
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(156, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(170, 6)
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.AboutToolStripMenuItem.Text = "&About ..."
         '
         'ČíselníkyToolStripMenuItem
         '
         Me.ČíselníkyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TitulyToolStripMenuItem, Me.ŠtátnaPríslušnosťToolStripMenuItem, Me.TitulZaMenomToolStripMenuItem})
         Me.ČíselníkyToolStripMenuItem.Name = "ČíselníkyToolStripMenuItem"
-        Me.ČíselníkyToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
+        Me.ČíselníkyToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
         Me.ČíselníkyToolStripMenuItem.Text = "Číselníky"
         '
         'TitulyToolStripMenuItem
         '
         Me.TitulyToolStripMenuItem.Name = "TitulyToolStripMenuItem"
-        Me.TitulyToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.TitulyToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.TitulyToolStripMenuItem.Text = "Tituly"
         '
         'ŠtátnaPríslušnosťToolStripMenuItem
         '
         Me.ŠtátnaPríslušnosťToolStripMenuItem.Name = "ŠtátnaPríslušnosťToolStripMenuItem"
-        Me.ŠtátnaPríslušnosťToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.ŠtátnaPríslušnosťToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.ŠtátnaPríslušnosťToolStripMenuItem.Text = "Štátna príslušnosť"
         '
         'TitulZaMenomToolStripMenuItem
         '
         Me.TitulZaMenomToolStripMenuItem.Name = "TitulZaMenomToolStripMenuItem"
-        Me.TitulZaMenomToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.TitulZaMenomToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.TitulZaMenomToolStripMenuItem.Text = "Titul za menom"
         '
         'ToolStrip
@@ -663,7 +664,7 @@ Partial Class hlavna_aplikacia
         'ToolStripStatusLabel
         '
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(37, 17)
+        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(38, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
         'hlavny_splitter
@@ -734,6 +735,7 @@ Partial Class hlavna_aplikacia
         'nastavenia_splitter.Panel2
         '
         Me.nastavenia_splitter.Panel2.BackColor = System.Drawing.Color.PaleGreen
+        Me.nastavenia_splitter.Panel2.Controls.Add(Me.o_aplikacii_button)
         Me.nastavenia_splitter.Panel2.Controls.Add(Me.registracia)
         Me.nastavenia_splitter.Panel2.Controls.Add(Me.nastavenia_ciselniky_button)
         Me.nastavenia_splitter.Panel2Collapsed = True
@@ -765,6 +767,17 @@ Partial Class hlavna_aplikacia
         Me.nastavenia_label.TabIndex = 0
         Me.nastavenia_label.Text = "Nastavenia"
         Me.nastavenia_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'o_aplikacii_button
+        '
+        Me.o_aplikacii_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.o_aplikacii_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.o_aplikacii_button.Location = New System.Drawing.Point(4, 61)
+        Me.o_aplikacii_button.Name = "o_aplikacii_button"
+        Me.o_aplikacii_button.Size = New System.Drawing.Size(130, 21)
+        Me.o_aplikacii_button.TabIndex = 2
+        Me.o_aplikacii_button.Text = "O Aplikácii"
+        Me.o_aplikacii_button.UseVisualStyleBackColor = False
         '
         'registracia
         '
@@ -1056,9 +1069,50 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
         '
+        'registrovat
+        '
+        Me.registrovat.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.registrovat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.registrovat.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.registrovat.Location = New System.Drawing.Point(595, 385)
+        Me.registrovat.Name = "registrovat"
+        Me.registrovat.Size = New System.Drawing.Size(82, 20)
+        Me.registrovat.TabIndex = 33
+        Me.registrovat.Text = "REGISTROVAŤ"
+        Me.registrovat.UseVisualStyleBackColor = False
+        '
+        'poznamka2
+        '
+        Me.poznamka2.AutoSize = True
+        Me.poznamka2.Location = New System.Drawing.Point(220, 388)
+        Me.poznamka2.Name = "poznamka2"
+        Me.poznamka2.Size = New System.Drawing.Size(372, 13)
+        Me.poznamka2.TabIndex = 32
+        Me.poznamka2.Text = "Používate neregistrovanú verziu. Prosím zaregistrujte sa kliknutím na tlačítko"
+        '
+        'ica_hodnota
+        '
+        Me.ica_hodnota.AutoSize = True
+        Me.ica_hodnota.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.ica_hodnota.Location = New System.Drawing.Point(454, 528)
+        Me.ica_hodnota.Name = "ica_hodnota"
+        Me.ica_hodnota.Size = New System.Drawing.Size(18, 9)
+        Me.ica_hodnota.TabIndex = 31
+        Me.ica_hodnota.Text = "N/A"
+        '
+        'ica_cislo
+        '
+        Me.ica_cislo.AutoSize = True
+        Me.ica_cislo.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.ica_cislo.Location = New System.Drawing.Point(454, 516)
+        Me.ica_cislo.Name = "ica_cislo"
+        Me.ica_cislo.Size = New System.Drawing.Size(18, 9)
+        Me.ica_cislo.TabIndex = 30
+        Me.ica_cislo.Text = "IČA"
+        '
         'Reg_cisloTextBox
         '
-        Me.Reg_cisloTextBox.BackColor = System.Drawing.Color.LightGreen
+        Me.Reg_cisloTextBox.BackColor = System.Drawing.Color.PaleGreen
         Me.Reg_cisloTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Reg_cisloTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "reg_cislo", True))
         Me.Reg_cisloTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
@@ -1316,7 +1370,7 @@ Partial Class hlavna_aplikacia
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -1396,47 +1450,6 @@ Partial Class hlavna_aplikacia
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Name = "Vseobecne_udajeBindingNavigatorSaveItem"
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'ica_cislo
-        '
-        Me.ica_cislo.AutoSize = True
-        Me.ica_cislo.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.ica_cislo.Location = New System.Drawing.Point(454, 516)
-        Me.ica_cislo.Name = "ica_cislo"
-        Me.ica_cislo.Size = New System.Drawing.Size(18, 9)
-        Me.ica_cislo.TabIndex = 30
-        Me.ica_cislo.Text = "IČA"
-        '
-        'ica_hodnota
-        '
-        Me.ica_hodnota.AutoSize = True
-        Me.ica_hodnota.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.ica_hodnota.Location = New System.Drawing.Point(454, 528)
-        Me.ica_hodnota.Name = "ica_hodnota"
-        Me.ica_hodnota.Size = New System.Drawing.Size(18, 9)
-        Me.ica_hodnota.TabIndex = 31
-        Me.ica_hodnota.Text = "N/A"
-        '
-        'poznamka2
-        '
-        Me.poznamka2.AutoSize = True
-        Me.poznamka2.Location = New System.Drawing.Point(220, 388)
-        Me.poznamka2.Name = "poznamka2"
-        Me.poznamka2.Size = New System.Drawing.Size(372, 13)
-        Me.poznamka2.TabIndex = 32
-        Me.poznamka2.Text = "Používate neregistrovanú verziu. Prosím zaregistrujte sa kliknutím na tlačítko"
-        '
-        'registrovat
-        '
-        Me.registrovat.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.registrovat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.registrovat.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.registrovat.Location = New System.Drawing.Point(595, 385)
-        Me.registrovat.Name = "registrovat"
-        Me.registrovat.Size = New System.Drawing.Size(82, 20)
-        Me.registrovat.TabIndex = 33
-        Me.registrovat.Text = "REGISTROVAŤ"
-        Me.registrovat.UseVisualStyleBackColor = False
         '
         'hlavna_aplikacia
         '
@@ -1607,5 +1620,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents ica_cislo As System.Windows.Forms.Label
     Friend WithEvents registrovat As System.Windows.Forms.Button
     Friend WithEvents poznamka2 As System.Windows.Forms.Label
+    Friend WithEvents o_aplikacii_button As System.Windows.Forms.Button
 
 End Class

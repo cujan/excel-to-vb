@@ -44,10 +44,11 @@ Partial Class registracia_aplikacie
         Me.Vseobecne_udajeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.infoText = New System.Windows.Forms.Label
         Me.ica_label = New System.Windows.Forms.Label
-        Me.ica = New System.Windows.Forms.Label
         Me.registruj = New System.Windows.Forms.Button
         Me.zavriet = New System.Windows.Forms.Button
         Me.reg_cislo = New System.Windows.Forms.TextBox
+        Me.ica = New System.Windows.Forms.TextBox
+        Me.kontakt = New System.Windows.Forms.Button
         Reg_cisloLabel = New System.Windows.Forms.Label
         CType(Me.Spz_vseobecne_udaje, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -217,21 +218,11 @@ Partial Class registracia_aplikacie
         Me.ica_label.TabIndex = 4
         Me.ica_label.Text = "Identifikačné číslo aplikácie (IČA):"
         '
-        'ica
-        '
-        Me.ica.AutoSize = True
-        Me.ica.ForeColor = System.Drawing.Color.DarkRed
-        Me.ica.Location = New System.Drawing.Point(473, 183)
-        Me.ica.Name = "ica"
-        Me.ica.Size = New System.Drawing.Size(27, 13)
-        Me.ica.TabIndex = 5
-        Me.ica.Text = "N/A"
-        '
         'registruj
         '
         Me.registruj.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.registruj.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.registruj.Location = New System.Drawing.Point(398, 244)
+        Me.registruj.Location = New System.Drawing.Point(308, 244)
         Me.registruj.Name = "registruj"
         Me.registruj.Size = New System.Drawing.Size(171, 23)
         Me.registruj.TabIndex = 6
@@ -242,7 +233,7 @@ Partial Class registracia_aplikacie
         '
         Me.zavriet.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.zavriet.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.zavriet.Location = New System.Drawing.Point(600, 244)
+        Me.zavriet.Location = New System.Drawing.Point(645, 244)
         Me.zavriet.Name = "zavriet"
         Me.zavriet.Size = New System.Drawing.Size(86, 23)
         Me.zavriet.TabIndex = 7
@@ -256,16 +247,39 @@ Partial Class registracia_aplikacie
         Me.reg_cislo.Size = New System.Drawing.Size(210, 20)
         Me.reg_cislo.TabIndex = 8
         '
+        'ica
+        '
+        Me.ica.BackColor = System.Drawing.Color.PaleGreen
+        Me.ica.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ica.ForeColor = System.Drawing.Color.DarkRed
+        Me.ica.Location = New System.Drawing.Point(476, 183)
+        Me.ica.Name = "ica"
+        Me.ica.ReadOnly = True
+        Me.ica.Size = New System.Drawing.Size(210, 13)
+        Me.ica.TabIndex = 9
+        '
+        'kontakt
+        '
+        Me.kontakt.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.kontakt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.kontakt.Location = New System.Drawing.Point(485, 244)
+        Me.kontakt.Name = "kontakt"
+        Me.kontakt.Size = New System.Drawing.Size(154, 23)
+        Me.kontakt.TabIndex = 10
+        Me.kontakt.Text = "Kontakt - tvorcovia aplikacie"
+        Me.kontakt.UseVisualStyleBackColor = False
+        '
         'registracia_aplikacie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(950, 290)
+        Me.Controls.Add(Me.kontakt)
+        Me.Controls.Add(Me.ica)
         Me.Controls.Add(Me.reg_cislo)
         Me.Controls.Add(Me.zavriet)
         Me.Controls.Add(Me.registruj)
-        Me.Controls.Add(Me.ica)
         Me.Controls.Add(Me.ica_label)
         Me.Controls.Add(Me.infoText)
         Me.Controls.Add(Reg_cisloLabel)
@@ -301,8 +315,9 @@ Partial Class registracia_aplikacie
     Friend WithEvents Vseobecne_udajeBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents infoText As System.Windows.Forms.Label
     Friend WithEvents ica_label As System.Windows.Forms.Label
-    Friend WithEvents ica As System.Windows.Forms.Label
     Friend WithEvents registruj As System.Windows.Forms.Button
     Friend WithEvents zavriet As System.Windows.Forms.Button
     Friend WithEvents reg_cislo As System.Windows.Forms.TextBox
+    Friend WithEvents ica As System.Windows.Forms.TextBox
+    Friend WithEvents kontakt As System.Windows.Forms.Button
 End Class
