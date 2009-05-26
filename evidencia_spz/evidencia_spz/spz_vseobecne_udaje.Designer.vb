@@ -435,7 +435,7 @@ Partial Public Class spz_vseobecne_udaje
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overloads Function Addvseobecne_udajeRow(ByVal nazov_organizacie As String, ByVal ico As String, ByVal dic As String, ByVal ulica As String, ByVal mesto As String, ByVal psc As String, ByVal telefon As String, ByVal fax As String, ByVal email As String, ByVal web As String, ByVal reg_cislo As Integer) As vseobecne_udajeRow
+        Public Overloads Function Addvseobecne_udajeRow(ByVal nazov_organizacie As String, ByVal ico As String, ByVal dic As String, ByVal ulica As String, ByVal mesto As String, ByVal psc As String, ByVal telefon As String, ByVal fax As String, ByVal email As String, ByVal web As String, ByVal reg_cislo As String) As vseobecne_udajeRow
             Dim rowvseobecne_udajeRow As vseobecne_udajeRow = CType(Me.NewRow,vseobecne_udajeRow)
             Dim columnValuesArray() As Object = New Object() {Nothing, nazov_organizacie, ico, dic, ulica, mesto, psc, telefon, fax, email, web, reg_cislo}
             rowvseobecne_udajeRow.ItemArray = columnValuesArray
@@ -500,7 +500,7 @@ Partial Public Class spz_vseobecne_udaje
             MyBase.Columns.Add(Me.columnemail)
             Me.columnweb = New Global.System.Data.DataColumn("web", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnweb)
-            Me.columnreg_cislo = New Global.System.Data.DataColumn("reg_cislo", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnreg_cislo = New Global.System.Data.DataColumn("reg_cislo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnreg_cislo)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
@@ -518,6 +518,7 @@ Partial Public Class spz_vseobecne_udaje
             Me.columnfax.MaxLength = 255
             Me.columnemail.MaxLength = 255
             Me.columnweb.MaxLength = 255
+            Me.columnreg_cislo.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -804,10 +805,10 @@ Partial Public Class spz_vseobecne_udaje
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property reg_cislo() As Integer
+        Public Property reg_cislo() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablevseobecne_udaje.reg_cisloColumn),Integer)
+                    Return CType(Me(Me.tablevseobecne_udaje.reg_cisloColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'reg_cislo' in table 'vseobecne_udaje' is DBNull.", e)
                 End Try
@@ -1131,7 +1132,7 @@ Namespace spz_vseobecne_udajeTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_web", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "web", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_web", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "web", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_reg_cislo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_cislo", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_reg_cislo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_cislo", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_reg_cislo", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_cislo", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `vseobecne_udaje` (`nazov_organizacie`, `ico`, `dic`, `ulica`, `mesto"& _ 
@@ -1148,7 +1149,7 @@ Namespace spz_vseobecne_udajeTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("fax", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "fax", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("email", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "email", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("web", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "web", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("reg_cislo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_cislo", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("reg_cislo", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_cislo", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `vseobecne_udaje` SET `nazov_organizacie` = ?, `ico` = ?, `dic` = ?, `ulic"& _ 
@@ -1172,7 +1173,7 @@ Namespace spz_vseobecne_udajeTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("fax", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "fax", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("email", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "email", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("web", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "web", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("reg_cislo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_cislo", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("reg_cislo", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_cislo", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_nazov_organizacie", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nazov_organizacie", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_nazov_organizacie", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nazov_organizacie", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -1195,7 +1196,7 @@ Namespace spz_vseobecne_udajeTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_web", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "web", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_web", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "web", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_reg_cislo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_cislo", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_reg_cislo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_cislo", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_reg_cislo", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_cislo", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1263,7 +1264,7 @@ Namespace spz_vseobecne_udajeTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_nazov_organizacie As String, ByVal Original_ico As String, ByVal Original_dic As String, ByVal Original_ulica As String, ByVal Original_mesto As String, ByVal Original_psc As String, ByVal Original_telefon As String, ByVal Original_fax As String, ByVal Original_email As String, ByVal Original_web As String, ByVal Original_reg_cislo As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_nazov_organizacie As String, ByVal Original_ico As String, ByVal Original_dic As String, ByVal Original_ulica As String, ByVal Original_mesto As String, ByVal Original_psc As String, ByVal Original_telefon As String, ByVal Original_fax As String, ByVal Original_email As String, ByVal Original_web As String, ByVal Original_reg_cislo As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
             If (Original_nazov_organizacie Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
@@ -1335,12 +1336,12 @@ Namespace spz_vseobecne_udajeTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_web,String)
             End If
-            If (Original_reg_cislo.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_reg_cislo.Value,Integer)
-            Else
+            If (Original_reg_cislo Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_reg_cislo,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1360,7 +1361,7 @@ Namespace spz_vseobecne_udajeTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal nazov_organizacie As String, ByVal ico As String, ByVal dic As String, ByVal ulica As String, ByVal mesto As String, ByVal psc As String, ByVal telefon As String, ByVal fax As String, ByVal email As String, ByVal web As String, ByVal reg_cislo As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Insert(ByVal nazov_organizacie As String, ByVal ico As String, ByVal dic As String, ByVal ulica As String, ByVal mesto As String, ByVal psc As String, ByVal telefon As String, ByVal fax As String, ByVal email As String, ByVal web As String, ByVal reg_cislo As String) As Integer
             If (nazov_organizacie Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -1411,10 +1412,10 @@ Namespace spz_vseobecne_udajeTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(9).Value = CType(web,String)
             End If
-            If (reg_cislo.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(reg_cislo.Value,Integer)
-            Else
+            If (reg_cislo Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(reg_cislo,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1445,7 +1446,7 @@ Namespace spz_vseobecne_udajeTableAdapters
                     ByVal fax As String,  _
                     ByVal email As String,  _
                     ByVal web As String,  _
-                    ByVal reg_cislo As Global.System.Nullable(Of Integer),  _
+                    ByVal reg_cislo As String,  _
                     ByVal Original_ID As Integer,  _
                     ByVal Original_nazov_organizacie As String,  _
                     ByVal Original_ico As String,  _
@@ -1457,7 +1458,7 @@ Namespace spz_vseobecne_udajeTableAdapters
                     ByVal Original_fax As String,  _
                     ByVal Original_email As String,  _
                     ByVal Original_web As String,  _
-                    ByVal Original_reg_cislo As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal Original_reg_cislo As String) As Integer
             If (nazov_organizacie Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -1508,10 +1509,10 @@ Namespace spz_vseobecne_udajeTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(9).Value = CType(web,String)
             End If
-            If (reg_cislo.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(reg_cislo.Value,Integer)
-            Else
+            If (reg_cislo Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(reg_cislo,String)
             End If
             Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_ID,Integer)
             If (Original_nazov_organizacie Is Nothing) Then
@@ -1584,12 +1585,12 @@ Namespace spz_vseobecne_udajeTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
                 Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_web,String)
             End If
-            If (Original_reg_cislo.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_reg_cislo.Value,Integer)
-            Else
+            If (Original_reg_cislo Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_reg_cislo,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
