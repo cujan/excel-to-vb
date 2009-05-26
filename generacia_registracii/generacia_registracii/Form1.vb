@@ -5,8 +5,11 @@
         Dim krat As ULong
         krat = 3691
         Dim ica As ULong
-        ica = ica_textbox.Text
-        reg_cislo.Text = krat * ica
 
+        Try
+            ica = ica_textbox.Text
+            reg_cislo.Text = (krat * ica) - 2
+        Catch
+        End Try
     End Sub
 End Class
