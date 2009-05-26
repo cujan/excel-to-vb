@@ -89,5 +89,21 @@ Public Class registracia_aplikacie
         End If
 
 
+
+
+
+
+        Dim con As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\spz_evidencia.accdb")
+        con.Open()
+
+        Dim com As New OleDb.OleDbCommand("UPDATE vseobecne_udaje SET reg_cislo ='" & reg & "' WHERE id =1", con)
+
+        com.ExecuteNonQuery()
+        con.Close()
+
+    End Sub
+
+    Private Sub reg_cislo_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles reg_cislo.TextChanged
+
     End Sub
 End Class
