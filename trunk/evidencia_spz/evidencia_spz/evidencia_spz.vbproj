@@ -308,6 +308,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>prehlad_clenovDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="registracia_aplikacie.Designer.vb">
+      <DependentUpon>registracia_aplikacie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="registracia_aplikacie.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="skuska_report_a4_form.Designer.vb">
       <DependentUpon>skuska_report_a4_form.vb</DependentUpon>
     </Compile>
@@ -515,6 +521,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="prehlad_clenov.resx">
       <DependentUpon>prehlad_clenov.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registracia_aplikacie.resx">
+      <DependentUpon>registracia_aplikacie.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="skuska_report_a4_form.resx">
