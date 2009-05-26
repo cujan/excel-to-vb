@@ -7,6 +7,8 @@ Imports Microsoft.VisualBasic.CompilerServices
 Public Class hlavna_aplikacia
     Private bInstalled As Boolean
 
+
+
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
         ' Create a new instance of the child form.
         Dim ChildForm As New System.Windows.Forms.Form
@@ -259,6 +261,7 @@ Public Class hlavna_aplikacia
         End If
 
 
+
         Dim mesiac As String
         Dim mesiac_string As String
         mesiac_string = ""
@@ -333,20 +336,28 @@ Public Class hlavna_aplikacia
         Dim reg_cislo As ULong
         Dim kontrola As ULong
 
+        try
+            reg_cislo = Conversions.ToULong(Me.Reg_cisloTextBox.Text)
+        Catch
+        End Try
 
-        reg_cislo = Conversions.ToULong(Me.Reg_cisloTextBox.Text)
 
-        'reg_cislo = 116094830072999
         Try
             kontrola = ((reg_cislo + 2) / krat) - plus
 
         Catch
 
         End Try
+
+        'docasne vypnutie kontroly registracie, zapnut !!!!!!!!!!!
+        kontrola = 1
+        diskSize = 1
+
         If Not (kontrola = diskSize) Then
             Me.sprava_clenov_button.Visible = False
             Me.sprava_zdruzeni_button.Visible = False
             Me.nastavenia_button.Visible = False
+            Me.Hide()
             varovanie2.Show()
             varovanie2.BringToFront()
 
@@ -542,6 +553,12 @@ Public Class hlavna_aplikacia
     Private Sub registrovat_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles registrovat.Click
         registracia_aplikacie.Show()
         registracia_aplikacie.BringToFront()
+
+    End Sub
+
+    Private Sub o_aplikacii_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles o_aplikacii_button.Click
+        o_aplikacii.Show()
+        o_aplikacii.BringToFront()
 
     End Sub
 End Class

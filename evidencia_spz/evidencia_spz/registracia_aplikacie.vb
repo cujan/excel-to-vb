@@ -30,7 +30,12 @@ Public Class registracia_aplikacie
     Private Sub registruj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles registruj.Click
         Dim reg As ULong
         'reg = Conversions.ToULong(Reg_cisloTextBox.Text)
-        reg = Conversions.ToULong(reg_cislo.Text)
+        Try
+            reg = Conversions.ToULong(reg_cislo.Text)
+        Catch
+        End Try
+
+
         Dim systemDir As String
         Dim plus As ULong
         Dim krat As ULong
@@ -67,6 +72,7 @@ Public Class registracia_aplikacie
             hlavna_aplikacia.nastavenia_button.Visible = False
             varovanie2.Show()
             varovanie2.BringToFront()
+            hlavna_aplikacia.Hide()
             hlavna_aplikacia.nastavenia_splitter.Panel2Collapsed = True
             hlavna_aplikacia.nastavenia_button.Text = "v"
 
@@ -106,6 +112,12 @@ Public Class registracia_aplikacie
     End Sub
 
     Private Sub reg_cislo_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles reg_cislo.TextChanged
+
+    End Sub
+
+    Private Sub kontakt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles kontakt.Click
+        o_aplikacii.Show()
+        o_aplikacii.BringToFront()
 
     End Sub
 End Class
