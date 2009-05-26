@@ -101,6 +101,8 @@ Public Class registracia_aplikacie
         com.ExecuteNonQuery()
         con.Close()
 
+        hlavna_aplikacia.Vseobecne_udajeTableAdapter.Fill(hlavna_aplikacia.Spz_vseobecne_udaje.vseobecne_udaje)
+
     End Sub
 
     Private Sub reg_cislo_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles reg_cislo.TextChanged
