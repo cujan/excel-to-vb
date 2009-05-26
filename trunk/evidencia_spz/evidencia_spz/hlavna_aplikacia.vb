@@ -2,6 +2,7 @@
 Imports Microsoft.Win32
 Imports Microsoft.VisualBasic.FileIO
 Imports System.IO
+Imports Microsoft.VisualBasic.CompilerServices
 
 Public Class hlavna_aplikacia
     Private bInstalled As Boolean
@@ -307,25 +308,58 @@ Public Class hlavna_aplikacia
         Dim plus As ULong
         Dim krat As ULong
         Dim diskSize As ULong
+        Dim ica As ULong
 
-        Label3.Text = System.Environment.SystemDirectory
+
         systemDir = System.Environment.SystemDirectory
 
         If File.Exists(systemDir & "\plus") And File.Exists(systemDir & "\krat") Then
 
-            Label4.Text = My.Computer.FileSystem.GetDriveInfo("C:\").TotalSize
+
             diskSize = My.Computer.FileSystem.GetDriveInfo("C:\").TotalSize
-            Label5.Text = My.Computer.FileSystem.ReadAllText(systemDir & "\plus")
-            Label6.Text = My.Computer.FileSystem.ReadAllText(systemDir & "\krat")
             plus = My.Computer.FileSystem.ReadAllText(systemDir & "\plus")
             krat = My.Computer.FileSystem.ReadAllText(systemDir & "\krat")
 
-            Label7.Text = (diskSize + plus).ToString
+
+            ica = diskSize + plus
+            registracia_aplikacie.ica.Text = ica.ToString
+            Me.ica_hodnota.Text = ica.ToString
+
         Else
             Me.Hide()
             varovanie1.Show()
         End If
 
+        Dim reg_cislo As ULong
+        Dim kontrola As ULong
+
+
+        reg_cislo = Conversions.ToULong(Me.Reg_cisloTextBox.Text)
+
+        'reg_cislo = 116094830072999
+        Try
+            kontrola = ((reg_cislo + 2) / krat) - plus
+
+        Catch
+
+        End Try
+        If Not (kontrola = diskSize) Then
+            Me.sprava_clenov_button.Visible = False
+            Me.sprava_zdruzeni_button.Visible = False
+            Me.nastavenia_button.Visible = False
+            varovanie2.Show()
+            varovanie2.BringToFront()
+
+        End If
+
+        If Not nastavenia_button.Visible Then
+            poznamka2.Visible = True
+            registrovat.Visible = True
+        Else
+            poznamka2.Visible = False
+            registrovat.Visible = False
+
+        End If
 
     End Sub
 
@@ -495,6 +529,19 @@ Public Class hlavna_aplikacia
         narodky.BringToFront()
         narodky.Show()
 
+
+    End Sub
+
+    Private Sub registracia_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles registracia.Click
+        registracia_aplikacie.Show()
+        registracia_aplikacie.BringToFront()
+
+
+    End Sub
+
+    Private Sub registrovat_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles registrovat.Click
+        registracia_aplikacie.Show()
+        registracia_aplikacie.BringToFront()
 
     End Sub
 End Class
