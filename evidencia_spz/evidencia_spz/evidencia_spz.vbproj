@@ -615,6 +615,7 @@
       <DependentUpon>zoznam_clenov_podla_zdruzenia.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="zoznam_clenov_podla_zdruzenia_report.rdlc" />
     <EmbeddedResource Include="zoznam_clenov_report.rdlc" />
     <EmbeddedResource Include="zoznam_clenov_report.resx">
       <DependentUpon>zoznam_clenov_report.vb</DependentUpon>
