@@ -563,4 +563,8 @@ Public Class hlavna_aplikacia
         o_aplikacii.BringToFront()
 
     End Sub
+
+    Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        zoznam_clenov_podla_zdruzenia.Show()
+    End Sub
 End Class
