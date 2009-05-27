@@ -44,7 +44,9 @@ Partial Class chybajuce_kontrolne_strelby_brok
         '
         'ReportViewer1
         '
-        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ReportViewer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         ReportDataSource1.Name = "Kontrolne_strelby_brokDataSet1_clenovia"
         ReportDataSource1.Value = Me.clenoviaBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)

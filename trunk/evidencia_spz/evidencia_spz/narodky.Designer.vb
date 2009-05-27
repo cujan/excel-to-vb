@@ -23,37 +23,40 @@ Partial Class narodky
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
-        Me.narodeniny_DataSet = New evidencia_spz.narodeniny_DataSet
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
         Me.clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.narodeniny_DataSet = New evidencia_spz.narodeniny_DataSet
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
         Me.clenoviaTableAdapter = New evidencia_spz.narodeniny_DataSetTableAdapters.clenoviaTableAdapter
         Me.mesiac_label = New System.Windows.Forms.Label
         Me.mesiac = New System.Windows.Forms.ComboBox
-        CType(Me.narodeniny_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.narodeniny_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ReportViewer1
+        'clenoviaBindingSource
         '
-        ReportDataSource3.Name = "narodeniny_DataSet_clenovia"
-        ReportDataSource3.Value = Me.clenoviaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.narodeniny_clenov.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 41)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(747, 451)
-        Me.ReportViewer1.TabIndex = 0
+        Me.clenoviaBindingSource.DataMember = "clenovia"
+        Me.clenoviaBindingSource.DataSource = Me.narodeniny_DataSet
         '
         'narodeniny_DataSet
         '
         Me.narodeniny_DataSet.DataSetName = "narodeniny_DataSet"
         Me.narodeniny_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'clenoviaBindingSource
+        'ReportViewer1
         '
-        Me.clenoviaBindingSource.DataMember = "clenovia"
-        Me.clenoviaBindingSource.DataSource = Me.narodeniny_DataSet
+        Me.ReportViewer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        ReportDataSource1.Name = "narodeniny_DataSet_clenovia"
+        ReportDataSource1.Value = Me.clenoviaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.narodeniny_clenov.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(12, 41)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.Size = New System.Drawing.Size(747, 451)
+        Me.ReportViewer1.TabIndex = 0
         '
         'clenoviaTableAdapter
         '
@@ -88,8 +91,8 @@ Partial Class narodky
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "narodky"
         Me.Text = "Narodeniny členov"
-        CType(Me.narodeniny_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.narodeniny_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

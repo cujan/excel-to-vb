@@ -66,6 +66,9 @@ Partial Class platnost_clenstva
         '
         'ReportViewer1
         '
+        Me.ReportViewer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         ReportDataSource1.Name = "koniec_clenstvaDataSet1_clenovia"
         ReportDataSource1.Value = Me.clenoviaBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)

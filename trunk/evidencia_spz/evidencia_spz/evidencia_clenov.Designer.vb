@@ -44,19 +44,25 @@ Partial Class evidencia_clenov
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ClenoviaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.ClenoviaDataGridView = New System.Windows.Forms.DataGridView
-        Me.hladajTextBox1 = New System.Windows.Forms.TextBox
-        Me.ClenoviaTableAdapter = New evidencia_spz.prehlad_clenovDataSetTableAdapters.clenoviaTableAdapter
-        Me.TableAdapterManager = New evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager
-        Me.Label4 = New System.Windows.Forms.Label
         Me.DataGridViewTextBoxColumn47 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn48 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn49 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn56 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.hladajTextBox1 = New System.Windows.Forms.TextBox
+        Me.ClenoviaTableAdapter = New evidencia_spz.prehlad_clenovDataSetTableAdapters.clenoviaTableAdapter
+        Me.TableAdapterManager = New evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox
+        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
+        Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClenoviaBindingNavigator.SuspendLayout()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button2
@@ -142,7 +148,7 @@ Partial Class evidencia_clenov
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -243,33 +249,6 @@ Partial Class evidencia_clenov
         Me.ClenoviaDataGridView.Size = New System.Drawing.Size(494, 351)
         Me.ClenoviaDataGridView.TabIndex = 10
         '
-        'hladajTextBox1
-        '
-        Me.hladajTextBox1.Location = New System.Drawing.Point(255, 35)
-        Me.hladajTextBox1.Name = "hladajTextBox1"
-        Me.hladajTextBox1.Size = New System.Drawing.Size(274, 20)
-        Me.hladajTextBox1.TabIndex = 11
-        '
-        'ClenoviaTableAdapter
-        '
-        Me.ClenoviaTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.UpdateOrder = evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Label4.Location = New System.Drawing.Point(125, 37)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(124, 13)
-        Me.Label4.TabIndex = 12
-        Me.Label4.Text = "Vyhľadať priezvisko:"
-        '
         'DataGridViewTextBoxColumn47
         '
         Me.DataGridViewTextBoxColumn47.DataPropertyName = "meno"
@@ -300,12 +279,65 @@ Partial Class evidencia_clenov
         Me.DataGridViewTextBoxColumn56.ReadOnly = True
         Me.DataGridViewTextBoxColumn56.Width = 140
         '
+        'hladajTextBox1
+        '
+        Me.hladajTextBox1.Location = New System.Drawing.Point(255, 35)
+        Me.hladajTextBox1.Name = "hladajTextBox1"
+        Me.hladajTextBox1.Size = New System.Drawing.Size(274, 20)
+        Me.hladajTextBox1.TabIndex = 11
+        '
+        'ClenoviaTableAdapter
+        '
+        Me.ClenoviaTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.UpdateOrder = evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Label4.Location = New System.Drawing.Point(125, 37)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(124, 13)
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "Vyhľadať priezvisko:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DataSource = Me.ZdruzenieBindingSource
+        Me.ComboBox1.DisplayMember = "nazov"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(559, 37)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 13
+        Me.ComboBox1.ValueMember = "ID"
+        '
+        'ZdruzenieDataSet
+        '
+        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
+        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ZdruzenieBindingSource
+        '
+        Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
+        Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSet
+        '
+        'ZdruzenieTableAdapter
+        '
+        Me.ZdruzenieTableAdapter.ClearBeforeFill = True
+        '
         'evidencia_clenov
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(792, 424)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.hladajTextBox1)
         Me.Controls.Add(Me.ClenoviaDataGridView)
@@ -323,6 +355,8 @@ Partial Class evidencia_clenov
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -406,4 +440,8 @@ Partial Class evidencia_clenov
     Friend WithEvents DataGridViewTextBoxColumn48 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn49 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn56 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents ZdruzenieDataSet As evidencia_spz.zdruzenieDataSet
+    Friend WithEvents ZdruzenieBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ZdruzenieTableAdapter As evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
 End Class
