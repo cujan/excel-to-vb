@@ -57,6 +57,7 @@ Partial Class evidencia_clenov
         Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
         Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
         Me.CheckBox1 = New System.Windows.Forms.CheckBox
+        Me.podla_zdruzenia = New System.Windows.Forms.Label
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClenoviaBindingNavigator.SuspendLayout()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -149,7 +150,7 @@ Partial Class evidencia_clenov
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -243,11 +244,11 @@ Partial Class evidencia_clenov
         Me.ClenoviaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ClenoviaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn47, Me.DataGridViewTextBoxColumn48, Me.DataGridViewTextBoxColumn49, Me.DataGridViewTextBoxColumn56})
         Me.ClenoviaDataGridView.DataSource = Me.ClenoviaBindingSource
-        Me.ClenoviaDataGridView.Location = New System.Drawing.Point(81, 61)
+        Me.ClenoviaDataGridView.Location = New System.Drawing.Point(81, 88)
         Me.ClenoviaDataGridView.Name = "ClenoviaDataGridView"
         Me.ClenoviaDataGridView.ReadOnly = True
         Me.ClenoviaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ClenoviaDataGridView.Size = New System.Drawing.Size(494, 351)
+        Me.ClenoviaDataGridView.Size = New System.Drawing.Size(494, 455)
         Me.ClenoviaDataGridView.TabIndex = 10
         '
         'DataGridViewTextBoxColumn47
@@ -301,11 +302,11 @@ Partial Class evidencia_clenov
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Label4.Location = New System.Drawing.Point(125, 37)
+        Me.Label4.Location = New System.Drawing.Point(129, 38)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(124, 13)
+        Me.Label4.Size = New System.Drawing.Size(120, 13)
         Me.Label4.TabIndex = 12
-        Me.Label4.Text = "Vyhľadať priezvisko:"
+        Me.Label4.Text = "Vyhľadať priezvisko"
         '
         'ComboBox1
         '
@@ -313,7 +314,7 @@ Partial Class evidencia_clenov
         Me.ComboBox1.DisplayMember = "nazov"
         Me.ComboBox1.Enabled = False
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(579, 34)
+        Me.ComboBox1.Location = New System.Drawing.Point(276, 61)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 13
@@ -336,18 +337,29 @@ Partial Class evidencia_clenov
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(559, 38)
+        Me.CheckBox1.Location = New System.Drawing.Point(255, 64)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox1.TabIndex = 14
         Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'podla_zdruzenia
+        '
+        Me.podla_zdruzenia.AutoSize = True
+        Me.podla_zdruzenia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.podla_zdruzenia.Location = New System.Drawing.Point(60, 64)
+        Me.podla_zdruzenia.Name = "podla_zdruzenia"
+        Me.podla_zdruzenia.Size = New System.Drawing.Size(189, 13)
+        Me.podla_zdruzenia.TabIndex = 15
+        Me.podla_zdruzenia.Text = "Prehľad členov podľa združenia"
         '
         'evidencia_clenov
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(792, 424)
+        Me.ClientSize = New System.Drawing.Size(792, 555)
+        Me.Controls.Add(Me.podla_zdruzenia)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label4)
@@ -457,4 +469,5 @@ Partial Class evidencia_clenov
     Friend WithEvents ZdruzenieBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ZdruzenieTableAdapter As evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents podla_zdruzenia As System.Windows.Forms.Label
 End Class
