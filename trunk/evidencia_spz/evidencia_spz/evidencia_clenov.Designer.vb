@@ -53,16 +53,17 @@ Partial Class evidencia_clenov
         Me.TableAdapterManager = New evidencia_spz.prehlad_clenovDataSetTableAdapters.TableAdapterManager
         Me.Label4 = New System.Windows.Forms.Label
         Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
         Me.ZdruzenieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzenieDataSet = New evidencia_spz.zdruzenieDataSet
         Me.ZdruzenieTableAdapter = New evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox
         CType(Me.ClenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClenoviaBindingNavigator.SuspendLayout()
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button2
@@ -310,26 +311,36 @@ Partial Class evidencia_clenov
         '
         Me.ComboBox1.DataSource = Me.ZdruzenieBindingSource
         Me.ComboBox1.DisplayMember = "nazov"
+        Me.ComboBox1.Enabled = False
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(559, 37)
+        Me.ComboBox1.Location = New System.Drawing.Point(579, 34)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 13
         Me.ComboBox1.ValueMember = "ID"
-        '
-        'ZdruzenieDataSet
-        '
-        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
-        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ZdruzenieBindingSource
         '
         Me.ZdruzenieBindingSource.DataMember = "zdruzenie"
         Me.ZdruzenieBindingSource.DataSource = Me.ZdruzenieDataSet
         '
+        'ZdruzenieDataSet
+        '
+        Me.ZdruzenieDataSet.DataSetName = "zdruzenieDataSet"
+        Me.ZdruzenieDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'ZdruzenieTableAdapter
         '
         Me.ZdruzenieTableAdapter.ClearBeforeFill = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(559, 38)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox1.TabIndex = 14
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'evidencia_clenov
         '
@@ -337,6 +348,7 @@ Partial Class evidencia_clenov
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(792, 424)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.hladajTextBox1)
@@ -355,8 +367,8 @@ Partial Class evidencia_clenov
         CType(Me.ClenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Prehlad_clenovDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClenoviaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzenieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzenieDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -444,4 +456,5 @@ Partial Class evidencia_clenov
     Friend WithEvents ZdruzenieDataSet As evidencia_spz.zdruzenieDataSet
     Friend WithEvents ZdruzenieBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ZdruzenieTableAdapter As evidencia_spz.zdruzenieDataSetTableAdapters.zdruzenieTableAdapter
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
 End Class
