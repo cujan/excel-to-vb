@@ -437,6 +437,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>zdruzenieDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="zoznam_clenov_podla_zdruzenia.Designer.vb">
+      <DependentUpon>zoznam_clenov_podla_zdruzenia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="zoznam_clenov_podla_zdruzenia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zoznam_clenov_podla_zdruzeniaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zoznam_clenov_podla_zdruzeniaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="zoznam_clenov_report.Designer.vb">
       <DependentUpon>zoznam_clenov_report.vb</DependentUpon>
     </Compile>
@@ -598,6 +609,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="zdruzenie.resx">
       <DependentUpon>zdruzenie.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zoznam_clenov_podla_zdruzenia.resx">
+      <DependentUpon>zoznam_clenov_podla_zdruzenia.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="zoznam_clenov_report.rdlc" />
@@ -871,6 +886,17 @@
     </None>
     <None Include="titulzaDataSet.xss">
       <DependentUpon>titulzaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zoznam_clenov_podla_zdruzeniaDataSet.xsc">
+      <DependentUpon>zoznam_clenov_podla_zdruzeniaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zoznam_clenov_podla_zdruzeniaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zoznam_clenov_podla_zdruzeniaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zoznam_clenov_podla_zdruzeniaDataSet.xss">
+      <DependentUpon>zoznam_clenov_podla_zdruzeniaDataSet.xsd</DependentUpon>
     </None>
     <Content Include="spz_evidencia.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
