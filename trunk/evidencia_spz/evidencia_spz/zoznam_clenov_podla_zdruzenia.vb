@@ -6,11 +6,14 @@
         'TODO: This line of code loads data into the 'Zoznam_clenov_podla_zdruzeniaDataSet.clenovia' table. You can move, or remove it, as needed.
         Me.ClenoviaTableAdapter.Fill(Me.Zoznam_clenov_podla_zdruzeniaDataSet.clenovia)
 
+        Me.ReportViewer1.RefreshReport()
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
         Dim id_zdruzenia As Integer = Me.ComboBox1.SelectedValue
         Me.ClenoviaTableAdapter.FillBy_podla_zdruzenia(Me.Zoznam_clenov_podla_zdruzeniaDataSet.clenovia, id_zdruzenia)
+        Me.ReportViewer1.RefreshReport()
+
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
