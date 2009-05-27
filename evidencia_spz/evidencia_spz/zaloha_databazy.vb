@@ -19,17 +19,17 @@ Public Class zaloha_databazy
         cDir = CurDir()
         Dim fileEntries As String()
         Try
-            fileEntries = Directory.GetFiles(cDir, "*.accdb-*")
+            fileEntries = Directory.GetFiles(cDir & "\backup", "*.accdb-*")
 
             Dim fileName As String
             Dim tempFile As String
             For Each fileName In fileEntries
-                tempFile = fileName.Remove(0, cDir.Length + 1)
+                tempFile = fileName.Remove(0, (cDir & "\backup").Length + 1)
                 obnov_listbox.Items.Add(tempFile)
 
             Next fileName
         Catch ex As Exception
-            MsgBox("Adresár so zálohami nenájdený.")
+            MsgBox("Adresár so zálohami nenájdený. Možná príčina - zatial ste nerobili žiadne zálohy. Prosím spravte zálohu databázy.")
         End Try
 
 
@@ -58,24 +58,39 @@ Public Class zaloha_databazy
         Dim destination As String
         Dim now As String
         cDir = CurDir()
-        now = Format(DateTime.Now, "dd-MM-yyyy--hh-mm-ss")
+        now = Format(DateTime.Now, "dd-MM-yyyy--HH-mm-ss")
 
         source = cDir & "\spz_evidencia.accdb"
-        destination = cDir & "\spz_evidencia.accdb-" & now
+        destination = cDir & "\backup\spz_evidencia.accdb-" & now
 
 
         'poznamka.Text = source & "     " & destination
 
         Try
-            My.Computer.FileSystem.CopyFile(source, destination)
-            poznamka.Visible = True
-            poznamka.Text = "Záloha databázy úspešne vytvorená."
-        Catch
+            If My.Computer.FileSystem.DirectoryExists(cDir & "\backup") Then
+                My.Computer.FileSystem.CopyFile(source, destination)
+                poznamka.Visible = True
+                poznamka.Text = "Záloha databázy úspešne vytvorená."
+
+            Else
+                My.Computer.FileSystem.CreateDirectory(cDir & "\backup")
+                My.Computer.FileSystem.CopyFile(source, destination)
+                poznamka.Visible = True
+                poznamka.Text = "Záloha databázy úspešne vytvorená."
+
+            End If
+        Catch ex As Exception
+            MsgBox("Nepodarilo sa zálohovať databázu.")
         End Try
 
     End Sub
 
     Private Sub zaloha_databazy_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
+
+
         zaloha_label.Enabled = True
         zalohuj.Enabled = True
         poznamka.Enabled = True
@@ -99,7 +114,7 @@ Public Class zaloha_databazy
 
         If Not obnov_listbox.SelectedIndex = -1 Then
 
-            source = cDir & "\" & obnov_listbox.SelectedItem
+            source = cDir & "\backup\" & obnov_listbox.SelectedItem
             destination = cDir & "\spz_evidencia.accdb"
 
             'poznamka.Text = source & "     " & destination
@@ -124,14 +139,14 @@ Public Class zaloha_databazy
     Private Sub vymaz_zalohu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles vymaz_zalohu.Click
         Dim cDir As String
         Dim source As String
-        Dim destination As String
+
 
         cDir = CurDir()
 
 
         If Not obnov_listbox.SelectedIndex = -1 Then
 
-            source = cDir & "\" & obnov_listbox.SelectedItem
+            source = cDir & "\backup\" & obnov_listbox.SelectedItem
 
 
             'poznamka.Text = source & "     " & destination
@@ -153,12 +168,12 @@ Public Class zaloha_databazy
 
         Dim fileEntries As String()
         Try
-            fileEntries = Directory.GetFiles(cDir, "*.accdb-*")
+            fileEntries = Directory.GetFiles(cDir & "\backup", "*.accdb-*")
 
             Dim fileName As String
             Dim tempFile As String
             For Each fileName In fileEntries
-                tempFile = fileName.Remove(0, cDir.Length + 1)
+                tempFile = fileName.Remove(0, (cDir & "\backup").Length + 1)
                 obnov_listbox.Items.Add(tempFile)
 
             Next fileName
@@ -166,6 +181,11 @@ Public Class zaloha_databazy
             MsgBox("Adresár so zálohami nenájdený.")
         End Try
 
+
+    End Sub
+
+    Private Sub zavriet_kartu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_kartu.Click
+        Me.Close()
 
     End Sub
 End Class

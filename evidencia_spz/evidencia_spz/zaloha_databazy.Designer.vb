@@ -34,13 +34,14 @@ Partial Class zaloha_databazy
         Me.obnova_nadpis_label = New System.Windows.Forms.Label
         Me.poznamka_obnova = New System.Windows.Forms.Label
         Me.vymaz_zalohu = New System.Windows.Forms.Button
+        Me.zavriet_kartu = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'zaloha
         '
         Me.zaloha.AutoSize = True
         Me.zaloha.Checked = True
-        Me.zaloha.Location = New System.Drawing.Point(36, 22)
+        Me.zaloha.Location = New System.Drawing.Point(158, 97)
         Me.zaloha.Name = "zaloha"
         Me.zaloha.Size = New System.Drawing.Size(104, 17)
         Me.zaloha.TabIndex = 0
@@ -51,7 +52,7 @@ Partial Class zaloha_databazy
         'obnova
         '
         Me.obnova.AutoSize = True
-        Me.obnova.Location = New System.Drawing.Point(36, 99)
+        Me.obnova.Location = New System.Drawing.Point(158, 174)
         Me.obnova.Name = "obnova"
         Me.obnova.Size = New System.Drawing.Size(109, 17)
         Me.obnova.TabIndex = 1
@@ -62,7 +63,7 @@ Partial Class zaloha_databazy
         '
         Me.zaloha_label.AutoSize = True
         Me.zaloha_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.zaloha_label.Location = New System.Drawing.Point(90, 42)
+        Me.zaloha_label.Location = New System.Drawing.Point(212, 117)
         Me.zaloha_label.Name = "zaloha_label"
         Me.zaloha_label.Size = New System.Drawing.Size(333, 13)
         Me.zaloha_label.TabIndex = 2
@@ -70,18 +71,20 @@ Partial Class zaloha_databazy
         '
         'zalohuj
         '
-        Me.zalohuj.Location = New System.Drawing.Point(514, 58)
+        Me.zalohuj.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.zalohuj.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.zalohuj.Location = New System.Drawing.Point(636, 133)
         Me.zalohuj.Name = "zalohuj"
         Me.zalohuj.Size = New System.Drawing.Size(100, 21)
         Me.zalohuj.TabIndex = 3
         Me.zalohuj.Text = "Zálohuj"
-        Me.zalohuj.UseVisualStyleBackColor = True
+        Me.zalohuj.UseVisualStyleBackColor = False
         '
         'poznamka
         '
         Me.poznamka.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.poznamka.ForeColor = System.Drawing.Color.DarkRed
-        Me.poznamka.Location = New System.Drawing.Point(177, 73)
+        Me.poznamka.Location = New System.Drawing.Point(299, 148)
         Me.poznamka.Name = "poznamka"
         Me.poznamka.Size = New System.Drawing.Size(331, 22)
         Me.poznamka.TabIndex = 4
@@ -91,7 +94,7 @@ Partial Class zaloha_databazy
         'obnova_label
         '
         Me.obnova_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.obnova_label.Location = New System.Drawing.Point(90, 119)
+        Me.obnova_label.Location = New System.Drawing.Point(212, 194)
         Me.obnova_label.Name = "obnova_label"
         Me.obnova_label.Size = New System.Drawing.Size(353, 49)
         Me.obnova_label.TabIndex = 5
@@ -102,27 +105,29 @@ Partial Class zaloha_databazy
         '
         Me.obnova_label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.obnova_label2.ForeColor = System.Drawing.Color.DarkRed
-        Me.obnova_label2.Location = New System.Drawing.Point(82, 168)
+        Me.obnova_label2.Location = New System.Drawing.Point(204, 243)
         Me.obnova_label2.Name = "obnova_label2"
         Me.obnova_label2.Size = New System.Drawing.Size(383, 65)
         Me.obnova_label2.TabIndex = 6
-        Me.obnova_label2.Text = "  POZOR! Po obnove staršej databázy budú všetky od vtedy spravene zmeny stratené." & _
+        Me.obnova_label2.Text = "  POZOR! Po obnove staršej databázy budú všetky od vtedy vykonané zmeny stratené." & _
             " Odporúčame pred obnovou spraviť zálohu súčasnej databázy."
         Me.obnova_label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'obnov
         '
-        Me.obnov.Location = New System.Drawing.Point(514, 239)
+        Me.obnov.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.obnov.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.obnov.Location = New System.Drawing.Point(636, 314)
         Me.obnov.Name = "obnov"
         Me.obnov.Size = New System.Drawing.Size(100, 23)
         Me.obnov.TabIndex = 7
         Me.obnov.Text = "Obnov"
-        Me.obnov.UseVisualStyleBackColor = True
+        Me.obnov.UseVisualStyleBackColor = False
         '
         'obnov_listbox
         '
         Me.obnov_listbox.FormattingEnabled = True
-        Me.obnov_listbox.Location = New System.Drawing.Point(514, 138)
+        Me.obnov_listbox.Location = New System.Drawing.Point(636, 213)
         Me.obnov_listbox.Name = "obnov_listbox"
         Me.obnov_listbox.Size = New System.Drawing.Size(246, 95)
         Me.obnov_listbox.TabIndex = 8
@@ -131,7 +136,7 @@ Partial Class zaloha_databazy
         '
         Me.obnova_nadpis_label.AutoSize = True
         Me.obnova_nadpis_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.obnova_nadpis_label.Location = New System.Drawing.Point(495, 120)
+        Me.obnova_nadpis_label.Location = New System.Drawing.Point(617, 195)
         Me.obnova_nadpis_label.Name = "obnova_nadpis_label"
         Me.obnova_nadpis_label.Size = New System.Drawing.Size(140, 13)
         Me.obnova_nadpis_label.TabIndex = 9
@@ -142,7 +147,7 @@ Partial Class zaloha_databazy
         Me.poznamka_obnova.AutoSize = True
         Me.poznamka_obnova.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.poznamka_obnova.ForeColor = System.Drawing.Color.DarkRed
-        Me.poznamka_obnova.Location = New System.Drawing.Point(548, 275)
+        Me.poznamka_obnova.Location = New System.Drawing.Point(670, 350)
         Me.poznamka_obnova.Name = "poznamka_obnova"
         Me.poznamka_obnova.Size = New System.Drawing.Size(45, 13)
         Me.poznamka_obnova.TabIndex = 10
@@ -151,18 +156,33 @@ Partial Class zaloha_databazy
         '
         'vymaz_zalohu
         '
-        Me.vymaz_zalohu.Location = New System.Drawing.Point(661, 239)
+        Me.vymaz_zalohu.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.vymaz_zalohu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.vymaz_zalohu.Location = New System.Drawing.Point(783, 314)
         Me.vymaz_zalohu.Name = "vymaz_zalohu"
         Me.vymaz_zalohu.Size = New System.Drawing.Size(99, 23)
         Me.vymaz_zalohu.TabIndex = 11
         Me.vymaz_zalohu.Text = "Vymaž zálohu"
-        Me.vymaz_zalohu.UseVisualStyleBackColor = True
+        Me.vymaz_zalohu.UseVisualStyleBackColor = False
+        '
+        'zavriet_kartu
+        '
+        Me.zavriet_kartu.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.zavriet_kartu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.zavriet_kartu.Location = New System.Drawing.Point(316, 12)
+        Me.zavriet_kartu.Name = "zavriet_kartu"
+        Me.zavriet_kartu.Size = New System.Drawing.Size(420, 24)
+        Me.zavriet_kartu.TabIndex = 12
+        Me.zavriet_kartu.Text = "Zavrieť kartu"
+        Me.zavriet_kartu.UseVisualStyleBackColor = False
         '
         'zaloha_databazy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(844, 614)
+        Me.BackColor = System.Drawing.Color.PaleGreen
+        Me.ClientSize = New System.Drawing.Size(954, 614)
+        Me.Controls.Add(Me.zavriet_kartu)
         Me.Controls.Add(Me.vymaz_zalohu)
         Me.Controls.Add(Me.poznamka_obnova)
         Me.Controls.Add(Me.obnova_nadpis_label)
@@ -175,6 +195,7 @@ Partial Class zaloha_databazy
         Me.Controls.Add(Me.zaloha_label)
         Me.Controls.Add(Me.obnova)
         Me.Controls.Add(Me.zaloha)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "zaloha_databazy"
         Me.Text = "Zalohovanie databazy"
         Me.ResumeLayout(False)
@@ -193,4 +214,5 @@ Partial Class zaloha_databazy
     Friend WithEvents obnova_nadpis_label As System.Windows.Forms.Label
     Friend WithEvents poznamka_obnova As System.Windows.Forms.Label
     Friend WithEvents vymaz_zalohu As System.Windows.Forms.Button
+    Friend WithEvents zavriet_kartu As System.Windows.Forms.Button
 End Class
