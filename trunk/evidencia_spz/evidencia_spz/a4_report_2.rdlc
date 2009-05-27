@@ -14,9 +14,6 @@
   <InteractiveWidth>8.5in</InteractiveWidth>
   <rd:GridSpacing>0.25cm</rd:GridSpacing>
   <rd:SnapToGrid>true</rd:SnapToGrid>
-  <RightMargin>2.5cm</RightMargin>
-  <LeftMargin>2.5cm</LeftMargin>
-  <BottomMargin>2.5cm</BottomMargin>
   <rd:ReportID>6def0cb4-8ba9-4968-9dec-3d8d2d8f137f</rd:ReportID>
   <PageWidth>21cm</PageWidth>
   <DataSets>
@@ -248,6 +245,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <Code />
   <Width>21cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
@@ -837,7 +835,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
             <CanGrow>true</CanGrow>
             <Left>11.5cm</Left>
             <Height>0.63492cm</Height>
-            <Value>=First(Fields!Zdruzenie.Value, "spz_clenovia_report_a4_clenovia")</Value>
+            <Value>=Fields!Zdruzenie.Value</Value>
           </Textbox>
           <Textbox Name="textbox27">
             <Top>7cm</Top>
@@ -1810,12 +1808,11 @@ FROM         (((((clenovia LEFT OUTER JOIN
           </GroupExpressions>
           <PageBreakAtEnd>true</PageBreakAtEnd>
         </Grouping>
-        <Height>18.25cm</Height>
+        <Height>13.75cm</Height>
       </List>
     </ReportItems>
-    <Height>20.25cm</Height>
+    <Height>14.25cm</Height>
   </Body>
   <Language>en-US</Language>
-  <TopMargin>2.5cm</TopMargin>
-  <PageHeight>29.7cm</PageHeight>
+  <PageHeight>28.5cm</PageHeight>
 </Report>
