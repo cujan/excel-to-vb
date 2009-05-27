@@ -70,13 +70,13 @@ WHERE     (Format(clenovia.datum_narodenia, 'MM') = ?)</CommandText>
     </DataSet>
   </DataSets>
   <Code />
-  <Width>23.83328cm</Width>
+  <Width>15.75cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
       <Textbox Name="textbox1">
         <rd:DefaultName>textbox1</rd:DefaultName>
-        <Width>15.75cm</Width>
+        <Width>15.5cm</Width>
         <Style>
           <Color>#365838</Color>
           <FontFamily>Times New Roman</FontFamily>
@@ -95,7 +95,7 @@ WHERE     (Format(clenovia.datum_narodenia, 'MM') = ?)</CommandText>
         <DataSetName>narodeniny_DataSet_clenovia</DataSetName>
         <Top>0.8381cm</Top>
         <PageBreakAtEnd>true</PageBreakAtEnd>
-        <Width>17.0299cm</Width>
+        <Width>15.61318cm</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -377,16 +377,16 @@ WHERE     (Format(clenovia.datum_narodenia, 'MM') = ?)</CommandText>
         </Header>
         <TableColumns>
           <TableColumn>
-            <Width>2.72651cm</Width>
+            <Width>2.25cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.72651cm</Width>
+            <Width>2.25cm</Width>
           </TableColumn>
           <TableColumn>
             <Width>3.75cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>4.2137cm</Width>
+            <Width>3.75cm</Width>
           </TableColumn>
           <TableColumn>
             <Width>3.61318cm</Width>

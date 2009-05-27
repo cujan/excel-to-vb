@@ -258,7 +258,7 @@
     </DataSet>
   </DataSets>
   <Code />
-  <Width>20.28968cm</Width>
+  <Width>16.25cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
@@ -303,7 +303,6 @@
       <Table Name="table1">
         <DataSetName>spz_zoznam_clenov_reportDataSet1_clenovia</DataSetName>
         <Top>1cm</Top>
-        <Width>17cm</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -606,7 +605,7 @@
             <Width>2.75cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>6.75cm</Width>
+            <Width>5.75cm</Width>
           </TableColumn>
         </TableColumns>
         <Height>1cm</Height>
