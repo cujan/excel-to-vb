@@ -501,6 +501,8 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub zoznam_zdruzeni_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zoznam_zdruzeni_button.Click
+        zoznam_zdruzeni.Show()
+        zoznam_zdruzeni.BringToFront()
 
     End Sub
 
