@@ -24,6 +24,7 @@
             ComboBox1.Enabled = False
             Me.ClenoviaTableAdapter.Fill(Me.Zoznam_clenov_podla_zdruzeniaDataSet.clenovia)
         End If
+        Me.ReportViewer1.RefreshReport()
 
     End Sub
 End Class

@@ -115,7 +115,7 @@ Public Class hlavna_aplikacia
             tl_zostavy_splitter.Location = sprava_zdruzeni_splitter_position
 
             If tl_zostavy_splitter.Panel2Collapsed = False Then
-                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 210
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 265
 
             Else
                 tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 34
@@ -142,7 +142,7 @@ Public Class hlavna_aplikacia
             tl_zostavy_splitter.Location = sprava_zdruzeni_splitter_position
 
             If tl_zostavy_splitter.Panel2Collapsed = False Then
-                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 210
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 265
 
             Else
                 tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 34
@@ -194,7 +194,7 @@ Public Class hlavna_aplikacia
             tl_zostavy_splitter.Location = sprava_zdruzeni_splitter_position
 
             If tl_zostavy_splitter.Panel2Collapsed = False Then
-                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 210
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 265
 
             Else
                 tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 34
@@ -212,7 +212,7 @@ Public Class hlavna_aplikacia
             tl_zostavy_splitter.Location = sprava_zdruzeni_splitter_position
 
             If tl_zostavy_splitter.Panel2Collapsed = False Then
-                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 210
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 265
 
             Else
                 tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 34
@@ -471,7 +471,7 @@ Public Class hlavna_aplikacia
         If tl_zostavy_button.Text = "v" Then
             tl_zostavy_button.Text = "^"
             tl_zostavy_splitter.Panel2Collapsed = False
-            tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 210
+            tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 265
             tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
             nastavenia_splitter.Location = tl_zostavy_splitter_position
 
@@ -564,11 +564,24 @@ Public Class hlavna_aplikacia
 
     End Sub
 
-    Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs)
         zoznam_clenov_podla_zdruzenia.Show()
     End Sub
 
-    Private Sub Button2_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        zaloha_databazy.Show()
+        zaloha_databazy.BringToFront()
+
+    End Sub
+
+    Private Sub zoznam_clenov_podla_zdruzeni_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zoznam_clenov_podla_zdruzeni.Click
+        zoznam_clenov_podla_zdruzenia.Show()
+        zoznam_clenov_podla_zdruzenia.BringToFront()
+
+
+    End Sub
+
+    Private Sub zalohuj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zalohuj.Click
         zaloha_databazy.Show()
         zaloha_databazy.BringToFront()
 
