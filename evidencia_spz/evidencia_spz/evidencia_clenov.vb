@@ -27,6 +27,7 @@
         prehlad_clenov.prehlad_clenov_splitter.Panel2.Controls.Add(Me)
         Me.ClenoviaDataGridView.CurrentCell = Nothing
 
+
         
     End Sub
 
@@ -196,5 +197,21 @@
     Private Sub hladajTextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles hladajTextBox1.TextChanged
         Dim hladany_retazec As String = hladajTextBox1.Text
         Me.ClenoviaTableAdapter.FillBy_hladaj_priezvisko(Me.Prehlad_clenovDataSet.clenovia, hladany_retazec)
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim index_zdruzenia As Integer = ComboBox1.SelectedValue
+        Me.ClenoviaTableAdapter.FillBy_podla_zdruzenia(Me.Prehlad_clenovDataSet.clenovia, index_zdruzenia)
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
+
+        If CheckBox1.CheckState = CheckState.Checked Then
+            ComboBox1.Enabled = True
+        Else
+            ComboBox1.Enabled = False
+            Me.ClenoviaTableAdapter.Fill(Me.Prehlad_clenovDataSet.clenovia)
+        End If
+
     End Sub
 End Class
