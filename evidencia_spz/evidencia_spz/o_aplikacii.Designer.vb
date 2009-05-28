@@ -31,6 +31,7 @@ Partial Class o_aplikacii
         Me.tel_hodnota = New System.Windows.Forms.Label
         Me.email_hodnota = New System.Windows.Forms.Label
         Me.zavriet = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
         Me.SuspendLayout()
         '
         'uvod
@@ -46,79 +47,90 @@ Partial Class o_aplikacii
         'tvorca
         '
         Me.tvorca.AutoSize = True
-        Me.tvorca.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvorca.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tvorca.Location = New System.Drawing.Point(275, 133)
         Me.tvorca.Name = "tvorca"
-        Me.tvorca.Size = New System.Drawing.Size(115, 17)
+        Me.tvorca.Size = New System.Drawing.Size(132, 17)
         Me.tvorca.TabIndex = 1
         Me.tvorca.Text = "Tvorca aplikácie:"
         '
         'tvorca_detail
         '
         Me.tvorca_detail.AutoSize = True
-        Me.tvorca_detail.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tvorca_detail.Location = New System.Drawing.Point(396, 127)
+        Me.tvorca_detail.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tvorca_detail.Location = New System.Drawing.Point(407, 130)
         Me.tvorca_detail.Name = "tvorca_detail"
-        Me.tvorca_detail.Size = New System.Drawing.Size(208, 24)
+        Me.tvorca_detail.Size = New System.Drawing.Size(230, 24)
         Me.tvorca_detail.TabIndex = 2
         Me.tvorca_detail.Text = "H&&K Software Solutions"
         '
         'kontakt
         '
         Me.kontakt.AutoSize = True
-        Me.kontakt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.kontakt.Location = New System.Drawing.Point(334, 173)
+        Me.kontakt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.kontakt.Location = New System.Drawing.Point(344, 168)
         Me.kontakt.Name = "kontakt"
-        Me.kontakt.Size = New System.Drawing.Size(56, 17)
+        Me.kontakt.Size = New System.Drawing.Size(63, 17)
         Me.kontakt.TabIndex = 3
         Me.kontakt.Text = "Kontakt"
         '
         'tel
         '
         Me.tel.AutoSize = True
-        Me.tel.Location = New System.Drawing.Point(362, 206)
+        Me.tel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.tel.Location = New System.Drawing.Point(364, 194)
         Me.tel.Name = "tel"
-        Me.tel.Size = New System.Drawing.Size(28, 13)
+        Me.tel.Size = New System.Drawing.Size(33, 13)
         Me.tel.TabIndex = 4
         Me.tel.Text = "Tel.:"
         '
         'email
         '
         Me.email.AutoSize = True
-        Me.email.Location = New System.Drawing.Point(352, 243)
+        Me.email.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.email.Location = New System.Drawing.Point(352, 236)
         Me.email.Name = "email"
-        Me.email.Size = New System.Drawing.Size(38, 13)
+        Me.email.Size = New System.Drawing.Size(45, 13)
         Me.email.TabIndex = 5
         Me.email.Text = "E-mail:"
         '
         'tel_hodnota
         '
         Me.tel_hodnota.AutoSize = True
-        Me.tel_hodnota.Location = New System.Drawing.Point(397, 206)
+        Me.tel_hodnota.Location = New System.Drawing.Point(403, 211)
         Me.tel_hodnota.Name = "tel_hodnota"
-        Me.tel_hodnota.Size = New System.Drawing.Size(43, 13)
+        Me.tel_hodnota.Size = New System.Drawing.Size(67, 13)
         Me.tel_hodnota.TabIndex = 6
-        Me.tel_hodnota.Text = "??????"
+        Me.tel_hodnota.Text = "0902201569"
         '
         'email_hodnota
         '
         Me.email_hodnota.AutoSize = True
-        Me.email_hodnota.Location = New System.Drawing.Point(397, 243)
+        Me.email_hodnota.Location = New System.Drawing.Point(403, 236)
         Me.email_hodnota.Name = "email_hodnota"
-        Me.email_hodnota.Size = New System.Drawing.Size(55, 13)
+        Me.email_hodnota.Size = New System.Drawing.Size(176, 13)
         Me.email_hodnota.TabIndex = 7
-        Me.email_hodnota.Text = "????????"
+        Me.email_hodnota.Text = "polnohospodari@polnohospodari.sk"
         '
         'zavriet
         '
         Me.zavriet.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.zavriet.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.zavriet.Location = New System.Drawing.Point(511, 270)
+        Me.zavriet.Location = New System.Drawing.Point(553, 286)
         Me.zavriet.Name = "zavriet"
         Me.zavriet.Size = New System.Drawing.Size(90, 23)
         Me.zavriet.TabIndex = 8
         Me.zavriet.Text = "Zavrieť kartu"
         Me.zavriet.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(403, 194)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(67, 13)
+        Me.Label1.TabIndex = 9
+        Me.Label1.Text = "0903172584"
         '
         'o_aplikacii
         '
@@ -126,6 +138,7 @@ Partial Class o_aplikacii
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(708, 330)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.zavriet)
         Me.Controls.Add(Me.email_hodnota)
         Me.Controls.Add(Me.tel_hodnota)
@@ -151,4 +164,5 @@ Partial Class o_aplikacii
     Friend WithEvents tel_hodnota As System.Windows.Forms.Label
     Friend WithEvents email_hodnota As System.Windows.Forms.Label
     Friend WithEvents zavriet As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

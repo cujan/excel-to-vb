@@ -98,6 +98,7 @@ Partial Class prehlad_zdruzeni
         'karta_clena_tlac_button
         '
         Me.karta_clena_tlac_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.karta_clena_tlac_button.Enabled = False
         Me.karta_clena_tlac_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.karta_clena_tlac_button.Location = New System.Drawing.Point(300, 20)
         Me.karta_clena_tlac_button.Name = "karta_clena_tlac_button"

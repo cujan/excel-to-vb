@@ -6,6 +6,8 @@
     End Sub
 
     Private Sub button_report_zoznam_clenov_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button_report_zoznam_clenov.Click
+        zoznam_zdruzeni.Show()
+        zoznam_zdruzeni.BringToFront()
 
 
     End Sub
