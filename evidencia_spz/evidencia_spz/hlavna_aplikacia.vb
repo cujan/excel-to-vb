@@ -372,6 +372,9 @@ Public Class hlavna_aplikacia
 
         End If
 
+        ' zobrazenie copyright a verzie
+        Me.copyrightLabel.Text = SplashScreen1.Copyright.Text
+        Me.versionLabel.Text = SplashScreen1.Version.Text
     End Sub
 
     Private Sub TitulZaMenomToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TitulZaMenomToolStripMenuItem.Click
