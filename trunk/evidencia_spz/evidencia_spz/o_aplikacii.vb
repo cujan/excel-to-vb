@@ -4,6 +4,8 @@
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
         hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
+        Me.verzia.Text = hlavna_aplikacia.versionLabel.Text
+
     End Sub
 
     Private Sub zavriet_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet.Click

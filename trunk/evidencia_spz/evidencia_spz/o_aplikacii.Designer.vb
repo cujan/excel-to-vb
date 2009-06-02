@@ -32,6 +32,8 @@ Partial Class o_aplikacii
         Me.email_hodnota = New System.Windows.Forms.Label
         Me.zavriet = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
+        Me.verzia_text = New System.Windows.Forms.Label
+        Me.verzia = New System.Windows.Forms.Label
         Me.SuspendLayout()
         '
         'uvod
@@ -68,7 +70,7 @@ Partial Class o_aplikacii
         '
         Me.kontakt.AutoSize = True
         Me.kontakt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.kontakt.Location = New System.Drawing.Point(344, 168)
+        Me.kontakt.Location = New System.Drawing.Point(344, 189)
         Me.kontakt.Name = "kontakt"
         Me.kontakt.Size = New System.Drawing.Size(63, 17)
         Me.kontakt.TabIndex = 3
@@ -78,7 +80,7 @@ Partial Class o_aplikacii
         '
         Me.tel.AutoSize = True
         Me.tel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.tel.Location = New System.Drawing.Point(364, 194)
+        Me.tel.Location = New System.Drawing.Point(364, 215)
         Me.tel.Name = "tel"
         Me.tel.Size = New System.Drawing.Size(33, 13)
         Me.tel.TabIndex = 4
@@ -88,7 +90,7 @@ Partial Class o_aplikacii
         '
         Me.email.AutoSize = True
         Me.email.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.email.Location = New System.Drawing.Point(352, 236)
+        Me.email.Location = New System.Drawing.Point(352, 257)
         Me.email.Name = "email"
         Me.email.Size = New System.Drawing.Size(45, 13)
         Me.email.TabIndex = 5
@@ -97,7 +99,7 @@ Partial Class o_aplikacii
         'tel_hodnota
         '
         Me.tel_hodnota.AutoSize = True
-        Me.tel_hodnota.Location = New System.Drawing.Point(403, 211)
+        Me.tel_hodnota.Location = New System.Drawing.Point(403, 232)
         Me.tel_hodnota.Name = "tel_hodnota"
         Me.tel_hodnota.Size = New System.Drawing.Size(67, 13)
         Me.tel_hodnota.TabIndex = 6
@@ -106,7 +108,7 @@ Partial Class o_aplikacii
         'email_hodnota
         '
         Me.email_hodnota.AutoSize = True
-        Me.email_hodnota.Location = New System.Drawing.Point(403, 236)
+        Me.email_hodnota.Location = New System.Drawing.Point(403, 257)
         Me.email_hodnota.Name = "email_hodnota"
         Me.email_hodnota.Size = New System.Drawing.Size(176, 13)
         Me.email_hodnota.TabIndex = 7
@@ -116,7 +118,7 @@ Partial Class o_aplikacii
         '
         Me.zavriet.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.zavriet.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.zavriet.Location = New System.Drawing.Point(553, 286)
+        Me.zavriet.Location = New System.Drawing.Point(553, 307)
         Me.zavriet.Name = "zavriet"
         Me.zavriet.Size = New System.Drawing.Size(90, 23)
         Me.zavriet.TabIndex = 8
@@ -126,18 +128,40 @@ Partial Class o_aplikacii
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(403, 194)
+        Me.Label1.Location = New System.Drawing.Point(403, 215)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 13)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "0903172584"
+        '
+        'verzia_text
+        '
+        Me.verzia_text.AutoSize = True
+        Me.verzia_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.verzia_text.Location = New System.Drawing.Point(279, 160)
+        Me.verzia_text.Name = "verzia_text"
+        Me.verzia_text.Size = New System.Drawing.Size(128, 17)
+        Me.verzia_text.TabIndex = 10
+        Me.verzia_text.Text = "Verzia aplikácie:"
+        '
+        'verzia
+        '
+        Me.verzia.AutoSize = True
+        Me.verzia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.verzia.Location = New System.Drawing.Point(503, 162)
+        Me.verzia.Name = "verzia"
+        Me.verzia.Size = New System.Drawing.Size(30, 13)
+        Me.verzia.TabIndex = 11
+        Me.verzia.Text = "N/A"
         '
         'o_aplikacii
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(708, 330)
+        Me.ClientSize = New System.Drawing.Size(708, 382)
+        Me.Controls.Add(Me.verzia)
+        Me.Controls.Add(Me.verzia_text)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.zavriet)
         Me.Controls.Add(Me.email_hodnota)
@@ -165,4 +189,6 @@ Partial Class o_aplikacii
     Friend WithEvents email_hodnota As System.Windows.Forms.Label
     Friend WithEvents zavriet As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents verzia_text As System.Windows.Forms.Label
+    Friend WithEvents verzia As System.Windows.Forms.Label
 End Class
