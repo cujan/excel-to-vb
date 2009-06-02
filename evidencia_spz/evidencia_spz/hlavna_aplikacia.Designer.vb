@@ -117,6 +117,8 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_label = New System.Windows.Forms.Label
         Me.prehlad_clenov_button = New System.Windows.Forms.Button
         Me.novy_clen_button = New System.Windows.Forms.Button
+        Me.versionLabel = New System.Windows.Forms.Label
+        Me.copyrightLabel = New System.Windows.Forms.Label
         Me.registrovat = New System.Windows.Forms.Button
         Me.poznamka2 = New System.Windows.Forms.Label
         Me.ica_hodnota = New System.Windows.Forms.Label
@@ -157,8 +159,7 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.Vseobecne_udajeBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.copyrightLabel = New System.Windows.Forms.Label
-        Me.versionLabel = New System.Windows.Forms.Label
+        Me.verzia_text = New System.Windows.Forms.Label
         TelefonLabel = New System.Windows.Forms.Label
         FaxLabel = New System.Windows.Forms.Label
         EmailLabel = New System.Windows.Forms.Label
@@ -250,7 +251,7 @@ Partial Class hlavna_aplikacia
         '
         Reg_cisloLabel.AutoSize = True
         Reg_cisloLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Reg_cisloLabel.Location = New System.Drawing.Point(290, 516)
+        Reg_cisloLabel.Location = New System.Drawing.Point(437, 515)
         Reg_cisloLabel.Name = "Reg_cisloLabel"
         Reg_cisloLabel.Size = New System.Drawing.Size(113, 9)
         Reg_cisloLabel.TabIndex = 0
@@ -692,6 +693,7 @@ Partial Class hlavna_aplikacia
         '
         Me.hlavny_splitter.Panel2.AutoScroll = True
         Me.hlavny_splitter.Panel2.BackColor = System.Drawing.Color.PaleGreen
+        Me.hlavny_splitter.Panel2.Controls.Add(Me.verzia_text)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.versionLabel)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.copyrightLabel)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.registrovat)
@@ -1101,6 +1103,26 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
         '
+        'versionLabel
+        '
+        Me.versionLabel.AutoSize = True
+        Me.versionLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.versionLabel.Location = New System.Drawing.Point(689, 527)
+        Me.versionLabel.Name = "versionLabel"
+        Me.versionLabel.Size = New System.Drawing.Size(27, 9)
+        Me.versionLabel.TabIndex = 35
+        Me.versionLabel.Text = "Label4"
+        '
+        'copyrightLabel
+        '
+        Me.copyrightLabel.AutoSize = True
+        Me.copyrightLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.copyrightLabel.Location = New System.Drawing.Point(320, 522)
+        Me.copyrightLabel.Name = "copyrightLabel"
+        Me.copyrightLabel.Size = New System.Drawing.Size(27, 9)
+        Me.copyrightLabel.TabIndex = 34
+        Me.copyrightLabel.Text = "Label3"
+        '
         'registrovat
         '
         Me.registrovat.BackColor = System.Drawing.Color.DarkSeaGreen
@@ -1126,7 +1148,7 @@ Partial Class hlavna_aplikacia
         '
         Me.ica_hodnota.AutoSize = True
         Me.ica_hodnota.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.ica_hodnota.Location = New System.Drawing.Point(454, 528)
+        Me.ica_hodnota.Location = New System.Drawing.Point(601, 527)
         Me.ica_hodnota.Name = "ica_hodnota"
         Me.ica_hodnota.Size = New System.Drawing.Size(18, 9)
         Me.ica_hodnota.TabIndex = 31
@@ -1136,7 +1158,7 @@ Partial Class hlavna_aplikacia
         '
         Me.ica_cislo.AutoSize = True
         Me.ica_cislo.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.ica_cislo.Location = New System.Drawing.Point(454, 516)
+        Me.ica_cislo.Location = New System.Drawing.Point(601, 515)
         Me.ica_cislo.Name = "ica_cislo"
         Me.ica_cislo.Size = New System.Drawing.Size(18, 9)
         Me.ica_cislo.TabIndex = 30
@@ -1148,7 +1170,7 @@ Partial Class hlavna_aplikacia
         Me.Reg_cisloTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Reg_cisloTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Vseobecne_udajeBindingSource, "reg_cislo", True))
         Me.Reg_cisloTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Reg_cisloTextBox.Location = New System.Drawing.Point(303, 528)
+        Me.Reg_cisloTextBox.Location = New System.Drawing.Point(450, 527)
         Me.Reg_cisloTextBox.Name = "Reg_cisloTextBox"
         Me.Reg_cisloTextBox.ReadOnly = True
         Me.Reg_cisloTextBox.Size = New System.Drawing.Size(100, 10)
@@ -1483,23 +1505,15 @@ Partial Class hlavna_aplikacia
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.Vseobecne_udajeBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'copyrightLabel
+        'verzia_text
         '
-        Me.copyrightLabel.AutoSize = True
-        Me.copyrightLabel.Location = New System.Drawing.Point(292, 438)
-        Me.copyrightLabel.Name = "copyrightLabel"
-        Me.copyrightLabel.Size = New System.Drawing.Size(39, 13)
-        Me.copyrightLabel.TabIndex = 34
-        Me.copyrightLabel.Text = "Label3"
-        '
-        'versionLabel
-        '
-        Me.versionLabel.AutoSize = True
-        Me.versionLabel.Location = New System.Drawing.Point(295, 464)
-        Me.versionLabel.Name = "versionLabel"
-        Me.versionLabel.Size = New System.Drawing.Size(39, 13)
-        Me.versionLabel.TabIndex = 35
-        Me.versionLabel.Text = "Label4"
+        Me.verzia_text.AutoSize = True
+        Me.verzia_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.verzia_text.Location = New System.Drawing.Point(689, 515)
+        Me.verzia_text.Name = "verzia_text"
+        Me.verzia_text.Size = New System.Drawing.Size(27, 9)
+        Me.verzia_text.TabIndex = 36
+        Me.verzia_text.Text = "Verzia"
         '
         'hlavna_aplikacia
         '
@@ -1675,5 +1689,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents zalohuj As System.Windows.Forms.Button
     Friend WithEvents versionLabel As System.Windows.Forms.Label
     Friend WithEvents copyrightLabel As System.Windows.Forms.Label
+    Friend WithEvents verzia_text As System.Windows.Forms.Label
 
 End Class
