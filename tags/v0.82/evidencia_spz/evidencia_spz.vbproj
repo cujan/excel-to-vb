@@ -22,6 +22,7 @@
     <ManifestKeyFile>evidencia_spz_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
     <SignManifests>false</SignManifests>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
     <PublishUrl>E:\projekt google\instalacka\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -809,6 +810,7 @@
     <None Include="kontrolne_strelby_gulaDataSet1.xss">
       <DependentUpon>kontrolne_strelby_gulaDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="My Project\app.manifest" />
     <None Include="narodeniny_DataSet.xsc">
       <DependentUpon>narodeniny_DataSet.xsd</DependentUpon>
     </None>

@@ -15,26 +15,26 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
+        "MsmKey" = "8:_2A0EA3BBD8A6499AB9D210549FBEA88D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_4C68EBFAFEDA85465642C62682CF0D85"
-        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
+        "OwnerKey" = "8:_2A0EA3BBD8A6499AB9D210549FBEA88D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_63193BAF7C7AF15504DC6F0411DFC81B"
-        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
+        "OwnerKey" = "8:_2A0EA3BBD8A6499AB9D210549FBEA88D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_76536CEEAB037192680D608B7640B5BF"
-        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
+        "OwnerKey" = "8:_2A0EA3BBD8A6499AB9D210549FBEA88D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -46,19 +46,19 @@
         "Entry"
         {
         "MsmKey" = "8:_80ACC7F8C63573A81BCEB67AD120473D"
-        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
+        "OwnerKey" = "8:_2A0EA3BBD8A6499AB9D210549FBEA88D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_8986001D8972F70D3FFFDCBB1FD0D560"
-        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
+        "OwnerKey" = "8:_2A0EA3BBD8A6499AB9D210549FBEA88D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_A80A6A32233C304B7B396725D9ED0529"
-        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
+        "OwnerKey" = "8:_2A0EA3BBD8A6499AB9D210549FBEA88D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3A36E1CAFA5E496FB9451370E39A42E2"
+        "OwnerKey" = "8:_2A0EA3BBD8A6499AB9D210549FBEA88D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -134,6 +134,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.3.5"
+                    {
+                    "Name" = "8:.NET Framework 3.5"
+                    "ProductCode" = "8:Microsoft.Net.Framework.3.5"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -158,6 +171,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.3.5"
+                    {
+                    "Name" = "8:.NET Framework 3.5"
+                    "ProductCode" = "8:Microsoft.Net.Framework.3.5"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
     }
@@ -949,7 +975,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3A36E1CAFA5E496FB9451370E39A42E2"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2A0EA3BBD8A6499AB9D210549FBEA88D"
             {
             "SourcePath" = "8:..\\evidencia_spz\\obj\\Debug\\evidencia_spz.exe"
             "TargetName" = "8:"

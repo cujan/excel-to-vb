@@ -316,12 +316,12 @@ Public Class hlavna_aplikacia
 
         systemDir = System.Environment.SystemDirectory
 
-        If File.Exists(systemDir & "\plus") And File.Exists(systemDir & "\krat") Then
+        If File.Exists(systemDir & "\5t7ir4h2") And File.Exists(systemDir & "\2t4yd75i8") Then
 
 
             diskSize = My.Computer.FileSystem.GetDriveInfo("C:\").TotalSize
-            plus = My.Computer.FileSystem.ReadAllText(systemDir & "\plus")
-            krat = My.Computer.FileSystem.ReadAllText(systemDir & "\krat")
+            plus = My.Computer.FileSystem.ReadAllText(systemDir & "\5t7ir4h2")
+            krat = My.Computer.FileSystem.ReadAllText(systemDir & "\2t4yd75i8")
 
 
             ica = diskSize + plus
@@ -350,8 +350,8 @@ Public Class hlavna_aplikacia
         End Try
 
         'docasne vypnutie kontroly registracie, zapnut !!!!!!!!!!!
-        kontrola = 1
-        diskSize = 1
+        'kontrola = 1
+        'diskSize = 1
 
         If Not (kontrola = diskSize) Then
             Me.sprava_clenov_button.Visible = False
