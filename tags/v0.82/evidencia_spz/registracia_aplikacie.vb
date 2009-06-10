@@ -45,12 +45,12 @@ Public Class registracia_aplikacie
 
         systemDir = System.Environment.SystemDirectory
 
-        If File.Exists(systemDir & "\plus") And File.Exists(systemDir & "\krat") Then
+        If File.Exists(systemDir & "\5t7ir4h2") And File.Exists(systemDir & "\2t4yd75i8") Then
 
 
             diskSize = My.Computer.FileSystem.GetDriveInfo("C:\").TotalSize
-            plus = My.Computer.FileSystem.ReadAllText(systemDir & "\plus")
-            krat = My.Computer.FileSystem.ReadAllText(systemDir & "\krat")
+            plus = My.Computer.FileSystem.ReadAllText(systemDir & "\5t7ir4h2")
+            krat = My.Computer.FileSystem.ReadAllText(systemDir & "\2t4yd75i8")
         Else
             Me.Hide()
             varovanie1.Show()
