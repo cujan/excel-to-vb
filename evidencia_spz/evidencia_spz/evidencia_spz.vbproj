@@ -22,7 +22,6 @@
     <ManifestKeyFile>evidencia_spz_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
     <SignManifests>false</SignManifests>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
     <PublishUrl>E:\projekt google\instalacka\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -37,6 +36,7 @@
     <ApplicationVersion>0.0.8.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -811,6 +811,7 @@
       <DependentUpon>kontrolne_strelby_gulaDataSet1.xsd</DependentUpon>
     </None>
     <None Include="My Project\app.manifest" />
+    <None Include="My Project\VisualBasic" />
     <None Include="narodeniny_DataSet.xsc">
       <DependentUpon>narodeniny_DataSet.xsd</DependentUpon>
     </None>
