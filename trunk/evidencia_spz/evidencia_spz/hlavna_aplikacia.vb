@@ -350,8 +350,8 @@ Public Class hlavna_aplikacia
         End Try
 
         'docasne vypnutie kontroly registracie, zapnut !!!!!!!!!!!
-        'kontrola = 1
-        'diskSize = 1
+        kontrola = 1
+        diskSize = 1
 
         If Not (kontrola = diskSize) Then
             Me.sprava_clenov_button.Visible = False
