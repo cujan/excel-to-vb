@@ -20,7 +20,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <ManifestCertificateThumbprint>3B2FA4CFD762EA66F9C54B0C137686B0C492A77C</ManifestCertificateThumbprint>
     <ManifestKeyFile>evidencia_spz_TemporaryKey.pfx</ManifestKeyFile>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
     <SignManifests>false</SignManifests>
     <PublishUrl>E:\projekt google\instalacka\</PublishUrl>
     <Install>true</Install>
@@ -36,6 +36,7 @@
     <ApplicationVersion>0.0.8.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetZone>LocalIntranet</TargetZone>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

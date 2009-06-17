@@ -154,6 +154,32 @@
 
     End Sub
 
+    Private Sub Rodne_cisloTextBox_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Rodne_cisloTextBox.Leave
+
+        Try
+
+            Dim rok As String = "19" & Rodne_cisloTextBox.Text.Substring(0, 2)
+            Dim mesiac As String
+
+            If Rodne_cisloTextBox.Text.Substring(2, 2) < 13 Then
+                mesiac = Rodne_cisloTextBox.Text.Substring(2, 2)
+            Else
+                mesiac = Rodne_cisloTextBox.Text.Substring(2, 2) - 50
+
+            End If
+
+            Dim den As String = Rodne_cisloTextBox.Text.Substring(4, 2)
+
+            Dim datum_naarodenia_spojeny As String = den & "." & mesiac & "." & rok
+
+            Datum_narodeniaTextBox.Text = datum_naarodenia_spojeny
+
+        Catch
+            MsgBox("Nemate spravne zadane rodne cislo", MsgBoxStyle.Critical)
+        End Try
+
+    End Sub
+
     Private Sub Rodne_cisloTextBox_Validating1(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Rodne_cisloTextBox.Validating
         Dim chyba As String
 
@@ -192,5 +218,31 @@
             'zrus(chybu)
             ErrorProvider1.SetError(PriezviskoTextBox, Nothing)
         End If
+    End Sub
+
+    Private Sub Datum_narodeniaTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Datum_narodeniaTextBox.TextChanged
+
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim rok As String = "19" & Rodne_cisloTextBox.Text.Substring(0, 2)
+        Dim mesiac As String
+
+        If Rodne_cisloTextBox.Text.Substring(2, 2) < 13 Then
+            mesiac = Rodne_cisloTextBox.Text.Substring(2, 2)
+        Else
+            mesiac = Rodne_cisloTextBox.Text.Substring(2, 2) - 50
+
+        End If
+
+        Dim den As String = Rodne_cisloTextBox.Text.Substring(4, 2)
+
+        Dim datum_naarodenia_spojeny As String = den & "." & mesiac & "." & rok
+
+        MsgBox(datum_naarodenia_spojeny)
+    End Sub
+
+    Private Sub Rodne_cisloTextBox_TextChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Rodne_cisloTextBox.TextChanged
+
     End Sub
 End Class

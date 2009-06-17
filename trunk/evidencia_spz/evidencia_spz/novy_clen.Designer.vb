@@ -208,7 +208,7 @@ Partial Class novy_clen
         'Rodne_cisloLabel
         '
         Rodne_cisloLabel.AutoSize = True
-        Rodne_cisloLabel.Location = New System.Drawing.Point(120, 135)
+        Rodne_cisloLabel.Location = New System.Drawing.Point(117, 116)
         Rodne_cisloLabel.Name = "Rodne_cisloLabel"
         Rodne_cisloLabel.Size = New System.Drawing.Size(65, 13)
         Rodne_cisloLabel.TabIndex = 9
@@ -469,7 +469,7 @@ Partial Class novy_clen
         'Datum_narodeniaLabel
         '
         Datum_narodeniaLabel.AutoSize = True
-        Datum_narodeniaLabel.Location = New System.Drawing.Point(97, 109)
+        Datum_narodeniaLabel.Location = New System.Drawing.Point(96, 138)
         Datum_narodeniaLabel.Name = "Datum_narodeniaLabel"
         Datum_narodeniaLabel.Size = New System.Drawing.Size(88, 13)
         Datum_narodeniaLabel.TabIndex = 77
@@ -545,7 +545,7 @@ Partial Class novy_clen
         '
         'Rodne_cisloTextBox
         '
-        Me.Rodne_cisloTextBox.Location = New System.Drawing.Point(190, 132)
+        Me.Rodne_cisloTextBox.Location = New System.Drawing.Point(190, 109)
         Me.Rodne_cisloTextBox.Name = "Rodne_cisloTextBox"
         Me.Rodne_cisloTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Rodne_cisloTextBox.TabIndex = 10
@@ -722,7 +722,7 @@ Partial Class novy_clen
         '
         'Datum_narodeniaTextBox
         '
-        Me.Datum_narodeniaTextBox.Location = New System.Drawing.Point(190, 106)
+        Me.Datum_narodeniaTextBox.Location = New System.Drawing.Point(191, 135)
         Me.Datum_narodeniaTextBox.Name = "Datum_narodeniaTextBox"
         Me.Datum_narodeniaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Datum_narodeniaTextBox.TabIndex = 78

@@ -9,7 +9,7 @@
         If rc.Length = 0 Then Return True
 
         'kontrola dlzky rodneho cisla
-        If rc.Length <> 10 And rc.Length <> 9 Then
+        If rc.Length <> 11 And rc.Length <> 10 Then
             strError = "Neplatna dlzka rodneho cisla"
             Return False
         End If
