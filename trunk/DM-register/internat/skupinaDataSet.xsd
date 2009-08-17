@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="skupinaDataSet" targetNamespace="http://tempuri.org/skupinaDataSet.xsd" xmlns:mstns="http://tempuri.org/skupinaDataSet.xsd" xmlns="http://tempuri.org/skupinaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="databazaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="databazaConnectionString (MySettings)" PropertyReference="ApplicationSettings.internat.My.MySettings.GlobalReference.Default.databazaConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="skupinaTableAdapter" GeneratorDataComponentClassName="skupinaTableAdapter" Name="skupina" UserDataComponentName="skupinaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="databazaConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     skupina.ID, skupina.nazov, skupina.id_vychovavatel, vychovavatelia.priezvisko
+FROM         (skupina INNER JOIN
+                      vychovavatelia ON skupina.id_vychovavatel = vychovavatelia.ID)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="nazov" DataSetColumn="nazov" />
+              <Mapping SourceColumn="id_vychovavatel" DataSetColumn="id_vychovavatel" />
+              <Mapping SourceColumn="priezvisko" DataSetColumn="priezvisko" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="skupinaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="skupinaDataSet" msprop:Generator_DataSetName="skupinaDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="skupina" msprop:Generator_UserTableName="skupina" msprop:Generator_RowDeletedName="skupinaRowDeleted" msprop:Generator_RowChangedName="skupinaRowChanged" msprop:Generator_RowClassName="skupinaRow" msprop:Generator_RowChangingName="skupinaRowChanging" msprop:Generator_RowEvArgName="skupinaRowChangeEvent" msprop:Generator_RowEvHandlerName="skupinaRowChangeEventHandler" msprop:Generator_TableClassName="skupinaDataTable" msprop:Generator_TableVarName="tableskupina" msprop:Generator_RowDeletingName="skupinaRowDeleting" msprop:Generator_TablePropName="skupina">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="nazov" msprop:Generator_UserColumnName="nazov" msprop:Generator_ColumnVarNameInTable="columnnazov" msprop:Generator_ColumnPropNameInRow="nazov" msprop:Generator_ColumnPropNameInTable="nazovColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_vychovavatel" msprop:Generator_UserColumnName="id_vychovavatel" msprop:Generator_ColumnVarNameInTable="columnid_vychovavatel" msprop:Generator_ColumnPropNameInRow="id_vychovavatel" msprop:Generator_ColumnPropNameInTable="id_vychovavatelColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="priezvisko" msprop:Generator_UserColumnName="priezvisko" msprop:Generator_ColumnPropNameInRow="priezvisko" msprop:Generator_ColumnVarNameInTable="columnpriezvisko" msprop:Generator_ColumnPropNameInTable="priezviskoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:skupina" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
