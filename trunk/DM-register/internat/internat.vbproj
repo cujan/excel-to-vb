@@ -76,6 +76,7 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
+    <Import Include="System.Data.SqlServerCe" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
     <Import Include="System.Windows.Forms" />
@@ -109,6 +110,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="skupina.Designer.vb">
+      <DependentUpon>skupina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="skupina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="skupinaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>skupinaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="studentDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="vychovavatelDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vychovavatelDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="hlavna_aplikacia.resx">
@@ -119,6 +141,10 @@
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="skupina.resx">
+      <DependentUpon>skupina.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -143,6 +169,39 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="skupinaDataSet1.xsc">
+      <DependentUpon>skupinaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="skupinaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>skupinaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="skupinaDataSet1.xss">
+      <DependentUpon>skupinaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="studentDataSet.xsc">
+      <DependentUpon>studentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="studentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>studentDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="studentDataSet.xss">
+      <DependentUpon>studentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="vychovavatelDataSet.xsc">
+      <DependentUpon>vychovavatelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="vychovavatelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vychovavatelDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vychovavatelDataSet.xss">
+      <DependentUpon>vychovavatelDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
