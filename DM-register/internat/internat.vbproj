@@ -54,8 +54,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core">
@@ -81,28 +83,10 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="databazaDataSet.Designer.vb">
+    <Compile Include="db_internatDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>databazaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="skupinaDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>skupinaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="skupiny.Designer.vb">
-      <DependentUpon>skupiny.vb</DependentUpon>
-    </Compile>
-    <Compile Include="skupiny.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vychovavatelia.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vychovavatelia.Designer.vb">
-      <DependentUpon>vychovavatelia.vb</DependentUpon>
-      <SubType>Form</SubType>
+      <DependentUpon>db_internatDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="hlavna_aplikacia.Designer.vb">
       <DependentUpon>hlavna_aplikacia.vb</DependentUpon>
@@ -125,21 +109,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="vychovavateliaDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>vychovavateliaDataSet.xsd</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="skupiny.resx">
-      <DependentUpon>skupiny.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vychovavatelia.resx">
-      <DependentUpon>vychovavatelia.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="hlavna_aplikacia.resx">
       <DependentUpon>hlavna_aplikacia.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -153,16 +124,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="databazaDataSet.xsc">
-      <DependentUpon>databazaDataSet.xsd</DependentUpon>
+    <None Include="db_internatDataSet.xsc">
+      <DependentUpon>db_internatDataSet.xsd</DependentUpon>
     </None>
-    <None Include="databazaDataSet.xsd">
+    <None Include="db_internatDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>databazaDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>db_internatDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="databazaDataSet.xss">
-      <DependentUpon>databazaDataSet.xsd</DependentUpon>
+    <None Include="db_internatDataSet.xss">
+      <DependentUpon>db_internatDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -173,32 +144,10 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="skupinaDataSet.xsc">
-      <DependentUpon>skupinaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="skupinaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>skupinaDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="skupinaDataSet.xss">
-      <DependentUpon>skupinaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="vychovavateliaDataSet.xsc">
-      <DependentUpon>vychovavateliaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="vychovavateliaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>vychovavateliaDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="vychovavateliaDataSet.xss">
-      <DependentUpon>vychovavateliaDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="databaza.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="db_internat.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -215,6 +164,11 @@
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
