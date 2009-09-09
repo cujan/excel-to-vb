@@ -121,6 +121,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>skupinaDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="skupina_vychovavatelDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>skupina_vychovavatelDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="studentDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -180,6 +185,17 @@
     </None>
     <None Include="skupinaDataSet1.xss">
       <DependentUpon>skupinaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="skupina_vychovavatelDataSet1.xsc">
+      <DependentUpon>skupina_vychovavatelDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="skupina_vychovavatelDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>skupina_vychovavatelDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="skupina_vychovavatelDataSet1.xss">
+      <DependentUpon>skupina_vychovavatelDataSet1.xsd</DependentUpon>
     </None>
     <None Include="studentDataSet.xsc">
       <DependentUpon>studentDataSet.xsd</DependentUpon>

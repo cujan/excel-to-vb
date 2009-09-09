@@ -24,10 +24,15 @@ Partial Class skupina
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(skupina))
-        Me.SkupinaDataSet = New internat.skupinaDataSet
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.nazovTextBox = New System.Windows.Forms.TextBox
+        Me.vychovavatelComboBox1 = New System.Windows.Forms.ComboBox
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Skupina_vychovavatelDataSet1 = New internat.skupina_vychovavatelDataSet1
         Me.SkupinaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SkupinaTableAdapter = New internat.skupinaDataSetTableAdapters.skupinaTableAdapter
-        Me.TableAdapterManager = New internat.skupinaDataSetTableAdapters.TableAdapterManager
+        Me.SkupinaTableAdapter = New internat.skupina_vychovavatelDataSet1TableAdapters.skupinaTableAdapter
+        Me.TableAdapterManager = New internat.skupina_vychovavatelDataSet1TableAdapters.TableAdapterManager
         Me.SkupinaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
@@ -45,32 +50,73 @@ Partial Class skupina
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.nazovTextBox = New System.Windows.Forms.TextBox
-        Me.vychovavatelComboBox1 = New System.Windows.Forms.ComboBox
         Me.VychovavatelDataSet = New internat.vychovavatelDataSet
-        Me.VychovavatelDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VychovavatelBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VychovavatelTableAdapter = New internat.vychovavatelDataSetTableAdapters.vychovavatelTableAdapter
-        CType(Me.SkupinaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Skupina_vychovavatelDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkupinaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkupinaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SkupinaBindingNavigator.SuspendLayout()
         CType(Me.SkupinaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VychovavatelDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VychovavatelDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VychovavatelBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'SkupinaDataSet
+        'Button1
         '
-        Me.SkupinaDataSet.DataSetName = "skupinaDataSet"
-        Me.SkupinaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Button1.Location = New System.Drawing.Point(357, 61)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Vlož skupinu"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'nazovTextBox
+        '
+        Me.nazovTextBox.Location = New System.Drawing.Point(147, 38)
+        Me.nazovTextBox.Name = "nazovTextBox"
+        Me.nazovTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.nazovTextBox.TabIndex = 3
+        '
+        'vychovavatelComboBox1
+        '
+        Me.vychovavatelComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.VychovavatelBindingSource, "id", True))
+        Me.vychovavatelComboBox1.DataSource = Me.VychovavatelBindingSource
+        Me.vychovavatelComboBox1.DisplayMember = "priezvisko"
+        Me.vychovavatelComboBox1.FormattingEnabled = True
+        Me.vychovavatelComboBox1.Location = New System.Drawing.Point(147, 64)
+        Me.vychovavatelComboBox1.Name = "vychovavatelComboBox1"
+        Me.vychovavatelComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.vychovavatelComboBox1.TabIndex = 4
+        Me.vychovavatelComboBox1.ValueMember = "id"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(27, 41)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(77, 13)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Nazov skupiny"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(27, 71)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(79, 13)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Vedúci skupiny"
+        '
+        'Skupina_vychovavatelDataSet1
+        '
+        Me.Skupina_vychovavatelDataSet1.DataSetName = "skupina_vychovavatelDataSet1"
+        Me.Skupina_vychovavatelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'SkupinaBindingSource
         '
         Me.SkupinaBindingSource.DataMember = "skupina"
-        Me.SkupinaBindingSource.DataSource = Me.SkupinaDataSet
+        Me.SkupinaBindingSource.DataSource = Me.Skupina_vychovavatelDataSet1
         '
         'SkupinaTableAdapter
         '
@@ -80,7 +126,8 @@ Partial Class skupina
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.skupinaTableAdapter = Me.SkupinaTableAdapter
-        Me.TableAdapterManager.UpdateOrder = internat.skupinaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UpdateOrder = internat.skupina_vychovavatelDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.vychovavatelTableAdapter = Nothing
         '
         'SkupinaBindingNavigator
         '
@@ -97,7 +144,7 @@ Partial Class skupina
         Me.SkupinaBindingNavigator.Name = "SkupinaBindingNavigator"
         Me.SkupinaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
         Me.SkupinaBindingNavigator.Size = New System.Drawing.Size(525, 25)
-        Me.SkupinaBindingNavigator.TabIndex = 0
+        Me.SkupinaBindingNavigator.TabIndex = 7
         Me.SkupinaBindingNavigator.Text = "BindingNavigator1"
         '
         'BindingNavigatorMoveFirstItem
@@ -135,14 +182,14 @@ Partial Class skupina
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 13)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -150,7 +197,7 @@ Partial Class skupina
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -159,13 +206,13 @@ Partial Class skupina
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorAddNewItem
         '
@@ -182,7 +229,7 @@ Partial Class skupina
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'SkupinaBindingNavigatorSaveItem
@@ -190,7 +237,7 @@ Partial Class skupina
         Me.SkupinaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.SkupinaBindingNavigatorSaveItem.Image = CType(resources.GetObject("SkupinaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.SkupinaBindingNavigatorSaveItem.Name = "SkupinaBindingNavigatorSaveItem"
-        Me.SkupinaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.SkupinaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
         Me.SkupinaBindingNavigatorSaveItem.Text = "Save Data"
         '
         'SkupinaDataGridView
@@ -199,10 +246,10 @@ Partial Class skupina
         Me.SkupinaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SkupinaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.SkupinaDataGridView.DataSource = Me.SkupinaBindingSource
-        Me.SkupinaDataGridView.Location = New System.Drawing.Point(12, 133)
+        Me.SkupinaDataGridView.Location = New System.Drawing.Point(30, 148)
         Me.SkupinaDataGridView.Name = "SkupinaDataGridView"
-        Me.SkupinaDataGridView.Size = New System.Drawing.Size(504, 220)
-        Me.SkupinaDataGridView.TabIndex = 1
+        Me.SkupinaDataGridView.Size = New System.Drawing.Size(483, 220)
+        Me.SkupinaDataGridView.TabIndex = 7
         '
         'DataGridViewTextBoxColumn1
         '
@@ -223,48 +270,15 @@ Partial Class skupina
         Me.DataGridViewTextBoxColumn3.HeaderText = "id_vychovavatel"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(210, 93)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'nazovTextBox
-        '
-        Me.nazovTextBox.Location = New System.Drawing.Point(110, 43)
-        Me.nazovTextBox.Name = "nazovTextBox"
-        Me.nazovTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.nazovTextBox.TabIndex = 3
-        '
-        'vychovavatelComboBox1
-        '
-        Me.vychovavatelComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.VychovavatelBindingSource, "id", True))
-        Me.vychovavatelComboBox1.DataSource = Me.VychovavatelBindingSource
-        Me.vychovavatelComboBox1.DisplayMember = "priezvisko"
-        Me.vychovavatelComboBox1.FormattingEnabled = True
-        Me.vychovavatelComboBox1.Location = New System.Drawing.Point(262, 41)
-        Me.vychovavatelComboBox1.Name = "vychovavatelComboBox1"
-        Me.vychovavatelComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.vychovavatelComboBox1.TabIndex = 4
-        Me.vychovavatelComboBox1.ValueMember = "id"
-        '
         'VychovavatelDataSet
         '
         Me.VychovavatelDataSet.DataSetName = "vychovavatelDataSet"
         Me.VychovavatelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'VychovavatelDataSetBindingSource
-        '
-        Me.VychovavatelDataSetBindingSource.DataSource = Me.VychovavatelDataSet
-        Me.VychovavatelDataSetBindingSource.Position = 0
-        '
         'VychovavatelBindingSource
         '
         Me.VychovavatelBindingSource.DataMember = "vychovavatel"
-        Me.VychovavatelBindingSource.DataSource = Me.VychovavatelDataSetBindingSource
+        Me.VychovavatelBindingSource.DataSource = Me.VychovavatelDataSet
         '
         'VychovavatelTableAdapter
         '
@@ -274,31 +288,37 @@ Partial Class skupina
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(525, 396)
+        Me.ClientSize = New System.Drawing.Size(525, 420)
+        Me.Controls.Add(Me.SkupinaDataGridView)
+        Me.Controls.Add(Me.SkupinaBindingNavigator)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.vychovavatelComboBox1)
         Me.Controls.Add(Me.nazovTextBox)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.SkupinaDataGridView)
-        Me.Controls.Add(Me.SkupinaBindingNavigator)
         Me.Name = "skupina"
         Me.Text = "skupina"
-        CType(Me.SkupinaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Skupina_vychovavatelDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkupinaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkupinaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SkupinaBindingNavigator.ResumeLayout(False)
         Me.SkupinaBindingNavigator.PerformLayout()
         CType(Me.SkupinaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VychovavatelDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VychovavatelDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VychovavatelBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents SkupinaDataSet As internat.skupinaDataSet
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents nazovTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents vychovavatelComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Skupina_vychovavatelDataSet1 As internat.skupina_vychovavatelDataSet1
     Friend WithEvents SkupinaBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents SkupinaTableAdapter As internat.skupinaDataSetTableAdapters.skupinaTableAdapter
-    Friend WithEvents TableAdapterManager As internat.skupinaDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents SkupinaTableAdapter As internat.skupina_vychovavatelDataSet1TableAdapters.skupinaTableAdapter
+    Friend WithEvents TableAdapterManager As internat.skupina_vychovavatelDataSet1TableAdapters.TableAdapterManager
     Friend WithEvents SkupinaBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -316,10 +336,6 @@ Partial Class skupina
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents nazovTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents vychovavatelComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents VychovavatelDataSetBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents VychovavatelDataSet As internat.vychovavatelDataSet
     Friend WithEvents VychovavatelBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents VychovavatelTableAdapter As internat.vychovavatelDataSetTableAdapters.vychovavatelTableAdapter
