@@ -57,21 +57,21 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="skupinaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="skupinaDataSet" msprop:Generator_UserDSName="skupinaDataSet" msprop:EnableTableAdapterManager="True">
+  <xs:element name="skupinaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="skupinaDataSet" msprop:Generator_DataSetName="skupinaDataSet" msprop:EnableTableAdapterManager="True">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="skupina" msprop:Generator_UserTableName="skupina" msprop:Generator_RowDeletedName="skupinaRowDeleted" msprop:Generator_TableClassName="skupinaDataTable" msprop:Generator_RowChangedName="skupinaRowChanged" msprop:Generator_RowClassName="skupinaRow" msprop:Generator_RowChangingName="skupinaRowChanging" msprop:Generator_RowEvArgName="skupinaRowChangeEvent" msprop:Generator_RowEvHandlerName="skupinaRowChangeEventHandler" msprop:Generator_TablePropName="skupina" msprop:Generator_TableVarName="tableskupina" msprop:Generator_RowDeletingName="skupinaRowDeleting">
+        <xs:element name="skupina" msprop:Generator_UserTableName="skupina" msprop:Generator_RowDeletedName="skupinaRowDeleted" msprop:Generator_RowChangedName="skupinaRowChanged" msprop:Generator_RowClassName="skupinaRow" msprop:Generator_RowChangingName="skupinaRowChanging" msprop:Generator_RowEvArgName="skupinaRowChangeEvent" msprop:Generator_RowEvHandlerName="skupinaRowChangeEventHandler" msprop:Generator_TableClassName="skupinaDataTable" msprop:Generator_TableVarName="tableskupina" msprop:Generator_RowDeletingName="skupinaRowDeleting" msprop:Generator_TablePropName="skupina">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:int" />
-              <xs:element name="nazov_skupiny" msprop:Generator_UserColumnName="nazov_skupiny" msprop:Generator_ColumnPropNameInRow="nazov_skupiny" msprop:Generator_ColumnVarNameInTable="columnnazov_skupiny" msprop:Generator_ColumnPropNameInTable="nazov_skupinyColumn" minOccurs="0">
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:int" />
+              <xs:element name="nazov_skupiny" msprop:Generator_UserColumnName="nazov_skupiny" msprop:Generator_ColumnVarNameInTable="columnnazov_skupiny" msprop:Generator_ColumnPropNameInRow="nazov_skupiny" msprop:Generator_ColumnPropNameInTable="nazov_skupinyColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="id_vychovavatel" msprop:Generator_UserColumnName="id_vychovavatel" msprop:Generator_ColumnPropNameInRow="id_vychovavatel" msprop:Generator_ColumnVarNameInTable="columnid_vychovavatel" msprop:Generator_ColumnPropNameInTable="id_vychovavatelColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="id_vychovavatel" msprop:Generator_UserColumnName="id_vychovavatel" msprop:Generator_ColumnVarNameInTable="columnid_vychovavatel" msprop:Generator_ColumnPropNameInRow="id_vychovavatel" msprop:Generator_ColumnPropNameInTable="id_vychovavatelColumn" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
