@@ -304,6 +304,8 @@ Partial Public Class skupina_vychovavatelDataSet1
         
         Private columnid_vychovavatel As Global.System.Data.DataColumn
         
+        Private columnpriezvisko As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub New()
             MyBase.New
@@ -357,6 +359,13 @@ Partial Public Class skupina_vychovavatelDataSet1
             End Get
         End Property
         
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property priezviskoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnpriezvisko
+            End Get
+        End Property
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -386,9 +395,9 @@ Partial Public Class skupina_vychovavatelDataSet1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overloads Function AddskupinaRow(ByVal nazov_skupiny As String, ByVal id_vychovavatel As Integer) As skupinaRow
+        Public Overloads Function AddskupinaRow(ByVal nazov_skupiny As String, ByVal id_vychovavatel As Integer, ByVal priezvisko As String) As skupinaRow
             Dim rowskupinaRow As skupinaRow = CType(Me.NewRow,skupinaRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, nazov_skupiny, id_vychovavatel}
+            Dim columnValuesArray() As Object = New Object() {Nothing, nazov_skupiny, id_vychovavatel, priezvisko}
             rowskupinaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowskupinaRow)
             Return rowskupinaRow
@@ -416,6 +425,7 @@ Partial Public Class skupina_vychovavatelDataSet1
             Me.columnid = MyBase.Columns("id")
             Me.columnnazov_skupiny = MyBase.Columns("nazov_skupiny")
             Me.columnid_vychovavatel = MyBase.Columns("id_vychovavatel")
+            Me.columnpriezvisko = MyBase.Columns("priezvisko")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -426,6 +436,8 @@ Partial Public Class skupina_vychovavatelDataSet1
             MyBase.Columns.Add(Me.columnnazov_skupiny)
             Me.columnid_vychovavatel = New Global.System.Data.DataColumn("id_vychovavatel", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_vychovavatel)
+            Me.columnpriezvisko = New Global.System.Data.DataColumn("priezvisko", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpriezvisko)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
             Me.columnid.AutoIncrement = true
             Me.columnid.AutoIncrementSeed = -1
@@ -434,6 +446,8 @@ Partial Public Class skupina_vychovavatelDataSet1
             Me.columnid.ReadOnly = true
             Me.columnid.Unique = true
             Me.columnnazov_skupiny.MaxLength = 100
+            Me.columnpriezvisko.ReadOnly = true
+            Me.columnpriezvisko.MaxLength = 100
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -887,6 +901,20 @@ Partial Public Class skupina_vychovavatelDataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property priezvisko() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableskupina.priezviskoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'priezvisko' in table 'skupina' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableskupina.priezviskoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function Isnazov_skupinyNull() As Boolean
             Return Me.IsNull(Me.tableskupina.nazov_skupinyColumn)
         End Function
@@ -904,6 +932,16 @@ Partial Public Class skupina_vychovavatelDataSet1
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub Setid_vychovavatelNull()
             Me(Me.tableskupina.id_vychovavatelColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function IspriezviskoNull() As Boolean
+            Return Me.IsNull(Me.tableskupina.priezviskoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub SetpriezviskoNull()
+            Me(Me.tableskupina.priezviskoColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1198,26 +1236,8 @@ Namespace skupina_vychovavatelDataSet1TableAdapters
             tableMapping.ColumnMappings.Add("id", "id")
             tableMapping.ColumnMappings.Add("nazov_skupiny", "nazov_skupiny")
             tableMapping.ColumnMappings.Add("id_vychovavatel", "id_vychovavatel")
+            tableMapping.ColumnMappings.Add("priezvisko", "priezvisko")
             Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.DeleteCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
-            Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [skupina] WHERE (([id] = @p1))"
-            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
-            Me._adapter.InsertCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
-            Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [skupina] ([nazov_skupiny], [id_vychovavatel]) VALUES (@p1, @p2)"
-            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "nazov_skupiny", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_vychovavatel", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
-            Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [skupina] SET [nazov_skupiny] = @p1, [id_vychovavatel] = @p2 WHERE (([id] "& _ 
-                "= @p3))"
-            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "nazov_skupiny", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_vychovavatel", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1231,7 +1251,9 @@ Namespace skupina_vychovavatelDataSet1TableAdapters
             Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT [id], [nazov_skupiny], [id_vychovavatel] FROM [skupina]"
+            Me._commandCollection(0).CommandText = "SELECT     skupina.id, skupina.nazov_skupiny, skupina.id_vychovavatel, vychovavat"& _ 
+                "el.priezvisko"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         skupina INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      vychovavat"& _ 
+                "el ON skupina.id_vychovavatel = vychovavatel.id"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -1255,109 +1277,6 @@ Namespace skupina_vychovavatelDataSet1TableAdapters
             Dim dataTable As skupina_vychovavatelDataSet1.skupinaDataTable = New skupina_vychovavatelDataSet1.skupinaDataTable
             Me.Adapter.Fill(dataTable)
             Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As skupina_vychovavatelDataSet1.skupinaDataTable) As Integer
-            Return Me.Adapter.Update(dataTable)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As skupina_vychovavatelDataSet1) As Integer
-            Return Me.Adapter.Update(dataSet, "skupina")
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(dataRows)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal p1 As Integer) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(p1,Integer)
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal p1 As String, ByVal p2 As Global.System.Nullable(Of Integer)) As Integer
-            If (p1 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(p1,String)
-            End If
-            If (p2.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(p2.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
-            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.InsertCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.InsertCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p1 As String, ByVal p2 As Global.System.Nullable(Of Integer), ByVal p3 As Integer) As Integer
-            If (p1 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(p1,String)
-            End If
-            If (p2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
-            End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(p3,Integer)
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
-            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.UpdateCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.UpdateCommand.Connection.Close
-                End If
-            End Try
         End Function
     End Class
     
@@ -1676,8 +1595,6 @@ Namespace skupina_vychovavatelDataSet1TableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
-        Private _skupinaTableAdapter As skupinaTableAdapter
-        
         Private _vychovavatelTableAdapter As vychovavatelTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
@@ -1691,19 +1608,6 @@ Namespace skupina_vychovavatelDataSet1TableAdapters
             End Get
             Set
                 Me._updateOrder = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
-            "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"& _ 
-            "", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property skupinaTableAdapter() As skupinaTableAdapter
-            Get
-                Return Me._skupinaTableAdapter
-            End Get
-            Set
-                Me._skupinaTableAdapter = value
             End Set
         End Property
         
@@ -1737,10 +1641,6 @@ Namespace skupina_vychovavatelDataSet1TableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
-                If ((Not (Me._skupinaTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._skupinaTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._skupinaTableAdapter.Connection
-                End If
                 If ((Not (Me._vychovavatelTableAdapter) Is Nothing)  _
                             AndAlso (Not (Me._vychovavatelTableAdapter.Connection) Is Nothing)) Then
                     Return Me._vychovavatelTableAdapter.Connection
@@ -1757,9 +1657,6 @@ Namespace skupina_vychovavatelDataSet1TableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
-                If (Not (Me._skupinaTableAdapter) Is Nothing) Then
-                    count = (count + 1)
-                End If
                 If (Not (Me._vychovavatelTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
@@ -1782,15 +1679,6 @@ Namespace skupina_vychovavatelDataSet1TableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._skupinaTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.skupina.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._skupinaTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
             Return result
         End Function
         
@@ -1808,14 +1696,6 @@ Namespace skupina_vychovavatelDataSet1TableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._skupinaTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.skupina.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._skupinaTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
             Return result
         End Function
         
@@ -1825,14 +1705,6 @@ Namespace skupina_vychovavatelDataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Function UpdateDeletedRows(ByVal dataSet As skupina_vychovavatelDataSet1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._skupinaTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.skupina.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
-                If ((Not (deletedRows) Is Nothing)  _
-                            AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._skupinaTableAdapter.Update(deletedRows))
-                    allChangedRows.AddRange(deletedRows)
-                End If
-            End If
             If (Not (Me._vychovavatelTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.vychovavatel.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
@@ -1880,11 +1752,6 @@ Namespace skupina_vychovavatelDataSet1TableAdapters
             If (dataSet.HasChanges = false) Then
                 Return 0
             End If
-            If ((Not (Me._skupinaTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._skupinaTableAdapter.Connection) = false)) Then
-                Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
-                        "tring.")
-            End If
             If ((Not (Me._vychovavatelTableAdapter) Is Nothing)  _
                         AndAlso (Me.MatchTableAdapterConnection(Me._vychovavatelTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
@@ -1922,15 +1789,6 @@ Namespace skupina_vychovavatelDataSet1TableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
-                If (Not (Me._skupinaTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._skupinaTableAdapter, Me._skupinaTableAdapter.Connection)
-                    Me._skupinaTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlServerCe.SqlCeConnection)
-                    Me._skupinaTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlServerCe.SqlCeTransaction)
-                    If Me._skupinaTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._skupinaTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._skupinaTableAdapter.Adapter)
-                    End If
-                End If
                 If (Not (Me._vychovavatelTableAdapter) Is Nothing) Then
                     revertConnections.Add(Me._vychovavatelTableAdapter, Me._vychovavatelTableAdapter.Connection)
                     Me._vychovavatelTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlServerCe.SqlCeConnection)
@@ -1999,10 +1857,6 @@ Namespace skupina_vychovavatelDataSet1TableAdapters
             Finally
                 If workConnOpened Then
                     workConnection.Close
-                End If
-                If (Not (Me._skupinaTableAdapter) Is Nothing) Then
-                    Me._skupinaTableAdapter.Connection = CType(revertConnections(Me._skupinaTableAdapter),Global.System.Data.SqlServerCe.SqlCeConnection)
-                    Me._skupinaTableAdapter.Transaction = Nothing
                 End If
                 If (Not (Me._vychovavatelTableAdapter) Is Nothing) Then
                     Me._vychovavatelTableAdapter.Connection = CType(revertConnections(Me._vychovavatelTableAdapter),Global.System.Data.SqlServerCe.SqlCeConnection)
