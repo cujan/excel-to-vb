@@ -32,8 +32,11 @@ Partial Class hlavna_aplikacia
         Me.nastavenia_button = New System.Windows.Forms.Button
         Me.nastavenia_label = New System.Windows.Forms.Label
         Me.tl_zostavy_splitter = New System.Windows.Forms.SplitContainer
-        Me.tl_zostavy_label = New System.Windows.Forms.Label
         Me.tl_zostavy_button = New System.Windows.Forms.Button
+        Me.tl_zostavy_label = New System.Windows.Forms.Label
+        Me.prehlad_ubytovanych_splitter = New System.Windows.Forms.SplitContainer
+        Me.prehlad_ubytovanych_label = New System.Windows.Forms.Label
+        Me.sprava_ubytovanych_button = New System.Windows.Forms.Button
         Me.StatusStrip.SuspendLayout()
         Me.hlavny_splitter.Panel1.SuspendLayout()
         Me.hlavny_splitter.SuspendLayout()
@@ -41,6 +44,8 @@ Partial Class hlavna_aplikacia
         Me.nastavenia_splitter.SuspendLayout()
         Me.tl_zostavy_splitter.Panel1.SuspendLayout()
         Me.tl_zostavy_splitter.SuspendLayout()
+        Me.prehlad_ubytovanych_splitter.Panel1.SuspendLayout()
+        Me.prehlad_ubytovanych_splitter.SuspendLayout()
         Me.SuspendLayout()
         '
         'StatusStrip
@@ -55,7 +60,7 @@ Partial Class hlavna_aplikacia
         'ToolStripStatusLabel
         '
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(38, 17)
+        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(37, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
         'hlavny_splitter
@@ -72,6 +77,7 @@ Partial Class hlavna_aplikacia
         Me.hlavny_splitter.Panel1.BackColor = System.Drawing.Color.RoyalBlue
         Me.hlavny_splitter.Panel1.Controls.Add(Me.nastavenia_splitter)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.tl_zostavy_splitter)
+        Me.hlavny_splitter.Panel1.Controls.Add(Me.prehlad_ubytovanych_splitter)
         '
         'hlavny_splitter.Panel2
         '
@@ -85,7 +91,7 @@ Partial Class hlavna_aplikacia
         '
         Me.nastavenia_splitter.BackColor = System.Drawing.Color.LightSteelBlue
         Me.nastavenia_splitter.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
-        Me.nastavenia_splitter.Location = New System.Drawing.Point(7, 134)
+        Me.nastavenia_splitter.Location = New System.Drawing.Point(8, 86)
         Me.nastavenia_splitter.Name = "nastavenia_splitter"
         Me.nastavenia_splitter.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -100,6 +106,7 @@ Partial Class hlavna_aplikacia
         Me.nastavenia_splitter.Panel2.BackColor = System.Drawing.Color.LightSteelBlue
         Me.nastavenia_splitter.Size = New System.Drawing.Size(140, 100)
         Me.nastavenia_splitter.SplitterDistance = 25
+        Me.nastavenia_splitter.SplitterWidth = 1
         Me.nastavenia_splitter.TabIndex = 0
         '
         'nastavenia_button
@@ -107,10 +114,10 @@ Partial Class hlavna_aplikacia
         Me.nastavenia_button.BackColor = System.Drawing.Color.CornflowerBlue
         Me.nastavenia_button.FlatAppearance.BorderSize = 0
         Me.nastavenia_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.nastavenia_button.Location = New System.Drawing.Point(110, 2)
+        Me.nastavenia_button.Location = New System.Drawing.Point(125, 1)
         Me.nastavenia_button.Margin = New System.Windows.Forms.Padding(0)
         Me.nastavenia_button.Name = "nastavenia_button"
-        Me.nastavenia_button.Size = New System.Drawing.Size(22, 22)
+        Me.nastavenia_button.Size = New System.Drawing.Size(14, 22)
         Me.nastavenia_button.TabIndex = 1
         Me.nastavenia_button.Text = "v"
         Me.nastavenia_button.UseVisualStyleBackColor = False
@@ -132,7 +139,7 @@ Partial Class hlavna_aplikacia
         '
         Me.tl_zostavy_splitter.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
         Me.tl_zostavy_splitter.IsSplitterFixed = True
-        Me.tl_zostavy_splitter.Location = New System.Drawing.Point(7, 103)
+        Me.tl_zostavy_splitter.Location = New System.Drawing.Point(7, 49)
         Me.tl_zostavy_splitter.Name = "tl_zostavy_splitter"
         Me.tl_zostavy_splitter.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -149,6 +156,18 @@ Partial Class hlavna_aplikacia
         Me.tl_zostavy_splitter.SplitterWidth = 1
         Me.tl_zostavy_splitter.TabIndex = 1
         '
+        'tl_zostavy_button
+        '
+        Me.tl_zostavy_button.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.tl_zostavy_button.FlatAppearance.BorderSize = 0
+        Me.tl_zostavy_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.tl_zostavy_button.Location = New System.Drawing.Point(124, 2)
+        Me.tl_zostavy_button.Name = "tl_zostavy_button"
+        Me.tl_zostavy_button.Size = New System.Drawing.Size(14, 22)
+        Me.tl_zostavy_button.TabIndex = 1
+        Me.tl_zostavy_button.Text = "v"
+        Me.tl_zostavy_button.UseVisualStyleBackColor = False
+        '
         'tl_zostavy_label
         '
         Me.tl_zostavy_label.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -159,20 +178,51 @@ Partial Class hlavna_aplikacia
         Me.tl_zostavy_label.Name = "tl_zostavy_label"
         Me.tl_zostavy_label.Size = New System.Drawing.Size(140, 25)
         Me.tl_zostavy_label.TabIndex = 0
-        Me.tl_zostavy_label.Text = "Tl. zostavy"
+        Me.tl_zostavy_label.Text = "Tlačové zostavy"
         Me.tl_zostavy_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'tl_zostavy_button
+        'prehlad_ubytovanych_splitter
         '
-        Me.tl_zostavy_button.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.tl_zostavy_button.FlatAppearance.BorderSize = 0
-        Me.tl_zostavy_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.tl_zostavy_button.Location = New System.Drawing.Point(109, 2)
-        Me.tl_zostavy_button.Name = "tl_zostavy_button"
-        Me.tl_zostavy_button.Size = New System.Drawing.Size(22, 22)
-        Me.tl_zostavy_button.TabIndex = 1
-        Me.tl_zostavy_button.Text = "v"
-        Me.tl_zostavy_button.UseVisualStyleBackColor = False
+        Me.prehlad_ubytovanych_splitter.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.prehlad_ubytovanych_splitter.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.prehlad_ubytovanych_splitter.Location = New System.Drawing.Point(7, 12)
+        Me.prehlad_ubytovanych_splitter.Name = "prehlad_ubytovanych_splitter"
+        Me.prehlad_ubytovanych_splitter.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'prehlad_ubytovanych_splitter.Panel1
+        '
+        Me.prehlad_ubytovanych_splitter.Panel1.BackColor = System.Drawing.Color.RoyalBlue
+        Me.prehlad_ubytovanych_splitter.Panel1.Controls.Add(Me.sprava_ubytovanych_button)
+        Me.prehlad_ubytovanych_splitter.Panel1.Controls.Add(Me.prehlad_ubytovanych_label)
+        Me.prehlad_ubytovanych_splitter.Size = New System.Drawing.Size(140, 100)
+        Me.prehlad_ubytovanych_splitter.SplitterDistance = 25
+        Me.prehlad_ubytovanych_splitter.SplitterWidth = 1
+        Me.prehlad_ubytovanych_splitter.TabIndex = 2
+        '
+        'prehlad_ubytovanych_label
+        '
+        Me.prehlad_ubytovanych_label.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.prehlad_ubytovanych_label.BackColor = System.Drawing.Color.MediumBlue
+        Me.prehlad_ubytovanych_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.prehlad_ubytovanych_label.ForeColor = System.Drawing.Color.White
+        Me.prehlad_ubytovanych_label.Location = New System.Drawing.Point(0, 0)
+        Me.prehlad_ubytovanych_label.Name = "prehlad_ubytovanych_label"
+        Me.prehlad_ubytovanych_label.Size = New System.Drawing.Size(139, 25)
+        Me.prehlad_ubytovanych_label.TabIndex = 0
+        Me.prehlad_ubytovanych_label.Text = "Správa ubytovaných"
+        Me.prehlad_ubytovanych_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'sprava_ubytovanych_button
+        '
+        Me.sprava_ubytovanych_button.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.sprava_ubytovanych_button.FlatAppearance.BorderSize = 0
+        Me.sprava_ubytovanych_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.sprava_ubytovanych_button.Location = New System.Drawing.Point(124, 1)
+        Me.sprava_ubytovanych_button.Name = "sprava_ubytovanych_button"
+        Me.sprava_ubytovanych_button.Size = New System.Drawing.Size(14, 22)
+        Me.sprava_ubytovanych_button.TabIndex = 2
+        Me.sprava_ubytovanych_button.Text = "v"
+        Me.sprava_ubytovanych_button.UseVisualStyleBackColor = False
         '
         'hlavna_aplikacia
         '
@@ -192,6 +242,8 @@ Partial Class hlavna_aplikacia
         Me.nastavenia_splitter.ResumeLayout(False)
         Me.tl_zostavy_splitter.Panel1.ResumeLayout(False)
         Me.tl_zostavy_splitter.ResumeLayout(False)
+        Me.prehlad_ubytovanych_splitter.Panel1.ResumeLayout(False)
+        Me.prehlad_ubytovanych_splitter.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -206,5 +258,8 @@ Partial Class hlavna_aplikacia
     Friend WithEvents tl_zostavy_splitter As System.Windows.Forms.SplitContainer
     Friend WithEvents tl_zostavy_label As System.Windows.Forms.Label
     Friend WithEvents tl_zostavy_button As System.Windows.Forms.Button
+    Friend WithEvents prehlad_ubytovanych_splitter As System.Windows.Forms.SplitContainer
+    Friend WithEvents prehlad_ubytovanych_label As System.Windows.Forms.Label
+    Friend WithEvents sprava_ubytovanych_button As System.Windows.Forms.Button
 
 End Class

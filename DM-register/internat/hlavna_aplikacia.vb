@@ -21,7 +21,7 @@ Public Class hlavna_aplikacia
         If tl_zostavy_button.Text = "v" Then
             tl_zostavy_button.Text = "^"
             tl_zostavy_splitter.Panel2Collapsed = False
-            tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 165
+            tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 110
             tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
             nastavenia_splitter.Location = tl_zostavy_splitter_position
 
@@ -34,5 +34,48 @@ Public Class hlavna_aplikacia
             nastavenia_splitter.Location = tl_zostavy_splitter_position
 
         End If
+    End Sub
+
+    Private Sub sprava_ubytovanych_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sprava_ubytovanych_button.Click
+        Dim prehlad_ubytovanych_splitter_position As New System.Drawing.Point
+        Dim tl_zostavy_splitter_position As New System.Drawing.Point
+        If sprava_ubytovanych_button.Text = "v" Then
+            sprava_ubytovanych_button.Text = "^"
+            prehlad_ubytovanych_splitter.Panel2Collapsed = False
+            prehlad_ubytovanych_splitter_position.Y = prehlad_ubytovanych_splitter.Location.Y + 110
+            prehlad_ubytovanych_splitter_position.X = prehlad_ubytovanych_splitter.Location.X
+            tl_zostavy_splitter.Location = prehlad_ubytovanych_splitter_position
+
+            If tl_zostavy_splitter.Panel2Collapsed = False Then
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 110
+
+            Else
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 34
+
+            End If
+            tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
+            nastavenia_splitter.Location = tl_zostavy_splitter_position
+
+        Else
+            sprava_ubytovanych_button.Text = "v"
+            prehlad_ubytovanych_splitter.Panel2Collapsed = True
+
+            prehlad_ubytovanych_splitter_position.Y = prehlad_ubytovanych_splitter.Location.Y + 34
+            prehlad_ubytovanych_splitter_position.X = prehlad_ubytovanych_splitter.Location.X
+            tl_zostavy_splitter.Location = prehlad_ubytovanych_splitter_position
+
+            If tl_zostavy_splitter.Panel2Collapsed = False Then
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 110
+
+            Else
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 34
+
+            End If
+            tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
+            nastavenia_splitter.Location = tl_zostavy_splitter_position
+
+        End If
+
+
     End Sub
 End Class
