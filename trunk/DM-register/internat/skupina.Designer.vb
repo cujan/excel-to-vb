@@ -49,11 +49,12 @@ Partial Class skupina
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.SkupinaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.SkupinaDataGridView = New System.Windows.Forms.DataGridView
-        Me.VychovavatelTableAdapter = New internat.vychovavatelDataSetTableAdapters.vychovavatelTableAdapter
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.priezvisko = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.VychovavatelTableAdapter = New internat.vychovavatelDataSetTableAdapters.vychovavatelTableAdapter
+        Me.zavriet_podkartu = New System.Windows.Forms.Button
         CType(Me.VychovavatelBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VychovavatelDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Skupina_vychovavatelDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -170,7 +171,7 @@ Partial Class skupina
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -262,10 +263,6 @@ Partial Class skupina
         Me.SkupinaDataGridView.Size = New System.Drawing.Size(483, 220)
         Me.SkupinaDataGridView.TabIndex = 7
         '
-        'VychovavatelTableAdapter
-        '
-        Me.VychovavatelTableAdapter.ClearBeforeFill = True
-        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
@@ -292,11 +289,25 @@ Partial Class skupina
         Me.priezvisko.Name = "priezvisko"
         Me.priezvisko.ReadOnly = True
         '
+        'VychovavatelTableAdapter
+        '
+        Me.VychovavatelTableAdapter.ClearBeforeFill = True
+        '
+        'zavriet_podkartu
+        '
+        Me.zavriet_podkartu.Location = New System.Drawing.Point(313, 115)
+        Me.zavriet_podkartu.Name = "zavriet_podkartu"
+        Me.zavriet_podkartu.Size = New System.Drawing.Size(109, 23)
+        Me.zavriet_podkartu.TabIndex = 8
+        Me.zavriet_podkartu.Text = "Zavrieť podkartu"
+        Me.zavriet_podkartu.UseVisualStyleBackColor = True
+        '
         'skupina
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(525, 420)
+        Me.Controls.Add(Me.zavriet_podkartu)
         Me.Controls.Add(Me.SkupinaDataGridView)
         Me.Controls.Add(Me.SkupinaBindingNavigator)
         Me.Controls.Add(Me.Label2)
@@ -304,6 +315,7 @@ Partial Class skupina
         Me.Controls.Add(Me.vychovavatelComboBox1)
         Me.Controls.Add(Me.nazovTextBox)
         Me.Controls.Add(Me.Button1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "skupina"
         Me.Text = "skupina"
         CType(Me.VychovavatelBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -348,4 +360,5 @@ Partial Class skupina
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents priezvisko As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents zavriet_podkartu As System.Windows.Forms.Button
 End Class
