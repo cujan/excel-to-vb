@@ -26,6 +26,8 @@ Partial Class vychovavatel
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(vychovavatel))
         Me.VychovavatelBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.VychovavatelBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VychovavatelDataSet = New internat.vychovavatelDataSet
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
@@ -37,35 +39,34 @@ Partial Class vychovavatel
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.VychovavatelBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.VychovavatelDataGridView = New System.Windows.Forms.DataGridView
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.menoTextBox = New System.Windows.Forms.TextBox
         Me.priezviskoTextBox = New System.Windows.Forms.TextBox
         Me.poznamkaTextBox = New System.Windows.Forms.TextBox
         Me.Label3 = New System.Windows.Forms.Label
-        Me.titul = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Label4 = New System.Windows.Forms.Label
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.VychovavatelBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VychovavatelDataSet = New internat.vychovavatelDataSet
         Me.VychovavatelTableAdapter = New internat.vychovavatelDataSetTableAdapters.vychovavatelTableAdapter
         Me.TableAdapterManager = New internat.vychovavatelDataSetTableAdapters.TableAdapterManager
         Me.Button1 = New System.Windows.Forms.Button
         Me.titul_predComboBox = New System.Windows.Forms.ComboBox
-        Me.Titul_predDataSet = New internat.titul_predDataSet
         Me.TitulpredBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Titul_predDataSet = New internat.titul_predDataSet
         Me.Titul_predTableAdapter = New internat.titul_predDataSetTableAdapters.titul_predTableAdapter
+        Me.VychovavatelDataGridView = New System.Windows.Forms.DataGridView
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.VychovavatelBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.VychovavatelBindingNavigator.SuspendLayout()
-        CType(Me.VychovavatelDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VychovavatelBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VychovavatelDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Titul_predDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulpredBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Titul_predDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VychovavatelDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'VychovavatelBindingNavigator
@@ -94,6 +95,16 @@ Partial Class vychovavatel
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'VychovavatelBindingSource
+        '
+        Me.VychovavatelBindingSource.DataMember = "vychovavatel"
+        Me.VychovavatelBindingSource.DataSource = Me.VychovavatelDataSet
+        '
+        'VychovavatelDataSet
+        '
+        Me.VychovavatelDataSet.DataSetName = "vychovavatelDataSet"
+        Me.VychovavatelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -179,17 +190,6 @@ Partial Class vychovavatel
         Me.VychovavatelBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.VychovavatelBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'VychovavatelDataGridView
-        '
-        Me.VychovavatelDataGridView.AutoGenerateColumns = False
-        Me.VychovavatelDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.VychovavatelDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.titul, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
-        Me.VychovavatelDataGridView.DataSource = Me.VychovavatelBindingSource
-        Me.VychovavatelDataGridView.Location = New System.Drawing.Point(37, 163)
-        Me.VychovavatelDataGridView.Name = "VychovavatelDataGridView"
-        Me.VychovavatelDataGridView.Size = New System.Drawing.Size(520, 220)
-        Me.VychovavatelDataGridView.TabIndex = 1
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -239,12 +239,6 @@ Partial Class vychovavatel
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "poznamka"
         '
-        'titul
-        '
-        Me.titul.DataPropertyName = "titul"
-        Me.titul.HeaderText = "titul"
-        Me.titul.Name = "titul"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -254,41 +248,6 @@ Partial Class vychovavatel
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Titul"
         '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "id"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "priezvisko"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "priezvisko"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "meno"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "meno"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "poznamka"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "poznamka"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'VychovavatelBindingSource
-        '
-        Me.VychovavatelBindingSource.DataMember = "vychovavatel"
-        Me.VychovavatelBindingSource.DataSource = Me.VychovavatelDataSet
-        '
-        'VychovavatelDataSet
-        '
-        Me.VychovavatelDataSet.DataSetName = "vychovavatelDataSet"
-        Me.VychovavatelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'VychovavatelTableAdapter
         '
         Me.VychovavatelTableAdapter.ClearBeforeFill = True
@@ -296,8 +255,9 @@ Partial Class vychovavatel
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.titul_predTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = internat.vychovavatelDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.vychovavatelTableAdapter = Me.VychovavatelTableAdapter
         '
         'Button1
         '
@@ -320,25 +280,76 @@ Partial Class vychovavatel
         Me.titul_predComboBox.TabIndex = 11
         Me.titul_predComboBox.ValueMember = "id"
         '
-        'Titul_predDataSet
-        '
-        Me.Titul_predDataSet.DataSetName = "titul_predDataSet"
-        Me.Titul_predDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'TitulpredBindingSource
         '
         Me.TitulpredBindingSource.DataMember = "titul_pred"
         Me.TitulpredBindingSource.DataSource = Me.Titul_predDataSet
         '
+        'Titul_predDataSet
+        '
+        Me.Titul_predDataSet.DataSetName = "titul_predDataSet"
+        Me.Titul_predDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Titul_predTableAdapter
         '
         Me.Titul_predTableAdapter.ClearBeforeFill = True
+        '
+        'VychovavatelDataGridView
+        '
+        Me.VychovavatelDataGridView.AutoGenerateColumns = False
+        Me.VychovavatelDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.VychovavatelDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.VychovavatelDataGridView.DataSource = Me.VychovavatelBindingSource
+        Me.VychovavatelDataGridView.Location = New System.Drawing.Point(12, 197)
+        Me.VychovavatelDataGridView.Name = "VychovavatelDataGridView"
+        Me.VychovavatelDataGridView.Size = New System.Drawing.Size(625, 250)
+        Me.VychovavatelDataGridView.TabIndex = 11
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "id"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "titul1"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "titul1"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "skratka"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "skratka"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "priezvisko"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "priezvisko"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "meno"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "meno"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "poznamka"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "poznamka"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
         'vychovavatel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(649, 407)
+        Me.ClientSize = New System.Drawing.Size(649, 475)
+        Me.Controls.Add(Me.VychovavatelDataGridView)
         Me.Controls.Add(Me.titul_predComboBox)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label4)
@@ -348,18 +359,17 @@ Partial Class vychovavatel
         Me.Controls.Add(Me.menoTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.VychovavatelDataGridView)
         Me.Controls.Add(Me.VychovavatelBindingNavigator)
         Me.Name = "vychovavatel"
         Me.Text = "vychovavatel"
         CType(Me.VychovavatelBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.VychovavatelBindingNavigator.ResumeLayout(False)
         Me.VychovavatelBindingNavigator.PerformLayout()
-        CType(Me.VychovavatelDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VychovavatelBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VychovavatelDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Titul_predDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TitulpredBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Titul_predDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VychovavatelDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -381,22 +391,23 @@ Partial Class vychovavatel
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents VychovavatelBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents VychovavatelDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents menoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents priezviskoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents poznamkaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents titul As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents titul_predComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents Titul_predDataSet As internat.titul_predDataSet
     Friend WithEvents TitulpredBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Titul_predTableAdapter As internat.titul_predDataSetTableAdapters.titul_predTableAdapter
+    Friend WithEvents VychovavatelDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
