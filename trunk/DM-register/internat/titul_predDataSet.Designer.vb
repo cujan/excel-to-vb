@@ -21,12 +21,12 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("vychovavatelDataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("titul_predDataSet"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class vychovavatelDataSet
+Partial Public Class titul_predDataSet
     Inherits Global.System.Data.DataSet
     
-    Private tablevychovavatel As vychovavatelDataTable
+    Private tabletitul_pred As titul_predDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -55,8 +55,8 @@ Partial Public Class vychovavatelDataSet
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("vychovavatel")) Is Nothing) Then
-                MyBase.Tables.Add(New vychovavatelDataTable(ds.Tables("vychovavatel")))
+            If (Not (ds.Tables("titul_pred")) Is Nothing) Then
+                MyBase.Tables.Add(New titul_predDataTable(ds.Tables("titul_pred")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -78,9 +78,9 @@ Partial Public Class vychovavatelDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property vychovavatel() As vychovavatelDataTable
+    Public ReadOnly Property titul_pred() As titul_predDataTable
         Get
-            Return Me.tablevychovavatel
+            Return Me.tabletitul_pred
         End Get
     End Property
     
@@ -121,7 +121,7 @@ Partial Public Class vychovavatelDataSet
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As vychovavatelDataSet = CType(MyBase.Clone,vychovavatelDataSet)
+        Dim cln As titul_predDataSet = CType(MyBase.Clone,titul_predDataSet)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -143,8 +143,8 @@ Partial Public Class vychovavatelDataSet
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet
             ds.ReadXml(reader)
-            If (Not (ds.Tables("vychovavatel")) Is Nothing) Then
-                MyBase.Tables.Add(New vychovavatelDataTable(ds.Tables("vychovavatel")))
+            If (Not (ds.Tables("titul_pred")) Is Nothing) Then
+                MyBase.Tables.Add(New titul_predDataTable(ds.Tables("titul_pred")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -175,27 +175,27 @@ Partial Public Class vychovavatelDataSet
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tablevychovavatel = CType(MyBase.Tables("vychovavatel"),vychovavatelDataTable)
+        Me.tabletitul_pred = CType(MyBase.Tables("titul_pred"),titul_predDataTable)
         If (initTable = true) Then
-            If (Not (Me.tablevychovavatel) Is Nothing) Then
-                Me.tablevychovavatel.InitVars
+            If (Not (Me.tabletitul_pred) Is Nothing) Then
+                Me.tabletitul_pred.InitVars
             End If
         End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
     Private Sub InitClass()
-        Me.DataSetName = "vychovavatelDataSet"
+        Me.DataSetName = "titul_predDataSet"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/vychovavatelDataSet.xsd"
+        Me.Namespace = "http://tempuri.org/titul_predDataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tablevychovavatel = New vychovavatelDataTable
-        MyBase.Tables.Add(Me.tablevychovavatel)
+        Me.tabletitul_pred = New titul_predDataTable
+        MyBase.Tables.Add(Me.tabletitul_pred)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-    Private Function ShouldSerializevychovavatel() As Boolean
+    Private Function ShouldSerializetitul_pred() As Boolean
         Return false
     End Function
     
@@ -208,7 +208,7 @@ Partial Public Class vychovavatelDataSet
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As vychovavatelDataSet = New vychovavatelDataSet
+        Dim ds As titul_predDataSet = New titul_predDataSet
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny
@@ -255,7 +255,7 @@ Partial Public Class vychovavatelDataSet
         Return type
     End Function
     
-    Public Delegate Sub vychovavatelRowChangeEventHandler(ByVal sender As Object, ByVal e As vychovavatelRowChangeEvent)
+    Public Delegate Sub titul_predRowChangeEventHandler(ByVal sender As Object, ByVal e As titul_predRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -263,23 +263,19 @@ Partial Public Class vychovavatelDataSet
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0"),  _
      Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class vychovavatelDataTable
-        Inherits Global.System.Data.TypedTableBase(Of vychovavatelRow)
+    Partial Public Class titul_predDataTable
+        Inherits Global.System.Data.TypedTableBase(Of titul_predRow)
         
         Private columnid As Global.System.Data.DataColumn
         
-        Private columnpriezvisko As Global.System.Data.DataColumn
+        Private columnskratka As Global.System.Data.DataColumn
         
-        Private columnmeno As Global.System.Data.DataColumn
-        
-        Private columnpoznamka As Global.System.Data.DataColumn
-        
-        Private columntitul As Global.System.Data.DataColumn
+        Private columnnazov As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "vychovavatel"
+            Me.TableName = "titul_pred"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -316,30 +312,16 @@ Partial Public Class vychovavatelDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property priezviskoColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property skratkaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnpriezvisko
+                Return Me.columnskratka
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property menoColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property nazovColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnmeno
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property poznamkaColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnpoznamka
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property titulColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columntitul
+                Return Me.columnnazov
             End Get
         End Property
         
@@ -352,72 +334,66 @@ Partial Public Class vychovavatelDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As vychovavatelRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As titul_predRow
             Get
-                Return CType(Me.Rows(index),vychovavatelRow)
+                Return CType(Me.Rows(index),titul_predRow)
             End Get
         End Property
         
-        Public Event vychovavatelRowChanging As vychovavatelRowChangeEventHandler
+        Public Event titul_predRowChanging As titul_predRowChangeEventHandler
         
-        Public Event vychovavatelRowChanged As vychovavatelRowChangeEventHandler
+        Public Event titul_predRowChanged As titul_predRowChangeEventHandler
         
-        Public Event vychovavatelRowDeleting As vychovavatelRowChangeEventHandler
+        Public Event titul_predRowDeleting As titul_predRowChangeEventHandler
         
-        Public Event vychovavatelRowDeleted As vychovavatelRowChangeEventHandler
+        Public Event titul_predRowDeleted As titul_predRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overloads Sub AddvychovavatelRow(ByVal row As vychovavatelRow)
+        Public Overloads Sub Addtitul_predRow(ByVal row As titul_predRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overloads Function AddvychovavatelRow(ByVal priezvisko As String, ByVal meno As String, ByVal poznamka As String, ByVal titul As String) As vychovavatelRow
-            Dim rowvychovavatelRow As vychovavatelRow = CType(Me.NewRow,vychovavatelRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, priezvisko, meno, poznamka, titul}
-            rowvychovavatelRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowvychovavatelRow)
-            Return rowvychovavatelRow
+        Public Overloads Function Addtitul_predRow(ByVal skratka As String, ByVal nazov As String) As titul_predRow
+            Dim rowtitul_predRow As titul_predRow = CType(Me.NewRow,titul_predRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, skratka, nazov}
+            rowtitul_predRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowtitul_predRow)
+            Return rowtitul_predRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function FindByid(ByVal id As Integer) As vychovavatelRow
-            Return CType(Me.Rows.Find(New Object() {id}),vychovavatelRow)
+        Public Function FindByid(ByVal id As Integer) As titul_predRow
+            Return CType(Me.Rows.Find(New Object() {id}),titul_predRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As vychovavatelDataTable = CType(MyBase.Clone,vychovavatelDataTable)
+            Dim cln As titul_predDataTable = CType(MyBase.Clone,titul_predDataTable)
             cln.InitVars
             Return cln
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New vychovavatelDataTable
+            Return New titul_predDataTable
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Friend Sub InitVars()
             Me.columnid = MyBase.Columns("id")
-            Me.columnpriezvisko = MyBase.Columns("priezvisko")
-            Me.columnmeno = MyBase.Columns("meno")
-            Me.columnpoznamka = MyBase.Columns("poznamka")
-            Me.columntitul = MyBase.Columns("titul")
+            Me.columnskratka = MyBase.Columns("skratka")
+            Me.columnnazov = MyBase.Columns("nazov")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitClass()
             Me.columnid = New Global.System.Data.DataColumn("id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid)
-            Me.columnpriezvisko = New Global.System.Data.DataColumn("priezvisko", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnpriezvisko)
-            Me.columnmeno = New Global.System.Data.DataColumn("meno", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnmeno)
-            Me.columnpoznamka = New Global.System.Data.DataColumn("poznamka", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnpoznamka)
-            Me.columntitul = New Global.System.Data.DataColumn("titul", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columntitul)
+            Me.columnskratka = New Global.System.Data.DataColumn("skratka", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnskratka)
+            Me.columnnazov = New Global.System.Data.DataColumn("nazov", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnazov)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
             Me.columnid.AutoIncrement = true
             Me.columnid.AutoIncrementSeed = -1
@@ -425,61 +401,59 @@ Partial Public Class vychovavatelDataSet
             Me.columnid.AllowDBNull = false
             Me.columnid.ReadOnly = true
             Me.columnid.Unique = true
-            Me.columnpriezvisko.MaxLength = 100
-            Me.columnmeno.MaxLength = 100
-            Me.columnpoznamka.MaxLength = 100
-            Me.columntitul.MaxLength = 100
+            Me.columnskratka.MaxLength = 100
+            Me.columnnazov.MaxLength = 100
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function NewvychovavatelRow() As vychovavatelRow
-            Return CType(Me.NewRow,vychovavatelRow)
+        Public Function Newtitul_predRow() As titul_predRow
+            Return CType(Me.NewRow,titul_predRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New vychovavatelRow(builder)
+            Return New titul_predRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(vychovavatelRow)
+            Return GetType(titul_predRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.vychovavatelRowChangedEvent) Is Nothing) Then
-                RaiseEvent vychovavatelRowChanged(Me, New vychovavatelRowChangeEvent(CType(e.Row,vychovavatelRow), e.Action))
+            If (Not (Me.titul_predRowChangedEvent) Is Nothing) Then
+                RaiseEvent titul_predRowChanged(Me, New titul_predRowChangeEvent(CType(e.Row,titul_predRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.vychovavatelRowChangingEvent) Is Nothing) Then
-                RaiseEvent vychovavatelRowChanging(Me, New vychovavatelRowChangeEvent(CType(e.Row,vychovavatelRow), e.Action))
+            If (Not (Me.titul_predRowChangingEvent) Is Nothing) Then
+                RaiseEvent titul_predRowChanging(Me, New titul_predRowChangeEvent(CType(e.Row,titul_predRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.vychovavatelRowDeletedEvent) Is Nothing) Then
-                RaiseEvent vychovavatelRowDeleted(Me, New vychovavatelRowChangeEvent(CType(e.Row,vychovavatelRow), e.Action))
+            If (Not (Me.titul_predRowDeletedEvent) Is Nothing) Then
+                RaiseEvent titul_predRowDeleted(Me, New titul_predRowChangeEvent(CType(e.Row,titul_predRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.vychovavatelRowDeletingEvent) Is Nothing) Then
-                RaiseEvent vychovavatelRowDeleting(Me, New vychovavatelRowChangeEvent(CType(e.Row,vychovavatelRow), e.Action))
+            If (Not (Me.titul_predRowDeletingEvent) Is Nothing) Then
+                RaiseEvent titul_predRowDeleting(Me, New titul_predRowChangeEvent(CType(e.Row,titul_predRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub RemovevychovavatelRow(ByVal row As vychovavatelRow)
+        Public Sub Removetitul_predRow(ByVal row As titul_predRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -487,7 +461,7 @@ Partial Public Class vychovavatelDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence
-            Dim ds As vychovavatelDataSet = New vychovavatelDataSet
+            Dim ds As titul_predDataSet = New titul_predDataSet
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -505,7 +479,7 @@ Partial Public Class vychovavatelDataSet
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "vychovavatelDataTable"
+            attribute2.FixedValue = "titul_predDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -553,121 +527,73 @@ Partial Public Class vychovavatelDataSet
     '''Represents strongly named DataRow class.
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")>  _
-    Partial Public Class vychovavatelRow
+    Partial Public Class titul_predRow
         Inherits Global.System.Data.DataRow
         
-        Private tablevychovavatel As vychovavatelDataTable
+        Private tabletitul_pred As titul_predDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tablevychovavatel = CType(Me.Table,vychovavatelDataTable)
+            Me.tabletitul_pred = CType(Me.Table,titul_predDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Property id() As Integer
             Get
-                Return CType(Me(Me.tablevychovavatel.idColumn),Integer)
+                Return CType(Me(Me.tabletitul_pred.idColumn),Integer)
             End Get
             Set
-                Me(Me.tablevychovavatel.idColumn) = value
+                Me(Me.tabletitul_pred.idColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property priezvisko() As String
+        Public Property skratka() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablevychovavatel.priezviskoColumn),String)
+                    Return CType(Me(Me.tabletitul_pred.skratkaColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'priezvisko' in table 'vychovavatel' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'skratka' in table 'titul_pred' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablevychovavatel.priezviskoColumn) = value
+                Me(Me.tabletitul_pred.skratkaColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property meno() As String
+        Public Property nazov() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablevychovavatel.menoColumn),String)
+                    Return CType(Me(Me.tabletitul_pred.nazovColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'meno' in table 'vychovavatel' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'nazov' in table 'titul_pred' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablevychovavatel.menoColumn) = value
+                Me(Me.tabletitul_pred.nazovColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property poznamka() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevychovavatel.poznamkaColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'poznamka' in table 'vychovavatel' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevychovavatel.poznamkaColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property titul() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevychovavatel.titulColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'titul' in table 'vychovavatel' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevychovavatel.titulColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function IspriezviskoNull() As Boolean
-            Return Me.IsNull(Me.tablevychovavatel.priezviskoColumn)
+        Public Function IsskratkaNull() As Boolean
+            Return Me.IsNull(Me.tabletitul_pred.skratkaColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub SetpriezviskoNull()
-            Me(Me.tablevychovavatel.priezviskoColumn) = Global.System.Convert.DBNull
+        Public Sub SetskratkaNull()
+            Me(Me.tabletitul_pred.skratkaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function IsmenoNull() As Boolean
-            Return Me.IsNull(Me.tablevychovavatel.menoColumn)
+        Public Function IsnazovNull() As Boolean
+            Return Me.IsNull(Me.tabletitul_pred.nazovColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub SetmenoNull()
-            Me(Me.tablevychovavatel.menoColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function IspoznamkaNull() As Boolean
-            Return Me.IsNull(Me.tablevychovavatel.poznamkaColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub SetpoznamkaNull()
-            Me(Me.tablevychovavatel.poznamkaColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function IstitulNull() As Boolean
-            Return Me.IsNull(Me.tablevychovavatel.titulColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub SettitulNull()
-            Me(Me.tablevychovavatel.titulColumn) = Global.System.Convert.DBNull
+        Public Sub SetnazovNull()
+            Me(Me.tabletitul_pred.nazovColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -675,22 +601,22 @@ Partial Public Class vychovavatelDataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")>  _
-    Public Class vychovavatelRowChangeEvent
+    Public Class titul_predRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As vychovavatelRow
+        Private eventRow As titul_predRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub New(ByVal row As vychovavatelRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As titul_predRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property Row() As vychovavatelRow
+        Public ReadOnly Property Row() As titul_predRow
             Get
                 Return Me.eventRow
             End Get
@@ -705,7 +631,7 @@ Partial Public Class vychovavatelDataSet
     End Class
 End Class
 
-Namespace vychovavatelDataSetTableAdapters
+Namespace titul_predDataSetTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -717,7 +643,7 @@ Namespace vychovavatelDataSetTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class vychovavatelTableAdapter
+    Partial Public Class titul_predTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.SqlServerCe.SqlCeDataAdapter
@@ -827,37 +753,29 @@ Namespace vychovavatelDataSetTableAdapters
             Me._adapter = New Global.System.Data.SqlServerCe.SqlCeDataAdapter
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "vychovavatel"
+            tableMapping.DataSetTable = "titul_pred"
             tableMapping.ColumnMappings.Add("id", "id")
-            tableMapping.ColumnMappings.Add("priezvisko", "priezvisko")
-            tableMapping.ColumnMappings.Add("meno", "meno")
-            tableMapping.ColumnMappings.Add("poznamka", "poznamka")
-            tableMapping.ColumnMappings.Add("titul", "titul")
+            tableMapping.ColumnMappings.Add("skratka", "skratka")
+            tableMapping.ColumnMappings.Add("nazov", "nazov")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [vychovavatel] WHERE (([id] = @p1))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [titul_pred] WHERE (([id] = @p1))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [vychovavatel] ([priezvisko], [meno], [poznamka], [titul]) VALUES (@p"& _ 
-                "1, @p2, @p3, @p4)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [titul_pred] ([skratka], [nazov]) VALUES (@p1, @p2)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "priezvisko", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "meno", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "poznamka", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "titul", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "skratka", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "nazov", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [vychovavatel] SET [priezvisko] = @p1, [meno] = @p2, [poznamka] = @p3, [ti"& _ 
-                "tul] = @p4 WHERE (([id] = @p5))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [titul_pred] SET [skratka] = @p1, [nazov] = @p2 WHERE (([id] = @p3))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "priezvisko", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "meno", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "poznamka", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "titul", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p5", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "skratka", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "nazov", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -871,14 +789,14 @@ Namespace vychovavatelDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT id, priezvisko, meno, poznamka, titul FROM vychovavatel"
+            Me._commandCollection(0).CommandText = "SELECT [id], [skratka], [nazov] FROM [titul_pred]"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As vychovavatelDataSet.vychovavatelDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As titul_predDataSet.titul_predDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -890,23 +808,23 @@ Namespace vychovavatelDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As vychovavatelDataSet.vychovavatelDataTable
+        Public Overloads Overridable Function GetData() As titul_predDataSet.titul_predDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As vychovavatelDataSet.vychovavatelDataTable = New vychovavatelDataSet.vychovavatelDataTable
+            Dim dataTable As titul_predDataSet.titul_predDataTable = New titul_predDataSet.titul_predDataTable
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As vychovavatelDataSet.vychovavatelDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As titul_predDataSet.titul_predDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As vychovavatelDataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "vychovavatel")
+        Public Overloads Overridable Function Update(ByVal dataSet As titul_predDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "titul_pred")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -944,7 +862,7 @@ Namespace vychovavatelDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal p1 As String, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal p1 As String, ByVal p2 As String) As Integer
             If (p1 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -954,16 +872,6 @@ Namespace vychovavatelDataSetTableAdapters
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(p2,String)
-            End If
-            If (p3 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(p3,String)
-            End If
-            If (p4 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(p4,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -983,7 +891,7 @@ Namespace vychovavatelDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p1 As String, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal p1 As String, ByVal p2 As String, ByVal p3 As Integer) As Integer
             If (p1 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -994,17 +902,7 @@ Namespace vychovavatelDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2,String)
             End If
-            If (p3 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(p3,String)
-            End If
-            If (p4 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(p4,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(p5,Integer)
+            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(p3,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -1035,7 +933,7 @@ Namespace vychovavatelDataSetTableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
-        Private _vychovavatelTableAdapter As vychovavatelTableAdapter
+        Private _titul_predTableAdapter As titul_predTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -1055,12 +953,12 @@ Namespace vychovavatelDataSetTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"& _ 
             "", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property vychovavatelTableAdapter() As vychovavatelTableAdapter
+        Public Property titul_predTableAdapter() As titul_predTableAdapter
             Get
-                Return Me._vychovavatelTableAdapter
+                Return Me._titul_predTableAdapter
             End Get
             Set
-                Me._vychovavatelTableAdapter = value
+                Me._titul_predTableAdapter = value
             End Set
         End Property
         
@@ -1081,9 +979,9 @@ Namespace vychovavatelDataSetTableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
-                If ((Not (Me._vychovavatelTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._vychovavatelTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._vychovavatelTableAdapter.Connection
+                If ((Not (Me._titul_predTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._titul_predTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._titul_predTableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -1097,7 +995,7 @@ Namespace vychovavatelDataSetTableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
-                If (Not (Me._vychovavatelTableAdapter) Is Nothing) Then
+                If (Not (Me._titul_predTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -1108,14 +1006,14 @@ Namespace vychovavatelDataSetTableAdapters
         '''Update rows in top-down order.
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As vychovavatelDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As titul_predDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._vychovavatelTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.vychovavatel.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._titul_predTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.titul_pred.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._vychovavatelTableAdapter.Update(updatedRows))
+                    result = (result + Me._titul_predTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -1126,13 +1024,13 @@ Namespace vychovavatelDataSetTableAdapters
         '''Insert rows in top-down order.
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As vychovavatelDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As titul_predDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._vychovavatelTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.vychovavatel.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._titul_predTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.titul_pred.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._vychovavatelTableAdapter.Update(addedRows))
+                    result = (result + Me._titul_predTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -1143,13 +1041,13 @@ Namespace vychovavatelDataSetTableAdapters
         '''Delete rows in bottom-up order.
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As vychovavatelDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As titul_predDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._vychovavatelTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.vychovavatel.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._titul_predTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.titul_pred.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._vychovavatelTableAdapter.Update(deletedRows))
+                    result = (result + Me._titul_predTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -1185,15 +1083,15 @@ Namespace vychovavatelDataSetTableAdapters
         '''Update all changes to the dataset.
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As vychovavatelDataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As titul_predDataSet) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If
             If (dataSet.HasChanges = false) Then
                 Return 0
             End If
-            If ((Not (Me._vychovavatelTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._vychovavatelTableAdapter.Connection) = false)) Then
+            If ((Not (Me._titul_predTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._titul_predTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
@@ -1229,13 +1127,13 @@ Namespace vychovavatelDataSetTableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
-                If (Not (Me._vychovavatelTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._vychovavatelTableAdapter, Me._vychovavatelTableAdapter.Connection)
-                    Me._vychovavatelTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlServerCe.SqlCeConnection)
-                    Me._vychovavatelTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlServerCe.SqlCeTransaction)
-                    If Me._vychovavatelTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._vychovavatelTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._vychovavatelTableAdapter.Adapter)
+                If (Not (Me._titul_predTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._titul_predTableAdapter, Me._titul_predTableAdapter.Connection)
+                    Me._titul_predTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlServerCe.SqlCeConnection)
+                    Me._titul_predTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlServerCe.SqlCeTransaction)
+                    If Me._titul_predTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._titul_predTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._titul_predTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -1298,9 +1196,9 @@ Namespace vychovavatelDataSetTableAdapters
                 If workConnOpened Then
                     workConnection.Close
                 End If
-                If (Not (Me._vychovavatelTableAdapter) Is Nothing) Then
-                    Me._vychovavatelTableAdapter.Connection = CType(revertConnections(Me._vychovavatelTableAdapter),Global.System.Data.SqlServerCe.SqlCeConnection)
-                    Me._vychovavatelTableAdapter.Transaction = Nothing
+                If (Not (Me._titul_predTableAdapter) Is Nothing) Then
+                    Me._titul_predTableAdapter.Connection = CType(revertConnections(Me._titul_predTableAdapter),Global.System.Data.SqlServerCe.SqlCeConnection)
+                    Me._titul_predTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

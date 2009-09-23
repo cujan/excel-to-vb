@@ -24,56 +24,49 @@ Partial Class vychovavatel
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(vychovavatel))
-        Me.VychovavatelDataSet = New internat.vychovavatelDataSet
-        Me.VychovavatelBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VychovavatelTableAdapter = New internat.vychovavatelDataSetTableAdapters.vychovavatelTableAdapter
-        Me.TableAdapterManager = New internat.vychovavatelDataSetTableAdapters.TableAdapterManager
         Me.VychovavatelBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.VychovavatelBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.VychovavatelDataGridView = New System.Windows.Forms.DataGridView
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.menoTextBox = New System.Windows.Forms.TextBox
+        Me.priezviskoTextBox = New System.Windows.Forms.TextBox
+        Me.poznamkaTextBox = New System.Windows.Forms.TextBox
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.titul = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Label4 = New System.Windows.Forms.Label
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        CType(Me.VychovavatelDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VychovavatelBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.VychovavatelBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VychovavatelDataSet = New internat.vychovavatelDataSet
+        Me.VychovavatelTableAdapter = New internat.vychovavatelDataSetTableAdapters.vychovavatelTableAdapter
+        Me.TableAdapterManager = New internat.vychovavatelDataSetTableAdapters.TableAdapterManager
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.titul_predComboBox = New System.Windows.Forms.ComboBox
+        Me.Titul_predDataSet = New internat.titul_predDataSet
+        Me.TitulpredBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Titul_predTableAdapter = New internat.titul_predDataSetTableAdapters.titul_predTableAdapter
         CType(Me.VychovavatelBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.VychovavatelBindingNavigator.SuspendLayout()
         CType(Me.VychovavatelDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VychovavatelBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VychovavatelDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Titul_predDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulpredBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'VychovavatelDataSet
-        '
-        Me.VychovavatelDataSet.DataSetName = "vychovavatelDataSet"
-        Me.VychovavatelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VychovavatelBindingSource
-        '
-        Me.VychovavatelBindingSource.DataMember = "vychovavatel"
-        Me.VychovavatelBindingSource.DataSource = Me.VychovavatelDataSet
-        '
-        'VychovavatelTableAdapter
-        '
-        Me.VychovavatelTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.UpdateOrder = internat.vychovavatelDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.vychovavatelTableAdapter = Me.VychovavatelTableAdapter
         '
         'VychovavatelBindingNavigator
         '
@@ -92,6 +85,31 @@ Partial Class vychovavatel
         Me.VychovavatelBindingNavigator.Size = New System.Drawing.Size(649, 25)
         Me.VychovavatelBindingNavigator.TabIndex = 0
         Me.VychovavatelBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -125,17 +143,10 @@ Partial Class vychovavatel
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 13)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -143,7 +154,7 @@ Partial Class vychovavatel
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -152,50 +163,96 @@ Partial Class vychovavatel
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'VychovavatelBindingNavigatorSaveItem
         '
         Me.VychovavatelBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.VychovavatelBindingNavigatorSaveItem.Image = CType(resources.GetObject("VychovavatelBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.VychovavatelBindingNavigatorSaveItem.Name = "VychovavatelBindingNavigatorSaveItem"
-        Me.VychovavatelBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.VychovavatelBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.VychovavatelBindingNavigatorSaveItem.Text = "Save Data"
         '
         'VychovavatelDataGridView
         '
         Me.VychovavatelDataGridView.AutoGenerateColumns = False
         Me.VychovavatelDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.VychovavatelDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.VychovavatelDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.titul, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.VychovavatelDataGridView.DataSource = Me.VychovavatelBindingSource
         Me.VychovavatelDataGridView.Location = New System.Drawing.Point(37, 163)
         Me.VychovavatelDataGridView.Name = "VychovavatelDataGridView"
         Me.VychovavatelDataGridView.Size = New System.Drawing.Size(520, 220)
         Me.VychovavatelDataGridView.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(59, 74)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(34, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Meno"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(59, 120)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Priezvisko"
+        '
+        'menoTextBox
+        '
+        Me.menoTextBox.Location = New System.Drawing.Point(104, 71)
+        Me.menoTextBox.Name = "menoTextBox"
+        Me.menoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.menoTextBox.TabIndex = 4
+        '
+        'priezviskoTextBox
+        '
+        Me.priezviskoTextBox.Location = New System.Drawing.Point(104, 117)
+        Me.priezviskoTextBox.Name = "priezviskoTextBox"
+        Me.priezviskoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.priezviskoTextBox.TabIndex = 5
+        '
+        'poznamkaTextBox
+        '
+        Me.poznamkaTextBox.Location = New System.Drawing.Point(395, 54)
+        Me.poznamkaTextBox.Multiline = True
+        Me.poznamkaTextBox.Name = "poznamkaTextBox"
+        Me.poznamkaTextBox.Size = New System.Drawing.Size(208, 79)
+        Me.poznamkaTextBox.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(326, 54)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(56, 13)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "poznamka"
+        '
+        'titul
+        '
+        Me.titul.DataPropertyName = "titul"
+        Me.titul.HeaderText = "titul"
+        Me.titul.Name = "titul"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(59, 35)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(27, 13)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Titul"
         '
         'DataGridViewTextBoxColumn1
         '
@@ -222,41 +279,87 @@ Partial Class vychovavatel
         Me.DataGridViewTextBoxColumn4.HeaderText = "poznamka"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
-        'Label1
+        'VychovavatelBindingSource
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(59, 54)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Label1"
+        Me.VychovavatelBindingSource.DataMember = "vychovavatel"
+        Me.VychovavatelBindingSource.DataSource = Me.VychovavatelDataSet
         '
-        'Label2
+        'VychovavatelDataSet
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(59, 94)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Label2"
+        Me.VychovavatelDataSet.DataSetName = "vychovavatelDataSet"
+        Me.VychovavatelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'VychovavatelTableAdapter
+        '
+        Me.VychovavatelTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.UpdateOrder = internat.vychovavatelDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.vychovavatelTableAdapter = Me.VychovavatelTableAdapter
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(261, 120)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "Ulož"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'titul_predComboBox
+        '
+        Me.titul_predComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TitulpredBindingSource, "id", True))
+        Me.titul_predComboBox.DataSource = Me.TitulpredBindingSource
+        Me.titul_predComboBox.DisplayMember = "skratka"
+        Me.titul_predComboBox.FormattingEnabled = True
+        Me.titul_predComboBox.Location = New System.Drawing.Point(104, 35)
+        Me.titul_predComboBox.Name = "titul_predComboBox"
+        Me.titul_predComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.titul_predComboBox.TabIndex = 11
+        Me.titul_predComboBox.ValueMember = "id"
+        '
+        'Titul_predDataSet
+        '
+        Me.Titul_predDataSet.DataSetName = "titul_predDataSet"
+        Me.Titul_predDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TitulpredBindingSource
+        '
+        Me.TitulpredBindingSource.DataMember = "titul_pred"
+        Me.TitulpredBindingSource.DataSource = Me.Titul_predDataSet
+        '
+        'Titul_predTableAdapter
+        '
+        Me.Titul_predTableAdapter.ClearBeforeFill = True
         '
         'vychovavatel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(649, 407)
+        Me.Controls.Add(Me.titul_predComboBox)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.poznamkaTextBox)
+        Me.Controls.Add(Me.priezviskoTextBox)
+        Me.Controls.Add(Me.menoTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.VychovavatelDataGridView)
         Me.Controls.Add(Me.VychovavatelBindingNavigator)
         Me.Name = "vychovavatel"
         Me.Text = "vychovavatel"
-        CType(Me.VychovavatelDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VychovavatelBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VychovavatelBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.VychovavatelBindingNavigator.ResumeLayout(False)
         Me.VychovavatelBindingNavigator.PerformLayout()
         CType(Me.VychovavatelDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VychovavatelBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VychovavatelDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Titul_predDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulpredBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -279,10 +382,21 @@ Partial Class vychovavatel
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents VychovavatelBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents VychovavatelDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents menoTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents priezviskoTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents poznamkaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents titul As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents titul_predComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Titul_predDataSet As internat.titul_predDataSet
+    Friend WithEvents TitulpredBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Titul_predTableAdapter As internat.titul_predDataSetTableAdapters.titul_predTableAdapter
 End Class
