@@ -5,6 +5,8 @@
         Me.SkupinaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Skupina_vychovavatelDataSet1)
 
+
+
     End Sub
 
     Private Sub skupina_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -16,6 +18,10 @@
         Me.VychovavatelTableAdapter.Fill(Me.VychovavatelDataSet.vychovavatel)
         'TODO: This line of code loads data into the 'SkupinaDataSet.skupina' table. You can move, or remove it, as needed.
         Me.SkupinaTableAdapter.Fill(Me.Skupina_vychovavatelDataSet1.skupina)
+
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        ciselniky.ciselniky_splitter.Panel2.Controls.Add(Me)
 
     End Sub
 
@@ -42,6 +48,11 @@
         Me.Validate()
         Me.SkupinaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Skupina_vychovavatelDataSet1)
+
+    End Sub
+
+    Private Sub zavriet_podkartu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_podkartu.Click
+        Me.Close()
 
     End Sub
 End Class

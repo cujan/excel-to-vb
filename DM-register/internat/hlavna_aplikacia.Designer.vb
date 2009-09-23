@@ -35,12 +35,14 @@ Partial Class hlavna_aplikacia
         Me.tl_zostavy_button = New System.Windows.Forms.Button
         Me.tl_zostavy_label = New System.Windows.Forms.Label
         Me.prehlad_ubytovanych_splitter = New System.Windows.Forms.SplitContainer
-        Me.prehlad_ubytovanych_label = New System.Windows.Forms.Label
         Me.sprava_ubytovanych_button = New System.Windows.Forms.Button
+        Me.prehlad_ubytovanych_label = New System.Windows.Forms.Label
+        Me.ciselniky_button = New System.Windows.Forms.Button
         Me.StatusStrip.SuspendLayout()
         Me.hlavny_splitter.Panel1.SuspendLayout()
         Me.hlavny_splitter.SuspendLayout()
         Me.nastavenia_splitter.Panel1.SuspendLayout()
+        Me.nastavenia_splitter.Panel2.SuspendLayout()
         Me.nastavenia_splitter.SuspendLayout()
         Me.tl_zostavy_splitter.Panel1.SuspendLayout()
         Me.tl_zostavy_splitter.SuspendLayout()
@@ -104,6 +106,7 @@ Partial Class hlavna_aplikacia
         'nastavenia_splitter.Panel2
         '
         Me.nastavenia_splitter.Panel2.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.nastavenia_splitter.Panel2.Controls.Add(Me.ciselniky_button)
         Me.nastavenia_splitter.Size = New System.Drawing.Size(140, 100)
         Me.nastavenia_splitter.SplitterDistance = 25
         Me.nastavenia_splitter.SplitterWidth = 1
@@ -199,6 +202,18 @@ Partial Class hlavna_aplikacia
         Me.prehlad_ubytovanych_splitter.SplitterWidth = 1
         Me.prehlad_ubytovanych_splitter.TabIndex = 2
         '
+        'sprava_ubytovanych_button
+        '
+        Me.sprava_ubytovanych_button.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.sprava_ubytovanych_button.FlatAppearance.BorderSize = 0
+        Me.sprava_ubytovanych_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.sprava_ubytovanych_button.Location = New System.Drawing.Point(124, 1)
+        Me.sprava_ubytovanych_button.Name = "sprava_ubytovanych_button"
+        Me.sprava_ubytovanych_button.Size = New System.Drawing.Size(14, 22)
+        Me.sprava_ubytovanych_button.TabIndex = 2
+        Me.sprava_ubytovanych_button.Text = "v"
+        Me.sprava_ubytovanych_button.UseVisualStyleBackColor = False
+        '
         'prehlad_ubytovanych_label
         '
         Me.prehlad_ubytovanych_label.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -212,17 +227,16 @@ Partial Class hlavna_aplikacia
         Me.prehlad_ubytovanych_label.Text = "Správa ubytovaných"
         Me.prehlad_ubytovanych_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'sprava_ubytovanych_button
+        'ciselniky_button
         '
-        Me.sprava_ubytovanych_button.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.sprava_ubytovanych_button.FlatAppearance.BorderSize = 0
-        Me.sprava_ubytovanych_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.sprava_ubytovanych_button.Location = New System.Drawing.Point(124, 1)
-        Me.sprava_ubytovanych_button.Name = "sprava_ubytovanych_button"
-        Me.sprava_ubytovanych_button.Size = New System.Drawing.Size(14, 22)
-        Me.sprava_ubytovanych_button.TabIndex = 2
-        Me.sprava_ubytovanych_button.Text = "v"
-        Me.sprava_ubytovanych_button.UseVisualStyleBackColor = False
+        Me.ciselniky_button.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.ciselniky_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ciselniky_button.Location = New System.Drawing.Point(4, 6)
+        Me.ciselniky_button.Name = "ciselniky_button"
+        Me.ciselniky_button.Size = New System.Drawing.Size(132, 23)
+        Me.ciselniky_button.TabIndex = 0
+        Me.ciselniky_button.Text = "Číselníky"
+        Me.ciselniky_button.UseVisualStyleBackColor = False
         '
         'hlavna_aplikacia
         '
@@ -239,6 +253,7 @@ Partial Class hlavna_aplikacia
         Me.hlavny_splitter.Panel1.ResumeLayout(False)
         Me.hlavny_splitter.ResumeLayout(False)
         Me.nastavenia_splitter.Panel1.ResumeLayout(False)
+        Me.nastavenia_splitter.Panel2.ResumeLayout(False)
         Me.nastavenia_splitter.ResumeLayout(False)
         Me.tl_zostavy_splitter.Panel1.ResumeLayout(False)
         Me.tl_zostavy_splitter.ResumeLayout(False)
@@ -261,5 +276,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents prehlad_ubytovanych_splitter As System.Windows.Forms.SplitContainer
     Friend WithEvents prehlad_ubytovanych_label As System.Windows.Forms.Label
     Friend WithEvents sprava_ubytovanych_button As System.Windows.Forms.Button
+    Friend WithEvents ciselniky_button As System.Windows.Forms.Button
 
 End Class

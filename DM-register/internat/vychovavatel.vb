@@ -5,6 +5,8 @@
         Me.VychovavatelBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.VychovavatelDataSet)
 
+
+
     End Sub
 
     Private Sub vychovavatel_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -13,6 +15,9 @@
         'TODO: This line of code loads data into the 'VychovavatelDataSet.vychovavatel' table. You can move, or remove it, as needed.
         Me.VychovavatelTableAdapter.Fill(Me.VychovavatelDataSet.vychovavatel)
 
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        ciselniky.ciselniky_splitter.Panel2.Controls.Add(Me)
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -32,5 +37,10 @@
         con.Close()
 
         Me.VychovavatelTableAdapter.Fill(Me.VychovavatelDataSet.vychovavatel)
+    End Sub
+
+    Private Sub zavriet_podkartu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_podkartu.Click
+        Me.Close()
+
     End Sub
 End Class

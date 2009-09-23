@@ -11,6 +11,10 @@
         'TODO: This line of code loads data into the 'Titul_predDataSet.titul_pred' table. You can move, or remove it, as needed.
         Me.Titul_predTableAdapter.Fill(Me.Titul_predDataSet.titul_pred)
 
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        ciselniky.ciselniky_splitter.Panel2.Controls.Add(Me)
+
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -26,5 +30,10 @@
         con.Close()
 
         Me.Titul_predTableAdapter.Fill(Me.Titul_predDataSet.titul_pred)
+    End Sub
+
+    Private Sub zavriet_podkartu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_podkartu.Click
+        Me.Close()
+
     End Sub
 End Class

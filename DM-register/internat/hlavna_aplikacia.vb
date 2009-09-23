@@ -78,4 +78,10 @@ Public Class hlavna_aplikacia
 
 
     End Sub
+
+    Private Sub ciselniky_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ciselniky_button.Click
+        ciselniky.Show()
+        ciselniky.BringToFront()
+
+    End Sub
 End Class
