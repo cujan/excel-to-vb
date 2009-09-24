@@ -61,6 +61,7 @@ Partial Class vychovavatel
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.zavriet_podkartu = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
         CType(Me.VychovavatelBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.VychovavatelBindingNavigator.SuspendLayout()
         CType(Me.VychovavatelBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,7 +111,7 @@ Partial Class vychovavatel
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -271,9 +272,9 @@ Partial Class vychovavatel
         '
         'titul_predComboBox
         '
-        Me.titul_predComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TitulpredBindingSource, "id", True))
         Me.titul_predComboBox.DataSource = Me.TitulpredBindingSource
         Me.titul_predComboBox.DisplayMember = "skratka"
+        Me.titul_predComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.titul_predComboBox.FormattingEnabled = True
         Me.titul_predComboBox.Location = New System.Drawing.Point(104, 35)
         Me.titul_predComboBox.Name = "titul_predComboBox"
@@ -303,6 +304,7 @@ Partial Class vychovavatel
         Me.VychovavatelDataGridView.DataSource = Me.VychovavatelBindingSource
         Me.VychovavatelDataGridView.Location = New System.Drawing.Point(12, 197)
         Me.VychovavatelDataGridView.Name = "VychovavatelDataGridView"
+        Me.VychovavatelDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.VychovavatelDataGridView.Size = New System.Drawing.Size(625, 250)
         Me.VychovavatelDataGridView.TabIndex = 11
         '
@@ -354,11 +356,21 @@ Partial Class vychovavatel
         Me.zavriet_podkartu.Text = "Zavrieť podkartu"
         Me.zavriet_podkartu.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(416, 162)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 13
+        Me.Button2.Text = "zmaz"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'vychovavatel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(649, 475)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.zavriet_podkartu)
         Me.Controls.Add(Me.VychovavatelDataGridView)
         Me.Controls.Add(Me.titul_predComboBox)
@@ -423,4 +435,5 @@ Partial Class vychovavatel
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents zavriet_podkartu As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

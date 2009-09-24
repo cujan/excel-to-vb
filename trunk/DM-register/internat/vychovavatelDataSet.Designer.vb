@@ -1331,8 +1331,8 @@ Namespace vychovavatelDataSetTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT     vychovavatel.id, vychovavatel.priezvisko, vychovavatel.meno, vychovava"& _ 
                 "tel.poznamka, vychovavatel.titul, titul_pred.skratka"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         vychovavatel "& _ 
-                "INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      titul_pred ON vychovavatel.titul = titul_pred."& _ 
-                "id"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY vychovavatel.priezvisko"
+                "LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      titul_pred ON vychovavatel.titul = titul_"& _ 
+                "pred.id"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY vychovavatel.priezvisko"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
