@@ -38,15 +38,14 @@ Partial Class evidencia_studentov
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.StudentBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.StudentDataGridView = New System.Windows.Forms.DataGridView
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn
         Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StudentDataSet = New internat.studentDataSet
         Me.StudentTableAdapter = New internat.studentDataSetTableAdapters.studentTableAdapter
         Me.TableAdapterManager = New internat.studentDataSetTableAdapters.TableAdapterManager
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.id_skupina = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.StudentBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StudentBindingNavigator.SuspendLayout()
@@ -175,13 +174,33 @@ Partial Class evidencia_studentov
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.StudentDataGridView.AutoGenerateColumns = False
         Me.StudentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.StudentDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn6, Me.DataGridViewImageColumn1, Me.id_skupina})
+        Me.StudentDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn6, Me.id_skupina})
         Me.StudentDataGridView.DataSource = Me.StudentBindingSource
         Me.StudentDataGridView.Location = New System.Drawing.Point(12, 142)
         Me.StudentDataGridView.Name = "StudentDataGridView"
         Me.StudentDataGridView.ReadOnly = True
         Me.StudentDataGridView.Size = New System.Drawing.Size(903, 372)
         Me.StudentDataGridView.TabIndex = 1
+        '
+        'StudentBindingSource
+        '
+        Me.StudentBindingSource.DataMember = "student"
+        Me.StudentBindingSource.DataSource = Me.StudentDataSet
+        '
+        'StudentDataSet
+        '
+        Me.StudentDataSet.DataSetName = "studentDataSet"
+        Me.StudentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'StudentTableAdapter
+        '
+        Me.StudentTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.studentTableAdapter = Me.StudentTableAdapter
+        Me.TableAdapterManager.UpdateOrder = internat.studentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'DataGridViewTextBoxColumn2
         '
@@ -210,33 +229,6 @@ Partial Class evidencia_studentov
         Me.DataGridViewTextBoxColumn6.HeaderText = "rodne_cislo"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        '
-        'DataGridViewImageColumn1
-        '
-        Me.DataGridViewImageColumn1.DataPropertyName = "foto"
-        Me.DataGridViewImageColumn1.HeaderText = "foto"
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.ReadOnly = True
-        '
-        'StudentBindingSource
-        '
-        Me.StudentBindingSource.DataMember = "student"
-        Me.StudentBindingSource.DataSource = Me.StudentDataSet
-        '
-        'StudentDataSet
-        '
-        Me.StudentDataSet.DataSetName = "studentDataSet"
-        Me.StudentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'StudentTableAdapter
-        '
-        Me.StudentTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.studentTableAdapter = Me.StudentTableAdapter
-        Me.TableAdapterManager.UpdateOrder = internat.studentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'id_skupina
         '
@@ -286,6 +278,5 @@ Partial Class evidencia_studentov
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewImageColumn1 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents id_skupina As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
