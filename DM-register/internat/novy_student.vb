@@ -32,5 +32,14 @@
         Dim zz_poznamka As String = Zz_poznamkaTextBox.Text
         Dim id_skupina As Integer = skupinaComboBox.SelectedValue
 
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
+
+    End Sub
+
+    Private Sub zavriet_kartu_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_kartu_button.Click
+        Me.Close()
+
     End Sub
 End Class

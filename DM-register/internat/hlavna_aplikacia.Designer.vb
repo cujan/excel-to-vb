@@ -38,11 +38,10 @@ Partial Class hlavna_aplikacia
         Me.prehlad_ubytovanych_splitter = New System.Windows.Forms.SplitContainer
         Me.sprava_ubytovanych_button = New System.Windows.Forms.Button
         Me.prehlad_ubytovanych_label = New System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
+        Me.novy_student_button = New System.Windows.Forms.Button
+        Me.evidencia_studentov_button = New System.Windows.Forms.Button
         Me.StatusStrip.SuspendLayout()
         Me.hlavny_splitter.Panel1.SuspendLayout()
-        Me.hlavny_splitter.Panel2.SuspendLayout()
         Me.hlavny_splitter.SuspendLayout()
         Me.nastavenia_splitter.Panel1.SuspendLayout()
         Me.nastavenia_splitter.Panel2.SuspendLayout()
@@ -50,6 +49,7 @@ Partial Class hlavna_aplikacia
         Me.tl_zostavy_splitter.Panel1.SuspendLayout()
         Me.tl_zostavy_splitter.SuspendLayout()
         Me.prehlad_ubytovanych_splitter.Panel1.SuspendLayout()
+        Me.prehlad_ubytovanych_splitter.Panel2.SuspendLayout()
         Me.prehlad_ubytovanych_splitter.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -65,7 +65,7 @@ Partial Class hlavna_aplikacia
         'ToolStripStatusLabel
         '
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(38, 17)
+        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(37, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
         'hlavny_splitter
@@ -86,9 +86,8 @@ Partial Class hlavna_aplikacia
         '
         'hlavny_splitter.Panel2
         '
+        Me.hlavny_splitter.Panel2.AutoScroll = True
         Me.hlavny_splitter.Panel2.BackColor = System.Drawing.Color.Lavender
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button2)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button1)
         Me.hlavny_splitter.Size = New System.Drawing.Size(790, 497)
         Me.hlavny_splitter.SplitterDistance = 160
         Me.hlavny_splitter.SplitterWidth = 1
@@ -112,6 +111,7 @@ Partial Class hlavna_aplikacia
         '
         Me.nastavenia_splitter.Panel2.BackColor = System.Drawing.Color.LightSteelBlue
         Me.nastavenia_splitter.Panel2.Controls.Add(Me.ciselniky_button)
+        Me.nastavenia_splitter.Panel2Collapsed = True
         Me.nastavenia_splitter.Size = New System.Drawing.Size(140, 100)
         Me.nastavenia_splitter.SplitterDistance = 25
         Me.nastavenia_splitter.SplitterWidth = 1
@@ -170,6 +170,7 @@ Partial Class hlavna_aplikacia
         'tl_zostavy_splitter.Panel2
         '
         Me.tl_zostavy_splitter.Panel2.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.tl_zostavy_splitter.Panel2Collapsed = True
         Me.tl_zostavy_splitter.Size = New System.Drawing.Size(140, 100)
         Me.tl_zostavy_splitter.SplitterDistance = 25
         Me.tl_zostavy_splitter.SplitterWidth = 1
@@ -213,7 +214,13 @@ Partial Class hlavna_aplikacia
         Me.prehlad_ubytovanych_splitter.Panel1.BackColor = System.Drawing.Color.RoyalBlue
         Me.prehlad_ubytovanych_splitter.Panel1.Controls.Add(Me.sprava_ubytovanych_button)
         Me.prehlad_ubytovanych_splitter.Panel1.Controls.Add(Me.prehlad_ubytovanych_label)
-        Me.prehlad_ubytovanych_splitter.Size = New System.Drawing.Size(140, 100)
+        '
+        'prehlad_ubytovanych_splitter.Panel2
+        '
+        Me.prehlad_ubytovanych_splitter.Panel2.Controls.Add(Me.evidencia_studentov_button)
+        Me.prehlad_ubytovanych_splitter.Panel2.Controls.Add(Me.novy_student_button)
+        Me.prehlad_ubytovanych_splitter.Panel2Collapsed = True
+        Me.prehlad_ubytovanych_splitter.Size = New System.Drawing.Size(140, 113)
         Me.prehlad_ubytovanych_splitter.SplitterDistance = 25
         Me.prehlad_ubytovanych_splitter.SplitterWidth = 1
         Me.prehlad_ubytovanych_splitter.TabIndex = 2
@@ -243,38 +250,41 @@ Partial Class hlavna_aplikacia
         Me.prehlad_ubytovanych_label.Text = "Správa ubytovaných"
         Me.prehlad_ubytovanych_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Button1
+        'novy_student_button
         '
-        Me.Button1.Location = New System.Drawing.Point(157, 317)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Evidencia studentov"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.novy_student_button.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.novy_student_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.novy_student_button.Location = New System.Drawing.Point(5, 7)
+        Me.novy_student_button.Name = "novy_student_button"
+        Me.novy_student_button.Size = New System.Drawing.Size(132, 23)
+        Me.novy_student_button.TabIndex = 0
+        Me.novy_student_button.Text = "Nový študent"
+        Me.novy_student_button.UseVisualStyleBackColor = False
         '
-        'Button2
+        'evidencia_studentov_button
         '
-        Me.Button2.Location = New System.Drawing.Point(157, 363)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(127, 23)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "novy student"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.evidencia_studentov_button.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.evidencia_studentov_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.evidencia_studentov_button.Location = New System.Drawing.Point(5, 32)
+        Me.evidencia_studentov_button.Name = "evidencia_studentov_button"
+        Me.evidencia_studentov_button.Size = New System.Drawing.Size(132, 23)
+        Me.evidencia_studentov_button.TabIndex = 1
+        Me.evidencia_studentov_button.Text = "Evidencia študentov"
+        Me.evidencia_studentov_button.UseVisualStyleBackColor = False
         '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(790, 519)
         Me.Controls.Add(Me.hlavny_splitter)
         Me.Controls.Add(Me.StatusStrip)
-        Me.IsMdiContainer = True
         Me.Name = "hlavna_aplikacia"
         Me.Text = "Register ubytovaných"
         Me.StatusStrip.ResumeLayout(False)
         Me.StatusStrip.PerformLayout()
         Me.hlavny_splitter.Panel1.ResumeLayout(False)
-        Me.hlavny_splitter.Panel2.ResumeLayout(False)
         Me.hlavny_splitter.ResumeLayout(False)
         Me.nastavenia_splitter.Panel1.ResumeLayout(False)
         Me.nastavenia_splitter.Panel2.ResumeLayout(False)
@@ -282,6 +292,7 @@ Partial Class hlavna_aplikacia
         Me.tl_zostavy_splitter.Panel1.ResumeLayout(False)
         Me.tl_zostavy_splitter.ResumeLayout(False)
         Me.prehlad_ubytovanych_splitter.Panel1.ResumeLayout(False)
+        Me.prehlad_ubytovanych_splitter.Panel2.ResumeLayout(False)
         Me.prehlad_ubytovanych_splitter.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -301,7 +312,7 @@ Partial Class hlavna_aplikacia
     Friend WithEvents prehlad_ubytovanych_label As System.Windows.Forms.Label
     Friend WithEvents sprava_ubytovanych_button As System.Windows.Forms.Button
     Friend WithEvents ciselniky_button As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents novy_student_button As System.Windows.Forms.Button
+    Friend WithEvents evidencia_studentov_button As System.Windows.Forms.Button
 
 End Class

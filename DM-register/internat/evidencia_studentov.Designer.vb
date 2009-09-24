@@ -25,33 +25,34 @@ Partial Class evidencia_studentov
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(evidencia_studentov))
         Me.StudentBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StudentDataSet = New internat.studentDataSet
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.StudentBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.StudentDataGridView = New System.Windows.Forms.DataGridView
-        Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.StudentDataSet = New internat.studentDataSet
-        Me.StudentTableAdapter = New internat.studentDataSetTableAdapters.studentTableAdapter
-        Me.TableAdapterManager = New internat.studentDataSetTableAdapters.TableAdapterManager
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.id_skupina = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.StudentTableAdapter = New internat.studentDataSetTableAdapters.studentTableAdapter
+        Me.TableAdapterManager = New internat.studentDataSetTableAdapters.TableAdapterManager
+        Me.zavriet_kartu_button = New System.Windows.Forms.Button
         CType(Me.StudentBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StudentBindingNavigator.SuspendLayout()
-        CType(Me.StudentDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StudentDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StudentBindingNavigator
@@ -71,6 +72,41 @@ Partial Class evidencia_studentov
         Me.StudentBindingNavigator.Size = New System.Drawing.Size(927, 25)
         Me.StudentBindingNavigator.TabIndex = 0
         Me.StudentBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'StudentBindingSource
+        '
+        Me.StudentBindingSource.DataMember = "student"
+        Me.StudentBindingSource.DataSource = Me.StudentDataSet
+        '
+        'StudentDataSet
+        '
+        Me.StudentDataSet.DataSetName = "studentDataSet"
+        Me.StudentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -104,16 +140,9 @@ Partial Class evidencia_studentov
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -136,26 +165,8 @@ Partial Class evidencia_studentov
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'StudentBindingNavigatorSaveItem
         '
@@ -181,26 +192,6 @@ Partial Class evidencia_studentov
         Me.StudentDataGridView.ReadOnly = True
         Me.StudentDataGridView.Size = New System.Drawing.Size(903, 372)
         Me.StudentDataGridView.TabIndex = 1
-        '
-        'StudentBindingSource
-        '
-        Me.StudentBindingSource.DataMember = "student"
-        Me.StudentBindingSource.DataSource = Me.StudentDataSet
-        '
-        'StudentDataSet
-        '
-        Me.StudentDataSet.DataSetName = "studentDataSet"
-        Me.StudentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'StudentTableAdapter
-        '
-        Me.StudentTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.studentTableAdapter = Me.StudentTableAdapter
-        Me.TableAdapterManager.UpdateOrder = internat.studentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'DataGridViewTextBoxColumn2
         '
@@ -237,21 +228,43 @@ Partial Class evidencia_studentov
         Me.id_skupina.Name = "id_skupina"
         Me.id_skupina.ReadOnly = True
         '
+        'StudentTableAdapter
+        '
+        Me.StudentTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.studentTableAdapter = Me.StudentTableAdapter
+        Me.TableAdapterManager.UpdateOrder = internat.studentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'zavriet_kartu_button
+        '
+        Me.zavriet_kartu_button.Location = New System.Drawing.Point(245, 47)
+        Me.zavriet_kartu_button.Name = "zavriet_kartu_button"
+        Me.zavriet_kartu_button.Size = New System.Drawing.Size(136, 23)
+        Me.zavriet_kartu_button.TabIndex = 2
+        Me.zavriet_kartu_button.Text = "Zavrieť kartu"
+        Me.zavriet_kartu_button.UseVisualStyleBackColor = True
+        '
         'evidencia_studentov
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(927, 526)
+        Me.Controls.Add(Me.zavriet_kartu_button)
         Me.Controls.Add(Me.StudentDataGridView)
         Me.Controls.Add(Me.StudentBindingNavigator)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "evidencia_studentov"
         Me.Text = "evidencia_studentov"
         CType(Me.StudentBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StudentBindingNavigator.ResumeLayout(False)
         Me.StudentBindingNavigator.PerformLayout()
-        CType(Me.StudentDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StudentDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -279,4 +292,5 @@ Partial Class evidencia_studentov
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents id_skupina As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents zavriet_kartu_button As System.Windows.Forms.Button
 End Class
