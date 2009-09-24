@@ -18,6 +18,8 @@
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
         ciselniky.ciselniky_splitter.Panel2.Controls.Add(Me)
+
+        Me.titul_predComboBox.SelectedIndex = -1
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -28,7 +30,7 @@
         Dim poznamka As String = poznamkaTextBox.Text
 
 
-
+       
         Dim con As New SqlCeConnection("Data Source=|DataDirectory|\db_internat.sdf")
         con.Open()
 
@@ -42,5 +44,10 @@
     Private Sub zavriet_podkartu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_podkartu.Click
         Me.Close()
 
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim id_clena As Integer = 
+        MsgBox(id_clena)
     End Sub
 End Class
