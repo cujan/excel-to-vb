@@ -42,7 +42,7 @@ Public Class hlavna_aplikacia
         If sprava_ubytovanych_button.Text = "v" Then
             sprava_ubytovanych_button.Text = "^"
             prehlad_ubytovanych_splitter.Panel2Collapsed = False
-            prehlad_ubytovanych_splitter_position.Y = prehlad_ubytovanych_splitter.Location.Y + 110
+            prehlad_ubytovanych_splitter_position.Y = prehlad_ubytovanych_splitter.Location.Y + 120
             prehlad_ubytovanych_splitter_position.X = prehlad_ubytovanych_splitter.Location.X
             tl_zostavy_splitter.Location = prehlad_ubytovanych_splitter_position
 
@@ -65,7 +65,7 @@ Public Class hlavna_aplikacia
             tl_zostavy_splitter.Location = prehlad_ubytovanych_splitter_position
 
             If tl_zostavy_splitter.Panel2Collapsed = False Then
-                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 110
+                tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 120
 
             Else
                 tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 34
@@ -85,11 +85,23 @@ Public Class hlavna_aplikacia
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        evidencia_studentov.Show()
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        evidencia_studentov_button.Show()
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         novy_student.Show()
+    End Sub
+
+    Private Sub novy_student_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles novy_student_button.Click
+        novy_student.Show()
+        novy_student.BringToFront()
+
+    End Sub
+
+    Private Sub evidencia_studentov_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles evidencia_studentov_button.Click
+        evidencia_studentov.Show()
+        evidencia_studentov.BringToFront()
+
     End Sub
 End Class
