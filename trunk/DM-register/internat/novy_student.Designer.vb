@@ -46,6 +46,9 @@ Partial Class novy_student
         Dim Zz_telefonLabel As System.Windows.Forms.Label
         Dim Zz_poznamkaLabel As System.Windows.Forms.Label
         Dim Id_skupinaLabel As System.Windows.Forms.Label
+        Dim Datum_narodeniaLabel1 As System.Windows.Forms.Label
+        Dim Op_vydany_dnaLabel1 As System.Windows.Forms.Label
+        Dim Zz_datum_narodeniaLabel1 As System.Windows.Forms.Label
         Me.PriezviskoTextBox = New System.Windows.Forms.TextBox
         Me.MenoTextBox = New System.Windows.Forms.TextBox
         Me.Datum_narodeniaDateTimePicker = New System.Windows.Forms.DateTimePicker
@@ -73,6 +76,14 @@ Partial Class novy_student
         Me.SkupinaDataSet = New internat.skupinaDataSet
         Me.SkupinaTableAdapter = New internat.skupinaDataSetTableAdapters.skupinaTableAdapter
         Me.zavriet_kartu_button = New System.Windows.Forms.Button
+        Me.uloz = New System.Windows.Forms.Button
+        Me.Db_internatDataSet = New internat.db_internatDataSet
+        Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StudentTableAdapter = New internat.db_internatDataSetTableAdapters.studentTableAdapter
+        Me.TableAdapterManager = New internat.db_internatDataSetTableAdapters.TableAdapterManager
+        Me.Datum_narodeniaTextBox = New System.Windows.Forms.TextBox
+        Me.Op_vydany_dnaTextBox = New System.Windows.Forms.TextBox
+        Me.Zz_datum_narodeniaTextBox = New System.Windows.Forms.TextBox
         PriezviskoLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         Datum_narodeniaLabel = New System.Windows.Forms.Label
@@ -96,8 +107,13 @@ Partial Class novy_student
         Zz_telefonLabel = New System.Windows.Forms.Label
         Zz_poznamkaLabel = New System.Windows.Forms.Label
         Id_skupinaLabel = New System.Windows.Forms.Label
+        Datum_narodeniaLabel1 = New System.Windows.Forms.Label
+        Op_vydany_dnaLabel1 = New System.Windows.Forms.Label
+        Zz_datum_narodeniaLabel1 = New System.Windows.Forms.Label
         CType(Me.SkupinaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkupinaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Db_internatDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PriezviskoLabel
@@ -323,6 +339,8 @@ Partial Class novy_student
         '
         'Datum_narodeniaDateTimePicker
         '
+        Me.Datum_narodeniaDateTimePicker.CustomFormat = ""
+        Me.Datum_narodeniaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.Datum_narodeniaDateTimePicker.Location = New System.Drawing.Point(252, 109)
         Me.Datum_narodeniaDateTimePicker.Name = "Datum_narodeniaDateTimePicker"
         Me.Datum_narodeniaDateTimePicker.Size = New System.Drawing.Size(200, 20)
@@ -372,6 +390,7 @@ Partial Class novy_student
         '
         'Op_vydany_dnaDateTimePicker
         '
+        Me.Op_vydany_dnaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.Op_vydany_dnaDateTimePicker.Location = New System.Drawing.Point(252, 291)
         Me.Op_vydany_dnaDateTimePicker.Name = "Op_vydany_dnaDateTimePicker"
         Me.Op_vydany_dnaDateTimePicker.Size = New System.Drawing.Size(200, 20)
@@ -428,6 +447,7 @@ Partial Class novy_student
         '
         'Zz_datum_narodeniaDateTimePicker
         '
+        Me.Zz_datum_narodeniaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.Zz_datum_narodeniaDateTimePicker.Location = New System.Drawing.Point(252, 499)
         Me.Zz_datum_narodeniaDateTimePicker.Name = "Zz_datum_narodeniaDateTimePicker"
         Me.Zz_datum_narodeniaDateTimePicker.Size = New System.Drawing.Size(200, 20)
@@ -495,12 +515,101 @@ Partial Class novy_student
         Me.zavriet_kartu_button.Text = "Zavrieť kartu"
         Me.zavriet_kartu_button.UseVisualStyleBackColor = True
         '
+        'uloz
+        '
+        Me.uloz.Location = New System.Drawing.Point(479, 154)
+        Me.uloz.Name = "uloz"
+        Me.uloz.Size = New System.Drawing.Size(75, 23)
+        Me.uloz.TabIndex = 50
+        Me.uloz.Text = "Ulož"
+        Me.uloz.UseVisualStyleBackColor = True
+        '
+        'Db_internatDataSet
+        '
+        Me.Db_internatDataSet.DataSetName = "db_internatDataSet"
+        Me.Db_internatDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'StudentBindingSource
+        '
+        Me.StudentBindingSource.DataMember = "student"
+        Me.StudentBindingSource.DataSource = Me.Db_internatDataSet
+        '
+        'StudentTableAdapter
+        '
+        Me.StudentTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.skupinaTableAdapter = Nothing
+        Me.TableAdapterManager.studentTableAdapter = Me.StudentTableAdapter
+        Me.TableAdapterManager.UpdateOrder = internat.db_internatDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.vychovavatelTableAdapter = Nothing
+        '
+        'Datum_narodeniaLabel1
+        '
+        Datum_narodeniaLabel1.AutoSize = True
+        Datum_narodeniaLabel1.Location = New System.Drawing.Point(627, 125)
+        Datum_narodeniaLabel1.Name = "Datum_narodeniaLabel1"
+        Datum_narodeniaLabel1.Size = New System.Drawing.Size(89, 13)
+        Datum_narodeniaLabel1.TabIndex = 50
+        Datum_narodeniaLabel1.Text = "datum narodenia:"
+        '
+        'Datum_narodeniaTextBox
+        '
+        Me.Datum_narodeniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentBindingSource, "datum_narodenia", True))
+        Me.Datum_narodeniaTextBox.Location = New System.Drawing.Point(722, 122)
+        Me.Datum_narodeniaTextBox.Name = "Datum_narodeniaTextBox"
+        Me.Datum_narodeniaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Datum_narodeniaTextBox.TabIndex = 51
+        '
+        'Op_vydany_dnaLabel1
+        '
+        Op_vydany_dnaLabel1.AutoSize = True
+        Op_vydany_dnaLabel1.Location = New System.Drawing.Point(626, 310)
+        Op_vydany_dnaLabel1.Name = "Op_vydany_dnaLabel1"
+        Op_vydany_dnaLabel1.Size = New System.Drawing.Size(80, 13)
+        Op_vydany_dnaLabel1.TabIndex = 51
+        Op_vydany_dnaLabel1.Text = "op vydany dna:"
+        '
+        'Op_vydany_dnaTextBox
+        '
+        Me.Op_vydany_dnaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentBindingSource, "op_vydany_dna", True))
+        Me.Op_vydany_dnaTextBox.Location = New System.Drawing.Point(712, 307)
+        Me.Op_vydany_dnaTextBox.Name = "Op_vydany_dnaTextBox"
+        Me.Op_vydany_dnaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Op_vydany_dnaTextBox.TabIndex = 52
+        '
+        'Zz_datum_narodeniaLabel1
+        '
+        Zz_datum_narodeniaLabel1.AutoSize = True
+        Zz_datum_narodeniaLabel1.Location = New System.Drawing.Point(587, 506)
+        Zz_datum_narodeniaLabel1.Name = "Zz_datum_narodeniaLabel1"
+        Zz_datum_narodeniaLabel1.Size = New System.Drawing.Size(102, 13)
+        Zz_datum_narodeniaLabel1.TabIndex = 52
+        Zz_datum_narodeniaLabel1.Text = "zz datum narodenia:"
+        '
+        'Zz_datum_narodeniaTextBox
+        '
+        Me.Zz_datum_narodeniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentBindingSource, "zz_datum_narodenia", True))
+        Me.Zz_datum_narodeniaTextBox.Location = New System.Drawing.Point(695, 503)
+        Me.Zz_datum_narodeniaTextBox.Name = "Zz_datum_narodeniaTextBox"
+        Me.Zz_datum_narodeniaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Zz_datum_narodeniaTextBox.TabIndex = 53
+        '
         'novy_student
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(933, 745)
+        Me.Controls.Add(Zz_datum_narodeniaLabel1)
+        Me.Controls.Add(Me.Zz_datum_narodeniaTextBox)
+        Me.Controls.Add(Op_vydany_dnaLabel1)
+        Me.Controls.Add(Me.Op_vydany_dnaTextBox)
+        Me.Controls.Add(Datum_narodeniaLabel1)
+        Me.Controls.Add(Me.Datum_narodeniaTextBox)
+        Me.Controls.Add(Me.uloz)
         Me.Controls.Add(Me.zavriet_kartu_button)
         Me.Controls.Add(Me.skupinaComboBox)
         Me.Controls.Add(PriezviskoLabel)
@@ -553,6 +662,8 @@ Partial Class novy_student
         Me.Text = "novy_student"
         CType(Me.SkupinaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkupinaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Db_internatDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -584,4 +695,12 @@ Partial Class novy_student
     Friend WithEvents SkupinaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SkupinaTableAdapter As internat.skupinaDataSetTableAdapters.skupinaTableAdapter
     Friend WithEvents zavriet_kartu_button As System.Windows.Forms.Button
+    Friend WithEvents uloz As System.Windows.Forms.Button
+    Friend WithEvents Db_internatDataSet As internat.db_internatDataSet
+    Friend WithEvents StudentBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents StudentTableAdapter As internat.db_internatDataSetTableAdapters.studentTableAdapter
+    Friend WithEvents TableAdapterManager As internat.db_internatDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Datum_narodeniaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Op_vydany_dnaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Zz_datum_narodeniaTextBox As System.Windows.Forms.TextBox
 End Class

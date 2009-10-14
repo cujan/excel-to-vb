@@ -48,6 +48,7 @@ Partial Class evidencia_studentov
         Me.StudentTableAdapter = New internat.studentDataSetTableAdapters.studentTableAdapter
         Me.TableAdapterManager = New internat.studentDataSetTableAdapters.TableAdapterManager
         Me.zavriet_kartu_button = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
         CType(Me.StudentBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StudentBindingNavigator.SuspendLayout()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,7 +96,7 @@ Partial Class evidencia_studentov
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(33, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -190,6 +191,7 @@ Partial Class evidencia_studentov
         Me.StudentDataGridView.Location = New System.Drawing.Point(12, 142)
         Me.StudentDataGridView.Name = "StudentDataGridView"
         Me.StudentDataGridView.ReadOnly = True
+        Me.StudentDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.StudentDataGridView.Size = New System.Drawing.Size(903, 372)
         Me.StudentDataGridView.TabIndex = 1
         '
@@ -247,12 +249,22 @@ Partial Class evidencia_studentov
         Me.zavriet_kartu_button.Text = "Zavrieť kartu"
         Me.zavriet_kartu_button.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(77, 52)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Label1"
+        '
         'evidencia_studentov
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(927, 526)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.zavriet_kartu_button)
         Me.Controls.Add(Me.StudentDataGridView)
         Me.Controls.Add(Me.StudentBindingNavigator)
@@ -293,4 +305,5 @@ Partial Class evidencia_studentov
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents id_skupina As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents zavriet_kartu_button As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
