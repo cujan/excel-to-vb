@@ -31,13 +31,13 @@
 
         Dim priezvisko As String = PriezviskoTextBox.Text
         Dim meno As String = MenoTextBox.Text
+        Dim datum_narodenia As Date?
 
-
-
-        If Datum_narodeniaTextBox.Text = "" Then
-           datum_narodenia as nul 
+        If Datum_narodeniaDateTimePicker.Checked = False Then
+            datum_narodenia = Nothing
+        Else
+            datum_narodenia = CDate(Datum_narodeniaDateTimePicker.Text)
         End If
-
 
         Dim miesto_narodenia As String = Miesto_narodeniaTextBox.Text
         Dim rodne_cislo As String = Rodne_cisloTextBox.Text
@@ -45,7 +45,14 @@
         Dim telefon As String = TelefonTextBox.Text
         Dim cislo_op As String = Cislo_opTextBox.Text
         Dim op_vydal As String = Op_vydalTextBox.Text
-        Dim op_datum_vydania As Date = Op_vydany_dnaTextBox.Text
+
+        Dim op_datum_vydania As Date?
+        If Op_vydany_dnaDateTimePicker.Checked = False Then
+            op_datum_vydania = Nothing
+        Else
+            op_datum_vydania = CDate(Op_vydany_dnaDateTimePicker.Text)
+        End If
+
         Dim skola_odkial_prichadza As String = Skola_odkial_prichadzaTextBox.Text
         Dim skola_ktoru_navstevuje As String = Skola_ktoru_bude_navstevovatTextBox.Text
         Dim studijny_odbor As String = Studijny_odborTextBox.Text
@@ -53,7 +60,14 @@
         Dim zaluby As String = ZalubyTextBox.Text
         Dim zz_meno As String = Zz_menoTextBox.Text
         Dim zz_priezvisko As String = Zz_priezviskoTextBox.Text
-        Dim zz_datum_narodenia As Date = Zz_datum_narodeniaTextBox.Text
+
+        Dim zz_datum_narodenia As Date?
+        If Zz_datum_narodeniaDateTimePicker.Checked = False Then
+            zz_datum_narodenia = Nothing
+        Else
+            zz_datum_narodenia = CDate(Zz_datum_narodeniaDateTimePicker.Text)
+        End If
+
         Dim zz_povolanie As String = Zz_povolanieTextBox.Text
         Dim zz_adresa_zamestnavatela As String = Zz_adresa_zamestnavatelaTextBox.Text
         Dim zz_telefon As String = Zz_telefonTextBox.Text
@@ -78,7 +92,7 @@
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim hlaska As String = Datum_narodeniaDateTimePicker.Text
         MsgBox(hlaska)
     End Sub
