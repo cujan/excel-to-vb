@@ -84,6 +84,7 @@ Partial Class novy_student
         Me.Datum_narodeniaTextBox = New System.Windows.Forms.TextBox
         Me.Op_vydany_dnaTextBox = New System.Windows.Forms.TextBox
         Me.Zz_datum_narodeniaTextBox = New System.Windows.Forms.TextBox
+        Me.Button1 = New System.Windows.Forms.Button
         PriezviskoLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         Datum_narodeniaLabel = New System.Windows.Forms.Label
@@ -323,6 +324,33 @@ Partial Class novy_student
         Id_skupinaLabel.TabIndex = 47
         Id_skupinaLabel.Text = "id skupina:"
         '
+        'Datum_narodeniaLabel1
+        '
+        Datum_narodeniaLabel1.AutoSize = True
+        Datum_narodeniaLabel1.Location = New System.Drawing.Point(627, 125)
+        Datum_narodeniaLabel1.Name = "Datum_narodeniaLabel1"
+        Datum_narodeniaLabel1.Size = New System.Drawing.Size(89, 13)
+        Datum_narodeniaLabel1.TabIndex = 50
+        Datum_narodeniaLabel1.Text = "datum narodenia:"
+        '
+        'Op_vydany_dnaLabel1
+        '
+        Op_vydany_dnaLabel1.AutoSize = True
+        Op_vydany_dnaLabel1.Location = New System.Drawing.Point(626, 310)
+        Op_vydany_dnaLabel1.Name = "Op_vydany_dnaLabel1"
+        Op_vydany_dnaLabel1.Size = New System.Drawing.Size(80, 13)
+        Op_vydany_dnaLabel1.TabIndex = 51
+        Op_vydany_dnaLabel1.Text = "op vydany dna:"
+        '
+        'Zz_datum_narodeniaLabel1
+        '
+        Zz_datum_narodeniaLabel1.AutoSize = True
+        Zz_datum_narodeniaLabel1.Location = New System.Drawing.Point(587, 506)
+        Zz_datum_narodeniaLabel1.Name = "Zz_datum_narodeniaLabel1"
+        Zz_datum_narodeniaLabel1.Size = New System.Drawing.Size(102, 13)
+        Zz_datum_narodeniaLabel1.TabIndex = 52
+        Zz_datum_narodeniaLabel1.Text = "zz datum narodenia:"
+        '
         'PriezviskoTextBox
         '
         Me.PriezviskoTextBox.Location = New System.Drawing.Point(252, 57)
@@ -546,56 +574,35 @@ Partial Class novy_student
         Me.TableAdapterManager.UpdateOrder = internat.db_internatDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.vychovavatelTableAdapter = Nothing
         '
-        'Datum_narodeniaLabel1
-        '
-        Datum_narodeniaLabel1.AutoSize = True
-        Datum_narodeniaLabel1.Location = New System.Drawing.Point(627, 125)
-        Datum_narodeniaLabel1.Name = "Datum_narodeniaLabel1"
-        Datum_narodeniaLabel1.Size = New System.Drawing.Size(89, 13)
-        Datum_narodeniaLabel1.TabIndex = 50
-        Datum_narodeniaLabel1.Text = "datum narodenia:"
-        '
         'Datum_narodeniaTextBox
         '
-        Me.Datum_narodeniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentBindingSource, "datum_narodenia", True))
         Me.Datum_narodeniaTextBox.Location = New System.Drawing.Point(722, 122)
         Me.Datum_narodeniaTextBox.Name = "Datum_narodeniaTextBox"
         Me.Datum_narodeniaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Datum_narodeniaTextBox.TabIndex = 51
         '
-        'Op_vydany_dnaLabel1
-        '
-        Op_vydany_dnaLabel1.AutoSize = True
-        Op_vydany_dnaLabel1.Location = New System.Drawing.Point(626, 310)
-        Op_vydany_dnaLabel1.Name = "Op_vydany_dnaLabel1"
-        Op_vydany_dnaLabel1.Size = New System.Drawing.Size(80, 13)
-        Op_vydany_dnaLabel1.TabIndex = 51
-        Op_vydany_dnaLabel1.Text = "op vydany dna:"
-        '
         'Op_vydany_dnaTextBox
         '
-        Me.Op_vydany_dnaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentBindingSource, "op_vydany_dna", True))
         Me.Op_vydany_dnaTextBox.Location = New System.Drawing.Point(712, 307)
         Me.Op_vydany_dnaTextBox.Name = "Op_vydany_dnaTextBox"
         Me.Op_vydany_dnaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Op_vydany_dnaTextBox.TabIndex = 52
         '
-        'Zz_datum_narodeniaLabel1
-        '
-        Zz_datum_narodeniaLabel1.AutoSize = True
-        Zz_datum_narodeniaLabel1.Location = New System.Drawing.Point(587, 506)
-        Zz_datum_narodeniaLabel1.Name = "Zz_datum_narodeniaLabel1"
-        Zz_datum_narodeniaLabel1.Size = New System.Drawing.Size(102, 13)
-        Zz_datum_narodeniaLabel1.TabIndex = 52
-        Zz_datum_narodeniaLabel1.Text = "zz datum narodenia:"
-        '
         'Zz_datum_narodeniaTextBox
         '
-        Me.Zz_datum_narodeniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentBindingSource, "zz_datum_narodenia", True))
         Me.Zz_datum_narodeniaTextBox.Location = New System.Drawing.Point(695, 503)
         Me.Zz_datum_narodeniaTextBox.Name = "Zz_datum_narodeniaTextBox"
         Me.Zz_datum_narodeniaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Zz_datum_narodeniaTextBox.TabIndex = 53
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(614, 35)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 54
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'novy_student
         '
@@ -603,6 +610,7 @@ Partial Class novy_student
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(933, 745)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Zz_datum_narodeniaLabel1)
         Me.Controls.Add(Me.Zz_datum_narodeniaTextBox)
         Me.Controls.Add(Op_vydany_dnaLabel1)
@@ -703,4 +711,5 @@ Partial Class novy_student
     Friend WithEvents Datum_narodeniaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Op_vydany_dnaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Zz_datum_narodeniaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

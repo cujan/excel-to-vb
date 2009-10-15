@@ -24,14 +24,21 @@
 
     Private Sub uloz_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles uloz.Click
 
-        Datum_narodeniaTextBox.Text = Datum_narodeniaDateTimePicker.Text
-        Op_vydany_dnaTextBox.Text = Op_vydany_dnaDateTimePicker.Text
-        Zz_datum_narodeniaTextBox.Text = Zz_datum_narodeniaDateTimePicker.Text
+        'Datum_narodeniaTextBox.Text = Datum_narodeniaDateTimePicker.Text
+        'Op_vydany_dnaTextBox.Text = Op_vydany_dnaDateTimePicker.Text
+        'Zz_datum_narodeniaTextBox.Text = Zz_datum_narodeniaDateTimePicker.Text
 
 
         Dim priezvisko As String = PriezviskoTextBox.Text
         Dim meno As String = MenoTextBox.Text
-        Dim datum_narodenia As Date = Datum_narodeniaTextBox.Text
+
+
+
+        If Datum_narodeniaTextBox.Text = "" Then
+           datum_narodenia as nul 
+        End If
+
+
         Dim miesto_narodenia As String = Miesto_narodeniaTextBox.Text
         Dim rodne_cislo As String = Rodne_cisloTextBox.Text
         Dim bydlisko As String = BydliskoTextBox.Text
@@ -69,5 +76,10 @@
 
     Private Sub Datum_narodeniaDateTimePicker_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Datum_narodeniaDateTimePicker.ValueChanged
 
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim hlaska As String = Datum_narodeniaDateTimePicker.Text
+        MsgBox(hlaska)
     End Sub
 End Class
