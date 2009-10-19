@@ -78,6 +78,10 @@ Partial Class novy_student
         Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StudentTableAdapter = New internat.db_internatDataSetTableAdapters.studentTableAdapter
         Me.TableAdapterManager = New internat.db_internatDataSetTableAdapters.TableAdapterManager
+        Me.datum_narodeniaMaskedTextBox = New System.Windows.Forms.MaskedTextBox
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.op_vydany_dnaMaskedTextBox = New System.Windows.Forms.MaskedTextBox
+        Me.zz_datum_narodeniaMaskedTextBox = New System.Windows.Forms.MaskedTextBox
         PriezviskoLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         Datum_narodeniaLabel = New System.Windows.Forms.Label
@@ -543,12 +547,51 @@ Partial Class novy_student
         Me.TableAdapterManager.UpdateOrder = internat.db_internatDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.vychovavatelTableAdapter = Nothing
         '
+        'datum_narodeniaMaskedTextBox
+        '
+        Me.datum_narodeniaMaskedTextBox.Location = New System.Drawing.Point(479, 113)
+        Me.datum_narodeniaMaskedTextBox.Mask = "00.00.0000"
+        Me.datum_narodeniaMaskedTextBox.Name = "datum_narodeniaMaskedTextBox"
+        Me.datum_narodeniaMaskedTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.datum_narodeniaMaskedTextBox.TabIndex = 51
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(577, 211)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 52
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'op_vydany_dnaMaskedTextBox
+        '
+        Me.op_vydany_dnaMaskedTextBox.Location = New System.Drawing.Point(479, 292)
+        Me.op_vydany_dnaMaskedTextBox.Mask = "00/00/0000"
+        Me.op_vydany_dnaMaskedTextBox.Name = "op_vydany_dnaMaskedTextBox"
+        Me.op_vydany_dnaMaskedTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.op_vydany_dnaMaskedTextBox.TabIndex = 53
+        Me.op_vydany_dnaMaskedTextBox.ValidatingType = GetType(Date)
+        '
+        'zz_datum_narodeniaMaskedTextBox
+        '
+        Me.zz_datum_narodeniaMaskedTextBox.Location = New System.Drawing.Point(499, 499)
+        Me.zz_datum_narodeniaMaskedTextBox.Mask = "00/00/0000"
+        Me.zz_datum_narodeniaMaskedTextBox.Name = "zz_datum_narodeniaMaskedTextBox"
+        Me.zz_datum_narodeniaMaskedTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.zz_datum_narodeniaMaskedTextBox.TabIndex = 54
+        Me.zz_datum_narodeniaMaskedTextBox.ValidatingType = GetType(Date)
+        '
         'novy_student
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(933, 745)
+        Me.Controls.Add(Me.zz_datum_narodeniaMaskedTextBox)
+        Me.Controls.Add(Me.op_vydany_dnaMaskedTextBox)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.datum_narodeniaMaskedTextBox)
         Me.Controls.Add(Me.uloz)
         Me.Controls.Add(Me.zavriet_kartu_button)
         Me.Controls.Add(Me.skupinaComboBox)
@@ -640,4 +683,8 @@ Partial Class novy_student
     Friend WithEvents StudentBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents StudentTableAdapter As internat.db_internatDataSetTableAdapters.studentTableAdapter
     Friend WithEvents TableAdapterManager As internat.db_internatDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents datum_narodeniaMaskedTextBox As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents op_vydany_dnaMaskedTextBox As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents zz_datum_narodeniaMaskedTextBox As System.Windows.Forms.MaskedTextBox
 End Class

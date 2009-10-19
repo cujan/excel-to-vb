@@ -31,13 +31,13 @@
 
         Dim priezvisko As String = PriezviskoTextBox.Text
         Dim meno As String = MenoTextBox.Text
-        Dim datum_narodenia As Date?
+        Dim datum_narodenia As Nullable(Of Date) = datum_narodeniaMaskedTextBox.Text
 
-        If Datum_narodeniaDateTimePicker.Checked = False Then
-            datum_narodenia = Nothing
-        Else
-            datum_narodenia = CDate(Datum_narodeniaDateTimePicker.Text)
-        End If
+        'If Datum_narodeniaDateTimePicker.Checked = False Then
+        'datum_narodenia = Nothing
+        'Else
+        'datum_narodenia = CDate(Datum_narodeniaDateTimePicker.Text)
+        'End If
 
         Dim miesto_narodenia As String = Miesto_narodeniaTextBox.Text
         Dim rodne_cislo As String = Rodne_cisloTextBox.Text
@@ -46,12 +46,12 @@
         Dim cislo_op As String = Cislo_opTextBox.Text
         Dim op_vydal As String = Op_vydalTextBox.Text
 
-        Dim op_datum_vydania As Date?
-        If Op_vydany_dnaDateTimePicker.Checked = False Then
-            op_datum_vydania = Nothing
-        Else
-            op_datum_vydania = CDate(Op_vydany_dnaDateTimePicker.Text)
-        End If
+        Dim op_datum_vydania As Date? = op_vydany_dnaMaskedTextBox.Text
+        'If Op_vydany_dnaDateTimePicker.Checked = False Then
+        'op_datum_vydania = Nothing
+        'Else
+        'op_datum_vydania = CDate(Op_vydany_dnaDateTimePicker.Text)
+        'End If
 
         Dim skola_odkial_prichadza As String = Skola_odkial_prichadzaTextBox.Text
         Dim skola_ktoru_navstevuje As String = Skola_ktoru_bude_navstevovatTextBox.Text
@@ -61,12 +61,12 @@
         Dim zz_meno As String = Zz_menoTextBox.Text
         Dim zz_priezvisko As String = Zz_priezviskoTextBox.Text
 
-        Dim zz_datum_narodenia As Date?
-        If Zz_datum_narodeniaDateTimePicker.Checked = False Then
-            zz_datum_narodenia = Nothing
-        Else
-            zz_datum_narodenia = CDate(Zz_datum_narodeniaDateTimePicker.Text)
-        End If
+        Dim zz_datum_narodenia As Date? = zz_datum_narodeniaMaskedTextBox.Text
+        'If Zz_datum_narodeniaDateTimePicker.Checked = False Then
+        'zz_datum_narodenia = Nothing
+        'Else
+        'zz_datum_narodenia = CDate(Zz_datum_narodeniaDateTimePicker.Text)
+        'End If
 
         Dim zz_povolanie As String = Zz_povolanieTextBox.Text
         Dim zz_adresa_zamestnavatela As String = Zz_adresa_zamestnavatelaTextBox.Text
@@ -80,6 +80,9 @@
 
         Dim com As New SqlCeCommand("INSERT INTO student (priezvisko, meno, datum_narodenia, miesto_narodenia, rodne_cislo, bydlisko, telefon, cislo_op, op_vydal, op_vydany_dna, skola_odkial_prichadza, skola_ktoru_bude_navstevovat, studijny_odbor, vzdialenost_bydlisko_internat, zaluby, zz_meno, zz_priezvisko, zz_datum_narodenia, zz_povolanie, zz_adresa_zamestnavatela, zz_telefon, zz_poznamka, id_skupina) VALUES ('" & priezvisko & "','" & meno & "','" & datum_narodenia & "','" & miesto_narodenia & "','" & rodne_cislo & "','" & bydlisko & "','" & telefon & "','" & cislo_op & "','" & op_vydal & "','" & op_datum_vydania & "','" & skola_odkial_prichadza & "','" & skola_ktoru_navstevuje & "','" & studijny_odbor & "','" & vzdialenost_bydlisko_internat & "','" & zaluby & "','" & zz_meno & "','" & zz_priezvisko & "','" & zz_datum_narodenia & "','" & zz_povolanie & "','" & zz_adresa_zamestnavatela & "','" & zz_telefon & "','" & zz_poznamka & "','" & id_skupina & "')", con)
         'Dim com As New SqlCeCommand("INSERT INTO student (priezvisko) VALUES ('" & priezvisko & "')", con)
+
+
+
         com.ExecuteNonQuery()
         con.Close()
 
@@ -95,5 +98,10 @@
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim hlaska As String = Datum_narodeniaDateTimePicker.Text
         MsgBox(hlaska)
+    End Sub
+
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim sprava As String = datum_narodeniaMaskedTextBox.Text
+        MsgBox(sprava)
     End Sub
 End Class
