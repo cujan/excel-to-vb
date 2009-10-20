@@ -26,8 +26,6 @@ Partial Class evidencia_studentov
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(evidencia_studentov))
         Me.StudentBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.StudentDataSet = New internat.studentDataSet
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
@@ -40,20 +38,24 @@ Partial Class evidencia_studentov
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.StudentBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.StudentDataGridView = New System.Windows.Forms.DataGridView
+        Me.id_skupina = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.zavriet_kartu_button = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.id_skupina = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StudentDataSet = New internat.studentDataSet
         Me.StudentTableAdapter = New internat.studentDataSetTableAdapters.studentTableAdapter
         Me.TableAdapterManager = New internat.studentDataSetTableAdapters.TableAdapterManager
-        Me.zavriet_kartu_button = New System.Windows.Forms.Button
-        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.hladajTextBox = New System.Windows.Forms.TextBox
         CType(Me.StudentBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StudentBindingNavigator.SuspendLayout()
+        CType(Me.StudentDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.StudentDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StudentBindingNavigator
@@ -82,16 +84,6 @@ Partial Class evidencia_studentov
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'StudentBindingSource
-        '
-        Me.StudentBindingSource.DataMember = "student"
-        Me.StudentBindingSource.DataSource = Me.StudentDataSet
-        '
-        'StudentDataSet
-        '
-        Me.StudentDataSet.DataSetName = "studentDataSet"
-        Me.StudentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -195,6 +187,31 @@ Partial Class evidencia_studentov
         Me.StudentDataGridView.Size = New System.Drawing.Size(903, 372)
         Me.StudentDataGridView.TabIndex = 1
         '
+        'id_skupina
+        '
+        Me.id_skupina.DataPropertyName = "id_skupina"
+        Me.id_skupina.HeaderText = "id_skupina"
+        Me.id_skupina.Name = "id_skupina"
+        Me.id_skupina.ReadOnly = True
+        '
+        'zavriet_kartu_button
+        '
+        Me.zavriet_kartu_button.Location = New System.Drawing.Point(245, 47)
+        Me.zavriet_kartu_button.Name = "zavriet_kartu_button"
+        Me.zavriet_kartu_button.Size = New System.Drawing.Size(136, 23)
+        Me.zavriet_kartu_button.TabIndex = 2
+        Me.zavriet_kartu_button.Text = "Zavrieť kartu"
+        Me.zavriet_kartu_button.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(77, 52)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Label1"
+        '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "priezvisko"
@@ -223,12 +240,15 @@ Partial Class evidencia_studentov
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
-        'id_skupina
+        'StudentBindingSource
         '
-        Me.id_skupina.DataPropertyName = "id_skupina"
-        Me.id_skupina.HeaderText = "id_skupina"
-        Me.id_skupina.Name = "id_skupina"
-        Me.id_skupina.ReadOnly = True
+        Me.StudentBindingSource.DataMember = "student"
+        Me.StudentBindingSource.DataSource = Me.StudentDataSet
+        '
+        'StudentDataSet
+        '
+        Me.StudentDataSet.DataSetName = "studentDataSet"
+        Me.StudentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'StudentTableAdapter
         '
@@ -240,23 +260,21 @@ Partial Class evidencia_studentov
         Me.TableAdapterManager.studentTableAdapter = Me.StudentTableAdapter
         Me.TableAdapterManager.UpdateOrder = internat.studentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'zavriet_kartu_button
+        'Label2
         '
-        Me.zavriet_kartu_button.Location = New System.Drawing.Point(245, 47)
-        Me.zavriet_kartu_button.Name = "zavriet_kartu_button"
-        Me.zavriet_kartu_button.Size = New System.Drawing.Size(136, 23)
-        Me.zavriet_kartu_button.TabIndex = 2
-        Me.zavriet_kartu_button.Text = "Zavrieť kartu"
-        Me.zavriet_kartu_button.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(43, 107)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Hľadaj"
         '
-        'Label1
+        'hladajTextBox
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(77, 52)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Label1"
+        Me.hladajTextBox.Location = New System.Drawing.Point(98, 104)
+        Me.hladajTextBox.Name = "hladajTextBox"
+        Me.hladajTextBox.Size = New System.Drawing.Size(227, 20)
+        Me.hladajTextBox.TabIndex = 5
         '
         'evidencia_studentov
         '
@@ -264,6 +282,8 @@ Partial Class evidencia_studentov
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(927, 526)
+        Me.Controls.Add(Me.hladajTextBox)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.zavriet_kartu_button)
         Me.Controls.Add(Me.StudentDataGridView)
@@ -274,9 +294,9 @@ Partial Class evidencia_studentov
         CType(Me.StudentBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StudentBindingNavigator.ResumeLayout(False)
         Me.StudentBindingNavigator.PerformLayout()
+        CType(Me.StudentDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.StudentDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -306,4 +326,6 @@ Partial Class evidencia_studentov
     Friend WithEvents id_skupina As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents zavriet_kartu_button As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents hladajTextBox As System.Windows.Forms.TextBox
 End Class
