@@ -46,6 +46,7 @@ Partial Class novy_student
         Dim Zz_telefonLabel As System.Windows.Forms.Label
         Dim Zz_poznamkaLabel As System.Windows.Forms.Label
         Dim Id_skupinaLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(novy_student))
         Me.PriezviskoTextBox = New System.Windows.Forms.TextBox
         Me.MenoTextBox = New System.Windows.Forms.TextBox
         Me.Datum_narodeniaDateTimePicker = New System.Windows.Forms.DateTimePicker
@@ -78,6 +79,11 @@ Partial Class novy_student
         Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StudentTableAdapter = New internat.db_internatDataSetTableAdapters.studentTableAdapter
         Me.TableAdapterManager = New internat.db_internatDataSetTableAdapters.TableAdapterManager
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox
+        Me.zz_label = New System.Windows.Forms.Label
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         PriezviskoLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         Datum_narodeniaLabel = New System.Windows.Forms.Label
@@ -105,227 +111,228 @@ Partial Class novy_student
         CType(Me.SkupinaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_internatDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PriezviskoLabel
         '
         PriezviskoLabel.AutoSize = True
-        PriezviskoLabel.Location = New System.Drawing.Point(95, 60)
+        PriezviskoLabel.Location = New System.Drawing.Point(216, 97)
         PriezviskoLabel.Name = "PriezviskoLabel"
-        PriezviskoLabel.Size = New System.Drawing.Size(57, 13)
+        PriezviskoLabel.Size = New System.Drawing.Size(58, 13)
         PriezviskoLabel.TabIndex = 3
-        PriezviskoLabel.Text = "priezvisko:"
+        PriezviskoLabel.Text = "Priezvisko:"
         '
         'MenoLabel
         '
         MenoLabel.AutoSize = True
-        MenoLabel.Location = New System.Drawing.Point(95, 86)
+        MenoLabel.Location = New System.Drawing.Point(237, 71)
         MenoLabel.Name = "MenoLabel"
-        MenoLabel.Size = New System.Drawing.Size(36, 13)
+        MenoLabel.Size = New System.Drawing.Size(37, 13)
         MenoLabel.TabIndex = 5
-        MenoLabel.Text = "meno:"
+        MenoLabel.Text = "Meno:"
         '
         'Datum_narodeniaLabel
         '
         Datum_narodeniaLabel.AutoSize = True
-        Datum_narodeniaLabel.Location = New System.Drawing.Point(95, 113)
+        Datum_narodeniaLabel.Location = New System.Drawing.Point(183, 124)
         Datum_narodeniaLabel.Name = "Datum_narodeniaLabel"
-        Datum_narodeniaLabel.Size = New System.Drawing.Size(89, 13)
+        Datum_narodeniaLabel.Size = New System.Drawing.Size(91, 13)
         Datum_narodeniaLabel.TabIndex = 7
-        Datum_narodeniaLabel.Text = "datum narodenia:"
+        Datum_narodeniaLabel.Text = "Dátum narodenia:"
         '
         'Miesto_narodeniaLabel
         '
         Miesto_narodeniaLabel.AutoSize = True
-        Miesto_narodeniaLabel.Location = New System.Drawing.Point(95, 138)
+        Miesto_narodeniaLabel.Location = New System.Drawing.Point(183, 257)
         Miesto_narodeniaLabel.Name = "Miesto_narodeniaLabel"
-        Miesto_narodeniaLabel.Size = New System.Drawing.Size(90, 13)
+        Miesto_narodeniaLabel.Size = New System.Drawing.Size(91, 13)
         Miesto_narodeniaLabel.TabIndex = 9
-        Miesto_narodeniaLabel.Text = "miesto narodenia:"
+        Miesto_narodeniaLabel.Text = "Miesto narodenia:"
         '
         'Rodne_cisloLabel
         '
         Rodne_cisloLabel.AutoSize = True
-        Rodne_cisloLabel.Location = New System.Drawing.Point(95, 164)
+        Rodne_cisloLabel.Location = New System.Drawing.Point(206, 283)
         Rodne_cisloLabel.Name = "Rodne_cisloLabel"
-        Rodne_cisloLabel.Size = New System.Drawing.Size(61, 13)
+        Rodne_cisloLabel.Size = New System.Drawing.Size(68, 13)
         Rodne_cisloLabel.TabIndex = 11
-        Rodne_cisloLabel.Text = "rodne cislo:"
+        Rodne_cisloLabel.Text = "Rodné číslo:"
         '
         'BydliskoLabel
         '
         BydliskoLabel.AutoSize = True
-        BydliskoLabel.Location = New System.Drawing.Point(95, 190)
+        BydliskoLabel.Location = New System.Drawing.Point(225, 149)
         BydliskoLabel.Name = "BydliskoLabel"
-        BydliskoLabel.Size = New System.Drawing.Size(48, 13)
+        BydliskoLabel.Size = New System.Drawing.Size(49, 13)
         BydliskoLabel.TabIndex = 13
-        BydliskoLabel.Text = "bydlisko:"
+        BydliskoLabel.Text = "Bydlisko:"
         '
         'TelefonLabel
         '
         TelefonLabel.AutoSize = True
-        TelefonLabel.Location = New System.Drawing.Point(95, 216)
+        TelefonLabel.Location = New System.Drawing.Point(228, 175)
         TelefonLabel.Name = "TelefonLabel"
-        TelefonLabel.Size = New System.Drawing.Size(42, 13)
+        TelefonLabel.Size = New System.Drawing.Size(46, 13)
         TelefonLabel.TabIndex = 15
-        TelefonLabel.Text = "telefon:"
+        TelefonLabel.Text = "Telefón:"
         '
         'Cislo_opLabel
         '
         Cislo_opLabel.AutoSize = True
-        Cislo_opLabel.Location = New System.Drawing.Point(95, 242)
+        Cislo_opLabel.Location = New System.Drawing.Point(526, 257)
         Cislo_opLabel.Name = "Cislo_opLabel"
-        Cislo_opLabel.Size = New System.Drawing.Size(46, 13)
+        Cislo_opLabel.Size = New System.Drawing.Size(52, 13)
         Cislo_opLabel.TabIndex = 17
-        Cislo_opLabel.Text = "cislo op:"
+        Cislo_opLabel.Text = "Číslo OP:"
         '
         'Op_vydalLabel
         '
         Op_vydalLabel.AutoSize = True
-        Op_vydalLabel.Location = New System.Drawing.Point(95, 268)
+        Op_vydalLabel.Location = New System.Drawing.Point(525, 283)
         Op_vydalLabel.Name = "Op_vydalLabel"
-        Op_vydalLabel.Size = New System.Drawing.Size(50, 13)
+        Op_vydalLabel.Size = New System.Drawing.Size(53, 13)
         Op_vydalLabel.TabIndex = 19
-        Op_vydalLabel.Text = "op vydal:"
+        Op_vydalLabel.Text = "OP vydal:"
         '
         'Op_vydany_dnaLabel
         '
         Op_vydany_dnaLabel.AutoSize = True
-        Op_vydany_dnaLabel.Location = New System.Drawing.Point(95, 295)
+        Op_vydany_dnaLabel.Location = New System.Drawing.Point(495, 310)
         Op_vydany_dnaLabel.Name = "Op_vydany_dnaLabel"
-        Op_vydany_dnaLabel.Size = New System.Drawing.Size(80, 13)
+        Op_vydany_dnaLabel.Size = New System.Drawing.Size(83, 13)
         Op_vydany_dnaLabel.TabIndex = 21
-        Op_vydany_dnaLabel.Text = "op vydany dna:"
+        Op_vydany_dnaLabel.Text = "OP vydaný dňa:"
         '
         'Skola_odkial_prichadzaLabel
         '
         Skola_odkial_prichadzaLabel.AutoSize = True
-        Skola_odkial_prichadzaLabel.Location = New System.Drawing.Point(95, 320)
+        Skola_odkial_prichadzaLabel.Location = New System.Drawing.Point(194, 386)
         Skola_odkial_prichadzaLabel.Name = "Skola_odkial_prichadzaLabel"
-        Skola_odkial_prichadzaLabel.Size = New System.Drawing.Size(115, 13)
+        Skola_odkial_prichadzaLabel.Size = New System.Drawing.Size(80, 13)
         Skola_odkial_prichadzaLabel.TabIndex = 23
-        Skola_odkial_prichadzaLabel.Text = "skola odkial prichadza:"
+        Skola_odkial_prichadzaLabel.Text = "Súčasná škola:"
         '
         'Skola_ktoru_bude_navstevovatLabel
         '
         Skola_ktoru_bude_navstevovatLabel.AutoSize = True
-        Skola_ktoru_bude_navstevovatLabel.Location = New System.Drawing.Point(95, 346)
+        Skola_ktoru_bude_navstevovatLabel.Location = New System.Drawing.Point(462, 386)
         Skola_ktoru_bude_navstevovatLabel.Name = "Skola_ktoru_bude_navstevovatLabel"
-        Skola_ktoru_bude_navstevovatLabel.Size = New System.Drawing.Size(151, 13)
+        Skola_ktoru_bude_navstevovatLabel.Size = New System.Drawing.Size(115, 13)
         Skola_ktoru_bude_navstevovatLabel.TabIndex = 25
-        Skola_ktoru_bude_navstevovatLabel.Text = "skola ktoru bude navstevovat:"
+        Skola_ktoru_bude_navstevovatLabel.Text = "Predchádzajúca škola:"
         '
         'Studijny_odborLabel
         '
         Studijny_odborLabel.AutoSize = True
-        Studijny_odborLabel.Location = New System.Drawing.Point(95, 372)
+        Studijny_odborLabel.Location = New System.Drawing.Point(197, 412)
         Studijny_odborLabel.Name = "Studijny_odborLabel"
-        Studijny_odborLabel.Size = New System.Drawing.Size(75, 13)
+        Studijny_odborLabel.Size = New System.Drawing.Size(77, 13)
         Studijny_odborLabel.TabIndex = 27
-        Studijny_odborLabel.Text = "studijny odbor:"
+        Studijny_odborLabel.Text = "Štúdijný odbor:"
         '
         'Vzdialenost_bydlisko_internatLabel
         '
         Vzdialenost_bydlisko_internatLabel.AutoSize = True
-        Vzdialenost_bydlisko_internatLabel.Location = New System.Drawing.Point(95, 398)
+        Vzdialenost_bydlisko_internatLabel.Location = New System.Drawing.Point(112, 306)
         Vzdialenost_bydlisko_internatLabel.Name = "Vzdialenost_bydlisko_internatLabel"
-        Vzdialenost_bydlisko_internatLabel.Size = New System.Drawing.Size(142, 13)
+        Vzdialenost_bydlisko_internatLabel.Size = New System.Drawing.Size(162, 13)
         Vzdialenost_bydlisko_internatLabel.TabIndex = 29
-        Vzdialenost_bydlisko_internatLabel.Text = "vzdialenost bydlisko internat:"
+        Vzdialenost_bydlisko_internatLabel.Text = "Vzdialenosť od trvalého bydliska:"
         '
         'ZalubyLabel
         '
         ZalubyLabel.AutoSize = True
-        ZalubyLabel.Location = New System.Drawing.Point(95, 424)
+        ZalubyLabel.Location = New System.Drawing.Point(230, 438)
         ZalubyLabel.Name = "ZalubyLabel"
-        ZalubyLabel.Size = New System.Drawing.Size(40, 13)
+        ZalubyLabel.Size = New System.Drawing.Size(44, 13)
         ZalubyLabel.TabIndex = 31
-        ZalubyLabel.Text = "zaluby:"
+        ZalubyLabel.Text = "Záľuby:"
         '
         'Zz_menoLabel
         '
         Zz_menoLabel.AutoSize = True
-        Zz_menoLabel.Location = New System.Drawing.Point(95, 450)
+        Zz_menoLabel.Location = New System.Drawing.Point(237, 541)
         Zz_menoLabel.Name = "Zz_menoLabel"
-        Zz_menoLabel.Size = New System.Drawing.Size(49, 13)
+        Zz_menoLabel.Size = New System.Drawing.Size(37, 13)
         Zz_menoLabel.TabIndex = 33
-        Zz_menoLabel.Text = "zz meno:"
+        Zz_menoLabel.Text = "Meno:"
         '
         'Zz_priezviskoLabel
         '
         Zz_priezviskoLabel.AutoSize = True
-        Zz_priezviskoLabel.Location = New System.Drawing.Point(95, 476)
+        Zz_priezviskoLabel.Location = New System.Drawing.Point(519, 541)
         Zz_priezviskoLabel.Name = "Zz_priezviskoLabel"
-        Zz_priezviskoLabel.Size = New System.Drawing.Size(70, 13)
+        Zz_priezviskoLabel.Size = New System.Drawing.Size(58, 13)
         Zz_priezviskoLabel.TabIndex = 35
-        Zz_priezviskoLabel.Text = "zz priezvisko:"
+        Zz_priezviskoLabel.Text = "Priezvisko:"
         '
         'Zz_datum_narodeniaLabel
         '
         Zz_datum_narodeniaLabel.AutoSize = True
-        Zz_datum_narodeniaLabel.Location = New System.Drawing.Point(95, 503)
+        Zz_datum_narodeniaLabel.Location = New System.Drawing.Point(183, 568)
         Zz_datum_narodeniaLabel.Name = "Zz_datum_narodeniaLabel"
-        Zz_datum_narodeniaLabel.Size = New System.Drawing.Size(102, 13)
+        Zz_datum_narodeniaLabel.Size = New System.Drawing.Size(91, 13)
         Zz_datum_narodeniaLabel.TabIndex = 37
-        Zz_datum_narodeniaLabel.Text = "zz datum narodenia:"
+        Zz_datum_narodeniaLabel.Text = "Dátum narodenia:"
         '
         'Zz_povolanieLabel
         '
         Zz_povolanieLabel.AutoSize = True
-        Zz_povolanieLabel.Location = New System.Drawing.Point(95, 528)
+        Zz_povolanieLabel.Location = New System.Drawing.Point(520, 568)
         Zz_povolanieLabel.Name = "Zz_povolanieLabel"
-        Zz_povolanieLabel.Size = New System.Drawing.Size(69, 13)
+        Zz_povolanieLabel.Size = New System.Drawing.Size(57, 13)
         Zz_povolanieLabel.TabIndex = 39
-        Zz_povolanieLabel.Text = "zz povolanie:"
+        Zz_povolanieLabel.Text = "Povolanie:"
         '
         'Zz_adresa_zamestnavatelaLabel
         '
         Zz_adresa_zamestnavatelaLabel.AutoSize = True
-        Zz_adresa_zamestnavatelaLabel.Location = New System.Drawing.Point(95, 554)
+        Zz_adresa_zamestnavatelaLabel.Location = New System.Drawing.Point(152, 593)
         Zz_adresa_zamestnavatelaLabel.Name = "Zz_adresa_zamestnavatelaLabel"
-        Zz_adresa_zamestnavatelaLabel.Size = New System.Drawing.Size(132, 13)
+        Zz_adresa_zamestnavatelaLabel.Size = New System.Drawing.Size(122, 13)
         Zz_adresa_zamestnavatelaLabel.TabIndex = 41
-        Zz_adresa_zamestnavatelaLabel.Text = "zz adresa zamestnavatela:"
+        Zz_adresa_zamestnavatelaLabel.Text = "Adresa zamestnávateľa:"
         '
         'Zz_telefonLabel
         '
         Zz_telefonLabel.AutoSize = True
-        Zz_telefonLabel.Location = New System.Drawing.Point(95, 580)
+        Zz_telefonLabel.Location = New System.Drawing.Point(228, 619)
         Zz_telefonLabel.Name = "Zz_telefonLabel"
-        Zz_telefonLabel.Size = New System.Drawing.Size(55, 13)
+        Zz_telefonLabel.Size = New System.Drawing.Size(46, 13)
         Zz_telefonLabel.TabIndex = 43
-        Zz_telefonLabel.Text = "zz telefon:"
+        Zz_telefonLabel.Text = "Telefón:"
         '
         'Zz_poznamkaLabel
         '
         Zz_poznamkaLabel.AutoSize = True
-        Zz_poznamkaLabel.Location = New System.Drawing.Point(95, 606)
+        Zz_poznamkaLabel.Location = New System.Drawing.Point(517, 593)
         Zz_poznamkaLabel.Name = "Zz_poznamkaLabel"
-        Zz_poznamkaLabel.Size = New System.Drawing.Size(72, 13)
+        Zz_poznamkaLabel.Size = New System.Drawing.Size(60, 13)
         Zz_poznamkaLabel.TabIndex = 45
-        Zz_poznamkaLabel.Text = "zz poznamka:"
+        Zz_poznamkaLabel.Text = "Poznámka:"
         '
         'Id_skupinaLabel
         '
         Id_skupinaLabel.AutoSize = True
-        Id_skupinaLabel.Location = New System.Drawing.Point(95, 632)
+        Id_skupinaLabel.Location = New System.Drawing.Point(528, 412)
         Id_skupinaLabel.Name = "Id_skupinaLabel"
-        Id_skupinaLabel.Size = New System.Drawing.Size(58, 13)
+        Id_skupinaLabel.Size = New System.Drawing.Size(49, 13)
         Id_skupinaLabel.TabIndex = 47
-        Id_skupinaLabel.Text = "id skupina:"
+        Id_skupinaLabel.Text = "Skupina:"
         '
         'PriezviskoTextBox
         '
-        Me.PriezviskoTextBox.Location = New System.Drawing.Point(252, 57)
+        Me.PriezviskoTextBox.Location = New System.Drawing.Point(280, 94)
         Me.PriezviskoTextBox.Name = "PriezviskoTextBox"
-        Me.PriezviskoTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.PriezviskoTextBox.Size = New System.Drawing.Size(141, 20)
         Me.PriezviskoTextBox.TabIndex = 4
         '
         'MenoTextBox
         '
-        Me.MenoTextBox.Location = New System.Drawing.Point(252, 83)
+        Me.MenoTextBox.Location = New System.Drawing.Point(280, 68)
         Me.MenoTextBox.Name = "MenoTextBox"
-        Me.MenoTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.MenoTextBox.Size = New System.Drawing.Size(141, 20)
         Me.MenoTextBox.TabIndex = 6
         '
         'Datum_narodeniaDateTimePicker
@@ -333,149 +340,150 @@ Partial Class novy_student
         Me.Datum_narodeniaDateTimePicker.Checked = False
         Me.Datum_narodeniaDateTimePicker.CustomFormat = "dd MM YYYY"
         Me.Datum_narodeniaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.Datum_narodeniaDateTimePicker.Location = New System.Drawing.Point(252, 109)
+        Me.Datum_narodeniaDateTimePicker.Location = New System.Drawing.Point(280, 120)
         Me.Datum_narodeniaDateTimePicker.Name = "Datum_narodeniaDateTimePicker"
         Me.Datum_narodeniaDateTimePicker.ShowCheckBox = True
-        Me.Datum_narodeniaDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.Datum_narodeniaDateTimePicker.Size = New System.Drawing.Size(141, 20)
         Me.Datum_narodeniaDateTimePicker.TabIndex = 8
         '
         'Miesto_narodeniaTextBox
         '
-        Me.Miesto_narodeniaTextBox.Location = New System.Drawing.Point(252, 135)
+        Me.Miesto_narodeniaTextBox.Location = New System.Drawing.Point(280, 254)
         Me.Miesto_narodeniaTextBox.Name = "Miesto_narodeniaTextBox"
-        Me.Miesto_narodeniaTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Miesto_narodeniaTextBox.Size = New System.Drawing.Size(136, 20)
         Me.Miesto_narodeniaTextBox.TabIndex = 10
         '
         'Rodne_cisloTextBox
         '
-        Me.Rodne_cisloTextBox.Location = New System.Drawing.Point(252, 161)
+        Me.Rodne_cisloTextBox.Location = New System.Drawing.Point(280, 280)
         Me.Rodne_cisloTextBox.Name = "Rodne_cisloTextBox"
-        Me.Rodne_cisloTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Rodne_cisloTextBox.Size = New System.Drawing.Size(136, 20)
         Me.Rodne_cisloTextBox.TabIndex = 12
         '
         'BydliskoTextBox
         '
-        Me.BydliskoTextBox.Location = New System.Drawing.Point(252, 187)
+        Me.BydliskoTextBox.Location = New System.Drawing.Point(280, 146)
         Me.BydliskoTextBox.Name = "BydliskoTextBox"
-        Me.BydliskoTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.BydliskoTextBox.Size = New System.Drawing.Size(141, 20)
         Me.BydliskoTextBox.TabIndex = 14
         '
         'TelefonTextBox
         '
-        Me.TelefonTextBox.Location = New System.Drawing.Point(252, 213)
+        Me.TelefonTextBox.Location = New System.Drawing.Point(280, 172)
         Me.TelefonTextBox.Name = "TelefonTextBox"
-        Me.TelefonTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.TelefonTextBox.Size = New System.Drawing.Size(141, 20)
         Me.TelefonTextBox.TabIndex = 16
         '
         'Cislo_opTextBox
         '
-        Me.Cislo_opTextBox.Location = New System.Drawing.Point(252, 239)
+        Me.Cislo_opTextBox.Location = New System.Drawing.Point(583, 254)
         Me.Cislo_opTextBox.Name = "Cislo_opTextBox"
-        Me.Cislo_opTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Cislo_opTextBox.Size = New System.Drawing.Size(108, 20)
         Me.Cislo_opTextBox.TabIndex = 18
         '
         'Op_vydalTextBox
         '
-        Me.Op_vydalTextBox.Location = New System.Drawing.Point(252, 265)
+        Me.Op_vydalTextBox.Location = New System.Drawing.Point(583, 280)
         Me.Op_vydalTextBox.Name = "Op_vydalTextBox"
-        Me.Op_vydalTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Op_vydalTextBox.Size = New System.Drawing.Size(108, 20)
         Me.Op_vydalTextBox.TabIndex = 20
         '
         'Op_vydany_dnaDateTimePicker
         '
         Me.Op_vydany_dnaDateTimePicker.Checked = False
         Me.Op_vydany_dnaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.Op_vydany_dnaDateTimePicker.Location = New System.Drawing.Point(252, 291)
+        Me.Op_vydany_dnaDateTimePicker.Location = New System.Drawing.Point(583, 306)
         Me.Op_vydany_dnaDateTimePicker.Name = "Op_vydany_dnaDateTimePicker"
         Me.Op_vydany_dnaDateTimePicker.ShowCheckBox = True
-        Me.Op_vydany_dnaDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.Op_vydany_dnaDateTimePicker.Size = New System.Drawing.Size(108, 20)
         Me.Op_vydany_dnaDateTimePicker.TabIndex = 22
         '
         'Skola_odkial_prichadzaTextBox
         '
-        Me.Skola_odkial_prichadzaTextBox.Location = New System.Drawing.Point(252, 317)
+        Me.Skola_odkial_prichadzaTextBox.Location = New System.Drawing.Point(280, 383)
         Me.Skola_odkial_prichadzaTextBox.Name = "Skola_odkial_prichadzaTextBox"
-        Me.Skola_odkial_prichadzaTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Skola_odkial_prichadzaTextBox.Size = New System.Drawing.Size(136, 20)
         Me.Skola_odkial_prichadzaTextBox.TabIndex = 24
         '
         'Skola_ktoru_bude_navstevovatTextBox
         '
-        Me.Skola_ktoru_bude_navstevovatTextBox.Location = New System.Drawing.Point(252, 343)
+        Me.Skola_ktoru_bude_navstevovatTextBox.Location = New System.Drawing.Point(583, 383)
         Me.Skola_ktoru_bude_navstevovatTextBox.Name = "Skola_ktoru_bude_navstevovatTextBox"
-        Me.Skola_ktoru_bude_navstevovatTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Skola_ktoru_bude_navstevovatTextBox.Size = New System.Drawing.Size(108, 20)
         Me.Skola_ktoru_bude_navstevovatTextBox.TabIndex = 26
         '
         'Studijny_odborTextBox
         '
-        Me.Studijny_odborTextBox.Location = New System.Drawing.Point(252, 369)
+        Me.Studijny_odborTextBox.Location = New System.Drawing.Point(280, 409)
         Me.Studijny_odborTextBox.Name = "Studijny_odborTextBox"
-        Me.Studijny_odborTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Studijny_odborTextBox.Size = New System.Drawing.Size(136, 20)
         Me.Studijny_odborTextBox.TabIndex = 28
         '
         'Vzdialenost_bydlisko_internatTextBox
         '
-        Me.Vzdialenost_bydlisko_internatTextBox.Location = New System.Drawing.Point(252, 395)
+        Me.Vzdialenost_bydlisko_internatTextBox.Location = New System.Drawing.Point(280, 303)
         Me.Vzdialenost_bydlisko_internatTextBox.Name = "Vzdialenost_bydlisko_internatTextBox"
-        Me.Vzdialenost_bydlisko_internatTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Vzdialenost_bydlisko_internatTextBox.Size = New System.Drawing.Size(136, 20)
         Me.Vzdialenost_bydlisko_internatTextBox.TabIndex = 30
         '
         'ZalubyTextBox
         '
-        Me.ZalubyTextBox.Location = New System.Drawing.Point(252, 421)
+        Me.ZalubyTextBox.Location = New System.Drawing.Point(280, 435)
         Me.ZalubyTextBox.Name = "ZalubyTextBox"
-        Me.ZalubyTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.ZalubyTextBox.Size = New System.Drawing.Size(136, 20)
         Me.ZalubyTextBox.TabIndex = 32
         '
         'Zz_menoTextBox
         '
-        Me.Zz_menoTextBox.Location = New System.Drawing.Point(252, 447)
+        Me.Zz_menoTextBox.Location = New System.Drawing.Point(280, 538)
         Me.Zz_menoTextBox.Name = "Zz_menoTextBox"
-        Me.Zz_menoTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Zz_menoTextBox.Size = New System.Drawing.Size(141, 20)
         Me.Zz_menoTextBox.TabIndex = 34
         '
         'Zz_priezviskoTextBox
         '
-        Me.Zz_priezviskoTextBox.Location = New System.Drawing.Point(252, 473)
+        Me.Zz_priezviskoTextBox.Location = New System.Drawing.Point(583, 538)
         Me.Zz_priezviskoTextBox.Name = "Zz_priezviskoTextBox"
-        Me.Zz_priezviskoTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Zz_priezviskoTextBox.Size = New System.Drawing.Size(108, 20)
         Me.Zz_priezviskoTextBox.TabIndex = 36
         '
         'Zz_datum_narodeniaDateTimePicker
         '
         Me.Zz_datum_narodeniaDateTimePicker.Checked = False
         Me.Zz_datum_narodeniaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.Zz_datum_narodeniaDateTimePicker.Location = New System.Drawing.Point(252, 499)
+        Me.Zz_datum_narodeniaDateTimePicker.Location = New System.Drawing.Point(280, 564)
         Me.Zz_datum_narodeniaDateTimePicker.Name = "Zz_datum_narodeniaDateTimePicker"
         Me.Zz_datum_narodeniaDateTimePicker.ShowCheckBox = True
-        Me.Zz_datum_narodeniaDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.Zz_datum_narodeniaDateTimePicker.Size = New System.Drawing.Size(141, 20)
         Me.Zz_datum_narodeniaDateTimePicker.TabIndex = 38
         '
         'Zz_povolanieTextBox
         '
-        Me.Zz_povolanieTextBox.Location = New System.Drawing.Point(252, 525)
+        Me.Zz_povolanieTextBox.Location = New System.Drawing.Point(583, 565)
         Me.Zz_povolanieTextBox.Name = "Zz_povolanieTextBox"
-        Me.Zz_povolanieTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Zz_povolanieTextBox.Size = New System.Drawing.Size(108, 20)
         Me.Zz_povolanieTextBox.TabIndex = 40
         '
         'Zz_adresa_zamestnavatelaTextBox
         '
-        Me.Zz_adresa_zamestnavatelaTextBox.Location = New System.Drawing.Point(252, 551)
+        Me.Zz_adresa_zamestnavatelaTextBox.Location = New System.Drawing.Point(280, 590)
         Me.Zz_adresa_zamestnavatelaTextBox.Name = "Zz_adresa_zamestnavatelaTextBox"
-        Me.Zz_adresa_zamestnavatelaTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Zz_adresa_zamestnavatelaTextBox.Size = New System.Drawing.Size(141, 20)
         Me.Zz_adresa_zamestnavatelaTextBox.TabIndex = 42
         '
         'Zz_telefonTextBox
         '
-        Me.Zz_telefonTextBox.Location = New System.Drawing.Point(252, 577)
+        Me.Zz_telefonTextBox.Location = New System.Drawing.Point(280, 616)
         Me.Zz_telefonTextBox.Name = "Zz_telefonTextBox"
-        Me.Zz_telefonTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Zz_telefonTextBox.Size = New System.Drawing.Size(141, 20)
         Me.Zz_telefonTextBox.TabIndex = 44
         '
         'Zz_poznamkaTextBox
         '
-        Me.Zz_poznamkaTextBox.Location = New System.Drawing.Point(252, 603)
+        Me.Zz_poznamkaTextBox.Location = New System.Drawing.Point(583, 593)
+        Me.Zz_poznamkaTextBox.Multiline = True
         Me.Zz_poznamkaTextBox.Name = "Zz_poznamkaTextBox"
-        Me.Zz_poznamkaTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Zz_poznamkaTextBox.Size = New System.Drawing.Size(235, 80)
         Me.Zz_poznamkaTextBox.TabIndex = 46
         '
         'skupinaComboBox
@@ -483,9 +491,9 @@ Partial Class novy_student
         Me.skupinaComboBox.DataSource = Me.SkupinaBindingSource
         Me.skupinaComboBox.DisplayMember = "nazov_skupiny"
         Me.skupinaComboBox.FormattingEnabled = True
-        Me.skupinaComboBox.Location = New System.Drawing.Point(252, 632)
+        Me.skupinaComboBox.Location = New System.Drawing.Point(583, 409)
         Me.skupinaComboBox.Name = "skupinaComboBox"
-        Me.skupinaComboBox.Size = New System.Drawing.Size(200, 21)
+        Me.skupinaComboBox.Size = New System.Drawing.Size(108, 21)
         Me.skupinaComboBox.TabIndex = 48
         Me.skupinaComboBox.ValueMember = "id"
         '
@@ -505,21 +513,27 @@ Partial Class novy_student
         '
         'zavriet_kartu_button
         '
-        Me.zavriet_kartu_button.Location = New System.Drawing.Point(479, 76)
+        Me.zavriet_kartu_button.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.zavriet_kartu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.zavriet_kartu_button.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.zavriet_kartu_button.Location = New System.Drawing.Point(344, 12)
         Me.zavriet_kartu_button.Name = "zavriet_kartu_button"
-        Me.zavriet_kartu_button.Size = New System.Drawing.Size(86, 23)
+        Me.zavriet_kartu_button.Size = New System.Drawing.Size(108, 23)
         Me.zavriet_kartu_button.TabIndex = 49
         Me.zavriet_kartu_button.Text = "Zavrieť kartu"
-        Me.zavriet_kartu_button.UseVisualStyleBackColor = True
+        Me.zavriet_kartu_button.UseVisualStyleBackColor = False
         '
         'uloz
         '
-        Me.uloz.Location = New System.Drawing.Point(479, 154)
+        Me.uloz.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.uloz.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.uloz.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.uloz.Location = New System.Drawing.Point(263, 12)
         Me.uloz.Name = "uloz"
         Me.uloz.Size = New System.Drawing.Size(75, 23)
         Me.uloz.TabIndex = 50
         Me.uloz.Text = "Ulož"
-        Me.uloz.UseVisualStyleBackColor = True
+        Me.uloz.UseVisualStyleBackColor = False
         '
         'Db_internatDataSet
         '
@@ -543,12 +557,62 @@ Partial Class novy_student
         Me.TableAdapterManager.UpdateOrder = internat.db_internatDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.vychovavatelTableAdapter = Nothing
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(44, 61)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(110, 130)
+        Me.PictureBox1.TabIndex = 51
+        Me.PictureBox1.TabStop = False
+        '
+        'zz_label
+        '
+        Me.zz_label.AutoSize = True
+        Me.zz_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.zz_label.Location = New System.Drawing.Point(40, 495)
+        Me.zz_label.Name = "zz_label"
+        Me.zz_label.Size = New System.Drawing.Size(155, 20)
+        Me.zz_label.TabIndex = 52
+        Me.zz_label.Text = "Zákonný zástupca"
+        '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(933, 745)
+        Me.ShapeContainer1.TabIndex = 53
+        Me.ShapeContainer1.TabStop = False
+        '
+        'LineShape1
+        '
+        Me.LineShape1.BorderWidth = 2
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 34
+        Me.LineShape1.X2 = 695
+        Me.LineShape1.Y1 = 243
+        Me.LineShape1.Y2 = 243
+        '
+        'LineShape2
+        '
+        Me.LineShape2.BorderWidth = 2
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 34
+        Me.LineShape2.X2 = 695
+        Me.LineShape2.Y1 = 523
+        Me.LineShape2.Y2 = 523
+        '
         'novy_student
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
+        Me.BackColor = System.Drawing.Color.Lavender
         Me.ClientSize = New System.Drawing.Size(933, 745)
+        Me.Controls.Add(Me.zz_label)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.uloz)
         Me.Controls.Add(Me.zavriet_kartu_button)
         Me.Controls.Add(Me.skupinaComboBox)
@@ -597,6 +661,7 @@ Partial Class novy_student
         Me.Controls.Add(Zz_poznamkaLabel)
         Me.Controls.Add(Me.Zz_poznamkaTextBox)
         Me.Controls.Add(Id_skupinaLabel)
+        Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "novy_student"
         Me.Text = "novy_student"
@@ -604,6 +669,7 @@ Partial Class novy_student
         CType(Me.SkupinaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Db_internatDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -640,4 +706,9 @@ Partial Class novy_student
     Friend WithEvents StudentBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents StudentTableAdapter As internat.db_internatDataSetTableAdapters.studentTableAdapter
     Friend WithEvents TableAdapterManager As internat.db_internatDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents zz_label As System.Windows.Forms.Label
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
 End Class
