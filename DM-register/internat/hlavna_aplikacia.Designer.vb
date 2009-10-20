@@ -38,10 +38,12 @@ Partial Class hlavna_aplikacia
         Me.prehlad_ubytovanych_splitter = New System.Windows.Forms.SplitContainer
         Me.sprava_ubytovanych_button = New System.Windows.Forms.Button
         Me.prehlad_ubytovanych_label = New System.Windows.Forms.Label
-        Me.novy_student_button = New System.Windows.Forms.Button
         Me.evidencia_studentov_button = New System.Windows.Forms.Button
+        Me.novy_student_button = New System.Windows.Forms.Button
+        Me.Button1 = New System.Windows.Forms.Button
         Me.StatusStrip.SuspendLayout()
         Me.hlavny_splitter.Panel1.SuspendLayout()
+        Me.hlavny_splitter.Panel2.SuspendLayout()
         Me.hlavny_splitter.SuspendLayout()
         Me.nastavenia_splitter.Panel1.SuspendLayout()
         Me.nastavenia_splitter.Panel2.SuspendLayout()
@@ -65,7 +67,7 @@ Partial Class hlavna_aplikacia
         'ToolStripStatusLabel
         '
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(37, 17)
+        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(38, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
         'hlavny_splitter
@@ -88,6 +90,7 @@ Partial Class hlavna_aplikacia
         '
         Me.hlavny_splitter.Panel2.AutoScroll = True
         Me.hlavny_splitter.Panel2.BackColor = System.Drawing.Color.Lavender
+        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button1)
         Me.hlavny_splitter.Size = New System.Drawing.Size(790, 497)
         Me.hlavny_splitter.SplitterDistance = 160
         Me.hlavny_splitter.SplitterWidth = 1
@@ -250,6 +253,17 @@ Partial Class hlavna_aplikacia
         Me.prehlad_ubytovanych_label.Text = "Správa ubytovaných"
         Me.prehlad_ubytovanych_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'evidencia_studentov_button
+        '
+        Me.evidencia_studentov_button.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.evidencia_studentov_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.evidencia_studentov_button.Location = New System.Drawing.Point(5, 32)
+        Me.evidencia_studentov_button.Name = "evidencia_studentov_button"
+        Me.evidencia_studentov_button.Size = New System.Drawing.Size(132, 23)
+        Me.evidencia_studentov_button.TabIndex = 1
+        Me.evidencia_studentov_button.Text = "Evidencia študentov"
+        Me.evidencia_studentov_button.UseVisualStyleBackColor = False
+        '
         'novy_student_button
         '
         Me.novy_student_button.BackColor = System.Drawing.Color.CornflowerBlue
@@ -261,16 +275,14 @@ Partial Class hlavna_aplikacia
         Me.novy_student_button.Text = "Nový študent"
         Me.novy_student_button.UseVisualStyleBackColor = False
         '
-        'evidencia_studentov_button
+        'Button1
         '
-        Me.evidencia_studentov_button.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.evidencia_studentov_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.evidencia_studentov_button.Location = New System.Drawing.Point(5, 32)
-        Me.evidencia_studentov_button.Name = "evidencia_studentov_button"
-        Me.evidencia_studentov_button.Size = New System.Drawing.Size(132, 23)
-        Me.evidencia_studentov_button.TabIndex = 1
-        Me.evidencia_studentov_button.Text = "Evidencia študentov"
-        Me.evidencia_studentov_button.UseVisualStyleBackColor = False
+        Me.Button1.Location = New System.Drawing.Point(79, 335)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'hlavna_aplikacia
         '
@@ -285,6 +297,7 @@ Partial Class hlavna_aplikacia
         Me.StatusStrip.ResumeLayout(False)
         Me.StatusStrip.PerformLayout()
         Me.hlavny_splitter.Panel1.ResumeLayout(False)
+        Me.hlavny_splitter.Panel2.ResumeLayout(False)
         Me.hlavny_splitter.ResumeLayout(False)
         Me.nastavenia_splitter.Panel1.ResumeLayout(False)
         Me.nastavenia_splitter.Panel2.ResumeLayout(False)
@@ -314,5 +327,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents ciselniky_button As System.Windows.Forms.Button
     Friend WithEvents novy_student_button As System.Windows.Forms.Button
     Friend WithEvents evidencia_studentov_button As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

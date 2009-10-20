@@ -104,4 +104,8 @@ Public Class hlavna_aplikacia
         evidencia_studentov.BringToFront()
 
     End Sub
+
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        pokusny.Show()
+    End Sub
 End Class

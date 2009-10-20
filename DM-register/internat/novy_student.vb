@@ -29,59 +29,65 @@
         'Zz_datum_narodeniaTextBox.Text = Zz_datum_narodeniaDateTimePicker.Text
 
 
-        Dim priezvisko As String = PriezviskoTextBox.Text
-        Dim meno As String = MenoTextBox.Text
-        Dim datum_narodenia As Nullable(Of Date) = datum_narodeniaMaskedTextBox.Text
-
-        'If Datum_narodeniaDateTimePicker.Checked = False Then
-        'datum_narodenia = Nothing
-        'Else
-        'datum_narodenia = CDate(Datum_narodeniaDateTimePicker.Text)
-        'End If
-
-        Dim miesto_narodenia As String = Miesto_narodeniaTextBox.Text
-        Dim rodne_cislo As String = Rodne_cisloTextBox.Text
-        Dim bydlisko As String = BydliskoTextBox.Text
-        Dim telefon As String = TelefonTextBox.Text
-        Dim cislo_op As String = Cislo_opTextBox.Text
-        Dim op_vydal As String = Op_vydalTextBox.Text
-
-        Dim op_datum_vydania As Date? = op_vydany_dnaMaskedTextBox.Text
-        'If Op_vydany_dnaDateTimePicker.Checked = False Then
-        'op_datum_vydania = Nothing
-        'Else
-        'op_datum_vydania = CDate(Op_vydany_dnaDateTimePicker.Text)
-        'End If
-
-        Dim skola_odkial_prichadza As String = Skola_odkial_prichadzaTextBox.Text
-        Dim skola_ktoru_navstevuje As String = Skola_ktoru_bude_navstevovatTextBox.Text
-        Dim studijny_odbor As String = Studijny_odborTextBox.Text
-        Dim vzdialenost_bydlisko_internat As String = Vzdialenost_bydlisko_internatTextBox.Text
-        Dim zaluby As String = ZalubyTextBox.Text
-        Dim zz_meno As String = Zz_menoTextBox.Text
-        Dim zz_priezvisko As String = Zz_priezviskoTextBox.Text
-
-        Dim zz_datum_narodenia As Date? = zz_datum_narodeniaMaskedTextBox.Text
-        'If Zz_datum_narodeniaDateTimePicker.Checked = False Then
-        'zz_datum_narodenia = Nothing
-        'Else
-        'zz_datum_narodenia = CDate(Zz_datum_narodeniaDateTimePicker.Text)
-        'End If
-
-        Dim zz_povolanie As String = Zz_povolanieTextBox.Text
-        Dim zz_adresa_zamestnavatela As String = Zz_adresa_zamestnavatelaTextBox.Text
-        Dim zz_telefon As String = Zz_telefonTextBox.Text
-        Dim zz_poznamka As String = Zz_poznamkaTextBox.Text
-        Dim id_skupina As Integer = skupinaComboBox.SelectedValue
+        
 
 
         Dim con As New SqlCeConnection("Data Source=|DataDirectory|\db_internat.sdf")
         con.Open()
 
-        Dim com As New SqlCeCommand("INSERT INTO student (priezvisko, meno, datum_narodenia, miesto_narodenia, rodne_cislo, bydlisko, telefon, cislo_op, op_vydal, op_vydany_dna, skola_odkial_prichadza, skola_ktoru_bude_navstevovat, studijny_odbor, vzdialenost_bydlisko_internat, zaluby, zz_meno, zz_priezvisko, zz_datum_narodenia, zz_povolanie, zz_adresa_zamestnavatela, zz_telefon, zz_poznamka, id_skupina) VALUES ('" & priezvisko & "','" & meno & "','" & datum_narodenia & "','" & miesto_narodenia & "','" & rodne_cislo & "','" & bydlisko & "','" & telefon & "','" & cislo_op & "','" & op_vydal & "','" & op_datum_vydania & "','" & skola_odkial_prichadza & "','" & skola_ktoru_navstevuje & "','" & studijny_odbor & "','" & vzdialenost_bydlisko_internat & "','" & zaluby & "','" & zz_meno & "','" & zz_priezvisko & "','" & zz_datum_narodenia & "','" & zz_povolanie & "','" & zz_adresa_zamestnavatela & "','" & zz_telefon & "','" & zz_poznamka & "','" & id_skupina & "')", con)
-        'Dim com As New SqlCeCommand("INSERT INTO student (priezvisko) VALUES ('" & priezvisko & "')", con)
+        Dim com As New SqlCeCommand("INSERT INTO student (priezvisko, meno, datum_narodenia, miesto_narodenia, rodne_cislo, bydlisko, telefon, cislo_op, op_vydal, op_vydany_dna, skola_odkial_prichadza, skola_ktoru_bude_navstevovat, studijny_odbor, vzdialenost_bydlisko_internat, zaluby, zz_meno, zz_priezvisko, zz_datum_narodenia, zz_povolanie, zz_adresa_zamestnavatela, zz_telefon, zz_poznamka, id_skupina) VALUES (@priezvisko,@meno,@datum_narodenia,@miesto_narodenia,@rodne_cislo,@bydlisko,@telefon,@cislo_op,@op_vydal,@op_datum_vydania,@skola_odkial_prichadza,@skola_ktoru_navstevuje,@studijny_odbor,@vzdialenost_bydlisko_internat,@zaluby,@zz_meno,@zz_priezvisko,@zz_datum_narodenia,@zz_povolanie,@zz_adresa_zamestnavatela,@zz_telefon,@zz_poznamka,@id_skupina)", con)
 
 
+        With com.Parameters
+
+
+
+            .AddWithValue("priezvisko", PriezviskoTextBox.Text)
+            .AddWithValue("meno", MenoTextBox.Text)
+
+
+            If Datum_narodeniaDateTimePicker.Checked = True Then
+                .AddWithValue("datum_narodenia", Datum_narodeniaDateTimePicker.Value)
+            Else
+                .AddWithValue("datum_narodenia", DBNull.Value)
+            End If
+
+            .AddWithValue("miesto_narodenia", Miesto_narodeniaTextBox.Text)
+            .AddWithValue("rodne_cislo", Rodne_cisloTextBox.Text)
+            .AddWithValue("bydlisko", BydliskoTextBox.Text)
+            .AddWithValue("telefon", TelefonTextBox.Text)
+            .AddWithValue("cislo_op", Cislo_opTextBox.Text)
+            .AddWithValue("op_vydal", Op_vydalTextBox.Text)
+
+
+            If Op_vydany_dnaDateTimePicker.Checked = True Then
+                .AddWithValue("op_datum_vydania", Op_vydany_dnaDateTimePicker.Value)
+            Else
+                .AddWithValue("op_datum_vydania", DBNull.Value)
+            End If
+
+            .AddWithValue("skola_odkial_prichadza", Skola_odkial_prichadzaTextBox.Text)
+            .AddWithValue("skola_ktoru_navstevuje", Skola_ktoru_bude_navstevovatTextBox.Text)
+            .AddWithValue("studijny_odbor", Studijny_odborTextBox.Text)
+            .AddWithValue("vzdialenost_bydlisko_internat", Vzdialenost_bydlisko_internatTextBox.Text)
+            .AddWithValue("zaluby", ZalubyTextBox.Text)
+            .AddWithValue("zz_meno", Zz_menoTextBox.Text)
+            .AddWithValue("zz_priezvisko", Zz_priezviskoTextBox.Text)
+
+
+            If Zz_datum_narodeniaDateTimePicker.Checked = True Then
+                .AddWithValue("zz_datum_narodenia", Zz_datum_narodeniaDateTimePicker.Value)
+            Else
+                .AddWithValue("zz_datum_narodenia", DBNull.Value)
+            End If
+
+            .AddWithValue("zz_povolanie", Zz_povolanieTextBox.Text)
+            .AddWithValue("zz_adresa_zamestnavatela", Zz_adresa_zamestnavatelaTextBox.Text)
+            .AddWithValue("zz_telefon", Zz_telefonTextBox.Text)
+            .AddWithValue("zz_poznamka", Zz_poznamkaTextBox.Text)
+            .AddWithValue("id_skupina", skupinaComboBox.SelectedValue)
+
+        End With
 
         com.ExecuteNonQuery()
         con.Close()
@@ -100,8 +106,7 @@
         MsgBox(hlaska)
     End Sub
 
-    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Dim sprava As String = datum_narodeniaMaskedTextBox.Text
-        MsgBox(sprava)
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        
     End Sub
 End Class
