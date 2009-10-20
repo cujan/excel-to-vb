@@ -26,6 +26,7 @@
 
     Private Sub StudentDataGridView_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles StudentDataGridView.CellClick
         Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.StudentBindingSource, "id", True))
+        Label1.DataBindings.Clear()
     End Sub
 
     Private Sub StudentDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles StudentDataGridView.CellContentClick
@@ -37,6 +38,12 @@
     End Sub
 
     Private Sub StudentDataGridView_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles StudentDataGridView.CellDoubleClick
-       
+        detail_studenta.Show()
+    End Sub
+
+    Private Sub hladajTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles hladajTextBox.TextChanged
+
+        Dim hladany_retazec As String = hladajTextBox.Text & "%"
+        Me.StudentTableAdapter.FillByHladaj(Me.StudentDataSet.student, hladany_retazec)
     End Sub
 End Class
