@@ -3,14 +3,14 @@
 = Poznamky ku projektu DM-internat=
 Pre kartu novy student pridat blok zamerany na ubytovanie. Bolo by tam:
 
-*Typ ubytovania - SS student/VS student/Turista
+-Typ ubytovania - SS student/VS student/Turista
 
-*Zaciatok ubytovania - datum
+-Zaciatok ubytovania - datum
 
-*celkova zaplatena suma (na zaciatku nula) - tu by sa to mozno dalo riesit aj cez samostatnu tabulku, ak chceme pamatat kedy aka platba prisla
+-celkova zaplatena suma (na zaciatku nula) - tu by sa to mozno dalo riesit aj cez samostatnu tabulku, ak chceme pamatat kedy aka platba prisla
 
-*Typ izby - jedno/dvoj/trojpostelova
+-Typ izby - jedno/dvoj/trojpostelova
 
-*Cislo izby - bud cez ciselniky alebo priamo (ak nechceme neskor robit selekty podla izby)
+-Cislo izby - bud cez ciselniky alebo priamo (ak nechceme neskor robit selekty podla izby)
 
-*Cena za izbu - tahane cez ciselnik (najlepsie v zavislosti na type izby a type ubytovania)  - tu by mozno do buducna bolo dobre mysliet na mozne zadavanie zliav (napr studentska karta)
+-Cena za izbu - tahane cez ciselnik (najlepsie v zavislosti na type izby a type ubytovania)  - tu by mozno do buducna bolo dobre mysliet na mozne zadavanie zliav (napr studentska karta)
