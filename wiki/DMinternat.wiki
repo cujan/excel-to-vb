@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Napady pre DM-internat projekt
 
 = Poznamky ku projektu DM-internat=
 Pre kartu novy student pridat blok zamerany na ubytovanie. Bolo by tam:
@@ -14,5 +14,3 @@ Pre kartu novy student pridat blok zamerany na ubytovanie. Bolo by tam:
 *Cislo izby - bud cez ciselniky alebo priamo (ak nechceme neskor robit selekty podla izby)
 
 *Cena za izbu - tahane cez ciselnik (najlepsie v zavislosti na type izby a type ubytovania)  - tu by mozno do buducna bolo dobre mysliet na mozne zadavanie zliav (napr studentska karta)
-
-
