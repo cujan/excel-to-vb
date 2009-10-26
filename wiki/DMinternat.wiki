@@ -3,9 +3,9 @@
 = Poznamky ku projektu DM-internat=
 Pre kartu novy student pridat blok zamerany na ubytovanie. Bolo by tam:
 
--Typ ubytovania - SS student/VS student/Turista - vytvorena tabulka
+-Typ ubytovania - SS student/VS student/Turista - vytvorena tabulka - SPRAVENE
 
--Zaciatok ubytovania - datum - vytvorený stlpec v tabulke student
+-Zaciatok ubytovania - datum - vytvorený stlpec v tabulke student - SPRAVENE
 
 -celkova zaplatena suma (na zaciatku nula) - tu by sa to mozno dalo riesit aj cez samostatnu tabulku, ak chceme pamatat kedy aka platba prisla - ?????
  Treba nam dajak pamatat a evidovat platby. Na to by sluzila podtabulka -pre kazdeho ubytovaneho- kde by boli dva stlpce suma a datum. (cize kolko a kedy zaplatene) Tym by sme mali historiu platieb, z ktorej (cez sucet sum) by sme vedeli vypocitat celkovu zaplatenu sumu
@@ -13,7 +13,7 @@ Pre kartu novy student pridat blok zamerany na ubytovanie. Bolo by tam:
  Celkovu zaplatenu sumu vieme potom vyuzit pri odubytovani. Rozdiel medzi datumom ubytovania a datumom odubytovania krat cena za danu izbu by nam dal sumu, ktora ak by bola rozna od celkovej sumy tak by znamenala ze dany clovek ma este daco doplatit, resp. ma preplatok 
  
 
--Typ izby - jedno/dvoj/trojpostelova - vytvorena tabulka, pridany id stlpec do tabulky 
+-Typ izby - jedno/dvoj/trojpostelova - vytvorena tabulka, pridany id stlpec do tabulky - SPRAVENE
 
 -Cislo izby - bud cez ciselniky alebo priamo (ak nechceme neskor robit selekty podla izby) -??????
  Polozka cislo izby ak dame cez ciselniky, tak si potom vieme spravit zostavy typu vypis studentov z izby 123B (ked to nebude cez ciselniky nezarucime ze napr ten kto zada noveho ubytovaneho neda 123 B resp 1 2 3 B atd.)
