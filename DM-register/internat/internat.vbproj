@@ -178,6 +178,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>titul_predDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="typ_izbyDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>typ_izbyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="typ_ubytovaniaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>typ_ubytovaniaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="vychovavatel.Designer.vb">
       <DependentUpon>vychovavatel.vb</DependentUpon>
     </Compile>
@@ -299,6 +309,28 @@
     </None>
     <None Include="titul_predDataSet.xss">
       <DependentUpon>titul_predDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="typ_izbyDataSet.xsc">
+      <DependentUpon>typ_izbyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="typ_izbyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>typ_izbyDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="typ_izbyDataSet.xss">
+      <DependentUpon>typ_izbyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="typ_ubytovaniaDataSet.xsc">
+      <DependentUpon>typ_ubytovaniaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="typ_ubytovaniaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>typ_ubytovaniaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="typ_ubytovaniaDataSet.xss">
+      <DependentUpon>typ_ubytovaniaDataSet.xsd</DependentUpon>
     </None>
     <None Include="vychovavatelDataSet.xsc">
       <DependentUpon>vychovavatelDataSet.xsd</DependentUpon>

@@ -46,6 +46,9 @@ Partial Class novy_student
         Dim Zz_telefonLabel As System.Windows.Forms.Label
         Dim Zz_poznamkaLabel As System.Windows.Forms.Label
         Dim Id_skupinaLabel As System.Windows.Forms.Label
+        Dim Zaciatok_ubytovaniaLabel As System.Windows.Forms.Label
+        Dim Id_typ_izbyLabel1 As System.Windows.Forms.Label
+        Dim Id_typ_ubytovaniaLabel1 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(novy_student))
         Me.PriezviskoTextBox = New System.Windows.Forms.TextBox
         Me.MenoTextBox = New System.Windows.Forms.TextBox
@@ -82,8 +85,21 @@ Partial Class novy_student
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.zz_label = New System.Windows.Forms.Label
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        Me.StudentDataSet = New internat.studentDataSet
+        Me.StudentBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StudentTableAdapter1 = New internat.studentDataSetTableAdapters.studentTableAdapter
+        Me.TableAdapterManager1 = New internat.studentDataSetTableAdapters.TableAdapterManager
+        Me.Zaciatok_ubytovaniaDateTimePicker = New System.Windows.Forms.DateTimePicker
+        Me.Id_typ_izbyComboBox = New System.Windows.Forms.ComboBox
+        Me.TypizbyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Typ_izbyDataSet = New internat.typ_izbyDataSet
+        Me.Id_typ_ubytovaniaComboBox = New System.Windows.Forms.ComboBox
+        Me.TypubytovaniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Typ_ubytovaniaDataSet = New internat.typ_ubytovaniaDataSet
+        Me.Typ_izbyTableAdapter = New internat.typ_izbyDataSetTableAdapters.typ_izbyTableAdapter
+        Me.Typ_ubytovaniaTableAdapter = New internat.typ_ubytovaniaDataSetTableAdapters.typ_ubytovaniaTableAdapter
         PriezviskoLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         Datum_narodeniaLabel = New System.Windows.Forms.Label
@@ -107,11 +123,20 @@ Partial Class novy_student
         Zz_telefonLabel = New System.Windows.Forms.Label
         Zz_poznamkaLabel = New System.Windows.Forms.Label
         Id_skupinaLabel = New System.Windows.Forms.Label
+        Zaciatok_ubytovaniaLabel = New System.Windows.Forms.Label
+        Id_typ_izbyLabel1 = New System.Windows.Forms.Label
+        Id_typ_ubytovaniaLabel1 = New System.Windows.Forms.Label
         CType(Me.SkupinaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkupinaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_internatDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StudentDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StudentBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TypizbyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Typ_izbyDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TypubytovaniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Typ_ubytovaniaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PriezviskoLabel
@@ -320,6 +345,33 @@ Partial Class novy_student
         Id_skupinaLabel.Size = New System.Drawing.Size(49, 13)
         Id_skupinaLabel.TabIndex = 47
         Id_skupinaLabel.Text = "Skupina:"
+        '
+        'Zaciatok_ubytovaniaLabel
+        '
+        Zaciatok_ubytovaniaLabel.AutoSize = True
+        Zaciatok_ubytovaniaLabel.Location = New System.Drawing.Point(184, 692)
+        Zaciatok_ubytovaniaLabel.Name = "Zaciatok_ubytovaniaLabel"
+        Zaciatok_ubytovaniaLabel.Size = New System.Drawing.Size(105, 13)
+        Zaciatok_ubytovaniaLabel.TabIndex = 0
+        Zaciatok_ubytovaniaLabel.Text = "zaciatok ubytovania:"
+        '
+        'Id_typ_izbyLabel1
+        '
+        Id_typ_izbyLabel1.AutoSize = True
+        Id_typ_izbyLabel1.Location = New System.Drawing.Point(294, 737)
+        Id_typ_izbyLabel1.Name = "Id_typ_izbyLabel1"
+        Id_typ_izbyLabel1.Size = New System.Drawing.Size(56, 13)
+        Id_typ_izbyLabel1.TabIndex = 5
+        Id_typ_izbyLabel1.Text = "id typ izby:"
+        '
+        'Id_typ_ubytovaniaLabel1
+        '
+        Id_typ_ubytovaniaLabel1.AutoSize = True
+        Id_typ_ubytovaniaLabel1.Location = New System.Drawing.Point(260, 773)
+        Id_typ_ubytovaniaLabel1.Name = "Id_typ_ubytovaniaLabel1"
+        Id_typ_ubytovaniaLabel1.Size = New System.Drawing.Size(90, 13)
+        Id_typ_ubytovaniaLabel1.TabIndex = 7
+        Id_typ_ubytovaniaLabel1.Text = "id typ ubytovania:"
         '
         'PriezviskoTextBox
         '
@@ -582,18 +634,9 @@ Partial Class novy_student
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(933, 745)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(933, 811)
         Me.ShapeContainer1.TabIndex = 53
         Me.ShapeContainer1.TabStop = False
-        '
-        'LineShape1
-        '
-        Me.LineShape1.BorderWidth = 2
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 34
-        Me.LineShape1.X2 = 695
-        Me.LineShape1.Y1 = 243
-        Me.LineShape1.Y2 = 243
         '
         'LineShape2
         '
@@ -604,13 +647,107 @@ Partial Class novy_student
         Me.LineShape2.Y1 = 523
         Me.LineShape2.Y2 = 523
         '
+        'LineShape1
+        '
+        Me.LineShape1.BorderWidth = 2
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 34
+        Me.LineShape1.X2 = 695
+        Me.LineShape1.Y1 = 243
+        Me.LineShape1.Y2 = 243
+        '
+        'StudentDataSet
+        '
+        Me.StudentDataSet.DataSetName = "studentDataSet"
+        Me.StudentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'StudentBindingSource1
+        '
+        Me.StudentBindingSource1.DataMember = "student"
+        Me.StudentBindingSource1.DataSource = Me.StudentDataSet
+        '
+        'StudentTableAdapter1
+        '
+        Me.StudentTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.studentTableAdapter = Me.StudentTableAdapter1
+        Me.TableAdapterManager1.UpdateOrder = internat.studentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Zaciatok_ubytovaniaDateTimePicker
+        '
+        Me.Zaciatok_ubytovaniaDateTimePicker.Checked = False
+        Me.Zaciatok_ubytovaniaDateTimePicker.Location = New System.Drawing.Point(295, 688)
+        Me.Zaciatok_ubytovaniaDateTimePicker.Name = "Zaciatok_ubytovaniaDateTimePicker"
+        Me.Zaciatok_ubytovaniaDateTimePicker.ShowCheckBox = True
+        Me.Zaciatok_ubytovaniaDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.Zaciatok_ubytovaniaDateTimePicker.TabIndex = 1
+        '
+        'Id_typ_izbyComboBox
+        '
+        Me.Id_typ_izbyComboBox.DataSource = Me.TypizbyBindingSource
+        Me.Id_typ_izbyComboBox.DisplayMember = "typ_izby"
+        Me.Id_typ_izbyComboBox.FormattingEnabled = True
+        Me.Id_typ_izbyComboBox.Location = New System.Drawing.Point(356, 734)
+        Me.Id_typ_izbyComboBox.Name = "Id_typ_izbyComboBox"
+        Me.Id_typ_izbyComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Id_typ_izbyComboBox.TabIndex = 6
+        Me.Id_typ_izbyComboBox.ValueMember = "id"
+        '
+        'TypizbyBindingSource
+        '
+        Me.TypizbyBindingSource.DataMember = "typ_izby"
+        Me.TypizbyBindingSource.DataSource = Me.Typ_izbyDataSet
+        '
+        'Typ_izbyDataSet
+        '
+        Me.Typ_izbyDataSet.DataSetName = "typ_izbyDataSet"
+        Me.Typ_izbyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Id_typ_ubytovaniaComboBox
+        '
+        Me.Id_typ_ubytovaniaComboBox.DataSource = Me.TypubytovaniaBindingSource
+        Me.Id_typ_ubytovaniaComboBox.DisplayMember = "typ_ubytovania"
+        Me.Id_typ_ubytovaniaComboBox.FormattingEnabled = True
+        Me.Id_typ_ubytovaniaComboBox.Location = New System.Drawing.Point(356, 770)
+        Me.Id_typ_ubytovaniaComboBox.Name = "Id_typ_ubytovaniaComboBox"
+        Me.Id_typ_ubytovaniaComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Id_typ_ubytovaniaComboBox.TabIndex = 8
+        Me.Id_typ_ubytovaniaComboBox.ValueMember = "id"
+        '
+        'TypubytovaniaBindingSource
+        '
+        Me.TypubytovaniaBindingSource.DataMember = "typ_ubytovania"
+        Me.TypubytovaniaBindingSource.DataSource = Me.Typ_ubytovaniaDataSet
+        '
+        'Typ_ubytovaniaDataSet
+        '
+        Me.Typ_ubytovaniaDataSet.DataSetName = "typ_ubytovaniaDataSet"
+        Me.Typ_ubytovaniaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Typ_izbyTableAdapter
+        '
+        Me.Typ_izbyTableAdapter.ClearBeforeFill = True
+        '
+        'Typ_ubytovaniaTableAdapter
+        '
+        Me.Typ_ubytovaniaTableAdapter.ClearBeforeFill = True
+        '
         'novy_student
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.Lavender
-        Me.ClientSize = New System.Drawing.Size(933, 745)
+        Me.ClientSize = New System.Drawing.Size(933, 811)
+        Me.Controls.Add(Id_typ_ubytovaniaLabel1)
+        Me.Controls.Add(Me.Id_typ_ubytovaniaComboBox)
+        Me.Controls.Add(Id_typ_izbyLabel1)
+        Me.Controls.Add(Me.Id_typ_izbyComboBox)
+        Me.Controls.Add(Zaciatok_ubytovaniaLabel)
+        Me.Controls.Add(Me.Zaciatok_ubytovaniaDateTimePicker)
         Me.Controls.Add(Me.zz_label)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.uloz)
@@ -670,6 +807,12 @@ Partial Class novy_student
         CType(Me.Db_internatDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StudentDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StudentBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TypizbyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Typ_izbyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TypubytovaniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Typ_ubytovaniaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -711,4 +854,17 @@ Partial Class novy_student
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents StudentDataSet As internat.studentDataSet
+    Friend WithEvents StudentBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents StudentTableAdapter1 As internat.studentDataSetTableAdapters.studentTableAdapter
+    Friend WithEvents TableAdapterManager1 As internat.studentDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Zaciatok_ubytovaniaDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Id_typ_izbyComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Id_typ_ubytovaniaComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Typ_izbyDataSet As internat.typ_izbyDataSet
+    Friend WithEvents TypizbyBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Typ_izbyTableAdapter As internat.typ_izbyDataSetTableAdapters.typ_izbyTableAdapter
+    Friend WithEvents Typ_ubytovaniaDataSet As internat.typ_ubytovaniaDataSet
+    Friend WithEvents TypubytovaniaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Typ_ubytovaniaTableAdapter As internat.typ_ubytovaniaDataSetTableAdapters.typ_ubytovaniaTableAdapter
 End Class

@@ -316,6 +316,12 @@ Partial Public Class studentDataSet
         
         Private columnid_skupina As Global.System.Data.DataColumn
         
+        Private columnzaciatok_ubytovania As Global.System.Data.DataColumn
+        
+        Private columnid_typ_izby As Global.System.Data.DataColumn
+        
+        Private columnid_typ_ubytovania As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub New()
             MyBase.New
@@ -523,6 +529,27 @@ Partial Public Class studentDataSet
             End Get
         End Property
         
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property zaciatok_ubytovaniaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnzaciatok_ubytovania
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property id_typ_izbyColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_typ_izby
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property id_typ_ubytovaniaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_typ_ubytovania
+            End Get
+        End Property
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -576,9 +603,12 @@ Partial Public Class studentDataSet
                     ByVal zz_telefon As String,  _
                     ByVal zz_poznamka As String,  _
                     ByVal foto() As Byte,  _
-                    ByVal id_skupina As Integer) As studentRow
+                    ByVal id_skupina As Integer,  _
+                    ByVal zaciatok_ubytovania As Date,  _
+                    ByVal id_typ_izby As Integer,  _
+                    ByVal id_typ_ubytovania As Integer) As studentRow
             Dim rowstudentRow As studentRow = CType(Me.NewRow,studentRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, priezvisko, meno, datum_narodenia, miesto_narodenia, rodne_cislo, bydlisko, telefon, cislo_op, op_vydal, op_vydany_dna, skola_odkial_prichadza, skola_ktoru_bude_navstevovat, studijny_odbor, vzdialenost_bydlisko_internat, zaluby, zz_meno, zz_priezvisko, zz_datum_narodenia, zz_povolanie, zz_adresa_zamestnavatela, zz_telefon, zz_poznamka, foto, id_skupina}
+            Dim columnValuesArray() As Object = New Object() {Nothing, priezvisko, meno, datum_narodenia, miesto_narodenia, rodne_cislo, bydlisko, telefon, cislo_op, op_vydal, op_vydany_dna, skola_odkial_prichadza, skola_ktoru_bude_navstevovat, studijny_odbor, vzdialenost_bydlisko_internat, zaluby, zz_meno, zz_priezvisko, zz_datum_narodenia, zz_povolanie, zz_adresa_zamestnavatela, zz_telefon, zz_poznamka, foto, id_skupina, zaciatok_ubytovania, id_typ_izby, id_typ_ubytovania}
             rowstudentRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowstudentRow)
             Return rowstudentRow
@@ -628,6 +658,9 @@ Partial Public Class studentDataSet
             Me.columnzz_poznamka = MyBase.Columns("zz_poznamka")
             Me.columnfoto = MyBase.Columns("foto")
             Me.columnid_skupina = MyBase.Columns("id_skupina")
+            Me.columnzaciatok_ubytovania = MyBase.Columns("zaciatok_ubytovania")
+            Me.columnid_typ_izby = MyBase.Columns("id_typ_izby")
+            Me.columnid_typ_ubytovania = MyBase.Columns("id_typ_ubytovania")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -682,6 +715,12 @@ Partial Public Class studentDataSet
             MyBase.Columns.Add(Me.columnfoto)
             Me.columnid_skupina = New Global.System.Data.DataColumn("id_skupina", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_skupina)
+            Me.columnzaciatok_ubytovania = New Global.System.Data.DataColumn("zaciatok_ubytovania", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnzaciatok_ubytovania)
+            Me.columnid_typ_izby = New Global.System.Data.DataColumn("id_typ_izby", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_typ_izby)
+            Me.columnid_typ_ubytovania = New Global.System.Data.DataColumn("id_typ_ubytovania", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_typ_ubytovania)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
             Me.columnid.AutoIncrement = true
             Me.columnid.AutoIncrementSeed = -1
@@ -1191,6 +1230,48 @@ Partial Public Class studentDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property zaciatok_ubytovania() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tablestudent.zaciatok_ubytovaniaColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'zaciatok_ubytovania' in table 'student' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestudent.zaciatok_ubytovaniaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property id_typ_izby() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablestudent.id_typ_izbyColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'id_typ_izby' in table 'student' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestudent.id_typ_izbyColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property id_typ_ubytovania() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tablestudent.id_typ_ubytovaniaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'id_typ_ubytovania' in table 'student' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablestudent.id_typ_ubytovaniaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function IspriezviskoNull() As Boolean
             Return Me.IsNull(Me.tablestudent.priezviskoColumn)
         End Function
@@ -1429,6 +1510,36 @@ Partial Public Class studentDataSet
         Public Sub Setid_skupinaNull()
             Me(Me.tablestudent.id_skupinaColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Iszaciatok_ubytovaniaNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.zaciatok_ubytovaniaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setzaciatok_ubytovaniaNull()
+            Me(Me.tablestudent.zaciatok_ubytovaniaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isid_typ_izbyNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.id_typ_izbyColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setid_typ_izbyNull()
+            Me(Me.tablestudent.id_typ_izbyColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isid_typ_ubytovaniaNull() As Boolean
+            Return Me.IsNull(Me.tablestudent.id_typ_ubytovaniaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setid_typ_ubytovaniaNull()
+            Me(Me.tablestudent.id_typ_ubytovaniaColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -1613,6 +1724,9 @@ Namespace studentDataSetTableAdapters
             tableMapping.ColumnMappings.Add("zz_poznamka", "zz_poznamka")
             tableMapping.ColumnMappings.Add("foto", "foto")
             tableMapping.ColumnMappings.Add("id_skupina", "id_skupina")
+            tableMapping.ColumnMappings.Add("zaciatok_ubytovania", "zaciatok_ubytovania")
+            tableMapping.ColumnMappings.Add("id_typ_izby", "id_typ_izby")
+            tableMapping.ColumnMappings.Add("id_typ_ubytovania", "id_typ_ubytovania")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -1626,9 +1740,10 @@ Namespace studentDataSetTableAdapters
                 ", [skola_odkial_prichadza], [skola_ktoru_bude_navstevovat], [studijny_odbor], [v"& _ 
                 "zdialenost_bydlisko_internat], [zaluby], [zz_meno], [zz_priezvisko], [zz_datum_n"& _ 
                 "arodenia], [zz_povolanie], [zz_adresa_zamestnavatela], [zz_telefon], [zz_poznamk"& _ 
-                "a], [foto], [id_skupina]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @"& _ 
-                "p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p2"& _ 
-                "3, @p24)"
+                "a], [foto], [id_skupina], [id_typ_izby], [zaciatok_ubytovania], [id_typ_ubytovan"& _ 
+                "ia]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13"& _ 
+                ", @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, "& _ 
+                "@p27)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "priezvisko", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "meno", Global.System.Data.DataRowVersion.Current, Nothing))
@@ -1654,6 +1769,9 @@ Namespace studentDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p22", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "zz_poznamka", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p23", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "foto", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p24", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_skupina", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p25", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_typ_izby", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p26", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "zaciatok_ubytovania", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p27", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_typ_ubytovania", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [student] SET [priezvisko] = @p1, [meno] = @p2, [datum_narodenia] = @p3, ["& _ 
@@ -1663,7 +1781,8 @@ Namespace studentDataSetTableAdapters
                 "zdialenost_bydlisko_internat] = @p14, [zaluby] = @p15, [zz_meno] = @p16, [zz_pri"& _ 
                 "ezvisko] = @p17, [zz_datum_narodenia] = @p18, [zz_povolanie] = @p19, [zz_adresa_"& _ 
                 "zamestnavatela] = @p20, [zz_telefon] = @p21, [zz_poznamka] = @p22, [foto] = @p23"& _ 
-                ", [id_skupina] = @p24 WHERE (([id] = @p25))"
+                ", [id_skupina] = @p24, [id_typ_izby] = @p25, [zaciatok_ubytovania] = @p26, [id_t"& _ 
+                "yp_ubytovania] = @p27 WHERE (([id] = @p28))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "priezvisko", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "meno", Global.System.Data.DataRowVersion.Current, Nothing))
@@ -1689,7 +1808,10 @@ Namespace studentDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p22", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "zz_poznamka", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p23", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "foto", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p24", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_skupina", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p25", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p25", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_typ_izby", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p26", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "zaciatok_ubytovania", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p27", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_typ_ubytovania", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p28", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1707,26 +1829,27 @@ Namespace studentDataSetTableAdapters
                 "isko, telefon, cislo_op, op_vydal, op_vydany_dna, skola_odkial_prichadza, skola_"& _ 
                 "ktoru_bude_navstevovat, studijny_odbor, vzdialenost_bydlisko_internat, zaluby, z"& _ 
                 "z_meno, zz_priezvisko, zz_datum_narodenia, zz_povolanie, zz_adresa_zamestnavatel"& _ 
-                "a, zz_telefon, zz_poznamka, foto, id_skupina FROM student"
+                "a, zz_telefon, zz_poznamka, foto, id_skupina, id_typ_izby, zaciatok_ubytovania, "& _ 
+                "id_typ_ubytovania FROM student"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT     id, priezvisko, meno, datum_narodenia, miesto_narodenia, rodne_cislo, "& _ 
-                "bydlisko, telefon, cislo_op, op_vydal, op_vydany_dna, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      sk"& _ 
-                "ola_odkial_prichadza, skola_ktoru_bude_navstevovat, studijny_odbor, vzdialenost_"& _ 
-                "bydlisko_internat, zaluby, zz_meno, zz_priezvisko, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      zz_da"& _ 
-                "tum_narodenia, zz_povolanie, zz_adresa_zamestnavatela, zz_telefon, zz_poznamka, "& _ 
-                "foto, id_skupina"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         student"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (id = @Param1)"
+            Me._commandCollection(1).CommandText = "SELECT id, priezvisko, meno, datum_narodenia, miesto_narodenia, rodne_cislo, bydl"& _ 
+                "isko, telefon, cislo_op, op_vydal, op_vydany_dna, skola_odkial_prichadza, skola_"& _ 
+                "ktoru_bude_navstevovat, studijny_odbor, vzdialenost_bydlisko_internat, zaluby, z"& _ 
+                "z_meno, zz_priezvisko, zz_datum_narodenia, zz_povolanie, zz_adresa_zamestnavatel"& _ 
+                "a, zz_telefon, zz_poznamka, foto, id_skupina, id_typ_izby, zaciatok_ubytovania, "& _ 
+                "id_typ_ubytovania FROM student WHERE (id = @Param1)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._commandCollection(2) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT     id, priezvisko, meno, datum_narodenia, miesto_narodenia, rodne_cislo, "& _ 
-                "bydlisko, telefon, cislo_op, op_vydal, op_vydany_dna, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      sk"& _ 
-                "ola_odkial_prichadza, skola_ktoru_bude_navstevovat, studijny_odbor, vzdialenost_"& _ 
-                "bydlisko_internat, zaluby, zz_meno, zz_priezvisko, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      zz_da"& _ 
-                "tum_narodenia, zz_povolanie, zz_adresa_zamestnavatela, zz_telefon, zz_poznamka, "& _ 
-                "foto, id_skupina"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         student"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (priezvisko LIKE @Param2)"
+            Me._commandCollection(2).CommandText = "SELECT id, priezvisko, meno, datum_narodenia, miesto_narodenia, rodne_cislo, bydl"& _ 
+                "isko, telefon, cislo_op, op_vydal, op_vydany_dna, skola_odkial_prichadza, skola_"& _ 
+                "ktoru_bude_navstevovat, studijny_odbor, vzdialenost_bydlisko_internat, zaluby, z"& _ 
+                "z_meno, zz_priezvisko, zz_datum_narodenia, zz_povolanie, zz_adresa_zamestnavatel"& _ 
+                "a, zz_telefon, zz_poznamka, foto, id_skupina, id_typ_izby, zaciatok_ubytovania, "& _ 
+                "id_typ_ubytovania FROM student WHERE (priezvisko LIKE @Param2)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param2", Global.System.Data.SqlDbType.NVarChar, 100, Global.System.Data.ParameterDirection.Input, true, 0, 0, "priezvisko", Global.System.Data.DataRowVersion.Current, Nothing))
         End Sub
@@ -1880,7 +2003,10 @@ Namespace studentDataSetTableAdapters
                     ByVal p21 As String,  _
                     ByVal p22 As String,  _
                     ByVal p23() As Byte,  _
-                    ByVal p24 As Global.System.Nullable(Of Integer)) As Integer
+                    ByVal p24 As Global.System.Nullable(Of Integer),  _
+                    ByVal p25 As Global.System.Nullable(Of Integer),  _
+                    ByVal p26 As Global.System.Nullable(Of Date),  _
+                    ByVal p27 As Global.System.Nullable(Of Integer)) As Integer
             If (p1 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -2001,6 +2127,21 @@ Namespace studentDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
             End If
+            If (p25.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(24).Value = CType(p25.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            If (p26.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(25).Value = CType(p26.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
+            End If
+            If (p27.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(26).Value = CType(p27.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(26).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -2044,7 +2185,10 @@ Namespace studentDataSetTableAdapters
                     ByVal p22 As String,  _
                     ByVal p23() As Byte,  _
                     ByVal p24 As Global.System.Nullable(Of Integer),  _
-                    ByVal p25 As Integer) As Integer
+                    ByVal p25 As Global.System.Nullable(Of Integer),  _
+                    ByVal p26 As Global.System.Nullable(Of Date),  _
+                    ByVal p27 As Global.System.Nullable(Of Integer),  _
+                    ByVal p28 As Integer) As Integer
             If (p1 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -2165,7 +2309,22 @@ Namespace studentDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(24).Value = CType(p25,Integer)
+            If (p25.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(p25.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            If (p26.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(p26.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+            End If
+            If (p27.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(p27.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(27).Value = CType(p28,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
