@@ -85,7 +85,7 @@ Partial Class typ_izby
         Me.Typ_izbyBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Typ_izbyBindingNavigator.Name = "Typ_izbyBindingNavigator"
         Me.Typ_izbyBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Typ_izbyBindingNavigator.Size = New System.Drawing.Size(380, 25)
+        Me.Typ_izbyBindingNavigator.Size = New System.Drawing.Size(425, 25)
         Me.Typ_izbyBindingNavigator.TabIndex = 0
         Me.Typ_izbyBindingNavigator.Text = "BindingNavigator1"
         '
@@ -210,7 +210,7 @@ Partial Class typ_izby
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(380, 330)
+        Me.ClientSize = New System.Drawing.Size(425, 388)
         Me.Controls.Add(Me.Typ_izbyDataGridView)
         Me.Controls.Add(Me.Typ_izbyBindingNavigator)
         Me.Name = "typ_izby"

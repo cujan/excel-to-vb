@@ -29,7 +29,7 @@
         Dim nazov As String = nazovTextBox.Text
         Dim vychovavatel As String = vychovavatelComboBox1.SelectedValue
 
-        Dim con As New SqlCeConnection("Data Source=|DataDirectory|\db_internat.sdf")
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
         con.Open()
 
         Dim com As New SqlCeCommand("insert into skupina (nazov_skupiny,id_vychovavatel) values ('" & nazov & "','" & vychovavatel & "')", con)

@@ -22,7 +22,7 @@
         Dim skratka As String = skratkaTextBox.Text
         Dim nazov As String = nazovTextBox.Text
 
-        Dim con As New SqlCeConnection("Data Source=|DataDirectory|\db_internat.sdf")
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
         con.Open()
 
         Dim com As New SqlCeCommand("insert into titul_pred (skratka, nazov) values ('" & skratka & "','" & nazov & "')", con)

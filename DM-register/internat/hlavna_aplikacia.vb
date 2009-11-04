@@ -108,4 +108,8 @@ Public Class hlavna_aplikacia
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         pokusny.Show()
     End Sub
+
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        MsgBox(pripojovaci_retazec)
+    End Sub
 End Class
