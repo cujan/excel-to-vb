@@ -12,4 +12,17 @@
         Me.Typ_izbyTableAdapter.Fill(Me.Typ_izbyDataSet.typ_izby)
 
     End Sub
+
+    Private Sub vlozButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles vlozButton.Click
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
+        con.Open()
+        Dim com As New SqlCeCommand("insert into typ_izby (typ_izby) values (@typ_izby)", con)
+
+        com.Parameters.AddWithValue("typ_izby", typizbyTextBox.Text)
+
+        com.ExecuteNonQuery()
+        con.Close()
+
+        Me.Typ_izbyTableAdapter.Fill(Me.Typ_izbyDataSet.typ_izby)
+    End Sub
 End Class

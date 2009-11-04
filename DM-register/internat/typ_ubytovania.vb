@@ -12,4 +12,15 @@
         Me.Typ_ubytovaniaTableAdapter.Fill(Me.Typ_ubytovaniaDataSet.typ_ubytovania)
 
     End Sub
+
+    Private Sub vlozButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles vlozButton.Click
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
+        con.Open()
+        Dim com As New SqlCeCommand("insert into typ_ubytovania (typ_ubytovania) values (@typ_ubytovania)", con)
+        com.Parameters.AddWithValue("typ_ubytovania", typ_ubytovaniaTextBox.Text)
+        com.ExecuteNonQuery()
+        con.Close()
+
+        Me.Typ_ubytovaniaTableAdapter.Fill(Me.Typ_ubytovaniaDataSet.typ_ubytovania)
+    End Sub
 End Class

@@ -25,7 +25,14 @@
         Dim con As New SqlCeConnection(pripojovaci_retazec)
         con.Open()
 
-        Dim com As New SqlCeCommand("insert into titul_pred (skratka, nazov) values ('" & skratka & "','" & nazov & "')", con)
+        Dim com As New SqlCeCommand("insert into titul_pred (skratka, nazov) values (@skratka,@nazov)", con)
+
+        With com.Parameters
+            .AddWithValue("skratka", skratka)
+            .AddWithValue("nazov", nazov)
+        End With
+
+
         com.ExecuteNonQuery()
         con.Close()
 

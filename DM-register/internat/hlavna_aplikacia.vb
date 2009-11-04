@@ -110,6 +110,7 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        MsgBox(pripojovaci_retazec)
+        typ_ubytovania.Show()
+
     End Sub
 End Class

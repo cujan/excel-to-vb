@@ -32,7 +32,16 @@
         Dim con As New SqlCeConnection(pripojovaci_retazec)
         con.Open()
 
-        Dim com As New SqlCeCommand("insert into skupina (nazov_skupiny,id_vychovavatel) values ('" & nazov & "','" & vychovavatel & "')", con)
+        Dim com As New SqlCeCommand("insert into skupina (nazov_skupiny,id_vychovavatel) values (@nazov ,@vychovavatel)", con)
+
+        With com.Parameters
+            .AddWithValue("nazov", nazov)
+            .AddWithValue("vychovavatel", vychovavatel)
+        End With
+
+
+
+
         com.ExecuteNonQuery()
         con.Close()
         Me.SkupinaTableAdapter.Fill(Me.Skupina_vychovavatelDataSet1.skupina)

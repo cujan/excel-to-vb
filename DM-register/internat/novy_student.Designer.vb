@@ -634,7 +634,7 @@ Partial Class novy_student
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(933, 811)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(933, 800)
         Me.ShapeContainer1.TabIndex = 53
         Me.ShapeContainer1.TabStop = False
         '
@@ -741,7 +741,7 @@ Partial Class novy_student
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.Lavender
-        Me.ClientSize = New System.Drawing.Size(933, 811)
+        Me.ClientSize = New System.Drawing.Size(933, 800)
         Me.Controls.Add(Id_typ_ubytovaniaLabel1)
         Me.Controls.Add(Me.Id_typ_ubytovaniaComboBox)
         Me.Controls.Add(Id_typ_izbyLabel1)
