@@ -38,7 +38,7 @@
         
 
 
-        Dim con As New SqlCeConnection("Data Source=|DataDirectory|\db_internat.sdf")
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
         con.Open()
 
         Dim com As New SqlCeCommand("INSERT INTO student (priezvisko, meno, datum_narodenia, miesto_narodenia, rodne_cislo, bydlisko, telefon, cislo_op, op_vydal, op_vydany_dna, skola_odkial_prichadza, skola_ktoru_bude_navstevovat, studijny_odbor, vzdialenost_bydlisko_internat, zaluby, zz_meno, zz_priezvisko, zz_datum_narodenia, zz_povolanie, zz_adresa_zamestnavatela, zz_telefon, zz_poznamka, id_skupina,zaciatok_ubytovania,id_typ_izby,id_typ_ubytovania) VALUES (@priezvisko,@meno,@datum_narodenia,@miesto_narodenia,@rodne_cislo,@bydlisko,@telefon,@cislo_op,@op_vydal,@op_datum_vydania,@skola_odkial_prichadza,@skola_ktoru_navstevuje,@studijny_odbor,@vzdialenost_bydlisko_internat,@zaluby,@zz_meno,@zz_priezvisko,@zz_datum_narodenia,@zz_povolanie,@zz_adresa_zamestnavatela,@zz_telefon,@zz_poznamka,@id_skupina,@zaciatok_ubytovania,@id_typ_izby,@id_typ_ubytovania)", con)

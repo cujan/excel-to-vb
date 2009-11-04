@@ -53,7 +53,7 @@
         Dim id_studenta As Integer = evidencia_studentov.Label1.Text
 
 
-        Dim con As New SqlCeConnection(connectionString:="Data Source=|DataDirectory|\db_internat.sdf")
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
         con.Open()
         Dim com As New SqlCeCommand("UPDATE    student SET  priezvisko = @p1, meno = @p2, datum_narodenia = @p3, miesto_narodenia = @p4, rodne_cislo = @p5, bydlisko = @p6, telefon = @p7, cislo_op = @p8, op_vydal = @p9, op_vydany_dna = @p10, skola_odkial_prichadza = @p11, skola_ktoru_bude_navstevovat = @p12, studijny_odbor = @p13, vzdialenost_bydlisko_internat = @p14, zaluby = @p15, zz_meno = @p16, zz_priezvisko = @p17, zz_datum_narodenia = @p18, zz_povolanie = @p19, zz_adresa_zamestnavatela = @p20, zz_telefon = @p21, zz_poznamka = @p22,  id_skupina = @p24 WHERE     (id = @p25)", con)
 

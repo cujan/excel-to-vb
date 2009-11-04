@@ -41,6 +41,7 @@ Partial Class hlavna_aplikacia
         Me.evidencia_studentov_button = New System.Windows.Forms.Button
         Me.novy_student_button = New System.Windows.Forms.Button
         Me.Button1 = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
         Me.StatusStrip.SuspendLayout()
         Me.hlavny_splitter.Panel1.SuspendLayout()
         Me.hlavny_splitter.Panel2.SuspendLayout()
@@ -90,6 +91,7 @@ Partial Class hlavna_aplikacia
         '
         Me.hlavny_splitter.Panel2.AutoScroll = True
         Me.hlavny_splitter.Panel2.BackColor = System.Drawing.Color.Lavender
+        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button2)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Button1)
         Me.hlavny_splitter.Size = New System.Drawing.Size(790, 497)
         Me.hlavny_splitter.SplitterDistance = 160
@@ -284,6 +286,15 @@ Partial Class hlavna_aplikacia
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(329, 369)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 11
+        Me.Button2.Text = "retazec"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -328,5 +339,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents novy_student_button As System.Windows.Forms.Button
     Friend WithEvents evidencia_studentov_button As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class

@@ -31,7 +31,7 @@
 
 
        
-        Dim con As New SqlCeConnection("Data Source=|DataDirectory|\db_internat.sdf")
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
         con.Open()
 
         Dim com As New SqlCeCommand("insert into vychovavatel (priezvisko, meno, poznamka, titul) values ('" & priezvisko & "','" & meno & "','" & poznamka & "','" & titul & "')", con)
