@@ -8,6 +8,5 @@
         Return pripojovaci_retazec_string
     End Function
 
-
-
+    
 End Module

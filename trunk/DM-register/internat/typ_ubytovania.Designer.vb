@@ -29,21 +29,24 @@ Partial Class typ_ubytovania
         Me.Typ_ubytovaniaTableAdapter = New internat.typ_ubytovaniaDataSetTableAdapters.typ_ubytovaniaTableAdapter
         Me.TableAdapterManager = New internat.typ_ubytovaniaDataSetTableAdapters.TableAdapterManager
         Me.Typ_ubytovaniaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.Typ_ubytovaniaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.Typ_ubytovaniaDataGridView = New System.Windows.Forms.DataGridView
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.vlozButton = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.typ_ubytovaniaTextBox = New System.Windows.Forms.TextBox
         CType(Me.Typ_ubytovaniaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Typ_ubytovaniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Typ_ubytovaniaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,6 +92,31 @@ Partial Class typ_ubytovania
         Me.Typ_ubytovaniaBindingNavigator.TabIndex = 0
         Me.Typ_ubytovaniaBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -121,17 +149,10 @@ Partial Class typ_ubytovania
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 13)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -139,7 +160,7 @@ Partial Class typ_ubytovania
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -148,38 +169,20 @@ Partial Class typ_ubytovania
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'Typ_ubytovaniaBindingNavigatorSaveItem
         '
         Me.Typ_ubytovaniaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.Typ_ubytovaniaBindingNavigatorSaveItem.Image = CType(resources.GetObject("Typ_ubytovaniaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.Typ_ubytovaniaBindingNavigatorSaveItem.Name = "Typ_ubytovaniaBindingNavigatorSaveItem"
-        Me.Typ_ubytovaniaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.Typ_ubytovaniaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.Typ_ubytovaniaBindingNavigatorSaveItem.Text = "Save Data"
         '
         'Typ_ubytovaniaDataGridView
@@ -188,7 +191,7 @@ Partial Class typ_ubytovania
         Me.Typ_ubytovaniaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Typ_ubytovaniaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.Typ_ubytovaniaDataGridView.DataSource = Me.Typ_ubytovaniaBindingSource
-        Me.Typ_ubytovaniaDataGridView.Location = New System.Drawing.Point(100, 117)
+        Me.Typ_ubytovaniaDataGridView.Location = New System.Drawing.Point(12, 169)
         Me.Typ_ubytovaniaDataGridView.Name = "Typ_ubytovaniaDataGridView"
         Me.Typ_ubytovaniaDataGridView.Size = New System.Drawing.Size(394, 220)
         Me.Typ_ubytovaniaDataGridView.TabIndex = 1
@@ -206,11 +209,39 @@ Partial Class typ_ubytovania
         Me.DataGridViewTextBoxColumn2.HeaderText = "typ_ubytovania"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
+        'vlozButton
+        '
+        Me.vlozButton.Location = New System.Drawing.Point(379, 68)
+        Me.vlozButton.Name = "vlozButton"
+        Me.vlozButton.Size = New System.Drawing.Size(75, 23)
+        Me.vlozButton.TabIndex = 2
+        Me.vlozButton.Text = "vloz"
+        Me.vlozButton.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(44, 59)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(80, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Typ ubytovania"
+        '
+        'typ_ubytovaniaTextBox
+        '
+        Me.typ_ubytovaniaTextBox.Location = New System.Drawing.Point(141, 56)
+        Me.typ_ubytovaniaTextBox.Name = "typ_ubytovaniaTextBox"
+        Me.typ_ubytovaniaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.typ_ubytovaniaTextBox.TabIndex = 4
+        '
         'typ_ubytovania
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(529, 415)
+        Me.Controls.Add(Me.typ_ubytovaniaTextBox)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.vlozButton)
         Me.Controls.Add(Me.Typ_ubytovaniaDataGridView)
         Me.Controls.Add(Me.Typ_ubytovaniaBindingNavigator)
         Me.Name = "typ_ubytovania"
@@ -245,4 +276,7 @@ Partial Class typ_ubytovania
     Friend WithEvents Typ_ubytovaniaDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents vlozButton As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents typ_ubytovaniaTextBox As System.Windows.Forms.TextBox
 End Class
