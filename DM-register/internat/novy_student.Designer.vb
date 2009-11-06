@@ -349,29 +349,29 @@ Partial Class novy_student
         'Zaciatok_ubytovaniaLabel
         '
         Zaciatok_ubytovaniaLabel.AutoSize = True
-        Zaciatok_ubytovaniaLabel.Location = New System.Drawing.Point(184, 692)
+        Zaciatok_ubytovaniaLabel.Location = New System.Drawing.Point(471, 71)
         Zaciatok_ubytovaniaLabel.Name = "Zaciatok_ubytovaniaLabel"
-        Zaciatok_ubytovaniaLabel.Size = New System.Drawing.Size(105, 13)
+        Zaciatok_ubytovaniaLabel.Size = New System.Drawing.Size(107, 13)
         Zaciatok_ubytovaniaLabel.TabIndex = 0
-        Zaciatok_ubytovaniaLabel.Text = "zaciatok ubytovania:"
+        Zaciatok_ubytovaniaLabel.Text = "Začiatok ubytovania:"
         '
         'Id_typ_izbyLabel1
         '
         Id_typ_izbyLabel1.AutoSize = True
-        Id_typ_izbyLabel1.Location = New System.Drawing.Point(294, 737)
+        Id_typ_izbyLabel1.Location = New System.Drawing.Point(529, 97)
         Id_typ_izbyLabel1.Name = "Id_typ_izbyLabel1"
-        Id_typ_izbyLabel1.Size = New System.Drawing.Size(56, 13)
+        Id_typ_izbyLabel1.Size = New System.Drawing.Size(49, 13)
         Id_typ_izbyLabel1.TabIndex = 5
-        Id_typ_izbyLabel1.Text = "id typ izby:"
+        Id_typ_izbyLabel1.Text = "Typ izby:"
         '
         'Id_typ_ubytovaniaLabel1
         '
         Id_typ_ubytovaniaLabel1.AutoSize = True
-        Id_typ_ubytovaniaLabel1.Location = New System.Drawing.Point(260, 773)
+        Id_typ_ubytovaniaLabel1.Location = New System.Drawing.Point(495, 124)
         Id_typ_ubytovaniaLabel1.Name = "Id_typ_ubytovaniaLabel1"
-        Id_typ_ubytovaniaLabel1.Size = New System.Drawing.Size(90, 13)
+        Id_typ_ubytovaniaLabel1.Size = New System.Drawing.Size(83, 13)
         Id_typ_ubytovaniaLabel1.TabIndex = 7
-        Id_typ_ubytovaniaLabel1.Text = "id typ ubytovania:"
+        Id_typ_ubytovaniaLabel1.Text = "Typ ubytovania:"
         '
         'PriezviskoTextBox
         '
@@ -679,10 +679,10 @@ Partial Class novy_student
         'Zaciatok_ubytovaniaDateTimePicker
         '
         Me.Zaciatok_ubytovaniaDateTimePicker.Checked = False
-        Me.Zaciatok_ubytovaniaDateTimePicker.Location = New System.Drawing.Point(295, 688)
+        Me.Zaciatok_ubytovaniaDateTimePicker.Location = New System.Drawing.Point(583, 67)
         Me.Zaciatok_ubytovaniaDateTimePicker.Name = "Zaciatok_ubytovaniaDateTimePicker"
         Me.Zaciatok_ubytovaniaDateTimePicker.ShowCheckBox = True
-        Me.Zaciatok_ubytovaniaDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.Zaciatok_ubytovaniaDateTimePicker.Size = New System.Drawing.Size(131, 20)
         Me.Zaciatok_ubytovaniaDateTimePicker.TabIndex = 1
         '
         'Id_typ_izbyComboBox
@@ -690,9 +690,9 @@ Partial Class novy_student
         Me.Id_typ_izbyComboBox.DataSource = Me.TypizbyBindingSource
         Me.Id_typ_izbyComboBox.DisplayMember = "typ_izby"
         Me.Id_typ_izbyComboBox.FormattingEnabled = True
-        Me.Id_typ_izbyComboBox.Location = New System.Drawing.Point(356, 734)
+        Me.Id_typ_izbyComboBox.Location = New System.Drawing.Point(583, 93)
         Me.Id_typ_izbyComboBox.Name = "Id_typ_izbyComboBox"
-        Me.Id_typ_izbyComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Id_typ_izbyComboBox.Size = New System.Drawing.Size(131, 21)
         Me.Id_typ_izbyComboBox.TabIndex = 6
         Me.Id_typ_izbyComboBox.ValueMember = "id"
         '
@@ -711,9 +711,9 @@ Partial Class novy_student
         Me.Id_typ_ubytovaniaComboBox.DataSource = Me.TypubytovaniaBindingSource
         Me.Id_typ_ubytovaniaComboBox.DisplayMember = "typ_ubytovania"
         Me.Id_typ_ubytovaniaComboBox.FormattingEnabled = True
-        Me.Id_typ_ubytovaniaComboBox.Location = New System.Drawing.Point(356, 770)
+        Me.Id_typ_ubytovaniaComboBox.Location = New System.Drawing.Point(584, 121)
         Me.Id_typ_ubytovaniaComboBox.Name = "Id_typ_ubytovaniaComboBox"
-        Me.Id_typ_ubytovaniaComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Id_typ_ubytovaniaComboBox.Size = New System.Drawing.Size(130, 21)
         Me.Id_typ_ubytovaniaComboBox.TabIndex = 8
         Me.Id_typ_ubytovaniaComboBox.ValueMember = "id"
         '

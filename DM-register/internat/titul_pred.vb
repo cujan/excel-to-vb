@@ -1,6 +1,6 @@
 ﻿Public Class titul_pred
 
-    Private Sub Titul_predBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Titul_predBindingNavigatorSaveItem.Click
+    Private Sub Titul_predBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.Titul_predBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Titul_predDataSet)

@@ -23,10 +23,12 @@ Partial Class ciselniky
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ciselniky_splitter = New System.Windows.Forms.SplitContainer
+        Me.typ_ubytovania_button = New System.Windows.Forms.Button
         Me.zavriet_kartu = New System.Windows.Forms.Button
         Me.titul_pred_button = New System.Windows.Forms.Button
         Me.skupiny = New System.Windows.Forms.Button
         Me.vychovavatelia = New System.Windows.Forms.Button
+        Me.typ_izby_button = New System.Windows.Forms.Button
         Me.ciselniky_splitter.Panel1.SuspendLayout()
         Me.ciselniky_splitter.SuspendLayout()
         Me.SuspendLayout()
@@ -43,6 +45,8 @@ Partial Class ciselniky
         '
         'ciselniky_splitter.Panel1
         '
+        Me.ciselniky_splitter.Panel1.Controls.Add(Me.typ_izby_button)
+        Me.ciselniky_splitter.Panel1.Controls.Add(Me.typ_ubytovania_button)
         Me.ciselniky_splitter.Panel1.Controls.Add(Me.zavriet_kartu)
         Me.ciselniky_splitter.Panel1.Controls.Add(Me.titul_pred_button)
         Me.ciselniky_splitter.Panel1.Controls.Add(Me.skupiny)
@@ -52,11 +56,22 @@ Partial Class ciselniky
         Me.ciselniky_splitter.SplitterWidth = 1
         Me.ciselniky_splitter.TabIndex = 0
         '
+        'typ_ubytovania_button
+        '
+        Me.typ_ubytovania_button.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.typ_ubytovania_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.typ_ubytovania_button.Location = New System.Drawing.Point(391, 30)
+        Me.typ_ubytovania_button.Name = "typ_ubytovania_button"
+        Me.typ_ubytovania_button.Size = New System.Drawing.Size(90, 23)
+        Me.typ_ubytovania_button.TabIndex = 4
+        Me.typ_ubytovania_button.Text = "Typ ubytovania"
+        Me.typ_ubytovania_button.UseVisualStyleBackColor = False
+        '
         'zavriet_kartu
         '
         Me.zavriet_kartu.BackColor = System.Drawing.Color.CornflowerBlue
         Me.zavriet_kartu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.zavriet_kartu.Location = New System.Drawing.Point(436, 30)
+        Me.zavriet_kartu.Location = New System.Drawing.Point(568, 30)
         Me.zavriet_kartu.Name = "zavriet_kartu"
         Me.zavriet_kartu.Size = New System.Drawing.Size(85, 23)
         Me.zavriet_kartu.TabIndex = 3
@@ -67,7 +82,7 @@ Partial Class ciselniky
         '
         Me.titul_pred_button.BackColor = System.Drawing.Color.CornflowerBlue
         Me.titul_pred_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.titul_pred_button.Location = New System.Drawing.Point(355, 30)
+        Me.titul_pred_button.Location = New System.Drawing.Point(310, 30)
         Me.titul_pred_button.Name = "titul_pred_button"
         Me.titul_pred_button.Size = New System.Drawing.Size(75, 23)
         Me.titul_pred_button.TabIndex = 2
@@ -78,7 +93,7 @@ Partial Class ciselniky
         '
         Me.skupiny.BackColor = System.Drawing.Color.CornflowerBlue
         Me.skupiny.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.skupiny.Location = New System.Drawing.Point(274, 30)
+        Me.skupiny.Location = New System.Drawing.Point(229, 30)
         Me.skupiny.Name = "skupiny"
         Me.skupiny.Size = New System.Drawing.Size(75, 23)
         Me.skupiny.TabIndex = 1
@@ -89,12 +104,23 @@ Partial Class ciselniky
         '
         Me.vychovavatelia.BackColor = System.Drawing.Color.CornflowerBlue
         Me.vychovavatelia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.vychovavatelia.Location = New System.Drawing.Point(171, 30)
+        Me.vychovavatelia.Location = New System.Drawing.Point(126, 30)
         Me.vychovavatelia.Name = "vychovavatelia"
         Me.vychovavatelia.Size = New System.Drawing.Size(97, 23)
         Me.vychovavatelia.TabIndex = 0
         Me.vychovavatelia.Text = "Vychovávatelia"
         Me.vychovavatelia.UseVisualStyleBackColor = False
+        '
+        'typ_izby_button
+        '
+        Me.typ_izby_button.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.typ_izby_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.typ_izby_button.Location = New System.Drawing.Point(487, 30)
+        Me.typ_izby_button.Name = "typ_izby_button"
+        Me.typ_izby_button.Size = New System.Drawing.Size(75, 23)
+        Me.typ_izby_button.TabIndex = 5
+        Me.typ_izby_button.Text = "Typ izby"
+        Me.typ_izby_button.UseVisualStyleBackColor = False
         '
         'ciselniky
         '
@@ -115,4 +141,6 @@ Partial Class ciselniky
     Friend WithEvents skupiny As System.Windows.Forms.Button
     Friend WithEvents vychovavatelia As System.Windows.Forms.Button
     Friend WithEvents zavriet_kartu As System.Windows.Forms.Button
+    Friend WithEvents typ_ubytovania_button As System.Windows.Forms.Button
+    Friend WithEvents typ_izby_button As System.Windows.Forms.Button
 End Class
