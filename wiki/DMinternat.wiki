@@ -3,7 +3,7 @@
 = Poznamky ku projektu DM-internat=
 Pre kartu novy student pridat blok zamerany na ubytovanie. Bolo by tam:
 
--Typ ubytovania - SS student/VS student/Turista - vytvorena tabulka - SPRAVENE
+-Typ ubytovania - SS student/VS student/Turista - vytvorena tabulka - SPRAVENE - DOROBIT GOMBIK na vymazavanie poloziek tohto ciselnika
 
 -Zaciatok ubytovania - datum - vytvorený stlpec v tabulke student - SPRAVENE
 
