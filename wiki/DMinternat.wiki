@@ -1,9 +1,17 @@
 #summary Napady pre DM-internat projekt
 
 = Poznamky ku projektu DM-internat=
+<b>Novinky</b>
+
+- - - - - - - - - - - - - - 
+
+Dorobit gombiky pre vymazanie poloziek pre ciselniky: Skupiny, titul pred, typ ubytovania, typ izby
+
+- - - - - - - - - - - - - -
+
 Pre kartu novy student pridat blok zamerany na ubytovanie. Bolo by tam:
 
--Typ ubytovania - SS student/VS student/Turista - vytvorena tabulka - SPRAVENE - DOROBIT GOMBIK na vymazavanie poloziek tohto ciselnika
+-Typ ubytovania - SS student/VS student/Turista - vytvorena tabulka - SPRAVENE - 
 
 -Zaciatok ubytovania - datum - vytvorený stlpec v tabulke student - SPRAVENE
 
