@@ -31,4 +31,16 @@
         titul_pred.BringToFront()
 
     End Sub
+
+    Private Sub typ_ubytovania_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles typ_ubytovania_button.Click
+        typ_ubytovania.Show()
+        typ_ubytovania.BringToFront()
+
+    End Sub
+
+    Private Sub typ_izby_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles typ_izby_button.Click
+        typ_izby.Show()
+        typ_izby.BringToFront()
+
+    End Sub
 End Class

@@ -41,7 +41,6 @@ Partial Class hlavna_aplikacia
         Me.evidencia_studentov_button = New System.Windows.Forms.Button
         Me.novy_student_button = New System.Windows.Forms.Button
         Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
         Me.StatusStrip.SuspendLayout()
         Me.hlavny_splitter.Panel1.SuspendLayout()
         Me.hlavny_splitter.Panel2.SuspendLayout()
@@ -59,16 +58,16 @@ Partial Class hlavna_aplikacia
         'StatusStrip
         '
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 497)
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 540)
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Size = New System.Drawing.Size(790, 22)
+        Me.StatusStrip.Size = New System.Drawing.Size(952, 22)
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
         'ToolStripStatusLabel
         '
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(38, 17)
+        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(37, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
         'hlavny_splitter
@@ -91,9 +90,8 @@ Partial Class hlavna_aplikacia
         '
         Me.hlavny_splitter.Panel2.AutoScroll = True
         Me.hlavny_splitter.Panel2.BackColor = System.Drawing.Color.Lavender
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button2)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Button1)
-        Me.hlavny_splitter.Size = New System.Drawing.Size(790, 497)
+        Me.hlavny_splitter.Size = New System.Drawing.Size(952, 540)
         Me.hlavny_splitter.SplitterDistance = 160
         Me.hlavny_splitter.SplitterWidth = 1
         Me.hlavny_splitter.TabIndex = 9
@@ -286,21 +284,12 @@ Partial Class hlavna_aplikacia
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(329, 369)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "retazec"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(790, 519)
+        Me.ClientSize = New System.Drawing.Size(952, 562)
         Me.Controls.Add(Me.hlavny_splitter)
         Me.Controls.Add(Me.StatusStrip)
         Me.Name = "hlavna_aplikacia"
@@ -339,6 +328,5 @@ Partial Class hlavna_aplikacia
     Friend WithEvents novy_student_button As System.Windows.Forms.Button
     Friend WithEvents evidencia_studentov_button As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class

@@ -53,7 +53,7 @@
         'con.Close()
     End Sub
 
-    Private Sub SkupinaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SkupinaBindingNavigatorSaveItem.Click
+    Private Sub SkupinaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.SkupinaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Skupina_vychovavatelDataSet1)

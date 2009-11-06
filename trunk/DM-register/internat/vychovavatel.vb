@@ -1,6 +1,6 @@
 ﻿Public Class vychovavatel
 
-    Private Sub VychovavatelBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VychovavatelBindingNavigatorSaveItem.Click
+    Private Sub VychovavatelBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.VychovavatelBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.VychovavatelDataSet)
