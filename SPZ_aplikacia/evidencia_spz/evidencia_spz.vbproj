@@ -22,6 +22,8 @@
     <ManifestKeyFile>evidencia_spz_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>false</GenerateManifests>
     <SignManifests>false</SignManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
     <PublishUrl>E:\projekt google\instalacka\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -36,8 +38,6 @@
     <ApplicationVersion>0.0.8.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetZone>LocalIntranet</TargetZone>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -146,11 +146,6 @@
     <Compile Include="narodnost.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="narodnostDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>narodnostDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="registracia_aplikacie.Designer.vb">
       <DependentUpon>registracia_aplikacie.vb</DependentUpon>
     </Compile>
@@ -163,10 +158,10 @@
     <Compile Include="SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="spz_vseobecne_udaje.Designer.vb">
+    <Compile Include="spzDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>spz_vseobecne_udaje.xsd</DependentUpon>
+      <DependentUpon>spzDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="statna_prislusnost.Designer.vb">
       <DependentUpon>statna_prislusnost.vb</DependentUpon>
@@ -174,26 +169,11 @@
     <Compile Include="statna_prislusnost.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="statna_prislusnostDataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>statna_prislusnostDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="titul.Designer.vb">
       <DependentUpon>titul.vb</DependentUpon>
     </Compile>
     <Compile Include="titul.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="titulDataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>titulDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="titulzaDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>titulzaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="titul_za.Designer.vb">
       <DependentUpon>titul_za.vb</DependentUpon>
@@ -301,39 +281,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="narodnostDataSet.xsc">
-      <DependentUpon>narodnostDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="narodnostDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>narodnostDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="narodnostDataSet.xss">
-      <DependentUpon>narodnostDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="statna_prislusnostDataSet1.xsc">
-      <DependentUpon>statna_prislusnostDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="statna_prislusnostDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>statna_prislusnostDataSet1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="statna_prislusnostDataSet1.xss">
-      <DependentUpon>statna_prislusnostDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="titulDataSet1.xsc">
-      <DependentUpon>titulDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="titulDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>titulDataSet1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="titulDataSet1.xss">
-      <DependentUpon>titulDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
@@ -366,28 +313,20 @@
     <None Include="My Project\app.manifest" />
     <None Include="My Project\VisualBasic" />
     <None Include="Resources\formular_1.jpg" />
-    <None Include="spz_vseobecne_udaje.xsc">
-      <DependentUpon>spz_vseobecne_udaje.xsd</DependentUpon>
+    <None Include="spzDataSet.xsc">
+      <DependentUpon>spzDataSet.xsd</DependentUpon>
     </None>
-    <None Include="spz_vseobecne_udaje.xsd">
+    <None Include="spzDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>spz_vseobecne_udaje.Designer.vb</LastGenOutput>
+      <LastGenOutput>spzDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="spz_vseobecne_udaje.xss">
-      <DependentUpon>spz_vseobecne_udaje.xsd</DependentUpon>
+    <None Include="spzDataSet.xss">
+      <DependentUpon>spzDataSet.xsd</DependentUpon>
     </None>
-    <None Include="titulzaDataSet.xsc">
-      <DependentUpon>titulzaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="titulzaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>titulzaDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="titulzaDataSet.xss">
-      <DependentUpon>titulzaDataSet.xsd</DependentUpon>
-    </None>
+    <Content Include="spz.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="spz_evidencia.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
