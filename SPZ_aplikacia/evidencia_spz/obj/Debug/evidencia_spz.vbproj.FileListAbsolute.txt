@@ -48,3 +48,28 @@ E:\_marek\SPZ\svn\SPZ\evidencia_spz\obj\Debug\evidencia_spz.varovanie2.resources
 E:\_marek\SPZ\svn\SPZ\evidencia_spz\obj\Debug\evidencia_spz.vseobecne_udaje.resources
 E:\_marek\SPZ\svn\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zaloha_databazy.resources
 E:\_marek\SPZ\svn\SPZ\evidencia_spz\obj\Debug\evidencia_spz.vbproj.GenerateResource.Cache
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.exe.config
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.exe
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.xml
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.pdb
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\spz_evidencia.accdb
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.exe
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.pdb
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.xml
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\ResolveAssemblyReference.cache
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.ciselniky.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.o_aplikacii.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.hlavna_aplikacia.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.kontrola_verzii.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.Resources.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.narodnost.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.registracia_aplikacie.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.SplashScreen1.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.statna_prislusnost.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.titul.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.titul_za.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.varovanie1.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.varovanie2.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.vseobecne_udaje.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zaloha_databazy.resources
+D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.vbproj.GenerateResource.Cache
