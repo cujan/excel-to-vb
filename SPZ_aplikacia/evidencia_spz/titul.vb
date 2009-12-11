@@ -1,13 +1,14 @@
 ﻿Public Class titul
 
     Private Sub TitulBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.Validate()
-        Me.TitulBindingSource.EndEdit()
+        
 
 
     End Sub
 
     Private Sub titul_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'SpzDataSet.titul_pred' table. You can move, or remove it, as needed.
+        Me.Titul_predTableAdapter.Fill(Me.SpzDataSet.titul_pred)
         'TODO: This line of code loads data into the 'TitulDataSet1.titul' table. You can move, or remove it, as needed.
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
@@ -24,10 +25,15 @@
         Dim skratka As String = SkratkaTextBox.Text
         Dim nazov As String = NazovTextBox.Text
 
-        Dim con As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\spz_evidencia.accdb")
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
         con.Open()
 
-        Dim com As New OleDb.OleDbCommand("INSERT INTO titul (skratka, nazov) VALUES ('" & skratka & "','" & nazov & "')", con)
+        Dim com As New SqlCeCommand("INSERT INTO titul_pred (skratka, nazov) VALUES(@skratka,@nazov)", con)
+        With com.Parameters
+            .AddWithValue("skratka", skratka)
+            .AddWithValue("nazov", nazov)
+        End With
+
         com.ExecuteNonQuery()
         con.Close()
 
@@ -38,6 +44,7 @@
         Me.NazovTextBox.ReadOnly = True
         Me.SkratkaTextBox.Text = ""
         Me.NazovTextBox.Text = ""
+        Me.Titul_predTableAdapter.Fill(Me.SpzDataSet.titul_pred)
 
     End Sub
 
@@ -62,9 +69,9 @@
     End Sub
 
     Private Sub zmaz_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zmaz.Click
-        Me.TitulBindingSource.RemoveCurrent()
         Me.Validate()
-        Me.TitulBindingSource.EndEdit()
+        Me.Titul_predBindingSource.RemoveCurrent()
+        Me.TableAdapterManager.UpdateAll(Me.SpzDataSet)
     End Sub
 
     Private Sub TitulDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles TitulDataGridView.CellContentClick
@@ -72,6 +79,17 @@
     End Sub
 
     Private Sub TitulDataGridView_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TitulDataGridView.Enter
+
+    End Sub
+
+    Private Sub Titul_predBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Titul_predBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.Titul_predBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.SpzDataSet)
+
+    End Sub
+
+    Private Sub BindingNavigatorDeleteItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BindingNavigatorDeleteItem.Click
 
     End Sub
 End Class

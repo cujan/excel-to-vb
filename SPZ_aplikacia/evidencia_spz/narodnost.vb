@@ -2,7 +2,7 @@
 
     Private Sub NarodnostBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
-        Me.NarodnostBindingSource.EndEdit()
+
 
 
     End Sub
@@ -48,9 +48,7 @@
     End Sub
 
     Private Sub zmazButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zmazButton.Click
-        Me.NarodnostBindingSource.RemoveCurrent()
-        Me.Validate()
-        Me.NarodnostBindingSource.EndEdit()
+      
 
     End Sub
 End Class

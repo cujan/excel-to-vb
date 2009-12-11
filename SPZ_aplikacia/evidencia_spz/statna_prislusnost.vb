@@ -17,9 +17,7 @@
     End Sub
 
     Private Sub Statna_prislusnostBindingNavigatorSaveItem_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.Validate()
-        Me.Statna_prislusnostBindingSource.EndEdit()
-
+       
 
     End Sub
 
@@ -55,9 +53,7 @@
     End Sub
 
     Private Sub zmaz_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zmaz.Click
-        Me.Statna_prislusnostBindingSource.RemoveCurrent()
-        Me.Validate()
-        Me.Statna_prislusnostBindingSource.EndEdit()
+       
     End Sub
 
     Private Sub Statna_prislusnostDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles Statna_prislusnostDataGridView.CellContentClick

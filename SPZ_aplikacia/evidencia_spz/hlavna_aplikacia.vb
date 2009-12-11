@@ -402,7 +402,7 @@ Public Class hlavna_aplikacia
 
     Private Sub Vseobecne_udajeBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
-        Me.Vseobecne_udajeBindingSource.EndEdit()
+
 
 
     End Sub
