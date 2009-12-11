@@ -6,6 +6,8 @@
     End Sub
 
     Private Sub titul_za_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'SpzDataSet.titul_za' table. You can move, or remove it, as needed.
+        Me.Titul_zaTableAdapter.Fill(Me.SpzDataSet.titul_za)
         'TODO: This line of code loads data into the 'TitulzaDataSet.titul_za' table. You can move, or remove it, as needed.
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
@@ -27,10 +29,15 @@
         Dim nazov As String = NazovTextBox.Text
         Dim skratka As String = SkratkaTextBox.Text
 
-        Dim con As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\spz_evidencia.accdb")
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
         con.Open()
 
-        Dim com As New OleDb.OleDbCommand("INSERT INTO titul_za (nazov, skratka) VALUES ('" & nazov & "','" & skratka & "')", con)
+        Dim com As New SqlCeCommand("INSERT INTO titul_za (skratka, nazov) VALUES(@skratka,@nazov)", con)
+        With com.Parameters
+            .AddWithValue("skratka", skratka)
+            .AddWithValue("nazov", nazov)
+        End With
+
         com.ExecuteNonQuery()
         con.Close()
 
@@ -40,9 +47,21 @@
         Me.pridaj.Visible = True
         Me.NazovTextBox.Text = ""
         Me.SkratkaTextBox.Text = ""
+
+        Me.Titul_zaTableAdapter.Fill(Me.SpzDataSet.titul_za)
     End Sub
 
     Private Sub zmaz_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zmaz.Click
-        
+        Me.Validate()
+        Me.Titul_zaBindingSource.RemoveCurrent()
+        Me.TableAdapterManager.UpdateAll(Me.SpzDataSet)
+
+    End Sub
+
+    Private Sub Titul_zaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Titul_zaBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.Titul_zaBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.SpzDataSet)
+
     End Sub
 End Class
