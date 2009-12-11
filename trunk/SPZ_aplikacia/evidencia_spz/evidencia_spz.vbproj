@@ -91,6 +91,10 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
+    <Import Include="System.Data.Sql" />
+    <Import Include="System.Data.SqlClient" />
+    <Import Include="System.Data.SqlServerCe" />
+    <Import Include="System.Data.SqlTypes" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
     <Import Include="System.Drawing.Printing" />
@@ -107,6 +111,7 @@
     <Compile Include="ciselniky.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="kniznica.vb" />
     <Compile Include="o_aplikacii.Designer.vb">
       <DependentUpon>o_aplikacii.vb</DependentUpon>
     </Compile>

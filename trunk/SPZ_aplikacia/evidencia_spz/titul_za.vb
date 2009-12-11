@@ -1,8 +1,7 @@
 ﻿Public Class titul_za
 
     Private Sub Titul_zaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.Validate()
-        Me.Titul_zaBindingSource.EndEdit()
+       
 
     End Sub
 
@@ -44,8 +43,6 @@
     End Sub
 
     Private Sub zmaz_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zmaz.Click
-        Me.Titul_zaBindingSource.RemoveCurrent()
-        Me.Validate()
-        Me.Titul_zaBindingSource.EndEdit()
+        
     End Sub
 End Class

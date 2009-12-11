@@ -1,9 +1,7 @@
 ﻿Public Class vseobecne_udaje
 
     Private Sub Vseobecne_udajeBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.Validate()
-        Me.Vseobecne_udajeBindingSource.EndEdit()
-
+        
 
     End Sub
 
@@ -30,8 +28,7 @@
     End Sub
 
     Private Sub ulozButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ulozButton.Click
-        Me.Validate()
-        Me.Vseobecne_udajeBindingSource.EndEdit()
+        
         Me.upravButton.Visible = True
         Me.ulozButton.Visible = False
 
