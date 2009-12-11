@@ -1,16 +1,14 @@
 ﻿Public Class vseobecne_udaje
 
-    Private Sub Vseobecne_udajeBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Vseobecne_udajeBindingNavigatorSaveItem.Click
+    Private Sub Vseobecne_udajeBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.Vseobecne_udajeBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.Spz_vseobecne_udaje)
+
 
     End Sub
 
     Private Sub vseobecne_udaje_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Spz_vseobecne_udaje.vseobecne_udaje' table. You can move, or remove it, as needed.
-        Me.Vseobecne_udajeTableAdapter.Fill(Me.Spz_vseobecne_udaje.vseobecne_udaje)
-
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
         hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
@@ -34,8 +32,6 @@
     Private Sub ulozButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ulozButton.Click
         Me.Validate()
         Me.Vseobecne_udajeBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.Spz_vseobecne_udaje)
-
         Me.upravButton.Visible = True
         Me.ulozButton.Visible = False
 
@@ -54,7 +50,6 @@
     End Sub
 
     Private Sub koniecButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles koniecButton.Click
-        hlavna_aplikacia.Vseobecne_udajeTableAdapter.Fill(hlavna_aplikacia.Spz_vseobecne_udaje.vseobecne_udaje)
         Me.Close()
     End Sub
 

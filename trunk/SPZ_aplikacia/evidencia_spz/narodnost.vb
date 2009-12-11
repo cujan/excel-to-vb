@@ -1,15 +1,15 @@
 ﻿Public Class narodnost
 
-    Private Sub NarodnostBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NarodnostBindingNavigatorSaveItem.Click
+    Private Sub NarodnostBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.NarodnostBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.NarodnostDataSet)
+
 
     End Sub
 
     Private Sub narodnost_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'NarodnostDataSet.narodnost' table. You can move, or remove it, as needed.
-        Me.NarodnostTableAdapter.Fill(Me.NarodnostDataSet.narodnost)
+
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
         ciselniky.ciselniky_splitter.Panel2.Controls.Add(Me)
@@ -38,7 +38,7 @@
         com.ExecuteNonQuery()
         con.Close()
 
-        Me.NarodnostTableAdapter.Fill(Me.NarodnostDataSet.narodnost)
+
 
         Me.ulozButton.Visible = False
         Me.pridajButton.Visible = True
@@ -51,6 +51,6 @@
         Me.NarodnostBindingSource.RemoveCurrent()
         Me.Validate()
         Me.NarodnostBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.NarodnostDataSet)
+
     End Sub
 End Class

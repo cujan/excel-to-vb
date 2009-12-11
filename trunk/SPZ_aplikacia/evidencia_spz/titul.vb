@@ -1,15 +1,14 @@
 ﻿Public Class titul
 
-    Private Sub TitulBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TitulBindingNavigatorSaveItem.Click
+    Private Sub TitulBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.TitulBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.TitulDataSet1)
+
 
     End Sub
 
     Private Sub titul_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'TitulDataSet1.titul' table. You can move, or remove it, as needed.
-        Me.TitulTableAdapter.Fill(Me.TitulDataSet1.titul)
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
         ciselniky.ciselniky_splitter.Panel2.Controls.Add(Me)
@@ -32,7 +31,6 @@
         com.ExecuteNonQuery()
         con.Close()
 
-        Me.TitulTableAdapter.Fill(Me.TitulDataSet1.titul)
 
         Me.pridaj_titul.Visible = True
         Me.uloz.Visible = False
@@ -59,7 +57,7 @@
         Me.uloz.Visible = True
     End Sub
 
-    Private Sub BindingNavigatorDeleteItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BindingNavigatorDeleteItem.Click
+    Private Sub BindingNavigatorDeleteItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
@@ -67,7 +65,6 @@
         Me.TitulBindingSource.RemoveCurrent()
         Me.Validate()
         Me.TitulBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.TitulDataSet1)
     End Sub
 
     Private Sub TitulDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles TitulDataGridView.CellContentClick
