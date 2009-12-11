@@ -6,6 +6,8 @@
     End Sub
 
     Private Sub statna_prislusnost_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'SpzDataSet.statna_prislusnost' table. You can move, or remove it, as needed.
+        Me.Statna_prislusnostTableAdapter.Fill(Me.SpzDataSet.statna_prislusnost)
         'TODO: This line of code loads data into the 'Statna_prislusnostDataSet1.statna_prislusnost' table. You can move, or remove it, as needed.
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
@@ -29,10 +31,14 @@
         Dim skratka As String = SkratkaTextBox.Text
         Dim nazov As String = NazovTextBox.Text
 
-        Dim con As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\spz_evidencia.accdb")
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
         con.Open()
 
-        Dim com As New OleDb.OleDbCommand("INSERT INTO statna_prislusnost (skratka, nazov) VALUES ('" & skratka & "','" & nazov & "')", con)
+        Dim com As New SqlCeCommand("INSERT INTO statna_prislusnost(skratka, nazov)VALUES (@skratka,@nazov)", con)
+        With com.Parameters
+            .AddWithValue("skratka", skratka)
+            .AddWithValue("nazov", nazov)
+        End With
         com.ExecuteNonQuery()
         con.Close()
 
@@ -42,6 +48,8 @@
         Me.NazovTextBox.ReadOnly = True
         Me.SkratkaTextBox.Text = ""
         Me.NazovTextBox.Text = ""
+
+        Me.Statna_prislusnostTableAdapter.Fill(Me.SpzDataSet.statna_prislusnost)
 
     End Sub
 
@@ -53,14 +61,23 @@
     End Sub
 
     Private Sub zmaz_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zmaz.Click
-       
+        Me.Validate()
+        Me.Statna_prislusnostBindingSource.RemoveCurrent()
+        Me.TableAdapterManager.UpdateAll(Me.SpzDataSet)
     End Sub
 
-    Private Sub Statna_prislusnostDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles Statna_prislusnostDataGridView.CellContentClick
+    Private Sub Statna_prislusnostDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
 
     End Sub
 
-    Private Sub Statna_prislusnostDataGridView_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles Statna_prislusnostDataGridView.Enter
+    Private Sub Statna_prislusnostDataGridView_Enter(ByVal sender As Object, ByVal e As System.EventArgs)
         'Me.Statna_prislusnostBindingSource.EndEdit()
+    End Sub
+
+    Private Sub Statna_prislusnostBindingNavigatorSaveItem_Click_3(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Statna_prislusnostBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.Statna_prislusnostBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.SpzDataSet)
+
     End Sub
 End Class
