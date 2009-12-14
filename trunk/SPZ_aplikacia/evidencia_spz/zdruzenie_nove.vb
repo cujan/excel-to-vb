@@ -68,6 +68,7 @@
             .AddWithValue("pes_mala_plan", Pes_mala_planTextBox.Text)
             .AddWithValue("pes_mala_skutocnost", Pes_mala_skutocnostTextBox.Text)
         End With
+        com.ExecuteNonQuery()
         con.Close()
     End Sub
 End Class
