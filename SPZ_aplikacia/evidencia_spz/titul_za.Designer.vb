@@ -158,7 +158,6 @@ Partial Class titul_za
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.ICO_clenoviaTableAdapter = Nothing
         Me.TableAdapterManager.narodnostTableAdapter = Nothing
         Me.TableAdapterManager.statna_prislusnostTableAdapter = Nothing
         Me.TableAdapterManager.titul_predTableAdapter = Nothing
