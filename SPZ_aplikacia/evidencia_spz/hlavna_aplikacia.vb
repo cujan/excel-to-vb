@@ -549,4 +549,12 @@ Public Class hlavna_aplikacia
         zaloha_databazy.BringToFront()
 
     End Sub
+
+    Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        zdruzenie.Show()
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        zdruzenie_nove.Show()
+    End Sub
 End Class
