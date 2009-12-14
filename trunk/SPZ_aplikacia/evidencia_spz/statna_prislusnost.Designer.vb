@@ -158,7 +158,6 @@ Partial Class statna_prislusnost
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.ICO_clenoviaTableAdapter = Nothing
         Me.TableAdapterManager.narodnostTableAdapter = Nothing
         Me.TableAdapterManager.statna_prislusnostTableAdapter = Me.Statna_prislusnostTableAdapter
         Me.TableAdapterManager.titul_predTableAdapter = Nothing

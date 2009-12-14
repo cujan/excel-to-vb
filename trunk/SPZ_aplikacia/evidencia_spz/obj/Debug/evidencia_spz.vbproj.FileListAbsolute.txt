@@ -74,3 +74,7 @@ D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\
 D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zaloha_databazy.resources
 D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.vbproj.GenerateResource.Cache
 D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\spz.sdf
+d:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.exe.config
+d:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.exe
+d:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.xml
+d:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.pdb

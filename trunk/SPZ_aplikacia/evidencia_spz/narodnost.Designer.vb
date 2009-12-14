@@ -158,7 +158,6 @@ Partial Class narodnost
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.ICO_clenoviaTableAdapter = Nothing
         Me.TableAdapterManager.narodnostTableAdapter = Me.NarodnostTableAdapter
         Me.TableAdapterManager.statna_prislusnostTableAdapter = Nothing
         Me.TableAdapterManager.titul_predTableAdapter = Nothing
