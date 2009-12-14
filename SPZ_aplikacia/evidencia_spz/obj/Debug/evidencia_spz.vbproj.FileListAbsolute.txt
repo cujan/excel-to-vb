@@ -106,3 +106,6 @@ D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.z
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie.resources
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_nove.resources
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.vbproj.GenerateResource.Cache
+E:\_marek\SPZ\svn\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie.resources
+E:\_marek\SPZ\svn\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_nove.resources
+E:\_marek\SPZ\svn\SPZ\evidencia_spz\bin\Debug\spz.sdf
