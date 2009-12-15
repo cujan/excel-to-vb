@@ -557,4 +557,13 @@ Public Class hlavna_aplikacia
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         zdruzenie_nove.Show()
     End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        clen_novy.Show()
+        clen_novy.BringToFront()
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        clenovia123.Show()
+    End Sub
 End Class
