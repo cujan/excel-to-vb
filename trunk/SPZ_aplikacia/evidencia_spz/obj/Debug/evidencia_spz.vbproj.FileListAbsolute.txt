@@ -135,3 +135,5 @@ d:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz
 d:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.pdb
 d:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clen_novy.resources
 d:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clenovia123.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clenovia123.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clen_novy.resources
