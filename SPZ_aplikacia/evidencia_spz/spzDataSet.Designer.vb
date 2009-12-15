@@ -2812,6 +2812,8 @@ Partial Public Class spzDataSet
         
         Private columnstatna_prislusnost_id As Global.System.Data.DataColumn
         
+        Private columnico_clenovia As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub New()
             MyBase.New
@@ -3117,6 +3119,13 @@ Partial Public Class spzDataSet
             End Get
         End Property
         
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property ico_clenoviaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnico_clenovia
+            End Get
+        End Property
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -3185,9 +3194,10 @@ Partial Public Class spzDataSet
                     ByVal titul_pred_id As Integer,  _
                     ByVal titul_za_id As Integer,  _
                     ByVal narodnost_id As Integer,  _
-                    ByVal statna_prislusnost_id As Integer) As _123_clenoviaRow
+                    ByVal statna_prislusnost_id As Integer,  _
+                    ByVal ico_clenovia As String) As _123_clenoviaRow
             Dim row_123_clenoviaRow As _123_clenoviaRow = CType(Me.NewRow,_123_clenoviaRow)
-            Dim columnValuesArray() As Object = New Object() {cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, okres_bydliska, psc, telefon, cislo_op, datum_vydania_op, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, miesto_skusky_z_polovnictva, skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsej_skusky_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gula, najvyzsie_vyznamenanie, vyznamenanie_kedy, udelene_tresty, poznamky, titul_pred_id, titul_za_id, narodnost_id, statna_prislusnost_id}
+            Dim columnValuesArray() As Object = New Object() {cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, okres_bydliska, psc, telefon, cislo_op, datum_vydania_op, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, miesto_skusky_z_polovnictva, skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsej_skusky_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gula, najvyzsie_vyznamenanie, vyznamenanie_kedy, udelene_tresty, poznamky, titul_pred_id, titul_za_id, narodnost_id, statna_prislusnost_id, ico_clenovia}
             row_123_clenoviaRow.ItemArray = columnValuesArray
             Me.Rows.Add(row_123_clenoviaRow)
             Return row_123_clenoviaRow
@@ -3251,6 +3261,7 @@ Partial Public Class spzDataSet
             Me.columntitul_za_id = MyBase.Columns("titul_za_id")
             Me.columnnarodnost_id = MyBase.Columns("narodnost_id")
             Me.columnstatna_prislusnost_id = MyBase.Columns("statna_prislusnost_id")
+            Me.columnico_clenovia = MyBase.Columns("ico_clenovia")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -3333,6 +3344,8 @@ Partial Public Class spzDataSet
             MyBase.Columns.Add(Me.columnnarodnost_id)
             Me.columnstatna_prislusnost_id = New Global.System.Data.DataColumn("statna_prislusnost_id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnstatna_prislusnost_id)
+            Me.columnico_clenovia = New Global.System.Data.DataColumn("ico_clenovia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnico_clenovia)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columncislo_pl, Me.columnrodne_cislo}, true))
             Me.columncislo_pl.AllowDBNull = false
             Me.columncislo_pl.MaxLength = 45
@@ -3362,6 +3375,7 @@ Partial Public Class spzDataSet
             Me.columntitul_za_id.AllowDBNull = false
             Me.columnnarodnost_id.AllowDBNull = false
             Me.columnstatna_prislusnost_id.AllowDBNull = false
+            Me.columnico_clenovia.MaxLength = 100
             Me.ExtendedProperties.Add("Generator_TableVarName", "table123_clenovia")
             Me.ExtendedProperties.Add("Generator_UserTableName", "123_clenovia")
         End Sub
@@ -6374,6 +6388,20 @@ Partial Public Class spzDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property ico_clenovia() As String
+            Get
+                Try 
+                    Return CType(Me(Me.table123_clenovia.ico_clenoviaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ico_clenovia' in table '123_clenovia' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.table123_clenovia.ico_clenoviaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function IsmenoNull() As Boolean
             Return Me.IsNull(Me.table123_clenovia.menoColumn)
         End Function
@@ -6701,6 +6729,16 @@ Partial Public Class spzDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub SetpoznamkyNull()
             Me(Me.table123_clenovia.poznamkyColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isico_clenoviaNull() As Boolean
+            Return Me.IsNull(Me.table123_clenovia.ico_clenoviaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setico_clenoviaNull()
+            Me(Me.table123_clenovia.ico_clenoviaColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -10566,6 +10604,7 @@ Namespace spzDataSetTableAdapters
             tableMapping.ColumnMappings.Add("titul_za_id", "titul_za_id")
             tableMapping.ColumnMappings.Add("narodnost_id", "narodnost_id")
             tableMapping.ColumnMappings.Add("statna_prislusnost_id", "statna_prislusnost_id")
+            tableMapping.ColumnMappings.Add("ico_clenovia", "ico_clenovia")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -10584,10 +10623,11 @@ Namespace spzDataSetTableAdapters
                 "h_hospodarov], [vyzsia_skuska_z_polovnictva], [miesto_vyzsej_skusky_z_polovnictv"& _ 
                 "a], [brokova_zbran], [kontrolne_strelby_brok], [gulova_zbran], [kontrolne_strelb"& _ 
                 "y_gula], [najvyzsie_vyznamenanie], [vyznamenanie_kedy], [udelene_tresty], [pozna"& _ 
-                "mky], [titul_pred_id], [titul_za_id], [narodnost_id], [statna_prislusnost_id]) V"& _ 
-                "ALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14"& _ 
-                ", @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, "& _ 
-                "@p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39)"
+                "mky], [titul_pred_id], [titul_za_id], [narodnost_id], [statna_prislusnost_id], ["& _ 
+                "ico_clenovia]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, "& _ 
+                "@p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p"& _ 
+                "25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38"& _ 
+                ", @p39, @p40)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_pl", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "meno", Global.System.Data.DataRowVersion.Current, Nothing))
@@ -10628,6 +10668,7 @@ Namespace spzDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p37", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "titul_za_id", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p38", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "narodnost_id", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p39", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "statna_prislusnost_id", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p40", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ico_clenovia", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [123_clenovia] SET [cislo_pl] = @p1, [meno] = @p2, [priezvisko] = @p3, [da"& _ 
@@ -10643,7 +10684,8 @@ Namespace spzDataSetTableAdapters
                 "gulova_zbran] = @p30, [kontrolne_strelby_gula] = @p31, [najvyzsie_vyznamenanie] "& _ 
                 "= @p32, [vyznamenanie_kedy] = @p33, [udelene_tresty] = @p34, [poznamky] = @p35, "& _ 
                 "[titul_pred_id] = @p36, [titul_za_id] = @p37, [narodnost_id] = @p38, [statna_pri"& _ 
-                "slusnost_id] = @p39 WHERE (([cislo_pl] = @p40) AND ([rodne_cislo] = @p41))"
+                "slusnost_id] = @p39, [ico_clenovia] = @p40 WHERE (([cislo_pl] = @p41) AND ([rodn"& _ 
+                "e_cislo] = @p42))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_pl", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "meno", Global.System.Data.DataRowVersion.Current, Nothing))
@@ -10684,8 +10726,9 @@ Namespace spzDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p37", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "titul_za_id", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p38", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "narodnost_id", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p39", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "statna_prislusnost_id", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p40", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_pl", Global.System.Data.DataRowVersion.Original, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p41", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "rodne_cislo", Global.System.Data.DataRowVersion.Original, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p40", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ico_clenovia", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p41", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_pl", Global.System.Data.DataRowVersion.Original, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p42", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "rodne_cislo", Global.System.Data.DataRowVersion.Original, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -10699,16 +10742,16 @@ Namespace spzDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT [cislo_pl], [meno], [priezvisko], [datum_narodenia], [rodne_cislo], [miest"& _ 
-                "o_narodenia], [okres_narodenia], [bydlisko], [okres_bydliska], [psc], [telefon],"& _ 
-                " [cislo_op], [datum_vydania_op], [datum_vydania_pl], [cislo_zp], [datum_vydania_"& _ 
-                "zp], [cislo_clenskeho_preukazu_spz], [clen_spz_od], [clenske_do], [cislo_dokladu"& _ 
-                "_clenske], [clen_pz], [skuska_z_polovnictva], [miesto_skusky_z_polovnictva], [sk"& _ 
-                "uska_pre_polovnych_hospodarov], [miesto_skusky_pre_polovnych_hospodarov], [vyzsi"& _ 
-                "a_skuska_z_polovnictva], [miesto_vyzsej_skusky_z_polovnictva], [brokova_zbran], "& _ 
-                "[kontrolne_strelby_brok], [gulova_zbran], [kontrolne_strelby_gula], [najvyzsie_v"& _ 
-                "yznamenanie], [vyznamenanie_kedy], [udelene_tresty], [poznamky], [titul_pred_id]"& _ 
-                ", [titul_za_id], [narodnost_id], [statna_prislusnost_id] FROM [123_clenovia]"
+            Me._commandCollection(0).CommandText = "SELECT cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, miesto_narodenia"& _ 
+                ", okres_narodenia, bydlisko, okres_bydliska, psc, telefon, cislo_op, datum_vydan"& _ 
+                "ia_op, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_sp"& _ 
+                "z, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva"& _ 
+                ", miesto_skusky_z_polovnictva, skuska_pre_polovnych_hospodarov, miesto_skusky_pr"& _ 
+                "e_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsej_skusky_z_polo"& _ 
+                "vnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_"& _ 
+                "gula, najvyzsie_vyznamenanie, vyznamenanie_kedy, udelene_tresty, poznamky, titul"& _ 
+                "_pred_id, titul_za_id, narodnost_id, statna_prislusnost_id, ico_clenovia FROM [1"& _ 
+                "23_clenovia]"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -10829,7 +10872,8 @@ Namespace spzDataSetTableAdapters
                     ByVal p36 As Integer,  _
                     ByVal p37 As Integer,  _
                     ByVal p38 As Integer,  _
-                    ByVal p39 As Integer) As Integer
+                    ByVal p39 As Integer,  _
+                    ByVal p40 As String) As Integer
             If (p1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p1")
             Else
@@ -11009,6 +11053,11 @@ Namespace spzDataSetTableAdapters
             Me.Adapter.InsertCommand.Parameters(36).Value = CType(p37,Integer)
             Me.Adapter.InsertCommand.Parameters(37).Value = CType(p38,Integer)
             Me.Adapter.InsertCommand.Parameters(38).Value = CType(p39,Integer)
+            If (p40 Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(39).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(39).Value = CType(p40,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -11068,7 +11117,8 @@ Namespace spzDataSetTableAdapters
                     ByVal p38 As Integer,  _
                     ByVal p39 As Integer,  _
                     ByVal p40 As String,  _
-                    ByVal p41 As String) As Integer
+                    ByVal p41 As String,  _
+                    ByVal p42 As String) As Integer
             If (p1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p1")
             Else
@@ -11249,7 +11299,7 @@ Namespace spzDataSetTableAdapters
             Me.Adapter.UpdateCommand.Parameters(37).Value = CType(p38,Integer)
             Me.Adapter.UpdateCommand.Parameters(38).Value = CType(p39,Integer)
             If (p40 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p40")
+                Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(39).Value = CType(p40,String)
             End If
@@ -11257,6 +11307,11 @@ Namespace spzDataSetTableAdapters
                 Throw New Global.System.ArgumentNullException("p41")
             Else
                 Me.Adapter.UpdateCommand.Parameters(40).Value = CType(p41,String)
+            End If
+            If (p42 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p42")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(p42,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -11315,8 +11370,9 @@ Namespace spzDataSetTableAdapters
                     ByVal p38 As Integer,  _
                     ByVal p39 As Integer,  _
                     ByVal p40 As String,  _
-                    ByVal p41 As String) As Integer
-            Return Me.Update(p40, p2, p3, p4, p41, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41)
+                    ByVal p41 As String,  _
+                    ByVal p42 As String) As Integer
+            Return Me.Update(p41, p2, p3, p4, p42, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42)
         End Function
     End Class
     
