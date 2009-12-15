@@ -43,6 +43,14 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:evidencia_spz.spzDataSet._123_clenoviaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:evidencia_spz.spzDataSet.all_clenoviaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:evidencia_spz.spzDataSet.narodnostRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -67,6 +75,14 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:evidencia_spz.spzDataSet._123_clenoviaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:evidencia_spz.spzDataSet.all_clenoviaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:evidencia_spz.spzDataSet.narodnostRowChangeEvent">
 	<summary>
 Row event argument class
@@ -88,6 +104,14 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:evidencia_spz.spzDataSet.zdruzeniaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:evidencia_spz.spzDataSet._123_clenoviaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:evidencia_spz.spzDataSet.all_clenoviaRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -116,6 +140,18 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:evidencia_spz.spzDataSetTableAdapters.zdruzeniaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:evidencia_spz.spzDataSetTableAdapters._123_clenoviaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:evidencia_spz.spzDataSetTableAdapters.all_clenoviaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:evidencia_spz.spzDataSetTableAdapters.QueriesTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

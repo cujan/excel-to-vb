@@ -29,62 +29,62 @@ Partial Class zdruzenie
         Me.ZdruzeniaTableAdapter = New evidencia_spz.spzDataSetTableAdapters.zdruzeniaTableAdapter
         Me.TableAdapterManager = New evidencia_spz.spzDataSetTableAdapters.TableAdapterManager
         Me.ZdruzeniaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.ZdruzeniaDataGridView = New System.Windows.Forms.DataGridView
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn26 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn30 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn31 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn32 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn33 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn34 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn35 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn36 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn37 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn38 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn39 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn40 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn41 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn42 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn43 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ZdruzeniaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
+        Me.ZdruzeniaDataGridView = New System.Windows.Forms.DataGridView
+        Me.IcoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ICOclenoviaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ICOpsyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ICOtrofejeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.NazovDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.SidloDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PredsedaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PredsedatelefonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PolovnyhospodarDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PolovnyhospodartelefonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DicDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.BankaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.CislouctuDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ChovatelskaoblastDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.CisloreviruDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.VymeraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.LesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.JeleniaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.SrnciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DiviaciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.BazantDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.InaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PlatnostnajomnejzmluvydoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.StavaceplanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.StavaceskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.SliediceplanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.SliediceskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.SlovenskykopovplanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.SlovenskykopovskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.OstatneduriceplanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.OstatneduriceskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.BrlohareplanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.BrlohareskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.FarbiareplanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.FarbiareskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PesjeleniaplanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PesjeleniaskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PesdiviaciaplanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PesdiviaciaskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PessrnciaplanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PessrnciaskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PesmalaplanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PesmalaskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -135,306 +135,6 @@ Partial Class zdruzenie
         Me.ZdruzeniaBindingNavigator.TabIndex = 0
         Me.ZdruzeniaBindingNavigator.Text = "BindingNavigator1"
         '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'ZdruzeniaDataGridView
-        '
-        Me.ZdruzeniaDataGridView.AutoGenerateColumns = False
-        Me.ZdruzeniaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ZdruzeniaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn36, Me.DataGridViewTextBoxColumn37, Me.DataGridViewTextBoxColumn38, Me.DataGridViewTextBoxColumn39, Me.DataGridViewTextBoxColumn40, Me.DataGridViewTextBoxColumn41, Me.DataGridViewTextBoxColumn42, Me.DataGridViewTextBoxColumn43})
-        Me.ZdruzeniaDataGridView.DataSource = Me.ZdruzeniaBindingSource
-        Me.ZdruzeniaDataGridView.Location = New System.Drawing.Point(35, 60)
-        Me.ZdruzeniaDataGridView.Name = "ZdruzeniaDataGridView"
-        Me.ZdruzeniaDataGridView.Size = New System.Drawing.Size(689, 472)
-        Me.ZdruzeniaDataGridView.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ico"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "ico"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "ICO_clenovia"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "ICO_clenovia"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "ICO_psy"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "ICO_psy"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "ICO_trofeje"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "ICO_trofeje"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "nazov"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "sidlo"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "sidlo"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "predseda"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "predseda"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "predseda_telefon"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "predseda_telefon"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "polovny_hospodar"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "polovny_hospodar"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "polovny_hospodar_telefon"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "polovny_hospodar_telefon"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "dic"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "dic"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "banka"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "banka"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        '
-        'DataGridViewTextBoxColumn13
-        '
-        Me.DataGridViewTextBoxColumn13.DataPropertyName = "cislo_uctu"
-        Me.DataGridViewTextBoxColumn13.HeaderText = "cislo_uctu"
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.DataPropertyName = "chovatelska_oblast"
-        Me.DataGridViewTextBoxColumn14.HeaderText = "chovatelska_oblast"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.DataPropertyName = "cislo_reviru"
-        Me.DataGridViewTextBoxColumn15.HeaderText = "cislo_reviru"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "vymera"
-        Me.DataGridViewTextBoxColumn16.HeaderText = "vymera"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        '
-        'DataGridViewTextBoxColumn17
-        '
-        Me.DataGridViewTextBoxColumn17.DataPropertyName = "les"
-        Me.DataGridViewTextBoxColumn17.HeaderText = "les"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        '
-        'DataGridViewTextBoxColumn18
-        '
-        Me.DataGridViewTextBoxColumn18.DataPropertyName = "jelenia"
-        Me.DataGridViewTextBoxColumn18.HeaderText = "jelenia"
-        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
-        '
-        'DataGridViewTextBoxColumn19
-        '
-        Me.DataGridViewTextBoxColumn19.DataPropertyName = "srncia"
-        Me.DataGridViewTextBoxColumn19.HeaderText = "srncia"
-        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
-        '
-        'DataGridViewTextBoxColumn20
-        '
-        Me.DataGridViewTextBoxColumn20.DataPropertyName = "diviacia"
-        Me.DataGridViewTextBoxColumn20.HeaderText = "diviacia"
-        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
-        '
-        'DataGridViewTextBoxColumn21
-        '
-        Me.DataGridViewTextBoxColumn21.DataPropertyName = "bazant"
-        Me.DataGridViewTextBoxColumn21.HeaderText = "bazant"
-        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
-        '
-        'DataGridViewTextBoxColumn22
-        '
-        Me.DataGridViewTextBoxColumn22.DataPropertyName = "ina"
-        Me.DataGridViewTextBoxColumn22.HeaderText = "ina"
-        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
-        '
-        'DataGridViewTextBoxColumn23
-        '
-        Me.DataGridViewTextBoxColumn23.DataPropertyName = "platnost_najomnej_zmluvy_do"
-        Me.DataGridViewTextBoxColumn23.HeaderText = "platnost_najomnej_zmluvy_do"
-        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
-        '
-        'DataGridViewTextBoxColumn24
-        '
-        Me.DataGridViewTextBoxColumn24.DataPropertyName = "stavace_plan"
-        Me.DataGridViewTextBoxColumn24.HeaderText = "stavace_plan"
-        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
-        '
-        'DataGridViewTextBoxColumn25
-        '
-        Me.DataGridViewTextBoxColumn25.DataPropertyName = "stavace_skutocnost"
-        Me.DataGridViewTextBoxColumn25.HeaderText = "stavace_skutocnost"
-        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
-        '
-        'DataGridViewTextBoxColumn26
-        '
-        Me.DataGridViewTextBoxColumn26.DataPropertyName = "sliedice_plan"
-        Me.DataGridViewTextBoxColumn26.HeaderText = "sliedice_plan"
-        Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
-        '
-        'DataGridViewTextBoxColumn27
-        '
-        Me.DataGridViewTextBoxColumn27.DataPropertyName = "sliedice_skutocnost"
-        Me.DataGridViewTextBoxColumn27.HeaderText = "sliedice_skutocnost"
-        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
-        '
-        'DataGridViewTextBoxColumn28
-        '
-        Me.DataGridViewTextBoxColumn28.DataPropertyName = "slovensky_kopov_plan"
-        Me.DataGridViewTextBoxColumn28.HeaderText = "slovensky_kopov_plan"
-        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
-        '
-        'DataGridViewTextBoxColumn29
-        '
-        Me.DataGridViewTextBoxColumn29.DataPropertyName = "slovensky_kopov_skutocnost"
-        Me.DataGridViewTextBoxColumn29.HeaderText = "slovensky_kopov_skutocnost"
-        Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
-        '
-        'DataGridViewTextBoxColumn30
-        '
-        Me.DataGridViewTextBoxColumn30.DataPropertyName = "ostatne_durice_plan"
-        Me.DataGridViewTextBoxColumn30.HeaderText = "ostatne_durice_plan"
-        Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
-        '
-        'DataGridViewTextBoxColumn31
-        '
-        Me.DataGridViewTextBoxColumn31.DataPropertyName = "ostatne_durice_skutocnost"
-        Me.DataGridViewTextBoxColumn31.HeaderText = "ostatne_durice_skutocnost"
-        Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
-        '
-        'DataGridViewTextBoxColumn32
-        '
-        Me.DataGridViewTextBoxColumn32.DataPropertyName = "brlohare_plan"
-        Me.DataGridViewTextBoxColumn32.HeaderText = "brlohare_plan"
-        Me.DataGridViewTextBoxColumn32.Name = "DataGridViewTextBoxColumn32"
-        '
-        'DataGridViewTextBoxColumn33
-        '
-        Me.DataGridViewTextBoxColumn33.DataPropertyName = "brlohare_skutocnost"
-        Me.DataGridViewTextBoxColumn33.HeaderText = "brlohare_skutocnost"
-        Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
-        '
-        'DataGridViewTextBoxColumn34
-        '
-        Me.DataGridViewTextBoxColumn34.DataPropertyName = "farbiare_plan"
-        Me.DataGridViewTextBoxColumn34.HeaderText = "farbiare_plan"
-        Me.DataGridViewTextBoxColumn34.Name = "DataGridViewTextBoxColumn34"
-        '
-        'DataGridViewTextBoxColumn35
-        '
-        Me.DataGridViewTextBoxColumn35.DataPropertyName = "farbiare_skutocnost"
-        Me.DataGridViewTextBoxColumn35.HeaderText = "farbiare_skutocnost"
-        Me.DataGridViewTextBoxColumn35.Name = "DataGridViewTextBoxColumn35"
-        '
-        'DataGridViewTextBoxColumn36
-        '
-        Me.DataGridViewTextBoxColumn36.DataPropertyName = "pes_jelenia_plan"
-        Me.DataGridViewTextBoxColumn36.HeaderText = "pes_jelenia_plan"
-        Me.DataGridViewTextBoxColumn36.Name = "DataGridViewTextBoxColumn36"
-        '
-        'DataGridViewTextBoxColumn37
-        '
-        Me.DataGridViewTextBoxColumn37.DataPropertyName = "pes_jelenia_skutocnost"
-        Me.DataGridViewTextBoxColumn37.HeaderText = "pes_jelenia_skutocnost"
-        Me.DataGridViewTextBoxColumn37.Name = "DataGridViewTextBoxColumn37"
-        '
-        'DataGridViewTextBoxColumn38
-        '
-        Me.DataGridViewTextBoxColumn38.DataPropertyName = "pes_diviacia_plan"
-        Me.DataGridViewTextBoxColumn38.HeaderText = "pes_diviacia_plan"
-        Me.DataGridViewTextBoxColumn38.Name = "DataGridViewTextBoxColumn38"
-        '
-        'DataGridViewTextBoxColumn39
-        '
-        Me.DataGridViewTextBoxColumn39.DataPropertyName = "pes_diviacia_skutocnost"
-        Me.DataGridViewTextBoxColumn39.HeaderText = "pes_diviacia_skutocnost"
-        Me.DataGridViewTextBoxColumn39.Name = "DataGridViewTextBoxColumn39"
-        '
-        'DataGridViewTextBoxColumn40
-        '
-        Me.DataGridViewTextBoxColumn40.DataPropertyName = "pes_srncia_plan"
-        Me.DataGridViewTextBoxColumn40.HeaderText = "pes_srncia_plan"
-        Me.DataGridViewTextBoxColumn40.Name = "DataGridViewTextBoxColumn40"
-        '
-        'DataGridViewTextBoxColumn41
-        '
-        Me.DataGridViewTextBoxColumn41.DataPropertyName = "pes_srncia_skutocnost"
-        Me.DataGridViewTextBoxColumn41.HeaderText = "pes_srncia_skutocnost"
-        Me.DataGridViewTextBoxColumn41.Name = "DataGridViewTextBoxColumn41"
-        '
-        'DataGridViewTextBoxColumn42
-        '
-        Me.DataGridViewTextBoxColumn42.DataPropertyName = "pes_mala_plan"
-        Me.DataGridViewTextBoxColumn42.HeaderText = "pes_mala_plan"
-        Me.DataGridViewTextBoxColumn42.Name = "DataGridViewTextBoxColumn42"
-        '
-        'DataGridViewTextBoxColumn43
-        '
-        Me.DataGridViewTextBoxColumn43.DataPropertyName = "pes_mala_skutocnost"
-        Me.DataGridViewTextBoxColumn43.HeaderText = "pes_mala_skutocnost"
-        Me.DataGridViewTextBoxColumn43.Name = "DataGridViewTextBoxColumn43"
-        '
         'BindingNavigatorAddNewItem
         '
         Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -443,6 +143,13 @@ Partial Class zdruzenie
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorDeleteItem
         '
@@ -471,6 +178,25 @@ Partial Class zdruzenie
         Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
         '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
         'BindingNavigatorMoveNextItem
         '
         Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -489,6 +215,11 @@ Partial Class zdruzenie
         Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
         'ZdruzeniaBindingNavigatorSaveItem
         '
         Me.ZdruzeniaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -496,6 +227,275 @@ Partial Class zdruzenie
         Me.ZdruzeniaBindingNavigatorSaveItem.Name = "ZdruzeniaBindingNavigatorSaveItem"
         Me.ZdruzeniaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ZdruzeniaBindingNavigatorSaveItem.Text = "Save Data"
+        '
+        'ZdruzeniaDataGridView
+        '
+        Me.ZdruzeniaDataGridView.AutoGenerateColumns = False
+        Me.ZdruzeniaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ZdruzeniaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IcoDataGridViewTextBoxColumn, Me.ICOclenoviaDataGridViewTextBoxColumn, Me.ICOpsyDataGridViewTextBoxColumn, Me.ICOtrofejeDataGridViewTextBoxColumn, Me.NazovDataGridViewTextBoxColumn, Me.SidloDataGridViewTextBoxColumn, Me.PredsedaDataGridViewTextBoxColumn, Me.PredsedatelefonDataGridViewTextBoxColumn, Me.PolovnyhospodarDataGridViewTextBoxColumn, Me.PolovnyhospodartelefonDataGridViewTextBoxColumn, Me.DicDataGridViewTextBoxColumn, Me.BankaDataGridViewTextBoxColumn, Me.CislouctuDataGridViewTextBoxColumn, Me.ChovatelskaoblastDataGridViewTextBoxColumn, Me.CisloreviruDataGridViewTextBoxColumn, Me.VymeraDataGridViewTextBoxColumn, Me.LesDataGridViewTextBoxColumn, Me.JeleniaDataGridViewTextBoxColumn, Me.SrnciaDataGridViewTextBoxColumn, Me.DiviaciaDataGridViewTextBoxColumn, Me.BazantDataGridViewTextBoxColumn, Me.InaDataGridViewTextBoxColumn, Me.PlatnostnajomnejzmluvydoDataGridViewTextBoxColumn, Me.StavaceplanDataGridViewTextBoxColumn, Me.StavaceskutocnostDataGridViewTextBoxColumn, Me.SliediceplanDataGridViewTextBoxColumn, Me.SliediceskutocnostDataGridViewTextBoxColumn, Me.SlovenskykopovplanDataGridViewTextBoxColumn, Me.SlovenskykopovskutocnostDataGridViewTextBoxColumn, Me.OstatneduriceplanDataGridViewTextBoxColumn, Me.OstatneduriceskutocnostDataGridViewTextBoxColumn, Me.BrlohareplanDataGridViewTextBoxColumn, Me.BrlohareskutocnostDataGridViewTextBoxColumn, Me.FarbiareplanDataGridViewTextBoxColumn, Me.FarbiareskutocnostDataGridViewTextBoxColumn, Me.PesjeleniaplanDataGridViewTextBoxColumn, Me.PesjeleniaskutocnostDataGridViewTextBoxColumn, Me.PesdiviaciaplanDataGridViewTextBoxColumn, Me.PesdiviaciaskutocnostDataGridViewTextBoxColumn, Me.PessrnciaplanDataGridViewTextBoxColumn, Me.PessrnciaskutocnostDataGridViewTextBoxColumn, Me.PesmalaplanDataGridViewTextBoxColumn, Me.PesmalaskutocnostDataGridViewTextBoxColumn})
+        Me.ZdruzeniaDataGridView.DataSource = Me.ZdruzeniaBindingSource
+        Me.ZdruzeniaDataGridView.Location = New System.Drawing.Point(55, 41)
+        Me.ZdruzeniaDataGridView.Name = "ZdruzeniaDataGridView"
+        Me.ZdruzeniaDataGridView.Size = New System.Drawing.Size(577, 220)
+        Me.ZdruzeniaDataGridView.TabIndex = 1
+        '
+        'IcoDataGridViewTextBoxColumn
+        '
+        Me.IcoDataGridViewTextBoxColumn.DataPropertyName = "ico"
+        Me.IcoDataGridViewTextBoxColumn.HeaderText = "ico"
+        Me.IcoDataGridViewTextBoxColumn.Name = "IcoDataGridViewTextBoxColumn"
+        '
+        'ICOclenoviaDataGridViewTextBoxColumn
+        '
+        Me.ICOclenoviaDataGridViewTextBoxColumn.DataPropertyName = "ICO_clenovia"
+        Me.ICOclenoviaDataGridViewTextBoxColumn.HeaderText = "ICO_clenovia"
+        Me.ICOclenoviaDataGridViewTextBoxColumn.Name = "ICOclenoviaDataGridViewTextBoxColumn"
+        '
+        'ICOpsyDataGridViewTextBoxColumn
+        '
+        Me.ICOpsyDataGridViewTextBoxColumn.DataPropertyName = "ICO_psy"
+        Me.ICOpsyDataGridViewTextBoxColumn.HeaderText = "ICO_psy"
+        Me.ICOpsyDataGridViewTextBoxColumn.Name = "ICOpsyDataGridViewTextBoxColumn"
+        '
+        'ICOtrofejeDataGridViewTextBoxColumn
+        '
+        Me.ICOtrofejeDataGridViewTextBoxColumn.DataPropertyName = "ICO_trofeje"
+        Me.ICOtrofejeDataGridViewTextBoxColumn.HeaderText = "ICO_trofeje"
+        Me.ICOtrofejeDataGridViewTextBoxColumn.Name = "ICOtrofejeDataGridViewTextBoxColumn"
+        '
+        'NazovDataGridViewTextBoxColumn
+        '
+        Me.NazovDataGridViewTextBoxColumn.DataPropertyName = "nazov"
+        Me.NazovDataGridViewTextBoxColumn.HeaderText = "nazov"
+        Me.NazovDataGridViewTextBoxColumn.Name = "NazovDataGridViewTextBoxColumn"
+        '
+        'SidloDataGridViewTextBoxColumn
+        '
+        Me.SidloDataGridViewTextBoxColumn.DataPropertyName = "sidlo"
+        Me.SidloDataGridViewTextBoxColumn.HeaderText = "sidlo"
+        Me.SidloDataGridViewTextBoxColumn.Name = "SidloDataGridViewTextBoxColumn"
+        '
+        'PredsedaDataGridViewTextBoxColumn
+        '
+        Me.PredsedaDataGridViewTextBoxColumn.DataPropertyName = "predseda"
+        Me.PredsedaDataGridViewTextBoxColumn.HeaderText = "predseda"
+        Me.PredsedaDataGridViewTextBoxColumn.Name = "PredsedaDataGridViewTextBoxColumn"
+        '
+        'PredsedatelefonDataGridViewTextBoxColumn
+        '
+        Me.PredsedatelefonDataGridViewTextBoxColumn.DataPropertyName = "predseda_telefon"
+        Me.PredsedatelefonDataGridViewTextBoxColumn.HeaderText = "predseda_telefon"
+        Me.PredsedatelefonDataGridViewTextBoxColumn.Name = "PredsedatelefonDataGridViewTextBoxColumn"
+        '
+        'PolovnyhospodarDataGridViewTextBoxColumn
+        '
+        Me.PolovnyhospodarDataGridViewTextBoxColumn.DataPropertyName = "polovny_hospodar"
+        Me.PolovnyhospodarDataGridViewTextBoxColumn.HeaderText = "polovny_hospodar"
+        Me.PolovnyhospodarDataGridViewTextBoxColumn.Name = "PolovnyhospodarDataGridViewTextBoxColumn"
+        '
+        'PolovnyhospodartelefonDataGridViewTextBoxColumn
+        '
+        Me.PolovnyhospodartelefonDataGridViewTextBoxColumn.DataPropertyName = "polovny_hospodar_telefon"
+        Me.PolovnyhospodartelefonDataGridViewTextBoxColumn.HeaderText = "polovny_hospodar_telefon"
+        Me.PolovnyhospodartelefonDataGridViewTextBoxColumn.Name = "PolovnyhospodartelefonDataGridViewTextBoxColumn"
+        '
+        'DicDataGridViewTextBoxColumn
+        '
+        Me.DicDataGridViewTextBoxColumn.DataPropertyName = "dic"
+        Me.DicDataGridViewTextBoxColumn.HeaderText = "dic"
+        Me.DicDataGridViewTextBoxColumn.Name = "DicDataGridViewTextBoxColumn"
+        '
+        'BankaDataGridViewTextBoxColumn
+        '
+        Me.BankaDataGridViewTextBoxColumn.DataPropertyName = "banka"
+        Me.BankaDataGridViewTextBoxColumn.HeaderText = "banka"
+        Me.BankaDataGridViewTextBoxColumn.Name = "BankaDataGridViewTextBoxColumn"
+        '
+        'CislouctuDataGridViewTextBoxColumn
+        '
+        Me.CislouctuDataGridViewTextBoxColumn.DataPropertyName = "cislo_uctu"
+        Me.CislouctuDataGridViewTextBoxColumn.HeaderText = "cislo_uctu"
+        Me.CislouctuDataGridViewTextBoxColumn.Name = "CislouctuDataGridViewTextBoxColumn"
+        '
+        'ChovatelskaoblastDataGridViewTextBoxColumn
+        '
+        Me.ChovatelskaoblastDataGridViewTextBoxColumn.DataPropertyName = "chovatelska_oblast"
+        Me.ChovatelskaoblastDataGridViewTextBoxColumn.HeaderText = "chovatelska_oblast"
+        Me.ChovatelskaoblastDataGridViewTextBoxColumn.Name = "ChovatelskaoblastDataGridViewTextBoxColumn"
+        '
+        'CisloreviruDataGridViewTextBoxColumn
+        '
+        Me.CisloreviruDataGridViewTextBoxColumn.DataPropertyName = "cislo_reviru"
+        Me.CisloreviruDataGridViewTextBoxColumn.HeaderText = "cislo_reviru"
+        Me.CisloreviruDataGridViewTextBoxColumn.Name = "CisloreviruDataGridViewTextBoxColumn"
+        '
+        'VymeraDataGridViewTextBoxColumn
+        '
+        Me.VymeraDataGridViewTextBoxColumn.DataPropertyName = "vymera"
+        Me.VymeraDataGridViewTextBoxColumn.HeaderText = "vymera"
+        Me.VymeraDataGridViewTextBoxColumn.Name = "VymeraDataGridViewTextBoxColumn"
+        '
+        'LesDataGridViewTextBoxColumn
+        '
+        Me.LesDataGridViewTextBoxColumn.DataPropertyName = "les"
+        Me.LesDataGridViewTextBoxColumn.HeaderText = "les"
+        Me.LesDataGridViewTextBoxColumn.Name = "LesDataGridViewTextBoxColumn"
+        '
+        'JeleniaDataGridViewTextBoxColumn
+        '
+        Me.JeleniaDataGridViewTextBoxColumn.DataPropertyName = "jelenia"
+        Me.JeleniaDataGridViewTextBoxColumn.HeaderText = "jelenia"
+        Me.JeleniaDataGridViewTextBoxColumn.Name = "JeleniaDataGridViewTextBoxColumn"
+        '
+        'SrnciaDataGridViewTextBoxColumn
+        '
+        Me.SrnciaDataGridViewTextBoxColumn.DataPropertyName = "srncia"
+        Me.SrnciaDataGridViewTextBoxColumn.HeaderText = "srncia"
+        Me.SrnciaDataGridViewTextBoxColumn.Name = "SrnciaDataGridViewTextBoxColumn"
+        '
+        'DiviaciaDataGridViewTextBoxColumn
+        '
+        Me.DiviaciaDataGridViewTextBoxColumn.DataPropertyName = "diviacia"
+        Me.DiviaciaDataGridViewTextBoxColumn.HeaderText = "diviacia"
+        Me.DiviaciaDataGridViewTextBoxColumn.Name = "DiviaciaDataGridViewTextBoxColumn"
+        '
+        'BazantDataGridViewTextBoxColumn
+        '
+        Me.BazantDataGridViewTextBoxColumn.DataPropertyName = "bazant"
+        Me.BazantDataGridViewTextBoxColumn.HeaderText = "bazant"
+        Me.BazantDataGridViewTextBoxColumn.Name = "BazantDataGridViewTextBoxColumn"
+        '
+        'InaDataGridViewTextBoxColumn
+        '
+        Me.InaDataGridViewTextBoxColumn.DataPropertyName = "ina"
+        Me.InaDataGridViewTextBoxColumn.HeaderText = "ina"
+        Me.InaDataGridViewTextBoxColumn.Name = "InaDataGridViewTextBoxColumn"
+        '
+        'PlatnostnajomnejzmluvydoDataGridViewTextBoxColumn
+        '
+        Me.PlatnostnajomnejzmluvydoDataGridViewTextBoxColumn.DataPropertyName = "platnost_najomnej_zmluvy_do"
+        Me.PlatnostnajomnejzmluvydoDataGridViewTextBoxColumn.HeaderText = "platnost_najomnej_zmluvy_do"
+        Me.PlatnostnajomnejzmluvydoDataGridViewTextBoxColumn.Name = "PlatnostnajomnejzmluvydoDataGridViewTextBoxColumn"
+        '
+        'StavaceplanDataGridViewTextBoxColumn
+        '
+        Me.StavaceplanDataGridViewTextBoxColumn.DataPropertyName = "stavace_plan"
+        Me.StavaceplanDataGridViewTextBoxColumn.HeaderText = "stavace_plan"
+        Me.StavaceplanDataGridViewTextBoxColumn.Name = "StavaceplanDataGridViewTextBoxColumn"
+        '
+        'StavaceskutocnostDataGridViewTextBoxColumn
+        '
+        Me.StavaceskutocnostDataGridViewTextBoxColumn.DataPropertyName = "stavace_skutocnost"
+        Me.StavaceskutocnostDataGridViewTextBoxColumn.HeaderText = "stavace_skutocnost"
+        Me.StavaceskutocnostDataGridViewTextBoxColumn.Name = "StavaceskutocnostDataGridViewTextBoxColumn"
+        '
+        'SliediceplanDataGridViewTextBoxColumn
+        '
+        Me.SliediceplanDataGridViewTextBoxColumn.DataPropertyName = "sliedice_plan"
+        Me.SliediceplanDataGridViewTextBoxColumn.HeaderText = "sliedice_plan"
+        Me.SliediceplanDataGridViewTextBoxColumn.Name = "SliediceplanDataGridViewTextBoxColumn"
+        '
+        'SliediceskutocnostDataGridViewTextBoxColumn
+        '
+        Me.SliediceskutocnostDataGridViewTextBoxColumn.DataPropertyName = "sliedice_skutocnost"
+        Me.SliediceskutocnostDataGridViewTextBoxColumn.HeaderText = "sliedice_skutocnost"
+        Me.SliediceskutocnostDataGridViewTextBoxColumn.Name = "SliediceskutocnostDataGridViewTextBoxColumn"
+        '
+        'SlovenskykopovplanDataGridViewTextBoxColumn
+        '
+        Me.SlovenskykopovplanDataGridViewTextBoxColumn.DataPropertyName = "slovensky_kopov_plan"
+        Me.SlovenskykopovplanDataGridViewTextBoxColumn.HeaderText = "slovensky_kopov_plan"
+        Me.SlovenskykopovplanDataGridViewTextBoxColumn.Name = "SlovenskykopovplanDataGridViewTextBoxColumn"
+        '
+        'SlovenskykopovskutocnostDataGridViewTextBoxColumn
+        '
+        Me.SlovenskykopovskutocnostDataGridViewTextBoxColumn.DataPropertyName = "slovensky_kopov_skutocnost"
+        Me.SlovenskykopovskutocnostDataGridViewTextBoxColumn.HeaderText = "slovensky_kopov_skutocnost"
+        Me.SlovenskykopovskutocnostDataGridViewTextBoxColumn.Name = "SlovenskykopovskutocnostDataGridViewTextBoxColumn"
+        '
+        'OstatneduriceplanDataGridViewTextBoxColumn
+        '
+        Me.OstatneduriceplanDataGridViewTextBoxColumn.DataPropertyName = "ostatne_durice_plan"
+        Me.OstatneduriceplanDataGridViewTextBoxColumn.HeaderText = "ostatne_durice_plan"
+        Me.OstatneduriceplanDataGridViewTextBoxColumn.Name = "OstatneduriceplanDataGridViewTextBoxColumn"
+        '
+        'OstatneduriceskutocnostDataGridViewTextBoxColumn
+        '
+        Me.OstatneduriceskutocnostDataGridViewTextBoxColumn.DataPropertyName = "ostatne_durice_skutocnost"
+        Me.OstatneduriceskutocnostDataGridViewTextBoxColumn.HeaderText = "ostatne_durice_skutocnost"
+        Me.OstatneduriceskutocnostDataGridViewTextBoxColumn.Name = "OstatneduriceskutocnostDataGridViewTextBoxColumn"
+        '
+        'BrlohareplanDataGridViewTextBoxColumn
+        '
+        Me.BrlohareplanDataGridViewTextBoxColumn.DataPropertyName = "brlohare_plan"
+        Me.BrlohareplanDataGridViewTextBoxColumn.HeaderText = "brlohare_plan"
+        Me.BrlohareplanDataGridViewTextBoxColumn.Name = "BrlohareplanDataGridViewTextBoxColumn"
+        '
+        'BrlohareskutocnostDataGridViewTextBoxColumn
+        '
+        Me.BrlohareskutocnostDataGridViewTextBoxColumn.DataPropertyName = "brlohare_skutocnost"
+        Me.BrlohareskutocnostDataGridViewTextBoxColumn.HeaderText = "brlohare_skutocnost"
+        Me.BrlohareskutocnostDataGridViewTextBoxColumn.Name = "BrlohareskutocnostDataGridViewTextBoxColumn"
+        '
+        'FarbiareplanDataGridViewTextBoxColumn
+        '
+        Me.FarbiareplanDataGridViewTextBoxColumn.DataPropertyName = "farbiare_plan"
+        Me.FarbiareplanDataGridViewTextBoxColumn.HeaderText = "farbiare_plan"
+        Me.FarbiareplanDataGridViewTextBoxColumn.Name = "FarbiareplanDataGridViewTextBoxColumn"
+        '
+        'FarbiareskutocnostDataGridViewTextBoxColumn
+        '
+        Me.FarbiareskutocnostDataGridViewTextBoxColumn.DataPropertyName = "farbiare_skutocnost"
+        Me.FarbiareskutocnostDataGridViewTextBoxColumn.HeaderText = "farbiare_skutocnost"
+        Me.FarbiareskutocnostDataGridViewTextBoxColumn.Name = "FarbiareskutocnostDataGridViewTextBoxColumn"
+        '
+        'PesjeleniaplanDataGridViewTextBoxColumn
+        '
+        Me.PesjeleniaplanDataGridViewTextBoxColumn.DataPropertyName = "pes_jelenia_plan"
+        Me.PesjeleniaplanDataGridViewTextBoxColumn.HeaderText = "pes_jelenia_plan"
+        Me.PesjeleniaplanDataGridViewTextBoxColumn.Name = "PesjeleniaplanDataGridViewTextBoxColumn"
+        '
+        'PesjeleniaskutocnostDataGridViewTextBoxColumn
+        '
+        Me.PesjeleniaskutocnostDataGridViewTextBoxColumn.DataPropertyName = "pes_jelenia_skutocnost"
+        Me.PesjeleniaskutocnostDataGridViewTextBoxColumn.HeaderText = "pes_jelenia_skutocnost"
+        Me.PesjeleniaskutocnostDataGridViewTextBoxColumn.Name = "PesjeleniaskutocnostDataGridViewTextBoxColumn"
+        '
+        'PesdiviaciaplanDataGridViewTextBoxColumn
+        '
+        Me.PesdiviaciaplanDataGridViewTextBoxColumn.DataPropertyName = "pes_diviacia_plan"
+        Me.PesdiviaciaplanDataGridViewTextBoxColumn.HeaderText = "pes_diviacia_plan"
+        Me.PesdiviaciaplanDataGridViewTextBoxColumn.Name = "PesdiviaciaplanDataGridViewTextBoxColumn"
+        '
+        'PesdiviaciaskutocnostDataGridViewTextBoxColumn
+        '
+        Me.PesdiviaciaskutocnostDataGridViewTextBoxColumn.DataPropertyName = "pes_diviacia_skutocnost"
+        Me.PesdiviaciaskutocnostDataGridViewTextBoxColumn.HeaderText = "pes_diviacia_skutocnost"
+        Me.PesdiviaciaskutocnostDataGridViewTextBoxColumn.Name = "PesdiviaciaskutocnostDataGridViewTextBoxColumn"
+        '
+        'PessrnciaplanDataGridViewTextBoxColumn
+        '
+        Me.PessrnciaplanDataGridViewTextBoxColumn.DataPropertyName = "pes_srncia_plan"
+        Me.PessrnciaplanDataGridViewTextBoxColumn.HeaderText = "pes_srncia_plan"
+        Me.PessrnciaplanDataGridViewTextBoxColumn.Name = "PessrnciaplanDataGridViewTextBoxColumn"
+        '
+        'PessrnciaskutocnostDataGridViewTextBoxColumn
+        '
+        Me.PessrnciaskutocnostDataGridViewTextBoxColumn.DataPropertyName = "pes_srncia_skutocnost"
+        Me.PessrnciaskutocnostDataGridViewTextBoxColumn.HeaderText = "pes_srncia_skutocnost"
+        Me.PessrnciaskutocnostDataGridViewTextBoxColumn.Name = "PessrnciaskutocnostDataGridViewTextBoxColumn"
+        '
+        'PesmalaplanDataGridViewTextBoxColumn
+        '
+        Me.PesmalaplanDataGridViewTextBoxColumn.DataPropertyName = "pes_mala_plan"
+        Me.PesmalaplanDataGridViewTextBoxColumn.HeaderText = "pes_mala_plan"
+        Me.PesmalaplanDataGridViewTextBoxColumn.Name = "PesmalaplanDataGridViewTextBoxColumn"
+        '
+        'PesmalaskutocnostDataGridViewTextBoxColumn
+        '
+        Me.PesmalaskutocnostDataGridViewTextBoxColumn.DataPropertyName = "pes_mala_skutocnost"
+        Me.PesmalaskutocnostDataGridViewTextBoxColumn.HeaderText = "pes_mala_skutocnost"
+        Me.PesmalaskutocnostDataGridViewTextBoxColumn.Name = "PesmalaskutocnostDataGridViewTextBoxColumn"
         '
         'zdruzenie
         '
@@ -534,47 +534,47 @@ Partial Class zdruzenie
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ZdruzeniaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents ZdruzeniaDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn13 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn14 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn16 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn17 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn18 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn19 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn20 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn21 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn22 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn23 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn24 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn25 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn26 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn27 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn28 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn29 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn30 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn31 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn32 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn33 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn34 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn35 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn36 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn37 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn38 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn39 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn40 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn41 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn42 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn43 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents IcoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ICOclenoviaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ICOpsyDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ICOtrofejeDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NazovDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SidloDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PredsedaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PredsedatelefonDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PolovnyhospodarDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PolovnyhospodartelefonDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DicDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents BankaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CislouctuDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ChovatelskaoblastDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CisloreviruDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents VymeraDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents LesDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents JeleniaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SrnciaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DiviaciaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents BazantDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents InaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PlatnostnajomnejzmluvydoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents StavaceplanDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents StavaceskutocnostDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SliediceplanDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SliediceskutocnostDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SlovenskykopovplanDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SlovenskykopovskutocnostDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents OstatneduriceplanDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents OstatneduriceskutocnostDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents BrlohareplanDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents BrlohareskutocnostDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FarbiareplanDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FarbiareskutocnostDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PesjeleniaplanDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PesjeleniaskutocnostDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PesdiviaciaplanDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PesdiviaciaskutocnostDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PessrnciaplanDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PessrnciaskutocnostDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PesmalaplanDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PesmalaskutocnostDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
