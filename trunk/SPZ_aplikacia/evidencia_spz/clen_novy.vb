@@ -9,7 +9,9 @@
         Me.ZdruzeniaTableAdapter.Fill(Me.SpzDataSet.zdruzenia)
         'TODO: This line of code loads data into the 'SpzDataSet.all_clenovia' table. You can move, or remove it, as needed.
         
-
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
     End Sub
 
     Private Sub All_clenoviaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -21,7 +23,7 @@
         MsgBox(Me.Clen_pzComboBox.SelectedValue)
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles uloz_clena_button.Click
         Dim ico_zdruzenia As String = Clen_pzComboBox.SelectedValue
         Dim ico_clenovia As String = ico_zdruzenia + "_clenovia"
 
@@ -75,5 +77,9 @@
 
         com.ExecuteNonQuery()
         con.Close()
+    End Sub
+
+    Private Sub zavriet_kartu_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_kartu_button.Click
+        Me.Close()
     End Sub
 End Class

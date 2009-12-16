@@ -157,7 +157,8 @@ Public Class hlavna_aplikacia
 
 
     Private Sub novy_clen_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles novy_clen_button.Click
- 
+        clen_novy.Show()
+        clen_novy.BringToFront()
 
     End Sub
 
@@ -435,11 +436,15 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub prehlad_zdruzeni_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles prehlad_zdruzeni_button.Click
+        zdruzenie.Show()
+        zdruzenie.BringToFront()
 
 
     End Sub
 
     Private Sub nove_zdruzenie_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nove_zdruzenie_button.Click
+        zdruzenie_nove.Show()
+        zdruzenie_nove.BringToFront()
 
 
     End Sub
