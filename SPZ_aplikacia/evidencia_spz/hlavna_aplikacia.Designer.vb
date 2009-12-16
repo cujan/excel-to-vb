@@ -117,6 +117,8 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_label = New System.Windows.Forms.Label
         Me.prehlad_clenov_button = New System.Windows.Forms.Button
         Me.novy_clen_button = New System.Windows.Forms.Button
+        Me.TextBox1 = New System.Windows.Forms.TextBox
+        Me.Button5 = New System.Windows.Forms.Button
         Me.Button4 = New System.Windows.Forms.Button
         Me.Button3 = New System.Windows.Forms.Button
         Me.Button1 = New System.Windows.Forms.Button
@@ -149,8 +151,6 @@ Partial Class hlavna_aplikacia
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.SpzDataSet = New evidencia_spz.spzDataSet
         Me.SpzDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Button5 = New System.Windows.Forms.Button
-        Me.TextBox1 = New System.Windows.Forms.TextBox
         TelefonLabel = New System.Windows.Forms.Label
         FaxLabel = New System.Windows.Forms.Label
         EmailLabel = New System.Windows.Forms.Label
@@ -1098,13 +1098,30 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(26, 86)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(115, 151)
+        Me.TextBox1.TabIndex = 39
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(72, 32)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(180, 23)
+        Me.Button5.TabIndex = 11
+        Me.Button5.Text = "nazvy tabuliek"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(52, 481)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(168, 23)
         Me.Button4.TabIndex = 38
-        Me.Button4.Text = "novy clen"
+        Me.Button4.Text = "novy clen aj v menu"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button3
@@ -1120,9 +1137,9 @@ Partial Class hlavna_aplikacia
         '
         Me.Button1.Location = New System.Drawing.Point(26, 355)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(153, 23)
         Me.Button1.TabIndex = 11
-        Me.Button1.Text = "zdruzenie"
+        Me.Button1.Text = "zdruzenie aj v menu"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -1131,7 +1148,7 @@ Partial Class hlavna_aplikacia
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(153, 23)
         Me.Button2.TabIndex = 12
-        Me.Button2.Text = "nove zdruzenie"
+        Me.Button2.Text = "nove zdruzenie aj v menu"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'verzia_text
@@ -1412,23 +1429,6 @@ Partial Class hlavna_aplikacia
         '
         Me.SpzDataSetBindingSource.DataSource = Me.SpzDataSet
         Me.SpzDataSetBindingSource.Position = 0
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(72, 32)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(180, 23)
-        Me.Button5.TabIndex = 11
-        Me.Button5.Text = "nazvy tabuliek"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(26, 86)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(115, 151)
-        Me.TextBox1.TabIndex = 39
         '
         'hlavna_aplikacia
         '

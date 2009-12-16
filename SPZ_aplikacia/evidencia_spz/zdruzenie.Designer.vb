@@ -85,6 +85,7 @@ Partial Class zdruzenie
         Me.PessrnciaskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.PesmalaplanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.PesmalaskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.zavriet_kartu_button = New System.Windows.Forms.Button
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,6 +109,8 @@ Partial Class zdruzenie
         '
         'TableAdapterManager
         '
+        Me.TableAdapterManager._123_clenoviaTableAdapter = Nothing
+        Me.TableAdapterManager.all_clenoviaTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.narodnostTableAdapter = Nothing
         Me.TableAdapterManager.statna_prislusnostTableAdapter = Nothing
@@ -234,9 +237,9 @@ Partial Class zdruzenie
         Me.ZdruzeniaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ZdruzeniaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IcoDataGridViewTextBoxColumn, Me.ICOclenoviaDataGridViewTextBoxColumn, Me.ICOpsyDataGridViewTextBoxColumn, Me.ICOtrofejeDataGridViewTextBoxColumn, Me.NazovDataGridViewTextBoxColumn, Me.SidloDataGridViewTextBoxColumn, Me.PredsedaDataGridViewTextBoxColumn, Me.PredsedatelefonDataGridViewTextBoxColumn, Me.PolovnyhospodarDataGridViewTextBoxColumn, Me.PolovnyhospodartelefonDataGridViewTextBoxColumn, Me.DicDataGridViewTextBoxColumn, Me.BankaDataGridViewTextBoxColumn, Me.CislouctuDataGridViewTextBoxColumn, Me.ChovatelskaoblastDataGridViewTextBoxColumn, Me.CisloreviruDataGridViewTextBoxColumn, Me.VymeraDataGridViewTextBoxColumn, Me.LesDataGridViewTextBoxColumn, Me.JeleniaDataGridViewTextBoxColumn, Me.SrnciaDataGridViewTextBoxColumn, Me.DiviaciaDataGridViewTextBoxColumn, Me.BazantDataGridViewTextBoxColumn, Me.InaDataGridViewTextBoxColumn, Me.PlatnostnajomnejzmluvydoDataGridViewTextBoxColumn, Me.StavaceplanDataGridViewTextBoxColumn, Me.StavaceskutocnostDataGridViewTextBoxColumn, Me.SliediceplanDataGridViewTextBoxColumn, Me.SliediceskutocnostDataGridViewTextBoxColumn, Me.SlovenskykopovplanDataGridViewTextBoxColumn, Me.SlovenskykopovskutocnostDataGridViewTextBoxColumn, Me.OstatneduriceplanDataGridViewTextBoxColumn, Me.OstatneduriceskutocnostDataGridViewTextBoxColumn, Me.BrlohareplanDataGridViewTextBoxColumn, Me.BrlohareskutocnostDataGridViewTextBoxColumn, Me.FarbiareplanDataGridViewTextBoxColumn, Me.FarbiareskutocnostDataGridViewTextBoxColumn, Me.PesjeleniaplanDataGridViewTextBoxColumn, Me.PesjeleniaskutocnostDataGridViewTextBoxColumn, Me.PesdiviaciaplanDataGridViewTextBoxColumn, Me.PesdiviaciaskutocnostDataGridViewTextBoxColumn, Me.PessrnciaplanDataGridViewTextBoxColumn, Me.PessrnciaskutocnostDataGridViewTextBoxColumn, Me.PesmalaplanDataGridViewTextBoxColumn, Me.PesmalaskutocnostDataGridViewTextBoxColumn})
         Me.ZdruzeniaDataGridView.DataSource = Me.ZdruzeniaBindingSource
-        Me.ZdruzeniaDataGridView.Location = New System.Drawing.Point(55, 41)
+        Me.ZdruzeniaDataGridView.Location = New System.Drawing.Point(51, 71)
         Me.ZdruzeniaDataGridView.Name = "ZdruzeniaDataGridView"
-        Me.ZdruzeniaDataGridView.Size = New System.Drawing.Size(577, 220)
+        Me.ZdruzeniaDataGridView.Size = New System.Drawing.Size(664, 257)
         Me.ZdruzeniaDataGridView.TabIndex = 1
         '
         'IcoDataGridViewTextBoxColumn
@@ -497,13 +500,27 @@ Partial Class zdruzenie
         Me.PesmalaskutocnostDataGridViewTextBoxColumn.HeaderText = "pes_mala_skutocnost"
         Me.PesmalaskutocnostDataGridViewTextBoxColumn.Name = "PesmalaskutocnostDataGridViewTextBoxColumn"
         '
+        'zavriet_kartu_button
+        '
+        Me.zavriet_kartu_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.zavriet_kartu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.zavriet_kartu_button.Location = New System.Drawing.Point(155, 36)
+        Me.zavriet_kartu_button.Name = "zavriet_kartu_button"
+        Me.zavriet_kartu_button.Size = New System.Drawing.Size(79, 23)
+        Me.zavriet_kartu_button.TabIndex = 2
+        Me.zavriet_kartu_button.Text = "Zavrieť kartu"
+        Me.zavriet_kartu_button.UseVisualStyleBackColor = False
+        '
         'zdruzenie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(759, 602)
+        Me.Controls.Add(Me.zavriet_kartu_button)
         Me.Controls.Add(Me.ZdruzeniaDataGridView)
         Me.Controls.Add(Me.ZdruzeniaBindingNavigator)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "zdruzenie"
         Me.Text = "zdruzenie"
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -577,4 +594,5 @@ Partial Class zdruzenie
     Friend WithEvents PessrnciaskutocnostDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PesmalaplanDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PesmalaskutocnostDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents zavriet_kartu_button As System.Windows.Forms.Button
 End Class

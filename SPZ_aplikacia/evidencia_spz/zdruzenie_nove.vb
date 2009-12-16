@@ -5,7 +5,9 @@
     End Sub
 
     Private Sub zdruzenie_nove_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
 
     End Sub
 
@@ -14,7 +16,7 @@
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles uloz_button.Click
 
         Dim con As New SqlCeConnection(pripojovaci_retazec)
         con.Open()
@@ -78,5 +80,9 @@
 
         com1.ExecuteNonQuery()
         con.Close()
+    End Sub
+
+    Private Sub zavriet_kartu_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_kartu_button.Click
+        Me.Close()
     End Sub
 End Class
