@@ -96,10 +96,6 @@ Partial Class clen_novy
         Me.Vyznamenanie_kedyDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Udelene_trestyTextBox = New System.Windows.Forms.TextBox
         Me.PoznamkyTextBox = New System.Windows.Forms.TextBox
-        Me.Titul_pred_idTextBox = New System.Windows.Forms.TextBox
-        Me.Titul_za_idTextBox = New System.Windows.Forms.TextBox
-        Me.Narodnost_idTextBox = New System.Windows.Forms.TextBox
-        Me.Statna_prislusnost_idTextBox = New System.Windows.Forms.TextBox
         Me.Clen_pzComboBox = New System.Windows.Forms.ComboBox
         Me.ZdruzeniaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.SpzDataSet = New evidencia_spz.spzDataSet
@@ -111,6 +107,18 @@ Partial Class clen_novy
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        Me.titul_predComboBox = New System.Windows.Forms.ComboBox
+        Me.titul_zaComboBox = New System.Windows.Forms.ComboBox
+        Me.TitulpredBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Titul_predTableAdapter = New evidencia_spz.spzDataSetTableAdapters.titul_predTableAdapter
+        Me.TitulzaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Titul_zaTableAdapter = New evidencia_spz.spzDataSetTableAdapters.titul_zaTableAdapter
+        Me.narodnostComboBox = New System.Windows.Forms.ComboBox
+        Me.NarodnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.NarodnostTableAdapter = New evidencia_spz.spzDataSetTableAdapters.narodnostTableAdapter
+        Me.statna_prislusnostComboBox = New System.Windows.Forms.ComboBox
+        Me.StatnaprislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Statna_prislusnostTableAdapter = New evidencia_spz.spzDataSetTableAdapters.statna_prislusnostTableAdapter
         Cislo_plLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -153,6 +161,10 @@ Partial Class clen_novy
         CType(Me.ZdruzeniaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulpredBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Cislo_plLabel
@@ -531,6 +543,7 @@ Partial Class clen_novy
         '
         Me.Datum_narodeniaDateTimePicker.Location = New System.Drawing.Point(551, 62)
         Me.Datum_narodeniaDateTimePicker.Name = "Datum_narodeniaDateTimePicker"
+        Me.Datum_narodeniaDateTimePicker.ShowCheckBox = True
         Me.Datum_narodeniaDateTimePicker.Size = New System.Drawing.Size(140, 20)
         Me.Datum_narodeniaDateTimePicker.TabIndex = 8
         '
@@ -594,6 +607,7 @@ Partial Class clen_novy
         '
         Me.Datum_vydania_opDateTimePicker.Location = New System.Drawing.Point(551, 279)
         Me.Datum_vydania_opDateTimePicker.Name = "Datum_vydania_opDateTimePicker"
+        Me.Datum_vydania_opDateTimePicker.ShowCheckBox = True
         Me.Datum_vydania_opDateTimePicker.Size = New System.Drawing.Size(140, 20)
         Me.Datum_vydania_opDateTimePicker.TabIndex = 26
         '
@@ -601,6 +615,7 @@ Partial Class clen_novy
         '
         Me.Datum_vydania_plDateTimePicker.Location = New System.Drawing.Point(551, 305)
         Me.Datum_vydania_plDateTimePicker.Name = "Datum_vydania_plDateTimePicker"
+        Me.Datum_vydania_plDateTimePicker.ShowCheckBox = True
         Me.Datum_vydania_plDateTimePicker.Size = New System.Drawing.Size(140, 20)
         Me.Datum_vydania_plDateTimePicker.TabIndex = 28
         '
@@ -615,6 +630,7 @@ Partial Class clen_novy
         '
         Me.Datum_vydania_zpDateTimePicker.Location = New System.Drawing.Point(551, 331)
         Me.Datum_vydania_zpDateTimePicker.Name = "Datum_vydania_zpDateTimePicker"
+        Me.Datum_vydania_zpDateTimePicker.ShowCheckBox = True
         Me.Datum_vydania_zpDateTimePicker.Size = New System.Drawing.Size(140, 20)
         Me.Datum_vydania_zpDateTimePicker.TabIndex = 32
         '
@@ -650,6 +666,7 @@ Partial Class clen_novy
         '
         Me.Skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(198, 513)
         Me.Skuska_z_polovnictvaDateTimePicker.Name = "Skuska_z_polovnictvaDateTimePicker"
+        Me.Skuska_z_polovnictvaDateTimePicker.ShowCheckBox = True
         Me.Skuska_z_polovnictvaDateTimePicker.Size = New System.Drawing.Size(140, 20)
         Me.Skuska_z_polovnictvaDateTimePicker.TabIndex = 44
         '
@@ -664,6 +681,7 @@ Partial Class clen_novy
         '
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Location = New System.Drawing.Point(198, 539)
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Name = "Skuska_pre_polovnych_hospodarovDateTimePicker"
+        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.ShowCheckBox = True
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Size = New System.Drawing.Size(140, 20)
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.TabIndex = 48
         '
@@ -678,6 +696,7 @@ Partial Class clen_novy
         '
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(198, 565)
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Name = "Vyzsia_skuska_z_polovnictvaDateTimePicker"
+        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.ShowCheckBox = True
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Size = New System.Drawing.Size(140, 20)
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.TabIndex = 52
         '
@@ -727,6 +746,7 @@ Partial Class clen_novy
         '
         Me.Vyznamenanie_kedyDateTimePicker.Location = New System.Drawing.Point(551, 677)
         Me.Vyznamenanie_kedyDateTimePicker.Name = "Vyznamenanie_kedyDateTimePicker"
+        Me.Vyznamenanie_kedyDateTimePicker.ShowCheckBox = True
         Me.Vyznamenanie_kedyDateTimePicker.Size = New System.Drawing.Size(140, 20)
         Me.Vyznamenanie_kedyDateTimePicker.TabIndex = 66
         '
@@ -744,34 +764,6 @@ Partial Class clen_novy
         Me.PoznamkyTextBox.Name = "PoznamkyTextBox"
         Me.PoznamkyTextBox.Size = New System.Drawing.Size(493, 78)
         Me.PoznamkyTextBox.TabIndex = 70
-        '
-        'Titul_pred_idTextBox
-        '
-        Me.Titul_pred_idTextBox.Location = New System.Drawing.Point(199, 114)
-        Me.Titul_pred_idTextBox.Name = "Titul_pred_idTextBox"
-        Me.Titul_pred_idTextBox.Size = New System.Drawing.Size(49, 20)
-        Me.Titul_pred_idTextBox.TabIndex = 72
-        '
-        'Titul_za_idTextBox
-        '
-        Me.Titul_za_idTextBox.Location = New System.Drawing.Point(198, 140)
-        Me.Titul_za_idTextBox.Name = "Titul_za_idTextBox"
-        Me.Titul_za_idTextBox.Size = New System.Drawing.Size(50, 20)
-        Me.Titul_za_idTextBox.TabIndex = 74
-        '
-        'Narodnost_idTextBox
-        '
-        Me.Narodnost_idTextBox.Location = New System.Drawing.Point(551, 169)
-        Me.Narodnost_idTextBox.Name = "Narodnost_idTextBox"
-        Me.Narodnost_idTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Narodnost_idTextBox.TabIndex = 76
-        '
-        'Statna_prislusnost_idTextBox
-        '
-        Me.Statna_prislusnost_idTextBox.Location = New System.Drawing.Point(551, 195)
-        Me.Statna_prislusnost_idTextBox.Name = "Statna_prislusnost_idTextBox"
-        Me.Statna_prislusnost_idTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Statna_prislusnost_idTextBox.TabIndex = 78
         '
         'Clen_pzComboBox
         '
@@ -864,6 +856,86 @@ Partial Class clen_novy
         Me.LineShape2.Y1 = 620
         Me.LineShape2.Y2 = 620
         '
+        'titul_predComboBox
+        '
+        Me.titul_predComboBox.DataSource = Me.TitulpredBindingSource
+        Me.titul_predComboBox.DisplayMember = "skratka"
+        Me.titul_predComboBox.FormattingEnabled = True
+        Me.titul_predComboBox.Location = New System.Drawing.Point(199, 113)
+        Me.titul_predComboBox.Name = "titul_predComboBox"
+        Me.titul_predComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.titul_predComboBox.TabIndex = 87
+        Me.titul_predComboBox.ValueMember = "id"
+        '
+        'titul_zaComboBox
+        '
+        Me.titul_zaComboBox.DataSource = Me.TitulzaBindingSource
+        Me.titul_zaComboBox.DisplayMember = "skratka"
+        Me.titul_zaComboBox.FormattingEnabled = True
+        Me.titul_zaComboBox.Location = New System.Drawing.Point(199, 139)
+        Me.titul_zaComboBox.Name = "titul_zaComboBox"
+        Me.titul_zaComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.titul_zaComboBox.TabIndex = 88
+        Me.titul_zaComboBox.ValueMember = "id"
+        '
+        'TitulpredBindingSource
+        '
+        Me.TitulpredBindingSource.DataMember = "titul_pred"
+        Me.TitulpredBindingSource.DataSource = Me.SpzDataSet
+        '
+        'Titul_predTableAdapter
+        '
+        Me.Titul_predTableAdapter.ClearBeforeFill = True
+        '
+        'TitulzaBindingSource
+        '
+        Me.TitulzaBindingSource.DataMember = "titul_za"
+        Me.TitulzaBindingSource.DataSource = Me.SpzDataSet
+        '
+        'Titul_zaTableAdapter
+        '
+        Me.Titul_zaTableAdapter.ClearBeforeFill = True
+        '
+        'narodnostComboBox
+        '
+        Me.narodnostComboBox.DataSource = Me.NarodnostBindingSource
+        Me.narodnostComboBox.DisplayMember = "skratka"
+        Me.narodnostComboBox.FormattingEnabled = True
+        Me.narodnostComboBox.Location = New System.Drawing.Point(551, 166)
+        Me.narodnostComboBox.Name = "narodnostComboBox"
+        Me.narodnostComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.narodnostComboBox.TabIndex = 89
+        Me.narodnostComboBox.ValueMember = "id"
+        '
+        'NarodnostBindingSource
+        '
+        Me.NarodnostBindingSource.DataMember = "narodnost"
+        Me.NarodnostBindingSource.DataSource = Me.SpzDataSet
+        '
+        'NarodnostTableAdapter
+        '
+        Me.NarodnostTableAdapter.ClearBeforeFill = True
+        '
+        'statna_prislusnostComboBox
+        '
+        Me.statna_prislusnostComboBox.DataSource = Me.StatnaprislusnostBindingSource
+        Me.statna_prislusnostComboBox.DisplayMember = "skratka"
+        Me.statna_prislusnostComboBox.FormattingEnabled = True
+        Me.statna_prislusnostComboBox.Location = New System.Drawing.Point(551, 193)
+        Me.statna_prislusnostComboBox.Name = "statna_prislusnostComboBox"
+        Me.statna_prislusnostComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.statna_prislusnostComboBox.TabIndex = 90
+        Me.statna_prislusnostComboBox.ValueMember = "id"
+        '
+        'StatnaprislusnostBindingSource
+        '
+        Me.StatnaprislusnostBindingSource.DataMember = "statna_prislusnost"
+        Me.StatnaprislusnostBindingSource.DataSource = Me.SpzDataSet
+        '
+        'Statna_prislusnostTableAdapter
+        '
+        Me.Statna_prislusnostTableAdapter.ClearBeforeFill = True
+        '
         'clen_novy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -871,6 +943,10 @@ Partial Class clen_novy
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(972, 812)
+        Me.Controls.Add(Me.statna_prislusnostComboBox)
+        Me.Controls.Add(Me.narodnostComboBox)
+        Me.Controls.Add(Me.titul_zaComboBox)
+        Me.Controls.Add(Me.titul_predComboBox)
         Me.Controls.Add(Me.zavriet_kartu_button)
         Me.Controls.Add(Me.uloz_clena_button)
         Me.Controls.Add(Me.Button1)
@@ -945,13 +1021,9 @@ Partial Class clen_novy
         Me.Controls.Add(PoznamkyLabel)
         Me.Controls.Add(Me.PoznamkyTextBox)
         Me.Controls.Add(Titul_pred_idLabel)
-        Me.Controls.Add(Me.Titul_pred_idTextBox)
         Me.Controls.Add(Titul_za_idLabel)
-        Me.Controls.Add(Me.Titul_za_idTextBox)
         Me.Controls.Add(Narodnost_idLabel)
-        Me.Controls.Add(Me.Narodnost_idTextBox)
         Me.Controls.Add(Statna_prislusnost_idLabel)
-        Me.Controls.Add(Me.Statna_prislusnost_idTextBox)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "clen_novy"
@@ -959,6 +1031,10 @@ Partial Class clen_novy
         CType(Me.ZdruzeniaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulpredBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -997,10 +1073,6 @@ Partial Class clen_novy
     Friend WithEvents Vyznamenanie_kedyDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Udelene_trestyTextBox As System.Windows.Forms.TextBox
     Friend WithEvents PoznamkyTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Titul_pred_idTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Titul_za_idTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Narodnost_idTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Statna_prislusnost_idTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Clen_pzComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents SpzDataSet As evidencia_spz.spzDataSet
     Friend WithEvents ZdruzeniaBindingSource As System.Windows.Forms.BindingSource
@@ -1012,4 +1084,16 @@ Partial Class clen_novy
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents titul_predComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents titul_zaComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents TitulpredBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Titul_predTableAdapter As evidencia_spz.spzDataSetTableAdapters.titul_predTableAdapter
+    Friend WithEvents TitulzaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Titul_zaTableAdapter As evidencia_spz.spzDataSetTableAdapters.titul_zaTableAdapter
+    Friend WithEvents narodnostComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents NarodnostBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents NarodnostTableAdapter As evidencia_spz.spzDataSetTableAdapters.narodnostTableAdapter
+    Friend WithEvents statna_prislusnostComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents StatnaprislusnostBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Statna_prislusnostTableAdapter As evidencia_spz.spzDataSetTableAdapters.statna_prislusnostTableAdapter
 End Class
