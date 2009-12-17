@@ -5,6 +5,14 @@
     End Sub
 
     Private Sub clen_novy_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'SpzDataSet.statna_prislusnost' table. You can move, or remove it, as needed.
+        Me.Statna_prislusnostTableAdapter.Fill(Me.SpzDataSet.statna_prislusnost)
+        'TODO: This line of code loads data into the 'SpzDataSet.narodnost' table. You can move, or remove it, as needed.
+        Me.NarodnostTableAdapter.Fill(Me.SpzDataSet.narodnost)
+        'TODO: This line of code loads data into the 'SpzDataSet.titul_za' table. You can move, or remove it, as needed.
+        Me.Titul_zaTableAdapter.Fill(Me.SpzDataSet.titul_za)
+        'TODO: This line of code loads data into the 'SpzDataSet.titul_pred' table. You can move, or remove it, as needed.
+        Me.Titul_predTableAdapter.Fill(Me.SpzDataSet.titul_pred)
         'TODO: This line of code loads data into the 'SpzDataSet.zdruzenia' table. You can move, or remove it, as needed.
         Me.ZdruzeniaTableAdapter.Fill(Me.SpzDataSet.zdruzenia)
         'TODO: This line of code loads data into the 'SpzDataSet.all_clenovia' table. You can move, or remove it, as needed.
@@ -36,7 +44,13 @@
             .AddWithValue("cislo_pl", Cislo_plTextBox.Text)
             .AddWithValue("meno", MenoTextBox.Text)
             .AddWithValue("priezvisko", PriezviskoTextBox.Text)
-            .AddWithValue("datum_narodenia", Datum_narodeniaDateTimePicker.Value)
+
+            If Datum_narodeniaDateTimePicker.Checked = True Then
+                .AddWithValue("datum_narodenia", Datum_narodeniaDateTimePicker.Value)
+            Else
+                .AddWithValue("datum_narodenia", DBNull.Value)
+            End If
+
             .AddWithValue("rodne_cislo", Rodne_cisloTextBox.Text)
             .AddWithValue("miesto_narodenia", Miesto_narodeniaTextBox.Text)
             .AddWithValue("okres_narodenia", Okres_narodeniaTextBox.Text)
@@ -45,33 +59,62 @@
             .AddWithValue("psc", PscTextBox.Text)
             .AddWithValue("telefon", TelefonTextBox.Text)
             .AddWithValue("cislo_op", Cislo_opTextBox.Text)
-            .AddWithValue("datum_vydania_op", Datum_vydania_opDateTimePicker.Value)
-            .AddWithValue("datum_vydania_pl", Datum_vydania_plDateTimePicker.Value)
+
+            If Datum_vydania_opDateTimePicker.Checked = True Then
+                .AddWithValue("datum_vydania_op", Datum_vydania_opDateTimePicker.Value)
+            Else
+                .AddWithValue("datum_vydania_op", DBNull.Value)
+            End If
+            If Datum_vydania_plDateTimePicker.Checked = True Then
+                .AddWithValue("datum_vydania_pl", Datum_vydania_plDateTimePicker.Value)
+            Else
+                .AddWithValue("datum_vydania_pl", DBNull.Value)
+            End If
             .AddWithValue("cislo_zp", Cislo_zpTextBox.Text)
-            .AddWithValue("datum_vydania_zp", Datum_vydania_zpDateTimePicker.Value)
+            If Datum_vydania_zpDateTimePicker.Checked = True Then
+                .AddWithValue("datum_vydania_zp", Datum_vydania_zpDateTimePicker.Value)
+            Else
+                .AddWithValue("datum_vydania_zp", DBNull.Value)
+            End If
             .AddWithValue("cislo_clenskeho_preukazu_spz", Cislo_clenskeho_preukazu_spzTextBox.Text)
             .AddWithValue("clen_spz_od", Clen_spz_odTextBox.Text)
             .AddWithValue("clenske_do", Clenske_doTextBox.Text)
             .AddWithValue("cislo_dokladu_clenske", Cislo_dokladu_clenskeTextBox.Text)
             .AddWithValue("clen_pz", Clen_pzComboBox.SelectedValue)
-            .AddWithValue("skuska_z_polovnictva", Skuska_z_polovnictvaDateTimePicker.Value)
+            If Skuska_z_polovnictvaDateTimePicker.Checked = True Then
+                .AddWithValue("skuska_z_polovnictva", Skuska_z_polovnictvaDateTimePicker.Value)
+            Else
+                .AddWithValue("skuska_z_polovnictva", DBNull.Value)
+            End If
             .AddWithValue("miesto_skusky_z_polovnictva", Miesto_skusky_z_polovnictvaTextBox.Text)
-            .AddWithValue("skuska_pre_polovnych_hospodarov", Skuska_pre_polovnych_hospodarovDateTimePicker.Value)
+            If Skuska_pre_polovnych_hospodarovDateTimePicker.Checked = True Then
+                .AddWithValue("skuska_pre_polovnych_hospodarov", Skuska_pre_polovnych_hospodarovDateTimePicker.Value)
+            Else
+                .AddWithValue("skuska_pre_polovnych_hospodarov", DBNull.Value)
+            End If
             .AddWithValue("miesto_skusky_pre_polovnych_hospodarov", Miesto_skusky_pre_polovnych_hospodarovTextBox.Text)
-            .AddWithValue("vyzsia_skuska_z_polovnictva", Vyzsia_skuska_z_polovnictvaDateTimePicker.Value)
+            If Vyzsia_skuska_z_polovnictvaDateTimePicker.Checked = True Then
+                .AddWithValue("vyzsia_skuska_z_polovnictva", Vyzsia_skuska_z_polovnictvaDateTimePicker.Value)
+            Else
+                .AddWithValue("vyzsia_skuska_z_polovnictva", DBNull.Value)
+            End If
             .AddWithValue("miesto_vyzsej_skusky_z_polovnictva", Miesto_vyzsej_skusky_z_polovnictvaTextBox.Text)
             .AddWithValue("brokova_zbran", Brokova_zbranTextBox.Text)
             .AddWithValue("kontrolne_strelby_brok", Kontrolne_strelby_brokTextBox.Text)
             .AddWithValue("gulova_zbran", Gulova_zbranTextBox.Text)
             .AddWithValue("kontrolne_strelby_gula", Kontrolne_strelby_gulaTextBox.Text)
             .AddWithValue("najvyzsie_vyznamenanie", Najvyzsie_vyznamenanieTextBox.Text)
-            .AddWithValue("vyznamenanie_kedy", Vyznamenanie_kedyDateTimePicker.Value)
+            If Vyznamenanie_kedyDateTimePicker.Checked = True Then
+                .AddWithValue("vyznamenanie_kedy", Vyznamenanie_kedyDateTimePicker.Value)
+            Else
+                .AddWithValue("vyznamenanie_kedy", DBNull.Value)
+            End If
             .AddWithValue("udelene_tresty", Udelene_trestyTextBox.Text)
             .AddWithValue("poznamky", PoznamkyTextBox.Text)
-            .AddWithValue("titul_pred_id", Titul_pred_idTextBox.Text)
-            .AddWithValue("titul_za_id", Titul_za_idTextBox.Text)
-            .AddWithValue("narodnost_id", Narodnost_idTextBox.Text)
-            .AddWithValue("statna_prislusnost_id", Statna_prislusnost_idTextBox.Text)
+            .AddWithValue("titul_pred_id", titul_predComboBox.SelectedValue)
+            .AddWithValue("titul_za_id", titul_zaComboBox.SelectedValue)
+            .AddWithValue("narodnost_id", narodnostComboBox.SelectedValue)
+            .AddWithValue("statna_prislusnost_id", statna_prislusnostComboBox.SelectedValue)
             .AddWithValue("ico_clenovia", ico_clenovia)
         End With
 

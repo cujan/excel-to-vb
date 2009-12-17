@@ -574,18 +574,16 @@ Public Class hlavna_aplikacia
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Dim con As New SqlCeConnection(pripojovaci_retazec)
-        Dim com As New SqlCeCommand("SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE  FROM INFORMATION_SCHEMA.TABLES ORDER BY TABLE_NAME; ", con)
-        'Dim com As New SqlCeCommand("select * from zdruzenia", con)
+        'Dim com As New SqlCeCommand("SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE  FROM INFORMATION_SCHEMA.TABLES ORDER BY TABLE_NAME; ", con)
+        Dim com As New SqlCeCommand("select * from zdruzenia", con)
 
         con.Open()
-        Dim datareader As SqlCeDataReader = com.ExecuteReader()
+        '  Dim datareader As SqlCeDataReader = com.ExecuteReader()
         'MsgBox(datareader("TABLE_NAME"))
 
-        Do While datareader.Read
-            TextBox1.Text = datareader("TABLE_NAME")
-        Loop
-
-        datareader.Close()
+      
+        
+        ' datareader.Close()
         con.Close()
 
     End Sub
