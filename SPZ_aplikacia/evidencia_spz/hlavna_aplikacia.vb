@@ -4,9 +4,12 @@ Imports Microsoft.VisualBasic.FileIO
 Imports System.IO
 Imports Microsoft.VisualBasic.CompilerServices
 
+
+
 Public Class hlavna_aplikacia
     Private bInstalled As Boolean
-
+    Public zaregistrovatPredsedu As Boolean
+    Public zaregistrovatHospodara As Boolean
 
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click

@@ -80,6 +80,15 @@
 
         com1.ExecuteNonQuery()
         con.Close()
+        hlavna_aplikacia.zaregistrovatPredsedu = True
+        hlavna_aplikacia.zaregistrovatHospodara = True
+        MsgBox("Pre úplné dokončenie registrácie združenia je potrebné vytvoriť detajly pre predsedu a hospodára združenia. Ak tieto detajly chcete vytvoriť teraz, kliknite na tlačítko OK. (Predsedu a hospodára môžete pridať aj neskôr prechodom na kartu nový člen a zvolením položky Áno pri políčkach ""Predseda združenia"" resp. ""Hospodár združenia"" ", 4, "Otázka")
+        If MsgBoxResult.Yes Then
+            clen_novy.Show()
+            clen_novy.BringToFront()
+        End If
+        Me.Close()
+
     End Sub
 
     Private Sub zavriet_kartu_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_kartu_button.Click

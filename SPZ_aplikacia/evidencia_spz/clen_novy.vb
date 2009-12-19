@@ -20,6 +20,39 @@
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
         hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
+
+
+
+        If hlavna_aplikacia.zaregistrovatHospodara And hlavna_aplikacia.zaregistrovatPredsedu Then
+            MsgBox("Doteraz nebol priradený predseda a hospodár pre združenie. Ak si prajete aspoň jedného z nich priradiť teraz, kliknite na tlačítko OK.", 4, "Otázka")
+            If MsgBoxResult.Yes Then
+                Me.label_predseda.Visible = True
+                Me.ComboBox_predseda.Visible = True
+
+                Me.ComboBox_predseda.SelectedItem = Me.ComboBox_predseda.Items.Item(1)
+                Me.ComboBox_hospodar.SelectedItem = Me.ComboBox_hospodar.Items.Item(1)
+            End If
+        ElseIf hlavna_aplikacia.zaregistrovatHospodara And Not hlavna_aplikacia.zaregistrovatPredsedu Then
+            MsgBox("Doteraz nebol priradený hospodár pre združenie. Ak si ho prajete priradiť teraz, kliknite na tlačítko OK.", 4, "Otázka")
+            If MsgBoxResult.Yes Then
+                Me.label_predseda.Visible = True
+                Me.ComboBox_predseda.Visible = True
+
+                Me.ComboBox_predseda.SelectedItem = Me.ComboBox_predseda.Items.Item(1)
+                Me.ComboBox_hospodar.SelectedItem = Me.ComboBox_hospodar.Items.Item(1)
+            End If
+        ElseIf Not hlavna_aplikacia.zaregistrovatHospodara And hlavna_aplikacia.zaregistrovatPredsedu Then
+            MsgBox("Doteraz nebol priradený predseda pre združenie. Ak si ho prajete priradiť teraz, kliknite na tlačítko OK.", 4, "Otázka")
+            If MsgBoxResult.Yes Then
+                Me.label_hospodar.Visible = True
+                Me.ComboBox_hospodar.Visible = True
+
+                Me.ComboBox_predseda.SelectedItem = Me.ComboBox_predseda.Items.Item(1)
+                Me.ComboBox_hospodar.SelectedItem = Me.ComboBox_hospodar.Items.Item(1)
+            End If
+        End If
+
+
     End Sub
 
     Private Sub All_clenoviaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
