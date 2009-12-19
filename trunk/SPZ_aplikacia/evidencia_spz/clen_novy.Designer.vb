@@ -108,10 +108,10 @@ Partial Class clen_novy
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.titul_predComboBox = New System.Windows.Forms.ComboBox
-        Me.titul_zaComboBox = New System.Windows.Forms.ComboBox
         Me.TitulpredBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Titul_predTableAdapter = New evidencia_spz.spzDataSetTableAdapters.titul_predTableAdapter
+        Me.titul_zaComboBox = New System.Windows.Forms.ComboBox
         Me.TitulzaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Titul_predTableAdapter = New evidencia_spz.spzDataSetTableAdapters.titul_predTableAdapter
         Me.Titul_zaTableAdapter = New evidencia_spz.spzDataSetTableAdapters.titul_zaTableAdapter
         Me.narodnostComboBox = New System.Windows.Forms.ComboBox
         Me.NarodnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -119,6 +119,10 @@ Partial Class clen_novy
         Me.statna_prislusnostComboBox = New System.Windows.Forms.ComboBox
         Me.StatnaprislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Statna_prislusnostTableAdapter = New evidencia_spz.spzDataSetTableAdapters.statna_prislusnostTableAdapter
+        Me.label_predseda = New System.Windows.Forms.Label
+        Me.label_hospodar = New System.Windows.Forms.Label
+        Me.ComboBox_predseda = New System.Windows.Forms.ComboBox
+        Me.ComboBox_hospodar = New System.Windows.Forms.ComboBox
         Cislo_plLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -867,6 +871,11 @@ Partial Class clen_novy
         Me.titul_predComboBox.TabIndex = 87
         Me.titul_predComboBox.ValueMember = "id"
         '
+        'TitulpredBindingSource
+        '
+        Me.TitulpredBindingSource.DataMember = "titul_pred"
+        Me.TitulpredBindingSource.DataSource = Me.SpzDataSet
+        '
         'titul_zaComboBox
         '
         Me.titul_zaComboBox.DataSource = Me.TitulzaBindingSource
@@ -878,19 +887,14 @@ Partial Class clen_novy
         Me.titul_zaComboBox.TabIndex = 88
         Me.titul_zaComboBox.ValueMember = "id"
         '
-        'TitulpredBindingSource
-        '
-        Me.TitulpredBindingSource.DataMember = "titul_pred"
-        Me.TitulpredBindingSource.DataSource = Me.SpzDataSet
-        '
-        'Titul_predTableAdapter
-        '
-        Me.Titul_predTableAdapter.ClearBeforeFill = True
-        '
         'TitulzaBindingSource
         '
         Me.TitulzaBindingSource.DataMember = "titul_za"
         Me.TitulzaBindingSource.DataSource = Me.SpzDataSet
+        '
+        'Titul_predTableAdapter
+        '
+        Me.Titul_predTableAdapter.ClearBeforeFill = True
         '
         'Titul_zaTableAdapter
         '
@@ -936,6 +940,46 @@ Partial Class clen_novy
         '
         Me.Statna_prislusnostTableAdapter.ClearBeforeFill = True
         '
+        'label_predseda
+        '
+        Me.label_predseda.AutoSize = True
+        Me.label_predseda.Location = New System.Drawing.Point(426, 438)
+        Me.label_predseda.Name = "label_predseda"
+        Me.label_predseda.Size = New System.Drawing.Size(119, 13)
+        Me.label_predseda.TabIndex = 91
+        Me.label_predseda.Text = "Je predseda združenia?"
+        Me.label_predseda.Visible = False
+        '
+        'label_hospodar
+        '
+        Me.label_hospodar.AutoSize = True
+        Me.label_hospodar.Location = New System.Drawing.Point(426, 464)
+        Me.label_hospodar.Name = "label_hospodar"
+        Me.label_hospodar.Size = New System.Drawing.Size(119, 13)
+        Me.label_hospodar.TabIndex = 92
+        Me.label_hospodar.Text = "Je hospodár združenia?"
+        Me.label_hospodar.Visible = False
+        '
+        'ComboBox_predseda
+        '
+        Me.ComboBox_predseda.FormattingEnabled = True
+        Me.ComboBox_predseda.Items.AddRange(New Object() {"Áno", "Nie"})
+        Me.ComboBox_predseda.Location = New System.Drawing.Point(551, 435)
+        Me.ComboBox_predseda.Name = "ComboBox_predseda"
+        Me.ComboBox_predseda.Size = New System.Drawing.Size(64, 21)
+        Me.ComboBox_predseda.TabIndex = 93
+        Me.ComboBox_predseda.Visible = False
+        '
+        'ComboBox_hospodar
+        '
+        Me.ComboBox_hospodar.FormattingEnabled = True
+        Me.ComboBox_hospodar.Items.AddRange(New Object() {"Áno", "Nie"})
+        Me.ComboBox_hospodar.Location = New System.Drawing.Point(551, 461)
+        Me.ComboBox_hospodar.Name = "ComboBox_hospodar"
+        Me.ComboBox_hospodar.Size = New System.Drawing.Size(64, 21)
+        Me.ComboBox_hospodar.TabIndex = 94
+        Me.ComboBox_hospodar.Visible = False
+        '
         'clen_novy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -943,6 +987,10 @@ Partial Class clen_novy
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(972, 812)
+        Me.Controls.Add(Me.ComboBox_hospodar)
+        Me.Controls.Add(Me.ComboBox_predseda)
+        Me.Controls.Add(Me.label_hospodar)
+        Me.Controls.Add(Me.label_predseda)
         Me.Controls.Add(Me.statna_prislusnostComboBox)
         Me.Controls.Add(Me.narodnostComboBox)
         Me.Controls.Add(Me.titul_zaComboBox)
@@ -1096,4 +1144,8 @@ Partial Class clen_novy
     Friend WithEvents statna_prislusnostComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents StatnaprislusnostBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Statna_prislusnostTableAdapter As evidencia_spz.spzDataSetTableAdapters.statna_prislusnostTableAdapter
+    Friend WithEvents label_predseda As System.Windows.Forms.Label
+    Friend WithEvents label_hospodar As System.Windows.Forms.Label
+    Friend WithEvents ComboBox_predseda As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox_hospodar As System.Windows.Forms.ComboBox
 End Class
