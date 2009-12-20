@@ -32,10 +32,18 @@
             .AddWithValue("ico_trofeje", ICO_trofejeTextBox.Text)
             .AddWithValue("nazov", NazovTextBox.Text)
             .AddWithValue("sidlo", SidloTextBox.Text)
-            .AddWithValue("predseda", PredsedaTextBox.Text)
-            .AddWithValue("predseda_telefon", Predseda_telefonTextBox.Text)
-            .AddWithValue("polovny_hospodar", Polovny_hospodarTextBox.Text)
-            .AddWithValue("polovny_hospodar_telefon", Polovny_hospodar_telefonTextBox.Text)
+
+            '.AddWithValue("predseda", PredsedaTextBox.Text)
+            '.AddWithValue("predseda_telefon", Predseda_telefonTextBox.Text)
+            '.AddWithValue("polovny_hospodar", Polovny_hospodarTextBox.Text)
+            '.AddWithValue("polovny_hospodar_telefon", Polovny_hospodar_telefonTextBox.Text)
+
+            'UDAJE NAHODENE NAPEVNO KOLI DYN. PRIRADOVANIU PREDSEDU  A HOSPODARA
+            .AddWithValue("predseda", "N")
+            .AddWithValue("predseda_telefon", "N")
+            .AddWithValue("polovny_hospodar", "N")
+            .AddWithValue("polovny_hospodar_telefon", "N")
+
             .AddWithValue("dic", DicTextBox.Text)
             .AddWithValue("banka", BankaTextBox.Text)
             .AddWithValue("cislo_uctu", Cislo_uctuTextBox.Text)
@@ -82,8 +90,19 @@
         con.Close()
         hlavna_aplikacia.zaregistrovatPredsedu = True
         hlavna_aplikacia.zaregistrovatHospodara = True
-        MsgBox("Pre úplné dokončenie registrácie združenia je potrebné vytvoriť detajly pre predsedu a hospodára združenia. Ak tieto detajly chcete vytvoriť teraz, kliknite na tlačítko OK. (Predsedu a hospodára môžete pridať aj neskôr prechodom na kartu nový člen a zvolením položky Áno pri políčkach ""Predseda združenia"" resp. ""Hospodár združenia"" ", 4, "Otázka")
-        If MsgBoxResult.Yes Then
+
+        For i As Integer = 1 To hlavna_aplikacia.neuplne_zdruzenie.Length
+
+            If hlavna_aplikacia.neuplne_zdruzenie(i) = "" Then
+                hlavna_aplikacia.neuplne_zdruzenie(i) = "Združenie " + NazovTextBox.Text + " bez predsedu a hospodára."
+                Exit For
+            End If
+
+        Next
+
+        Dim response As Integer
+        response = MsgBox("Pre úplné dokončenie registrácie združenia je potrebné vytvoriť detajly pre predsedu a hospodára združenia. Ak tieto detajly chcete vytvoriť teraz, kliknite na tlačítko OK. (Predsedu a hospodára môžete pridať aj neskôr prechodom na kartu nový člen a zvolením položky Áno pri políčkach ""Predseda združenia"" resp. ""Hospodár združenia"" ", 4, "Otázka")
+        If response = vbYes Then
             clen_novy.Show()
             clen_novy.BringToFront()
         End If
