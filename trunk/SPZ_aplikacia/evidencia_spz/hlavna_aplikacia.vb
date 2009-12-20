@@ -10,6 +10,7 @@ Public Class hlavna_aplikacia
     Private bInstalled As Boolean
     Public zaregistrovatPredsedu As Boolean
     Public zaregistrovatHospodara As Boolean
+    Public neuplne_zdruzenie(150) As String '= New String() {}
 
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
@@ -374,6 +375,78 @@ Public Class hlavna_aplikacia
         ' zobrazenie copyright a verzie
         Me.copyrightLabel.Text = SplashScreen1.Copyright.Text
         Me.versionLabel.Text = SplashScreen1.Version.Text
+
+        Me.updatniNepridanychPredsedov()
+
+
+    End Sub
+
+    Public Sub updatniNepridanychPredsedov()
+        'ZISTI CI JE HOSPODAR A PREDSEDA PRIRADENY
+
+        Dim query As String = "SELECT [nazov], [predseda], [polovny_hospodar] FROM zdruzenia"
+        Dim conn As New SqlCeConnection(pripojovaci_retazec)
+        Dim cmd As New SqlCeCommand(query, conn)
+        Dim i As Integer
+        Dim val1 As String
+        Dim val2 As String
+        Dim val3 As String
+
+        conn.Open()
+        Dim rdr As SqlCeDataReader = cmd.ExecuteReader()
+        i = 0
+        Try
+            ' Iterate through the results
+            '
+            While rdr.Read()
+                val1 = rdr.GetString(0)
+
+                'MsgBox("Val1 " + val1)
+                'If IsDBNull(rdr.GetString(1)) Then
+                '    val2 = "N"
+                'Else
+                '    val2 = rdr.GetString(1)
+                'End If
+
+                'If IsDBNull(rdr.GetString(2)) Then
+                '    val3 = "N"
+                'Else
+                '    val3 = rdr.GetString(2)
+                'End If
+
+
+                val2 = rdr.GetString(1)
+                val3 = rdr.GetString(2)
+
+                If val2 = "N" And val3 = "N" Then
+
+                    neuplne_zdruzenie(i) = "Združenie " + val1 + " bez predsedu a hospodára."
+                    i = i + 1
+                    zaregistrovatHospodara = True
+                    zaregistrovatPredsedu = True
+                ElseIf val2 <> "N" And val3 = "N" Then
+
+                    neuplne_zdruzenie(i) = "Združenie " + val1 + " bez hospodára."
+                    i = i + 1
+                    zaregistrovatHospodara = True
+                ElseIf val2 = "N" And val3 <> "N" Then
+
+                    neuplne_zdruzenie(i) = "Združenie " + val1 + " bez predsedu."
+                    i = i + 1
+                    zaregistrovatPredsedu = True
+                End If
+
+
+            End While
+        Finally
+            ' Always call Close when done reading
+            '
+            rdr.Close()
+
+            ' Always call Close when done reading
+            '
+            conn.Close()
+        End Try
     End Sub
 
     Private Sub TitulZaMenomToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TitulZaMenomToolStripMenuItem.Click
@@ -505,7 +578,7 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub kont_strelby_gula_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles kont_strelby_gula_button.Click
- 
+
     End Sub
 
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -534,7 +607,7 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub registrovat_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles registrovat.Click
- 
+
 
     End Sub
 
@@ -584,8 +657,8 @@ Public Class hlavna_aplikacia
         '  Dim datareader As SqlCeDataReader = com.ExecuteReader()
         'MsgBox(datareader("TABLE_NAME"))
 
-      
-        
+
+
         ' datareader.Close()
         con.Close()
 
