@@ -663,4 +663,9 @@ Public Class hlavna_aplikacia
         con.Close()
 
     End Sub
+
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        clenovia_all.Show()
+        clenovia_all.BringToFront()
+    End Sub
 End Class
