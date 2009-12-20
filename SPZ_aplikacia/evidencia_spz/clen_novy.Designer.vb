@@ -545,6 +545,7 @@ Partial Class clen_novy
         '
         'Datum_narodeniaDateTimePicker
         '
+        Me.Datum_narodeniaDateTimePicker.Checked = False
         Me.Datum_narodeniaDateTimePicker.Location = New System.Drawing.Point(551, 62)
         Me.Datum_narodeniaDateTimePicker.Name = "Datum_narodeniaDateTimePicker"
         Me.Datum_narodeniaDateTimePicker.ShowCheckBox = True
@@ -609,6 +610,7 @@ Partial Class clen_novy
         '
         'Datum_vydania_opDateTimePicker
         '
+        Me.Datum_vydania_opDateTimePicker.Checked = False
         Me.Datum_vydania_opDateTimePicker.Location = New System.Drawing.Point(551, 279)
         Me.Datum_vydania_opDateTimePicker.Name = "Datum_vydania_opDateTimePicker"
         Me.Datum_vydania_opDateTimePicker.ShowCheckBox = True
@@ -617,6 +619,7 @@ Partial Class clen_novy
         '
         'Datum_vydania_plDateTimePicker
         '
+        Me.Datum_vydania_plDateTimePicker.Checked = False
         Me.Datum_vydania_plDateTimePicker.Location = New System.Drawing.Point(551, 305)
         Me.Datum_vydania_plDateTimePicker.Name = "Datum_vydania_plDateTimePicker"
         Me.Datum_vydania_plDateTimePicker.ShowCheckBox = True
@@ -632,6 +635,7 @@ Partial Class clen_novy
         '
         'Datum_vydania_zpDateTimePicker
         '
+        Me.Datum_vydania_zpDateTimePicker.Checked = False
         Me.Datum_vydania_zpDateTimePicker.Location = New System.Drawing.Point(551, 331)
         Me.Datum_vydania_zpDateTimePicker.Name = "Datum_vydania_zpDateTimePicker"
         Me.Datum_vydania_zpDateTimePicker.ShowCheckBox = True
@@ -668,6 +672,7 @@ Partial Class clen_novy
         '
         'Skuska_z_polovnictvaDateTimePicker
         '
+        Me.Skuska_z_polovnictvaDateTimePicker.Checked = False
         Me.Skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(198, 513)
         Me.Skuska_z_polovnictvaDateTimePicker.Name = "Skuska_z_polovnictvaDateTimePicker"
         Me.Skuska_z_polovnictvaDateTimePicker.ShowCheckBox = True
@@ -683,6 +688,7 @@ Partial Class clen_novy
         '
         'Skuska_pre_polovnych_hospodarovDateTimePicker
         '
+        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Checked = False
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Location = New System.Drawing.Point(198, 539)
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Name = "Skuska_pre_polovnych_hospodarovDateTimePicker"
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.ShowCheckBox = True
@@ -698,6 +704,7 @@ Partial Class clen_novy
         '
         'Vyzsia_skuska_z_polovnictvaDateTimePicker
         '
+        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Checked = False
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(198, 565)
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Name = "Vyzsia_skuska_z_polovnictvaDateTimePicker"
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.ShowCheckBox = True
@@ -748,6 +755,7 @@ Partial Class clen_novy
         '
         'Vyznamenanie_kedyDateTimePicker
         '
+        Me.Vyznamenanie_kedyDateTimePicker.Checked = False
         Me.Vyznamenanie_kedyDateTimePicker.Location = New System.Drawing.Point(551, 677)
         Me.Vyznamenanie_kedyDateTimePicker.Name = "Vyznamenanie_kedyDateTimePicker"
         Me.Vyznamenanie_kedyDateTimePicker.ShowCheckBox = True

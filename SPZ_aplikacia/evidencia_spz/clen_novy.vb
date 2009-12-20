@@ -20,6 +20,12 @@
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
         hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
+        'nulte poloykz
+        Me.titul_predComboBox.SelectedIndex = -1
+        Me.titul_zaComboBox.SelectedIndex = -1
+        Me.statna_prislusnostComboBox.SelectedIndex = -1
+        Me.narodnostComboBox.SelectedIndex = -1
+
 
         Dim listNeuplnych As String
         listNeuplnych = "Neúplné združenia sú nasledujúce:" + vbNewLine
