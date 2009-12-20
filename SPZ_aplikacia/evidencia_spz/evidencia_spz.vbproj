@@ -104,6 +104,11 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="all_clenoviaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>all_clenoviaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="ciselniky.Designer.vb">
       <DependentUpon>ciselniky.vb</DependentUpon>
@@ -115,6 +120,12 @@
       <DependentUpon>clenovia123.vb</DependentUpon>
     </Compile>
     <Compile Include="clenovia123.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clenovia_all.Designer.vb">
+      <DependentUpon>clenovia_all.vb</DependentUpon>
+    </Compile>
+    <Compile Include="clenovia_all.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="clen_novy.Designer.vb">
@@ -244,6 +255,10 @@
       <DependentUpon>clenovia123.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="clenovia_all.resx">
+      <DependentUpon>clenovia_all.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="clen_novy.resx">
       <DependentUpon>clen_novy.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -355,6 +370,17 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="all_clenoviaDataSet.xsc">
+      <DependentUpon>all_clenoviaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="all_clenoviaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>all_clenoviaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="all_clenoviaDataSet.xss">
+      <DependentUpon>all_clenoviaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\VisualBasic" />
     <None Include="Resources\formular_1.jpg" />
