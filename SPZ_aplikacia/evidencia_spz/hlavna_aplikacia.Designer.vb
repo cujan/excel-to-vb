@@ -117,6 +117,7 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_label = New System.Windows.Forms.Label
         Me.prehlad_clenov_button = New System.Windows.Forms.Button
         Me.novy_clen_button = New System.Windows.Forms.Button
+        Me.Button6 = New System.Windows.Forms.Button
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
@@ -129,7 +130,6 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
         Me.Button5 = New System.Windows.Forms.Button
         Me.Button4 = New System.Windows.Forms.Button
         Me.Button3 = New System.Windows.Forms.Button
@@ -163,7 +163,7 @@ Partial Class hlavna_aplikacia
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.SpzDataSet = New evidencia_spz.spzDataSet
         Me.SpzDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Button6 = New System.Windows.Forms.Button
+        Me.ListBox1 = New System.Windows.Forms.ListBox
         TelefonLabel = New System.Windows.Forms.Label
         FaxLabel = New System.Windows.Forms.Label
         EmailLabel = New System.Windows.Forms.Label
@@ -191,7 +191,6 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_splitter.SuspendLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpzDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -698,9 +697,9 @@ Partial Class hlavna_aplikacia
         '
         Me.hlavny_splitter.Panel2.AutoScroll = True
         Me.hlavny_splitter.Panel2.BackColor = System.Drawing.Color.PaleGreen
+        Me.hlavny_splitter.Panel2.Controls.Add(Me.ListBox1)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Button6)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.BindingNavigator1)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.DataGridView1)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Button5)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Button4)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Button3)
@@ -1116,6 +1115,15 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
         '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(322, 442)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 11
+        Me.Button6.Text = "clenovia all"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'BindingNavigator1
         '
         Me.BindingNavigator1.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -1218,17 +1226,9 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(26, 116)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
-        Me.DataGridView1.TabIndex = 39
-        '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(72, 32)
+        Me.Button5.Location = New System.Drawing.Point(652, 81)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(180, 23)
         Me.Button5.TabIndex = 11
@@ -1550,14 +1550,13 @@ Partial Class hlavna_aplikacia
         Me.SpzDataSetBindingSource.DataSource = Me.SpzDataSet
         Me.SpzDataSetBindingSource.Position = 0
         '
-        'Button6
+        'ListBox1
         '
-        Me.Button6.Location = New System.Drawing.Point(322, 442)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
-        Me.Button6.TabIndex = 11
-        Me.Button6.Text = "clenovia all"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(691, 116)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(120, 212)
+        Me.ListBox1.TabIndex = 41
         '
         'hlavna_aplikacia
         '
@@ -1599,7 +1598,6 @@ Partial Class hlavna_aplikacia
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpzDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -1724,7 +1722,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents BindingNavigator1 As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -1738,5 +1735,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
 
 End Class

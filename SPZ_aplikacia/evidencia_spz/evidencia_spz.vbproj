@@ -233,6 +233,12 @@
     <Compile Include="zaloha_databazy.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="zdruzenie_edituj.Designer.vb">
+      <DependentUpon>zdruzenie_edituj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="zdruzenie_edituj.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="zdruzenie_nove.Designer.vb">
       <DependentUpon>zdruzenie_nove.vb</DependentUpon>
     </Compile>
@@ -323,6 +329,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="zdruzenie.resx">
       <DependentUpon>zdruzenie.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zdruzenie_edituj.resx">
+      <DependentUpon>zdruzenie_edituj.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="zdruzenie_nove.resx">
