@@ -11535,7 +11535,7 @@ Namespace spzDataSetTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT [ico], [ICO_clenovia], [ICO_psy], [ICO_trofeje], [nazov], [sidlo], [predse"& _ 
@@ -11549,6 +11549,21 @@ Namespace spzDataSetTableAdapters
                 "ia_plan], [pes_diviacia_skutocnost], [pes_srncia_plan], [pes_srncia_skutocnost],"& _ 
                 " [pes_mala_plan], [pes_mala_skutocnost] FROM [zdruzenia]"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlServerCe.SqlCeCommand
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        ico, ICO_clenovia, ICO_psy, ICO_trofeje, nazov, sidlo, predseda, pr"& _ 
+                "edseda_telefon, polovny_hospodar, polovny_hospodar_telefon, dic, banka, cislo_uc"& _ 
+                "tu, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         chovatelska_oblast, cislo_reviru, vymera, les, je"& _ 
+                "lenia, srncia, diviacia, bazant, ina, platnost_najomnej_zmluvy_do, stavace_plan,"& _ 
+                " stavace_skutocnost, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         sliedice_plan, sliedice_skutocno"& _ 
+                "st, slovensky_kopov_plan, slovensky_kopov_skutocnost, ostatne_durice_plan, ostat"& _ 
+                "ne_durice_skutocnost, brlohare_plan, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         brlohare_skutocn"& _ 
+                "ost, farbiare_plan, farbiare_skutocnost, pes_jelenia_plan, pes_jelenia_skutocnos"& _ 
+                "t, pes_diviacia_plan, pes_diviacia_skutocnost, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         pes_sr"& _ 
+                "ncia_plan, pes_srncia_skutocnost, pes_mala_plan, pes_mala_skutocnost"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM      "& _ 
+                "      zdruzenia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (ico = ?)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param1", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ico", Global.System.Data.DataRowVersion.Current, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -11568,6 +11583,38 @@ Namespace spzDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As spzDataSet.zdruzeniaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As spzDataSet.zdruzeniaDataTable = New spzDataSet.zdruzeniaDataTable
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy_podlaico(ByVal dataTable As spzDataSet.zdruzeniaDataTable, ByVal Param1 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy_podlaico(ByVal Param1 As String) As spzDataSet.zdruzeniaDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
             Dim dataTable As spzDataSet.zdruzeniaDataTable = New spzDataSet.zdruzeniaDataTable
             Me.Adapter.Fill(dataTable)
             Return dataTable

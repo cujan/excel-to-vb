@@ -651,17 +651,23 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Me.ListBox1.Items.Clear()
+
         Dim con As New SqlCeConnection(pripojovaci_retazec)
-        'Dim com As New SqlCeCommand("SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE  FROM INFORMATION_SCHEMA.TABLES ORDER BY TABLE_NAME; ", con)
-        Dim com As New SqlCeCommand("select * from zdruzenia", con)
+        Dim com As New SqlCeCommand("SELECT TABLE_NAME  FROM INFORMATION_SCHEMA.TABLES ORDER BY TABLE_NAME; ", con)
+        Dim nazov As String = ""
 
         con.Open()
-        '  Dim datareader As SqlCeDataReader = com.ExecuteReader()
-        'MsgBox(datareader("TABLE_NAME"))
+        Dim datareader As SqlCeDataReader = com.ExecuteReader()
+        While datareader.Read
+            nazov = datareader.GetString(0)
+            ListBox1.Items.Add(nazov)
+        End While
 
 
 
-        ' datareader.Close()
+
+        datareader.Close()
         con.Close()
 
     End Sub

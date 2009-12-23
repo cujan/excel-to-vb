@@ -169,3 +169,4 @@ E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_nove.resources
 E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.vbproj.GenerateResource.Cache
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clenovia_all.resources
 E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.clenovia_all.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_edituj.resources

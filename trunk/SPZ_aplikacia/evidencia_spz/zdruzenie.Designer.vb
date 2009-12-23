@@ -86,6 +86,8 @@ Partial Class zdruzenie
         Me.PesmalaplanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.PesmalaskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.zavriet_kartu_button = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,6 +112,7 @@ Partial Class zdruzenie
         'TableAdapterManager
         '
         Me.TableAdapterManager._123_clenoviaTableAdapter = Nothing
+        Me.TableAdapterManager._456_clenoviaTableAdapter = Nothing
         Me.TableAdapterManager.all_clenoviaTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.narodnostTableAdapter = Nothing
@@ -150,7 +153,7 @@ Partial Class zdruzenie
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -511,12 +514,32 @@ Partial Class zdruzenie
         Me.zavriet_kartu_button.Text = "Zavrieť kartu"
         Me.zavriet_kartu_button.UseVisualStyleBackColor = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(343, 46)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Label1"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(407, 46)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Label2"
+        '
         'zdruzenie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(759, 602)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.zavriet_kartu_button)
         Me.Controls.Add(Me.ZdruzeniaDataGridView)
         Me.Controls.Add(Me.ZdruzeniaBindingNavigator)
@@ -595,4 +618,6 @@ Partial Class zdruzenie
     Friend WithEvents PesmalaplanDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PesmalaskutocnostDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents zavriet_kartu_button As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class
