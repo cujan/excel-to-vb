@@ -8,27 +8,81 @@
     End Sub
 
     Private Sub zdruzenie_edituj_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'naplnenie tabulkz all_clenovia cerstvymi udajmi
+        'vytvori select pre kopirovanie tabuliek do velkej
+
+        Dim query As String = "SELECT [ICO_clenovia] FROM zdruzenia"
+        Dim conn As New SqlCeConnection(pripojovaci_retazec)
+        Dim cmd As New SqlCeCommand(query, conn)
+        Dim i As Integer
+        Dim val1 As String
+        Dim unionSelect As String
+        Dim fromTabulky As String
+
+        fromTabulky = ""
+        unionSelect = "insert into ""all_clenovia"" "
+
+
+        conn.Open()
+        Dim rdr As SqlCeDataReader = cmd.ExecuteReader()
+        i = 1
+        Try
+            ' Iterate through the results
+            '
+            While rdr.Read()
+                val1 = rdr.GetString(0)
+                If i = 1 Then
+                    fromTabulky = fromTabulky + " select * from """ + val1 + """"
+                    i = i + 1
+                Else
+                    fromTabulky = fromTabulky + " union select * from """ + val1 + """ "
+                End If
+            End While
+        Finally
+            ' Always call Close when done reading
+            '
+            rdr.Close()
+
+            ' Always call Close when done reading
+            '
+            conn.Close()
+        End Try
+
+        unionSelect = unionSelect + fromTabulky + " "
+        'MsgBox(unionSelect)
+
+        'najprv vymaz tabulku all_clenovia
+        Dim truncateTable As String
+        truncateTable = "DELETE FROM ""all_clenovia"" "
+        Dim connectionTruncate As New SqlCeConnection(pripojovaci_retazec)
+        connectionTruncate.Open()
+        Dim commandTruncate As New SqlCeCommand(truncateTable, connectionTruncate)
+        commandTruncate.ExecuteNonQuery()
+        connectionTruncate.Close()
+
+
+        'vkopiruj tabulky do all_clenova pouzij unionSelect query
+        Dim sqlReturn As New Integer
+        Dim connection As New SqlCeConnection(pripojovaci_retazec)
+        connection.Open()
+        Dim command As New SqlCeCommand(unionSelect, connection)
+        sqlReturn = command.ExecuteNonQuery()
+        connection.Close()
+
+
+
+
+
+        'TODO: This line of code loads data into the 'All_clenoviaDataSet.all_clenovia' table. You can move, or remove it, as needed.
+        Me.All_clenoviaTableAdapter.Fill(Me.All_clenoviaDataSet.all_clenovia)
         'TODO: This line of code loads data into the 'All_clenoviaDataSet.all_clenovia' table. You can move, or remove it, as needed.
         Dim ico As String = zdruzenie.Label2.Text
         'TODO: This line of code loads data into the 'SpzDataSet.zdruzenia' table. You can move, or remove it, as needed.
         Me.ZdruzeniaTableAdapter.FillBy_podlaico(Me.SpzDataSet.zdruzenia, ico)
 
-        'vybratie clenov konkretneho zdruzenia
-        Dim nazovtabulky As String = """" + ico + "_clenovia"""
-        Dim con As New SqlCeConnection(pripojovaci_retazec)
-        Dim com As New SqlCeCommand("SELECT priezvisko, rodne_cislo FROM " & nazovtabulky, con)
-        Dim priezvisko As String = ""
-        Dim rc As String = ""
-        con.Open()
-        Dim datareader As SqlCeDataReader = com.ExecuteReader
-
-        While datareader.Read
-            priezvisko = datareader.GetString(0)
-            rc = datareader.GetString(1)
-            Me.ComboBox1.Items.Add(priezvisko)
-
-        End While
-
+        Dim startovacia_premenna_predseda As String
+        startovacia_premenna_predseda = PredsedaTextBox.Text
+        predsedaComboBox.SelectedValue = startovacia_premenna_predseda
 
     End Sub
 
@@ -87,5 +141,45 @@
         con.Open()
         com.ExecuteNonQuery()
         con.Close()
+
+
+    End Sub
+
+    Private Sub predsedaComboBox_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles predsedaComboBox.Leave
+        PredsedaTextBox.Text = predsedaComboBox.SelectedValue
+        If predsedaComboBox.SelectedValue = 0 Then
+            Predseda_telefonTextBox.Text = ""
+        End If
+        
+
+    End Sub
+
+    Private Sub predsedaComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles predsedaComboBox.SelectedIndexChanged
+        PredsedaTextBox.Text = predsedaComboBox.SelectedValue
+
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
+        Dim com As New SqlCeCommand("SELECT telefon FROM all_clenovia WHERE rodne_cislo = @rodne_cislo", con)
+        com.Parameters.AddWithValue("rodne_cislo", predsedaComboBox.SelectedValue)
+        con.Open()
+        Dim telefon As String
+
+        Try
+            Dim rdr As SqlCeDataReader = com.ExecuteReader
+            While rdr.Read
+                telefon = rdr.GetString(0)
+                Me.Predseda_telefonTextBox.Text = telefon
+            End While
+            rdr.Close()
+            con.Close()
+
+        Catch
+
+            con.Close()
+            Me.Predseda_telefonTextBox.Text = ""
+        End Try
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 End Class

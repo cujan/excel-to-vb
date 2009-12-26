@@ -74,34 +74,6 @@ D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\
 D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zaloha_databazy.resources
 D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.vbproj.GenerateResource.Cache
 D:\google project\excel-to-vb\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\spz.sdf
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.exe.config
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.exe
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.xml
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.pdb
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\spz.sdf
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\spz_evidencia.accdb
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.exe
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.pdb
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.xml
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\ResolveAssemblyReference.cache
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.ciselniky.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.o_aplikacii.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.hlavna_aplikacia.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.kontrola_verzii.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.Resources.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.narodnost.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.registracia_aplikacie.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.SplashScreen1.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.statna_prislusnost.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.titul.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.titul_za.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.varovanie1.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.varovanie2.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.vseobecne_udaje.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zaloha_databazy.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_nove.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.vbproj.GenerateResource.Cache
 E:\_marek\SPZ\svn\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie.resources
 E:\_marek\SPZ\svn\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_nove.resources
 E:\_marek\SPZ\svn\SPZ\evidencia_spz\bin\Debug\spz.sdf
@@ -135,8 +107,6 @@ d:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz
 d:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.pdb
 d:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clen_novy.resources
 d:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clenovia123.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clenovia123.resources
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clen_novy.resources
 E:\_marek\SPZ\SPZ\evidencia_spz\bin\Debug\evidencia_spz.exe.config
 E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.exe
 E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.xml
@@ -167,6 +137,36 @@ E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zaloha_databazy.resource
 E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie.resources
 E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_nove.resources
 E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.vbproj.GenerateResource.Cache
-D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clenovia_all.resources
 E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.clenovia_all.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\spz.sdf
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\spz_evidencia.accdb
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.exe.config
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.exe
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.pdb
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.xml
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\ResolveAssemblyReference.cache
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.ciselniky.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clenovia123.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clenovia_all.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clen_novy.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.o_aplikacii.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.hlavna_aplikacia.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.kontrola_verzii.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.Resources.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.narodnost.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.registracia_aplikacie.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.SplashScreen1.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.statna_prislusnost.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.titul.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.titul_za.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.varovanie1.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.varovanie2.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.vseobecne_udaje.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zaloha_databazy.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie.resources
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_edituj.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_nove.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.vbproj.GenerateResource.Cache
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.exe
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.xml
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.pdb
