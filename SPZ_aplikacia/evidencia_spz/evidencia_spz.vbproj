@@ -134,6 +134,12 @@
     <Compile Include="clen_novy.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="karty_clenov.Designer.vb">
+      <DependentUpon>karty_clenov.vb</DependentUpon>
+    </Compile>
+    <Compile Include="karty_clenov.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="kniznica.vb" />
     <Compile Include="o_aplikacii.Designer.vb">
       <DependentUpon>o_aplikacii.vb</DependentUpon>
@@ -253,6 +259,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="a4_report_2.rdlc" />
     <EmbeddedResource Include="ciselniky.resx">
       <DependentUpon>ciselniky.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -267,6 +274,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="clen_novy.resx">
       <DependentUpon>clen_novy.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="karty_clenov.resx">
+      <DependentUpon>karty_clenov.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="o_aplikacii.resx">

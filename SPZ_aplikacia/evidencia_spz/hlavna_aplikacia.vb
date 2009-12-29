@@ -676,4 +676,10 @@ Public Class hlavna_aplikacia
         clenovia_all.Show()
         clenovia_all.BringToFront()
     End Sub
+
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+        karty_clenov.Show()
+        karty_clenov.BringToFront()
+
+    End Sub
 End Class
