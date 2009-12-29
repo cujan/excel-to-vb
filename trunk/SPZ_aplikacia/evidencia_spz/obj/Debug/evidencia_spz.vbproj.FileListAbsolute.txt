@@ -170,3 +170,7 @@ D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.v
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.exe
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.xml
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.pdb
+E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_edituj.resources
+E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.karty_clenov.resources
+E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\RdlCompile.cache
+E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\RdlCompile.compiled
