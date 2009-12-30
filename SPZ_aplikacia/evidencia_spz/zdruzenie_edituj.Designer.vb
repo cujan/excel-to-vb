@@ -132,6 +132,14 @@ Partial Class zdruzenie_edituj
         Me.AllclenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.All_clenoviaDataSet = New evidencia_spz.all_clenoviaDataSet
         Me.All_clenoviaTableAdapter = New evidencia_spz.all_clenoviaDataSetTableAdapters.all_clenoviaTableAdapter
+        Me.hospodarComboBox = New System.Windows.Forms.ComboBox
+        Me.AllclenoviaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HospodarDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HospodarDataSet = New evidencia_spz.hospodarDataSet
+        Me.All_clenoviaTableAdapter1 = New evidencia_spz.hospodarDataSetTableAdapters.all_clenoviaTableAdapter
+        Me.PredsedaDataSet = New evidencia_spz.predsedaDataSet
+        Me.AllclenoviaBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.All_clenoviaTableAdapter2 = New evidencia_spz.predsedaDataSetTableAdapters.all_clenoviaTableAdapter
         IcoLabel = New System.Windows.Forms.Label
         ICO_clenoviaLabel = New System.Windows.Forms.Label
         ICO_psyLabel = New System.Windows.Forms.Label
@@ -181,6 +189,11 @@ Partial Class zdruzenie_edituj
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AllclenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.All_clenoviaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AllclenoviaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HospodarDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HospodarDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PredsedaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AllclenoviaBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IcoLabel
@@ -584,7 +597,7 @@ Partial Class zdruzenie_edituj
         Me.ZdruzeniaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ZdruzeniaBindingNavigator.Name = "ZdruzeniaBindingNavigator"
         Me.ZdruzeniaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ZdruzeniaBindingNavigator.Size = New System.Drawing.Size(724, 25)
+        Me.ZdruzeniaBindingNavigator.Size = New System.Drawing.Size(741, 25)
         Me.ZdruzeniaBindingNavigator.TabIndex = 0
         Me.ZdruzeniaBindingNavigator.Text = "BindingNavigator1"
         '
@@ -766,6 +779,7 @@ Partial Class zdruzenie_edituj
         Me.Polovny_hospodarTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "polovny_hospodar", True))
         Me.Polovny_hospodarTextBox.Location = New System.Drawing.Point(216, 269)
         Me.Polovny_hospodarTextBox.Name = "Polovny_hospodarTextBox"
+        Me.Polovny_hospodarTextBox.ReadOnly = True
         Me.Polovny_hospodarTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Polovny_hospodarTextBox.TabIndex = 18
         '
@@ -774,6 +788,7 @@ Partial Class zdruzenie_edituj
         Me.Polovny_hospodar_telefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "polovny_hospodar_telefon", True))
         Me.Polovny_hospodar_telefonTextBox.Location = New System.Drawing.Point(216, 295)
         Me.Polovny_hospodar_telefonTextBox.Name = "Polovny_hospodar_telefonTextBox"
+        Me.Polovny_hospodar_telefonTextBox.ReadOnly = True
         Me.Polovny_hospodar_telefonTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Polovny_hospodar_telefonTextBox.TabIndex = 20
         '
@@ -1070,7 +1085,7 @@ Partial Class zdruzenie_edituj
         '
         'predsedaComboBox
         '
-        Me.predsedaComboBox.DataSource = Me.AllclenoviaBindingSource
+        Me.predsedaComboBox.DataSource = Me.AllclenoviaBindingSource2
         Me.predsedaComboBox.DisplayMember = "priezvisko"
         Me.predsedaComboBox.FormattingEnabled = True
         Me.predsedaComboBox.Location = New System.Drawing.Point(379, 220)
@@ -1093,12 +1108,57 @@ Partial Class zdruzenie_edituj
         '
         Me.All_clenoviaTableAdapter.ClearBeforeFill = True
         '
+        'hospodarComboBox
+        '
+        Me.hospodarComboBox.DataSource = Me.AllclenoviaBindingSource1
+        Me.hospodarComboBox.DisplayMember = "priezvisko"
+        Me.hospodarComboBox.FormattingEnabled = True
+        Me.hospodarComboBox.Location = New System.Drawing.Point(379, 272)
+        Me.hospodarComboBox.Name = "hospodarComboBox"
+        Me.hospodarComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.hospodarComboBox.TabIndex = 89
+        Me.hospodarComboBox.ValueMember = "rodne_cislo"
+        '
+        'AllclenoviaBindingSource1
+        '
+        Me.AllclenoviaBindingSource1.DataMember = "all_clenovia"
+        Me.AllclenoviaBindingSource1.DataSource = Me.HospodarDataSetBindingSource
+        '
+        'HospodarDataSetBindingSource
+        '
+        Me.HospodarDataSetBindingSource.DataSource = Me.HospodarDataSet
+        Me.HospodarDataSetBindingSource.Position = 0
+        '
+        'HospodarDataSet
+        '
+        Me.HospodarDataSet.DataSetName = "hospodarDataSet"
+        Me.HospodarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'All_clenoviaTableAdapter1
+        '
+        Me.All_clenoviaTableAdapter1.ClearBeforeFill = True
+        '
+        'PredsedaDataSet
+        '
+        Me.PredsedaDataSet.DataSetName = "predsedaDataSet"
+        Me.PredsedaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AllclenoviaBindingSource2
+        '
+        Me.AllclenoviaBindingSource2.DataMember = "all_clenovia"
+        Me.AllclenoviaBindingSource2.DataSource = Me.PredsedaDataSet
+        '
+        'All_clenoviaTableAdapter2
+        '
+        Me.All_clenoviaTableAdapter2.ClearBeforeFill = True
+        '
         'zdruzenie_edituj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(741, 776)
+        Me.ClientSize = New System.Drawing.Size(758, 776)
+        Me.Controls.Add(Me.hospodarComboBox)
         Me.Controls.Add(Me.predsedaComboBox)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(IcoLabel)
@@ -1197,6 +1257,11 @@ Partial Class zdruzenie_edituj
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AllclenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.All_clenoviaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AllclenoviaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HospodarDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HospodarDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PredsedaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AllclenoviaBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1266,4 +1331,12 @@ Partial Class zdruzenie_edituj
     Friend WithEvents All_clenoviaDataSet As evidencia_spz.all_clenoviaDataSet
     Friend WithEvents AllclenoviaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents All_clenoviaTableAdapter As evidencia_spz.all_clenoviaDataSetTableAdapters.all_clenoviaTableAdapter
+    Friend WithEvents hospodarComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents HospodarDataSetBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents HospodarDataSet As evidencia_spz.hospodarDataSet
+    Friend WithEvents AllclenoviaBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents All_clenoviaTableAdapter1 As evidencia_spz.hospodarDataSetTableAdapters.all_clenoviaTableAdapter
+    Friend WithEvents PredsedaDataSet As evidencia_spz.predsedaDataSet
+    Friend WithEvents AllclenoviaBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents All_clenoviaTableAdapter2 As evidencia_spz.predsedaDataSetTableAdapters.all_clenoviaTableAdapter
 End Class

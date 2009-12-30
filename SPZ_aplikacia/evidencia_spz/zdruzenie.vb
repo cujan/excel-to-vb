@@ -11,7 +11,7 @@
         'TODO: This line of code loads data into the 'SpzDataSet.zdruzenia' table. You can move, or remove it, as needed.
         Me.ZdruzeniaTableAdapter.Fill(Me.SpzDataSet.zdruzenia)
         'TODO: This line of code loads data into the 'SpzDataSet.zdruzenia' table. You can move, or remove it, as needed.
-        Me.ZdruzeniaTableAdapter.Fill(Me.SpzDataSet.zdruzenia)
+        'Me.ZdruzeniaTableAdapter.Fill(Me.SpzDataSet.zdruzenia)
 
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False

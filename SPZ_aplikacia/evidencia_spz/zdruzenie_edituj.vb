@@ -8,6 +8,8 @@
     End Sub
 
     Private Sub zdruzenie_edituj_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        
+
         'naplnenie tabulkz all_clenovia cerstvymi udajmi
         'vytvori select pre kopirovanie tabuliek do velkej
 
@@ -72,18 +74,25 @@
 
 
 
-
+        
         'TODO: This line of code loads data into the 'All_clenoviaDataSet.all_clenovia' table. You can move, or remove it, as needed.
         Me.All_clenoviaTableAdapter.Fill(Me.All_clenoviaDataSet.all_clenovia)
         'TODO: This line of code loads data into the 'All_clenoviaDataSet.all_clenovia' table. You can move, or remove it, as needed.
         Dim ico As String = zdruzenie.Label2.Text
         'TODO: This line of code loads data into the 'SpzDataSet.zdruzenia' table. You can move, or remove it, as needed.
         Me.ZdruzeniaTableAdapter.FillBy_podlaico(Me.SpzDataSet.zdruzenia, ico)
+        'TODO: This line of code loads data into the 'HospodarDataSet.all_clenovia' table. You can move, or remove it, as needed.
+        Dim ico_clena As String = Me.ICO_clenoviaTextBox.Text
+        Me.All_clenoviaTableAdapter1.Fill(Me.HospodarDataSet.all_clenovia, ico_clena)
+        'TODO: This line of code loads data into the 'PredsedaDataSet.all_clenovia' table. You can move, or remove it, as needed.
+        Me.All_clenoviaTableAdapter2.Fill(Me.PredsedaDataSet.all_clenovia, ico_clena)
 
         Dim startovacia_premenna_predseda As String
         startovacia_premenna_predseda = PredsedaTextBox.Text
         predsedaComboBox.SelectedValue = startovacia_premenna_predseda
-
+        Dim startovacia_premenna_hospodar As String
+        startovacia_premenna_hospodar = Polovny_hospodarTextBox.Text
+        hospodarComboBox.SelectedValue = startovacia_premenna_hospodar
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -142,7 +151,7 @@
         com.ExecuteNonQuery()
         con.Close()
 
-
+        zdruzenie.ZdruzeniaTableAdapter.Fill(zdruzenie.SpzDataSet.zdruzenia)
     End Sub
 
     Private Sub predsedaComboBox_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles predsedaComboBox.Leave
@@ -181,5 +190,40 @@
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
+    End Sub
+
+    Private Sub hospodarComboBox_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles hospodarComboBox.Leave
+        Polovny_hospodarTextBox.Text = hospodarComboBox.SelectedValue
+
+        If hospodarComboBox.SelectedValue = 0 Then
+            Polovny_hospodarTextBox.Text = ""
+
+        End If
+
+    End Sub
+
+    Private Sub hospodarComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles hospodarComboBox.SelectedIndexChanged
+        Polovny_hospodarTextBox.Text = hospodarComboBox.SelectedValue
+
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
+        Dim com As New SqlCeCommand("SELECT telefon FROM all_clenovia WHERE rodne_cislo = @rodne_cislo", con)
+        com.Parameters.AddWithValue("rodne_cislo", hospodarComboBox.SelectedValue)
+        con.Open()
+        Dim telefon As String
+
+        Try
+            Dim rdr As SqlCeDataReader = com.ExecuteReader
+            While rdr.Read
+                telefon = rdr.GetString(0)
+                Me.Polovny_hospodar_telefonTextBox.Text = telefon
+            End While
+            rdr.Close()
+            con.Close()
+
+        Catch
+
+            con.Close()
+            Me.Polovny_hospodar_telefonTextBox.Text = ""
+        End Try
     End Sub
 End Class
