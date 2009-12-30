@@ -21,9 +21,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("all_clenoviaDataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("hospodarDataSet"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class all_clenoviaDataSet
+Partial Public Class hospodarDataSet
     Inherits Global.System.Data.DataSet
     
     Private tableall_clenovia As all_clenoviaDataTable
@@ -121,7 +121,7 @@ Partial Public Class all_clenoviaDataSet
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As all_clenoviaDataSet = CType(MyBase.Clone,all_clenoviaDataSet)
+        Dim cln As hospodarDataSet = CType(MyBase.Clone,hospodarDataSet)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -185,9 +185,9 @@ Partial Public Class all_clenoviaDataSet
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
     Private Sub InitClass()
-        Me.DataSetName = "all_clenoviaDataSet"
+        Me.DataSetName = "hospodarDataSet"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/all_clenoviaDataSet.xsd"
+        Me.Namespace = "http://tempuri.org/hospodarDataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableall_clenovia = New all_clenoviaDataTable
@@ -208,7 +208,7 @@ Partial Public Class all_clenoviaDataSet
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As all_clenoviaDataSet = New all_clenoviaDataSet
+        Dim ds As hospodarDataSet = New hospodarDataSet
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny
@@ -962,7 +962,7 @@ Partial Public Class all_clenoviaDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence
-            Dim ds As all_clenoviaDataSet = New all_clenoviaDataSet
+            Dim ds As hospodarDataSet = New hospodarDataSet
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2012,7 +2012,7 @@ Partial Public Class all_clenoviaDataSet
     End Class
 End Class
 
-Namespace all_clenoviaDataSetTableAdapters
+Namespace hospodarDataSetTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -2309,24 +2309,10 @@ Namespace all_clenoviaDataSetTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(1) {}
+            Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT [cislo_pl], [meno], [priezvisko], [datum_narodenia], [rodne_cislo], [miest"& _ 
-                "o_narodenia], [okres_narodenia], [bydlisko], [okres_bydliska], [psc], [telefon],"& _ 
-                " [cislo_op], [datum_vydania_op], [datum_vydania_pl], [cislo_zp], [datum_vydania_"& _ 
-                "zp], [cislo_clenskeho_preukazu_spz], [clen_spz_od], [clenske_do], [cislo_dokladu"& _ 
-                "_clenske], [clen_pz], [skuska_z_polovnictva], [miesto_skusky_z_polovnictva], [sk"& _ 
-                "uska_pre_polovnych_hospodarov], [miesto_skusky_pre_polovnych_hospodarov], [vyzsi"& _ 
-                "a_skuska_z_polovnictva], [miesto_vyzsej_skusky_z_polovnictva], [brokova_zbran], "& _ 
-                "[kontrolne_strelby_brok], [gulova_zbran], [kontrolne_strelby_gula], [najvyzsie_v"& _ 
-                "yznamenanie], [vyznamenanie_kedy], [udelene_tresty], [poznamky], [titul_pred_id]"& _ 
-                ", [titul_za_id], [narodnost_id], [statna_prislusnost_id], [ico_clenovia] FROM [a"& _ 
-                "ll_clenovia]"
-            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1) = New Global.System.Data.SqlServerCe.SqlCeCommand
-            Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT        cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, miesto_na"& _ 
+            Me._commandCollection(0).CommandText = "SELECT        cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, miesto_na"& _ 
                 "rodenia, okres_narodenia, bydlisko, okres_bydliska, psc, telefon, cislo_op, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"  "& _ 
                 "                       datum_vydania_op, datum_vydania_pl, cislo_zp, datum_vydan"& _ 
                 "ia_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clen"& _ 
@@ -2337,16 +2323,21 @@ Namespace all_clenoviaDataSetTableAdapters
                 "strelby_gula, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         najvyzsie_vyznamenanie, vyznamenanie_ke"& _ 
                 "dy, udelene_tresty, poznamky, titul_pred_id, titul_za_id, narodnost_id, statna_p"& _ 
                 "rislusnost_id, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         ico_clenovia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            all_clen"& _ 
-                "ovia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (rodne_cislo = @Param1)"
-            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param1", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "rodne_cislo", Global.System.Data.DataRowVersion.Current, Nothing))
+                "ovia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (ico_clenovia = @Param2)"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param2", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ico_clenovia", Global.System.Data.DataRowVersion.Current, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As all_clenoviaDataSet.all_clenoviaDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As hospodarDataSet.all_clenoviaDataTable, ByVal Param2 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Param2 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param2,String)
+            End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -2357,54 +2348,27 @@ Namespace all_clenoviaDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As all_clenoviaDataSet.all_clenoviaDataTable
+        Public Overloads Overridable Function GetData(ByVal Param2 As String) As hospodarDataSet.all_clenoviaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As all_clenoviaDataSet.all_clenoviaDataTable = New all_clenoviaDataSet.all_clenoviaDataTable
-            Me.Adapter.Fill(dataTable)
-            Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy_rodnecislo(ByVal dataTable As all_clenoviaDataSet.all_clenoviaDataTable, ByVal Param1 As String) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
+            If (Param2 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param2,String)
             End If
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy_rodnecislo(ByVal Param1 As String) As all_clenoviaDataSet.all_clenoviaDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (Param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Param1")
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
-            End If
-            Dim dataTable As all_clenoviaDataSet.all_clenoviaDataTable = New all_clenoviaDataSet.all_clenoviaDataTable
+            Dim dataTable As hospodarDataSet.all_clenoviaDataTable = New hospodarDataSet.all_clenoviaDataTable
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As all_clenoviaDataSet.all_clenoviaDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As hospodarDataSet.all_clenoviaDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As all_clenoviaDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As hospodarDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "all_clenovia")
         End Function
         
@@ -3114,7 +3078,7 @@ Namespace all_clenoviaDataSetTableAdapters
         '''Update rows in top-down order.
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As all_clenoviaDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As hospodarDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._all_clenoviaTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.all_clenovia.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
@@ -3132,7 +3096,7 @@ Namespace all_clenoviaDataSetTableAdapters
         '''Insert rows in top-down order.
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As all_clenoviaDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As hospodarDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._all_clenoviaTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.all_clenovia.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
@@ -3149,7 +3113,7 @@ Namespace all_clenoviaDataSetTableAdapters
         '''Delete rows in bottom-up order.
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As all_clenoviaDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As hospodarDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._all_clenoviaTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.all_clenovia.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
@@ -3191,7 +3155,7 @@ Namespace all_clenoviaDataSetTableAdapters
         '''Update all changes to the dataset.
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As all_clenoviaDataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As hospodarDataSet) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If

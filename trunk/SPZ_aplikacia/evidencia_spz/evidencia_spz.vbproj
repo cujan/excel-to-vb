@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{FB9D0E11-2A5C-41C6-BC6C-6E4536AD7457}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -61,7 +61,6 @@
     <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
@@ -85,8 +84,6 @@
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
-    <Import Include="Microsoft.VisualBasic.PowerPacks" />
-    <Import Include="Microsoft.VisualBasic.PowerPacks.Printing" />
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
@@ -128,11 +125,22 @@
     <Compile Include="clenovia_all.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="clen_edituj.Designer.vb">
+      <DependentUpon>clen_edituj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="clen_edituj.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="clen_novy.Designer.vb">
       <DependentUpon>clen_novy.vb</DependentUpon>
     </Compile>
     <Compile Include="clen_novy.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hospodarDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospodarDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="karty_clenov.Designer.vb">
       <DependentUpon>karty_clenov.vb</DependentUpon>
@@ -179,6 +187,11 @@
     </Compile>
     <Compile Include="narodnost.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="predsedaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>predsedaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="registracia_aplikacie.Designer.vb">
       <DependentUpon>registracia_aplikacie.vb</DependentUpon>
@@ -271,6 +284,9 @@
     <EmbeddedResource Include="clenovia_all.resx">
       <DependentUpon>clenovia_all.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clen_edituj.resx">
+      <DependentUpon>clen_edituj.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="clen_novy.resx">
       <DependentUpon>clen_novy.vb</DependentUpon>
@@ -402,8 +418,30 @@
     <None Include="all_clenoviaDataSet.xss">
       <DependentUpon>all_clenoviaDataSet.xsd</DependentUpon>
     </None>
+    <None Include="hospodarDataSet.xsc">
+      <DependentUpon>hospodarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="hospodarDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospodarDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospodarDataSet.xss">
+      <DependentUpon>hospodarDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\VisualBasic" />
+    <None Include="predsedaDataSet.xsc">
+      <DependentUpon>predsedaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="predsedaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>predsedaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="predsedaDataSet.xss">
+      <DependentUpon>predsedaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\formular_1.jpg" />
     <None Include="spzDataSet.xsc">
       <DependentUpon>spzDataSet.xsd</DependentUpon>

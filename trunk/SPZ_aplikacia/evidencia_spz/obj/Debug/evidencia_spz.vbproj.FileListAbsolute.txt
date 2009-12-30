@@ -138,6 +138,10 @@ E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie.resources
 E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_nove.resources
 E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.vbproj.GenerateResource.Cache
 E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.clenovia_all.resources
+E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_edituj.resources
+E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.karty_clenov.resources
+E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\RdlCompile.cache
+E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\RdlCompile.compiled
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\spz.sdf
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\spz_evidencia.accdb
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\evidencia_spz.exe.config
@@ -148,7 +152,9 @@ D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\ResolveAssembly
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.ciselniky.resources
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clenovia123.resources
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clenovia_all.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clen_edituj.resources
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clen_novy.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.karty_clenov.resources
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.o_aplikacii.resources
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.hlavna_aplikacia.resources
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.kontrola_verzii.resources
@@ -167,10 +173,8 @@ D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.z
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_edituj.resources
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_nove.resources
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.vbproj.GenerateResource.Cache
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\RdlCompile.cache
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\RdlCompile.compiled
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.exe
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.xml
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.pdb
-E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_edituj.resources
-E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\evidencia_spz.karty_clenov.resources
-E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\RdlCompile.cache
-E:\_marek\SPZ\SPZ\evidencia_spz\obj\Debug\RdlCompile.compiled
