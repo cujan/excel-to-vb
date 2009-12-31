@@ -6,111 +6,7 @@ evidencia_spz
 </name>
 </assembly>
 <members>
-<member name="T:evidencia_spz.predsedaDataSet.all_clenoviaDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:evidencia_spz.predsedaDataSet.all_clenoviaRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:evidencia_spz.predsedaDataSet.all_clenoviaRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:evidencia_spz.predsedaDataSet">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:evidencia_spz.predsedaDataSetTableAdapters.all_clenoviaTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(evidencia_spz.predsedaDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(evidencia_spz.predsedaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(evidencia_spz.predsedaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.UpdateAll(evidencia_spz.predsedaDataSet)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="T:evidencia_spz.hospodarDataSet.all_clenoviaDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:evidencia_spz.hospodarDataSet.all_clenoviaRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:evidencia_spz.hospodarDataSet.all_clenoviaRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:evidencia_spz.hospodarDataSet">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:evidencia_spz.hospodarDataSetTableAdapters.all_clenoviaTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(evidencia_spz.hospodarDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(evidencia_spz.hospodarDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(evidencia_spz.hospodarDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.UpdateAll(evidencia_spz.hospodarDataSet)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="T:evidencia_spz.spzDataSet.narodnostDataTable">
+<member name="T:evidencia_spz.spzDataSet.narodnostDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -291,6 +187,110 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member><member name="T:evidencia_spz.spzDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:evidencia_spz.predsedaDataSet.all_clenoviaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:evidencia_spz.predsedaDataSet.all_clenoviaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:evidencia_spz.predsedaDataSet.all_clenoviaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:evidencia_spz.predsedaDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:evidencia_spz.predsedaDataSetTableAdapters.all_clenoviaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(evidencia_spz.predsedaDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(evidencia_spz.predsedaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(evidencia_spz.predsedaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.UpdateAll(evidencia_spz.predsedaDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:evidencia_spz.predsedaDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:evidencia_spz.hospodarDataSet.all_clenoviaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:evidencia_spz.hospodarDataSet.all_clenoviaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:evidencia_spz.hospodarDataSet.all_clenoviaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:evidencia_spz.hospodarDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:evidencia_spz.hospodarDataSetTableAdapters.all_clenoviaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(evidencia_spz.hospodarDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(evidencia_spz.hospodarDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(evidencia_spz.hospodarDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.UpdateAll(evidencia_spz.hospodarDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:evidencia_spz.hospodarDataSetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>

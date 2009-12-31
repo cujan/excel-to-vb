@@ -682,4 +682,8 @@ Public Class hlavna_aplikacia
         karty_clenov.BringToFront()
 
     End Sub
+
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+        skusobny_report.Show()
+    End Sub
 End Class

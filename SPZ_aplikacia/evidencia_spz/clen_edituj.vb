@@ -23,7 +23,7 @@
             .AddWithValue("meno", MenoTextBox.Text)
             .AddWithValue("priezvisko", PriezviskoTextBox.Text)
 
-            .AddWithValue("datum_narodenia", Datum_narodeniaDateTimePicker.Text)
+            .AddWithValue("datum_narodenia", Datum_narodeniaDateTimePicker.Value)
             .AddWithValue("rodne_cislo", Rodne_cisloTextBox.Text)
             .AddWithValue("miesto_narodenia", Miesto_narodeniaTextBox.Text)
             .AddWithValue("okres_narodenia", Okres_narodeniaTextBox.Text)
@@ -40,7 +40,10 @@
 
             .AddWithValue("datum_vydania_zp", Datum_vydania_zpDateTimePicker.Text)
             .AddWithValue("cislo_clenskeho_preukazu_spz", Cislo_clenskeho_preukazu_spzTextBox.Text)
-            .AddWithValue("clen_spz_od", Clen_spz_odTextBox.Text)
+            If Clen_spz_odTextBox.Text = "" Then
+                .AddWithValue("clen_spz_od", 0)
+            Else : .AddWithValue("clen_spz_od", CInt(Clen_spz_odTextBox.Text))
+            End If
             .AddWithValue("clenske_do", Clenske_doTextBox.Text)
             .AddWithValue("cislo_dokladu_clenske", Cislo_dokladu_clenskeTextBox.Text)
             .AddWithValue("clen_pz", Clen_pzTextBox.Text)
