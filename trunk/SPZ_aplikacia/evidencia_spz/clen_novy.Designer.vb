@@ -855,7 +855,7 @@ Partial Class clen_novy
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(972, 812)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(955, 808)
         Me.ShapeContainer1.TabIndex = 86
         Me.ShapeContainer1.TabStop = False
         '
@@ -994,7 +994,7 @@ Partial Class clen_novy
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(972, 812)
+        Me.ClientSize = New System.Drawing.Size(972, 800)
         Me.Controls.Add(Me.ComboBox_hospodar)
         Me.Controls.Add(Me.ComboBox_predseda)
         Me.Controls.Add(Me.label_hospodar)
