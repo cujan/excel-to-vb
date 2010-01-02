@@ -24,13 +24,23 @@ Partial Class karty_clenov
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
-        Me.kartyClenov = New evidencia_spz.kartyClenov
         Me.karty_clenovBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.kartyClenov = New evidencia_spz.kartyClenov
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
         Me.karty_clenovTableAdapter = New evidencia_spz.kartyClenovTableAdapters.karty_clenovTableAdapter
-        CType(Me.kartyClenov, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.karty_clenovBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.kartyClenov, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'karty_clenovBindingSource
+        '
+        Me.karty_clenovBindingSource.DataMember = "karty_clenov"
+        Me.karty_clenovBindingSource.DataSource = Me.kartyClenov
+        '
+        'kartyClenov
+        '
+        Me.kartyClenov.DataSetName = "kartyClenov"
+        Me.kartyClenov.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -44,16 +54,6 @@ Partial Class karty_clenov
         Me.ReportViewer1.Size = New System.Drawing.Size(1124, 646)
         Me.ReportViewer1.TabIndex = 0
         '
-        'kartyClenov
-        '
-        Me.kartyClenov.DataSetName = "kartyClenov"
-        Me.kartyClenov.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'karty_clenovBindingSource
-        '
-        Me.karty_clenovBindingSource.DataMember = "karty_clenov"
-        Me.karty_clenovBindingSource.DataSource = Me.kartyClenov
-        '
         'karty_clenovTableAdapter
         '
         Me.karty_clenovTableAdapter.ClearBeforeFill = True
@@ -66,8 +66,8 @@ Partial Class karty_clenov
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "karty_clenov"
         Me.Text = "Karty členov"
-        CType(Me.kartyClenov, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.karty_clenovBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.kartyClenov, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -353,8 +353,6 @@
       <DependentUpon>skusobny_report2.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="skus_report2.rdlc" />
-    <EmbeddedResource Include="sku_report3.rdlc" />
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
       <SubType>Designer</SubType>
