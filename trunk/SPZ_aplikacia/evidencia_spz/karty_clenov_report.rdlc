@@ -4,10 +4,8 @@
     <DataSource Name="spzConnectionString">
       <rd:DataSourceID>ea1d640c-6243-4706-bd7f-a4e144b4d092</rd:DataSourceID>
       <ConnectionProperties>
-        <DataProvider>
-        </DataProvider>
-        <ConnectString>
-        </ConnectString>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=|DataDirectory|\spz.sdf</ConnectString>
       </ConnectionProperties>
     </DataSource>
   </DataSources>
@@ -67,7 +65,7 @@
         </Field>
         <Field Name="datum_vydania_op">
           <DataField>datum_vydania_op</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="cislo_pl">
           <DataField>cislo_pl</DataField>
@@ -75,7 +73,7 @@
         </Field>
         <Field Name="datum_vydania_pl">
           <DataField>datum_vydania_pl</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="cislo_zp">
           <DataField>cislo_zp</DataField>
@@ -83,7 +81,7 @@
         </Field>
         <Field Name="datum_vydania_zp">
           <DataField>datum_vydania_zp</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="cislo_clenskeho_preukazu_spz">
           <DataField>cislo_clenskeho_preukazu_spz</DataField>
@@ -91,11 +89,11 @@
         </Field>
         <Field Name="clen_spz_od">
           <DataField>clen_spz_od</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="clenske_do">
           <DataField>clenske_do</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="cislo_dokladu_clenske">
           <DataField>cislo_dokladu_clenske</DataField>
@@ -103,15 +101,15 @@
         </Field>
         <Field Name="clen_pz">
           <DataField>clen_pz</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="skuska_z_polovnictva">
           <DataField>skuska_z_polovnictva</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="skuska_pre_polovnych_hospodarov">
           <DataField>skuska_pre_polovnych_hospodarov</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="miesto_skusky_pre_polovnych_hospodarov">
           <DataField>miesto_skusky_pre_polovnych_hospodarov</DataField>
@@ -119,7 +117,7 @@
         </Field>
         <Field Name="vyzsia_skuska_z_polovnictva">
           <DataField>vyzsia_skuska_z_polovnictva</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="miesto_vyzsia_skuska_z_polovnictva">
           <DataField>miesto_vyzsia_skuska_z_polovnictva</DataField>
@@ -131,7 +129,7 @@
         </Field>
         <Field Name="kontrolne_strelby_brok">
           <DataField>kontrolne_strelby_brok</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="gulova_zbran">
           <DataField>gulova_zbran</DataField>
@@ -139,7 +137,7 @@
         </Field>
         <Field Name="kontrolne_strelby_gula">
           <DataField>kontrolne_strelby_gula</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="udelene_tresty">
           <DataField>udelene_tresty</DataField>
@@ -151,7 +149,7 @@
         </Field>
         <Field Name="datum_narodenia">
           <DataField>datum_narodenia</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="okres_bydliska">
           <DataField>okres_bydliska</DataField>
@@ -217,25 +215,42 @@
           <DataField>Titul za</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="miesto_vyzsej_skusky_z_polovnictva">
+          <DataField>miesto_vyzsej_skusky_z_polovnictva</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="najvyzsie_vyznamenanie">
+          <DataField>najvyzsie_vyznamenanie</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="vyznamenanie_kedy">
+          <DataField>vyznamenanie_kedy</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Expr1">
+          <DataField>Expr1</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>spzConnectionString</DataSourceName>
-        <CommandText>SELECT     all_clenovia.id, all_clenovia.titul_pred, all_clenovia.meno, all_clenovia.priezvisko, all_clenovia.rodne_cislo, all_clenovia.miesto_narodenia, all_clenovia.okres_narodenia, 
-                      all_clenovia.bydlisko, all_clenovia.psc, all_clenovia.statna_prislusnost, all_clenovia.cislo_op, all_clenovia.datum_vydania_op, all_clenovia.cislo_pl, 
-                      all_clenovia.datum_vydania_pl, all_clenovia.cislo_zp, all_clenovia.datum_vydania_zp, all_clenovia.cislo_clenskeho_preukazu_spz, all_clenovia.clen_spz_od, 
+        <CommandText>SELECT     all_clenovia.meno, all_clenovia.priezvisko, all_clenovia.rodne_cislo, all_clenovia.miesto_narodenia, all_clenovia.okres_narodenia, 
+                      all_clenovia.bydlisko, all_clenovia.psc, all_clenovia.cislo_op, all_clenovia.datum_vydania_op, all_clenovia.cislo_pl, all_clenovia.datum_vydania_pl, 
+                      all_clenovia.cislo_zp, all_clenovia.datum_vydania_zp, all_clenovia.cislo_clenskeho_preukazu_spz, all_clenovia.clen_spz_od, 
                       all_clenovia.clenske_do, all_clenovia.cislo_dokladu_clenske, all_clenovia.clen_pz, all_clenovia.skuska_z_polovnictva, 
-                      all_clenovia.skuska_pre_polovnych_hospodarov, all_clenovia.miesto_skusky_pre_polovnych_hospodarov, all_clenovia.vyzsia_skuska_z_polovnictva, 
-                      all_clenovia.miesto_vyzsia_skuska_z_polovnictva, all_clenovia.brokova_zbran, all_clenovia.kontrolne_strelby_brok, all_clenovia.gulova_zbran, 
-                      all_clenovia.kontrolne_strelby_gula, all_clenovia.udelene_tresty, all_clenovia.poznamky, all_clenovia.datum_narodenia, all_clenovia.narodnost, 
-                      all_clenovia.okres_bydliska, all_clenovia.najv_vyznamenanie, all_clenovia.vyznamenany_kedy, all_clenovia.telefon, all_clenovia.titul_za, all_clenovia.clen_pz_id, 
-                      all_clenovia.miesto_skusky_z_polovnictva, narodnost.skratka AS Narodnost, zdruzenie.nazov AS Zdruzenie, 
-                      statna_prislusnost.skratka AS [Statna prislusnot], titul.skratka AS [Titul pred], titul_za.skratka AS [Titul za]
-FROM         (((((clenovia LEFT OUTER JOIN
-                      statna_prislusnost ON all_clenovia.statna_prislusnost = statna_prislusnost.ID) LEFT OUTER JOIN
-                      narodnost ON all_clenovia.narodnost = narodnost.ID) LEFT OUTER JOIN
-                      titul_za ON all_clenovia.titul_za = titul_za.ID) LEFT OUTER JOIN
-                      titul ON all_clenovia.titul_pred = titul.ID) LEFT OUTER JOIN
-                      zdruzenie ON all_clenovia.clen_pz_id = zdruzenie.id)</CommandText>
+                      all_clenovia.skuska_pre_polovnych_hospodarov, all_clenovia.miesto_skusky_pre_polovnych_hospodarov, 
+                      all_clenovia.vyzsia_skuska_z_polovnictva, all_clenovia.miesto_vyzsej_skusky_z_polovnictva, all_clenovia.brokova_zbran, 
+                      all_clenovia.kontrolne_strelby_brok, all_clenovia.gulova_zbran, all_clenovia.kontrolne_strelby_gula, all_clenovia.udelene_tresty, 
+                      all_clenovia.poznamky, all_clenovia.datum_narodenia, all_clenovia.okres_bydliska, all_clenovia.najvyzsie_vyznamenanie, 
+                      all_clenovia.vyznamenanie_kedy, all_clenovia.telefon, all_clenovia.clen_pz AS Expr1, all_clenovia.miesto_skusky_z_polovnictva, 
+                      narodnost.skratka AS Narodnost, zdruzenia.nazov AS Zdruzenie, statna_prislusnost.skratka AS [Statna prislusnot], titul_pred.skratka AS [Titul pred], 
+                      titul_za.skratka AS [Titul za]
+FROM         all_clenovia LEFT OUTER JOIN
+                      statna_prislusnost ON all_clenovia.statna_prislusnost_id = statna_prislusnost.id LEFT OUTER JOIN
+                      narodnost ON all_clenovia.narodnost_id = narodnost.id LEFT OUTER JOIN
+                      titul_za ON all_clenovia.titul_za_id = titul_za.id LEFT OUTER JOIN
+                      titul_pred ON all_clenovia.titul_pred_id = titul_pred.id LEFT OUTER JOIN
+                      zdruzenia ON all_clenovia.clen_pz = zdruzenia.ico</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <rd:DataSetInfo>
@@ -262,6 +277,137 @@ FROM         (((((clenovia LEFT OUTER JOIN
         <Left>0.25cm</Left>
         <DataSetName>kartyClenov_karty_clenov</DataSetName>
         <ReportItems>
+          <Textbox Name="textbox25">
+            <Top>5.5cm</Top>
+            <Width>1.25cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>9pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>89</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>15.5cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>miesto</Value>
+          </Textbox>
+          <Textbox Name="miesto_skusky_z_polovnictva">
+            <rd:DefaultName>miesto_skusky_z_polovnictva</rd:DefaultName>
+            <Top>5.5cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>88</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>16.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!miesto_skusky_z_polovnictva.Value)</Value>
+          </Textbox>
+          <Textbox Name="miesto_vyzsej_skusky_z_polovnictva">
+            <rd:DefaultName>miesto_vyzsej_skusky_z_polovnictva</rd:DefaultName>
+            <Top>6.25cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>87</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>16.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!miesto_vyzsej_skusky_z_polovnictva.Value)</Value>
+          </Textbox>
+          <Textbox Name="miesto_skusky_pre_polovnych_hospodarov">
+            <rd:DefaultName>miesto_skusky_pre_polovnych_hospodarov</rd:DefaultName>
+            <Top>7cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>86</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>16.75cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!miesto_skusky_pre_polovnych_hospodarov.Value)</Value>
+          </Textbox>
+          <Textbox Name="poznamky">
+            <rd:DefaultName>poznamky</rd:DefaultName>
+            <Top>10.75cm</Top>
+            <Width>15cm</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>85</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.75cm</Left>
+            <Height>2.5cm</Height>
+            <Value>=First(Fields!poznamky.Value)</Value>
+          </Textbox>
+          <Textbox Name="vyznamenanie_kedy">
+            <rd:DefaultName>vyznamenanie_kedy</rd:DefaultName>
+            <Top>9.25cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>84</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>9cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!vyznamenanie_kedy.Value)</Value>
+          </Textbox>
+          <Textbox Name="najvyzsie_vyznamenanie">
+            <rd:DefaultName>najvyzsie_vyznamenanie</rd:DefaultName>
+            <Top>9.25cm</Top>
+            <Width>2.53968cm</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>83</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!najvyzsie_vyznamenanie.Value)</Value>
+          </Textbox>
+          <Textbox Name="kontrolne_strelby_gula">
+            <rd:DefaultName>kontrolne_strelby_gula</rd:DefaultName>
+            <Top>7.75cm</Top>
+            <Width>1.75cm</Width>
+            <Style>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>82</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>11.5cm</Left>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!kontrolne_strelby_gula.Value)</Value>
+          </Textbox>
           <Textbox Name="Statna_prislusnot">
             <rd:DefaultName>Statna_prislusnot</rd:DefaultName>
             <Top>7cm</Top>
@@ -273,7 +419,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>87</ZIndex>
+            <ZIndex>81</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>6.5cm</Left>
             <Height>0.63492cm</Height>
@@ -290,7 +436,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>86</ZIndex>
+            <ZIndex>80</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>2.25cm</Left>
             <Height>0.63492cm</Height>
@@ -307,26 +453,10 @@ FROM         (((((clenovia LEFT OUTER JOIN
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>85</ZIndex>
+            <ZIndex>79</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
-          <Textbox Name="textbox36">
-            <rd:DefaultName>textbox36</rd:DefaultName>
-            <Top>10.75cm</Top>
-            <Width>16.5cm</Width>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-            <ZIndex>84</ZIndex>
-            <CanGrow>true</CanGrow>
-            <Left>2.75cm</Left>
-            <Height>2.5cm</Height>
-            <Value />
-          </Textbox>
           <Textbox Name="textbox35">
             <rd:DefaultName>textbox35</rd:DefaultName>
             <Top>10.75cm</Top>
@@ -340,7 +470,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>83</ZIndex>
+            <ZIndex>78</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -357,7 +487,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>82</ZIndex>
+            <ZIndex>77</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -372,7 +502,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>81</ZIndex>
+            <ZIndex>76</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>4.5cm</Left>
             <Height>0.63492cm</Height>
@@ -391,7 +521,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>80</ZIndex>
+            <ZIndex>75</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -405,45 +535,10 @@ FROM         (((((clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>79</ZIndex>
+            <ZIndex>74</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
-          <Textbox Name="vyznamenany_kedy">
-            <rd:DefaultName>vyznamenany_kedy</rd:DefaultName>
-            <Top>9.25cm</Top>
-            <Width>2.53968cm</Width>
-            <Style>
-              <FontSize>9pt</FontSize>
-              <Format>dd.MM.yyyy</Format>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-            <ZIndex>78</ZIndex>
-            <CanGrow>true</CanGrow>
-            <Left>8.25cm</Left>
-            <Height>0.63492cm</Height>
-            <Value>=First(Fields!vyznamenany_kedy.Value)</Value>
-          </Textbox>
-          <Textbox Name="najv_vyznamenanie">
-            <rd:DefaultName>najv_vyznamenanie</rd:DefaultName>
-            <Top>9.25cm</Top>
-            <Width>2.53968cm</Width>
-            <Style>
-              <FontSize>9pt</FontSize>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-            <ZIndex>77</ZIndex>
-            <CanGrow>true</CanGrow>
-            <Left>5cm</Left>
-            <Height>0.63492cm</Height>
-            <Value>=First(Fields!najv_vyznamenanie.Value)</Value>
-          </Textbox>
           <Textbox Name="textbox33">
             <rd:DefaultName>textbox33</rd:DefaultName>
             <Top>9.25cm</Top>
@@ -457,7 +552,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>76</ZIndex>
+            <ZIndex>73</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -471,7 +566,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>75</ZIndex>
+            <ZIndex>72</ZIndex>
             <Left>18cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -483,7 +578,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>74</ZIndex>
+            <ZIndex>71</ZIndex>
             <Left>15.75cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -495,27 +590,10 @@ FROM         (((((clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>73</ZIndex>
+            <ZIndex>70</ZIndex>
             <Left>13.5cm</Left>
             <Height>1.5cm</Height>
           </Line>
-          <Textbox Name="kontrolne_strelby_gula">
-            <rd:DefaultName>kontrolne_strelby_gula</rd:DefaultName>
-            <Top>7.75cm</Top>
-            <Width>1.75cm</Width>
-            <Style>
-              <FontSize>9pt</FontSize>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-            <ZIndex>72</ZIndex>
-            <CanGrow>true</CanGrow>
-            <Left>11.5cm</Left>
-            <Height>0.63492cm</Height>
-            <Value>=First(Fields!kontrolne_strelby_gula.Value, "kartyClenov_karty_clenov")</Value>
-          </Textbox>
           <Textbox Name="kontrolne_strelby_brok">
             <rd:DefaultName>kontrolne_strelby_brok</rd:DefaultName>
             <Top>8.5cm</Top>
@@ -527,7 +605,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>71</ZIndex>
+            <ZIndex>69</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>11.5cm</Left>
             <Height>0.63492cm</Height>
@@ -541,7 +619,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>70</ZIndex>
+            <ZIndex>68</ZIndex>
             <Left>11.25cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -553,7 +631,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>69</ZIndex>
+            <ZIndex>67</ZIndex>
             <Left>9.5cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -565,7 +643,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>68</ZIndex>
+            <ZIndex>66</ZIndex>
             <Left>9.5cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -580,7 +658,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>67</ZIndex>
+            <ZIndex>65</ZIndex>
             <Left>6cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -595,7 +673,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>66</ZIndex>
+            <ZIndex>64</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -610,7 +688,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>65</ZIndex>
+            <ZIndex>63</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>3cm</Left>
             <Height>0.63492cm</Height>
@@ -627,7 +705,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>64</ZIndex>
+            <ZIndex>62</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>3cm</Left>
             <Height>0.63492cm</Height>
@@ -646,7 +724,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>63</ZIndex>
+            <ZIndex>61</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -665,7 +743,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>62</ZIndex>
+            <ZIndex>60</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -684,7 +762,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>61</ZIndex>
+            <ZIndex>59</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>6.25cm</Left>
             <Height>1cm</Height>
@@ -703,7 +781,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>60</ZIndex>
+            <ZIndex>58</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -722,47 +800,11 @@ FROM         (((((clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>59</ZIndex>
+            <ZIndex>57</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
             <Value>Broková zbraň</Value>
-          </Textbox>
-          <Textbox Name="miesto_vyzsia_skuska_z_polovnictva">
-            <rd:DefaultName>miesto_vyzsia_skuska_z_polovnictva</rd:DefaultName>
-            <Top>6.25cm</Top>
-            <Width>3.25cm</Width>
-            <Style>
-              <FontSize>9pt</FontSize>
-              <TextAlign>Left</TextAlign>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-            <ZIndex>58</ZIndex>
-            <CanGrow>true</CanGrow>
-            <Left>16.75cm</Left>
-            <Height>0.63492cm</Height>
-            <Value>=First(Fields!miesto_vyzsia_skuska_z_polovnictva.Value)</Value>
-          </Textbox>
-          <Textbox Name="miesto_skusky_pre_polovnych_hospodarov">
-            <rd:DefaultName>miesto_skusky_pre_polovnych_hospodarov</rd:DefaultName>
-            <Top>7cm</Top>
-            <Width>3.25cm</Width>
-            <Style>
-              <FontSize>9pt</FontSize>
-              <TextAlign>Left</TextAlign>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-            <ZIndex>57</ZIndex>
-            <CanGrow>true</CanGrow>
-            <Left>16.75cm</Left>
-            <Height>0.63492cm</Height>
-            <Value>=First(Fields!miesto_skusky_pre_polovnych_hospodarov.Value)</Value>
           </Textbox>
           <Textbox Name="skuska_pre_polovnych_hospodarov">
             <rd:DefaultName>skuska_pre_polovnych_hospodarov</rd:DefaultName>
@@ -1777,7 +1819,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
           </Textbox>
         </ReportItems>
         <Top>0.25cm</Top>
-        <Width>20.5cm</Width>
+        <Width>20.53968cm</Width>
         <Style>
           <FontFamily>Times New Roman</FontFamily>
           <FontSize>14pt</FontSize>
@@ -1789,10 +1831,9 @@ FROM         (((((clenovia LEFT OUTER JOIN
           </GroupExpressions>
           <PageBreakAtEnd>true</PageBreakAtEnd>
         </Grouping>
-        <Height>13.75cm</Height>
       </List>
     </ReportItems>
-    <Height>14.25cm</Height>
+    <Height>14.5cm</Height>
   </Body>
   <Language>en-US</Language>
   <PageHeight>28.5cm</PageHeight>
