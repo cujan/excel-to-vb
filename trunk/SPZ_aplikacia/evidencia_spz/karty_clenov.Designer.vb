@@ -22,28 +22,57 @@ Partial Class karty_clenov
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
+        Me.kartyClenov = New evidencia_spz.kartyClenov
+        Me.karty_clenovBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.karty_clenovTableAdapter = New evidencia_spz.kartyClenovTableAdapters.karty_clenovTableAdapter
+        CType(Me.kartyClenov, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.karty_clenovBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.a4_report_2.rdlc"
+        ReportDataSource1.Name = "kartyClenov_karty_clenov"
+        ReportDataSource1.Value = Me.karty_clenovBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.karty_clenov_report.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(792, 478)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1124, 646)
         Me.ReportViewer1.TabIndex = 0
+        '
+        'kartyClenov
+        '
+        Me.kartyClenov.DataSetName = "kartyClenov"
+        Me.kartyClenov.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'karty_clenovBindingSource
+        '
+        Me.karty_clenovBindingSource.DataMember = "karty_clenov"
+        Me.karty_clenovBindingSource.DataSource = Me.kartyClenov
+        '
+        'karty_clenovTableAdapter
+        '
+        Me.karty_clenovTableAdapter.ClearBeforeFill = True
         '
         'karty_clenov
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(792, 478)
+        Me.ClientSize = New System.Drawing.Size(1124, 646)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "karty_clenov"
-        Me.Text = "karty_clenov"
+        Me.Text = "Karty členov"
+        CType(Me.kartyClenov, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.karty_clenovBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents karty_clenovBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents kartyClenov As evidencia_spz.kartyClenov
+    Friend WithEvents karty_clenovTableAdapter As evidencia_spz.kartyClenovTableAdapters.karty_clenovTableAdapter
 End Class

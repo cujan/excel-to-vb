@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{FB9D0E11-2A5C-41C6-BC6C-6E4536AD7457}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -142,6 +142,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>hospodarDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="kartyClenov.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kartyClenov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kartyClenov.vb">
+      <DependentUpon>kartyClenov.xsd</DependentUpon>
+    </Compile>
     <Compile Include="karty_clenov.Designer.vb">
       <DependentUpon>karty_clenov.vb</DependentUpon>
     </Compile>
@@ -203,6 +211,12 @@
       <DependentUpon>skusobny_report.vb</DependentUpon>
     </Compile>
     <Compile Include="skusobny_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="skusobny_report2.Designer.vb">
+      <DependentUpon>skusobny_report2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="skusobny_report2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SplashScreen1.Designer.vb">
@@ -293,11 +307,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="clen_edituj.resx">
       <DependentUpon>clen_edituj.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="clen_novy.resx">
       <DependentUpon>clen_novy.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="karty_clenov_report.rdlc" />
     <EmbeddedResource Include="karty_clenov.resx">
       <DependentUpon>karty_clenov.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -330,8 +346,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="skusobny_report.resx">
       <DependentUpon>skusobny_report.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="skusobny_report1.rdlc" />
+    <EmbeddedResource Include="skusobny_report2.resx">
+      <DependentUpon>skusobny_report2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="skus_report2.rdlc" />
+    <EmbeddedResource Include="sku_report3.rdlc" />
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -438,6 +461,17 @@
     </None>
     <None Include="hospodarDataSet.xss">
       <DependentUpon>hospodarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kartyClenov.xsc">
+      <DependentUpon>kartyClenov.xsd</DependentUpon>
+    </None>
+    <None Include="kartyClenov.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kartyClenov.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kartyClenov.xss">
+      <DependentUpon>kartyClenov.xsd</DependentUpon>
     </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\VisualBasic" />

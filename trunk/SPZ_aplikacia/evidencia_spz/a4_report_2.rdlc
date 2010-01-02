@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <DataSources>
-    <DataSource Name="spz_evidenciaConnectionString">
-      <rd:DataSourceID>999133dc-9d42-464a-a967-d17f3337c5c7</rd:DataSourceID>
+    <DataSource Name="spzConnectionString">
+      <rd:DataSourceID>ea1d640c-6243-4706-bd7f-a4e144b4d092</rd:DataSourceID>
       <ConnectionProperties>
-        <DataProvider>OLEDB</DataProvider>
-        <ConnectString>Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\spz_evidencia.accdb</ConnectString>
+        <DataProvider>
+        </DataProvider>
+        <ConnectString>
+        </ConnectString>
       </ConnectionProperties>
     </DataSource>
   </DataSources>
@@ -17,7 +19,7 @@
   <rd:ReportID>6def0cb4-8ba9-4968-9dec-3d8d2d8f137f</rd:ReportID>
   <PageWidth>21cm</PageWidth>
   <DataSets>
-    <DataSet Name="spz_clenovia_report_a4_clenovia">
+    <DataSet Name="kartyClenov_karty_clenov">
       <Fields>
         <Field Name="id">
           <DataField>id</DataField>
@@ -217,7 +219,7 @@
         </Field>
       </Fields>
       <Query>
-        <DataSourceName>spz_evidenciaConnectionString</DataSourceName>
+        <DataSourceName>spzConnectionString</DataSourceName>
         <CommandText>SELECT     clenovia.id, clenovia.titul_pred, clenovia.meno, clenovia.priezvisko, clenovia.rodne_cislo, clenovia.miesto_narodenia, clenovia.okres_narodenia, 
                       clenovia.bydlisko, clenovia.psc, clenovia.statna_prislusnost, clenovia.cislo_op, clenovia.datum_vydania_op, clenovia.cislo_pl, 
                       clenovia.datum_vydania_pl, clenovia.cislo_zp, clenovia.datum_vydania_zp, clenovia.cislo_clenskeho_preukazu_spz, clenovia.clen_spz_od, 
@@ -237,9 +239,9 @@ FROM         (((((clenovia LEFT OUTER JOIN
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>spz_clenovia_report_a4</rd:DataSetName>
-        <rd:TableName>clenovia</rd:TableName>
-        <rd:TableAdapterName>clenoviaTableAdapter</rd:TableAdapterName>
+        <rd:DataSetName>kartyClenov</rd:DataSetName>
+        <rd:TableName>karty_clenov</rd:TableName>
+        <rd:TableAdapterName>karty_clenovTableAdapter</rd:TableAdapterName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
       </rd:DataSetInfo>
@@ -258,7 +260,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
           </SortBy>
         </Sorting>
         <Left>0.25cm</Left>
-        <DataSetName>spz_clenovia_report_a4_clenovia</DataSetName>
+        <DataSetName>kartyClenov_karty_clenov</DataSetName>
         <ReportItems>
           <Textbox Name="Statna_prislusnot">
             <rd:DefaultName>Statna_prislusnot</rd:DefaultName>
@@ -1804,7 +1806,7 @@ FROM         (((((clenovia LEFT OUTER JOIN
         <Grouping Name="list1_titul_pred">
           <Label>=Fields!meno.Value &amp; " " &amp; Fields!priezvisko.Value</Label>
           <GroupExpressions>
-            <GroupExpression>=Fields!id.Value</GroupExpression>
+            <GroupExpression>=Fields!rodne_cislo.Value</GroupExpression>
           </GroupExpressions>
           <PageBreakAtEnd>true</PageBreakAtEnd>
         </Grouping>
