@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="kartyClenov" targetNamespace="http://tempuri.org/kartyClenov.xsd" xmlns:mstns="http://tempuri.org/kartyClenov.xsd" xmlns="http://tempuri.org/kartyClenov.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="spzConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="spzConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.evidencia_spz.My.MySettings.GlobalReference.Default.spzConnectionString" Provider="Microsoft.SqlServerCe.Client.3.5" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="karty_clenovTableAdapter" GeneratorDataComponentClassName="karty_clenovTableAdapter" Name="karty_clenov" UserDataComponentName="karty_clenovTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="spzConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     all_clenovia.meno, all_clenovia.priezvisko, all_clenovia.rodne_cislo, all_clenovia.miesto_narodenia, all_clenovia.okres_narodenia, 
+                      all_clenovia.bydlisko, all_clenovia.psc, all_clenovia.cislo_op, all_clenovia.datum_vydania_op, all_clenovia.cislo_pl, all_clenovia.datum_vydania_pl, 
+                      all_clenovia.cislo_zp, all_clenovia.datum_vydania_zp, all_clenovia.cislo_clenskeho_preukazu_spz, all_clenovia.clen_spz_od, 
+                      all_clenovia.clenske_do, all_clenovia.cislo_dokladu_clenske, all_clenovia.clen_pz, all_clenovia.skuska_z_polovnictva, 
+                      all_clenovia.skuska_pre_polovnych_hospodarov, all_clenovia.miesto_skusky_pre_polovnych_hospodarov, 
+                      all_clenovia.vyzsia_skuska_z_polovnictva, all_clenovia.miesto_vyzsej_skusky_z_polovnictva, all_clenovia.brokova_zbran, 
+                      all_clenovia.kontrolne_strelby_brok, all_clenovia.gulova_zbran, all_clenovia.kontrolne_strelby_gula, all_clenovia.udelene_tresty, 
+                      all_clenovia.poznamky, all_clenovia.datum_narodenia, all_clenovia.okres_bydliska, all_clenovia.najvyzsie_vyznamenanie, 
+                      all_clenovia.vyznamenanie_kedy, all_clenovia.telefon, all_clenovia.clen_pz AS Expr1, all_clenovia.miesto_skusky_z_polovnictva, 
+                      narodnost.skratka AS Narodnost, zdruzenia.nazov AS Zdruzenie, statna_prislusnost.skratka AS [Statna prislusnot], titul_pred.skratka AS [Titul pred], 
+                      titul_za.skratka AS [Titul za]
+FROM         all_clenovia LEFT OUTER JOIN
+                      statna_prislusnost ON all_clenovia.statna_prislusnost_id = statna_prislusnost.id LEFT OUTER JOIN
+                      narodnost ON all_clenovia.narodnost_id = narodnost.id LEFT OUTER JOIN
+                      titul_za ON all_clenovia.titul_za_id = titul_za.id LEFT OUTER JOIN
+                      titul_pred ON all_clenovia.titul_pred_id = titul_pred.id LEFT OUTER JOIN
+                      zdruzenia ON all_clenovia.clen_pz = zdruzenia.ico</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="meno" DataSetColumn="meno" />
+              <Mapping SourceColumn="priezvisko" DataSetColumn="priezvisko" />
+              <Mapping SourceColumn="rodne_cislo" DataSetColumn="rodne_cislo" />
+              <Mapping SourceColumn="miesto_narodenia" DataSetColumn="miesto_narodenia" />
+              <Mapping SourceColumn="okres_narodenia" DataSetColumn="okres_narodenia" />
+              <Mapping SourceColumn="bydlisko" DataSetColumn="bydlisko" />
+              <Mapping SourceColumn="psc" DataSetColumn="psc" />
+              <Mapping SourceColumn="cislo_op" DataSetColumn="cislo_op" />
+              <Mapping SourceColumn="datum_vydania_op" DataSetColumn="datum_vydania_op" />
+              <Mapping SourceColumn="cislo_pl" DataSetColumn="cislo_pl" />
+              <Mapping SourceColumn="datum_vydania_pl" DataSetColumn="datum_vydania_pl" />
+              <Mapping SourceColumn="cislo_zp" DataSetColumn="cislo_zp" />
+              <Mapping SourceColumn="datum_vydania_zp" DataSetColumn="datum_vydania_zp" />
+              <Mapping SourceColumn="cislo_clenskeho_preukazu_spz" DataSetColumn="cislo_clenskeho_preukazu_spz" />
+              <Mapping SourceColumn="clen_spz_od" DataSetColumn="clen_spz_od" />
+              <Mapping SourceColumn="clenske_do" DataSetColumn="clenske_do" />
+              <Mapping SourceColumn="cislo_dokladu_clenske" DataSetColumn="cislo_dokladu_clenske" />
+              <Mapping SourceColumn="clen_pz" DataSetColumn="clen_pz" />
+              <Mapping SourceColumn="skuska_z_polovnictva" DataSetColumn="skuska_z_polovnictva" />
+              <Mapping SourceColumn="skuska_pre_polovnych_hospodarov" DataSetColumn="skuska_pre_polovnych_hospodarov" />
+              <Mapping SourceColumn="miesto_skusky_pre_polovnych_hospodarov" DataSetColumn="miesto_skusky_pre_polovnych_hospodarov" />
+              <Mapping SourceColumn="vyzsia_skuska_z_polovnictva" DataSetColumn="vyzsia_skuska_z_polovnictva" />
+              <Mapping SourceColumn="miesto_vyzsej_skusky_z_polovnictva" DataSetColumn="miesto_vyzsej_skusky_z_polovnictva" />
+              <Mapping SourceColumn="brokova_zbran" DataSetColumn="brokova_zbran" />
+              <Mapping SourceColumn="kontrolne_strelby_brok" DataSetColumn="kontrolne_strelby_brok" />
+              <Mapping SourceColumn="gulova_zbran" DataSetColumn="gulova_zbran" />
+              <Mapping SourceColumn="udelene_tresty" DataSetColumn="udelene_tresty" />
+              <Mapping SourceColumn="poznamky" DataSetColumn="poznamky" />
+              <Mapping SourceColumn="datum_narodenia" DataSetColumn="datum_narodenia" />
+              <Mapping SourceColumn="okres_bydliska" DataSetColumn="okres_bydliska" />
+              <Mapping SourceColumn="najvyzsie_vyznamenanie" DataSetColumn="najvyzsie_vyznamenanie" />
+              <Mapping SourceColumn="vyznamenanie_kedy" DataSetColumn="vyznamenanie_kedy" />
+              <Mapping SourceColumn="telefon" DataSetColumn="telefon" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="miesto_skusky_z_polovnictva" DataSetColumn="miesto_skusky_z_polovnictva" />
+              <Mapping SourceColumn="Narodnost" DataSetColumn="Narodnost" />
+              <Mapping SourceColumn="Zdruzenie" DataSetColumn="Zdruzenie" />
+              <Mapping SourceColumn="Statna prislusnot" DataSetColumn="Statna prislusnot" />
+              <Mapping SourceColumn="Titul pred" DataSetColumn="Titul pred" />
+              <Mapping SourceColumn="Titul za" DataSetColumn="Titul za" />
+              <Mapping SourceColumn="kontrolne_strelby_gula" DataSetColumn="kontrolne_strelby_gula" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="kartyClenov" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="kartyClenov" msprop:Generator_DataSetName="kartyClenov" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="karty_clenov" msprop:Generator_UserTableName="karty_clenov" msprop:Generator_RowDeletedName="karty_clenovRowDeleted" msprop:Generator_RowChangedName="karty_clenovRowChanged" msprop:Generator_RowClassName="karty_clenovRow" msprop:Generator_RowChangingName="karty_clenovRowChanging" msprop:Generator_RowEvArgName="karty_clenovRowChangeEvent" msprop:Generator_RowEvHandlerName="karty_clenovRowChangeEventHandler" msprop:Generator_TableClassName="karty_clenovDataTable" msprop:Generator_TableVarName="tablekarty_clenov" msprop:Generator_RowDeletingName="karty_clenovRowDeleting" msprop:Generator_TablePropName="karty_clenov">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="meno" msdata:ReadOnly="true" msprop:Generator_UserColumnName="meno" msprop:Generator_ColumnPropNameInRow="meno" msprop:Generator_ColumnVarNameInTable="columnmeno" msprop:Generator_ColumnPropNameInTable="menoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="priezvisko" msdata:ReadOnly="true" msprop:Generator_UserColumnName="priezvisko" msprop:Generator_ColumnPropNameInRow="priezvisko" msprop:Generator_ColumnVarNameInTable="columnpriezvisko" msprop:Generator_ColumnPropNameInTable="priezviskoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rodne_cislo" msdata:ReadOnly="true" msprop:Generator_UserColumnName="rodne_cislo" msprop:Generator_ColumnPropNameInRow="rodne_cislo" msprop:Generator_ColumnVarNameInTable="columnrodne_cislo" msprop:Generator_ColumnPropNameInTable="rodne_cisloColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="miesto_narodenia" msdata:ReadOnly="true" msprop:Generator_UserColumnName="miesto_narodenia" msprop:Generator_ColumnPropNameInRow="miesto_narodenia" msprop:Generator_ColumnVarNameInTable="columnmiesto_narodenia" msprop:Generator_ColumnPropNameInTable="miesto_narodeniaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="okres_narodenia" msdata:ReadOnly="true" msprop:Generator_UserColumnName="okres_narodenia" msprop:Generator_ColumnPropNameInRow="okres_narodenia" msprop:Generator_ColumnVarNameInTable="columnokres_narodenia" msprop:Generator_ColumnPropNameInTable="okres_narodeniaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bydlisko" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bydlisko" msprop:Generator_ColumnPropNameInRow="bydlisko" msprop:Generator_ColumnVarNameInTable="columnbydlisko" msprop:Generator_ColumnPropNameInTable="bydliskoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="psc" msdata:ReadOnly="true" msprop:Generator_UserColumnName="psc" msprop:Generator_ColumnPropNameInRow="psc" msprop:Generator_ColumnVarNameInTable="columnpsc" msprop:Generator_ColumnPropNameInTable="pscColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cislo_op" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cislo_op" msprop:Generator_ColumnPropNameInRow="cislo_op" msprop:Generator_ColumnVarNameInTable="columncislo_op" msprop:Generator_ColumnPropNameInTable="cislo_opColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datum_vydania_op" msdata:ReadOnly="true" msprop:Generator_UserColumnName="datum_vydania_op" msprop:Generator_ColumnPropNameInRow="datum_vydania_op" msprop:Generator_ColumnVarNameInTable="columndatum_vydania_op" msprop:Generator_ColumnPropNameInTable="datum_vydania_opColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cislo_pl" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cislo_pl" msprop:Generator_ColumnPropNameInRow="cislo_pl" msprop:Generator_ColumnVarNameInTable="columncislo_pl" msprop:Generator_ColumnPropNameInTable="cislo_plColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datum_vydania_pl" msdata:ReadOnly="true" msprop:Generator_UserColumnName="datum_vydania_pl" msprop:Generator_ColumnPropNameInRow="datum_vydania_pl" msprop:Generator_ColumnVarNameInTable="columndatum_vydania_pl" msprop:Generator_ColumnPropNameInTable="datum_vydania_plColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cislo_zp" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cislo_zp" msprop:Generator_ColumnPropNameInRow="cislo_zp" msprop:Generator_ColumnVarNameInTable="columncislo_zp" msprop:Generator_ColumnPropNameInTable="cislo_zpColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datum_vydania_zp" msdata:ReadOnly="true" msprop:Generator_UserColumnName="datum_vydania_zp" msprop:Generator_ColumnPropNameInRow="datum_vydania_zp" msprop:Generator_ColumnVarNameInTable="columndatum_vydania_zp" msprop:Generator_ColumnPropNameInTable="datum_vydania_zpColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cislo_clenskeho_preukazu_spz" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cislo_clenskeho_preukazu_spz" msprop:Generator_ColumnPropNameInRow="cislo_clenskeho_preukazu_spz" msprop:Generator_ColumnVarNameInTable="columncislo_clenskeho_preukazu_spz" msprop:Generator_ColumnPropNameInTable="cislo_clenskeho_preukazu_spzColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clen_spz_od" msdata:ReadOnly="true" msprop:Generator_UserColumnName="clen_spz_od" msprop:Generator_ColumnPropNameInRow="clen_spz_od" msprop:Generator_ColumnVarNameInTable="columnclen_spz_od" msprop:Generator_ColumnPropNameInTable="clen_spz_odColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="clenske_do" msdata:ReadOnly="true" msprop:Generator_UserColumnName="clenske_do" msprop:Generator_ColumnPropNameInRow="clenske_do" msprop:Generator_ColumnVarNameInTable="columnclenske_do" msprop:Generator_ColumnPropNameInTable="clenske_doColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="cislo_dokladu_clenske" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cislo_dokladu_clenske" msprop:Generator_ColumnPropNameInRow="cislo_dokladu_clenske" msprop:Generator_ColumnVarNameInTable="columncislo_dokladu_clenske" msprop:Generator_ColumnPropNameInTable="cislo_dokladu_clenskeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clen_pz" msdata:ReadOnly="true" msprop:Generator_UserColumnName="clen_pz" msprop:Generator_ColumnPropNameInRow="clen_pz" msprop:Generator_ColumnVarNameInTable="columnclen_pz" msprop:Generator_ColumnPropNameInTable="clen_pzColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="skuska_z_polovnictva" msdata:ReadOnly="true" msprop:Generator_UserColumnName="skuska_z_polovnictva" msprop:Generator_ColumnPropNameInRow="skuska_z_polovnictva" msprop:Generator_ColumnVarNameInTable="columnskuska_z_polovnictva" msprop:Generator_ColumnPropNameInTable="skuska_z_polovnictvaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="skuska_pre_polovnych_hospodarov" msdata:ReadOnly="true" msprop:Generator_UserColumnName="skuska_pre_polovnych_hospodarov" msprop:Generator_ColumnPropNameInRow="skuska_pre_polovnych_hospodarov" msprop:Generator_ColumnVarNameInTable="columnskuska_pre_polovnych_hospodarov" msprop:Generator_ColumnPropNameInTable="skuska_pre_polovnych_hospodarovColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="miesto_skusky_pre_polovnych_hospodarov" msdata:ReadOnly="true" msprop:Generator_UserColumnName="miesto_skusky_pre_polovnych_hospodarov" msprop:Generator_ColumnPropNameInRow="miesto_skusky_pre_polovnych_hospodarov" msprop:Generator_ColumnVarNameInTable="columnmiesto_skusky_pre_polovnych_hospodarov" msprop:Generator_ColumnPropNameInTable="miesto_skusky_pre_polovnych_hospodarovColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vyzsia_skuska_z_polovnictva" msdata:ReadOnly="true" msprop:Generator_UserColumnName="vyzsia_skuska_z_polovnictva" msprop:Generator_ColumnPropNameInRow="vyzsia_skuska_z_polovnictva" msprop:Generator_ColumnVarNameInTable="columnvyzsia_skuska_z_polovnictva" msprop:Generator_ColumnPropNameInTable="vyzsia_skuska_z_polovnictvaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="miesto_vyzsej_skusky_z_polovnictva" msdata:ReadOnly="true" msprop:Generator_UserColumnName="miesto_vyzsej_skusky_z_polovnictva" msprop:Generator_ColumnPropNameInRow="miesto_vyzsej_skusky_z_polovnictva" msprop:Generator_ColumnVarNameInTable="columnmiesto_vyzsej_skusky_z_polovnictva" msprop:Generator_ColumnPropNameInTable="miesto_vyzsej_skusky_z_polovnictvaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="brokova_zbran" msdata:ReadOnly="true" msprop:Generator_UserColumnName="brokova_zbran" msprop:Generator_ColumnPropNameInRow="brokova_zbran" msprop:Generator_ColumnVarNameInTable="columnbrokova_zbran" msprop:Generator_ColumnPropNameInTable="brokova_zbranColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="kontrolne_strelby_brok" msdata:ReadOnly="true" msprop:Generator_UserColumnName="kontrolne_strelby_brok" msprop:Generator_ColumnPropNameInRow="kontrolne_strelby_brok" msprop:Generator_ColumnVarNameInTable="columnkontrolne_strelby_brok" msprop:Generator_ColumnPropNameInTable="kontrolne_strelby_brokColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="gulova_zbran" msdata:ReadOnly="true" msprop:Generator_UserColumnName="gulova_zbran" msprop:Generator_ColumnPropNameInRow="gulova_zbran" msprop:Generator_ColumnVarNameInTable="columngulova_zbran" msprop:Generator_ColumnPropNameInTable="gulova_zbranColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="udelene_tresty" msdata:ReadOnly="true" msprop:Generator_UserColumnName="udelene_tresty" msprop:Generator_ColumnPropNameInRow="udelene_tresty" msprop:Generator_ColumnVarNameInTable="columnudelene_tresty" msprop:Generator_ColumnPropNameInTable="udelene_trestyColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="poznamky" msdata:ReadOnly="true" msprop:Generator_UserColumnName="poznamky" msprop:Generator_ColumnPropNameInRow="poznamky" msprop:Generator_ColumnVarNameInTable="columnpoznamky" msprop:Generator_ColumnPropNameInTable="poznamkyColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="120" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datum_narodenia" msdata:ReadOnly="true" msprop:Generator_UserColumnName="datum_narodenia" msprop:Generator_ColumnPropNameInRow="datum_narodenia" msprop:Generator_ColumnVarNameInTable="columndatum_narodenia" msprop:Generator_ColumnPropNameInTable="datum_narodeniaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="okres_bydliska" msdata:ReadOnly="true" msprop:Generator_UserColumnName="okres_bydliska" msprop:Generator_ColumnPropNameInRow="okres_bydliska" msprop:Generator_ColumnVarNameInTable="columnokres_bydliska" msprop:Generator_ColumnPropNameInTable="okres_bydliskaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="najvyzsie_vyznamenanie" msdata:ReadOnly="true" msprop:Generator_UserColumnName="najvyzsie_vyznamenanie" msprop:Generator_ColumnPropNameInRow="najvyzsie_vyznamenanie" msprop:Generator_ColumnVarNameInTable="columnnajvyzsie_vyznamenanie" msprop:Generator_ColumnPropNameInTable="najvyzsie_vyznamenanieColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vyznamenanie_kedy" msdata:ReadOnly="true" msprop:Generator_UserColumnName="vyznamenanie_kedy" msprop:Generator_ColumnPropNameInRow="vyznamenanie_kedy" msprop:Generator_ColumnVarNameInTable="columnvyznamenanie_kedy" msprop:Generator_ColumnPropNameInTable="vyznamenanie_kedyColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="telefon" msdata:ReadOnly="true" msprop:Generator_UserColumnName="telefon" msprop:Generator_ColumnPropNameInRow="telefon" msprop:Generator_ColumnVarNameInTable="columntelefon" msprop:Generator_ColumnPropNameInTable="telefonColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Expr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="miesto_skusky_z_polovnictva" msdata:ReadOnly="true" msprop:Generator_UserColumnName="miesto_skusky_z_polovnictva" msprop:Generator_ColumnPropNameInRow="miesto_skusky_z_polovnictva" msprop:Generator_ColumnVarNameInTable="columnmiesto_skusky_z_polovnictva" msprop:Generator_ColumnPropNameInTable="miesto_skusky_z_polovnictvaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Narodnost" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Narodnost" msprop:Generator_ColumnPropNameInRow="Narodnost" msprop:Generator_ColumnVarNameInTable="columnNarodnost" msprop:Generator_ColumnPropNameInTable="NarodnostColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Zdruzenie" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Zdruzenie" msprop:Generator_ColumnPropNameInRow="Zdruzenie" msprop:Generator_ColumnVarNameInTable="columnZdruzenie" msprop:Generator_ColumnPropNameInTable="ZdruzenieColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Statna_x0020_prislusnot" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Statna prislusnot" msprop:Generator_ColumnPropNameInRow="Statna_prislusnot" msprop:Generator_ColumnVarNameInTable="columnStatna_prislusnot" msprop:Generator_ColumnPropNameInTable="Statna_prislusnotColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Titul_x0020_pred" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Titul pred" msprop:Generator_ColumnPropNameInRow="Titul_pred" msprop:Generator_ColumnVarNameInTable="columnTitul_pred" msprop:Generator_ColumnPropNameInTable="Titul_predColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Titul_x0020_za" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Titul za" msprop:Generator_ColumnPropNameInRow="Titul_za" msprop:Generator_ColumnVarNameInTable="columnTitul_za" msprop:Generator_ColumnPropNameInTable="Titul_zaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="kontrolne_strelby_gula" msdata:ReadOnly="true" msprop:Generator_UserColumnName="kontrolne_strelby_gula" msprop:Generator_ColumnVarNameInTable="columnkontrolne_strelby_gula" msprop:Generator_ColumnPropNameInRow="kontrolne_strelby_gula" msprop:Generator_ColumnPropNameInTable="kontrolne_strelby_gulaColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
