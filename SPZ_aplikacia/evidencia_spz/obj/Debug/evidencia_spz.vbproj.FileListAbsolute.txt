@@ -182,3 +182,4 @@ D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.s
 E:\_marek\SPZ\spz\evidencia_spz\obj\Debug\evidencia_spz.clen_edituj.resources
 E:\_marek\SPZ\spz\evidencia_spz\obj\Debug\evidencia_spz.skusobny_report.resources
 E:\_marek\SPZ\spz\evidencia_spz\obj\Debug\evidencia_spz.skusobny_report2.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.skusobny_report2.resources
