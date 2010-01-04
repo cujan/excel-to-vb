@@ -290,6 +290,17 @@
     <Compile Include="zdruzenie.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="zoznam_clenov.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zoznam_clenov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zoznam_clenov_full.Designer.vb">
+      <DependentUpon>zoznam_clenov_full.vb</DependentUpon>
+    </Compile>
+    <Compile Include="zoznam_clenov_full.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="a4_report_2.rdlc" />
@@ -397,6 +408,11 @@
       <DependentUpon>zdruzenie_nove.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="zoznam_clenov_full.rdlc" />
+    <EmbeddedResource Include="zoznam_clenov_full.resx">
+      <DependentUpon>zoznam_clenov_full.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -495,6 +511,17 @@
     </None>
     <None Include="spzDataSet.xss">
       <DependentUpon>spzDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zoznam_clenov.xsc">
+      <DependentUpon>zoznam_clenov.xsd</DependentUpon>
+    </None>
+    <None Include="zoznam_clenov.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zoznam_clenov.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zoznam_clenov.xss">
+      <DependentUpon>zoznam_clenov.xsd</DependentUpon>
     </None>
     <Content Include="spz.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
