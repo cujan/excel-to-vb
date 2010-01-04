@@ -127,9 +127,13 @@ Partial Class clen_edituj
         Me.Datum_vydania_plTextBox = New System.Windows.Forms.TextBox
         Me.Datum_vydania_zpTextBox = New System.Windows.Forms.TextBox
         Me.clen_pzComboBox = New System.Windows.Forms.ComboBox
-        Me.SpzDataSet = New evidencia_spz.spzDataSet
         Me.ZdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SpzDataSet = New evidencia_spz.spzDataSet
         Me.ZdruzeniaTableAdapter = New evidencia_spz.spzDataSetTableAdapters.zdruzeniaTableAdapter
+        Me.Skuska_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
+        Me.Skuska_pre_polovnych_hospodarovTextBox = New System.Windows.Forms.TextBox
+        Me.Vyzsia_skuska_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
+        Me.Vyznamenanie_kedyTextBox = New System.Windows.Forms.TextBox
         Cislo_plLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -174,8 +178,8 @@ Partial Class clen_edituj
         Me.All_clenoviaBindingNavigator.SuspendLayout()
         CType(Me.All_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.All_clenoviaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Cislo_plLabel
@@ -552,7 +556,7 @@ Partial Class clen_edituj
         Me.All_clenoviaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.All_clenoviaBindingNavigator.Name = "All_clenoviaBindingNavigator"
         Me.All_clenoviaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.All_clenoviaBindingNavigator.Size = New System.Drawing.Size(1019, 25)
+        Me.All_clenoviaBindingNavigator.Size = New System.Drawing.Size(1087, 25)
         Me.All_clenoviaBindingNavigator.TabIndex = 0
         Me.All_clenoviaBindingNavigator.Text = "BindingNavigator1"
         '
@@ -578,7 +582,7 @@ Partial Class clen_edituj
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -816,14 +820,15 @@ Partial Class clen_edituj
         Me.Clen_pzTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "clen_pz", True))
         Me.Clen_pzTextBox.Location = New System.Drawing.Point(316, 569)
         Me.Clen_pzTextBox.Name = "Clen_pzTextBox"
+        Me.Clen_pzTextBox.ReadOnly = True
         Me.Clen_pzTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Clen_pzTextBox.TabIndex = 42
         '
         'Skuska_z_polovnictvaDateTimePicker
         '
-        Me.Skuska_z_polovnictvaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.All_clenoviaBindingSource, "skuska_z_polovnictva", True))
-        Me.Skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(316, 595)
+        Me.Skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(522, 599)
         Me.Skuska_z_polovnictvaDateTimePicker.Name = "Skuska_z_polovnictvaDateTimePicker"
+        Me.Skuska_z_polovnictvaDateTimePicker.ShowCheckBox = True
         Me.Skuska_z_polovnictvaDateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.Skuska_z_polovnictvaDateTimePicker.TabIndex = 44
         '
@@ -837,9 +842,9 @@ Partial Class clen_edituj
         '
         'Skuska_pre_polovnych_hospodarovDateTimePicker
         '
-        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.All_clenoviaBindingSource, "skuska_pre_polovnych_hospodarov", True))
-        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Location = New System.Drawing.Point(316, 647)
+        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Location = New System.Drawing.Point(522, 647)
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Name = "Skuska_pre_polovnych_hospodarovDateTimePicker"
+        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.ShowCheckBox = True
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.TabIndex = 48
         '
@@ -853,9 +858,9 @@ Partial Class clen_edituj
         '
         'Vyzsia_skuska_z_polovnictvaDateTimePicker
         '
-        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.All_clenoviaBindingSource, "vyzsia_skuska_z_polovnictva", True))
-        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(316, 699)
+        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(522, 696)
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Name = "Vyzsia_skuska_z_polovnictvaDateTimePicker"
+        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.ShowCheckBox = True
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.TabIndex = 52
         '
@@ -910,8 +915,9 @@ Partial Class clen_edituj
         'Vyznamenanie_kedyDateTimePicker
         '
         Me.Vyznamenanie_kedyDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.All_clenoviaBindingSource, "vyznamenanie_kedy", True))
-        Me.Vyznamenanie_kedyDateTimePicker.Location = New System.Drawing.Point(316, 881)
+        Me.Vyznamenanie_kedyDateTimePicker.Location = New System.Drawing.Point(522, 878)
         Me.Vyznamenanie_kedyDateTimePicker.Name = "Vyznamenanie_kedyDateTimePicker"
+        Me.Vyznamenanie_kedyDateTimePicker.ShowCheckBox = True
         Me.Vyznamenanie_kedyDateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.Vyznamenanie_kedyDateTimePicker.TabIndex = 66
         '
@@ -1045,26 +1051,65 @@ Partial Class clen_edituj
         Me.clen_pzComboBox.TabIndex = 87
         Me.clen_pzComboBox.ValueMember = "ico"
         '
-        'SpzDataSet
-        '
-        Me.SpzDataSet.DataSetName = "spzDataSet"
-        Me.SpzDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ZdruzeniaBindingSource
         '
         Me.ZdruzeniaBindingSource.DataMember = "zdruzenia"
         Me.ZdruzeniaBindingSource.DataSource = Me.SpzDataSet
         '
+        'SpzDataSet
+        '
+        Me.SpzDataSet.DataSetName = "spzDataSet"
+        Me.SpzDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'ZdruzeniaTableAdapter
         '
         Me.ZdruzeniaTableAdapter.ClearBeforeFill = True
+        '
+        'Skuska_z_polovnictvaTextBox
+        '
+        Me.Skuska_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "skuska_z_polovnictva", True))
+        Me.Skuska_z_polovnictvaTextBox.Location = New System.Drawing.Point(316, 595)
+        Me.Skuska_z_polovnictvaTextBox.Name = "Skuska_z_polovnictvaTextBox"
+        Me.Skuska_z_polovnictvaTextBox.ReadOnly = True
+        Me.Skuska_z_polovnictvaTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Skuska_z_polovnictvaTextBox.TabIndex = 88
+        '
+        'Skuska_pre_polovnych_hospodarovTextBox
+        '
+        Me.Skuska_pre_polovnych_hospodarovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "skuska_pre_polovnych_hospodarov", True))
+        Me.Skuska_pre_polovnych_hospodarovTextBox.Location = New System.Drawing.Point(316, 645)
+        Me.Skuska_pre_polovnych_hospodarovTextBox.Name = "Skuska_pre_polovnych_hospodarovTextBox"
+        Me.Skuska_pre_polovnych_hospodarovTextBox.ReadOnly = True
+        Me.Skuska_pre_polovnych_hospodarovTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Skuska_pre_polovnych_hospodarovTextBox.TabIndex = 89
+        '
+        'Vyzsia_skuska_z_polovnictvaTextBox
+        '
+        Me.Vyzsia_skuska_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "vyzsia_skuska_z_polovnictva", True))
+        Me.Vyzsia_skuska_z_polovnictvaTextBox.Location = New System.Drawing.Point(316, 696)
+        Me.Vyzsia_skuska_z_polovnictvaTextBox.Name = "Vyzsia_skuska_z_polovnictvaTextBox"
+        Me.Vyzsia_skuska_z_polovnictvaTextBox.ReadOnly = True
+        Me.Vyzsia_skuska_z_polovnictvaTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Vyzsia_skuska_z_polovnictvaTextBox.TabIndex = 90
+        '
+        'Vyznamenanie_kedyTextBox
+        '
+        Me.Vyznamenanie_kedyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "vyznamenanie_kedy", True))
+        Me.Vyznamenanie_kedyTextBox.Location = New System.Drawing.Point(316, 881)
+        Me.Vyznamenanie_kedyTextBox.Name = "Vyznamenanie_kedyTextBox"
+        Me.Vyznamenanie_kedyTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Vyznamenanie_kedyTextBox.TabIndex = 91
         '
         'clen_edituj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1036, 776)
+        Me.ClientSize = New System.Drawing.Size(1104, 778)
+        Me.Controls.Add(Me.Vyznamenanie_kedyTextBox)
+        Me.Controls.Add(Me.Vyzsia_skuska_z_polovnictvaTextBox)
+        Me.Controls.Add(Me.Skuska_pre_polovnych_hospodarovTextBox)
+        Me.Controls.Add(Me.Skuska_z_polovnictvaTextBox)
         Me.Controls.Add(Me.clen_pzComboBox)
         Me.Controls.Add(Me.Datum_vydania_zpTextBox)
         Me.Controls.Add(Me.Datum_vydania_plTextBox)
@@ -1159,8 +1204,8 @@ Partial Class clen_edituj
         Me.All_clenoviaBindingNavigator.PerformLayout()
         CType(Me.All_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.All_clenoviaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1231,4 +1276,8 @@ Partial Class clen_edituj
     Friend WithEvents SpzDataSet As evidencia_spz.spzDataSet
     Friend WithEvents ZdruzeniaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ZdruzeniaTableAdapter As evidencia_spz.spzDataSetTableAdapters.zdruzeniaTableAdapter
+    Friend WithEvents Skuska_z_polovnictvaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Skuska_pre_polovnych_hospodarovTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Vyzsia_skuska_z_polovnictvaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Vyznamenanie_kedyTextBox As System.Windows.Forms.TextBox
 End Class

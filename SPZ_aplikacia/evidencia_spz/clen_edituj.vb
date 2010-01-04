@@ -48,13 +48,40 @@
         'nastavi pociatocnu hodntu combo boxu clen_pz
 
         If Clen_pzTextBox.Text = "" Then
-            clen_pzComboBox.SelectedValue = 0
+            clen_pzComboBox.SelectedIndex = -1
         Else
             clen_pzComboBox.SelectedValue = Clen_pzTextBox.Text
 
         End If
 
+        'nastavi pociatocnu hodnotu skuska z polovnictva
 
+        If Skuska_z_polovnictvaTextBox.Text = "" Then
+            Skuska_z_polovnictvaDateTimePicker.Checked = False
+        Else
+            Skuska_z_polovnictvaDateTimePicker.Value = Skuska_z_polovnictvaTextBox.Text
+        End If
+
+        'nastavi pociatocnu hodnotu skuska polovnych hospodarov
+        If Skuska_pre_polovnych_hospodarovTextBox.Text = "" Then
+            Skuska_pre_polovnych_hospodarovDateTimePicker.Checked = False
+        Else
+            Skuska_pre_polovnych_hospodarovDateTimePicker.Value = Skuska_pre_polovnych_hospodarovTextBox.Text
+        End If
+
+        'nastavi pociatocnu hodnotu vyzsia skuska z polovnictva
+        If Vyzsia_skuska_z_polovnictvaTextBox.Text = "" Then
+            Vyzsia_skuska_z_polovnictvaDateTimePicker.Checked = False
+        Else
+            Vyzsia_skuska_z_polovnictvaDateTimePicker.Value = Vyzsia_skuska_z_polovnictvaTextBox.Text
+        End If
+
+        'nastavi pociatocnu hodnotu vyznamenanie kedy
+        If Vyznamenanie_kedyTextBox.Text = "" Then
+            Vyznamenanie_kedyDateTimePicker.Checked = False
+        Else
+            Vyznamenanie_kedyDateTimePicker.Value = Vyznamenanie_kedyTextBox.Text
+        End If
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -123,14 +150,28 @@
             Else
                 .AddWithValue("clen_pz", clen_pzComboBox.SelectedValue)
             End If
-            .AddWithValue("skuska_z_polovnictva", Skuska_z_polovnictvaDateTimePicker.Text)
+            If Skuska_z_polovnictvaDateTimePicker.Checked = True Then
+                .AddWithValue("skuska_z_polovnictva", Skuska_z_polovnictvaDateTimePicker.Value)
+            Else
+                .AddWithValue("skuska_z_polovnictva", DBNull.Value)
+            End If
             .AddWithValue("miesto_skusky_z_polovnictva", Miesto_skusky_z_polovnictvaTextBox.Text)
 
-            .AddWithValue("skuska_pre_polovnych_hospodarov", Skuska_pre_polovnych_hospodarovDateTimePicker.Text)
+            If Skuska_pre_polovnych_hospodarovDateTimePicker.Checked = True Then
+                .AddWithValue("skuska_pre_polovnych_hospodarov", Skuska_pre_polovnych_hospodarovDateTimePicker.Value)
+            Else
+                .AddWithValue("skuska_pre_polovnych_hospodarov", DBNull.Value)
+            End If
             .AddWithValue("miesto_skusky_pre_polovnych_hospodarov", Miesto_skusky_pre_polovnych_hospodarovTextBox.Text)
 
-            .AddWithValue("vyzsia_skuska_z_polovnictva", Vyzsia_skuska_z_polovnictvaDateTimePicker.Text)
+            If Vyzsia_skuska_z_polovnictvaDateTimePicker.Checked = True Then
+                .AddWithValue("vyzsia_skuska_z_polovnictva", Vyzsia_skuska_z_polovnictvaDateTimePicker.Value)
+            Else
+                .AddWithValue("vyzsia_skuska_z_polovnictva", DBNull.Value)
+            End If
             .AddWithValue("miesto_vyzsej_skusky_z_polovnictva", Miesto_vyzsej_skusky_z_polovnictvaTextBox.Text)
+
+
             .AddWithValue("brokova_zbran", Brokova_zbranTextBox.Text)
 
             If Kontrolne_strelby_brokTextBox.Text = "" Then
@@ -146,7 +187,11 @@
             End If
             .AddWithValue("najvyzsie_vyznamenanie", Najvyzsie_vyznamenanieTextBox.Text)
 
-            .AddWithValue("vyznamenanie_kedy", Vyznamenanie_kedyDateTimePicker.Text)
+            If Vyznamenanie_kedyDateTimePicker.Checked = True Then
+                .AddWithValue("vyznamenanie_kedy", Vyznamenanie_kedyDateTimePicker.Value)
+            Else
+                .AddWithValue("vyznamenanie_kedy", DBNull.Value)
+            End If
             .AddWithValue("udelene_tresty", Udelene_trestyTextBox.Text)
             .AddWithValue("poznamky", PoznamkyTextBox.Text)
             If Titul_pred_idTextBox.Text = "" Then
