@@ -1,8 +1,8 @@
 ﻿Public Class zoznam_clenov_full
-    Dim zdruzenie As Integer
+    Dim zdruzenie As String
     Dim d_narodenia As Date
-    Dim narodnost As Integer
-    Dim st_prislusnost As Integer
+    Dim narodnost As String
+    Dim st_prislusnost As String
     Dim clen_od As Integer
     Dim clenske_do As Integer
     Dim pl_vydany_po As Date
@@ -14,15 +14,15 @@
     Private Sub zoznam_clenov_full_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         hlavna_aplikacia.vytvor_all_clenovia()
 
-        zdruzenie = 123
+        zdruzenie = "'%'"
         d_narodenia = CDate(datum_zaciatok)
-        narodnost = 1
-        st_prislusnost = 1
+        narodnost = "'%'"
+        st_prislusnost = "'%'"
         clen_od = 1900
         clenske_do = 2100
         pl_vydany_po = CDate(datum_zaciatok)
         zp_vydany_po = CDate(datum_zaciatok)
-        Me.all_clenoviaTableAdapter.Fill(Me.zoznam_clenov.all_clenovia, zdruzenie, st_prislusnost, narodnost, d_narodenia, pl_vydany_po, zp_vydany_po, clen_od, clenske_do)
+        Me.all_clenoviaTableAdapter.Fill(Me.zoznam_clenov.all_clenovia, d_narodenia, pl_vydany_po, zp_vydany_po, clen_od, clenske_do, 1, 1000, 1, 10, 1, 10)
         Me.ReportViewer1.RefreshReport()
     End Sub
 
