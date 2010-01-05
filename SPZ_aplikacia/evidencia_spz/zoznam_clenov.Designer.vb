@@ -1442,54 +1442,58 @@ Namespace zoznam_clenovTableAdapters
                 "res_bydliska, cislo_op, datum_vydania_op, datum_vydania_pl, cislo_zp, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
                 "              datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clens"& _ 
                 "ke_do, cislo_dokladu_clenske, clen_pz, statna_prislusnost_id, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                "& _ 
-                "      narodnost_id"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         all_clenovia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (clen_pz = @Param1) AND"& _ 
-                " (statna_prislusnost_id = @Param2) AND (narodnost_id = @Param3) AND (datum_narod"& _ 
-                "enia >= @Param4) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      (datum_vydania_pl > @Param5) AND (d"& _ 
-                "atum_vydania_zp > @Param6) AND (clen_spz_od >= @Param7) AND (clenske_do <= @Para"& _ 
-                "m8)"
+                "      narodnost_id"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         all_clenovia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (datum_narodenia >= @Pa"& _ 
+                "ram1) AND (datum_vydania_pl > @Param2) AND (datum_vydania_zp > @Param3) AND (cle"& _ 
+                "n_spz_od >= @Param4) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      (clenske_do <= @Param5) AND (cl"& _ 
+                "en_pz BETWEEN @Param6 AND @Param7) AND (statna_prislusnost_id BETWEEN @Param8 AN"& _ 
+                "D @Param9) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      (narodnost_id BETWEEN @Param10 AND @Param"& _ 
+                "11)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clen_pz", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param2", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "statna_prislusnost_id", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param3", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "narodnost_id", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param4", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, true, 0, 0, "datum_narodenia", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param5", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, true, 0, 0, "datum_vydania_pl", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param6", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, true, 0, 0, "datum_vydania_zp", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param7", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clen_spz_od", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param8", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clenske_do", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param1", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, true, 0, 0, "datum_narodenia", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param2", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, true, 0, 0, "datum_vydania_pl", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param3", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, true, 0, 0, "datum_vydania_zp", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param4", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clen_spz_od", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param5", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clenske_do", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param6", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clen_pz", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param7", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clen_pz", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param8", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "statna_prislusnost_id", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param9", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "statna_prislusnost_id", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param10", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "narodnost_id", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param11", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "narodnost_id", Global.System.Data.DataRowVersion.Current, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As zoznam_clenov.all_clenoviaDataTable, ByVal Param1 As Global.System.Nullable(Of Integer), ByVal Param2 As Global.System.Nullable(Of Integer), ByVal Param3 As Global.System.Nullable(Of Integer), ByVal Param4 As Global.System.Nullable(Of Date), ByVal Param5 As Global.System.Nullable(Of Date), ByVal Param6 As Global.System.Nullable(Of Date), ByVal Param7 As Global.System.Nullable(Of Integer), ByVal Param8 As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As zoznam_clenov.all_clenoviaDataTable, ByVal Param1 As Global.System.Nullable(Of Date), ByVal Param2 As Global.System.Nullable(Of Date), ByVal Param3 As Global.System.Nullable(Of Date), ByVal Param4 As Global.System.Nullable(Of Integer), ByVal Param5 As Global.System.Nullable(Of Integer), ByVal Param6 As Global.System.Nullable(Of Integer), ByVal Param7 As Global.System.Nullable(Of Integer), ByVal Param8 As Global.System.Nullable(Of Integer), ByVal Param9 As Global.System.Nullable(Of Integer), ByVal Param10 As Global.System.Nullable(Of Integer), ByVal Param11 As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Param1.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1.Value,Integer)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1.Value,Date)
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
             If (Param2.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2.Value,Integer)
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2.Value,Date)
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
             If (Param3.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(2).Value = CType(Param3.Value,Integer)
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(Param3.Value,Date)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
             If (Param4.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Param4.Value,Date)
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Param4.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             If (Param5.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(4).Value = CType(Param5.Value,Date)
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(Param5.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
             If (Param6.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(5).Value = CType(Param6.Value,Date)
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(Param6.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
@@ -1502,6 +1506,21 @@ Namespace zoznam_clenovTableAdapters
                 Me.Adapter.SelectCommand.Parameters(7).Value = CType(Param8.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (Param9.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(8).Value = CType(Param9.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Param10.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(9).Value = CType(Param10.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (Param11.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(10).Value = CType(Param11.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1513,35 +1532,35 @@ Namespace zoznam_clenovTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal Param1 As Global.System.Nullable(Of Integer), ByVal Param2 As Global.System.Nullable(Of Integer), ByVal Param3 As Global.System.Nullable(Of Integer), ByVal Param4 As Global.System.Nullable(Of Date), ByVal Param5 As Global.System.Nullable(Of Date), ByVal Param6 As Global.System.Nullable(Of Date), ByVal Param7 As Global.System.Nullable(Of Integer), ByVal Param8 As Global.System.Nullable(Of Integer)) As zoznam_clenov.all_clenoviaDataTable
+        Public Overloads Overridable Function GetData(ByVal Param1 As Global.System.Nullable(Of Date), ByVal Param2 As Global.System.Nullable(Of Date), ByVal Param3 As Global.System.Nullable(Of Date), ByVal Param4 As Global.System.Nullable(Of Integer), ByVal Param5 As Global.System.Nullable(Of Integer), ByVal Param6 As Global.System.Nullable(Of Integer), ByVal Param7 As Global.System.Nullable(Of Integer), ByVal Param8 As Global.System.Nullable(Of Integer), ByVal Param9 As Global.System.Nullable(Of Integer), ByVal Param10 As Global.System.Nullable(Of Integer), ByVal Param11 As Global.System.Nullable(Of Integer)) As zoznam_clenov.all_clenoviaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Param1.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1.Value,Integer)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1.Value,Date)
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
             If (Param2.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2.Value,Integer)
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2.Value,Date)
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
             If (Param3.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(2).Value = CType(Param3.Value,Integer)
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(Param3.Value,Date)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
             If (Param4.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Param4.Value,Date)
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Param4.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             If (Param5.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(4).Value = CType(Param5.Value,Date)
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(Param5.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
             If (Param6.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(5).Value = CType(Param6.Value,Date)
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(Param6.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
@@ -1554,6 +1573,21 @@ Namespace zoznam_clenovTableAdapters
                 Me.Adapter.SelectCommand.Parameters(7).Value = CType(Param8.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (Param9.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(8).Value = CType(Param9.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Param10.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(9).Value = CType(Param10.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (Param11.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(10).Value = CType(Param11.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
             Dim dataTable As zoznam_clenov.all_clenoviaDataTable = New zoznam_clenov.all_clenoviaDataTable
             Me.Adapter.Fill(dataTable)
