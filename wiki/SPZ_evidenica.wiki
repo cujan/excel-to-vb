@@ -1,1 +1,3 @@
-ciselniky
+potrebne ciselniky:
+- Okres
+- Obec spolu s prisluchajucim PSC
