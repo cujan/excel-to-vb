@@ -24,11 +24,17 @@ Partial Class zoznam_clenov_full
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Me.zdruzenia_combo = New System.Windows.Forms.ComboBox
+        Me.ZdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Zoznam_zdruzeni_combo = New evidencia_spz.zoznam_zdruzeni_combo
         Me.zdruzenie_checkbox = New System.Windows.Forms.CheckBox
         Me.narodnost_checkbox = New System.Windows.Forms.CheckBox
         Me.narodnost_combo = New System.Windows.Forms.ComboBox
+        Me.NarodnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Narodnost_combo1 = New evidencia_spz.narodnost_combo
         Me.st_prislusnost_checkbox = New System.Windows.Forms.CheckBox
         Me.st_prislusnost_combo = New System.Windows.Forms.ComboBox
+        Me.StatnaprislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.St_prislusnost_combo1 = New evidencia_spz.st_prislusnost_combo
         Me.dat_narodenia_checkbox = New System.Windows.Forms.CheckBox
         Me.dat_narodenia_dt_picker = New System.Windows.Forms.DateTimePicker
         Me.pl_vydany_po_checkbox = New System.Windows.Forms.CheckBox
@@ -38,32 +44,26 @@ Partial Class zoznam_clenov_full
         Me.clen_spz_od_checkbox = New System.Windows.Forms.CheckBox
         Me.clenske_do_checkbox = New System.Windows.Forms.CheckBox
         Me.clen_spz_od_combo = New System.Windows.Forms.ComboBox
-        Me.clenske_do_combo = New System.Windows.Forms.ComboBox
-        Me.Vseobecne_udajeTableAdapter1 = New evidencia_spz.spzDataSetTableAdapters.vseobecne_udajeTableAdapter
-        Me.Roky = New evidencia_spz.roky
-        Me.RokyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RokyBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RokyTableAdapter = New evidencia_spz.rokyTableAdapters.rokyTableAdapter
         Me.RokyBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Zoznam_zdruzeni_combo = New evidencia_spz.zoznam_zdruzeni_combo
-        Me.ZdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RokyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Roky = New evidencia_spz.roky
+        Me.clenske_do_combo = New System.Windows.Forms.ComboBox
+        Me.RokyBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Vseobecne_udajeTableAdapter1 = New evidencia_spz.spzDataSetTableAdapters.vseobecne_udajeTableAdapter
+        Me.RokyTableAdapter = New evidencia_spz.rokyTableAdapters.rokyTableAdapter
         Me.ZdruzeniaTableAdapter = New evidencia_spz.zoznam_zdruzeni_comboTableAdapters.zdruzeniaTableAdapter
-        Me.Narodnost_combo1 = New evidencia_spz.narodnost_combo
-        Me.NarodnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.NarodnostTableAdapter = New evidencia_spz.narodnost_comboTableAdapters.narodnostTableAdapter
-        Me.St_prislusnost_combo1 = New evidencia_spz.st_prislusnost_combo
-        Me.StatnaprislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Statna_prislusnostTableAdapter = New evidencia_spz.st_prislusnost_comboTableAdapters.statna_prislusnostTableAdapter
-        CType(Me.Roky, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RokyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RokyBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RokyBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Zoznam_zdruzeni_combo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Narodnost_combo1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Zoznam_zdruzeni_combo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.St_prislusnost_combo1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Narodnost_combo1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.St_prislusnost_combo1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RokyBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RokyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Roky, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RokyBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'zdruzenia_combo
@@ -77,6 +77,16 @@ Partial Class zoznam_clenov_full
         Me.zdruzenia_combo.Size = New System.Drawing.Size(101, 21)
         Me.zdruzenia_combo.TabIndex = 1
         Me.zdruzenia_combo.ValueMember = "nazov"
+        '
+        'ZdruzeniaBindingSource
+        '
+        Me.ZdruzeniaBindingSource.DataMember = "zdruzenia"
+        Me.ZdruzeniaBindingSource.DataSource = Me.Zoznam_zdruzeni_combo
+        '
+        'Zoznam_zdruzeni_combo
+        '
+        Me.Zoznam_zdruzeni_combo.DataSetName = "zoznam_zdruzeni_combo"
+        Me.Zoznam_zdruzeni_combo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'zdruzenie_checkbox
         '
@@ -110,6 +120,16 @@ Partial Class zoznam_clenov_full
         Me.narodnost_combo.TabIndex = 5
         Me.narodnost_combo.ValueMember = "nazov"
         '
+        'NarodnostBindingSource
+        '
+        Me.NarodnostBindingSource.DataMember = "narodnost"
+        Me.NarodnostBindingSource.DataSource = Me.Narodnost_combo1
+        '
+        'Narodnost_combo1
+        '
+        Me.Narodnost_combo1.DataSetName = "narodnost_combo"
+        Me.Narodnost_combo1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'st_prislusnost_checkbox
         '
         Me.st_prislusnost_checkbox.AutoSize = True
@@ -131,6 +151,16 @@ Partial Class zoznam_clenov_full
         Me.st_prislusnost_combo.Size = New System.Drawing.Size(56, 21)
         Me.st_prislusnost_combo.TabIndex = 7
         Me.st_prislusnost_combo.ValueMember = "skratka"
+        '
+        'StatnaprislusnostBindingSource
+        '
+        Me.StatnaprislusnostBindingSource.DataMember = "statna_prislusnost"
+        Me.StatnaprislusnostBindingSource.DataSource = Me.St_prislusnost_combo1
+        '
+        'St_prislusnost_combo1
+        '
+        Me.St_prislusnost_combo1.DataSetName = "st_prislusnost_combo"
+        Me.St_prislusnost_combo1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'dat_narodenia_checkbox
         '
@@ -218,6 +248,21 @@ Partial Class zoznam_clenov_full
         Me.clen_spz_od_combo.TabIndex = 16
         Me.clen_spz_od_combo.ValueMember = "rok"
         '
+        'RokyBindingSource2
+        '
+        Me.RokyBindingSource2.DataMember = "roky"
+        Me.RokyBindingSource2.DataSource = Me.RokyBindingSource
+        '
+        'RokyBindingSource
+        '
+        Me.RokyBindingSource.DataSource = Me.Roky
+        Me.RokyBindingSource.Position = 0
+        '
+        'Roky
+        '
+        Me.Roky.DataSetName = "roky"
+        Me.Roky.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'clenske_do_combo
         '
         Me.clenske_do_combo.DataSource = Me.RokyBindingSource1
@@ -230,71 +275,26 @@ Partial Class zoznam_clenov_full
         Me.clenske_do_combo.TabIndex = 17
         Me.clenske_do_combo.ValueMember = "rok"
         '
-        'Vseobecne_udajeTableAdapter1
-        '
-        Me.Vseobecne_udajeTableAdapter1.ClearBeforeFill = True
-        '
-        'Roky
-        '
-        Me.Roky.DataSetName = "roky"
-        Me.Roky.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'RokyBindingSource
-        '
-        Me.RokyBindingSource.DataSource = Me.Roky
-        Me.RokyBindingSource.Position = 0
-        '
         'RokyBindingSource1
         '
         Me.RokyBindingSource1.DataMember = "roky"
         Me.RokyBindingSource1.DataSource = Me.RokyBindingSource
         '
+        'Vseobecne_udajeTableAdapter1
+        '
+        Me.Vseobecne_udajeTableAdapter1.ClearBeforeFill = True
+        '
         'RokyTableAdapter
         '
         Me.RokyTableAdapter.ClearBeforeFill = True
-        '
-        'RokyBindingSource2
-        '
-        Me.RokyBindingSource2.DataMember = "roky"
-        Me.RokyBindingSource2.DataSource = Me.RokyBindingSource
-        '
-        'Zoznam_zdruzeni_combo
-        '
-        Me.Zoznam_zdruzeni_combo.DataSetName = "zoznam_zdruzeni_combo"
-        Me.Zoznam_zdruzeni_combo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ZdruzeniaBindingSource
-        '
-        Me.ZdruzeniaBindingSource.DataMember = "zdruzenia"
-        Me.ZdruzeniaBindingSource.DataSource = Me.Zoznam_zdruzeni_combo
         '
         'ZdruzeniaTableAdapter
         '
         Me.ZdruzeniaTableAdapter.ClearBeforeFill = True
         '
-        'Narodnost_combo1
-        '
-        Me.Narodnost_combo1.DataSetName = "narodnost_combo"
-        Me.Narodnost_combo1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'NarodnostBindingSource
-        '
-        Me.NarodnostBindingSource.DataMember = "narodnost"
-        Me.NarodnostBindingSource.DataSource = Me.Narodnost_combo1
-        '
         'NarodnostTableAdapter
         '
         Me.NarodnostTableAdapter.ClearBeforeFill = True
-        '
-        'St_prislusnost_combo1
-        '
-        Me.St_prislusnost_combo1.DataSetName = "st_prislusnost_combo"
-        Me.St_prislusnost_combo1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'StatnaprislusnostBindingSource
-        '
-        Me.StatnaprislusnostBindingSource.DataMember = "statna_prislusnost"
-        Me.StatnaprislusnostBindingSource.DataSource = Me.St_prislusnost_combo1
         '
         'Statna_prislusnostTableAdapter
         '
@@ -323,16 +323,16 @@ Partial Class zoznam_clenov_full
         Me.Controls.Add(Me.zdruzenia_combo)
         Me.Name = "zoznam_clenov_full"
         Me.Text = "Zoznam členov"
-        CType(Me.Roky, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RokyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RokyBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RokyBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Zoznam_zdruzeni_combo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Narodnost_combo1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Zoznam_zdruzeni_combo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.St_prislusnost_combo1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Narodnost_combo1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.St_prislusnost_combo1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RokyBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RokyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Roky, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RokyBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
