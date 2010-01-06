@@ -12,6 +12,14 @@
 
 
     Private Sub zoznam_clenov_full_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'St_prislusnost_combo1.statna_prislusnost' table. You can move, or remove it, as needed.
+        Me.Statna_prislusnostTableAdapter.Fill(Me.St_prislusnost_combo1.statna_prislusnost)
+        'TODO: This line of code loads data into the 'Narodnost_combo1.narodnost' table. You can move, or remove it, as needed.
+        Me.NarodnostTableAdapter.Fill(Me.Narodnost_combo1.narodnost)
+        'TODO: This line of code loads data into the 'Zoznam_zdruzeni_combo.zdruzenia' table. You can move, or remove it, as needed.
+        Me.ZdruzeniaTableAdapter.Fill(Me.Zoznam_zdruzeni_combo.zdruzenia)
+        'TODO: This line of code loads data into the 'Roky._roky' table. You can move, or remove it, as needed.
+        Me.RokyTableAdapter.Fill(Me.Roky._roky)
         hlavna_aplikacia.vytvor_all_clenovia()
 
         zdruzenie = "'%'"
@@ -22,8 +30,8 @@
         clenske_do = 2100
         pl_vydany_po = CDate(datum_zaciatok)
         zp_vydany_po = CDate(datum_zaciatok)
-        Me.all_clenoviaTableAdapter.Fill(Me.zoznam_clenov.all_clenovia, d_narodenia, pl_vydany_po, zp_vydany_po, clen_od, clenske_do, 1, 1000, 1, 10, 1, 10)
-        Me.ReportViewer1.RefreshReport()
+
+
     End Sub
 
     Private Sub zdruzenie_checkbox_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zdruzenie_checkbox.CheckedChanged
@@ -89,6 +97,30 @@
             zp_vydany_po_dt_picker.Enabled = True
         Else
             zp_vydany_po_dt_picker.Enabled = False
+        End If
+    End Sub
+
+    Private Sub clen_spz_od_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles clen_spz_od_combo.SelectedIndexChanged
+        If clen_spz_od_combo.SelectedIndex <> -1 Then
+            MsgBox("Selected value is " + clen_spz_od_combo.SelectedValue.ToString)
+        End If
+    End Sub
+
+    Private Sub zdruzenia_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zdruzenia_combo.SelectedIndexChanged
+        If zdruzenia_combo.SelectedIndex <> -1 Then
+            MsgBox("Selected value is " + zdruzenia_combo.SelectedValue.ToString)
+        End If
+    End Sub
+
+    Private Sub narodnost_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles narodnost_combo.SelectedIndexChanged
+        If narodnost_combo.SelectedIndex <> -1 Then
+            MsgBox("Selected value is " + narodnost_combo.SelectedValue.ToString)
+        End If
+    End Sub
+
+    Private Sub st_prislusnost_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles st_prislusnost_combo.SelectedIndexChanged
+        If st_prislusnost_combo.SelectedIndex <> -1 Then
+            MsgBox("Selected value is " + st_prislusnost_combo.SelectedValue.ToString)
         End If
     End Sub
 End Class

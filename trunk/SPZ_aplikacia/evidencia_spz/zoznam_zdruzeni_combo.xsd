@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="zoznam_zdruzeni_combo" targetNamespace="http://tempuri.org/zoznam_zdruzeni_combo.xsd" xmlns:mstns="http://tempuri.org/zoznam_zdruzeni_combo.xsd" xmlns="http://tempuri.org/zoznam_zdruzeni_combo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="spzConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="spzConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.evidencia_spz.My.MySettings.GlobalReference.Default.spzConnectionString" Provider="Microsoft.SqlServerCe.Client.3.5" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="zdruzeniaTableAdapter" GeneratorDataComponentClassName="zdruzeniaTableAdapter" Name="zdruzenia" UserDataComponentName="zdruzeniaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="spzConnectionString (MySettings)" DbObjectName="zdruzenia" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [nazov] FROM [zdruzenia]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nazov" DataSetColumn="nazov" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="zoznam_zdruzeni_combo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="zoznam_zdruzeni_combo" msprop:Generator_UserDSName="zoznam_zdruzeni_combo" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="zdruzenia" msprop:Generator_UserTableName="zdruzenia" msprop:Generator_RowDeletedName="zdruzeniaRowDeleted" msprop:Generator_TableClassName="zdruzeniaDataTable" msprop:Generator_RowChangedName="zdruzeniaRowChanged" msprop:Generator_RowClassName="zdruzeniaRow" msprop:Generator_RowChangingName="zdruzeniaRowChanging" msprop:Generator_RowEvArgName="zdruzeniaRowChangeEvent" msprop:Generator_RowEvHandlerName="zdruzeniaRowChangeEventHandler" msprop:Generator_TablePropName="zdruzenia" msprop:Generator_TableVarName="tablezdruzenia" msprop:Generator_RowDeletingName="zdruzeniaRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nazov" msprop:Generator_UserColumnName="nazov" msprop:Generator_ColumnPropNameInRow="nazov" msprop:Generator_ColumnVarNameInTable="columnnazov" msprop:Generator_ColumnPropNameInTable="nazovColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
