@@ -23,8 +23,6 @@ Partial Class zoznam_clenov_full
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim ReportDataSource6 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
         Me.zdruzenia_combo = New System.Windows.Forms.ComboBox
         Me.zdruzenie_checkbox = New System.Windows.Forms.CheckBox
         Me.narodnost_checkbox = New System.Windows.Forms.CheckBox
@@ -41,32 +39,44 @@ Partial Class zoznam_clenov_full
         Me.clenske_do_checkbox = New System.Windows.Forms.CheckBox
         Me.clen_spz_od_combo = New System.Windows.Forms.ComboBox
         Me.clenske_do_combo = New System.Windows.Forms.ComboBox
-        Me.zoznam_clenov = New evidencia_spz.zoznam_clenov
-        Me.all_clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.all_clenoviaTableAdapter = New evidencia_spz.zoznam_clenovTableAdapters.all_clenoviaTableAdapter
-        CType(Me.zoznam_clenov, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.all_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Vseobecne_udajeTableAdapter1 = New evidencia_spz.spzDataSetTableAdapters.vseobecne_udajeTableAdapter
+        Me.Roky = New evidencia_spz.roky
+        Me.RokyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RokyBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RokyTableAdapter = New evidencia_spz.rokyTableAdapters.rokyTableAdapter
+        Me.RokyBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Zoznam_zdruzeni_combo = New evidencia_spz.zoznam_zdruzeni_combo
+        Me.ZdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZdruzeniaTableAdapter = New evidencia_spz.zoznam_zdruzeni_comboTableAdapters.zdruzeniaTableAdapter
+        Me.Narodnost_combo1 = New evidencia_spz.narodnost_combo
+        Me.NarodnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.NarodnostTableAdapter = New evidencia_spz.narodnost_comboTableAdapters.narodnostTableAdapter
+        Me.St_prislusnost_combo1 = New evidencia_spz.st_prislusnost_combo
+        Me.StatnaprislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Statna_prislusnostTableAdapter = New evidencia_spz.st_prislusnost_comboTableAdapters.statna_prislusnostTableAdapter
+        CType(Me.Roky, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RokyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RokyBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RokyBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Zoznam_zdruzeni_combo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Narodnost_combo1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.St_prislusnost_combo1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ReportViewer1
-        '
-        ReportDataSource6.Name = "zoznam_clenov_all_clenovia"
-        ReportDataSource6.Value = Me.all_clenoviaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource6)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.zoznam_clenov_full.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 109)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(863, 292)
-        Me.ReportViewer1.TabIndex = 0
         '
         'zdruzenia_combo
         '
+        Me.zdruzenia_combo.DataSource = Me.ZdruzeniaBindingSource
+        Me.zdruzenia_combo.DisplayMember = "nazov"
         Me.zdruzenia_combo.Enabled = False
         Me.zdruzenia_combo.FormattingEnabled = True
         Me.zdruzenia_combo.Location = New System.Drawing.Point(142, 4)
         Me.zdruzenia_combo.Name = "zdruzenia_combo"
         Me.zdruzenia_combo.Size = New System.Drawing.Size(101, 21)
         Me.zdruzenia_combo.TabIndex = 1
+        Me.zdruzenia_combo.ValueMember = "nazov"
         '
         'zdruzenie_checkbox
         '
@@ -90,12 +100,15 @@ Partial Class zoznam_clenov_full
         '
         'narodnost_combo
         '
+        Me.narodnost_combo.DataSource = Me.NarodnostBindingSource
+        Me.narodnost_combo.DisplayMember = "nazov"
         Me.narodnost_combo.Enabled = False
         Me.narodnost_combo.FormattingEnabled = True
         Me.narodnost_combo.Location = New System.Drawing.Point(421, 31)
         Me.narodnost_combo.Name = "narodnost_combo"
-        Me.narodnost_combo.Size = New System.Drawing.Size(61, 21)
+        Me.narodnost_combo.Size = New System.Drawing.Size(84, 21)
         Me.narodnost_combo.TabIndex = 5
+        Me.narodnost_combo.ValueMember = "nazov"
         '
         'st_prislusnost_checkbox
         '
@@ -109,12 +122,15 @@ Partial Class zoznam_clenov_full
         '
         'st_prislusnost_combo
         '
+        Me.st_prislusnost_combo.DataSource = Me.StatnaprislusnostBindingSource
+        Me.st_prislusnost_combo.DisplayMember = "skratka"
         Me.st_prislusnost_combo.Enabled = False
         Me.st_prislusnost_combo.FormattingEnabled = True
         Me.st_prislusnost_combo.Location = New System.Drawing.Point(421, 60)
         Me.st_prislusnost_combo.Name = "st_prislusnost_combo"
         Me.st_prislusnost_combo.Size = New System.Drawing.Size(56, 21)
         Me.st_prislusnost_combo.TabIndex = 7
+        Me.st_prislusnost_combo.ValueMember = "skratka"
         '
         'dat_narodenia_checkbox
         '
@@ -192,35 +208,97 @@ Partial Class zoznam_clenov_full
         '
         'clen_spz_od_combo
         '
+        Me.clen_spz_od_combo.DataSource = Me.RokyBindingSource2
+        Me.clen_spz_od_combo.DisplayMember = "rok"
         Me.clen_spz_od_combo.Enabled = False
         Me.clen_spz_od_combo.FormattingEnabled = True
         Me.clen_spz_od_combo.Location = New System.Drawing.Point(142, 33)
         Me.clen_spz_od_combo.Name = "clen_spz_od_combo"
         Me.clen_spz_od_combo.Size = New System.Drawing.Size(70, 21)
         Me.clen_spz_od_combo.TabIndex = 16
+        Me.clen_spz_od_combo.ValueMember = "rok"
         '
         'clenske_do_combo
         '
+        Me.clenske_do_combo.DataSource = Me.RokyBindingSource1
+        Me.clenske_do_combo.DisplayMember = "rok"
         Me.clenske_do_combo.Enabled = False
         Me.clenske_do_combo.FormattingEnabled = True
         Me.clenske_do_combo.Location = New System.Drawing.Point(142, 62)
         Me.clenske_do_combo.Name = "clenske_do_combo"
         Me.clenske_do_combo.Size = New System.Drawing.Size(70, 21)
         Me.clenske_do_combo.TabIndex = 17
+        Me.clenske_do_combo.ValueMember = "rok"
         '
-        'zoznam_clenov
+        'Vseobecne_udajeTableAdapter1
         '
-        Me.zoznam_clenov.DataSetName = "zoznam_clenov"
-        Me.zoznam_clenov.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Vseobecne_udajeTableAdapter1.ClearBeforeFill = True
         '
-        'all_clenoviaBindingSource
+        'Roky
         '
-        Me.all_clenoviaBindingSource.DataMember = "all_clenovia"
-        Me.all_clenoviaBindingSource.DataSource = Me.zoznam_clenov
+        Me.Roky.DataSetName = "roky"
+        Me.Roky.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'all_clenoviaTableAdapter
+        'RokyBindingSource
         '
-        Me.all_clenoviaTableAdapter.ClearBeforeFill = True
+        Me.RokyBindingSource.DataSource = Me.Roky
+        Me.RokyBindingSource.Position = 0
+        '
+        'RokyBindingSource1
+        '
+        Me.RokyBindingSource1.DataMember = "roky"
+        Me.RokyBindingSource1.DataSource = Me.RokyBindingSource
+        '
+        'RokyTableAdapter
+        '
+        Me.RokyTableAdapter.ClearBeforeFill = True
+        '
+        'RokyBindingSource2
+        '
+        Me.RokyBindingSource2.DataMember = "roky"
+        Me.RokyBindingSource2.DataSource = Me.RokyBindingSource
+        '
+        'Zoznam_zdruzeni_combo
+        '
+        Me.Zoznam_zdruzeni_combo.DataSetName = "zoznam_zdruzeni_combo"
+        Me.Zoznam_zdruzeni_combo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ZdruzeniaBindingSource
+        '
+        Me.ZdruzeniaBindingSource.DataMember = "zdruzenia"
+        Me.ZdruzeniaBindingSource.DataSource = Me.Zoznam_zdruzeni_combo
+        '
+        'ZdruzeniaTableAdapter
+        '
+        Me.ZdruzeniaTableAdapter.ClearBeforeFill = True
+        '
+        'Narodnost_combo1
+        '
+        Me.Narodnost_combo1.DataSetName = "narodnost_combo"
+        Me.Narodnost_combo1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'NarodnostBindingSource
+        '
+        Me.NarodnostBindingSource.DataMember = "narodnost"
+        Me.NarodnostBindingSource.DataSource = Me.Narodnost_combo1
+        '
+        'NarodnostTableAdapter
+        '
+        Me.NarodnostTableAdapter.ClearBeforeFill = True
+        '
+        'St_prislusnost_combo1
+        '
+        Me.St_prislusnost_combo1.DataSetName = "st_prislusnost_combo"
+        Me.St_prislusnost_combo1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'StatnaprislusnostBindingSource
+        '
+        Me.StatnaprislusnostBindingSource.DataMember = "statna_prislusnost"
+        Me.StatnaprislusnostBindingSource.DataSource = Me.St_prislusnost_combo1
+        '
+        'Statna_prislusnostTableAdapter
+        '
+        Me.Statna_prislusnostTableAdapter.ClearBeforeFill = True
         '
         'zoznam_clenov_full
         '
@@ -243,16 +321,22 @@ Partial Class zoznam_clenov_full
         Me.Controls.Add(Me.narodnost_checkbox)
         Me.Controls.Add(Me.zdruzenie_checkbox)
         Me.Controls.Add(Me.zdruzenia_combo)
-        Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "zoznam_clenov_full"
         Me.Text = "Zoznam členov"
-        CType(Me.zoznam_clenov, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.all_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Roky, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RokyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RokyBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RokyBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Zoznam_zdruzeni_combo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Narodnost_combo1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.St_prislusnost_combo1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents zdruzenia_combo As System.Windows.Forms.ComboBox
     Friend WithEvents zdruzenie_checkbox As System.Windows.Forms.CheckBox
     Friend WithEvents narodnost_checkbox As System.Windows.Forms.CheckBox
@@ -269,7 +353,19 @@ Partial Class zoznam_clenov_full
     Friend WithEvents clenske_do_checkbox As System.Windows.Forms.CheckBox
     Friend WithEvents clen_spz_od_combo As System.Windows.Forms.ComboBox
     Friend WithEvents clenske_do_combo As System.Windows.Forms.ComboBox
-    Friend WithEvents all_clenoviaBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents zoznam_clenov As evidencia_spz.zoznam_clenov
-    Friend WithEvents all_clenoviaTableAdapter As evidencia_spz.zoznam_clenovTableAdapters.all_clenoviaTableAdapter
+    Friend WithEvents Vseobecne_udajeTableAdapter1 As evidencia_spz.spzDataSetTableAdapters.vseobecne_udajeTableAdapter
+    Friend WithEvents RokyBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Roky As evidencia_spz.roky
+    Friend WithEvents RokyBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents RokyTableAdapter As evidencia_spz.rokyTableAdapters.rokyTableAdapter
+    Friend WithEvents RokyBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents Zoznam_zdruzeni_combo As evidencia_spz.zoznam_zdruzeni_combo
+    Friend WithEvents ZdruzeniaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ZdruzeniaTableAdapter As evidencia_spz.zoznam_zdruzeni_comboTableAdapters.zdruzeniaTableAdapter
+    Friend WithEvents Narodnost_combo1 As evidencia_spz.narodnost_combo
+    Friend WithEvents NarodnostBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents NarodnostTableAdapter As evidencia_spz.narodnost_comboTableAdapters.narodnostTableAdapter
+    Friend WithEvents St_prislusnost_combo1 As evidencia_spz.st_prislusnost_combo
+    Friend WithEvents StatnaprislusnostBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Statna_prislusnostTableAdapter As evidencia_spz.st_prislusnost_comboTableAdapters.statna_prislusnostTableAdapter
 End Class
