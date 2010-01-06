@@ -12,6 +12,8 @@
 
 
     Private Sub zoznam_clenov_full_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+
         'TODO: This line of code loads data into the 'St_prislusnost_combo1.statna_prislusnost' table. You can move, or remove it, as needed.
         Me.Statna_prislusnostTableAdapter.Fill(Me.St_prislusnost_combo1.statna_prislusnost)
         'TODO: This line of code loads data into the 'Narodnost_combo1.narodnost' table. You can move, or remove it, as needed.
@@ -31,7 +33,8 @@
         pl_vydany_po = CDate(datum_zaciatok)
         zp_vydany_po = CDate(datum_zaciatok)
 
-
+        Me.all_clenoviaTableAdapter.Fill(Me.zoznam_clenov.all_clenovia, d_narodenia, pl_vydany_po, zp_vydany_po, clen_od, clenske_do, zdruzenie, st_prislusnost, narodnost)
+        Me.ReportViewer1.RefreshReport()
     End Sub
 
     Private Sub zdruzenie_checkbox_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zdruzenie_checkbox.CheckedChanged
@@ -117,56 +120,77 @@
     Private Sub clen_spz_od_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles clen_spz_od_combo.SelectedIndexChanged
         If clen_spz_od_combo.SelectedIndex <> -1 Then
             clen_od = clen_spz_od_combo.SelectedValue.ToString
-            MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
+            Me.all_clenoviaTableAdapter.Fill(Me.zoznam_clenov.all_clenovia, d_narodenia, pl_vydany_po, zp_vydany_po, clen_od, clenske_do, zdruzenie, st_prislusnost, narodnost)
+            Me.ReportViewer1.RefreshReport()
+            'MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
         End If
     End Sub
 
     Private Sub zdruzenia_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zdruzenia_combo.SelectedIndexChanged
         If zdruzenia_combo.SelectedIndex <> -1 Then
             zdruzenie = zdruzenia_combo.SelectedValue.ToString
-            MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
+            Me.all_clenoviaTableAdapter.Fill(Me.zoznam_clenov.all_clenovia, d_narodenia, pl_vydany_po, zp_vydany_po, clen_od, clenske_do, zdruzenie, st_prislusnost, narodnost)
+            Me.ReportViewer1.RefreshReport()
+            'MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
         End If
     End Sub
 
     Private Sub narodnost_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles narodnost_combo.SelectedIndexChanged
         If narodnost_combo.SelectedIndex <> -1 Then
             narodnost = narodnost_combo.SelectedValue.ToString
-            MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
+            Me.all_clenoviaTableAdapter.Fill(Me.zoznam_clenov.all_clenovia, d_narodenia, pl_vydany_po, zp_vydany_po, clen_od, clenske_do, zdruzenie, st_prislusnost, narodnost)
+            Me.ReportViewer1.RefreshReport()
+            'MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
         End If
     End Sub
 
     Private Sub st_prislusnost_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles st_prislusnost_combo.SelectedIndexChanged
         If st_prislusnost_combo.SelectedIndex <> -1 Then
             st_prislusnost = st_prislusnost_combo.SelectedValue.ToString
-            MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
+            Me.all_clenoviaTableAdapter.Fill(Me.zoznam_clenov.all_clenovia, d_narodenia, pl_vydany_po, zp_vydany_po, clen_od, clenske_do, zdruzenie, st_prislusnost, narodnost)
+            Me.ReportViewer1.RefreshReport()
+            'MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
         End If
     End Sub
 
     Private Sub clenske_do_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles clenske_do_combo.SelectedIndexChanged
         If clenske_do_combo.SelectedIndex <> -1 Then
             clenske_do = clenske_do_combo.SelectedValue.ToString
-            MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
+            Me.all_clenoviaTableAdapter.Fill(Me.zoznam_clenov.all_clenovia, d_narodenia, pl_vydany_po, zp_vydany_po, clen_od, clenske_do, zdruzenie, st_prislusnost, narodnost)
+            Me.ReportViewer1.RefreshReport()
+            'MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
         End If
     End Sub
 
     Private Sub dat_narodenia_dt_picker_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dat_narodenia_dt_picker.ValueChanged
         If dat_narodenia_dt_picker.Value <> datum_zaciatok Then
             d_narodenia = dat_narodenia_dt_picker.Value
-            MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
+            Me.all_clenoviaTableAdapter.Fill(Me.zoznam_clenov.all_clenovia, d_narodenia, pl_vydany_po, zp_vydany_po, clen_od, clenske_do, zdruzenie, st_prislusnost, narodnost)
+            Me.ReportViewer1.RefreshReport()
+            'MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
         End If
     End Sub
 
     Private Sub pl_vydany_po_dt_picker_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pl_vydany_po_dt_picker.ValueChanged
         If pl_vydany_po_dt_picker.Value <> datum_zaciatok Then
             pl_vydany_po = pl_vydany_po_dt_picker.Value
-            MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
+            Me.all_clenoviaTableAdapter.Fill(Me.zoznam_clenov.all_clenovia, d_narodenia, pl_vydany_po, zp_vydany_po, clen_od, clenske_do, zdruzenie, st_prislusnost, narodnost)
+            Me.ReportViewer1.RefreshReport()
+            'MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
         End If
     End Sub
 
     Private Sub zp_vydany_po_dt_picker_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zp_vydany_po_dt_picker.ValueChanged
         If zp_vydany_po_dt_picker.Value <> datum_zaciatok Then
             zp_vydany_po = zp_vydany_po_dt_picker.Value
-            MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
+            Me.all_clenoviaTableAdapter.Fill(Me.zoznam_clenov.all_clenovia, d_narodenia, pl_vydany_po, zp_vydany_po, clen_od, clenske_do, zdruzenie, st_prislusnost, narodnost)
+            Me.ReportViewer1.RefreshReport()
+            'MsgBox("Selected values are " + vbNewLine + " zdruzenie = " + zdruzenie + vbNewLine + "Clen od = " + clen_od.ToString + vbNewLine + "Clenske do = " + clenske_do.ToString + vbNewLine + "narodnost = " + narodnost + vbNewLine + "St prisl = " + st_prislusnost + vbNewLine + "dat narodenia = " + d_narodenia + vbNewLine + "pl vydany = " + pl_vydany_po.ToString + vbNewLine + "zp vydany = " + zp_vydany_po.ToString)
         End If
+    End Sub
+
+    Private Sub generuj_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles generuj_button.Click
+        Me.all_clenoviaTableAdapter.Fill(Me.zoznam_clenov.all_clenovia, d_narodenia, pl_vydany_po, zp_vydany_po, clen_od, clenske_do, zdruzenie, st_prislusnost, narodnost)
+        Me.ReportViewer1.RefreshReport()
     End Sub
 End Class

@@ -23,6 +23,9 @@ Partial Class zoznam_clenov_full
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim ReportDataSource4 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Me.all_clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.zoznam_clenov = New evidencia_spz.zoznam_clenov
         Me.zdruzenia_combo = New System.Windows.Forms.ComboBox
         Me.ZdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Zoznam_zdruzeni_combo = New evidencia_spz.zoznam_zdruzeni_combo
@@ -54,6 +57,11 @@ Partial Class zoznam_clenov_full
         Me.ZdruzeniaTableAdapter = New evidencia_spz.zoznam_zdruzeni_comboTableAdapters.zdruzeniaTableAdapter
         Me.NarodnostTableAdapter = New evidencia_spz.narodnost_comboTableAdapters.narodnostTableAdapter
         Me.Statna_prislusnostTableAdapter = New evidencia_spz.st_prislusnost_comboTableAdapters.statna_prislusnostTableAdapter
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
+        Me.all_clenoviaTableAdapter = New evidencia_spz.zoznam_clenovTableAdapters.all_clenoviaTableAdapter
+        Me.generuj_button = New System.Windows.Forms.Button
+        CType(Me.all_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.zoznam_clenov, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Zoznam_zdruzeni_combo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +73,16 @@ Partial Class zoznam_clenov_full
         CType(Me.Roky, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RokyBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'all_clenoviaBindingSource
+        '
+        Me.all_clenoviaBindingSource.DataMember = "all_clenovia"
+        Me.all_clenoviaBindingSource.DataSource = Me.zoznam_clenov
+        '
+        'zoznam_clenov
+        '
+        Me.zoznam_clenov.DataSetName = "zoznam_clenov"
+        Me.zoznam_clenov.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'zdruzenia_combo
         '
@@ -300,11 +318,37 @@ Partial Class zoznam_clenov_full
         '
         Me.Statna_prislusnostTableAdapter.ClearBeforeFill = True
         '
+        'ReportViewer1
+        '
+        ReportDataSource4.Name = "zoznam_clenov_all_clenovia"
+        ReportDataSource4.Value = Me.all_clenoviaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource4)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.zoznam_clenov_full.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(4, 103)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.Size = New System.Drawing.Size(926, 409)
+        Me.ReportViewer1.TabIndex = 18
+        '
+        'all_clenoviaTableAdapter
+        '
+        Me.all_clenoviaTableAdapter.ClearBeforeFill = True
+        '
+        'generuj_button
+        '
+        Me.generuj_button.Location = New System.Drawing.Point(601, 60)
+        Me.generuj_button.Name = "generuj_button"
+        Me.generuj_button.Size = New System.Drawing.Size(226, 23)
+        Me.generuj_button.TabIndex = 19
+        Me.generuj_button.Text = "Načítať tl. zostavu"
+        Me.generuj_button.UseVisualStyleBackColor = True
+        '
         'zoznam_clenov_full
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(887, 413)
+        Me.ClientSize = New System.Drawing.Size(942, 524)
+        Me.Controls.Add(Me.generuj_button)
+        Me.Controls.Add(Me.ReportViewer1)
         Me.Controls.Add(Me.clenske_do_combo)
         Me.Controls.Add(Me.clen_spz_od_combo)
         Me.Controls.Add(Me.clenske_do_checkbox)
@@ -323,6 +367,8 @@ Partial Class zoznam_clenov_full
         Me.Controls.Add(Me.zdruzenia_combo)
         Me.Name = "zoznam_clenov_full"
         Me.Text = "Zoznam členov"
+        CType(Me.all_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.zoznam_clenov, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Zoznam_zdruzeni_combo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -368,4 +414,9 @@ Partial Class zoznam_clenov_full
     Friend WithEvents St_prislusnost_combo1 As evidencia_spz.st_prislusnost_combo
     Friend WithEvents StatnaprislusnostBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Statna_prislusnostTableAdapter As evidencia_spz.st_prislusnost_comboTableAdapters.statna_prislusnostTableAdapter
+    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents all_clenoviaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents zoznam_clenov As evidencia_spz.zoznam_clenov
+    Friend WithEvents all_clenoviaTableAdapter As evidencia_spz.zoznam_clenovTableAdapters.all_clenoviaTableAdapter
+    Friend WithEvents generuj_button As System.Windows.Forms.Button
 End Class

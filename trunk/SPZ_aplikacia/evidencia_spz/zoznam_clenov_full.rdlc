@@ -2,7 +2,7 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <DataSources>
     <DataSource Name="spzConnectionString">
-      <rd:DataSourceID>97db97ff-f128-4ba6-8619-4ab51bf88695</rd:DataSourceID>
+      <rd:DataSourceID>d7724893-d07f-4758-96b0-2decc1900403</rd:DataSourceID>
       <ConnectionProperties>
         <DataProvider>
         </DataProvider>
@@ -19,7 +19,7 @@
   <RightMargin>2.5cm</RightMargin>
   <LeftMargin>2.5cm</LeftMargin>
   <BottomMargin>2.5cm</BottomMargin>
-  <rd:ReportID>abe7267d-df11-4530-b563-c84203cf1685</rd:ReportID>
+  <rd:ReportID>c39c428f-8a47-44c0-891b-0385ffdf2316</rd:ReportID>
   <PageWidth>21cm</PageWidth>
   <DataSets>
     <DataSet Name="zoznam_clenov_all_clenovia">
@@ -88,27 +88,32 @@
           <DataField>cislo_dokladu_clenske</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="clen_pz">
-          <DataField>clen_pz</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="nazov">
+          <DataField>nazov</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="statna_prislusnost_id">
-          <DataField>statna_prislusnost_id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="Expr1">
+          <DataField>Expr1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="narodnost_id">
-          <DataField>narodnost_id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="skratka">
+          <DataField>skratka</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <Query>
         <DataSourceName>spzConnectionString</DataSourceName>
-        <CommandText>SELECT     cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, bydlisko, okres_bydliska, cislo_op, datum_vydania_op, datum_vydania_pl, cislo_zp, 
-                      datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, statna_prislusnost_id, 
-                      narodnost_id
-FROM         all_clenovia
-WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodnost_id = @Param3) AND (datum_narodenia &gt;= @Param4) AND 
-                      (datum_vydania_pl &gt; @Param5) AND (datum_vydania_zp &gt; @Param6) AND (clen_spz_od &gt;= @Param7) AND (clenske_do &lt;= @Param8)</CommandText>
+        <CommandText>SELECT     all_clenovia.cislo_pl, all_clenovia.meno, all_clenovia.priezvisko, all_clenovia.datum_narodenia, all_clenovia.rodne_cislo, all_clenovia.bydlisko, 
+                      all_clenovia.okres_bydliska, all_clenovia.cislo_op, all_clenovia.datum_vydania_op, all_clenovia.datum_vydania_pl, all_clenovia.cislo_zp, 
+                      all_clenovia.datum_vydania_zp, all_clenovia.cislo_clenskeho_preukazu_spz, all_clenovia.clen_spz_od, all_clenovia.clenske_do, 
+                      all_clenovia.cislo_dokladu_clenske, zdruzenia.nazov, narodnost.nazov AS Expr1, statna_prislusnost.skratka
+FROM         all_clenovia LEFT OUTER JOIN
+                      zdruzenia ON all_clenovia.clen_pz = zdruzenia.ico LEFT OUTER JOIN
+                      narodnost ON narodnost.id = all_clenovia.narodnost_id LEFT OUTER JOIN
+                      statna_prislusnost ON statna_prislusnost.id = all_clenovia.statna_prislusnost_id
+WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_vydania_pl &gt; @Param2) AND (all_clenovia.datum_vydania_zp &gt; @Param3) AND
+                       (all_clenovia.clen_spz_od &gt;= @Param4) AND (all_clenovia.clenske_do &lt;= @Param5) AND (zdruzenia.nazov LIKE @Param9) AND 
+                      (statna_prislusnost.skratka LIKE @Param10) AND (narodnost.nazov LIKE @Param11)</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <rd:DataSetInfo>
@@ -221,30 +226,6 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="rodne_cislo">
-                      <rd:DefaultName>rodne_cislo</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>11</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!rodne_cislo.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
                     <Textbox Name="bydlisko">
                       <rd:DefaultName>bydlisko</rd:DefaultName>
                       <Style>
@@ -261,7 +242,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>10</ZIndex>
+                      <ZIndex>11</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!bydlisko.Value</Value>
                     </Textbox>
@@ -285,7 +266,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>9</ZIndex>
+                      <ZIndex>10</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!okres_bydliska.Value</Value>
                     </Textbox>
@@ -293,8 +274,32 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="clen_pz">
-                      <rd:DefaultName>clen_pz</rd:DefaultName>
+                    <Textbox Name="nazov">
+                      <rd:DefaultName>nazov</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>9</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!nazov.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Expr1">
+                      <rd:DefaultName>Expr1</rd:DefaultName>
                       <Style>
                         <BorderColor>
                           <Default>DarkGray</Default>
@@ -311,7 +316,55 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                       </Style>
                       <ZIndex>8</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!clen_pz.Value</Value>
+                      <Value>=Fields!Expr1.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="skratka">
+                      <rd:DefaultName>skratka</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!skratka.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="cislo_clenskeho_preukazu_spz">
+                      <rd:DefaultName>cislo_clenskeho_preukazu_spz</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!cislo_clenskeho_preukazu_spz.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -333,7 +386,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>7</ZIndex>
+                      <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!cislo_pl.Value</Value>
                     </Textbox>
@@ -357,7 +410,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>6</ZIndex>
+                      <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!datum_vydania_pl.Value</Value>
                     </Textbox>
@@ -381,7 +434,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>5</ZIndex>
+                      <ZIndex>3</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!cislo_zp.Value</Value>
                     </Textbox>
@@ -405,33 +458,9 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>4</ZIndex>
+                      <ZIndex>2</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!datum_vydania_zp.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="cislo_clenskeho_preukazu_spz">
-                      <rd:DefaultName>cislo_clenskeho_preukazu_spz</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>3</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!cislo_clenskeho_preukazu_spz.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -453,7 +482,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>2</ZIndex>
+                      <ZIndex>1</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!clen_spz_od.Value</Value>
                     </Textbox>
@@ -477,32 +506,8 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>1</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!clenske_do.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="cislo_dokladu_clenske">
-                      <rd:DefaultName>cislo_dokladu_clenske</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!cislo_dokladu_clenske.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -619,7 +624,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                       </Style>
                       <ZIndex>26</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>rodne cislo</Value>
+                      <Value>bydlisko</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -646,7 +651,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                       </Style>
                       <ZIndex>25</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>bydlisko</Value>
+                      <Value>okres bydliska</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -673,7 +678,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                       </Style>
                       <ZIndex>24</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>okres bydliska</Value>
+                      <Value>nazov</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -693,7 +698,6 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -701,7 +705,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                       </Style>
                       <ZIndex>23</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>clen pz</Value>
+                      <Value>Expr1</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -728,7 +732,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                       </Style>
                       <ZIndex>22</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>cislo pl</Value>
+                      <Value>skratka</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -755,7 +759,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                       </Style>
                       <ZIndex>21</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>datum vydania pl</Value>
+                      <Value>cislo clenskeho preukazu spz</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -782,7 +786,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                       </Style>
                       <ZIndex>20</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>cislo zp</Value>
+                      <Value>cislo pl</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -809,7 +813,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                       </Style>
                       <ZIndex>19</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>datum vydania zp</Value>
+                      <Value>datum vydania pl</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -836,7 +840,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                       </Style>
                       <ZIndex>18</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>cislo clenskeho preukazu spz</Value>
+                      <Value>cislo zp</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -856,7 +860,6 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -864,7 +867,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                       </Style>
                       <ZIndex>17</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>clen spz od</Value>
+                      <Value>datum vydania zp</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -892,7 +895,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                       </Style>
                       <ZIndex>16</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>clenske do</Value>
+                      <Value>clen spz od</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -912,6 +915,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -919,7 +923,7 @@ WHERE     (clen_pz = @Param1) AND (statna_prislusnost_id = @Param2) AND (narodno
                       </Style>
                       <ZIndex>15</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>cislo dokladu clenske</Value>
+                      <Value>clenske do</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
