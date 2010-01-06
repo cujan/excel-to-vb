@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{FB9D0E11-2A5C-41C6-BC6C-6E4536AD7457}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -431,6 +431,7 @@
       <DependentUpon>zdruzenie_nove.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="zoznam_clenov_full.rdlc" />
     <EmbeddedResource Include="zoznam_clenov_full.resx">
       <DependentUpon>zoznam_clenov_full.vb</DependentUpon>
       <SubType>Designer</SubType>
