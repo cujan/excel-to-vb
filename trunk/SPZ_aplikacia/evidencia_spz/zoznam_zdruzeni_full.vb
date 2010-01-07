@@ -24,6 +24,7 @@
         ina = 0
 
 
+        Me.ReportViewer1.RefreshReport()
     End Sub
 
     Private Sub vymera_check_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles vymera_check.CheckedChanged

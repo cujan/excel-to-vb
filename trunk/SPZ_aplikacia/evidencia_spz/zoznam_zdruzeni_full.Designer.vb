@@ -43,6 +43,7 @@ Partial Class zoznam_zdruzeni_full
         Me.ina_combo = New System.Windows.Forms.ComboBox
         Me.naj_zmluva_dt_picker = New System.Windows.Forms.DateTimePicker
         Me.refresh_button = New System.Windows.Forms.Button
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
         Me.SuspendLayout()
         '
         'vymera_check
@@ -244,11 +245,19 @@ Partial Class zoznam_zdruzeni_full
         Me.refresh_button.Text = "Načítať tl. zostavu"
         Me.refresh_button.UseVisualStyleBackColor = True
         '
+        'ReportViewer1
+        '
+        Me.ReportViewer1.Location = New System.Drawing.Point(5, 134)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.Size = New System.Drawing.Size(986, 336)
+        Me.ReportViewer1.TabIndex = 21
+        '
         'zoznam_zdruzeni_full
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1003, 385)
+        Me.ClientSize = New System.Drawing.Size(1003, 474)
+        Me.Controls.Add(Me.ReportViewer1)
         Me.Controls.Add(Me.refresh_button)
         Me.Controls.Add(Me.naj_zmluva_dt_picker)
         Me.Controls.Add(Me.ina_combo)
@@ -298,4 +307,5 @@ Partial Class zoznam_zdruzeni_full
     Friend WithEvents ina_combo As System.Windows.Forms.ComboBox
     Friend WithEvents naj_zmluva_dt_picker As System.Windows.Forms.DateTimePicker
     Friend WithEvents refresh_button As System.Windows.Forms.Button
+    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
 End Class
