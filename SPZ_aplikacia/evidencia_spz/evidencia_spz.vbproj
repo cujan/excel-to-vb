@@ -330,6 +330,11 @@
     <Compile Include="zoznam_zdruzeni_full.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="zoznam_zdruzeni_report_full.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zoznam_zdruzeni_report_full.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="a4_report_2.rdlc" />
@@ -609,6 +614,17 @@
     </None>
     <None Include="zoznam_zdruzeni_combo.xss">
       <DependentUpon>zoznam_zdruzeni_combo.xsd</DependentUpon>
+    </None>
+    <None Include="zoznam_zdruzeni_report_full.xsc">
+      <DependentUpon>zoznam_zdruzeni_report_full.xsd</DependentUpon>
+    </None>
+    <None Include="zoznam_zdruzeni_report_full.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zoznam_zdruzeni_report_full.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zoznam_zdruzeni_report_full.xss">
+      <DependentUpon>zoznam_zdruzeni_report_full.xsd</DependentUpon>
     </None>
     <Content Include="spz.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
