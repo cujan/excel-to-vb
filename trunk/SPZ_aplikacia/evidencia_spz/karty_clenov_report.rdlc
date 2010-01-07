@@ -47,10 +47,6 @@
           <DataField>okres_narodenia</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="bydlisko">
-          <DataField>bydlisko</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="psc">
           <DataField>psc</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -231,20 +227,32 @@
           <DataField>Expr1</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="mesto">
+          <DataField>mesto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ulica">
+          <DataField>ulica</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ulica_cislo">
+          <DataField>ulica_cislo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>spzConnectionString</DataSourceName>
-        <CommandText>SELECT     all_clenovia.meno, all_clenovia.priezvisko, all_clenovia.rodne_cislo, all_clenovia.miesto_narodenia, all_clenovia.okres_narodenia, 
-                      all_clenovia.bydlisko, all_clenovia.psc, all_clenovia.cislo_op, all_clenovia.datum_vydania_op, all_clenovia.cislo_pl, all_clenovia.datum_vydania_pl, 
-                      all_clenovia.cislo_zp, all_clenovia.datum_vydania_zp, all_clenovia.cislo_clenskeho_preukazu_spz, all_clenovia.clen_spz_od, 
-                      all_clenovia.clenske_do, all_clenovia.cislo_dokladu_clenske, all_clenovia.clen_pz, all_clenovia.skuska_z_polovnictva, 
-                      all_clenovia.skuska_pre_polovnych_hospodarov, all_clenovia.miesto_skusky_pre_polovnych_hospodarov, 
-                      all_clenovia.vyzsia_skuska_z_polovnictva, all_clenovia.miesto_vyzsej_skusky_z_polovnictva, all_clenovia.brokova_zbran, 
-                      all_clenovia.kontrolne_strelby_brok, all_clenovia.gulova_zbran, all_clenovia.kontrolne_strelby_gula, all_clenovia.udelene_tresty, 
-                      all_clenovia.poznamky, all_clenovia.datum_narodenia, all_clenovia.okres_bydliska, all_clenovia.najvyzsie_vyznamenanie, 
-                      all_clenovia.vyznamenanie_kedy, all_clenovia.telefon, all_clenovia.clen_pz AS Expr1, all_clenovia.miesto_skusky_z_polovnictva, 
-                      narodnost.skratka AS Narodnost, zdruzenia.nazov AS Zdruzenie, statna_prislusnost.skratka AS [Statna prislusnot], titul_pred.skratka AS [Titul pred], 
-                      titul_za.skratka AS [Titul za]
+        <CommandText>SELECT     all_clenovia.meno, all_clenovia.priezvisko, all_clenovia.rodne_cislo, all_clenovia.miesto_narodenia, all_clenovia.okres_narodenia, all_clenovia.psc, 
+                      all_clenovia.cislo_op, all_clenovia.datum_vydania_op, all_clenovia.cislo_pl, all_clenovia.datum_vydania_pl, all_clenovia.cislo_zp, 
+                      all_clenovia.datum_vydania_zp, all_clenovia.cislo_clenskeho_preukazu_spz, all_clenovia.clen_spz_od, all_clenovia.clenske_do, 
+                      all_clenovia.cislo_dokladu_clenske, all_clenovia.clen_pz, all_clenovia.skuska_z_polovnictva, all_clenovia.skuska_pre_polovnych_hospodarov, 
+                      all_clenovia.miesto_skusky_pre_polovnych_hospodarov, all_clenovia.vyzsia_skuska_z_polovnictva, 
+                      all_clenovia.miesto_vyzsej_skusky_z_polovnictva, all_clenovia.brokova_zbran, all_clenovia.kontrolne_strelby_brok, all_clenovia.gulova_zbran, 
+                      all_clenovia.kontrolne_strelby_gula, all_clenovia.udelene_tresty, all_clenovia.poznamky, all_clenovia.datum_narodenia, all_clenovia.okres_bydliska, 
+                      all_clenovia.najvyzsie_vyznamenanie, all_clenovia.vyznamenanie_kedy, all_clenovia.telefon, all_clenovia.clen_pz AS Expr1, 
+                      all_clenovia.miesto_skusky_z_polovnictva, narodnost.skratka AS Narodnost, zdruzenia.nazov AS Zdruzenie, 
+                      statna_prislusnost.skratka AS [Statna prislusnot], titul_pred.skratka AS [Titul pred], titul_za.skratka AS [Titul za], all_clenovia.mesto, all_clenovia.ulica, 
+                      all_clenovia.ulica_cislo
 FROM         all_clenovia LEFT OUTER JOIN
                       statna_prislusnost ON all_clenovia.statna_prislusnost_id = statna_prislusnost.id LEFT OUTER JOIN
                       narodnost ON all_clenovia.narodnost_id = narodnost.id LEFT OUTER JOIN
@@ -277,6 +285,121 @@ FROM         all_clenovia LEFT OUTER JOIN
         <Left>0.25cm</Left>
         <DataSetName>kartyClenov_karty_clenov</DataSetName>
         <ReportItems>
+          <Textbox Name="textbox37">
+            <Top>5.25cm</Top>
+            <Width>0.75cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>94</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.5cm</Left>
+            <Height>0.38492cm</Height>
+            <Value>okr.</Value>
+          </Textbox>
+          <Textbox Name="textbox36">
+            <Top>4.25cm</Top>
+            <Width>0.5cm</Width>
+            <Style>
+              <FontFamily>Times New Roman</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>93</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>7cm</Left>
+            <Height>0.38492cm</Height>
+            <Value>č.</Value>
+          </Textbox>
+          <Textbox Name="mesto">
+            <rd:DefaultName>mesto</rd:DefaultName>
+            <Top>4.75cm</Top>
+            <Width>3.28968cm</Width>
+            <Style>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Right</TextAlign>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>92</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4cm</Left>
+            <Height>0.38492cm</Height>
+            <Value>=First(Fields!mesto.Value)</Value>
+          </Textbox>
+          <Textbox Name="ulica_cislo">
+            <rd:DefaultName>ulica_cislo</rd:DefaultName>
+            <Top>4.25cm</Top>
+            <Width>1.5cm</Width>
+            <Style>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>91</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>7.5cm</Left>
+            <Height>0.38492cm</Height>
+            <Value>=First(Fields!ulica_cislo.Value)</Value>
+          </Textbox>
+          <Textbox Name="ulica">
+            <rd:DefaultName>ulica</rd:DefaultName>
+            <Top>4.25cm</Top>
+            <Width>3.03968cm</Width>
+            <Style>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Right</TextAlign>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>90</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.75cm</Left>
+            <Height>0.38492cm</Height>
+            <Value>=First(Fields!ulica.Value)</Value>
+          </Textbox>
+          <Textbox Name="okres_bydliska">
+            <rd:DefaultName>okres_bydliska</rd:DefaultName>
+            <Top>5.25cm</Top>
+            <Width>2.03968cm</Width>
+            <Style>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>89</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>7.25cm</Left>
+            <Height>0.38492cm</Height>
+            <Value>=First(Fields!okres_bydliska.Value)</Value>
+          </Textbox>
           <Textbox Name="textbox25">
             <Top>5.5cm</Top>
             <Width>1.25cm</Width>
@@ -289,7 +412,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>89</ZIndex>
+            <ZIndex>88</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>15.5cm</Left>
             <Height>0.63492cm</Height>
@@ -305,7 +428,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>88</ZIndex>
+            <ZIndex>87</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>16.75cm</Left>
             <Height>0.63492cm</Height>
@@ -321,7 +444,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>87</ZIndex>
+            <ZIndex>86</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>16.75cm</Left>
             <Height>0.63492cm</Height>
@@ -337,7 +460,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>86</ZIndex>
+            <ZIndex>85</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>16.75cm</Left>
             <Height>0.63492cm</Height>
@@ -353,7 +476,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>85</ZIndex>
+            <ZIndex>84</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>2.75cm</Left>
             <Height>2.5cm</Height>
@@ -369,7 +492,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>84</ZIndex>
+            <ZIndex>83</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9cm</Left>
             <Height>0.63492cm</Height>
@@ -385,7 +508,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>83</ZIndex>
+            <ZIndex>82</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>5cm</Left>
             <Height>0.63492cm</Height>
@@ -402,7 +525,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>82</ZIndex>
+            <ZIndex>81</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>11.5cm</Left>
             <Height>0.63492cm</Height>
@@ -419,7 +542,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>81</ZIndex>
+            <ZIndex>80</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>6.5cm</Left>
             <Height>0.63492cm</Height>
@@ -436,7 +559,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>80</ZIndex>
+            <ZIndex>79</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>2.25cm</Left>
             <Height>0.63492cm</Height>
@@ -453,7 +576,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>79</ZIndex>
+            <ZIndex>78</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -470,7 +593,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>78</ZIndex>
+            <ZIndex>77</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -487,7 +610,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>77</ZIndex>
+            <ZIndex>76</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -502,7 +625,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>76</ZIndex>
+            <ZIndex>75</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>4.5cm</Left>
             <Height>0.63492cm</Height>
@@ -521,7 +644,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>75</ZIndex>
+            <ZIndex>74</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -535,7 +658,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>74</ZIndex>
+            <ZIndex>73</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -552,7 +675,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>73</ZIndex>
+            <ZIndex>72</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -566,7 +689,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>72</ZIndex>
+            <ZIndex>71</ZIndex>
             <Left>18cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -578,7 +701,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>71</ZIndex>
+            <ZIndex>70</ZIndex>
             <Left>15.75cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -590,7 +713,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>70</ZIndex>
+            <ZIndex>69</ZIndex>
             <Left>13.5cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -605,7 +728,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>69</ZIndex>
+            <ZIndex>68</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>11.5cm</Left>
             <Height>0.63492cm</Height>
@@ -619,7 +742,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>68</ZIndex>
+            <ZIndex>67</ZIndex>
             <Left>11.25cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -631,7 +754,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>67</ZIndex>
+            <ZIndex>66</ZIndex>
             <Left>9.5cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -643,7 +766,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>66</ZIndex>
+            <ZIndex>65</ZIndex>
             <Left>9.5cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -658,7 +781,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>65</ZIndex>
+            <ZIndex>64</ZIndex>
             <Left>6cm</Left>
             <Height>1.5cm</Height>
           </Line>
@@ -673,7 +796,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>64</ZIndex>
+            <ZIndex>63</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -688,7 +811,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>63</ZIndex>
+            <ZIndex>62</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>3cm</Left>
             <Height>0.63492cm</Height>
@@ -705,7 +828,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>62</ZIndex>
+            <ZIndex>61</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>3cm</Left>
             <Height>0.63492cm</Height>
@@ -724,7 +847,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>61</ZIndex>
+            <ZIndex>60</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -743,7 +866,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>60</ZIndex>
+            <ZIndex>59</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -762,7 +885,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>59</ZIndex>
+            <ZIndex>58</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>6.25cm</Left>
             <Height>1cm</Height>
@@ -781,7 +904,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>58</ZIndex>
+            <ZIndex>57</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -800,7 +923,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>57</ZIndex>
+            <ZIndex>56</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -819,7 +942,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>56</ZIndex>
+            <ZIndex>55</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>13.5cm</Left>
             <Height>0.63492cm</Height>
@@ -838,7 +961,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>55</ZIndex>
+            <ZIndex>54</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>13.5cm</Left>
             <Height>0.63492cm</Height>
@@ -857,7 +980,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>54</ZIndex>
+            <ZIndex>53</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>12.75cm</Left>
             <Height>0.63492cm</Height>
@@ -875,7 +998,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>53</ZIndex>
+            <ZIndex>52</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>11.5cm</Left>
             <Height>0.63492cm</Height>
@@ -893,7 +1016,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>52</ZIndex>
+            <ZIndex>51</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>15.5cm</Left>
             <Height>0.63492cm</Height>
@@ -911,7 +1034,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>51</ZIndex>
+            <ZIndex>50</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>15.5cm</Left>
             <Height>0.63492cm</Height>
@@ -930,7 +1053,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>50</ZIndex>
+            <ZIndex>49</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -949,7 +1072,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>49</ZIndex>
+            <ZIndex>48</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -968,7 +1091,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>48</ZIndex>
+            <ZIndex>47</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -987,7 +1110,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>47</ZIndex>
+            <ZIndex>46</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1004,14 +1127,14 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>46</ZIndex>
+            <ZIndex>45</ZIndex>
             <Left>9.5cm</Left>
             <Height>6.75cm</Height>
           </Line>
           <Textbox Name="telefon">
             <rd:DefaultName>telefon</rd:DefaultName>
             <Top>5.5cm</Top>
-            <Width>4.5cm</Width>
+            <Width>2.75cm</Width>
             <Style>
               <FontSize>9pt</FontSize>
               <TextAlign>Left</TextAlign>
@@ -1020,7 +1143,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>45</ZIndex>
+            <ZIndex>44</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>2cm</Left>
             <Height>0.63492cm</Height>
@@ -1039,7 +1162,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>44</ZIndex>
+            <ZIndex>43</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -1053,7 +1176,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>43</ZIndex>
+            <ZIndex>42</ZIndex>
             <Left>9.5cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -1069,7 +1192,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>42</ZIndex>
+            <ZIndex>41</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>12cm</Left>
             <Height>0.63492cm</Height>
@@ -1086,7 +1209,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>41</ZIndex>
+            <ZIndex>40</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>13.50001cm</Left>
             <Height>0.63492cm</Height>
@@ -1104,7 +1227,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>40</ZIndex>
+            <ZIndex>39</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>17cm</Left>
             <Height>0.63492cm</Height>
@@ -1121,7 +1244,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>39</ZIndex>
+            <ZIndex>38</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>11.25cm</Left>
             <Height>0.63492cm</Height>
@@ -1140,7 +1263,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>38</ZIndex>
+            <ZIndex>37</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>16.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1157,7 +1280,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>37</ZIndex>
+            <ZIndex>36</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>11.25cm</Left>
             <Height>0.63492cm</Height>
@@ -1176,7 +1299,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>36</ZIndex>
+            <ZIndex>35</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>16.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1193,7 +1316,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>35</ZIndex>
+            <ZIndex>34</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>11.25cm</Left>
             <Height>0.63492cm</Height>
@@ -1212,7 +1335,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>34</ZIndex>
+            <ZIndex>33</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>14.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1231,7 +1354,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>33</ZIndex>
+            <ZIndex>32</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1250,7 +1373,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>32</ZIndex>
+            <ZIndex>31</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1269,7 +1392,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>31</ZIndex>
+            <ZIndex>30</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>15cm</Left>
             <Height>0.63492cm</Height>
@@ -1288,7 +1411,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>30</ZIndex>
+            <ZIndex>29</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1307,7 +1430,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>29</ZIndex>
+            <ZIndex>28</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1326,7 +1449,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>28</ZIndex>
+            <ZIndex>27</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>15cm</Left>
             <Height>0.63492cm</Height>
@@ -1345,7 +1468,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>27</ZIndex>
+            <ZIndex>26</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>9.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1362,7 +1485,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>2pt</Default>
               </BorderWidth>
             </Style>
-            <ZIndex>26</ZIndex>
+            <ZIndex>25</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
@@ -1379,7 +1502,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>25</ZIndex>
+            <ZIndex>24</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>6.75cm</Left>
             <Height>0.63492cm</Height>
@@ -1397,7 +1520,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>24</ZIndex>
+            <ZIndex>23</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>2.25cm</Left>
             <Height>0.63492cm</Height>
@@ -1416,7 +1539,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>23</ZIndex>
+            <ZIndex>22</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>5.25cm</Left>
             <Height>0.63492cm</Height>
@@ -1435,7 +1558,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>22</ZIndex>
+            <ZIndex>21</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -1455,7 +1578,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>21</ZIndex>
+            <ZIndex>20</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>5cm</Left>
             <Height>0.63492cm</Height>
@@ -1474,7 +1597,7 @@ FROM         all_clenovia LEFT OUTER JOIN
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
-            <ZIndex>20</ZIndex>
+            <ZIndex>19</ZIndex>
             <CanGrow>true</CanGrow>
             <Left>0.5cm</Left>
             <Height>0.63492cm</Height>
@@ -1488,33 +1611,18 @@ FROM         all_clenovia LEFT OUTER JOIN
                 <Default>Solid</Default>
               </BorderStyle>
             </Style>
-            <ZIndex>19</ZIndex>
+            <ZIndex>18</ZIndex>
             <Left>0.25cm</Left>
             <Height>0cm</Height>
           </Line>
           <Textbox Name="psc">
             <rd:DefaultName>psc</rd:DefaultName>
-            <Top>4.75cm</Top>
-            <Width>2.53968cm</Width>
+            <Top>5.25cm</Top>
+            <Width>1.25cm</Width>
             <Style>
-              <FontSize>9pt</FontSize>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-            <ZIndex>18</ZIndex>
-            <CanGrow>true</CanGrow>
-            <Left>3cm</Left>
-            <Height>0.63492cm</Height>
-            <Value>=First(Fields!psc.Value)</Value>
-          </Textbox>
-          <Textbox Name="bydlisko">
-            <rd:DefaultName>bydlisko</rd:DefaultName>
-            <Top>4.25cm</Top>
-            <Width>5.75cm</Width>
-            <Style>
-              <FontSize>9pt</FontSize>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Right</TextAlign>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1522,9 +1630,9 @@ FROM         all_clenovia LEFT OUTER JOIN
             </Style>
             <ZIndex>17</ZIndex>
             <CanGrow>true</CanGrow>
-            <Left>3cm</Left>
-            <Height>1cm</Height>
-            <Value>=First(Fields!bydlisko.Value)</Value>
+            <Left>5cm</Left>
+            <Height>0.38492cm</Height>
+            <Value>=First(Fields!psc.Value)</Value>
           </Textbox>
           <Textbox Name="textbox7">
             <rd:DefaultName>textbox7</rd:DefaultName>
