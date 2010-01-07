@@ -49,7 +49,6 @@ Partial Class clenovia_all
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -85,6 +84,9 @@ Partial Class clenovia_all
         Me.zavriet_kartu_button = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
+        Me.mesto = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ulica = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ulica_cislo = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.All_clenoviaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.All_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.All_clenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -227,7 +229,7 @@ Partial Class clenovia_all
         '
         Me.All_clenoviaDataGridView.AutoGenerateColumns = False
         Me.All_clenoviaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.All_clenoviaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn36, Me.DataGridViewTextBoxColumn37, Me.DataGridViewTextBoxColumn38, Me.DataGridViewTextBoxColumn39, Me.DataGridViewTextBoxColumn40})
+        Me.All_clenoviaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn36, Me.DataGridViewTextBoxColumn37, Me.DataGridViewTextBoxColumn38, Me.DataGridViewTextBoxColumn39, Me.DataGridViewTextBoxColumn40, Me.mesto, Me.ulica, Me.ulica_cislo})
         Me.All_clenoviaDataGridView.DataSource = Me.All_clenoviaBindingSource
         Me.All_clenoviaDataGridView.Location = New System.Drawing.Point(52, 68)
         Me.All_clenoviaDataGridView.Name = "All_clenoviaDataGridView"
@@ -275,12 +277,6 @@ Partial Class clenovia_all
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "okres_narodenia"
         Me.DataGridViewTextBoxColumn7.HeaderText = "okres_narodenia"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "bydlisko"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "bydlisko"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         '
         'DataGridViewTextBoxColumn9
         '
@@ -503,6 +499,24 @@ Partial Class clenovia_all
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Label2"
         '
+        'mesto
+        '
+        Me.mesto.DataPropertyName = "mesto"
+        Me.mesto.HeaderText = "mesto"
+        Me.mesto.Name = "mesto"
+        '
+        'ulica
+        '
+        Me.ulica.DataPropertyName = "ulica"
+        Me.ulica.HeaderText = "ulica"
+        Me.ulica.Name = "ulica"
+        '
+        'ulica_cislo
+        '
+        Me.ulica_cislo.DataPropertyName = "ulica_cislo"
+        Me.ulica_cislo.HeaderText = "ulica_cislo"
+        Me.ulica_cislo.Name = "ulica_cislo"
+        '
         'clenovia_all
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -588,4 +602,7 @@ Partial Class clenovia_all
     Friend WithEvents zavriet_kartu_button As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents mesto As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ulica As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ulica_cislo As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
