@@ -5,6 +5,12 @@
     End Sub
 
     Private Sub clen_novy_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'ObceDataSet.ciselnik_obce' table. You can move, or remove it, as needed.
+        Me.Ciselnik_obceTableAdapter.Fill(Me.ObceDataSet.ciselnik_obce)
+        'TODO: This line of code loads data into the 'All_clenoviaDataSet.all_clenovia' table. You can move, or remove it, as needed.
+        Me.All_clenoviaTableAdapter.Fill(Me.All_clenoviaDataSet.all_clenovia)
+        'TODO: This line of code loads data into the 'All_clenoviaDataSet.all_clenovia' table. You can move, or remove it, as needed.
+        Me.All_clenoviaTableAdapter.Fill(Me.All_clenoviaDataSet.all_clenovia)
         'TODO: This line of code loads data into the 'SpzDataSet.statna_prislusnost' table. You can move, or remove it, as needed.
         Me.Statna_prislusnostTableAdapter.Fill(Me.SpzDataSet.statna_prislusnost)
         'TODO: This line of code loads data into the 'SpzDataSet.narodnost' table. You can move, or remove it, as needed.
@@ -89,7 +95,7 @@
         Dim con As New SqlCeConnection(pripojovaci_retazec)
         con.Open()
 
-        Dim com As New SqlCeCommand("INSERT INTO """ & ico_zdruzenia & "_clenovia"" (cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, okres_bydliska, psc, telefon, cislo_op, datum_vydania_op, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, miesto_skusky_z_polovnictva, skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsej_skusky_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gula, najvyzsie_vyznamenanie, vyznamenanie_kedy, udelene_tresty, poznamky, titul_pred_id, titul_za_id, narodnost_id, statna_prislusnost_id, ico_clenovia) VALUES (@cislo_pl,@meno,@priezvisko,@datum_narodenia,@rodne_cislo,@miesto_narodenia,@okres_narodenia,@bydlisko,@okres_bydliska,@psc,@telefon,@cislo_op,@datum_vydania_op,@datum_vydania_pl,@cislo_zp,@datum_vydania_zp,@cislo_clenskeho_preukazu_spz,@clen_spz_od,@clenske_do,@cislo_dokladu_clenske,@clen_pz,@skuska_z_polovnictva,@miesto_skusky_z_polovnictva,@skuska_pre_polovnych_hospodarov,@miesto_skusky_pre_polovnych_hospodarov,@vyzsia_skuska_z_polovnictva,@miesto_vyzsej_skusky_z_polovnictva,@brokova_zbran,@kontrolne_strelby_brok,@gulova_zbran,@kontrolne_strelby_gula,@najvyzsie_vyznamenanie,@vyznamenanie_kedy,@udelene_tresty,@poznamky,@titul_pred_id,@titul_za_id,@narodnost_id,@statna_prislusnost_id,@ico_clenovia)", con)
+        Dim com As New SqlCeCommand("INSERT INTO """ & ico_zdruzenia & "_clenovia"" (cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, miesto_narodenia, okres_narodenia, okres_bydliska, psc, telefon, cislo_op, datum_vydania_op, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, miesto_skusky_z_polovnictva, skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsej_skusky_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gula, najvyzsie_vyznamenanie, vyznamenanie_kedy, udelene_tresty, poznamky, titul_pred_id, titul_za_id, narodnost_id, statna_prislusnost_id, ico_clenovia, mesto, ulica, ulica_cislo) VALUES (@cislo_pl,@meno,@priezvisko,@datum_narodenia,@rodne_cislo,@miesto_narodenia,@okres_narodenia,@okres_bydliska,@psc,@telefon,@cislo_op,@datum_vydania_op,@datum_vydania_pl,@cislo_zp,@datum_vydania_zp,@cislo_clenskeho_preukazu_spz,@clen_spz_od,@clenske_do,@cislo_dokladu_clenske,@clen_pz,@skuska_z_polovnictva,@miesto_skusky_z_polovnictva,@skuska_pre_polovnych_hospodarov,@miesto_skusky_pre_polovnych_hospodarov,@vyzsia_skuska_z_polovnictva,@miesto_vyzsej_skusky_z_polovnictva,@brokova_zbran,@kontrolne_strelby_brok,@gulova_zbran,@kontrolne_strelby_gula,@najvyzsie_vyznamenanie,@vyznamenanie_kedy,@udelene_tresty,@poznamky,@titul_pred_id,@titul_za_id,@narodnost_id,@statna_prislusnost_id,@ico_clenovia, @mesto, @ulica, @ulica_cislo)", con)
 
         With com.Parameters
             .AddWithValue("cislo_pl", Cislo_plTextBox.Text)
@@ -105,7 +111,6 @@
             .AddWithValue("rodne_cislo", Rodne_cisloTextBox.Text)
             .AddWithValue("miesto_narodenia", Miesto_narodeniaTextBox.Text)
             .AddWithValue("okres_narodenia", Okres_narodeniaTextBox.Text)
-            .AddWithValue("bydlisko", BydliskoTextBox.Text)
             .AddWithValue("okres_bydliska", Okres_bydliskaTextBox.Text)
             .AddWithValue("psc", PscTextBox.Text)
             .AddWithValue("telefon", TelefonTextBox.Text)
@@ -128,8 +133,18 @@
                 .AddWithValue("datum_vydania_zp", DBNull.Value)
             End If
             .AddWithValue("cislo_clenskeho_preukazu_spz", Cislo_clenskeho_preukazu_spzTextBox.Text)
-            .AddWithValue("clen_spz_od", Clen_spz_odTextBox.Text)
-            .AddWithValue("clenske_do", Clenske_doTextBox.Text)
+
+            If Clen_spz_odTextBox.Text = "" Then
+                .AddWithValue("clen_spz_od", DBNull.Value)
+            Else
+                .AddWithValue("clen_spz_od", Clen_spz_odTextBox.Text)
+            End If
+
+            If Clenske_doTextBox.Text = "" Then
+                .AddWithValue("clenske_do", DBNull.Value)
+            Else
+                .AddWithValue("clenske_do", Clenske_doTextBox.Text)
+            End If
             .AddWithValue("cislo_dokladu_clenske", Cislo_dokladu_clenskeTextBox.Text)
             .AddWithValue("clen_pz", Clen_pzComboBox.SelectedValue)
             If Skuska_z_polovnictvaDateTimePicker.Checked = True Then
@@ -151,9 +166,17 @@
             End If
             .AddWithValue("miesto_vyzsej_skusky_z_polovnictva", Miesto_vyzsej_skusky_z_polovnictvaTextBox.Text)
             .AddWithValue("brokova_zbran", Brokova_zbranTextBox.Text)
-            .AddWithValue("kontrolne_strelby_brok", Kontrolne_strelby_brokTextBox.Text)
+            If Kontrolne_strelby_brokTextBox.Text = "" Then
+                .AddWithValue("kontrolne_strelby_brok", DBNull.Value)
+            Else
+                .AddWithValue("kontrolne_strelby_brok", Kontrolne_strelby_brokTextBox.Text)
+            End If
             .AddWithValue("gulova_zbran", Gulova_zbranTextBox.Text)
-            .AddWithValue("kontrolne_strelby_gula", Kontrolne_strelby_gulaTextBox.Text)
+            If Kontrolne_strelby_gulaTextBox.Text = "" Then
+                .AddWithValue("kontrolne_strelby_gula", DBNull.Value)
+            Else
+                .AddWithValue("kontrolne_strelby_gula", Kontrolne_strelby_gulaTextBox.Text)
+            End If
             .AddWithValue("najvyzsie_vyznamenanie", Najvyzsie_vyznamenanieTextBox.Text)
             If Vyznamenanie_kedyDateTimePicker.Checked = True Then
                 .AddWithValue("vyznamenanie_kedy", Vyznamenanie_kedyDateTimePicker.Value)
@@ -162,11 +185,30 @@
             End If
             .AddWithValue("udelene_tresty", Udelene_trestyTextBox.Text)
             .AddWithValue("poznamky", PoznamkyTextBox.Text)
-            .AddWithValue("titul_pred_id", titul_predComboBox.SelectedValue)
-            .AddWithValue("titul_za_id", titul_zaComboBox.SelectedValue)
-            .AddWithValue("narodnost_id", narodnostComboBox.SelectedValue)
-            .AddWithValue("statna_prislusnost_id", statna_prislusnostComboBox.SelectedValue)
+            If titul_predComboBox.SelectedValue = 0 Then
+                .AddWithValue("titul_pred_id", DBNull.Value)
+            Else
+                .AddWithValue("titul_pred_id", titul_predComboBox.SelectedValue)
+            End If
+            If titul_zaComboBox.SelectedValue = 0 Then
+                .AddWithValue("titul_za_id", DBNull.Value)
+            Else
+                .AddWithValue("titul_za_id", titul_zaComboBox.SelectedValue)
+            End If
+            If narodnostComboBox.SelectedValue = 0 Then
+                .AddWithValue("narodnost_id", DBNull.Value)
+            Else
+                .AddWithValue("narodnost_id", narodnostComboBox.SelectedValue)
+            End If
+            If statna_prislusnostComboBox.SelectedValue = 0 Then
+                .AddWithValue("statna_prislusnost_id", DBNull.Value)
+            Else
+                .AddWithValue("statna_prislusnost_id", statna_prislusnostComboBox.SelectedValue)
+            End If
             .AddWithValue("ico_clenovia", ico_clenovia)
+            .AddWithValue("mesto", MestoComboBox.SelectedValue)
+            .AddWithValue("ulica", UlicaTextBox.Text)
+            .AddWithValue("ulica_cislo", Ulica_cisloTextBox.Text)
         End With
 
         com.ExecuteNonQuery()
@@ -178,5 +220,38 @@
 
     Private Sub zavriet_kartu_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_kartu_button.Click
         Me.Close()
+    End Sub
+
+    Private Sub MestoComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MestoComboBox.SelectedIndexChanged
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
+        Dim com As New SqlCeCommand("SELECT okres, psc FROM ciselnik_obce WHERE obec = @obec", con)
+        com.Parameters.AddWithValue("obec", MestoComboBox.SelectedValue)
+        Dim psc As String
+        Dim okres As String
+        Dim i As Integer
+
+        con.Open()
+        Try
+            Dim rdr As SqlCeDataReader = com.ExecuteReader
+            While rdr.Read
+
+
+                okres = rdr.GetString(0)
+                psc = rdr.GetString(1)
+                For i = 0 To 100
+                    'Me.Okres_bydliskaComboBox.Items.Add(i) = okres
+                    Me.PscTextBox.Text = psc
+                Next i
+            End While
+            rdr.Close()
+            con.Close()
+        Catch
+            con.Close()
+        End Try
+    End Sub
+
+    Private Sub MestoComboBox_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles MestoComboBox.TextChanged
+        'Dim parameter As String = Me.MestoComboBox.Text & "%"
+        'Me.Ciselnik_obceTableAdapter.FillBy_vyhladavanie(Me.ObceDataSet.ciselnik_obce, parameter)
     End Sub
 End Class
