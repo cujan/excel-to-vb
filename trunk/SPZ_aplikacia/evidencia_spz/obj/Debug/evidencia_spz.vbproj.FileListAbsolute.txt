@@ -221,3 +221,5 @@ D:\tmp\moj_playground\evidencia_spz\bin\Debug\spz_evidencia.accdb
 D:\tmp\moj_playground\evidencia_spz\bin\Debug\evidencia_spz.exe
 D:\tmp\moj_playground\evidencia_spz\bin\Debug\evidencia_spz.pdb
 D:\tmp\moj_playground\evidencia_spz\bin\Debug\evidencia_spz.xml
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zoznam_clenov_full.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zoznam_zdruzeni_full.resources
