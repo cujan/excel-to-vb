@@ -276,8 +276,6 @@ Partial Public Class kartyClenov
         
         Private columnokres_narodenia As Global.System.Data.DataColumn
         
-        Private columnbydlisko As Global.System.Data.DataColumn
-        
         Private columnpsc As Global.System.Data.DataColumn
         
         Private columncislo_op As Global.System.Data.DataColumn
@@ -348,6 +346,12 @@ Partial Public Class kartyClenov
         
         Private columnkontrolne_strelby_gula As Global.System.Data.DataColumn
         
+        Private columnmesto As Global.System.Data.DataColumn
+        
+        Private columnulica As Global.System.Data.DataColumn
+        
+        Private columnulica_cislo As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub New()
             MyBase.New
@@ -412,13 +416,6 @@ Partial Public Class kartyClenov
         Public ReadOnly Property okres_narodeniaColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnokres_narodenia
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property bydliskoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnbydlisko
             End Get
         End Property
         
@@ -667,6 +664,27 @@ Partial Public Class kartyClenov
             End Get
         End Property
         
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property mestoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmesto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property ulicaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnulica
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property ulica_cisloColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnulica_cislo
+            End Get
+        End Property
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -702,7 +720,6 @@ Partial Public Class kartyClenov
                     ByVal rodne_cislo As String,  _
                     ByVal miesto_narodenia As String,  _
                     ByVal okres_narodenia As String,  _
-                    ByVal bydlisko As String,  _
                     ByVal psc As String,  _
                     ByVal cislo_op As String,  _
                     ByVal datum_vydania_op As Date,  _
@@ -737,9 +754,12 @@ Partial Public Class kartyClenov
                     ByVal Statna_prislusnot As String,  _
                     ByVal Titul_pred As String,  _
                     ByVal Titul_za As String,  _
-                    ByVal kontrolne_strelby_gula As Integer) As karty_clenovRow
+                    ByVal kontrolne_strelby_gula As Integer,  _
+                    ByVal mesto As String,  _
+                    ByVal ulica As String,  _
+                    ByVal ulica_cislo As String) As karty_clenovRow
             Dim rowkarty_clenovRow As karty_clenovRow = CType(Me.NewRow,karty_clenovRow)
-            Dim columnValuesArray() As Object = New Object() {meno, priezvisko, rodne_cislo, miesto_narodenia, okres_narodenia, bydlisko, psc, cislo_op, datum_vydania_op, cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsej_skusky_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, udelene_tresty, poznamky, datum_narodenia, okres_bydliska, najvyzsie_vyznamenanie, vyznamenanie_kedy, telefon, Expr1, miesto_skusky_z_polovnictva, Narodnost, Zdruzenie, Statna_prislusnot, Titul_pred, Titul_za, kontrolne_strelby_gula}
+            Dim columnValuesArray() As Object = New Object() {meno, priezvisko, rodne_cislo, miesto_narodenia, okres_narodenia, psc, cislo_op, datum_vydania_op, cislo_pl, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsej_skusky_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, udelene_tresty, poznamky, datum_narodenia, okres_bydliska, najvyzsie_vyznamenanie, vyznamenanie_kedy, telefon, Expr1, miesto_skusky_z_polovnictva, Narodnost, Zdruzenie, Statna_prislusnot, Titul_pred, Titul_za, kontrolne_strelby_gula, mesto, ulica, ulica_cislo}
             rowkarty_clenovRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowkarty_clenovRow)
             Return rowkarty_clenovRow
@@ -764,7 +784,6 @@ Partial Public Class kartyClenov
             Me.columnrodne_cislo = MyBase.Columns("rodne_cislo")
             Me.columnmiesto_narodenia = MyBase.Columns("miesto_narodenia")
             Me.columnokres_narodenia = MyBase.Columns("okres_narodenia")
-            Me.columnbydlisko = MyBase.Columns("bydlisko")
             Me.columnpsc = MyBase.Columns("psc")
             Me.columncislo_op = MyBase.Columns("cislo_op")
             Me.columndatum_vydania_op = MyBase.Columns("datum_vydania_op")
@@ -800,6 +819,9 @@ Partial Public Class kartyClenov
             Me.columnTitul_pred = MyBase.Columns("Titul pred")
             Me.columnTitul_za = MyBase.Columns("Titul za")
             Me.columnkontrolne_strelby_gula = MyBase.Columns("kontrolne_strelby_gula")
+            Me.columnmesto = MyBase.Columns("mesto")
+            Me.columnulica = MyBase.Columns("ulica")
+            Me.columnulica_cislo = MyBase.Columns("ulica_cislo")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -814,8 +836,6 @@ Partial Public Class kartyClenov
             MyBase.Columns.Add(Me.columnmiesto_narodenia)
             Me.columnokres_narodenia = New Global.System.Data.DataColumn("okres_narodenia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnokres_narodenia)
-            Me.columnbydlisko = New Global.System.Data.DataColumn("bydlisko", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnbydlisko)
             Me.columnpsc = New Global.System.Data.DataColumn("psc", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpsc)
             Me.columncislo_op = New Global.System.Data.DataColumn("cislo_op", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -886,6 +906,12 @@ Partial Public Class kartyClenov
             MyBase.Columns.Add(Me.columnTitul_za)
             Me.columnkontrolne_strelby_gula = New Global.System.Data.DataColumn("kontrolne_strelby_gula", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnkontrolne_strelby_gula)
+            Me.columnmesto = New Global.System.Data.DataColumn("mesto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmesto)
+            Me.columnulica = New Global.System.Data.DataColumn("ulica", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnulica)
+            Me.columnulica_cislo = New Global.System.Data.DataColumn("ulica_cislo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnulica_cislo)
             Me.columnmeno.ReadOnly = true
             Me.columnmeno.MaxLength = 45
             Me.columnpriezvisko.ReadOnly = true
@@ -896,8 +922,6 @@ Partial Public Class kartyClenov
             Me.columnmiesto_narodenia.MaxLength = 45
             Me.columnokres_narodenia.ReadOnly = true
             Me.columnokres_narodenia.MaxLength = 45
-            Me.columnbydlisko.ReadOnly = true
-            Me.columnbydlisko.MaxLength = 45
             Me.columnpsc.ReadOnly = true
             Me.columnpsc.MaxLength = 45
             Me.columncislo_op.ReadOnly = true
@@ -954,6 +978,12 @@ Partial Public Class kartyClenov
             Me.columnTitul_za.ReadOnly = true
             Me.columnTitul_za.MaxLength = 100
             Me.columnkontrolne_strelby_gula.ReadOnly = true
+            Me.columnmesto.ReadOnly = true
+            Me.columnmesto.MaxLength = 100
+            Me.columnulica.ReadOnly = true
+            Me.columnulica.MaxLength = 100
+            Me.columnulica_cislo.ReadOnly = true
+            Me.columnulica_cislo.MaxLength = 100
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1156,20 +1186,6 @@ Partial Public Class kartyClenov
             End Get
             Set
                 Me(Me.tablekarty_clenov.okres_narodeniaColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property bydlisko() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablekarty_clenov.bydliskoColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'bydlisko' in table 'karty_clenov' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablekarty_clenov.bydliskoColumn) = value
             End Set
         End Property
         
@@ -1670,6 +1686,48 @@ Partial Public Class kartyClenov
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property mesto() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablekarty_clenov.mestoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'mesto' in table 'karty_clenov' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablekarty_clenov.mestoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property ulica() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablekarty_clenov.ulicaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ulica' in table 'karty_clenov' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablekarty_clenov.ulicaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property ulica_cislo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablekarty_clenov.ulica_cisloColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ulica_cislo' in table 'karty_clenov' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablekarty_clenov.ulica_cisloColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function IsmenoNull() As Boolean
             Return Me.IsNull(Me.tablekarty_clenov.menoColumn)
         End Function
@@ -1717,16 +1775,6 @@ Partial Public Class kartyClenov
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub Setokres_narodeniaNull()
             Me(Me.tablekarty_clenov.okres_narodeniaColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function IsbydliskoNull() As Boolean
-            Return Me.IsNull(Me.tablekarty_clenov.bydliskoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub SetbydliskoNull()
-            Me(Me.tablekarty_clenov.bydliskoColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -2078,6 +2126,36 @@ Partial Public Class kartyClenov
         Public Sub Setkontrolne_strelby_gulaNull()
             Me(Me.tablekarty_clenov.kontrolne_strelby_gulaColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function IsmestoNull() As Boolean
+            Return Me.IsNull(Me.tablekarty_clenov.mestoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub SetmestoNull()
+            Me(Me.tablekarty_clenov.mestoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function IsulicaNull() As Boolean
+            Return Me.IsNull(Me.tablekarty_clenov.ulicaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub SetulicaNull()
+            Me(Me.tablekarty_clenov.ulicaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isulica_cisloNull() As Boolean
+            Return Me.IsNull(Me.tablekarty_clenov.ulica_cisloColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setulica_cisloNull()
+            Me(Me.tablekarty_clenov.ulica_cisloColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -2242,7 +2320,6 @@ Namespace kartyClenovTableAdapters
             tableMapping.ColumnMappings.Add("rodne_cislo", "rodne_cislo")
             tableMapping.ColumnMappings.Add("miesto_narodenia", "miesto_narodenia")
             tableMapping.ColumnMappings.Add("okres_narodenia", "okres_narodenia")
-            tableMapping.ColumnMappings.Add("bydlisko", "bydlisko")
             tableMapping.ColumnMappings.Add("psc", "psc")
             tableMapping.ColumnMappings.Add("cislo_op", "cislo_op")
             tableMapping.ColumnMappings.Add("datum_vydania_op", "datum_vydania_op")
@@ -2278,6 +2355,9 @@ Namespace kartyClenovTableAdapters
             tableMapping.ColumnMappings.Add("Titul pred", "Titul pred")
             tableMapping.ColumnMappings.Add("Titul za", "Titul za")
             tableMapping.ColumnMappings.Add("kontrolne_strelby_gula", "kontrolne_strelby_gula")
+            tableMapping.ColumnMappings.Add("mesto", "mesto")
+            tableMapping.ColumnMappings.Add("ulica", "ulica")
+            tableMapping.ColumnMappings.Add("ulica_cislo", "ulica_cislo")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -2293,31 +2373,31 @@ Namespace kartyClenovTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT     all_clenovia.meno, all_clenovia.priezvisko, all_clenovia.rodne_cislo, "& _ 
-                "all_clenovia.miesto_narodenia, all_clenovia.okres_narodenia, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                 "& _ 
-                "     all_clenovia.bydlisko, all_clenovia.psc, all_clenovia.cislo_op, all_clenovi"& _ 
-                "a.datum_vydania_op, all_clenovia.cislo_pl, all_clenovia.datum_vydania_pl, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"    "& _ 
-                "                  all_clenovia.cislo_zp, all_clenovia.datum_vydania_zp, all_clen"& _ 
-                "ovia.cislo_clenskeho_preukazu_spz, all_clenovia.clen_spz_od, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                 "& _ 
-                "     all_clenovia.clenske_do, all_clenovia.cislo_dokladu_clenske, all_clenovia.c"& _ 
-                "len_pz, all_clenovia.skuska_z_polovnictva, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia."& _ 
-                "skuska_pre_polovnych_hospodarov, all_clenovia.miesto_skusky_pre_polovnych_hospod"& _ 
-                "arov, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia.vyzsia_skuska_z_polovnictva, all_clen"& _ 
-                "ovia.miesto_vyzsej_skusky_z_polovnictva, all_clenovia.brokova_zbran, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"         "& _ 
-                "             all_clenovia.kontrolne_strelby_brok, all_clenovia.gulova_zbran, all"& _ 
-                "_clenovia.kontrolne_strelby_gula, all_clenovia.udelene_tresty, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"               "& _ 
-                "       all_clenovia.poznamky, all_clenovia.datum_narodenia, all_clenovia.okres_b"& _ 
-                "ydliska, all_clenovia.najvyzsie_vyznamenanie, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenov"& _ 
-                "ia.vyznamenanie_kedy, all_clenovia.telefon, all_clenovia.clen_pz AS Expr1, all_c"& _ 
-                "lenovia.miesto_skusky_z_polovnictva, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      narodnost.skratka A"& _ 
-                "S Narodnost, zdruzenia.nazov AS Zdruzenie, statna_prislusnost.skratka AS [Statna"& _ 
-                " prislusnot], titul_pred.skratka AS [Titul pred], "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      titul_"& _ 
-                "za.skratka AS [Titul za]"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         all_clenovia LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"           "& _ 
-                "           statna_prislusnost ON all_clenovia.statna_prislusnost_id = statna_pri"& _ 
-                "slusnost.id LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      narodnost ON all_clenovia.nar"& _ 
-                "odnost_id = narodnost.id LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      titul_za ON all_"& _ 
-                "clenovia.titul_za_id = titul_za.id LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      titul_"& _ 
-                "pred ON all_clenovia.titul_pred_id = titul_pred.id LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"            "& _ 
-                "          zdruzenia ON all_clenovia.clen_pz = zdruzenia.ico"
+                "all_clenovia.miesto_narodenia, all_clenovia.okres_narodenia, all_clenovia.psc, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia.cislo_op, all_clenovia.datum_vydania_op, all"& _ 
+                "_clenovia.cislo_pl, all_clenovia.datum_vydania_pl, all_clenovia.cislo_zp, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"    "& _ 
+                "                  all_clenovia.datum_vydania_zp, all_clenovia.cislo_clenskeho_pr"& _ 
+                "eukazu_spz, all_clenovia.clen_spz_od, all_clenovia.clenske_do, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"               "& _ 
+                "       all_clenovia.cislo_dokladu_clenske, all_clenovia.clen_pz, all_clenovia.sk"& _ 
+                "uska_z_polovnictva, all_clenovia.skuska_pre_polovnych_hospodarov, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"            "& _ 
+                "          all_clenovia.miesto_skusky_pre_polovnych_hospodarov, all_clenovia.vyzs"& _ 
+                "ia_skuska_z_polovnictva, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia.miesto_vyzsej_skus"& _ 
+                "ky_z_polovnictva, all_clenovia.brokova_zbran, all_clenovia.kontrolne_strelby_bro"& _ 
+                "k, all_clenovia.gulova_zbran, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia.kontrolne_str"& _ 
+                "elby_gula, all_clenovia.udelene_tresty, all_clenovia.poznamky, all_clenovia.datu"& _ 
+                "m_narodenia, all_clenovia.okres_bydliska, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia.n"& _ 
+                "ajvyzsie_vyznamenanie, all_clenovia.vyznamenanie_kedy, all_clenovia.telefon, all"& _ 
+                "_clenovia.clen_pz AS Expr1, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia.miesto_skusky_z"& _ 
+                "_polovnictva, narodnost.skratka AS Narodnost, zdruzenia.nazov AS Zdruzenie, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"  "& _ 
+                "                    statna_prislusnost.skratka AS [Statna prislusnot], titul_pre"& _ 
+                "d.skratka AS [Titul pred], titul_za.skratka AS [Titul za], all_clenovia.mesto, a"& _ 
+                "ll_clenovia.ulica, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia.ulica_cislo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "  all_clenovia LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      statna_prislusnost ON all_"& _ 
+                "clenovia.statna_prislusnost_id = statna_prislusnost.id LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
+                "              narodnost ON all_clenovia.narodnost_id = narodnost.id LEFT OUTER J"& _ 
+                "OIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      titul_za ON all_clenovia.titul_za_id = titul_za.id LE"& _ 
+                "FT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      titul_pred ON all_clenovia.titul_pred_id = "& _ 
+                "titul_pred.id LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      zdruzenia ON all_clenovia.c"& _ 
+                "len_pz = zdruzenia.ico"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
