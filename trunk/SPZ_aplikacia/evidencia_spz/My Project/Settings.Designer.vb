@@ -63,6 +63,17 @@ Namespace My
                 Return CType(Me("spzConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\spz_mdf.mdf;Integrated "& _ 
+            "Security=True;User Instance=True")>  _
+        Public ReadOnly Property spz_mdfConnectionString() As String
+            Get
+                Return CType(Me("spz_mdfConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

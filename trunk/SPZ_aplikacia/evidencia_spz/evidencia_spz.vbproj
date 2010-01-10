@@ -206,6 +206,11 @@
     <Compile Include="narodnost.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="pokusnyDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pokusnyDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="pokusny_form.Designer.vb">
       <DependentUpon>pokusny_form.vb</DependentUpon>
     </Compile>
@@ -250,6 +255,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>spzDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="spz_mdfDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>spz_mdfDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="statna_prislusnost.Designer.vb">
       <DependentUpon>statna_prislusnost.vb</DependentUpon>
@@ -395,6 +405,9 @@
     <EmbeddedResource Include="narodnost.resx">
       <DependentUpon>narodnost.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pokusny_form.resx">
+      <DependentUpon>pokusny_form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="registracia_aplikacie.resx">
       <DependentUpon>registracia_aplikacie.vb</DependentUpon>
@@ -570,6 +583,17 @@
     <None Include="obceDataSet.xss">
       <DependentUpon>obceDataSet.xsd</DependentUpon>
     </None>
+    <None Include="pokusnyDataSet.xsc">
+      <DependentUpon>pokusnyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pokusnyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pokusnyDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pokusnyDataSet.xss">
+      <DependentUpon>pokusnyDataSet.xsd</DependentUpon>
+    </None>
     <None Include="predsedaDataSet.xsc">
       <DependentUpon>predsedaDataSet.xsd</DependentUpon>
     </None>
@@ -603,6 +627,17 @@
     </None>
     <None Include="spzDataSet.xss">
       <DependentUpon>spzDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="spz_mdfDataSet.xsc">
+      <DependentUpon>spz_mdfDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="spz_mdfDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>spz_mdfDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="spz_mdfDataSet.xss">
+      <DependentUpon>spz_mdfDataSet.xsd</DependentUpon>
     </None>
     <None Include="st_prislusnost_combo.xsc">
       <DependentUpon>st_prislusnost_combo.xsd</DependentUpon>
@@ -653,6 +688,13 @@
     </Content>
     <Content Include="spz_evidencia.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spz_mdf.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spz_mdf_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>spz_mdf.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
