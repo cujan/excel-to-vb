@@ -206,6 +206,12 @@
     <Compile Include="narodnost.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="pokusny_form.Designer.vb">
+      <DependentUpon>pokusny_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pokusny_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="predsedaDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
