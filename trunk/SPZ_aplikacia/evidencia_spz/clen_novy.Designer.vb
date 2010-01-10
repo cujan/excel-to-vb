@@ -66,6 +66,7 @@ Partial Class clen_novy
         Dim Ulica_cisloLabel As System.Windows.Forms.Label
         Dim PscLabel1 As System.Windows.Forms.Label
         Dim Okres_bydliskaLabel1 As System.Windows.Forms.Label
+        Dim PscLabel2 As System.Windows.Forms.Label
         Me.Cislo_plTextBox = New System.Windows.Forms.TextBox
         Me.MenoTextBox = New System.Windows.Forms.TextBox
         Me.PriezviskoTextBox = New System.Windows.Forms.TextBox
@@ -73,8 +74,6 @@ Partial Class clen_novy
         Me.Rodne_cisloTextBox = New System.Windows.Forms.TextBox
         Me.Miesto_narodeniaTextBox = New System.Windows.Forms.TextBox
         Me.Okres_narodeniaTextBox = New System.Windows.Forms.TextBox
-        Me.Okres_bydliskaTextBox = New System.Windows.Forms.TextBox
-        Me.PscTextBox = New System.Windows.Forms.TextBox
         Me.TelefonTextBox = New System.Windows.Forms.TextBox
         Me.Cislo_opTextBox = New System.Windows.Forms.TextBox
         Me.Datum_vydania_opDateTimePicker = New System.Windows.Forms.DateTimePicker
@@ -109,6 +108,8 @@ Partial Class clen_novy
         Me.zavriet_kartu_button = New System.Windows.Forms.Button
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.Okres_bydliskaComboBox = New System.Windows.Forms.ComboBox
+        Me.PscComboBox = New System.Windows.Forms.ComboBox
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.titul_predComboBox = New System.Windows.Forms.ComboBox
         Me.TitulpredBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -137,8 +138,8 @@ Partial Class clen_novy
         Me.UlicaTextBox = New System.Windows.Forms.TextBox
         Me.Ulica_cisloTextBox = New System.Windows.Forms.TextBox
         Me.Ciselnik_obceTableAdapter = New evidencia_spz.obceDataSetTableAdapters.ciselnik_obceTableAdapter
-        Me.PscComboBox = New System.Windows.Forms.ComboBox
-        Me.Okres_bydliskaComboBox = New System.Windows.Forms.ComboBox
+        Me.Okres_bydliskaListBox = New System.Windows.Forms.ListBox
+        Me.PscListBox = New System.Windows.Forms.ListBox
         Cislo_plLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -182,10 +183,10 @@ Partial Class clen_novy
         Ulica_cisloLabel = New System.Windows.Forms.Label
         PscLabel1 = New System.Windows.Forms.Label
         Okres_bydliskaLabel1 = New System.Windows.Forms.Label
+        PscLabel2 = New System.Windows.Forms.Label
         CType(Me.ZdruzeniaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ShapeContainer1.SuspendLayout()
         CType(Me.TitulpredBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -272,7 +273,7 @@ Partial Class clen_novy
         'PscLabel
         '
         PscLabel.AutoSize = True
-        PscLabel.Location = New System.Drawing.Point(165, 213)
+        PscLabel.Location = New System.Drawing.Point(165, 232)
         PscLabel.Name = "PscLabel"
         PscLabel.Size = New System.Drawing.Size(27, 13)
         PscLabel.TabIndex = 19
@@ -566,6 +567,24 @@ Partial Class clen_novy
         Ulica_cisloLabel.TabIndex = 0
         Ulica_cisloLabel.Text = "ulica cislo:"
         '
+        'PscLabel1
+        '
+        PscLabel1.AutoSize = True
+        PscLabel1.Location = New System.Drawing.Point(744, 157)
+        PscLabel1.Name = "PscLabel1"
+        PscLabel1.Size = New System.Drawing.Size(27, 13)
+        PscLabel1.TabIndex = 0
+        PscLabel1.Text = "psc:"
+        '
+        'Okres_bydliskaLabel1
+        '
+        Okres_bydliskaLabel1.AutoSize = True
+        Okres_bydliskaLabel1.Location = New System.Drawing.Point(749, 209)
+        Okres_bydliskaLabel1.Name = "Okres_bydliskaLabel1"
+        Okres_bydliskaLabel1.Size = New System.Drawing.Size(77, 13)
+        Okres_bydliskaLabel1.TabIndex = 2
+        Okres_bydliskaLabel1.Text = "okres bydliska:"
+        '
         'Cislo_plTextBox
         '
         Me.Cislo_plTextBox.Location = New System.Drawing.Point(198, 298)
@@ -616,22 +635,6 @@ Partial Class clen_novy
         Me.Okres_narodeniaTextBox.Name = "Okres_narodeniaTextBox"
         Me.Okres_narodeniaTextBox.Size = New System.Drawing.Size(140, 20)
         Me.Okres_narodeniaTextBox.TabIndex = 14
-        '
-        'Okres_bydliskaTextBox
-        '
-        Me.Okres_bydliskaTextBox.Location = New System.Drawing.Point(198, 184)
-        Me.Okres_bydliskaTextBox.Name = "Okres_bydliskaTextBox"
-        Me.Okres_bydliskaTextBox.ReadOnly = True
-        Me.Okres_bydliskaTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Okres_bydliskaTextBox.TabIndex = 18
-        '
-        'PscTextBox
-        '
-        Me.PscTextBox.Location = New System.Drawing.Point(198, 210)
-        Me.PscTextBox.Name = "PscTextBox"
-        Me.PscTextBox.ReadOnly = True
-        Me.PscTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.PscTextBox.TabIndex = 20
         '
         'TelefonTextBox
         '
@@ -890,10 +893,6 @@ Partial Class clen_novy
         '
         'ShapeContainer1
         '
-        Me.ShapeContainer1.Controls.Add(Okres_bydliskaLabel1)
-        Me.ShapeContainer1.Controls.Add(Me.Okres_bydliskaComboBox)
-        Me.ShapeContainer1.Controls.Add(PscLabel1)
-        Me.ShapeContainer1.Controls.Add(Me.PscComboBox)
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
@@ -901,6 +900,22 @@ Partial Class clen_novy
         Me.ShapeContainer1.Size = New System.Drawing.Size(973, 800)
         Me.ShapeContainer1.TabIndex = 86
         Me.ShapeContainer1.TabStop = False
+        '
+        'Okres_bydliskaComboBox
+        '
+        Me.Okres_bydliskaComboBox.FormattingEnabled = True
+        Me.Okres_bydliskaComboBox.Location = New System.Drawing.Point(832, 206)
+        Me.Okres_bydliskaComboBox.Name = "Okres_bydliskaComboBox"
+        Me.Okres_bydliskaComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Okres_bydliskaComboBox.TabIndex = 3
+        '
+        'PscComboBox
+        '
+        Me.PscComboBox.FormattingEnabled = True
+        Me.PscComboBox.Location = New System.Drawing.Point(777, 154)
+        Me.PscComboBox.Name = "PscComboBox"
+        Me.PscComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.PscComboBox.TabIndex = 1
         '
         'LineShape2
         '
@@ -1053,6 +1068,8 @@ Partial Class clen_novy
         '
         'MestoComboBox
         '
+        Me.MestoComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.MestoComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.MestoComboBox.DataSource = Me.CiselnikobceBindingSource
         Me.MestoComboBox.DisplayMember = "obec"
         Me.MestoComboBox.FormattingEnabled = True
@@ -1095,39 +1112,32 @@ Partial Class clen_novy
         '
         Me.Ciselnik_obceTableAdapter.ClearBeforeFill = True
         '
-        'PscLabel1
+        'Okres_bydliskaListBox
         '
-        PscLabel1.AutoSize = True
-        PscLabel1.Location = New System.Drawing.Point(744, 157)
-        PscLabel1.Name = "PscLabel1"
-        PscLabel1.Size = New System.Drawing.Size(27, 13)
-        PscLabel1.TabIndex = 0
-        PscLabel1.Text = "psc:"
+        Me.Okres_bydliskaListBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.All_clenoviaBindingSource, "okres_bydliska", True))
+        Me.Okres_bydliskaListBox.FormattingEnabled = True
+        Me.Okres_bydliskaListBox.Location = New System.Drawing.Point(200, 180)
+        Me.Okres_bydliskaListBox.Name = "Okres_bydliskaListBox"
+        Me.Okres_bydliskaListBox.Size = New System.Drawing.Size(120, 43)
+        Me.Okres_bydliskaListBox.TabIndex = 1
         '
-        'PscComboBox
+        'PscLabel2
         '
-        Me.PscComboBox.FormattingEnabled = True
-        Me.PscComboBox.Location = New System.Drawing.Point(777, 154)
-        Me.PscComboBox.Name = "PscComboBox"
-        Me.PscComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.PscComboBox.TabIndex = 1
+        PscLabel2.AutoSize = True
+        PscLabel2.Location = New System.Drawing.Point(168, 223)
+        PscLabel2.Name = "PscLabel2"
+        PscLabel2.Size = New System.Drawing.Size(27, 13)
+        PscLabel2.TabIndex = 0
+        PscLabel2.Text = "psc:"
         '
-        'Okres_bydliskaLabel1
+        'PscListBox
         '
-        Okres_bydliskaLabel1.AutoSize = True
-        Okres_bydliskaLabel1.Location = New System.Drawing.Point(749, 209)
-        Okres_bydliskaLabel1.Name = "Okres_bydliskaLabel1"
-        Okres_bydliskaLabel1.Size = New System.Drawing.Size(77, 13)
-        Okres_bydliskaLabel1.TabIndex = 2
-        Okres_bydliskaLabel1.Text = "okres bydliska:"
-        '
-        'Okres_bydliskaComboBox
-        '
-        Me.Okres_bydliskaComboBox.FormattingEnabled = True
-        Me.Okres_bydliskaComboBox.Location = New System.Drawing.Point(832, 206)
-        Me.Okres_bydliskaComboBox.Name = "Okres_bydliskaComboBox"
-        Me.Okres_bydliskaComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.Okres_bydliskaComboBox.TabIndex = 3
+        Me.PscListBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.All_clenoviaBindingSource, "psc", True))
+        Me.PscListBox.FormattingEnabled = True
+        Me.PscListBox.Location = New System.Drawing.Point(201, 223)
+        Me.PscListBox.Name = "PscListBox"
+        Me.PscListBox.Size = New System.Drawing.Size(117, 43)
+        Me.PscListBox.TabIndex = 1
         '
         'clen_novy
         '
@@ -1136,6 +1146,9 @@ Partial Class clen_novy
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(973, 800)
+        Me.Controls.Add(PscLabel2)
+        Me.Controls.Add(Me.PscListBox)
+        Me.Controls.Add(Me.Okres_bydliskaListBox)
         Me.Controls.Add(Ulica_cisloLabel)
         Me.Controls.Add(Me.Ulica_cisloTextBox)
         Me.Controls.Add(UlicaLabel)
@@ -1169,9 +1182,7 @@ Partial Class clen_novy
         Me.Controls.Add(Okres_narodeniaLabel)
         Me.Controls.Add(Me.Okres_narodeniaTextBox)
         Me.Controls.Add(Okres_bydliskaLabel)
-        Me.Controls.Add(Me.Okres_bydliskaTextBox)
         Me.Controls.Add(PscLabel)
-        Me.Controls.Add(Me.PscTextBox)
         Me.Controls.Add(TelefonLabel)
         Me.Controls.Add(Me.TelefonTextBox)
         Me.Controls.Add(Cislo_opLabel)
@@ -1232,8 +1243,6 @@ Partial Class clen_novy
         CType(Me.ZdruzeniaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ShapeContainer1.ResumeLayout(False)
-        Me.ShapeContainer1.PerformLayout()
         CType(Me.TitulpredBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1254,8 +1263,6 @@ Partial Class clen_novy
     Friend WithEvents Rodne_cisloTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Miesto_narodeniaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Okres_narodeniaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Okres_bydliskaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents PscTextBox As System.Windows.Forms.TextBox
     Friend WithEvents TelefonTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Cislo_opTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Datum_vydania_opDateTimePicker As System.Windows.Forms.DateTimePicker
@@ -1320,4 +1327,6 @@ Partial Class clen_novy
     Friend WithEvents Ciselnik_obceTableAdapter As evidencia_spz.obceDataSetTableAdapters.ciselnik_obceTableAdapter
     Friend WithEvents Okres_bydliskaComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents PscComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Okres_bydliskaListBox As System.Windows.Forms.ListBox
+    Friend WithEvents PscListBox As System.Windows.Forms.ListBox
 End Class
