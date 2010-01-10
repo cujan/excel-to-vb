@@ -757,4 +757,8 @@ Public Class hlavna_aplikacia
 
     End Sub
 
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
+        pokusny_form.Show()
+        pokusny_form.BringToFront()
+    End Sub
 End Class
