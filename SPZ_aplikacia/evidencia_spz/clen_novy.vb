@@ -111,8 +111,8 @@
             .AddWithValue("rodne_cislo", Rodne_cisloTextBox.Text)
             .AddWithValue("miesto_narodenia", Miesto_narodeniaTextBox.Text)
             .AddWithValue("okres_narodenia", Okres_narodeniaTextBox.Text)
-            .AddWithValue("okres_bydliska", Okres_bydliskaTextBox.Text)
-            .AddWithValue("psc", PscTextBox.Text)
+            .AddWithValue("okres_bydliska", Okres_bydliskaListBox.SelectedItem)
+            .AddWithValue("psc", PscListBox.SelectedItem)
             .AddWithValue("telefon", TelefonTextBox.Text)
             .AddWithValue("cislo_op", Cislo_opTextBox.Text)
 
@@ -228,7 +228,8 @@
         com.Parameters.AddWithValue("obec", MestoComboBox.SelectedValue)
         Dim psc As String
         Dim okres As String
-        Dim i As Integer
+        Me.Okres_bydliskaListBox.Items.Clear()
+        Me.PscListBox.Items.Clear()
 
         con.Open()
         Try
@@ -238,11 +239,11 @@
 
                 okres = rdr.GetString(0)
                 psc = rdr.GetString(1)
-                For i = 0 To 100
-                    'Me.Okres_bydliskaComboBox.Items.Add(i) = okres
-                    Me.PscTextBox.Text = psc
-                Next i
+                Me.PscListBox.Items.Add(psc)
+                Me.Okres_bydliskaListBox.Items.Add(okres)
             End While
+
+
             rdr.Close()
             con.Close()
         Catch
