@@ -107,6 +107,12 @@
       <DependentUpon>all_clenoviaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="zoznam_chybajuce_kont_strelby.Designer.vb">
+      <DependentUpon>zoznam_chybajuce_kont_strelby.vb</DependentUpon>
+    </Compile>
+    <Compile Include="zoznam_chybajuce_kont_strelby.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ciselniky.Designer.vb">
       <DependentUpon>ciselniky.vb</DependentUpon>
     </Compile>
@@ -359,6 +365,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="a4_report_2.rdlc" />
+    <EmbeddedResource Include="zoznam_chybajuce_kont_strelby.resx">
+      <DependentUpon>zoznam_chybajuce_kont_strelby.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ciselniky.resx">
       <DependentUpon>ciselniky.vb</DependentUpon>
       <SubType>Designer</SubType>
