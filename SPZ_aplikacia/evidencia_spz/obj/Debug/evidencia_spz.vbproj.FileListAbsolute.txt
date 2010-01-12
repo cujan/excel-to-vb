@@ -229,3 +229,17 @@ D:\tmp\moj_playground\evidencia_spz\bin\Debug\spz_mdf_log.ldf
 D:\tmp\moj_playground\evidencia_spz\obj\Debug\evidencia_spz.pokusny_form.resources
 D:\tmp\moj_playground\evidencia_spz\obj\Debug\evidencia_spz.zoznam_zdruzeni_full.resources
 D:\tmp\moj_playground\evidencia_spz\obj\Debug\evidencia_spz.zoznam_chybajuce_kont_strelby.resources
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\spz_mdf.mdf
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\spz_mdf_log.ldf
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zoznam_chybajuce_kont_strelby.resources
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clenovia_all.resources
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.clen_edituj.resources
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.karty_clenov.resources
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.pokusny_form.resources
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.skusobny_report.resources
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.skusobny_report2.resources
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zdruzenie_edituj.resources
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zoznam_clenov_full.resources
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zoznam_zdruzeni_full.resources
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\RdlCompile.cache
+D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\RdlCompile.compiled
