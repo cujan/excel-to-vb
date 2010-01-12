@@ -90,9 +90,7 @@ Partial Class clen_novy
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox = New System.Windows.Forms.TextBox
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker = New System.Windows.Forms.DateTimePicker
         Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox = New System.Windows.Forms.TextBox
-        Me.Brokova_zbranTextBox = New System.Windows.Forms.TextBox
         Me.Kontrolne_strelby_brokTextBox = New System.Windows.Forms.TextBox
-        Me.Gulova_zbranTextBox = New System.Windows.Forms.TextBox
         Me.Kontrolne_strelby_gulaTextBox = New System.Windows.Forms.TextBox
         Me.Najvyzsie_vyznamenanieTextBox = New System.Windows.Forms.TextBox
         Me.Vyznamenanie_kedyDateTimePicker = New System.Windows.Forms.DateTimePicker
@@ -108,9 +106,9 @@ Partial Class clen_novy
         Me.zavriet_kartu_button = New System.Windows.Forms.Button
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.Okres_bydliskaComboBox = New System.Windows.Forms.ComboBox
         Me.PscComboBox = New System.Windows.Forms.ComboBox
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.titul_predComboBox = New System.Windows.Forms.ComboBox
         Me.TitulpredBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.titul_zaComboBox = New System.Windows.Forms.ComboBox
@@ -140,6 +138,10 @@ Partial Class clen_novy
         Me.Ciselnik_obceTableAdapter = New evidencia_spz.obceDataSetTableAdapters.ciselnik_obceTableAdapter
         Me.Okres_bydliskaListBox = New System.Windows.Forms.ListBox
         Me.PscListBox = New System.Windows.Forms.ListBox
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Brokova_zbranComboBox = New System.Windows.Forms.ComboBox
+        Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
+        Me.Button2 = New System.Windows.Forms.Button
         Cislo_plLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -196,6 +198,7 @@ Partial Class clen_novy
         CType(Me.CiselnikobceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ObceDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ObceDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Cislo_plLabel
@@ -585,6 +588,15 @@ Partial Class clen_novy
         Okres_bydliskaLabel1.TabIndex = 2
         Okres_bydliskaLabel1.Text = "okres bydliska:"
         '
+        'PscLabel2
+        '
+        PscLabel2.AutoSize = True
+        PscLabel2.Location = New System.Drawing.Point(168, 223)
+        PscLabel2.Name = "PscLabel2"
+        PscLabel2.Size = New System.Drawing.Size(27, 13)
+        PscLabel2.TabIndex = 0
+        PscLabel2.Text = "psc:"
+        '
         'Cislo_plTextBox
         '
         Me.Cislo_plTextBox.Location = New System.Drawing.Point(198, 298)
@@ -760,26 +772,12 @@ Partial Class clen_novy
         Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox.Size = New System.Drawing.Size(140, 20)
         Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox.TabIndex = 54
         '
-        'Brokova_zbranTextBox
-        '
-        Me.Brokova_zbranTextBox.Location = New System.Drawing.Point(198, 618)
-        Me.Brokova_zbranTextBox.Name = "Brokova_zbranTextBox"
-        Me.Brokova_zbranTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Brokova_zbranTextBox.TabIndex = 56
-        '
         'Kontrolne_strelby_brokTextBox
         '
         Me.Kontrolne_strelby_brokTextBox.Location = New System.Drawing.Point(551, 618)
         Me.Kontrolne_strelby_brokTextBox.Name = "Kontrolne_strelby_brokTextBox"
         Me.Kontrolne_strelby_brokTextBox.Size = New System.Drawing.Size(140, 20)
         Me.Kontrolne_strelby_brokTextBox.TabIndex = 58
-        '
-        'Gulova_zbranTextBox
-        '
-        Me.Gulova_zbranTextBox.Location = New System.Drawing.Point(198, 644)
-        Me.Gulova_zbranTextBox.Name = "Gulova_zbranTextBox"
-        Me.Gulova_zbranTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Gulova_zbranTextBox.TabIndex = 60
         '
         'Kontrolne_strelby_gulaTextBox
         '
@@ -901,6 +899,15 @@ Partial Class clen_novy
         Me.ShapeContainer1.TabIndex = 86
         Me.ShapeContainer1.TabStop = False
         '
+        'LineShape2
+        '
+        Me.LineShape2.BorderWidth = 2
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 66
+        Me.LineShape2.X2 = 750
+        Me.LineShape2.Y1 = 620
+        Me.LineShape2.Y2 = 620
+        '
         'Okres_bydliskaComboBox
         '
         Me.Okres_bydliskaComboBox.FormattingEnabled = True
@@ -916,15 +923,6 @@ Partial Class clen_novy
         Me.PscComboBox.Name = "PscComboBox"
         Me.PscComboBox.Size = New System.Drawing.Size(121, 21)
         Me.PscComboBox.TabIndex = 1
-        '
-        'LineShape2
-        '
-        Me.LineShape2.BorderWidth = 2
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 66
-        Me.LineShape2.X2 = 750
-        Me.LineShape2.Y1 = 620
-        Me.LineShape2.Y2 = 620
         '
         'titul_predComboBox
         '
@@ -1121,15 +1119,6 @@ Partial Class clen_novy
         Me.Okres_bydliskaListBox.Size = New System.Drawing.Size(120, 43)
         Me.Okres_bydliskaListBox.TabIndex = 1
         '
-        'PscLabel2
-        '
-        PscLabel2.AutoSize = True
-        PscLabel2.Location = New System.Drawing.Point(168, 223)
-        PscLabel2.Name = "PscLabel2"
-        PscLabel2.Size = New System.Drawing.Size(27, 13)
-        PscLabel2.TabIndex = 0
-        PscLabel2.Text = "psc:"
-        '
         'PscListBox
         '
         Me.PscListBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.All_clenoviaBindingSource, "psc", True))
@@ -1139,6 +1128,38 @@ Partial Class clen_novy
         Me.PscListBox.Size = New System.Drawing.Size(117, 43)
         Me.PscListBox.TabIndex = 1
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
+        'Brokova_zbranComboBox
+        '
+        Me.Brokova_zbranComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Brokova_zbranComboBox.FormattingEnabled = True
+        Me.Brokova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ANO"})
+        Me.Brokova_zbranComboBox.Location = New System.Drawing.Point(201, 620)
+        Me.Brokova_zbranComboBox.Name = "Brokova_zbranComboBox"
+        Me.Brokova_zbranComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Brokova_zbranComboBox.TabIndex = 1
+        '
+        'Gulova_zbranComboBox
+        '
+        Me.Gulova_zbranComboBox.FormattingEnabled = True
+        Me.Gulova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ANO"})
+        Me.Gulova_zbranComboBox.Location = New System.Drawing.Point(201, 644)
+        Me.Gulova_zbranComboBox.Name = "Gulova_zbranComboBox"
+        Me.Gulova_zbranComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Gulova_zbranComboBox.TabIndex = 1
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(729, 145)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 95
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'clen_novy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1146,6 +1167,9 @@ Partial Class clen_novy
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(973, 800)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Gulova_zbranComboBox)
+        Me.Controls.Add(Me.Brokova_zbranComboBox)
         Me.Controls.Add(PscLabel2)
         Me.Controls.Add(Me.PscListBox)
         Me.Controls.Add(Me.Okres_bydliskaListBox)
@@ -1217,11 +1241,9 @@ Partial Class clen_novy
         Me.Controls.Add(Miesto_vyzsej_skusky_z_polovnictvaLabel)
         Me.Controls.Add(Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox)
         Me.Controls.Add(Brokova_zbranLabel)
-        Me.Controls.Add(Me.Brokova_zbranTextBox)
         Me.Controls.Add(Kontrolne_strelby_brokLabel)
         Me.Controls.Add(Me.Kontrolne_strelby_brokTextBox)
         Me.Controls.Add(Gulova_zbranLabel)
-        Me.Controls.Add(Me.Gulova_zbranTextBox)
         Me.Controls.Add(Kontrolne_strelby_gulaLabel)
         Me.Controls.Add(Me.Kontrolne_strelby_gulaTextBox)
         Me.Controls.Add(Najvyzsie_vyznamenanieLabel)
@@ -1252,6 +1274,7 @@ Partial Class clen_novy
         CType(Me.CiselnikobceBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ObceDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ObceDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1279,9 +1302,7 @@ Partial Class clen_novy
     Friend WithEvents Miesto_skusky_pre_polovnych_hospodarovTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Vyzsia_skuska_z_polovnictvaDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents Miesto_vyzsej_skusky_z_polovnictvaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Brokova_zbranTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Kontrolne_strelby_brokTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Gulova_zbranTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Kontrolne_strelby_gulaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Najvyzsie_vyznamenanieTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Vyznamenanie_kedyDateTimePicker As System.Windows.Forms.DateTimePicker
@@ -1329,4 +1350,8 @@ Partial Class clen_novy
     Friend WithEvents PscComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents Okres_bydliskaListBox As System.Windows.Forms.ListBox
     Friend WithEvents PscListBox As System.Windows.Forms.ListBox
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents Gulova_zbranComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Brokova_zbranComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

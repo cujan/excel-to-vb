@@ -165,13 +165,13 @@
                 .AddWithValue("vyzsia_skuska_z_polovnictva", DBNull.Value)
             End If
             .AddWithValue("miesto_vyzsej_skusky_z_polovnictva", Miesto_vyzsej_skusky_z_polovnictvaTextBox.Text)
-            .AddWithValue("brokova_zbran", Brokova_zbranTextBox.Text)
+            .AddWithValue("brokova_zbran", Brokova_zbranComboBox.Text)
             If Kontrolne_strelby_brokTextBox.Text = "" Then
                 .AddWithValue("kontrolne_strelby_brok", DBNull.Value)
             Else
                 .AddWithValue("kontrolne_strelby_brok", Kontrolne_strelby_brokTextBox.Text)
             End If
-            .AddWithValue("gulova_zbran", Gulova_zbranTextBox.Text)
+            .AddWithValue("gulova_zbran", Gulova_zbranComboBox.Text)
             If Kontrolne_strelby_gulaTextBox.Text = "" Then
                 .AddWithValue("kontrolne_strelby_gula", DBNull.Value)
             Else
@@ -222,6 +222,10 @@
         Me.Close()
     End Sub
 
+    Private Sub MestoComboBox_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles MestoComboBox.Leave
+        
+    End Sub
+
     Private Sub MestoComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MestoComboBox.SelectedIndexChanged
         Dim con As New SqlCeConnection(pripojovaci_retazec)
         Dim com As New SqlCeCommand("SELECT okres, psc FROM ciselnik_obce WHERE obec = @obec", con)
@@ -254,5 +258,112 @@
     Private Sub MestoComboBox_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles MestoComboBox.TextChanged
         'Dim parameter As String = Me.MestoComboBox.Text & "%"
         'Me.Ciselnik_obceTableAdapter.FillBy_vyhladavanie(Me.ObceDataSet.ciselnik_obce, parameter)
+    End Sub
+
+    Private Sub PriezviskoTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PriezviskoTextBox.TextChanged
+
+    End Sub
+
+    Private Sub PriezviskoTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles PriezviskoTextBox.Validating
+        Dim chyba As String
+        If Not kontrola_priezviska(PriezviskoTextBox.Text, chyba) Then
+            'nastav a zobraz chybu
+            ErrorProvider1.SetError(PriezviskoTextBox, chyba)
+        Else
+            'zrus(chybu)
+            ErrorProvider1.SetError(PriezviskoTextBox, Nothing)
+        End If
+    End Sub
+
+    Private Sub Rodne_cisloTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Rodne_cisloTextBox.TextChanged
+
+    End Sub
+
+    Private Sub Rodne_cisloTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Rodne_cisloTextBox.Validating
+        Dim chyba As String
+
+        If Not kontrola_rc(Rodne_cisloTextBox.Text, chyba) Then
+            'nastav a zobraz chybu
+            ErrorProvider1.SetError(Rodne_cisloTextBox, chyba)
+        Else
+            'zrus(chybu)
+            ErrorProvider1.SetError(Rodne_cisloTextBox, Nothing)
+        End If
+    End Sub
+
+    Private Sub Clen_spz_odTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Clen_spz_odTextBox.TextChanged
+
+    End Sub
+
+    Private Sub Clen_spz_odTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Clen_spz_odTextBox.Validating
+        Dim chyba As String
+
+        If Not kontrola_roka(Clen_spz_odTextBox.Text, chyba) Then
+            'nastav a zobraz chybu
+            ErrorProvider1.SetError(Clen_spz_odTextBox, chyba)
+        Else
+            'zrus(chybu)
+            ErrorProvider1.SetError(Clen_spz_odTextBox, Nothing)
+        End If
+    End Sub
+
+    Private Sub Clenske_doTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Clenske_doTextBox.TextChanged
+
+    End Sub
+
+    Private Sub Clenske_doTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Clenske_doTextBox.Validating
+        Dim chyba As String
+
+        If Not kontrola_roka(Clenske_doTextBox.Text, chyba) Then
+            'nastav a zobraz chybu
+            ErrorProvider1.SetError(Clenske_doTextBox, chyba)
+        Else
+            'zrus(chybu)
+            ErrorProvider1.SetError(Clenske_doTextBox, Nothing)
+        End If
+    End Sub
+
+    Private Sub Kontrolne_strelby_brokTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Kontrolne_strelby_brokTextBox.TextChanged
+
+    End Sub
+
+    Private Sub Kontrolne_strelby_brokTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Kontrolne_strelby_brokTextBox.Validating
+        Dim chyba As String
+
+        If Not kontrola_roka(Kontrolne_strelby_brokTextBox.Text, chyba) Then
+            'nastav a zobraz chybu
+            ErrorProvider1.SetError(Kontrolne_strelby_brokTextBox, chyba)
+        Else
+            'zrus(chybu)
+            ErrorProvider1.SetError(Kontrolne_strelby_brokTextBox, Nothing)
+        End If
+    End Sub
+
+    Private Sub Kontrolne_strelby_gulaTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Kontrolne_strelby_gulaTextBox.TextChanged
+       
+    End Sub
+
+    Private Sub Kontrolne_strelby_gulaTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Kontrolne_strelby_gulaTextBox.Validating
+        Dim chyba As String
+
+        If Not kontrola_roka(Kontrolne_strelby_gulaTextBox.Text, chyba) Then
+            'nastav a zobraz chybu
+            ErrorProvider1.SetError(Kontrolne_strelby_gulaTextBox, chyba)
+        Else
+            'zrus(chybu)
+            ErrorProvider1.SetError(Kontrolne_strelby_gulaTextBox, Nothing)
+        End If
+    End Sub
+
+    Private Sub Okres_bydliskaListBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Okres_bydliskaListBox.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Okres_bydliskaListBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Okres_bydliskaListBox.Validating
+        
+    End Sub
+
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        MsgBox(Okres_bydliskaListBox.SelectedItem)
     End Sub
 End Class
