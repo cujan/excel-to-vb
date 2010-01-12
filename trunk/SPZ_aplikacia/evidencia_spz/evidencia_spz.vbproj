@@ -346,13 +346,10 @@
     <Compile Include="zoznam_clenov_full.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="zoznam_kont_strelby.Designer.vb">
+    <Compile Include="zoznam_kontStrelby.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>zoznam_kont_strelby.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="zoznam_kont_strelby.vb">
-      <DependentUpon>zoznam_kont_strelby.xsd</DependentUpon>
+      <DependentUpon>zoznam_kontStrelby.xsd</DependentUpon>
     </Compile>
     <Compile Include="zoznam_zdruzeni_combo.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -490,10 +487,12 @@
       <DependentUpon>zoznam_clenov_full.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="zoznam_kont_strelby_report.rdlc" />
     <EmbeddedResource Include="zoznam_zdruzeni_full.resx">
       <DependentUpon>zoznam_zdruzeni_full.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="zoznam_zdruz_full_report.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -680,16 +679,16 @@
     <None Include="zoznam_clenov.xss">
       <DependentUpon>zoznam_clenov.xsd</DependentUpon>
     </None>
-    <None Include="zoznam_kont_strelby.xsc">
-      <DependentUpon>zoznam_kont_strelby.xsd</DependentUpon>
+    <None Include="zoznam_kontStrelby.xsc">
+      <DependentUpon>zoznam_kontStrelby.xsd</DependentUpon>
     </None>
-    <None Include="zoznam_kont_strelby.xsd">
+    <None Include="zoznam_kontStrelby.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>zoznam_kont_strelby.Designer.vb</LastGenOutput>
+      <LastGenOutput>zoznam_kontStrelby.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="zoznam_kont_strelby.xss">
-      <DependentUpon>zoznam_kont_strelby.xsd</DependentUpon>
+    <None Include="zoznam_kontStrelby.xss">
+      <DependentUpon>zoznam_kontStrelby.xsd</DependentUpon>
     </None>
     <None Include="zoznam_zdruzeni_combo.xsc">
       <DependentUpon>zoznam_zdruzeni_combo.xsd</DependentUpon>

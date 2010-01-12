@@ -22,6 +22,8 @@ Partial Class zoznam_zdruzeni_full
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
         Me.vymera_check = New System.Windows.Forms.CheckBox
         Me.najomna_zmluva_check = New System.Windows.Forms.CheckBox
         Me.jelenia_check = New System.Windows.Forms.CheckBox
@@ -49,6 +51,11 @@ Partial Class zoznam_zdruzeni_full
         Me.psy_ = New System.Windows.Forms.Label
         Me.psy_typy_skutocnost_check = New System.Windows.Forms.CheckBox
         Me.psy_typy_plan_check = New System.Windows.Forms.CheckBox
+        Me.zoznam_zdruzeni_report_full = New evidencia_spz.zoznam_zdruzeni_report_full
+        Me.zdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.zdruzeniaTableAdapter = New evidencia_spz.zoznam_zdruzeni_report_fullTableAdapters.zdruzeniaTableAdapter
+        CType(Me.zoznam_zdruzeni_report_full, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.zdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'vymera_check
@@ -252,16 +259,20 @@ Partial Class zoznam_zdruzeni_full
         '
         'ReportViewer1
         '
-        Me.ReportViewer1.Location = New System.Drawing.Point(5, 134)
+        ReportDataSource1.Name = "zoznam_zdruzeni_report_full_zdruzenia"
+        ReportDataSource1.Value = Me.zdruzeniaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.zoznam_zdruz_full_report.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(5, 157)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(986, 336)
+        Me.ReportViewer1.Size = New System.Drawing.Size(986, 313)
         Me.ReportViewer1.TabIndex = 21
         '
         'psy_typy_skutocnost_combo
         '
         Me.psy_typy_skutocnost_combo.Enabled = False
         Me.psy_typy_skutocnost_combo.FormattingEnabled = True
-        Me.psy_typy_skutocnost_combo.Location = New System.Drawing.Point(494, 110)
+        Me.psy_typy_skutocnost_combo.Location = New System.Drawing.Point(494, 124)
         Me.psy_typy_skutocnost_combo.Name = "psy_typy_skutocnost_combo"
         Me.psy_typy_skutocnost_combo.Size = New System.Drawing.Size(78, 21)
         Me.psy_typy_skutocnost_combo.TabIndex = 26
@@ -270,7 +281,7 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.psy_typy_plan_combo.Enabled = False
         Me.psy_typy_plan_combo.FormattingEnabled = True
-        Me.psy_typy_plan_combo.Location = New System.Drawing.Point(494, 84)
+        Me.psy_typy_plan_combo.Location = New System.Drawing.Point(494, 98)
         Me.psy_typy_plan_combo.Name = "psy_typy_plan_combo"
         Me.psy_typy_plan_combo.Size = New System.Drawing.Size(78, 21)
         Me.psy_typy_plan_combo.TabIndex = 25
@@ -279,7 +290,7 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.psy_.AutoSize = True
         Me.psy_.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.psy_.Location = New System.Drawing.Point(378, 70)
+        Me.psy_.Location = New System.Drawing.Point(378, 84)
         Me.psy_.Name = "psy_"
         Me.psy_.Size = New System.Drawing.Size(65, 13)
         Me.psy_.TabIndex = 24
@@ -288,7 +299,7 @@ Partial Class zoznam_zdruzeni_full
         'psy_typy_skutocnost_check
         '
         Me.psy_typy_skutocnost_check.AutoSize = True
-        Me.psy_typy_skutocnost_check.Location = New System.Drawing.Point(381, 112)
+        Me.psy_typy_skutocnost_check.Location = New System.Drawing.Point(381, 126)
         Me.psy_typy_skutocnost_check.Name = "psy_typy_skutocnost_check"
         Me.psy_typy_skutocnost_check.Size = New System.Drawing.Size(113, 17)
         Me.psy_typy_skutocnost_check.TabIndex = 23
@@ -298,12 +309,26 @@ Partial Class zoznam_zdruzeni_full
         'psy_typy_plan_check
         '
         Me.psy_typy_plan_check.AutoSize = True
-        Me.psy_typy_plan_check.Location = New System.Drawing.Point(381, 86)
+        Me.psy_typy_plan_check.Location = New System.Drawing.Point(381, 100)
         Me.psy_typy_plan_check.Name = "psy_typy_plan_check"
         Me.psy_typy_plan_check.Size = New System.Drawing.Size(79, 17)
         Me.psy_typy_plan_check.TabIndex = 22
         Me.psy_typy_plan_check.Text = "Plán aspoň"
         Me.psy_typy_plan_check.UseVisualStyleBackColor = True
+        '
+        'zoznam_zdruzeni_report_full
+        '
+        Me.zoznam_zdruzeni_report_full.DataSetName = "zoznam_zdruzeni_report_full"
+        Me.zoznam_zdruzeni_report_full.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'zdruzeniaBindingSource
+        '
+        Me.zdruzeniaBindingSource.DataMember = "zdruzenia"
+        Me.zdruzeniaBindingSource.DataSource = Me.zoznam_zdruzeni_report_full
+        '
+        'zdruzeniaTableAdapter
+        '
+        Me.zdruzeniaTableAdapter.ClearBeforeFill = True
         '
         'zoznam_zdruzeni_full
         '
@@ -337,9 +362,10 @@ Partial Class zoznam_zdruzeni_full
         Me.Controls.Add(Me.jelenia_check)
         Me.Controls.Add(Me.najomna_zmluva_check)
         Me.Controls.Add(Me.vymera_check)
-        Me.Enabled = False
         Me.Name = "zoznam_zdruzeni_full"
         Me.Text = "Zoznam združení"
+        CType(Me.zoznam_zdruzeni_report_full, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.zdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -371,4 +397,7 @@ Partial Class zoznam_zdruzeni_full
     Friend WithEvents psy_ As System.Windows.Forms.Label
     Friend WithEvents psy_typy_skutocnost_check As System.Windows.Forms.CheckBox
     Friend WithEvents psy_typy_plan_check As System.Windows.Forms.CheckBox
+    Friend WithEvents zdruzeniaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents zoznam_zdruzeni_report_full As evidencia_spz.zoznam_zdruzeni_report_full
+    Friend WithEvents zdruzeniaTableAdapter As evidencia_spz.zoznam_zdruzeni_report_fullTableAdapters.zdruzeniaTableAdapter
 End Class
