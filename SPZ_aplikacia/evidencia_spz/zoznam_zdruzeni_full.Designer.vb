@@ -31,7 +31,7 @@ Partial Class zoznam_zdruzeni_full
         Me.ina_check = New System.Windows.Forms.CheckBox
         Me.psy_plan_check = New System.Windows.Forms.CheckBox
         Me.psy_skutocnost_check = New System.Windows.Forms.CheckBox
-        Me.Label1 = New System.Windows.Forms.Label
+        Me.pes_plemena_label = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.vymera_combo = New System.Windows.Forms.ComboBox
         Me.psy_plan_combo = New System.Windows.Forms.ComboBox
@@ -44,6 +44,11 @@ Partial Class zoznam_zdruzeni_full
         Me.naj_zmluva_dt_picker = New System.Windows.Forms.DateTimePicker
         Me.refresh_button = New System.Windows.Forms.Button
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
+        Me.psy_typy_skutocnost_combo = New System.Windows.Forms.ComboBox
+        Me.psy_typy_plan_combo = New System.Windows.Forms.ComboBox
+        Me.psy_ = New System.Windows.Forms.Label
+        Me.psy_typy_skutocnost_check = New System.Windows.Forms.CheckBox
+        Me.psy_typy_plan_check = New System.Windows.Forms.CheckBox
         Me.SuspendLayout()
         '
         'vymera_check
@@ -136,15 +141,15 @@ Partial Class zoznam_zdruzeni_full
         Me.psy_skutocnost_check.Text = "Skutočnosť aspoň"
         Me.psy_skutocnost_check.UseVisualStyleBackColor = True
         '
-        'Label1
+        'pes_plemena_label
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(378, 6)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(27, 13)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Psy"
+        Me.pes_plemena_label.AutoSize = True
+        Me.pes_plemena_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.pes_plemena_label.Location = New System.Drawing.Point(378, 6)
+        Me.pes_plemena_label.Name = "pes_plemena_label"
+        Me.pes_plemena_label.Size = New System.Drawing.Size(86, 13)
+        Me.pes_plemena_label.TabIndex = 9
+        Me.pes_plemena_label.Text = "Plemena psov"
         '
         'Label2
         '
@@ -238,9 +243,9 @@ Partial Class zoznam_zdruzeni_full
         '
         'refresh_button
         '
-        Me.refresh_button.Location = New System.Drawing.Point(459, 97)
+        Me.refresh_button.Location = New System.Drawing.Point(12, 98)
         Me.refresh_button.Name = "refresh_button"
-        Me.refresh_button.Size = New System.Drawing.Size(189, 23)
+        Me.refresh_button.Size = New System.Drawing.Size(331, 23)
         Me.refresh_button.TabIndex = 20
         Me.refresh_button.Text = "Načítať tl. zostavu"
         Me.refresh_button.UseVisualStyleBackColor = True
@@ -252,11 +257,64 @@ Partial Class zoznam_zdruzeni_full
         Me.ReportViewer1.Size = New System.Drawing.Size(986, 336)
         Me.ReportViewer1.TabIndex = 21
         '
+        'psy_typy_skutocnost_combo
+        '
+        Me.psy_typy_skutocnost_combo.Enabled = False
+        Me.psy_typy_skutocnost_combo.FormattingEnabled = True
+        Me.psy_typy_skutocnost_combo.Location = New System.Drawing.Point(494, 110)
+        Me.psy_typy_skutocnost_combo.Name = "psy_typy_skutocnost_combo"
+        Me.psy_typy_skutocnost_combo.Size = New System.Drawing.Size(78, 21)
+        Me.psy_typy_skutocnost_combo.TabIndex = 26
+        '
+        'psy_typy_plan_combo
+        '
+        Me.psy_typy_plan_combo.Enabled = False
+        Me.psy_typy_plan_combo.FormattingEnabled = True
+        Me.psy_typy_plan_combo.Location = New System.Drawing.Point(494, 84)
+        Me.psy_typy_plan_combo.Name = "psy_typy_plan_combo"
+        Me.psy_typy_plan_combo.Size = New System.Drawing.Size(78, 21)
+        Me.psy_typy_plan_combo.TabIndex = 25
+        '
+        'psy_
+        '
+        Me.psy_.AutoSize = True
+        Me.psy_.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.psy_.Location = New System.Drawing.Point(378, 70)
+        Me.psy_.Name = "psy_"
+        Me.psy_.Size = New System.Drawing.Size(65, 13)
+        Me.psy_.TabIndex = 24
+        Me.psy_.Text = "Typy psov"
+        '
+        'psy_typy_skutocnost_check
+        '
+        Me.psy_typy_skutocnost_check.AutoSize = True
+        Me.psy_typy_skutocnost_check.Location = New System.Drawing.Point(381, 112)
+        Me.psy_typy_skutocnost_check.Name = "psy_typy_skutocnost_check"
+        Me.psy_typy_skutocnost_check.Size = New System.Drawing.Size(113, 17)
+        Me.psy_typy_skutocnost_check.TabIndex = 23
+        Me.psy_typy_skutocnost_check.Text = "Skutočnosť aspoň"
+        Me.psy_typy_skutocnost_check.UseVisualStyleBackColor = True
+        '
+        'psy_typy_plan_check
+        '
+        Me.psy_typy_plan_check.AutoSize = True
+        Me.psy_typy_plan_check.Location = New System.Drawing.Point(381, 86)
+        Me.psy_typy_plan_check.Name = "psy_typy_plan_check"
+        Me.psy_typy_plan_check.Size = New System.Drawing.Size(79, 17)
+        Me.psy_typy_plan_check.TabIndex = 22
+        Me.psy_typy_plan_check.Text = "Plán aspoň"
+        Me.psy_typy_plan_check.UseVisualStyleBackColor = True
+        '
         'zoznam_zdruzeni_full
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1003, 474)
+        Me.Controls.Add(Me.psy_typy_skutocnost_combo)
+        Me.Controls.Add(Me.psy_typy_plan_combo)
+        Me.Controls.Add(Me.psy_)
+        Me.Controls.Add(Me.psy_typy_skutocnost_check)
+        Me.Controls.Add(Me.psy_typy_plan_check)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Controls.Add(Me.refresh_button)
         Me.Controls.Add(Me.naj_zmluva_dt_picker)
@@ -269,7 +327,7 @@ Partial Class zoznam_zdruzeni_full
         Me.Controls.Add(Me.psy_plan_combo)
         Me.Controls.Add(Me.vymera_combo)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.pes_plemena_label)
         Me.Controls.Add(Me.psy_skutocnost_check)
         Me.Controls.Add(Me.psy_plan_check)
         Me.Controls.Add(Me.ina_check)
@@ -295,7 +353,7 @@ Partial Class zoznam_zdruzeni_full
     Friend WithEvents ina_check As System.Windows.Forms.CheckBox
     Friend WithEvents psy_plan_check As System.Windows.Forms.CheckBox
     Friend WithEvents psy_skutocnost_check As System.Windows.Forms.CheckBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents pes_plemena_label As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents vymera_combo As System.Windows.Forms.ComboBox
     Friend WithEvents psy_plan_combo As System.Windows.Forms.ComboBox
@@ -307,5 +365,10 @@ Partial Class zoznam_zdruzeni_full
     Friend WithEvents ina_combo As System.Windows.Forms.ComboBox
     Friend WithEvents naj_zmluva_dt_picker As System.Windows.Forms.DateTimePicker
     Friend WithEvents refresh_button As System.Windows.Forms.Button
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Private WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents psy_typy_skutocnost_combo As System.Windows.Forms.ComboBox
+    Friend WithEvents psy_typy_plan_combo As System.Windows.Forms.ComboBox
+    Friend WithEvents psy_ As System.Windows.Forms.Label
+    Friend WithEvents psy_typy_skutocnost_check As System.Windows.Forms.CheckBox
+    Friend WithEvents psy_typy_plan_check As System.Windows.Forms.CheckBox
 End Class

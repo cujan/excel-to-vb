@@ -2,6 +2,8 @@
     Dim vymera As Long
     Dim najomna_zmluva As Date
     Dim psy_plan As Integer
+    Dim psy_typy_plan As Integer
+    Dim psy_typy_skutocnost As Integer
     Dim psy_skutocnost As Integer
     Dim jelenia As Integer
     Dim srncia As Integer
@@ -16,6 +18,8 @@
         zaciatok_datum = "01.01.1900"
         najomna_zmluva = zaciatok_datum
         psy_plan = 0
+        psy_typy_plan = 0
+        psy_typy_skutocnost = 0
         psy_skutocnost = 0
         jelenia = 0
         srncia = 0
@@ -167,6 +171,38 @@
     Private Sub ina_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ina_combo.SelectedIndexChanged
         If ina_combo.SelectedValue <> "" Then
             ina = ina_combo.SelectedValue
+        End If
+    End Sub
+
+    Private Sub psy_typy_plan_check_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles psy_typy_plan_check.CheckedChanged
+        If psy_typy_plan_check.Checked Then
+            psy_typy_plan_combo.Enabled = True
+            psy_typy_plan_combo.SelectedValue = ""
+        Else
+            psy_typy_plan_combo.Enabled = False
+            psy_typy_plan = 0
+        End If
+    End Sub
+
+    Private Sub psy_typy_skutocnost_check_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles psy_typy_skutocnost_check.CheckedChanged
+        If psy_typy_skutocnost_check.Checked Then
+            psy_typy_skutocnost_combo.Enabled = True
+            psy_typy_skutocnost_combo.SelectedValue = ""
+        Else
+            psy_typy_skutocnost_combo.Enabled = False
+            psy_typy_skutocnost = 0
+        End If
+    End Sub
+
+    Private Sub psy_typy_plan_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles psy_typy_plan_combo.SelectedIndexChanged
+        If psy_typy_plan_combo.SelectedValue <> "" Then
+            psy_typy_plan = psy_typy_plan_combo.SelectedValue
+        End If
+    End Sub
+
+    Private Sub psy_typy_skutocnost_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles psy_typy_skutocnost_combo.SelectedIndexChanged
+        If psy_typy_skutocnost_combo.SelectedValue <> "" Then
+            psy_typy_skutocnost = psy_typy_skutocnost_combo.SelectedValue
         End If
     End Sub
 End Class
