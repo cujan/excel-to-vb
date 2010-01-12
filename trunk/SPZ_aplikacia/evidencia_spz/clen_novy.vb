@@ -366,4 +366,22 @@
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         MsgBox(Okres_bydliskaListBox.SelectedItem)
     End Sub
+
+    Private Sub Brokova_zbranComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Brokova_zbranComboBox.SelectedIndexChanged
+
+        If Brokova_zbranComboBox.SelectedItem = "NIE" Then
+            Kontrolne_strelby_brokTextBox.ReadOnly = True
+        Else
+            Kontrolne_strelby_brokTextBox.ReadOnly = False
+        End If
+
+    End Sub
+
+    Private Sub Gulova_zbranComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Gulova_zbranComboBox.SelectedIndexChanged
+        If Gulova_zbranComboBox.SelectedItem = "NIE" Then
+            Kontrolne_strelby_gulaTextBox.ReadOnly = True
+        Else
+            Kontrolne_strelby_gulaTextBox.ReadOnly = False
+        End If
+    End Sub
 End Class

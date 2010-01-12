@@ -1134,7 +1134,6 @@ Partial Class clen_novy
         '
         'Brokova_zbranComboBox
         '
-        Me.Brokova_zbranComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Brokova_zbranComboBox.FormattingEnabled = True
         Me.Brokova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ANO"})
         Me.Brokova_zbranComboBox.Location = New System.Drawing.Point(201, 620)
