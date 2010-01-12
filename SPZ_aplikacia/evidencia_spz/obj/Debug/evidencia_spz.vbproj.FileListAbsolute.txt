@@ -243,3 +243,7 @@ D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz
 D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zoznam_zdruzeni_full.resources
 D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\RdlCompile.cache
 D:\evidencia SPZ\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\RdlCompile.compiled
+E:\_marek\SPZ\spz\evidencia_spz\obj\Debug\evidencia_spz.zoznam_chybajuce_kont_strelby.resources
+E:\_marek\SPZ\spz\evidencia_spz\obj\Debug\evidencia_spz.pokusny_form.resources
+E:\_marek\SPZ\spz\evidencia_spz\bin\Debug\spz_mdf.mdf
+E:\_marek\SPZ\spz\evidencia_spz\bin\Debug\spz_mdf_log.ldf

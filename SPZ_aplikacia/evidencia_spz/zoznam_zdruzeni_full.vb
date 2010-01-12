@@ -13,6 +13,8 @@
     Dim zaciatok_datum As Date
 
     Private Sub zoznam_zdruzeni_full_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'zoznam_zdruzeni_report_full.zdruzenia' table. You can move, or remove it, as needed.
+
 
         vymera = 0
         zaciatok_datum = "01.01.1900"
@@ -27,7 +29,7 @@
         bazant = 0
         ina = 0
 
-
+        Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
         Me.ReportViewer1.RefreshReport()
     End Sub
 
@@ -124,28 +126,38 @@
     Private Sub vymera_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles vymera_combo.SelectedIndexChanged
         If vymera_combo.SelectedValue <> "" Then
             vymera = vymera_combo.SelectedValue
+            Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
+            Me.ReportViewer1.RefreshReport()
         End If
     End Sub
 
     Private Sub naj_zmluva_dt_picker_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles naj_zmluva_dt_picker.ValueChanged
         najomna_zmluva = naj_zmluva_dt_picker.Value
+        Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
+        Me.ReportViewer1.RefreshReport()
     End Sub
 
     Private Sub psy_plan_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles psy_plan_combo.SelectedIndexChanged
         If psy_plan_combo.SelectedValue <> "" Then
             psy_plan = psy_plan_combo.SelectedValue
+            Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
+            Me.ReportViewer1.RefreshReport()
         End If
     End Sub
 
     Private Sub psy_skutocnost_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles psy_skutocnost_combo.SelectedIndexChanged
         If psy_skutocnost_combo.SelectedValue <> "" Then
             psy_skutocnost = psy_skutocnost_combo.SelectedValue
+            Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
+            Me.ReportViewer1.RefreshReport()
         End If
     End Sub
 
     Private Sub jelenia_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles jelenia_combo.SelectedIndexChanged
         If jelenia_combo.SelectedValue <> "" Then
             jelenia = jelenia_combo.SelectedValue
+            Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
+            Me.ReportViewer1.RefreshReport()
 
         End If
     End Sub
@@ -153,24 +165,32 @@
     Private Sub diviacia_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles diviacia_combo.SelectedIndexChanged
         If diviacia_combo.SelectedValue <> "" Then
             diviacia = diviacia_combo.SelectedValue
+            Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
+            Me.ReportViewer1.RefreshReport()
         End If
     End Sub
 
     Private Sub srncia_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles srncia_combo.SelectedIndexChanged
         If srncia_combo.SelectedValue <> "" Then
             srncia = srncia_combo.SelectedValue
+            Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
+            Me.ReportViewer1.RefreshReport()
         End If
     End Sub
 
     Private Sub bazant_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bazant_combo.SelectedIndexChanged
         If bazant_combo.SelectedValue <> "" Then
             bazant = bazant_combo.SelectedValue
+            Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
+            Me.ReportViewer1.RefreshReport()
         End If
     End Sub
 
     Private Sub ina_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ina_combo.SelectedIndexChanged
         If ina_combo.SelectedValue <> "" Then
             ina = ina_combo.SelectedValue
+            Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
+            Me.ReportViewer1.RefreshReport()
         End If
     End Sub
 
@@ -197,12 +217,16 @@
     Private Sub psy_typy_plan_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles psy_typy_plan_combo.SelectedIndexChanged
         If psy_typy_plan_combo.SelectedValue <> "" Then
             psy_typy_plan = psy_typy_plan_combo.SelectedValue
+            Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
+            Me.ReportViewer1.RefreshReport()
         End If
     End Sub
 
     Private Sub psy_typy_skutocnost_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles psy_typy_skutocnost_combo.SelectedIndexChanged
         If psy_typy_skutocnost_combo.SelectedValue <> "" Then
             psy_typy_skutocnost = psy_typy_skutocnost_combo.SelectedValue
+            Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
+            Me.ReportViewer1.RefreshReport()
         End If
     End Sub
 End Class

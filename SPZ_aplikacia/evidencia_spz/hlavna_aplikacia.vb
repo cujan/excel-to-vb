@@ -565,6 +565,8 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub zoznam_zdruzeni_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zoznam_zdruzeni_button.Click
+        zoznam_zdruzeni_full.Show()
+        zoznam_zdruzeni_full.BringToFront()
 
 
     End Sub
@@ -575,7 +577,8 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub kont_strelby_brok_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles kont_strelby_brok_button.Click
-
+        zoznam_chybajuce_kont_strelby.Show()
+        zoznam_chybajuce_kont_strelby.BringToFront()
 
     End Sub
 
@@ -623,7 +626,8 @@ Public Class hlavna_aplikacia
 
 
     Private Sub zoznam_clenov_podla_zdruzeni_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zoznam_clenov_podla_zdruzeni.Click
-
+        zoznam_clenov_full.Show()
+        zoznam_clenov_full.BringToFront()
 
     End Sub
 
