@@ -302,6 +302,10 @@ Partial Public Class zoznam_zdruzeni_report_full
         
         Private columnpes_typy_skutocnost As Global.System.Data.DataColumn
         
+        Private columnpredseda_zdruzenia As Global.System.Data.DataColumn
+        
+        Private columnhospodar_zdruzenia As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub New()
             MyBase.New
@@ -460,6 +464,20 @@ Partial Public Class zoznam_zdruzeni_report_full
             End Get
         End Property
         
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property predseda_zdruzeniaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnpredseda_zdruzenia
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property hospodar_zdruzeniaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnhospodar_zdruzenia
+            End Get
+        End Property
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -507,9 +525,11 @@ Partial Public Class zoznam_zdruzeni_report_full
                     ByVal plemena_plan As String,  _
                     ByVal plemena_skutocnost As String,  _
                     ByVal pes_typy_plan As String,  _
-                    ByVal pes_typy_skutocnost As String) As zdruzeniaRow
+                    ByVal pes_typy_skutocnost As String,  _
+                    ByVal predseda_zdruzenia As String,  _
+                    ByVal hospodar_zdruzenia As String) As zdruzeniaRow
             Dim rowzdruzeniaRow As zdruzeniaRow = CType(Me.NewRow,zdruzeniaRow)
-            Dim columnValuesArray() As Object = New Object() {ico, nazov, sidlo, dic, chovatelska_oblast, cislo_reviru, vymera, les, jelenia, srncia, diviacia, bazant, ina, platnost_najomnej_zmluvy_do, plemena_plan, plemena_skutocnost, pes_typy_plan, pes_typy_skutocnost}
+            Dim columnValuesArray() As Object = New Object() {ico, nazov, sidlo, dic, chovatelska_oblast, cislo_reviru, vymera, les, jelenia, srncia, diviacia, bazant, ina, platnost_najomnej_zmluvy_do, plemena_plan, plemena_skutocnost, pes_typy_plan, pes_typy_skutocnost, predseda_zdruzenia, hospodar_zdruzenia}
             rowzdruzeniaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowzdruzeniaRow)
             Return rowzdruzeniaRow
@@ -552,6 +572,8 @@ Partial Public Class zoznam_zdruzeni_report_full
             Me.columnplemena_skutocnost = MyBase.Columns("plemena_skutocnost")
             Me.columnpes_typy_plan = MyBase.Columns("pes_typy_plan")
             Me.columnpes_typy_skutocnost = MyBase.Columns("pes_typy_skutocnost")
+            Me.columnpredseda_zdruzenia = MyBase.Columns("predseda_zdruzenia")
+            Me.columnhospodar_zdruzenia = MyBase.Columns("hospodar_zdruzenia")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -592,6 +614,10 @@ Partial Public Class zoznam_zdruzeni_report_full
             MyBase.Columns.Add(Me.columnpes_typy_plan)
             Me.columnpes_typy_skutocnost = New Global.System.Data.DataColumn("pes_typy_skutocnost", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpes_typy_skutocnost)
+            Me.columnpredseda_zdruzenia = New Global.System.Data.DataColumn("predseda_zdruzenia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpredseda_zdruzenia)
+            Me.columnhospodar_zdruzenia = New Global.System.Data.DataColumn("hospodar_zdruzenia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnhospodar_zdruzenia)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnico}, true))
             Me.columnico.AllowDBNull = false
             Me.columnico.Unique = true
@@ -617,6 +643,10 @@ Partial Public Class zoznam_zdruzeni_report_full
             Me.columnpes_typy_plan.MaxLength = 180
             Me.columnpes_typy_skutocnost.ReadOnly = true
             Me.columnpes_typy_skutocnost.MaxLength = 180
+            Me.columnpredseda_zdruzenia.ReadOnly = true
+            Me.columnpredseda_zdruzenia.MaxLength = 91
+            Me.columnhospodar_zdruzenia.ReadOnly = true
+            Me.columnhospodar_zdruzenia.MaxLength = 91
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1002,6 +1032,34 @@ Partial Public Class zoznam_zdruzeni_report_full
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property predseda_zdruzenia() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablezdruzenia.predseda_zdruzeniaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'predseda_zdruzenia' in table 'zdruzenia' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablezdruzenia.predseda_zdruzeniaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property hospodar_zdruzenia() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablezdruzenia.hospodar_zdruzeniaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'hospodar_zdruzenia' in table 'zdruzenia' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablezdruzenia.hospodar_zdruzeniaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function IsnazovNull() As Boolean
             Return Me.IsNull(Me.tablezdruzenia.nazovColumn)
         End Function
@@ -1169,6 +1227,26 @@ Partial Public Class zoznam_zdruzeni_report_full
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub Setpes_typy_skutocnostNull()
             Me(Me.tablezdruzenia.pes_typy_skutocnostColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Ispredseda_zdruzeniaNull() As Boolean
+            Return Me.IsNull(Me.tablezdruzenia.predseda_zdruzeniaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setpredseda_zdruzeniaNull()
+            Me(Me.tablezdruzenia.predseda_zdruzeniaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Ishospodar_zdruzeniaNull() As Boolean
+            Return Me.IsNull(Me.tablezdruzenia.hospodar_zdruzeniaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Sethospodar_zdruzeniaNull()
+            Me(Me.tablezdruzenia.hospodar_zdruzeniaColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1347,6 +1425,8 @@ Namespace zoznam_zdruzeni_report_fullTableAdapters
             tableMapping.ColumnMappings.Add("plemena_skutocnost", "plemena_skutocnost")
             tableMapping.ColumnMappings.Add("pes_typy_plan", "pes_typy_plan")
             tableMapping.ColumnMappings.Add("pes_typy_skutocnost", "pes_typy_skutocnost")
+            tableMapping.ColumnMappings.Add("predseda_zdruzenia", "predseda_zdruzenia")
+            tableMapping.ColumnMappings.Add("hospodar_zdruzenia", "hospodar_zdruzenia")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -1409,24 +1489,130 @@ Namespace zoznam_zdruzeni_report_fullTableAdapters
             Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT     ico, nazov, sidlo, dic, chovatelska_oblast, cislo_reviru, vymera, les,"& _ 
-                " jelenia, srncia, diviacia, bazant, ina, platnost_najomnej_zmluvy_do, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
-                "              farbiare_plan + brlohare_plan + ostatne_durice_plan + stavace_plan"& _ 
-                " + sliedice_plan + slovensky_kopov_plan AS plemena_plan, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                     "& _ 
-                " stavace_skutocnost + sliedice_skutocnost + slovensky_kopov_skutocnost + ostatne"& _ 
-                "_durice_skutocnost + brlohare_skutocnost + farbiare_skutocnost AS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"             "& _ 
-                "          plemena_skutocnost, pes_srncia_plan + pes_jelenia_plan + pes_diviacia_"& _ 
-                "plan + pes_mala_plan AS pes_typy_plan, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      pes_jelenia_skuto"& _ 
-                "cnost + pes_diviacia_skutocnost + pes_srncia_skutocnost + pes_mala_skutocnost AS"& _ 
-                " pes_typy_skutocnost"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         zdruzenia"
+            Me._commandCollection(0).CommandText = "SELECT     zdruzenia.ico, zdruzenia.nazov, zdruzenia.sidlo, zdruzenia.dic, zdruze"& _ 
+                "nia.chovatelska_oblast, zdruzenia.cislo_reviru, zdruzenia.vymera, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"            "& _ 
+                "          zdruzenia.les, zdruzenia.jelenia, zdruzenia.srncia, zdruzenia.diviacia"& _ 
+                ", zdruzenia.bazant, zdruzenia.ina, zdruzenia.platnost_najomnej_zmluvy_do, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"    "& _ 
+                "                  zdruzenia.farbiare_plan + zdruzenia.brlohare_plan + zdruzenia."& _ 
+                "ostatne_durice_plan + zdruzenia.stavace_plan + zdruzenia.sliedice_plan + zdruzen"& _ 
+                "ia.slovensky_kopov_plan"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                       AS plemena_plan, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"             "& _ 
+                "         zdruzenia.stavace_skutocnost + zdruzenia.sliedice_skutocnost + zdruzeni"& _ 
+                "a.slovensky_kopov_skutocnost + zdruzenia.ostatne_durice_skutocnost + zdruzenia.b"& _ 
+                "rlohare_skutocnost"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                       + zdruzenia.farbiare_skutocnost AS pl"& _ 
+                "emena_skutocnost, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      zdruzenia.pes_srncia_plan + zdruzenia."& _ 
+                "pes_jelenia_plan + zdruzenia.pes_diviacia_plan + zdruzenia.pes_mala_plan AS pes_"& _ 
+                "typy_plan, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      zdruzenia.pes_jelenia_skutocnost + zdruzenia."& _ 
+                "pes_diviacia_skutocnost + zdruzenia.pes_srncia_skutocnost + zdruzenia.pes_mala_s"& _ 
+                "kutocnost AS pes_typy_skutocnost,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                       c1.meno + ' ' + c1.pri"& _ 
+                "ezvisko AS predseda_zdruzenia, c2.meno + ' ' + c2.priezvisko AS hospodar_zdruzen"& _ 
+                "ia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         zdruzenia LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia A"& _ 
+                "S c1 ON c1.rodne_cislo = zdruzenia.predseda LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                   "& _ 
+                "   all_clenovia AS c2 ON c2.rodne_cislo = zdruzenia.polovny_hospodar"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     "& _ 
+                "(zdruzenia.vymera >= @Param7) AND (zdruzenia.platnost_najomnej_zmluvy_do >= @Par"& _ 
+                "am8) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      (zdruzenia.farbiare_plan + zdruzenia.brlohare_p"& _ 
+                "lan + zdruzenia.ostatne_durice_plan + zdruzenia.stavace_plan + zdruzenia.sliedic"& _ 
+                "e_plan + zdruzenia.slovensky_kopov_plan"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                       >= @Param9) AND "& _ 
+                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      (zdruzenia.pes_srncia_plan + zdruzenia.pes_jelenia_plan "& _ 
+                "+ zdruzenia.pes_diviacia_plan + zdruzenia.pes_mala_plan >= @Param11) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"     "& _ 
+                "                 (zdruzenia.pes_jelenia_skutocnost + zdruzenia.pes_diviacia_skut"& _ 
+                "ocnost + zdruzenia.pes_srncia_skutocnost + zdruzenia.pes_mala_skutocnost >= @Par"& _ 
+                "am12)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                       AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      (zdruzenia.stavace_sku"& _ 
+                "tocnost + zdruzenia.sliedice_skutocnost + zdruzenia.slovensky_kopov_skutocnost +"& _ 
+                " zdruzenia.ostatne_durice_skutocnost + zdruzenia.brlohare_skutocnost"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"          "& _ 
+                "             + zdruzenia.farbiare_skutocnost >= @Param10) AND (zdruzenia.jelenia"& _ 
+                " >= @Param22) AND (zdruzenia.srncia >= @Param23) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      (zd"& _ 
+                "ruzenia.diviacia >= @Param24) AND (zdruzenia.bazant >= @Param25) AND (zdruzenia."& _ 
+                "ina >= @Param26)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param7", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "vymera", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param8", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "platnost_najomnej_zmluvy_do", Global.System.Data.DataRowVersion.Current, Nothing))
+            Dim param As Global.System.Data.SqlServerCe.SqlCeParameter = New Global.System.Data.SqlServerCe.SqlCeParameter
+            param.ParameterName = "@Param9"
+            param.Size = 1024
+            param.IsNullable = true
+            Me._commandCollection(0).Parameters.Add(param)
+            param = New Global.System.Data.SqlServerCe.SqlCeParameter
+            param.ParameterName = "@Param11"
+            param.Size = 1024
+            param.IsNullable = true
+            Me._commandCollection(0).Parameters.Add(param)
+            param = New Global.System.Data.SqlServerCe.SqlCeParameter
+            param.ParameterName = "@Param12"
+            param.Size = 1024
+            param.IsNullable = true
+            Me._commandCollection(0).Parameters.Add(param)
+            param = New Global.System.Data.SqlServerCe.SqlCeParameter
+            param.ParameterName = "@Param10"
+            param.Size = 1024
+            param.IsNullable = true
+            Me._commandCollection(0).Parameters.Add(param)
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param22", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "jelenia", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param23", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "srncia", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param24", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "diviacia", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param25", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "bazant", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param26", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ina", Global.System.Data.DataRowVersion.Current, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As zoznam_zdruzeni_report_full.zdruzeniaDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As zoznam_zdruzeni_report_full.zdruzeniaDataTable, ByVal Param7 As String, ByVal Param8 As String, ByVal Param9 As String, ByVal Param11 As String, ByVal Param12 As String, ByVal Param10 As String, ByVal Param22 As String, ByVal Param23 As String, ByVal Param24 As String, ByVal Param25 As String, ByVal Param26 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Param7 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param7,String)
+            End If
+            If (Param8 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param8,String)
+            End If
+            If (Param9 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param9")
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(Param9,String)
+            End If
+            If (Param11 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param11")
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Param11,String)
+            End If
+            If (Param12 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param12")
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(Param12,String)
+            End If
+            If (Param10 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param10")
+            Else
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(Param10,String)
+            End If
+            If (Param22 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(6).Value = CType(Param22,String)
+            End If
+            If (Param23 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(7).Value = CType(Param23,String)
+            End If
+            If (Param24 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(8).Value = CType(Param24,String)
+            End If
+            If (Param25 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(9).Value = CType(Param25,String)
+            End If
+            If (Param26 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(10).Value = CType(Param26,String)
+            End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -1437,8 +1623,63 @@ Namespace zoznam_zdruzeni_report_fullTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As zoznam_zdruzeni_report_full.zdruzeniaDataTable
+        Public Overloads Overridable Function GetData(ByVal Param7 As String, ByVal Param8 As String, ByVal Param9 As String, ByVal Param11 As String, ByVal Param12 As String, ByVal Param10 As String, ByVal Param22 As String, ByVal Param23 As String, ByVal Param24 As String, ByVal Param25 As String, ByVal Param26 As String) As zoznam_zdruzeni_report_full.zdruzeniaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Param7 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param7,String)
+            End If
+            If (Param8 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param8,String)
+            End If
+            If (Param9 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param9")
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(Param9,String)
+            End If
+            If (Param11 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param11")
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Param11,String)
+            End If
+            If (Param12 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param12")
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(Param12,String)
+            End If
+            If (Param10 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param10")
+            Else
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(Param10,String)
+            End If
+            If (Param22 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(6).Value = CType(Param22,String)
+            End If
+            If (Param23 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(7).Value = CType(Param23,String)
+            End If
+            If (Param24 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(8).Value = CType(Param24,String)
+            End If
+            If (Param25 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(9).Value = CType(Param25,String)
+            End If
+            If (Param26 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(10).Value = CType(Param26,String)
+            End If
             Dim dataTable As zoznam_zdruzeni_report_full.zdruzeniaDataTable = New zoznam_zdruzeni_report_full.zdruzeniaDataTable
             Me.Adapter.Fill(dataTable)
             Return dataTable
