@@ -346,6 +346,14 @@
     <Compile Include="zoznam_clenov_full.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="zoznam_kont_strelby.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zoznam_kont_strelby.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zoznam_kont_strelby.vb">
+      <DependentUpon>zoznam_kont_strelby.xsd</DependentUpon>
+    </Compile>
     <Compile Include="zoznam_zdruzeni_combo.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -669,6 +677,17 @@
     </None>
     <None Include="zoznam_clenov.xss">
       <DependentUpon>zoznam_clenov.xsd</DependentUpon>
+    </None>
+    <None Include="zoznam_kont_strelby.xsc">
+      <DependentUpon>zoznam_kont_strelby.xsd</DependentUpon>
+    </None>
+    <None Include="zoznam_kont_strelby.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zoznam_kont_strelby.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zoznam_kont_strelby.xss">
+      <DependentUpon>zoznam_kont_strelby.xsd</DependentUpon>
     </None>
     <None Include="zoznam_zdruzeni_combo.xsc">
       <DependentUpon>zoznam_zdruzeni_combo.xsd</DependentUpon>

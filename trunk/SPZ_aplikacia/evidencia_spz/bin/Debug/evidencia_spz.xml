@@ -6,7 +6,59 @@ evidencia_spz
 </name>
 </assembly>
 <members>
-<member name="T:evidencia_spz.roky.rokyDataTable">
+<member name="T:evidencia_spz.zoznam_kont_strelby.zoznam_kont_strelbyDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:evidencia_spz.zoznam_kont_strelby.zoznam_kont_strelbyRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:evidencia_spz.zoznam_kont_strelby.zoznam_kont_strelbyRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:evidencia_spz.zoznam_kont_strelby">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:evidencia_spz.zoznam_kont_strelbyTableAdapters.zoznam_kont_strelbyTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:evidencia_spz.zoznam_kont_strelbyTableAdapters.TableAdapterManager.UpdateUpdatedRows(evidencia_spz.zoznam_kont_strelby,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:evidencia_spz.zoznam_kont_strelbyTableAdapters.TableAdapterManager.UpdateInsertedRows(evidencia_spz.zoznam_kont_strelby,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:evidencia_spz.zoznam_kont_strelbyTableAdapters.TableAdapterManager.UpdateDeletedRows(evidencia_spz.zoznam_kont_strelby,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:evidencia_spz.zoznam_kont_strelbyTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:evidencia_spz.zoznam_kont_strelbyTableAdapters.TableAdapterManager.UpdateAll(evidencia_spz.zoznam_kont_strelby)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:evidencia_spz.zoznam_kont_strelbyTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:evidencia_spz.zoznam_kont_strelbyTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:evidencia_spz.zoznam_kont_strelbyTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:evidencia_spz.roky.rokyDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
