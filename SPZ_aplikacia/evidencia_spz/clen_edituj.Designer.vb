@@ -142,6 +142,19 @@ Partial Class clen_edituj
         Me.Brokova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.Button2 = New System.Windows.Forms.Button
+        Me.Titul_pred_idComboBox = New System.Windows.Forms.ComboBox
+        Me.TitulpredBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Titul_predTableAdapter = New evidencia_spz.spzDataSetTableAdapters.titul_predTableAdapter
+        Me.Titul_za_idComboBox = New System.Windows.Forms.ComboBox
+        Me.TitulzaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Titul_zaTableAdapter = New evidencia_spz.spzDataSetTableAdapters.titul_zaTableAdapter
+        Me.Narodnost_idComboBox = New System.Windows.Forms.ComboBox
+        Me.NarodnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.NarodnostTableAdapter = New evidencia_spz.spzDataSetTableAdapters.narodnostTableAdapter
+        Me.Statna_prislusnost_idComboBox = New System.Windows.Forms.ComboBox
+        Me.StatnaprislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Statna_prislusnostTableAdapter = New evidencia_spz.spzDataSetTableAdapters.statna_prislusnostTableAdapter
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Cislo_plLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -192,6 +205,11 @@ Partial Class clen_edituj
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CiselnikobceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ObceDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulpredBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Cislo_plLabel
@@ -612,7 +630,7 @@ Partial Class clen_edituj
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -949,6 +967,7 @@ Partial Class clen_edituj
         Me.Titul_pred_idTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "titul_pred_id", True))
         Me.Titul_pred_idTextBox.Location = New System.Drawing.Point(316, 959)
         Me.Titul_pred_idTextBox.Name = "Titul_pred_idTextBox"
+        Me.Titul_pred_idTextBox.ReadOnly = True
         Me.Titul_pred_idTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Titul_pred_idTextBox.TabIndex = 72
         '
@@ -957,6 +976,7 @@ Partial Class clen_edituj
         Me.Titul_za_idTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "titul_za_id", True))
         Me.Titul_za_idTextBox.Location = New System.Drawing.Point(316, 985)
         Me.Titul_za_idTextBox.Name = "Titul_za_idTextBox"
+        Me.Titul_za_idTextBox.ReadOnly = True
         Me.Titul_za_idTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Titul_za_idTextBox.TabIndex = 74
         '
@@ -965,6 +985,7 @@ Partial Class clen_edituj
         Me.Narodnost_idTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "narodnost_id", True))
         Me.Narodnost_idTextBox.Location = New System.Drawing.Point(316, 1011)
         Me.Narodnost_idTextBox.Name = "Narodnost_idTextBox"
+        Me.Narodnost_idTextBox.ReadOnly = True
         Me.Narodnost_idTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Narodnost_idTextBox.TabIndex = 76
         '
@@ -1180,12 +1201,100 @@ Partial Class clen_edituj
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Titul_pred_idComboBox
+        '
+        Me.Titul_pred_idComboBox.DataSource = Me.TitulpredBindingSource
+        Me.Titul_pred_idComboBox.DisplayMember = "skratka"
+        Me.Titul_pred_idComboBox.FormattingEnabled = True
+        Me.Titul_pred_idComboBox.Location = New System.Drawing.Point(547, 962)
+        Me.Titul_pred_idComboBox.Name = "Titul_pred_idComboBox"
+        Me.Titul_pred_idComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Titul_pred_idComboBox.TabIndex = 100
+        Me.Titul_pred_idComboBox.ValueMember = "id"
+        '
+        'TitulpredBindingSource
+        '
+        Me.TitulpredBindingSource.DataMember = "titul_pred"
+        Me.TitulpredBindingSource.DataSource = Me.SpzDataSet
+        '
+        'Titul_predTableAdapter
+        '
+        Me.Titul_predTableAdapter.ClearBeforeFill = True
+        '
+        'Titul_za_idComboBox
+        '
+        Me.Titul_za_idComboBox.DataSource = Me.TitulzaBindingSource
+        Me.Titul_za_idComboBox.DisplayMember = "skratka"
+        Me.Titul_za_idComboBox.FormattingEnabled = True
+        Me.Titul_za_idComboBox.Location = New System.Drawing.Point(547, 989)
+        Me.Titul_za_idComboBox.Name = "Titul_za_idComboBox"
+        Me.Titul_za_idComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Titul_za_idComboBox.TabIndex = 101
+        Me.Titul_za_idComboBox.ValueMember = "id"
+        '
+        'TitulzaBindingSource
+        '
+        Me.TitulzaBindingSource.DataMember = "titul_za"
+        Me.TitulzaBindingSource.DataSource = Me.SpzDataSet
+        '
+        'Titul_zaTableAdapter
+        '
+        Me.Titul_zaTableAdapter.ClearBeforeFill = True
+        '
+        'Narodnost_idComboBox
+        '
+        Me.Narodnost_idComboBox.DataSource = Me.NarodnostBindingSource
+        Me.Narodnost_idComboBox.DisplayMember = "skratka"
+        Me.Narodnost_idComboBox.FormattingEnabled = True
+        Me.Narodnost_idComboBox.Location = New System.Drawing.Point(548, 1015)
+        Me.Narodnost_idComboBox.Name = "Narodnost_idComboBox"
+        Me.Narodnost_idComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Narodnost_idComboBox.TabIndex = 102
+        Me.Narodnost_idComboBox.ValueMember = "id"
+        '
+        'NarodnostBindingSource
+        '
+        Me.NarodnostBindingSource.DataMember = "narodnost"
+        Me.NarodnostBindingSource.DataSource = Me.SpzDataSet
+        '
+        'NarodnostTableAdapter
+        '
+        Me.NarodnostTableAdapter.ClearBeforeFill = True
+        '
+        'Statna_prislusnost_idComboBox
+        '
+        Me.Statna_prislusnost_idComboBox.DataSource = Me.StatnaprislusnostBindingSource
+        Me.Statna_prislusnost_idComboBox.DisplayMember = "skratka"
+        Me.Statna_prislusnost_idComboBox.FormattingEnabled = True
+        Me.Statna_prislusnost_idComboBox.Location = New System.Drawing.Point(548, 1037)
+        Me.Statna_prislusnost_idComboBox.Name = "Statna_prislusnost_idComboBox"
+        Me.Statna_prislusnost_idComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Statna_prislusnost_idComboBox.TabIndex = 103
+        Me.Statna_prislusnost_idComboBox.ValueMember = "id"
+        '
+        'StatnaprislusnostBindingSource
+        '
+        Me.StatnaprislusnostBindingSource.DataMember = "statna_prislusnost"
+        Me.StatnaprislusnostBindingSource.DataSource = Me.SpzDataSet
+        '
+        'Statna_prislusnostTableAdapter
+        '
+        Me.Statna_prislusnostTableAdapter.ClearBeforeFill = True
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'clen_edituj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1206, 784)
+        Me.ClientSize = New System.Drawing.Size(1206, 864)
+        Me.Controls.Add(Me.Statna_prislusnost_idComboBox)
+        Me.Controls.Add(Me.Narodnost_idComboBox)
+        Me.Controls.Add(Me.Titul_za_idComboBox)
+        Me.Controls.Add(Me.Titul_pred_idComboBox)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Gulova_zbranComboBox)
         Me.Controls.Add(Me.Brokova_zbranComboBox)
@@ -1293,6 +1402,11 @@ Partial Class clen_edituj
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CiselnikobceBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ObceDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulpredBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitulzaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1373,4 +1487,17 @@ Partial Class clen_edituj
     Friend WithEvents Brokova_zbranComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents Gulova_zbranComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Titul_pred_idComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents TitulpredBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Titul_predTableAdapter As evidencia_spz.spzDataSetTableAdapters.titul_predTableAdapter
+    Friend WithEvents Titul_za_idComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents TitulzaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Titul_zaTableAdapter As evidencia_spz.spzDataSetTableAdapters.titul_zaTableAdapter
+    Friend WithEvents Narodnost_idComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents NarodnostBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents NarodnostTableAdapter As evidencia_spz.spzDataSetTableAdapters.narodnostTableAdapter
+    Friend WithEvents Statna_prislusnost_idComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents StatnaprislusnostBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Statna_prislusnostTableAdapter As evidencia_spz.spzDataSetTableAdapters.statna_prislusnostTableAdapter
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

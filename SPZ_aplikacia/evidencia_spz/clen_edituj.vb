@@ -8,6 +8,14 @@
     End Sub
 
     Private Sub clen_edituj_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'SpzDataSet.statna_prislusnost' table. You can move, or remove it, as needed.
+        Me.Statna_prislusnostTableAdapter.Fill(Me.SpzDataSet.statna_prislusnost)
+        'TODO: This line of code loads data into the 'SpzDataSet.narodnost' table. You can move, or remove it, as needed.
+        Me.NarodnostTableAdapter.Fill(Me.SpzDataSet.narodnost)
+        'TODO: This line of code loads data into the 'SpzDataSet.titul_za' table. You can move, or remove it, as needed.
+        Me.Titul_zaTableAdapter.Fill(Me.SpzDataSet.titul_za)
+        'TODO: This line of code loads data into the 'SpzDataSet.titul_pred' table. You can move, or remove it, as needed.
+        Me.Titul_predTableAdapter.Fill(Me.SpzDataSet.titul_pred)
         'TODO: This line of code loads data into the 'ObceDataSet.ciselnik_obce' table. You can move, or remove it, as needed.
         Me.Ciselnik_obceTableAdapter.Fill(Me.ObceDataSet.ciselnik_obce)
         'TODO: This line of code loads data into the 'SpzDataSet.zdruzenia' table. You can move, or remove it, as needed.
@@ -83,6 +91,39 @@
             Vyznamenanie_kedyDateTimePicker.Checked = False
         Else
             Vyznamenanie_kedyDateTimePicker.Value = Vyznamenanie_kedyTextBox.Text
+        End If
+
+        'nastavi pociatocnu hodnotu titul_pred
+
+        If Titul_pred_idTextBox.Text = "" Then
+            Titul_pred_idComboBox.SelectedValue = 0
+        Else
+            Titul_pred_idComboBox.SelectedValue = Titul_pred_idTextBox.Text
+
+        End If
+        'nastavi pociatocnu hodnotu titul_za
+
+        If Titul_za_idTextBox.Text = "" Then
+            Titul_za_idComboBox.SelectedValue = 0
+        Else
+            Titul_za_idComboBox.SelectedValue = Titul_za_idTextBox.Text
+
+        End If
+        'nastavi pociatocnu hodnotu narodnost_id
+
+        If Narodnost_idTextBox.Text = "" Then
+            Narodnost_idComboBox.SelectedValue = 0
+        Else
+            Narodnost_idComboBox.SelectedValue = Narodnost_idTextBox.Text
+
+        End If
+        'nastavi pociatocnu hodnotu statna_prislusnost_id
+
+        If Statna_prislusnost_idTextBox.Text = "" Then
+            Statna_prislusnost_idComboBox.SelectedValue = 0
+        Else
+            Statna_prislusnost_idComboBox.SelectedValue = Statna_prislusnost_idTextBox.Text
+
         End If
     End Sub
 
@@ -173,20 +214,20 @@
             .AddWithValue("miesto_vyzsej_skusky_z_polovnictva", Miesto_vyzsej_skusky_z_polovnictvaTextBox.Text)
 
 
-            If Brokova_zbranComboBox.SelectedItem = "" Then
+            If Brokova_zbranComboBox.Text = "" Then
                 .AddWithValue("brokova_zbran", DBNull.Value)
             Else
-                .AddWithValue("brokova_zbran", Brokova_zbranComboBox.SelectedValue)
+                .AddWithValue("brokova_zbran", Brokova_zbranComboBox.Text)
             End If
             If Kontrolne_strelby_brokTextBox.Text = "" Then
                 .AddWithValue("kontrolne_strelby_brok", DBNull.Value)
             Else
                 .AddWithValue("kontrolne_strelby_brok", Kontrolne_strelby_brokTextBox.Text)
             End If
-            If Gulova_zbranComboBox.SelectedValue = "" Then
+            If Gulova_zbranComboBox.Text = "" Then
                 .AddWithValue("gulova_zbran", DBNull.Value)
             Else
-                .AddWithValue("gulova_zbran", Gulova_zbranComboBox.SelectedValue)
+                .AddWithValue("gulova_zbran", Gulova_zbranComboBox.Text)
             End If
             If Kontrolne_strelby_gulaTextBox.Text = "" Then
                 .AddWithValue("kontrolne_strelby_gula", DBNull.Value)
@@ -202,25 +243,25 @@
             End If
             .AddWithValue("udelene_tresty", Udelene_trestyTextBox.Text)
             .AddWithValue("poznamky", PoznamkyTextBox.Text)
-            If Titul_pred_idTextBox.Text = "" Then
+            If Titul_pred_idComboBox.SelectedValue = 0 Then
                 .AddWithValue("titul_pred_id", DBNull.Value)
             Else
-                .AddWithValue("titul_pred_id", Titul_pred_idTextBox.Text)
+                .AddWithValue("titul_pred_id", Titul_pred_idComboBox.SelectedValue)
             End If
-            If Titul_za_idTextBox.Text = "" Then
+            If Titul_za_idComboBox.SelectedValue = 0 Then
                 .AddWithValue("titul_za_id", DBNull.Value)
             Else
-                .AddWithValue("titul_za_id", Titul_za_idTextBox.Text)
+                .AddWithValue("titul_za_id", Titul_za_idComboBox.SelectedValue)
             End If
-            If Narodnost_idTextBox.Text = "" Then
+            If Narodnost_idComboBox.SelectedValue = 0 Then
                 .AddWithValue("narodnost_id", DBNull.Value)
             Else
-                .AddWithValue("narodnost_id", Narodnost_idTextBox.Text)
+                .AddWithValue("narodnost_id", Narodnost_idComboBox.SelectedValue)
             End If
-            If Statna_prislusnost_idTextBox.Text = "" Then
+            If Statna_prislusnost_idComboBox.SelectedValue = 0 Then
                 .AddWithValue("statna_prislusnost_id", DBNull.Value)
             Else
-                .AddWithValue("statna_prislusnost_id", Statna_prislusnost_idTextBox.Text)
+                .AddWithValue("statna_prislusnost_id", Statna_prislusnost_idComboBox.SelectedValue)
             End If
             .AddWithValue("ico_clenovia", Ico_clenoviaTextBox.Text)
             If MestoComboBox.SelectedValue = "" Then
@@ -287,6 +328,69 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        'MsgBox(Brokova_zbranComboBox.Items.Contains)
+        MsgBox(Brokova_zbranComboBox.Text)
+    End Sub
+
+    Private Sub PriezviskoTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PriezviskoTextBox.TextChanged
+
+    End Sub
+
+    Private Sub PriezviskoTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles PriezviskoTextBox.Validating
+        Dim chyba As String
+        If Not kontrola_priezviska(PriezviskoTextBox.Text, chyba) Then
+            'nastav a zobraz chybu
+            ErrorProvider1.SetError(PriezviskoTextBox, chyba)
+        Else
+            'zrus(chybu)
+            ErrorProvider1.SetError(PriezviskoTextBox, Nothing)
+        End If
+    End Sub
+
+    Private Sub Clen_spz_odTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Clen_spz_odTextBox.Validating
+        Dim chyba As String
+
+        If Not kontrola_roka(Clen_spz_odTextBox.Text, chyba) Then
+            'nastav a zobraz chybu
+            ErrorProvider1.SetError(Clen_spz_odTextBox, chyba)
+        Else
+            'zrus(chybu)
+            ErrorProvider1.SetError(Clen_spz_odTextBox, Nothing)
+        End If
+    End Sub
+
+    Private Sub Clenske_doTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Clenske_doTextBox.Validating
+        Dim chyba As String
+
+        If Not kontrola_roka(Clenske_doTextBox.Text, chyba) Then
+            'nastav a zobraz chybu
+            ErrorProvider1.SetError(Clenske_doTextBox, chyba)
+        Else
+            'zrus(chybu)
+            ErrorProvider1.SetError(Clenske_doTextBox, Nothing)
+        End If
+    End Sub
+
+    Private Sub Kontrolne_strelby_brokTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Kontrolne_strelby_brokTextBox.Validating
+        Dim chyba As String
+
+        If Not kontrola_roka(Kontrolne_strelby_brokTextBox.Text, chyba) Then
+            'nastav a zobraz chybu
+            ErrorProvider1.SetError(Kontrolne_strelby_brokTextBox, chyba)
+        Else
+            'zrus(chybu)
+            ErrorProvider1.SetError(Kontrolne_strelby_brokTextBox, Nothing)
+        End If
+    End Sub
+
+    Private Sub Kontrolne_strelby_gulaTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Kontrolne_strelby_gulaTextBox.Validating
+        Dim chyba As String
+
+        If Not kontrola_roka(Kontrolne_strelby_gulaTextBox.Text, chyba) Then
+            'nastav a zobraz chybu
+            ErrorProvider1.SetError(Kontrolne_strelby_gulaTextBox, chyba)
+        Else
+            'zrus(chybu)
+            ErrorProvider1.SetError(Kontrolne_strelby_gulaTextBox, Nothing)
+        End If
     End Sub
 End Class
