@@ -1176,7 +1176,7 @@ Partial Class clen_edituj
         '
         Me.Brokova_zbranComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "brokova_zbran", True))
         Me.Brokova_zbranComboBox.FormattingEnabled = True
-        Me.Brokova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ANO"})
+        Me.Brokova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ÁNO"})
         Me.Brokova_zbranComboBox.Location = New System.Drawing.Point(316, 750)
         Me.Brokova_zbranComboBox.Name = "Brokova_zbranComboBox"
         Me.Brokova_zbranComboBox.Size = New System.Drawing.Size(121, 21)
@@ -1186,7 +1186,7 @@ Partial Class clen_edituj
         '
         Me.Gulova_zbranComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "gulova_zbran", True))
         Me.Gulova_zbranComboBox.FormattingEnabled = True
-        Me.Gulova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ANO"})
+        Me.Gulova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ÁNO"})
         Me.Gulova_zbranComboBox.Location = New System.Drawing.Point(316, 802)
         Me.Gulova_zbranComboBox.Name = "Gulova_zbranComboBox"
         Me.Gulova_zbranComboBox.Size = New System.Drawing.Size(121, 21)
@@ -1194,7 +1194,7 @@ Partial Class clen_edituj
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(683, 748)
+        Me.Button2.Location = New System.Drawing.Point(682, 750)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 99
@@ -1290,7 +1290,7 @@ Partial Class clen_edituj
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1206, 864)
+        Me.ClientSize = New System.Drawing.Size(1206, 778)
         Me.Controls.Add(Me.Statna_prislusnost_idComboBox)
         Me.Controls.Add(Me.Narodnost_idComboBox)
         Me.Controls.Add(Me.Titul_za_idComboBox)

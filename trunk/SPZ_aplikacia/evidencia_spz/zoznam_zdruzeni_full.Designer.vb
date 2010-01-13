@@ -23,7 +23,9 @@ Partial Class zoznam_zdruzeni_full
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Me.zdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.zoznam_zdruzeni_report_full = New evidencia_spz.zoznam_zdruzeni_report_full
         Me.vymera_check = New System.Windows.Forms.CheckBox
         Me.najomna_zmluva_check = New System.Windows.Forms.CheckBox
         Me.jelenia_check = New System.Windows.Forms.CheckBox
@@ -43,7 +45,6 @@ Partial Class zoznam_zdruzeni_full
         Me.srncia_combo = New System.Windows.Forms.ComboBox
         Me.bazant_combo = New System.Windows.Forms.ComboBox
         Me.ina_combo = New System.Windows.Forms.ComboBox
-        Me.naj_zmluva_dt_picker = New System.Windows.Forms.DateTimePicker
         Me.refresh_button = New System.Windows.Forms.Button
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
         Me.psy_typy_skutocnost_combo = New System.Windows.Forms.ComboBox
@@ -51,21 +52,35 @@ Partial Class zoznam_zdruzeni_full
         Me.psy_ = New System.Windows.Forms.Label
         Me.psy_typy_skutocnost_check = New System.Windows.Forms.CheckBox
         Me.psy_typy_plan_check = New System.Windows.Forms.CheckBox
-        Me.zoznam_zdruzeni_report_full = New evidencia_spz.zoznam_zdruzeni_report_full
-        Me.zdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.zdruzeniaTableAdapter = New evidencia_spz.zoznam_zdruzeni_report_fullTableAdapters.zdruzeniaTableAdapter
-        CType(Me.zoznam_zdruzeni_report_full, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.platnost_naj_zmluvy_combo = New System.Windows.Forms.ComboBox
+        Me.RokyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Roky = New evidencia_spz.roky
+        Me.RokyTableAdapter = New evidencia_spz.rokyTableAdapters.rokyTableAdapter
         CType(Me.zdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.zoznam_zdruzeni_report_full, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RokyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Roky, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'zdruzeniaBindingSource
+        '
+        Me.zdruzeniaBindingSource.DataMember = "zdruzenia"
+        Me.zdruzeniaBindingSource.DataSource = Me.zoznam_zdruzeni_report_full
+        '
+        'zoznam_zdruzeni_report_full
+        '
+        Me.zoznam_zdruzeni_report_full.DataSetName = "zoznam_zdruzeni_report_full"
+        Me.zoznam_zdruzeni_report_full.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'vymera_check
         '
         Me.vymera_check.AutoSize = True
         Me.vymera_check.Location = New System.Drawing.Point(12, 22)
         Me.vymera_check.Name = "vymera_check"
-        Me.vymera_check.Size = New System.Drawing.Size(93, 17)
+        Me.vymera_check.Size = New System.Drawing.Size(114, 17)
         Me.vymera_check.TabIndex = 0
-        Me.vymera_check.Text = "Výmera aspoň"
+        Me.vymera_check.Text = "Výmera aspoň (ha)"
         Me.vymera_check.UseVisualStyleBackColor = True
         '
         'najomna_zmluva_check
@@ -73,15 +88,15 @@ Partial Class zoznam_zdruzeni_full
         Me.najomna_zmluva_check.AutoSize = True
         Me.najomna_zmluva_check.Location = New System.Drawing.Point(12, 48)
         Me.najomna_zmluva_check.Name = "najomna_zmluva_check"
-        Me.najomna_zmluva_check.Size = New System.Drawing.Size(192, 17)
+        Me.najomna_zmluva_check.Size = New System.Drawing.Size(160, 17)
         Me.najomna_zmluva_check.TabIndex = 1
-        Me.najomna_zmluva_check.Text = "Platnosť nájomnej zmluvy aspoń do"
+        Me.najomna_zmluva_check.Text = "Platnosť nájomnej zmluvy do"
         Me.najomna_zmluva_check.UseVisualStyleBackColor = True
         '
         'jelenia_check
         '
         Me.jelenia_check.AutoSize = True
-        Me.jelenia_check.Location = New System.Drawing.Point(618, 22)
+        Me.jelenia_check.Location = New System.Drawing.Point(605, 22)
         Me.jelenia_check.Name = "jelenia_check"
         Me.jelenia_check.Size = New System.Drawing.Size(91, 17)
         Me.jelenia_check.TabIndex = 2
@@ -91,7 +106,7 @@ Partial Class zoznam_zdruzeni_full
         'diviacia_check
         '
         Me.diviacia_check.AutoSize = True
-        Me.diviacia_check.Location = New System.Drawing.Point(618, 48)
+        Me.diviacia_check.Location = New System.Drawing.Point(605, 48)
         Me.diviacia_check.Name = "diviacia_check"
         Me.diviacia_check.Size = New System.Drawing.Size(96, 17)
         Me.diviacia_check.TabIndex = 3
@@ -101,7 +116,7 @@ Partial Class zoznam_zdruzeni_full
         'srncia_check
         '
         Me.srncia_check.AutoSize = True
-        Me.srncia_check.Location = New System.Drawing.Point(618, 74)
+        Me.srncia_check.Location = New System.Drawing.Point(605, 74)
         Me.srncia_check.Name = "srncia_check"
         Me.srncia_check.Size = New System.Drawing.Size(88, 17)
         Me.srncia_check.TabIndex = 4
@@ -131,7 +146,7 @@ Partial Class zoznam_zdruzeni_full
         'psy_plan_check
         '
         Me.psy_plan_check.AutoSize = True
-        Me.psy_plan_check.Location = New System.Drawing.Point(381, 22)
+        Me.psy_plan_check.Location = New System.Drawing.Point(358, 22)
         Me.psy_plan_check.Name = "psy_plan_check"
         Me.psy_plan_check.Size = New System.Drawing.Size(79, 17)
         Me.psy_plan_check.TabIndex = 7
@@ -141,7 +156,7 @@ Partial Class zoznam_zdruzeni_full
         'psy_skutocnost_check
         '
         Me.psy_skutocnost_check.AutoSize = True
-        Me.psy_skutocnost_check.Location = New System.Drawing.Point(381, 48)
+        Me.psy_skutocnost_check.Location = New System.Drawing.Point(358, 48)
         Me.psy_skutocnost_check.Name = "psy_skutocnost_check"
         Me.psy_skutocnost_check.Size = New System.Drawing.Size(113, 17)
         Me.psy_skutocnost_check.TabIndex = 8
@@ -152,7 +167,7 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.pes_plemena_label.AutoSize = True
         Me.pes_plemena_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pes_plemena_label.Location = New System.Drawing.Point(378, 6)
+        Me.pes_plemena_label.Location = New System.Drawing.Point(355, 6)
         Me.pes_plemena_label.Name = "pes_plemena_label"
         Me.pes_plemena_label.Size = New System.Drawing.Size(86, 13)
         Me.pes_plemena_label.TabIndex = 9
@@ -162,7 +177,7 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(615, 6)
+        Me.Label2.Location = New System.Drawing.Point(602, 6)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(33, 13)
         Me.Label2.TabIndex = 10
@@ -172,16 +187,18 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.vymera_combo.Enabled = False
         Me.vymera_combo.FormattingEnabled = True
-        Me.vymera_combo.Location = New System.Drawing.Point(211, 20)
+        Me.vymera_combo.Items.AddRange(New Object() {"1000", "975", "950", "925", "900", "875", "850", "825", "800", "775", "750", "725", "700", "675", "650", "625", "600", "575", "550", "525", "500", "475", "450", "425", "400", "375", "350", "325", "300", "275", "250", "225", "200", "175", "150", "125", "100", "75", "50", "25"})
+        Me.vymera_combo.Location = New System.Drawing.Point(178, 20)
         Me.vymera_combo.Name = "vymera_combo"
-        Me.vymera_combo.Size = New System.Drawing.Size(132, 21)
+        Me.vymera_combo.Size = New System.Drawing.Size(78, 21)
         Me.vymera_combo.TabIndex = 11
         '
         'psy_plan_combo
         '
         Me.psy_plan_combo.Enabled = False
         Me.psy_plan_combo.FormattingEnabled = True
-        Me.psy_plan_combo.Location = New System.Drawing.Point(494, 20)
+        Me.psy_plan_combo.Items.AddRange(New Object() {"100", "95", "90", "85", "80", "75", "70", "65", "60", "55", "50", "45", "40", "35", "30", "25", "20", "15", "10", "5", "4", "3", "2", "1"})
+        Me.psy_plan_combo.Location = New System.Drawing.Point(471, 20)
         Me.psy_plan_combo.Name = "psy_plan_combo"
         Me.psy_plan_combo.Size = New System.Drawing.Size(78, 21)
         Me.psy_plan_combo.TabIndex = 12
@@ -190,7 +207,8 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.jelenia_combo.Enabled = False
         Me.jelenia_combo.FormattingEnabled = True
-        Me.jelenia_combo.Location = New System.Drawing.Point(715, 20)
+        Me.jelenia_combo.Items.AddRange(New Object() {"100", "95", "90", "85", "80", "75", "70", "65", "60", "55", "50", "45", "40", "35", "30", "25", "20", "15", "10", "5", "4", "3", "2", "1"})
+        Me.jelenia_combo.Location = New System.Drawing.Point(702, 20)
         Me.jelenia_combo.Name = "jelenia_combo"
         Me.jelenia_combo.Size = New System.Drawing.Size(66, 21)
         Me.jelenia_combo.TabIndex = 13
@@ -199,7 +217,8 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.psy_skutocnost_combo.Enabled = False
         Me.psy_skutocnost_combo.FormattingEnabled = True
-        Me.psy_skutocnost_combo.Location = New System.Drawing.Point(494, 46)
+        Me.psy_skutocnost_combo.Items.AddRange(New Object() {"100", "95", "90", "85", "80", "75", "70", "65", "60", "55", "50", "45", "40", "35", "30", "25", "20", "15", "10", "5", "4", "3", "2", "1"})
+        Me.psy_skutocnost_combo.Location = New System.Drawing.Point(471, 46)
         Me.psy_skutocnost_combo.Name = "psy_skutocnost_combo"
         Me.psy_skutocnost_combo.Size = New System.Drawing.Size(78, 21)
         Me.psy_skutocnost_combo.TabIndex = 14
@@ -208,7 +227,8 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.diviacia_combo.Enabled = False
         Me.diviacia_combo.FormattingEnabled = True
-        Me.diviacia_combo.Location = New System.Drawing.Point(715, 46)
+        Me.diviacia_combo.Items.AddRange(New Object() {"100", "95", "90", "85", "80", "75", "70", "65", "60", "55", "50", "45", "40", "35", "30", "25", "20", "15", "10", "5", "4", "3", "2", "1"})
+        Me.diviacia_combo.Location = New System.Drawing.Point(702, 46)
         Me.diviacia_combo.Name = "diviacia_combo"
         Me.diviacia_combo.Size = New System.Drawing.Size(66, 21)
         Me.diviacia_combo.TabIndex = 15
@@ -217,7 +237,8 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.srncia_combo.Enabled = False
         Me.srncia_combo.FormattingEnabled = True
-        Me.srncia_combo.Location = New System.Drawing.Point(715, 72)
+        Me.srncia_combo.Items.AddRange(New Object() {"100", "95", "90", "85", "80", "75", "70", "65", "60", "55", "50", "45", "40", "35", "30", "25", "20", "15", "10", "5", "4", "3", "2", "1"})
+        Me.srncia_combo.Location = New System.Drawing.Point(702, 72)
         Me.srncia_combo.Name = "srncia_combo"
         Me.srncia_combo.Size = New System.Drawing.Size(66, 21)
         Me.srncia_combo.TabIndex = 16
@@ -226,6 +247,7 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.bazant_combo.Enabled = False
         Me.bazant_combo.FormattingEnabled = True
+        Me.bazant_combo.Items.AddRange(New Object() {"100", "95", "90", "85", "80", "75", "70", "65", "60", "55", "50", "45", "40", "35", "30", "25", "20", "15", "10", "5", "4", "3", "2", "1"})
         Me.bazant_combo.Location = New System.Drawing.Point(911, 20)
         Me.bazant_combo.Name = "bazant_combo"
         Me.bazant_combo.Size = New System.Drawing.Size(66, 21)
@@ -235,33 +257,26 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.ina_combo.Enabled = False
         Me.ina_combo.FormattingEnabled = True
+        Me.ina_combo.Items.AddRange(New Object() {"100", "95", "90", "85", "80", "75", "70", "65", "60", "55", "50", "45", "40", "35", "30", "25", "20", "15", "10", "5", "4", "3", "2", "1"})
         Me.ina_combo.Location = New System.Drawing.Point(911, 46)
         Me.ina_combo.Name = "ina_combo"
         Me.ina_combo.Size = New System.Drawing.Size(66, 21)
         Me.ina_combo.TabIndex = 18
         '
-        'naj_zmluva_dt_picker
-        '
-        Me.naj_zmluva_dt_picker.Enabled = False
-        Me.naj_zmluva_dt_picker.Location = New System.Drawing.Point(211, 48)
-        Me.naj_zmluva_dt_picker.Name = "naj_zmluva_dt_picker"
-        Me.naj_zmluva_dt_picker.Size = New System.Drawing.Size(132, 20)
-        Me.naj_zmluva_dt_picker.TabIndex = 19
-        '
         'refresh_button
         '
         Me.refresh_button.Location = New System.Drawing.Point(12, 98)
         Me.refresh_button.Name = "refresh_button"
-        Me.refresh_button.Size = New System.Drawing.Size(331, 23)
+        Me.refresh_button.Size = New System.Drawing.Size(290, 23)
         Me.refresh_button.TabIndex = 20
         Me.refresh_button.Text = "Načítať tl. zostavu"
         Me.refresh_button.UseVisualStyleBackColor = True
         '
         'ReportViewer1
         '
-        ReportDataSource1.Name = "zoznam_zdruzeni_report_full_zdruzenia"
-        ReportDataSource1.Value = Me.zdruzeniaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        ReportDataSource3.Name = "zoznam_zdruzeni_report_full_zdruzenia"
+        ReportDataSource3.Value = Me.zdruzeniaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.zoznam_zdruz_full_report.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(5, 157)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -272,7 +287,8 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.psy_typy_skutocnost_combo.Enabled = False
         Me.psy_typy_skutocnost_combo.FormattingEnabled = True
-        Me.psy_typy_skutocnost_combo.Location = New System.Drawing.Point(494, 124)
+        Me.psy_typy_skutocnost_combo.Items.AddRange(New Object() {"100", "95", "90", "85", "80", "75", "70", "65", "60", "55", "50", "45", "40", "35", "30", "25", "20", "15", "10", "5", "4", "3", "2", "1"})
+        Me.psy_typy_skutocnost_combo.Location = New System.Drawing.Point(471, 124)
         Me.psy_typy_skutocnost_combo.Name = "psy_typy_skutocnost_combo"
         Me.psy_typy_skutocnost_combo.Size = New System.Drawing.Size(78, 21)
         Me.psy_typy_skutocnost_combo.TabIndex = 26
@@ -281,7 +297,8 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.psy_typy_plan_combo.Enabled = False
         Me.psy_typy_plan_combo.FormattingEnabled = True
-        Me.psy_typy_plan_combo.Location = New System.Drawing.Point(494, 98)
+        Me.psy_typy_plan_combo.Items.AddRange(New Object() {"100", "95", "90", "85", "80", "75", "70", "65", "60", "55", "50", "45", "40", "35", "30", "25", "20", "15", "10", "5", "4", "3", "2", "1"})
+        Me.psy_typy_plan_combo.Location = New System.Drawing.Point(471, 98)
         Me.psy_typy_plan_combo.Name = "psy_typy_plan_combo"
         Me.psy_typy_plan_combo.Size = New System.Drawing.Size(78, 21)
         Me.psy_typy_plan_combo.TabIndex = 25
@@ -290,7 +307,7 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.psy_.AutoSize = True
         Me.psy_.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.psy_.Location = New System.Drawing.Point(378, 84)
+        Me.psy_.Location = New System.Drawing.Point(355, 84)
         Me.psy_.Name = "psy_"
         Me.psy_.Size = New System.Drawing.Size(65, 13)
         Me.psy_.TabIndex = 24
@@ -299,7 +316,7 @@ Partial Class zoznam_zdruzeni_full
         'psy_typy_skutocnost_check
         '
         Me.psy_typy_skutocnost_check.AutoSize = True
-        Me.psy_typy_skutocnost_check.Location = New System.Drawing.Point(381, 126)
+        Me.psy_typy_skutocnost_check.Location = New System.Drawing.Point(358, 126)
         Me.psy_typy_skutocnost_check.Name = "psy_typy_skutocnost_check"
         Me.psy_typy_skutocnost_check.Size = New System.Drawing.Size(113, 17)
         Me.psy_typy_skutocnost_check.TabIndex = 23
@@ -309,32 +326,49 @@ Partial Class zoznam_zdruzeni_full
         'psy_typy_plan_check
         '
         Me.psy_typy_plan_check.AutoSize = True
-        Me.psy_typy_plan_check.Location = New System.Drawing.Point(381, 100)
+        Me.psy_typy_plan_check.Location = New System.Drawing.Point(358, 100)
         Me.psy_typy_plan_check.Name = "psy_typy_plan_check"
         Me.psy_typy_plan_check.Size = New System.Drawing.Size(79, 17)
         Me.psy_typy_plan_check.TabIndex = 22
         Me.psy_typy_plan_check.Text = "Plán aspoň"
         Me.psy_typy_plan_check.UseVisualStyleBackColor = True
         '
-        'zoznam_zdruzeni_report_full
-        '
-        Me.zoznam_zdruzeni_report_full.DataSetName = "zoznam_zdruzeni_report_full"
-        Me.zoznam_zdruzeni_report_full.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'zdruzeniaBindingSource
-        '
-        Me.zdruzeniaBindingSource.DataMember = "zdruzenia"
-        Me.zdruzeniaBindingSource.DataSource = Me.zoznam_zdruzeni_report_full
-        '
         'zdruzeniaTableAdapter
         '
         Me.zdruzeniaTableAdapter.ClearBeforeFill = True
+        '
+        'platnost_naj_zmluvy_combo
+        '
+        Me.platnost_naj_zmluvy_combo.DataSource = Me.RokyBindingSource
+        Me.platnost_naj_zmluvy_combo.DisplayMember = "rok"
+        Me.platnost_naj_zmluvy_combo.Enabled = False
+        Me.platnost_naj_zmluvy_combo.FormattingEnabled = True
+        Me.platnost_naj_zmluvy_combo.Location = New System.Drawing.Point(178, 46)
+        Me.platnost_naj_zmluvy_combo.Name = "platnost_naj_zmluvy_combo"
+        Me.platnost_naj_zmluvy_combo.Size = New System.Drawing.Size(78, 21)
+        Me.platnost_naj_zmluvy_combo.TabIndex = 27
+        Me.platnost_naj_zmluvy_combo.ValueMember = "rok"
+        '
+        'RokyBindingSource
+        '
+        Me.RokyBindingSource.DataMember = "roky"
+        Me.RokyBindingSource.DataSource = Me.Roky
+        '
+        'Roky
+        '
+        Me.Roky.DataSetName = "roky"
+        Me.Roky.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RokyTableAdapter
+        '
+        Me.RokyTableAdapter.ClearBeforeFill = True
         '
         'zoznam_zdruzeni_full
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1003, 474)
+        Me.Controls.Add(Me.platnost_naj_zmluvy_combo)
         Me.Controls.Add(Me.psy_typy_skutocnost_combo)
         Me.Controls.Add(Me.psy_typy_plan_combo)
         Me.Controls.Add(Me.psy_)
@@ -342,7 +376,6 @@ Partial Class zoznam_zdruzeni_full
         Me.Controls.Add(Me.psy_typy_plan_check)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Controls.Add(Me.refresh_button)
-        Me.Controls.Add(Me.naj_zmluva_dt_picker)
         Me.Controls.Add(Me.ina_combo)
         Me.Controls.Add(Me.bazant_combo)
         Me.Controls.Add(Me.srncia_combo)
@@ -364,8 +397,10 @@ Partial Class zoznam_zdruzeni_full
         Me.Controls.Add(Me.vymera_check)
         Me.Name = "zoznam_zdruzeni_full"
         Me.Text = "Zoznam združení"
-        CType(Me.zoznam_zdruzeni_report_full, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.zdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.zoznam_zdruzeni_report_full, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RokyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Roky, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -389,7 +424,6 @@ Partial Class zoznam_zdruzeni_full
     Friend WithEvents srncia_combo As System.Windows.Forms.ComboBox
     Friend WithEvents bazant_combo As System.Windows.Forms.ComboBox
     Friend WithEvents ina_combo As System.Windows.Forms.ComboBox
-    Friend WithEvents naj_zmluva_dt_picker As System.Windows.Forms.DateTimePicker
     Friend WithEvents refresh_button As System.Windows.Forms.Button
     Private WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents psy_typy_skutocnost_combo As System.Windows.Forms.ComboBox
@@ -400,4 +434,8 @@ Partial Class zoznam_zdruzeni_full
     Friend WithEvents zdruzeniaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents zoznam_zdruzeni_report_full As evidencia_spz.zoznam_zdruzeni_report_full
     Friend WithEvents zdruzeniaTableAdapter As evidencia_spz.zoznam_zdruzeni_report_fullTableAdapters.zdruzeniaTableAdapter
+    Friend WithEvents platnost_naj_zmluvy_combo As System.Windows.Forms.ComboBox
+    Friend WithEvents Roky As evidencia_spz.roky
+    Friend WithEvents RokyBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents RokyTableAdapter As evidencia_spz.rokyTableAdapters.rokyTableAdapter
 End Class
