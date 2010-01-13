@@ -905,8 +905,8 @@ Partial Class clen_novy
         Me.LineShape2.Name = "LineShape2"
         Me.LineShape2.X1 = 66
         Me.LineShape2.X2 = 750
-        Me.LineShape2.Y1 = 620
-        Me.LineShape2.Y2 = 620
+        Me.LineShape2.Y1 = 611
+        Me.LineShape2.Y2 = 611
         '
         'Okres_bydliskaComboBox
         '
@@ -1135,19 +1135,19 @@ Partial Class clen_novy
         'Brokova_zbranComboBox
         '
         Me.Brokova_zbranComboBox.FormattingEnabled = True
-        Me.Brokova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ANO"})
+        Me.Brokova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ÁNO"})
         Me.Brokova_zbranComboBox.Location = New System.Drawing.Point(201, 620)
         Me.Brokova_zbranComboBox.Name = "Brokova_zbranComboBox"
-        Me.Brokova_zbranComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Brokova_zbranComboBox.Size = New System.Drawing.Size(62, 21)
         Me.Brokova_zbranComboBox.TabIndex = 1
         '
         'Gulova_zbranComboBox
         '
         Me.Gulova_zbranComboBox.FormattingEnabled = True
-        Me.Gulova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ANO"})
+        Me.Gulova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ÁNO"})
         Me.Gulova_zbranComboBox.Location = New System.Drawing.Point(201, 644)
         Me.Gulova_zbranComboBox.Name = "Gulova_zbranComboBox"
-        Me.Gulova_zbranComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Gulova_zbranComboBox.Size = New System.Drawing.Size(62, 21)
         Me.Gulova_zbranComboBox.TabIndex = 1
         '
         'Button2

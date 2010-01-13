@@ -24,15 +24,25 @@ Partial Class zoznam_chybajuce_kont_strelby
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Me.all_clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.zoznam_kontStrelby = New evidencia_spz.zoznam_kontStrelby
         Me.podla_zbrane_check = New System.Windows.Forms.CheckBox
         Me.podla_zbrane_combo = New System.Windows.Forms.ComboBox
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
-        Me.zoznam_kontStrelby = New evidencia_spz.zoznam_kontStrelby
-        Me.all_clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.all_clenoviaTableAdapter = New evidencia_spz.zoznam_kontStrelbyTableAdapters.all_clenoviaTableAdapter
-        CType(Me.zoznam_kontStrelby, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.all_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.zoznam_kontStrelby, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'all_clenoviaBindingSource
+        '
+        Me.all_clenoviaBindingSource.DataMember = "all_clenovia"
+        Me.all_clenoviaBindingSource.DataSource = Me.zoznam_kontStrelby
+        '
+        'zoznam_kontStrelby
+        '
+        Me.zoznam_kontStrelby.DataSetName = "zoznam_kontStrelby"
+        Me.zoznam_kontStrelby.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'podla_zbrane_check
         '
@@ -51,7 +61,7 @@ Partial Class zoznam_chybajuce_kont_strelby
         Me.podla_zbrane_combo.Items.AddRange(New Object() {"Broková zbraň", "Guľová zbraň"})
         Me.podla_zbrane_combo.Location = New System.Drawing.Point(225, 10)
         Me.podla_zbrane_combo.Name = "podla_zbrane_combo"
-        Me.podla_zbrane_combo.Size = New System.Drawing.Size(75, 21)
+        Me.podla_zbrane_combo.Size = New System.Drawing.Size(120, 21)
         Me.podla_zbrane_combo.TabIndex = 1
         '
         'ReportViewer1
@@ -64,16 +74,6 @@ Partial Class zoznam_chybajuce_kont_strelby
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.Size = New System.Drawing.Size(977, 319)
         Me.ReportViewer1.TabIndex = 2
-        '
-        'zoznam_kontStrelby
-        '
-        Me.zoznam_kontStrelby.DataSetName = "zoznam_kontStrelby"
-        Me.zoznam_kontStrelby.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'all_clenoviaBindingSource
-        '
-        Me.all_clenoviaBindingSource.DataMember = "all_clenovia"
-        Me.all_clenoviaBindingSource.DataSource = Me.zoznam_kontStrelby
         '
         'all_clenoviaTableAdapter
         '
@@ -89,8 +89,8 @@ Partial Class zoznam_chybajuce_kont_strelby
         Me.Controls.Add(Me.podla_zbrane_check)
         Me.Name = "zoznam_chybajuce_kont_strelby"
         Me.Text = "Chýbajúce kont. streľby"
-        CType(Me.zoznam_kontStrelby, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.all_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.zoznam_kontStrelby, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

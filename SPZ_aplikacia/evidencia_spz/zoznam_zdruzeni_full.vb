@@ -1,6 +1,6 @@
 ﻿Public Class zoznam_zdruzeni_full
     Dim vymera As Long
-    Dim najomna_zmluva As Date
+    Dim najomna_zmluva As Integer
     Dim psy_plan As Integer
     Dim psy_typy_plan As Integer
     Dim psy_typy_skutocnost As Integer
@@ -13,12 +13,14 @@
     Dim zaciatok_datum As Date
 
     Private Sub zoznam_zdruzeni_full_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Roky._roky' table. You can move, or remove it, as needed.
+        Me.RokyTableAdapter.Fill(Me.Roky._roky)
         'TODO: This line of code loads data into the 'zoznam_zdruzeni_report_full.zdruzenia' table. You can move, or remove it, as needed.
-
+        hlavna_aplikacia.vytvor_all_clenovia()
 
         vymera = 0
-        zaciatok_datum = "01.01.1900"
-        najomna_zmluva = zaciatok_datum
+
+        najomna_zmluva = 2200
         psy_plan = 0
         psy_typy_plan = 0
         psy_typy_skutocnost = 0
@@ -45,11 +47,12 @@
 
     Private Sub najomna_zmluva_check_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles najomna_zmluva_check.CheckedChanged
         If najomna_zmluva_check.Checked Then
-            naj_zmluva_dt_picker.Enabled = True
-            naj_zmluva_dt_picker.Value = zaciatok_datum
+            platnost_naj_zmluvy_combo.Enabled = True
+            'platnost_naj_zmluvy_combo.SelectedValue = Nullable
+
         Else
-            naj_zmluva_dt_picker.Enabled = False
-            najomna_zmluva = zaciatok_datum
+            platnost_naj_zmluvy_combo.Enabled = False
+            najomna_zmluva = 2200
         End If
     End Sub
 
@@ -124,15 +127,7 @@
     End Sub
 
     Private Sub vymera_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles vymera_combo.SelectedIndexChanged
-        If vymera_combo.SelectedValue <> "" Then
-            vymera = vymera_combo.SelectedValue
-            Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
-            Me.ReportViewer1.RefreshReport()
-        End If
-    End Sub
-
-    Private Sub naj_zmluva_dt_picker_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles naj_zmluva_dt_picker.ValueChanged
-        najomna_zmluva = naj_zmluva_dt_picker.Value
+        vymera = vymera_combo.SelectedValue
         Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
         Me.ReportViewer1.RefreshReport()
     End Sub
@@ -228,5 +223,19 @@
             Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
             Me.ReportViewer1.RefreshReport()
         End If
+    End Sub
+
+    Private Sub platnost_naj_zmluvy_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles platnost_naj_zmluvy_combo.SelectedIndexChanged
+
+        najomna_zmluva = platnost_naj_zmluvy_combo.SelectedValue
+            Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
+            Me.ReportViewer1.RefreshReport()
+
+
+    End Sub
+
+    Private Sub refresh_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles refresh_button.Click
+        Me.zdruzeniaTableAdapter.Fill(Me.zoznam_zdruzeni_report_full.zdruzenia, vymera, najomna_zmluva, psy_plan, psy_typy_plan, psy_typy_skutocnost, psy_skutocnost, jelenia, srncia, diviacia, bazant, ina)
+        Me.ReportViewer1.RefreshReport()
     End Sub
 End Class

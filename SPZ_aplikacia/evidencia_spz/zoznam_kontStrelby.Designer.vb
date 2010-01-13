@@ -972,17 +972,17 @@ Namespace zoznam_kontStrelbyTableAdapters
                 "            zdruzenia.nazov AS zdruzenie_nazov, all_clenovia.brokova_zbran AS ty"& _ 
                 "p_zbran, all_clenovia.kontrolne_strelby_brok AS zbran_strelby_kedy"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM        "& _ 
                 " all_clenovia INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      zdruzenia ON all_clenovia.clen_p"& _ 
-                "z = zdruzenia.ico"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (all_clenovia.brokova_zbran = @Param1) AND (DATEPAR"& _ 
-                "T(YEAR, GETDATE()) - all_clenovia.kontrolne_strelby_brok <= 5)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"UNION ALL"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELEC"& _ 
-                "T     all_clenovia_1.meno, all_clenovia_1.priezvisko AS clen_priezvisko, all_cle"& _ 
-                "novia_1.rodne_cislo, all_clenovia_1.mesto, all_clenovia_1.okres_bydliska, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"    "& _ 
-                "                  zdruzenia_1.nazov AS zdruzenie_nazov, all_clenovia_1.gulova_zb"& _ 
-                "ran AS typ_zbran, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia_1.kontrolne_strelby_gula "& _ 
-                "AS zbran_strelby_kedy"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         all_clenovia AS all_clenovia_1 INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" "& _ 
-                "                     zdruzenia AS zdruzenia_1 ON all_clenovia_1.clen_pz = zdruze"& _ 
-                "nia_1.ico"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (all_clenovia_1.gulova_zbran = @Param2) AND (DATEPART(YEAR,"& _ 
-                " GETDATE()) - all_clenovia_1.kontrolne_strelby_gula <= 5)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY clen_priezvi"& _ 
-                "sko"
+                "z = zdruzenia.ico"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (all_clenovia.brokova_zbran like @Param1) AND (DATE"& _ 
+                "PART(YEAR, GETDATE()) - all_clenovia.kontrolne_strelby_brok >= 5)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"UNION ALL"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SE"& _ 
+                "LECT     all_clenovia_1.meno, all_clenovia_1.priezvisko AS clen_priezvisko, all_"& _ 
+                "clenovia_1.rodne_cislo, all_clenovia_1.mesto, all_clenovia_1.okres_bydliska, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" "& _ 
+                "                     zdruzenia_1.nazov AS zdruzenie_nazov, all_clenovia_1.gulova"& _ 
+                "_zbran AS typ_zbran, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia_1.kontrolne_strelby_gu"& _ 
+                "la AS zbran_strelby_kedy"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         all_clenovia AS all_clenovia_1 INNER JOIN"& _ 
+                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      zdruzenia AS zdruzenia_1 ON all_clenovia_1.clen_pz = zdr"& _ 
+                "uzenia_1.ico"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (all_clenovia_1.gulova_zbran like @Param2) AND (DATEPART"& _ 
+                "(YEAR, GETDATE()) - all_clenovia_1.kontrolne_strelby_gula >= 5)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY clen_p"& _ 
+                "riezvisko"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param1", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "typ_zbran", Global.System.Data.DataRowVersion.Current, Nothing))
             Dim param As Global.System.Data.SqlServerCe.SqlCeParameter = New Global.System.Data.SqlServerCe.SqlCeParameter

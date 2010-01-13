@@ -1508,7 +1508,7 @@ Namespace zoznam_zdruzeni_report_fullTableAdapters
                 "ia"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         zdruzenia LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia A"& _ 
                 "S c1 ON c1.rodne_cislo = zdruzenia.predseda LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                   "& _ 
                 "   all_clenovia AS c2 ON c2.rodne_cislo = zdruzenia.polovny_hospodar"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     "& _ 
-                "(zdruzenia.vymera >= @Param7) AND (zdruzenia.platnost_najomnej_zmluvy_do >= @Par"& _ 
+                "(zdruzenia.vymera >= @Param7) AND (zdruzenia.platnost_najomnej_zmluvy_do <= @Par"& _ 
                 "am8) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      (zdruzenia.farbiare_plan + zdruzenia.brlohare_p"& _ 
                 "lan + zdruzenia.ostatne_durice_plan + zdruzenia.stavace_plan + zdruzenia.sliedic"& _ 
                 "e_plan + zdruzenia.slovensky_kopov_plan"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                       >= @Param9) AND "& _ 
