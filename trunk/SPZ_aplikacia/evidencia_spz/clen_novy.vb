@@ -364,7 +364,18 @@
     End Sub
 
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        MsgBox(Okres_bydliskaListBox.SelectedItem)
+        Dim chyba As String
+        kontrola_vstupnych_udajov_clena(PriezviskoTextBox.Text, Rodne_cisloTextBox.Text, Clen_spz_odTextBox.Text, Clenske_doTextBox.Text, Kontrolne_strelby_brokTextBox.Text, Kontrolne_strelby_gulaTextBox.Text, chyba)
+
+
+        If chyba.Length = 0 Then
+            MsgBox("vsetko je oki")
+        Else
+            MsgBox("Mate chybne vyplnene tieto polia: " + vbNewLine + vbNewLine + chyba, MsgBoxStyle.Critical, "upozornenie")
+        End If
+
+
+
     End Sub
 
     Private Sub Brokova_zbranComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Brokova_zbranComboBox.SelectedIndexChanged

@@ -79,5 +79,50 @@
         'ak je vsetko v poriadku
         Return True
     End Function
-    
+    ' funkcia, ktora pred ukoncenim skontroluje vyplnenie vstupnych udajov
+    Public Function kontrola_vstupnych_udajov_clena(ByVal priezvisko As String, ByVal rodne_cislo As String, ByVal clen_spz_od As String, ByVal clen_spz_do As String, ByVal kontrolne_brok As String, ByVal kontrolne_gula As String, ByRef zoznam_chyb As String) As Boolean
+        zoznam_chyb = ""
+
+        'kontrola dlzky priezviska
+        If priezvisko.Length = 0 Then
+            zoznam_chyb = "Priezvisko" + vbNewLine
+
+        End If
+
+        'kontrola dlzky rodneho cisla
+        If rodne_cislo.Length <> 11 And rodne_cislo.Length <> 10 Then
+            zoznam_chyb = zoznam_chyb + "Rodne cislo" + vbNewLine
+
+        End If
+
+
+        'kontrola dlzky roka clen_spz_od
+        If Not clen_spz_od.Length = 4 Then
+            zoznam_chyb = zoznam_chyb + "Clen spz od " + vbNewLine
+
+        End If
+
+        'kontrola dlzky roka clen_spz_do
+        If Not clen_spz_do.Length = 4 Then
+            zoznam_chyb = zoznam_chyb + "Clen spz do " + vbNewLine
+
+        End If
+
+        'kontrola dlzky roka kontrolne brok
+        If Not kontrolne_brok.Length = 4 Then
+            zoznam_chyb = zoznam_chyb + "Kontrolne brok " + vbNewLine
+
+        End If
+        'kontrola dlzky roka kontrolne gula
+        If Not kontrolne_gula.Length = 4 Then
+            zoznam_chyb = zoznam_chyb + "Kontrolne gula " + vbNewLine
+
+        End If
+
+
+
+        
+        'ak je vsetko v poriadku
+        Return True
+    End Function
 End Module
