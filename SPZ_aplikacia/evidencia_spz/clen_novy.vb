@@ -90,7 +90,7 @@
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles uloz_clena_button.Click
         Dim chyba As String
-        kontrola_vstupnych_udajov_clena(PriezviskoTextBox.Text, Rodne_cisloTextBox.Text, Clen_spz_odTextBox.Text, Clenske_doTextBox.Text, Kontrolne_strelby_brokTextBox.Text, Kontrolne_strelby_gulaTextBox.Text, MestoComboBox.SelectedValue, Okres_bydliskaListBox.SelectedItem, PscListBox.SelectedItem, chyba)
+        kontrola_vstupnych_udajov_clena(PriezviskoTextBox.Text, rodne_cisloMaskedTextBox.Text, Clen_spz_odTextBox.Text, Clenske_doTextBox.Text, Kontrolne_strelby_brokTextBox.Text, Kontrolne_strelby_gulaTextBox.Text, MestoComboBox.SelectedValue, Okres_bydliskaListBox.SelectedItem, PscListBox.SelectedItem, chyba)
 
 
         If chyba.Length = 0 Then
@@ -114,7 +114,7 @@
                     .AddWithValue("datum_narodenia", DBNull.Value)
                 End If
 
-                .AddWithValue("rodne_cislo", Rodne_cisloTextBox.Text)
+                .AddWithValue("rodne_cislo", rodne_cisloMaskedTextBox.Text)
                 .AddWithValue("miesto_narodenia", Miesto_narodeniaTextBox.Text)
                 .AddWithValue("okres_narodenia", Okres_narodeniaTextBox.Text)
                 .AddWithValue("okres_bydliska", Okres_bydliskaListBox.SelectedItem)
@@ -285,19 +285,19 @@
         End If
     End Sub
 
-    Private Sub Rodne_cisloTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Rodne_cisloTextBox.TextChanged
+    Private Sub Rodne_cisloTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
-    Private Sub Rodne_cisloTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Rodne_cisloTextBox.Validating
+    Private Sub Rodne_cisloTextBox_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs)
         Dim chyba As String
 
-        If Not kontrola_rc(Rodne_cisloTextBox.Text, chyba) Then
+        If Not kontrola_rc(rodne_cisloMaskedTextBox.Text, chyba) Then
             'nastav a zobraz chybu
-            ErrorProvider1.SetError(Rodne_cisloTextBox, chyba)
+            ErrorProvider1.SetError(rodne_cisloMaskedTextBox, chyba)
         Else
             'zrus(chybu)
-            ErrorProvider1.SetError(Rodne_cisloTextBox, Nothing)
+            ErrorProvider1.SetError(rodne_cisloMaskedTextBox, Nothing)
         End If
     End Sub
 
@@ -374,16 +374,7 @@
     End Sub
 
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        Dim chyba As String
-        kontrola_vstupnych_udajov_clena(PriezviskoTextBox.Text, Rodne_cisloTextBox.Text, Clen_spz_odTextBox.Text, Clenske_doTextBox.Text, Kontrolne_strelby_brokTextBox.Text, Kontrolne_strelby_gulaTextBox.Text, MestoComboBox.SelectedValue, Okres_bydliskaListBox.SelectedItem, PscListBox.SelectedItem, chyba)
-
-
-        If chyba.Length = 0 Then
-            MsgBox("vsetko je oki")
-        Else
-            MsgBox("Mate chybne vyplnene tieto polia: " + vbNewLine + vbNewLine + chyba, MsgBoxStyle.Critical, "upozornenie")
-        End If
-
+        MsgBox(rodne_cisloMaskedTextBox.Text)
 
 
     End Sub

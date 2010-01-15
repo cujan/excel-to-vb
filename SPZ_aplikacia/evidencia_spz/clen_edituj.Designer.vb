@@ -86,7 +86,6 @@ Partial Class clen_edituj
         Me.Cislo_plTextBox = New System.Windows.Forms.TextBox
         Me.MenoTextBox = New System.Windows.Forms.TextBox
         Me.PriezviskoTextBox = New System.Windows.Forms.TextBox
-        Me.Rodne_cisloTextBox = New System.Windows.Forms.TextBox
         Me.Miesto_narodeniaTextBox = New System.Windows.Forms.TextBox
         Me.Okres_narodeniaTextBox = New System.Windows.Forms.TextBox
         Me.TelefonTextBox = New System.Windows.Forms.TextBox
@@ -159,6 +158,7 @@ Partial Class clen_edituj
         Me.PscListBox = New System.Windows.Forms.ListBox
         Me.Okres_bydliskaTextBox = New System.Windows.Forms.TextBox
         Me.PscTextBox = New System.Windows.Forms.TextBox
+        Me.Rodne_cisloMaskedTextBox = New System.Windows.Forms.MaskedTextBox
         Cislo_plLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -592,7 +592,7 @@ Partial Class clen_edituj
         Me.All_clenoviaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.All_clenoviaBindingNavigator.Name = "All_clenoviaBindingNavigator"
         Me.All_clenoviaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.All_clenoviaBindingNavigator.Size = New System.Drawing.Size(1223, 25)
+        Me.All_clenoviaBindingNavigator.Size = New System.Drawing.Size(1240, 25)
         Me.All_clenoviaBindingNavigator.TabIndex = 0
         Me.All_clenoviaBindingNavigator.Text = "BindingNavigator1"
         '
@@ -722,15 +722,6 @@ Partial Class clen_edituj
         Me.PriezviskoTextBox.Name = "PriezviskoTextBox"
         Me.PriezviskoTextBox.Size = New System.Drawing.Size(200, 20)
         Me.PriezviskoTextBox.TabIndex = 6
-        '
-        'Rodne_cisloTextBox
-        '
-        Me.Rodne_cisloTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "rodne_cislo", True))
-        Me.Rodne_cisloTextBox.Location = New System.Drawing.Point(316, 153)
-        Me.Rodne_cisloTextBox.Name = "Rodne_cisloTextBox"
-        Me.Rodne_cisloTextBox.ReadOnly = True
-        Me.Rodne_cisloTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Rodne_cisloTextBox.TabIndex = 10
         '
         'Miesto_narodeniaTextBox
         '
@@ -1327,12 +1318,24 @@ Partial Class clen_edituj
         Me.PscTextBox.Size = New System.Drawing.Size(200, 20)
         Me.PscTextBox.TabIndex = 20
         '
+        'Rodne_cisloMaskedTextBox
+        '
+        Me.Rodne_cisloMaskedTextBox.Culture = New System.Globalization.CultureInfo("en-US")
+        Me.Rodne_cisloMaskedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "rodne_cislo", True))
+        Me.Rodne_cisloMaskedTextBox.Location = New System.Drawing.Point(316, 154)
+        Me.Rodne_cisloMaskedTextBox.Mask = "000000/0000"
+        Me.Rodne_cisloMaskedTextBox.Name = "Rodne_cisloMaskedTextBox"
+        Me.Rodne_cisloMaskedTextBox.ReadOnly = True
+        Me.Rodne_cisloMaskedTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Rodne_cisloMaskedTextBox.TabIndex = 106
+        '
         'clen_edituj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1240, 1002)
+        Me.ClientSize = New System.Drawing.Size(1257, 1002)
+        Me.Controls.Add(Me.Rodne_cisloMaskedTextBox)
         Me.Controls.Add(PscLabel1)
         Me.Controls.Add(Me.PscListBox)
         Me.Controls.Add(Okres_bydliskaLabel1)
@@ -1369,7 +1372,6 @@ Partial Class clen_edituj
         Me.Controls.Add(Me.PriezviskoTextBox)
         Me.Controls.Add(Datum_narodeniaLabel)
         Me.Controls.Add(Rodne_cisloLabel)
-        Me.Controls.Add(Me.Rodne_cisloTextBox)
         Me.Controls.Add(Miesto_narodeniaLabel)
         Me.Controls.Add(Me.Miesto_narodeniaTextBox)
         Me.Controls.Add(Okres_narodeniaLabel)
@@ -1477,7 +1479,6 @@ Partial Class clen_edituj
     Friend WithEvents Cislo_plTextBox As System.Windows.Forms.TextBox
     Friend WithEvents MenoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents PriezviskoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Rodne_cisloTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Miesto_narodeniaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Okres_narodeniaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents TelefonTextBox As System.Windows.Forms.TextBox
@@ -1548,4 +1549,5 @@ Partial Class clen_edituj
     Friend WithEvents Okres_bydliskaListBox As System.Windows.Forms.ListBox
     Friend WithEvents Okres_bydliskaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents PscTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Rodne_cisloMaskedTextBox As System.Windows.Forms.MaskedTextBox
 End Class
