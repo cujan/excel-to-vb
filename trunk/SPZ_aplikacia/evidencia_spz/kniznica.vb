@@ -96,24 +96,24 @@
 
 
         'kontrola dlzky roka clen_spz_od
-        If Not clen_spz_od.Length = 4 Then
+        If clen_spz_od.Length <> 4 And clen_spz_od <> "" Then
             zoznam_chyb = zoznam_chyb + "Clen spz od " + vbNewLine
 
         End If
 
         'kontrola dlzky roka clen_spz_do
-        If Not clen_spz_do.Length = 4 Then
+        If clen_spz_do.Length <> 4 And clen_spz_do <> "" Then
             zoznam_chyb = zoznam_chyb + "Clenske do " + vbNewLine
 
         End If
 
         'kontrola dlzky roka kontrolne brok
-        If Not kontrolne_brok.Length = 4 Then
+        If kontrolne_brok.Length <> 4 And kontrolne_brok <> "" Then
             zoznam_chyb = zoznam_chyb + "Kontrolne brok " + vbNewLine
 
         End If
         'kontrola dlzky roka kontrolne gula
-        If Not kontrolne_gula.Length = 4 Then
+        If kontrolne_gula.Length <> 4 And kontrolne_gula <> "" Then
             zoznam_chyb = zoznam_chyb + "Kontrolne gula " + vbNewLine
 
         End If
