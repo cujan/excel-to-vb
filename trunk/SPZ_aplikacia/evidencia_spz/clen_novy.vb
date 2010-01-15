@@ -365,7 +365,7 @@
 
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Dim chyba As String
-        kontrola_vstupnych_udajov_clena(PriezviskoTextBox.Text, Rodne_cisloTextBox.Text, Clen_spz_odTextBox.Text, Clenske_doTextBox.Text, Kontrolne_strelby_brokTextBox.Text, Kontrolne_strelby_gulaTextBox.Text, chyba)
+        kontrola_vstupnych_udajov_clena(PriezviskoTextBox.Text, Rodne_cisloTextBox.Text, Clen_spz_odTextBox.Text, Clenske_doTextBox.Text, Kontrolne_strelby_brokTextBox.Text, Kontrolne_strelby_gulaTextBox.Text, MestoComboBox.SelectedValue, Okres_bydliskaListBox.SelectedItem, PscListBox.SelectedItem, chyba)
 
 
         If chyba.Length = 0 Then
