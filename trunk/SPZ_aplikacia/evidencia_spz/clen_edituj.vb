@@ -125,7 +125,7 @@
             Statna_prislusnost_idComboBox.SelectedValue = Statna_prislusnost_idTextBox.Text
 
         End If
-        'vybere aktualnu hodnotu v okres a psc listbox
+        'vybere pri nacitani formu aktualnu hodnotu v okres a psc listbox
 
         If Okres_bydliskaTextBox.Text <> "" Then
             Okres_bydliskaListBox.SelectedIndex = 0
@@ -141,7 +141,7 @@
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim chyba As String
-        kontrola_vstupnych_udajov_clena(PriezviskoTextBox.Text, Rodne_cisloTextBox.Text, Clen_spz_odTextBox.Text, Clenske_doTextBox.Text, Kontrolne_strelby_brokTextBox.Text, Kontrolne_strelby_gulaTextBox.Text, MestoComboBox.SelectedValue, Okres_bydliskaListBox.SelectedItem, PscListBox.SelectedItem, chyba)
+        kontrola_vstupnych_udajov_clena(PriezviskoTextBox.Text, Rodne_cisloMaskedTextBox.Text, Clen_spz_odTextBox.Text, Clenske_doTextBox.Text, Kontrolne_strelby_brokTextBox.Text, Kontrolne_strelby_gulaTextBox.Text, MestoComboBox.SelectedValue, Okres_bydliskaListBox.SelectedItem, PscListBox.SelectedItem, chyba)
 
 
         If chyba.Length = 0 Then
@@ -159,7 +159,7 @@
                 Else
                     .AddWithValue("datum_narodenia", datum_narodeniaDateTimePicker.Value)
                 End If
-                .AddWithValue("rodne_cislo", Rodne_cisloTextBox.Text)
+                .AddWithValue("rodne_cislo", Rodne_cisloMaskedTextBox.Text)
                 .AddWithValue("miesto_narodenia", Miesto_narodeniaTextBox.Text)
                 .AddWithValue("okres_narodenia", Okres_narodeniaTextBox.Text)
                 .AddWithValue("okres_bydliska", Okres_bydliskaListBox.SelectedItem)

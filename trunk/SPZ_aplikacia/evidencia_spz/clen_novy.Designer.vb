@@ -71,7 +71,6 @@ Partial Class clen_novy
         Me.MenoTextBox = New System.Windows.Forms.TextBox
         Me.PriezviskoTextBox = New System.Windows.Forms.TextBox
         Me.Datum_narodeniaDateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.Rodne_cisloTextBox = New System.Windows.Forms.TextBox
         Me.Miesto_narodeniaTextBox = New System.Windows.Forms.TextBox
         Me.Okres_narodeniaTextBox = New System.Windows.Forms.TextBox
         Me.TelefonTextBox = New System.Windows.Forms.TextBox
@@ -142,6 +141,7 @@ Partial Class clen_novy
         Me.Brokova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.Button2 = New System.Windows.Forms.Button
+        Me.rodne_cisloMaskedTextBox = New System.Windows.Forms.MaskedTextBox
         Cislo_plLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -626,13 +626,6 @@ Partial Class clen_novy
         Me.Datum_narodeniaDateTimePicker.ShowCheckBox = True
         Me.Datum_narodeniaDateTimePicker.Size = New System.Drawing.Size(140, 20)
         Me.Datum_narodeniaDateTimePicker.TabIndex = 8
-        '
-        'Rodne_cisloTextBox
-        '
-        Me.Rodne_cisloTextBox.Location = New System.Drawing.Point(551, 132)
-        Me.Rodne_cisloTextBox.Name = "Rodne_cisloTextBox"
-        Me.Rodne_cisloTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Rodne_cisloTextBox.TabIndex = 10
         '
         'Miesto_narodeniaTextBox
         '
@@ -1152,12 +1145,21 @@ Partial Class clen_novy
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(729, 145)
+        Me.Button2.Location = New System.Drawing.Point(758, 227)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 95
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'rodne_cisloMaskedTextBox
+        '
+        Me.rodne_cisloMaskedTextBox.Culture = New System.Globalization.CultureInfo("en-US")
+        Me.rodne_cisloMaskedTextBox.Location = New System.Drawing.Point(551, 132)
+        Me.rodne_cisloMaskedTextBox.Mask = "000000/0000"
+        Me.rodne_cisloMaskedTextBox.Name = "rodne_cisloMaskedTextBox"
+        Me.rodne_cisloMaskedTextBox.Size = New System.Drawing.Size(76, 20)
+        Me.rodne_cisloMaskedTextBox.TabIndex = 96
         '
         'clen_novy
         '
@@ -1166,6 +1168,7 @@ Partial Class clen_novy
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(973, 800)
+        Me.Controls.Add(Me.rodne_cisloMaskedTextBox)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Gulova_zbranComboBox)
         Me.Controls.Add(Me.Brokova_zbranComboBox)
@@ -1199,7 +1202,6 @@ Partial Class clen_novy
         Me.Controls.Add(Datum_narodeniaLabel)
         Me.Controls.Add(Me.Datum_narodeniaDateTimePicker)
         Me.Controls.Add(Rodne_cisloLabel)
-        Me.Controls.Add(Me.Rodne_cisloTextBox)
         Me.Controls.Add(Miesto_narodeniaLabel)
         Me.Controls.Add(Me.Miesto_narodeniaTextBox)
         Me.Controls.Add(Okres_narodeniaLabel)
@@ -1282,7 +1284,6 @@ Partial Class clen_novy
     Friend WithEvents MenoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents PriezviskoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Datum_narodeniaDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Rodne_cisloTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Miesto_narodeniaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Okres_narodeniaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents TelefonTextBox As System.Windows.Forms.TextBox
@@ -1353,4 +1354,5 @@ Partial Class clen_novy
     Friend WithEvents Gulova_zbranComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents Brokova_zbranComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents rodne_cisloMaskedTextBox As System.Windows.Forms.MaskedTextBox
 End Class
