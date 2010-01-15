@@ -221,6 +221,8 @@
             con.Close()
 
             hlavna_aplikacia.updatniNepridanychPredsedov()
+            MsgBox("Clen bol uspesne pridany. ", MsgBoxStyle.Information)
+            Me.Close()
         Else
             MsgBox("Mate chybne vyplnene tieto polia: " + vbNewLine + vbNewLine + chyba, MsgBoxStyle.Critical, "upozornenie")
         End If
