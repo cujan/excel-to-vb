@@ -23,7 +23,7 @@ Partial Class zoznam_clenov_full
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim ReportDataSource4 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
         Me.all_clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.zoznam_clenov = New evidencia_spz.zoznam_clenov
         Me.zdruzenia_combo = New System.Windows.Forms.ComboBox
@@ -320,9 +320,9 @@ Partial Class zoznam_clenov_full
         '
         'ReportViewer1
         '
-        ReportDataSource4.Name = "zoznam_clenov_all_clenovia"
-        ReportDataSource4.Value = Me.all_clenoviaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource4)
+        ReportDataSource1.Name = "zoznam_clenov_all_clenovia"
+        ReportDataSource1.Value = Me.all_clenoviaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.zoznam_clenov_full.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(4, 103)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -414,9 +414,9 @@ Partial Class zoznam_clenov_full
     Friend WithEvents St_prislusnost_combo1 As evidencia_spz.st_prislusnost_combo
     Friend WithEvents StatnaprislusnostBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Statna_prislusnostTableAdapter As evidencia_spz.st_prislusnost_comboTableAdapters.statna_prislusnostTableAdapter
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents all_clenoviaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents zoznam_clenov As evidencia_spz.zoznam_clenov
     Friend WithEvents all_clenoviaTableAdapter As evidencia_spz.zoznam_clenovTableAdapters.all_clenoviaTableAdapter
     Friend WithEvents generuj_button As System.Windows.Forms.Button
+    Private WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
 End Class

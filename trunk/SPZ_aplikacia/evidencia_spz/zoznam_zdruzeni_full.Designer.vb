@@ -171,7 +171,7 @@ Partial Class zoznam_zdruzeni_full
         Me.pes_plemena_label.Name = "pes_plemena_label"
         Me.pes_plemena_label.Size = New System.Drawing.Size(86, 13)
         Me.pes_plemena_label.TabIndex = 9
-        Me.pes_plemena_label.Text = "Plemena psov"
+        Me.pes_plemena_label.Text = "Plemená psov"
         '
         'Label2
         '

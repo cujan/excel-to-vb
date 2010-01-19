@@ -276,7 +276,7 @@ Partial Public Class zoznam_clenov
         
         Private columnrodne_cislo As Global.System.Data.DataColumn
         
-        Private columnbydlisko As Global.System.Data.DataColumn
+        Private columnmesto As Global.System.Data.DataColumn
         
         Private columnokres_bydliska As Global.System.Data.DataColumn
         
@@ -372,9 +372,9 @@ Partial Public Class zoznam_clenov
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public ReadOnly Property bydliskoColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property mestoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnbydlisko
+                Return Me.columnmesto
             End Get
         End Property
         
@@ -504,7 +504,7 @@ Partial Public Class zoznam_clenov
                     ByVal priezvisko As String,  _
                     ByVal datum_narodenia As Date,  _
                     ByVal rodne_cislo As String,  _
-                    ByVal bydlisko As String,  _
+                    ByVal mesto As String,  _
                     ByVal okres_bydliska As String,  _
                     ByVal cislo_op As String,  _
                     ByVal datum_vydania_op As Date,  _
@@ -519,7 +519,7 @@ Partial Public Class zoznam_clenov
                     ByVal Expr1 As String,  _
                     ByVal skratka As String) As all_clenoviaRow
             Dim rowall_clenoviaRow As all_clenoviaRow = CType(Me.NewRow,all_clenoviaRow)
-            Dim columnValuesArray() As Object = New Object() {cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, bydlisko, okres_bydliska, cislo_op, datum_vydania_op, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, nazov, Expr1, skratka}
+            Dim columnValuesArray() As Object = New Object() {cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, mesto, okres_bydliska, cislo_op, datum_vydania_op, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, nazov, Expr1, skratka}
             rowall_clenoviaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowall_clenoviaRow)
             Return rowall_clenoviaRow
@@ -544,7 +544,7 @@ Partial Public Class zoznam_clenov
             Me.columnpriezvisko = MyBase.Columns("priezvisko")
             Me.columndatum_narodenia = MyBase.Columns("datum_narodenia")
             Me.columnrodne_cislo = MyBase.Columns("rodne_cislo")
-            Me.columnbydlisko = MyBase.Columns("bydlisko")
+            Me.columnmesto = MyBase.Columns("mesto")
             Me.columnokres_bydliska = MyBase.Columns("okres_bydliska")
             Me.columncislo_op = MyBase.Columns("cislo_op")
             Me.columndatum_vydania_op = MyBase.Columns("datum_vydania_op")
@@ -572,8 +572,8 @@ Partial Public Class zoznam_clenov
             MyBase.Columns.Add(Me.columndatum_narodenia)
             Me.columnrodne_cislo = New Global.System.Data.DataColumn("rodne_cislo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnrodne_cislo)
-            Me.columnbydlisko = New Global.System.Data.DataColumn("bydlisko", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnbydlisko)
+            Me.columnmesto = New Global.System.Data.DataColumn("mesto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmesto)
             Me.columnokres_bydliska = New Global.System.Data.DataColumn("okres_bydliska", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnokres_bydliska)
             Me.columncislo_op = New Global.System.Data.DataColumn("cislo_op", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -609,8 +609,8 @@ Partial Public Class zoznam_clenov
             Me.columndatum_narodenia.ReadOnly = true
             Me.columnrodne_cislo.ReadOnly = true
             Me.columnrodne_cislo.MaxLength = 45
-            Me.columnbydlisko.ReadOnly = true
-            Me.columnbydlisko.MaxLength = 45
+            Me.columnmesto.ReadOnly = true
+            Me.columnmesto.MaxLength = 45
             Me.columnokres_bydliska.ReadOnly = true
             Me.columnokres_bydliska.MaxLength = 45
             Me.columncislo_op.ReadOnly = true
@@ -838,16 +838,16 @@ Partial Public Class zoznam_clenov
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property bydlisko() As String
+        Public Property mesto() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableall_clenovia.bydliskoColumn),String)
+                    Return CType(Me(Me.tableall_clenovia.mestoColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'bydlisko' in table 'all_clenovia' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'mesto' in table 'all_clenovia' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableall_clenovia.bydliskoColumn) = value
+                Me(Me.tableall_clenovia.mestoColumn) = value
             End Set
         End Property
         
@@ -1085,13 +1085,13 @@ Partial Public Class zoznam_clenov
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Function IsbydliskoNull() As Boolean
-            Return Me.IsNull(Me.tableall_clenovia.bydliskoColumn)
+        Public Function IsmestoNull() As Boolean
+            Return Me.IsNull(Me.tableall_clenovia.mestoColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Sub SetbydliskoNull()
-            Me(Me.tableall_clenovia.bydliskoColumn) = Global.System.Convert.DBNull
+        Public Sub SetmestoNull()
+            Me(Me.tableall_clenovia.mestoColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1387,7 +1387,7 @@ Namespace zoznam_clenovTableAdapters
             tableMapping.ColumnMappings.Add("priezvisko", "priezvisko")
             tableMapping.ColumnMappings.Add("datum_narodenia", "datum_narodenia")
             tableMapping.ColumnMappings.Add("rodne_cislo", "rodne_cislo")
-            tableMapping.ColumnMappings.Add("bydlisko", "bydlisko")
+            tableMapping.ColumnMappings.Add("mesto", "mesto")
             tableMapping.ColumnMappings.Add("okres_bydliska", "okres_bydliska")
             tableMapping.ColumnMappings.Add("cislo_op", "cislo_op")
             tableMapping.ColumnMappings.Add("datum_vydania_op", "datum_vydania_op")
@@ -1416,7 +1416,7 @@ Namespace zoznam_clenovTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT     all_clenovia.cislo_pl, all_clenovia.meno, all_clenovia.priezvisko, all"& _ 
-                "_clenovia.datum_narodenia, all_clenovia.rodne_cislo, all_clenovia.bydlisko, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"  "& _ 
+                "_clenovia.datum_narodenia, all_clenovia.rodne_cislo, all_clenovia.mesto, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"  "& _ 
                 "                    all_clenovia.okres_bydliska, all_clenovia.cislo_op, all_clen"& _ 
                 "ovia.datum_vydania_op, all_clenovia.datum_vydania_pl, all_clenovia.cislo_zp, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" "& _ 
                 "                     all_clenovia.datum_vydania_zp, all_clenovia.cislo_clenskeho"& _ 
