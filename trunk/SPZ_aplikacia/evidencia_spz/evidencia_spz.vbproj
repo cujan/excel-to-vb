@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{FB9D0E11-2A5C-41C6-BC6C-6E4536AD7457}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -501,7 +501,9 @@
     <EmbeddedResource Include="zoznam_kont_strelby_report.rdlc" />
     <EmbeddedResource Include="zoznam_narodeniny.resx">
       <DependentUpon>zoznam_narodeniny.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="zoznam_narodeniny_report.rdlc" />
     <EmbeddedResource Include="zoznam_zdruzeni_full.resx">
       <DependentUpon>zoznam_zdruzeni_full.vb</DependentUpon>
       <SubType>Designer</SubType>
