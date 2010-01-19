@@ -252,3 +252,4 @@ D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\bin\Debug\spz_mdf_log.ldf
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zoznam_chybajuce_kont_strelby.resources
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.pokusny_form.resources
 D:\tmp\moj_playground\evidencia_spz\obj\Debug\evidencia_spz.zoznam_narodeniny.resources
+E:\_marek\SPZ\spz\evidencia_spz\obj\Debug\evidencia_spz.zoznam_narodeniny.resources
