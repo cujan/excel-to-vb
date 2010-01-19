@@ -23,7 +23,7 @@ Partial Class zoznam_zdruzeni_full
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
         Me.zdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.zoznam_zdruzeni_report_full = New evidencia_spz.zoznam_zdruzeni_report_full
         Me.vymera_check = New System.Windows.Forms.CheckBox
@@ -88,9 +88,9 @@ Partial Class zoznam_zdruzeni_full
         Me.najomna_zmluva_check.AutoSize = True
         Me.najomna_zmluva_check.Location = New System.Drawing.Point(12, 48)
         Me.najomna_zmluva_check.Name = "najomna_zmluva_check"
-        Me.najomna_zmluva_check.Size = New System.Drawing.Size(160, 17)
+        Me.najomna_zmluva_check.Size = New System.Drawing.Size(192, 17)
         Me.najomna_zmluva_check.TabIndex = 1
-        Me.najomna_zmluva_check.Text = "Platnosť nájomnej zmluvy do"
+        Me.najomna_zmluva_check.Text = "Platnosť nájomnej zmluvy aspoň do"
         Me.najomna_zmluva_check.UseVisualStyleBackColor = True
         '
         'jelenia_check
@@ -188,7 +188,7 @@ Partial Class zoznam_zdruzeni_full
         Me.vymera_combo.Enabled = False
         Me.vymera_combo.FormattingEnabled = True
         Me.vymera_combo.Items.AddRange(New Object() {"1000", "975", "950", "925", "900", "875", "850", "825", "800", "775", "750", "725", "700", "675", "650", "625", "600", "575", "550", "525", "500", "475", "450", "425", "400", "375", "350", "325", "300", "275", "250", "225", "200", "175", "150", "125", "100", "75", "50", "25"})
-        Me.vymera_combo.Location = New System.Drawing.Point(178, 20)
+        Me.vymera_combo.Location = New System.Drawing.Point(205, 20)
         Me.vymera_combo.Name = "vymera_combo"
         Me.vymera_combo.Size = New System.Drawing.Size(78, 21)
         Me.vymera_combo.TabIndex = 11
@@ -274,9 +274,9 @@ Partial Class zoznam_zdruzeni_full
         '
         'ReportViewer1
         '
-        ReportDataSource3.Name = "zoznam_zdruzeni_report_full_zdruzenia"
-        ReportDataSource3.Value = Me.zdruzeniaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
+        ReportDataSource1.Name = "zoznam_zdruzeni_report_full_zdruzenia"
+        ReportDataSource1.Value = Me.zdruzeniaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.zoznam_zdruz_full_report.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(5, 157)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -343,7 +343,7 @@ Partial Class zoznam_zdruzeni_full
         Me.platnost_naj_zmluvy_combo.DisplayMember = "rok"
         Me.platnost_naj_zmluvy_combo.Enabled = False
         Me.platnost_naj_zmluvy_combo.FormattingEnabled = True
-        Me.platnost_naj_zmluvy_combo.Location = New System.Drawing.Point(178, 46)
+        Me.platnost_naj_zmluvy_combo.Location = New System.Drawing.Point(205, 46)
         Me.platnost_naj_zmluvy_combo.Name = "platnost_naj_zmluvy_combo"
         Me.platnost_naj_zmluvy_combo.Size = New System.Drawing.Size(78, 21)
         Me.platnost_naj_zmluvy_combo.TabIndex = 27
