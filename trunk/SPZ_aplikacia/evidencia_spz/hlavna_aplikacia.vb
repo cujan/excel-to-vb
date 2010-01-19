@@ -598,7 +598,8 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub narodeniny_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles narodeniny.Click
-
+        zoznam_narodeniny.Show()
+        zoznam_narodeniny.BringToFront()
 
 
     End Sub
@@ -682,10 +683,8 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
-        zoznam_clenov_full.Show()
-        zoznam_clenov_full.BringToFront()
-
-
+        zoznam_narodeniny.Show()
+        zoznam_narodeniny.BringToFront()
     End Sub
 
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
