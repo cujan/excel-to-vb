@@ -396,4 +396,8 @@
             Kontrolne_strelby_gulaTextBox.ReadOnly = False
         End If
     End Sub
+
+    Private Sub Ulica_cisloLabel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
 End Class

@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="spzConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT     all_clenovia.cislo_pl, all_clenovia.meno, all_clenovia.priezvisko, all_clenovia.datum_narodenia, all_clenovia.rodne_cislo, all_clenovia.bydlisko, 
+                    <CommandText>SELECT     all_clenovia.cislo_pl, all_clenovia.meno, all_clenovia.priezvisko, all_clenovia.datum_narodenia, all_clenovia.rodne_cislo, all_clenovia.mesto, 
                       all_clenovia.okres_bydliska, all_clenovia.cislo_op, all_clenovia.datum_vydania_op, all_clenovia.datum_vydania_pl, all_clenovia.cislo_zp, 
                       all_clenovia.datum_vydania_zp, all_clenovia.cislo_clenskeho_preukazu_spz, all_clenovia.clen_spz_od, all_clenovia.clenske_do, 
                       all_clenovia.cislo_dokladu_clenske, zdruzenia.nazov, narodnost.nazov AS Expr1, statna_prislusnost.skratka
@@ -43,7 +43,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
               <Mapping SourceColumn="priezvisko" DataSetColumn="priezvisko" />
               <Mapping SourceColumn="datum_narodenia" DataSetColumn="datum_narodenia" />
               <Mapping SourceColumn="rodne_cislo" DataSetColumn="rodne_cislo" />
-              <Mapping SourceColumn="bydlisko" DataSetColumn="bydlisko" />
+              <Mapping SourceColumn="mesto" DataSetColumn="mesto" />
               <Mapping SourceColumn="okres_bydliska" DataSetColumn="okres_bydliska" />
               <Mapping SourceColumn="cislo_op" DataSetColumn="cislo_op" />
               <Mapping SourceColumn="datum_vydania_op" DataSetColumn="datum_vydania_op" />
@@ -100,7 +100,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="bydlisko" msdata:ReadOnly="true" msprop:Generator_UserColumnName="bydlisko" msprop:Generator_ColumnPropNameInRow="bydlisko" msprop:Generator_ColumnVarNameInTable="columnbydlisko" msprop:Generator_ColumnPropNameInTable="bydliskoColumn" minOccurs="0">
+              <xs:element name="mesto" msdata:ReadOnly="true" msprop:Generator_UserColumnName="mesto" msprop:Generator_ColumnPropNameInRow="mesto" msprop:Generator_ColumnVarNameInTable="columnmesto" msprop:Generator_ColumnPropNameInTable="mestoColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="45" />

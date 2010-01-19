@@ -66,7 +66,6 @@ Partial Class clen_novy
         Dim Ulica_cisloLabel As System.Windows.Forms.Label
         Dim PscLabel1 As System.Windows.Forms.Label
         Dim Okres_bydliskaLabel1 As System.Windows.Forms.Label
-        Dim PscLabel2 As System.Windows.Forms.Label
         Me.Cislo_plTextBox = New System.Windows.Forms.TextBox
         Me.MenoTextBox = New System.Windows.Forms.TextBox
         Me.PriezviskoTextBox = New System.Windows.Forms.TextBox
@@ -185,7 +184,6 @@ Partial Class clen_novy
         Ulica_cisloLabel = New System.Windows.Forms.Label
         PscLabel1 = New System.Windows.Forms.Label
         Okres_bydliskaLabel1 = New System.Windows.Forms.Label
-        PscLabel2 = New System.Windows.Forms.Label
         CType(Me.ZdruzeniaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -204,7 +202,7 @@ Partial Class clen_novy
         'Cislo_plLabel
         '
         Cislo_plLabel.AutoSize = True
-        Cislo_plLabel.Location = New System.Drawing.Point(150, 301)
+        Cislo_plLabel.Location = New System.Drawing.Point(150, 311)
         Cislo_plLabel.Name = "Cislo_plLabel"
         Cislo_plLabel.Size = New System.Drawing.Size(42, 13)
         Cislo_plLabel.TabIndex = 1
@@ -267,7 +265,7 @@ Partial Class clen_novy
         'Okres_bydliskaLabel
         '
         Okres_bydliskaLabel.AutoSize = True
-        Okres_bydliskaLabel.Location = New System.Drawing.Point(115, 187)
+        Okres_bydliskaLabel.Location = New System.Drawing.Point(115, 209)
         Okres_bydliskaLabel.Name = "Okres_bydliskaLabel"
         Okres_bydliskaLabel.Size = New System.Drawing.Size(77, 13)
         Okres_bydliskaLabel.TabIndex = 17
@@ -276,7 +274,7 @@ Partial Class clen_novy
         'PscLabel
         '
         PscLabel.AutoSize = True
-        PscLabel.Location = New System.Drawing.Point(165, 232)
+        PscLabel.Location = New System.Drawing.Point(310, 209)
         PscLabel.Name = "PscLabel"
         PscLabel.Size = New System.Drawing.Size(27, 13)
         PscLabel.TabIndex = 19
@@ -294,7 +292,7 @@ Partial Class clen_novy
         'Cislo_opLabel
         '
         Cislo_opLabel.AutoSize = True
-        Cislo_opLabel.Location = New System.Drawing.Point(146, 275)
+        Cislo_opLabel.Location = New System.Drawing.Point(146, 285)
         Cislo_opLabel.Name = "Cislo_opLabel"
         Cislo_opLabel.Size = New System.Drawing.Size(46, 13)
         Cislo_opLabel.TabIndex = 23
@@ -303,7 +301,7 @@ Partial Class clen_novy
         'Datum_vydania_opLabel
         '
         Datum_vydania_opLabel.AutoSize = True
-        Datum_vydania_opLabel.Location = New System.Drawing.Point(451, 275)
+        Datum_vydania_opLabel.Location = New System.Drawing.Point(451, 285)
         Datum_vydania_opLabel.Name = "Datum_vydania_opLabel"
         Datum_vydania_opLabel.Size = New System.Drawing.Size(94, 13)
         Datum_vydania_opLabel.TabIndex = 25
@@ -312,7 +310,7 @@ Partial Class clen_novy
         'Datum_vydania_plLabel
         '
         Datum_vydania_plLabel.AutoSize = True
-        Datum_vydania_plLabel.Location = New System.Drawing.Point(455, 301)
+        Datum_vydania_plLabel.Location = New System.Drawing.Point(455, 311)
         Datum_vydania_plLabel.Name = "Datum_vydania_plLabel"
         Datum_vydania_plLabel.Size = New System.Drawing.Size(90, 13)
         Datum_vydania_plLabel.TabIndex = 27
@@ -321,7 +319,7 @@ Partial Class clen_novy
         'Cislo_zpLabel
         '
         Cislo_zpLabel.AutoSize = True
-        Cislo_zpLabel.Location = New System.Drawing.Point(147, 327)
+        Cislo_zpLabel.Location = New System.Drawing.Point(147, 337)
         Cislo_zpLabel.Name = "Cislo_zpLabel"
         Cislo_zpLabel.Size = New System.Drawing.Size(45, 13)
         Cislo_zpLabel.TabIndex = 29
@@ -330,7 +328,7 @@ Partial Class clen_novy
         'Datum_vydania_zpLabel
         '
         Datum_vydania_zpLabel.AutoSize = True
-        Datum_vydania_zpLabel.Location = New System.Drawing.Point(452, 327)
+        Datum_vydania_zpLabel.Location = New System.Drawing.Point(452, 337)
         Datum_vydania_zpLabel.Name = "Datum_vydania_zpLabel"
         Datum_vydania_zpLabel.Size = New System.Drawing.Size(93, 13)
         Datum_vydania_zpLabel.TabIndex = 31
@@ -339,7 +337,7 @@ Partial Class clen_novy
         'Cislo_clenskeho_preukazu_spzLabel
         '
         Cislo_clenskeho_preukazu_spzLabel.AutoSize = True
-        Cislo_clenskeho_preukazu_spzLabel.Location = New System.Drawing.Point(43, 404)
+        Cislo_clenskeho_preukazu_spzLabel.Location = New System.Drawing.Point(43, 409)
         Cislo_clenskeho_preukazu_spzLabel.Name = "Cislo_clenskeho_preukazu_spzLabel"
         Cislo_clenskeho_preukazu_spzLabel.Size = New System.Drawing.Size(149, 13)
         Cislo_clenskeho_preukazu_spzLabel.TabIndex = 33
@@ -348,7 +346,7 @@ Partial Class clen_novy
         'Clen_spz_odLabel
         '
         Clen_spz_odLabel.AutoSize = True
-        Clen_spz_odLabel.Location = New System.Drawing.Point(126, 430)
+        Clen_spz_odLabel.Location = New System.Drawing.Point(126, 435)
         Clen_spz_odLabel.Name = "Clen_spz_odLabel"
         Clen_spz_odLabel.Size = New System.Drawing.Size(64, 13)
         Clen_spz_odLabel.TabIndex = 35
@@ -357,7 +355,7 @@ Partial Class clen_novy
         'Clenske_doLabel
         '
         Clenske_doLabel.AutoSize = True
-        Clenske_doLabel.Location = New System.Drawing.Point(130, 456)
+        Clenske_doLabel.Location = New System.Drawing.Point(130, 461)
         Clenske_doLabel.Name = "Clenske_doLabel"
         Clenske_doLabel.Size = New System.Drawing.Size(62, 13)
         Clenske_doLabel.TabIndex = 37
@@ -366,7 +364,7 @@ Partial Class clen_novy
         'Cislo_dokladu_clenskeLabel
         '
         Cislo_dokladu_clenskeLabel.AutoSize = True
-        Cislo_dokladu_clenskeLabel.Location = New System.Drawing.Point(433, 404)
+        Cislo_dokladu_clenskeLabel.Location = New System.Drawing.Point(433, 409)
         Cislo_dokladu_clenskeLabel.Name = "Cislo_dokladu_clenskeLabel"
         Cislo_dokladu_clenskeLabel.Size = New System.Drawing.Size(112, 13)
         Cislo_dokladu_clenskeLabel.TabIndex = 39
@@ -375,7 +373,7 @@ Partial Class clen_novy
         'Clen_pzLabel
         '
         Clen_pzLabel.AutoSize = True
-        Clen_pzLabel.Location = New System.Drawing.Point(148, 377)
+        Clen_pzLabel.Location = New System.Drawing.Point(148, 382)
         Clen_pzLabel.Name = "Clen_pzLabel"
         Clen_pzLabel.Size = New System.Drawing.Size(44, 13)
         Clen_pzLabel.TabIndex = 41
@@ -510,7 +508,7 @@ Partial Class clen_novy
         'Titul_pred_idLabel
         '
         Titul_pred_idLabel.AutoSize = True
-        Titul_pred_idLabel.Location = New System.Drawing.Point(126, 109)
+        Titul_pred_idLabel.Location = New System.Drawing.Point(129, 109)
         Titul_pred_idLabel.Name = "Titul_pred_idLabel"
         Titul_pred_idLabel.Size = New System.Drawing.Size(61, 13)
         Titul_pred_idLabel.TabIndex = 71
@@ -519,7 +517,7 @@ Partial Class clen_novy
         'Titul_za_idLabel
         '
         Titul_za_idLabel.AutoSize = True
-        Titul_za_idLabel.Location = New System.Drawing.Point(139, 135)
+        Titul_za_idLabel.Location = New System.Drawing.Point(142, 135)
         Titul_za_idLabel.Name = "Titul_za_idLabel"
         Titul_za_idLabel.Size = New System.Drawing.Size(51, 13)
         Titul_za_idLabel.TabIndex = 73
@@ -546,7 +544,7 @@ Partial Class clen_novy
         'MestoLabel
         '
         MestoLabel.AutoSize = True
-        MestoLabel.Location = New System.Drawing.Point(9, 168)
+        MestoLabel.Location = New System.Drawing.Point(154, 161)
         MestoLabel.Name = "MestoLabel"
         MestoLabel.Size = New System.Drawing.Size(38, 13)
         MestoLabel.TabIndex = 0
@@ -555,7 +553,7 @@ Partial Class clen_novy
         'UlicaLabel
         '
         UlicaLabel.AutoSize = True
-        UlicaLabel.Location = New System.Drawing.Point(180, 164)
+        UlicaLabel.Location = New System.Drawing.Point(160, 187)
         UlicaLabel.Name = "UlicaLabel"
         UlicaLabel.Size = New System.Drawing.Size(32, 13)
         UlicaLabel.TabIndex = 0
@@ -564,11 +562,12 @@ Partial Class clen_novy
         'Ulica_cisloLabel
         '
         Ulica_cisloLabel.AutoSize = True
-        Ulica_cisloLabel.Location = New System.Drawing.Point(328, 164)
+        Ulica_cisloLabel.Location = New System.Drawing.Point(293, 186)
         Ulica_cisloLabel.Name = "Ulica_cisloLabel"
-        Ulica_cisloLabel.Size = New System.Drawing.Size(56, 13)
+        Ulica_cisloLabel.Size = New System.Drawing.Size(45, 13)
         Ulica_cisloLabel.TabIndex = 0
-        Ulica_cisloLabel.Text = "ulica cislo:"
+        Ulica_cisloLabel.Text = "ul. cislo:"
+        AddHandler Ulica_cisloLabel.Click, AddressOf Me.Ulica_cisloLabel_Click
         '
         'PscLabel1
         '
@@ -588,18 +587,9 @@ Partial Class clen_novy
         Okres_bydliskaLabel1.TabIndex = 2
         Okres_bydliskaLabel1.Text = "okres bydliska:"
         '
-        'PscLabel2
-        '
-        PscLabel2.AutoSize = True
-        PscLabel2.Location = New System.Drawing.Point(168, 223)
-        PscLabel2.Name = "PscLabel2"
-        PscLabel2.Size = New System.Drawing.Size(27, 13)
-        PscLabel2.TabIndex = 0
-        PscLabel2.Text = "psc:"
-        '
         'Cislo_plTextBox
         '
-        Me.Cislo_plTextBox.Location = New System.Drawing.Point(198, 298)
+        Me.Cislo_plTextBox.Location = New System.Drawing.Point(198, 308)
         Me.Cislo_plTextBox.Name = "Cislo_plTextBox"
         Me.Cislo_plTextBox.Size = New System.Drawing.Size(140, 20)
         Me.Cislo_plTextBox.TabIndex = 2
@@ -650,7 +640,7 @@ Partial Class clen_novy
         '
         'Cislo_opTextBox
         '
-        Me.Cislo_opTextBox.Location = New System.Drawing.Point(198, 272)
+        Me.Cislo_opTextBox.Location = New System.Drawing.Point(198, 282)
         Me.Cislo_opTextBox.Name = "Cislo_opTextBox"
         Me.Cislo_opTextBox.Size = New System.Drawing.Size(140, 20)
         Me.Cislo_opTextBox.TabIndex = 24
@@ -658,7 +648,7 @@ Partial Class clen_novy
         'Datum_vydania_opDateTimePicker
         '
         Me.Datum_vydania_opDateTimePicker.Checked = False
-        Me.Datum_vydania_opDateTimePicker.Location = New System.Drawing.Point(551, 271)
+        Me.Datum_vydania_opDateTimePicker.Location = New System.Drawing.Point(551, 281)
         Me.Datum_vydania_opDateTimePicker.Name = "Datum_vydania_opDateTimePicker"
         Me.Datum_vydania_opDateTimePicker.ShowCheckBox = True
         Me.Datum_vydania_opDateTimePicker.Size = New System.Drawing.Size(140, 20)
@@ -667,7 +657,7 @@ Partial Class clen_novy
         'Datum_vydania_plDateTimePicker
         '
         Me.Datum_vydania_plDateTimePicker.Checked = False
-        Me.Datum_vydania_plDateTimePicker.Location = New System.Drawing.Point(551, 297)
+        Me.Datum_vydania_plDateTimePicker.Location = New System.Drawing.Point(551, 307)
         Me.Datum_vydania_plDateTimePicker.Name = "Datum_vydania_plDateTimePicker"
         Me.Datum_vydania_plDateTimePicker.ShowCheckBox = True
         Me.Datum_vydania_plDateTimePicker.Size = New System.Drawing.Size(140, 20)
@@ -675,7 +665,7 @@ Partial Class clen_novy
         '
         'Cislo_zpTextBox
         '
-        Me.Cislo_zpTextBox.Location = New System.Drawing.Point(198, 324)
+        Me.Cislo_zpTextBox.Location = New System.Drawing.Point(198, 334)
         Me.Cislo_zpTextBox.Name = "Cislo_zpTextBox"
         Me.Cislo_zpTextBox.Size = New System.Drawing.Size(140, 20)
         Me.Cislo_zpTextBox.TabIndex = 30
@@ -683,7 +673,7 @@ Partial Class clen_novy
         'Datum_vydania_zpDateTimePicker
         '
         Me.Datum_vydania_zpDateTimePicker.Checked = False
-        Me.Datum_vydania_zpDateTimePicker.Location = New System.Drawing.Point(551, 323)
+        Me.Datum_vydania_zpDateTimePicker.Location = New System.Drawing.Point(551, 333)
         Me.Datum_vydania_zpDateTimePicker.Name = "Datum_vydania_zpDateTimePicker"
         Me.Datum_vydania_zpDateTimePicker.ShowCheckBox = True
         Me.Datum_vydania_zpDateTimePicker.Size = New System.Drawing.Size(140, 20)
@@ -691,28 +681,28 @@ Partial Class clen_novy
         '
         'Cislo_clenskeho_preukazu_spzTextBox
         '
-        Me.Cislo_clenskeho_preukazu_spzTextBox.Location = New System.Drawing.Point(198, 401)
+        Me.Cislo_clenskeho_preukazu_spzTextBox.Location = New System.Drawing.Point(198, 406)
         Me.Cislo_clenskeho_preukazu_spzTextBox.Name = "Cislo_clenskeho_preukazu_spzTextBox"
         Me.Cislo_clenskeho_preukazu_spzTextBox.Size = New System.Drawing.Size(140, 20)
         Me.Cislo_clenskeho_preukazu_spzTextBox.TabIndex = 34
         '
         'Clen_spz_odTextBox
         '
-        Me.Clen_spz_odTextBox.Location = New System.Drawing.Point(198, 427)
+        Me.Clen_spz_odTextBox.Location = New System.Drawing.Point(198, 432)
         Me.Clen_spz_odTextBox.Name = "Clen_spz_odTextBox"
         Me.Clen_spz_odTextBox.Size = New System.Drawing.Size(140, 20)
         Me.Clen_spz_odTextBox.TabIndex = 36
         '
         'Clenske_doTextBox
         '
-        Me.Clenske_doTextBox.Location = New System.Drawing.Point(198, 453)
+        Me.Clenske_doTextBox.Location = New System.Drawing.Point(198, 458)
         Me.Clenske_doTextBox.Name = "Clenske_doTextBox"
         Me.Clenske_doTextBox.Size = New System.Drawing.Size(140, 20)
         Me.Clenske_doTextBox.TabIndex = 38
         '
         'Cislo_dokladu_clenskeTextBox
         '
-        Me.Cislo_dokladu_clenskeTextBox.Location = New System.Drawing.Point(551, 401)
+        Me.Cislo_dokladu_clenskeTextBox.Location = New System.Drawing.Point(551, 406)
         Me.Cislo_dokladu_clenskeTextBox.Name = "Cislo_dokladu_clenskeTextBox"
         Me.Cislo_dokladu_clenskeTextBox.Size = New System.Drawing.Size(140, 20)
         Me.Cislo_dokladu_clenskeTextBox.TabIndex = 40
@@ -815,7 +805,7 @@ Partial Class clen_novy
         Me.Clen_pzComboBox.DataSource = Me.ZdruzeniaBindingSource1
         Me.Clen_pzComboBox.DisplayMember = "nazov"
         Me.Clen_pzComboBox.FormattingEnabled = True
-        Me.Clen_pzComboBox.Location = New System.Drawing.Point(198, 374)
+        Me.Clen_pzComboBox.Location = New System.Drawing.Point(198, 379)
         Me.Clen_pzComboBox.Name = "Clen_pzComboBox"
         Me.Clen_pzComboBox.Size = New System.Drawing.Size(140, 21)
         Me.Clen_pzComboBox.TabIndex = 82
@@ -1000,7 +990,7 @@ Partial Class clen_novy
         'label_predseda
         '
         Me.label_predseda.AutoSize = True
-        Me.label_predseda.Location = New System.Drawing.Point(426, 430)
+        Me.label_predseda.Location = New System.Drawing.Point(426, 435)
         Me.label_predseda.Name = "label_predseda"
         Me.label_predseda.Size = New System.Drawing.Size(119, 13)
         Me.label_predseda.TabIndex = 91
@@ -1010,7 +1000,7 @@ Partial Class clen_novy
         'label_hospodar
         '
         Me.label_hospodar.AutoSize = True
-        Me.label_hospodar.Location = New System.Drawing.Point(426, 456)
+        Me.label_hospodar.Location = New System.Drawing.Point(426, 461)
         Me.label_hospodar.Name = "label_hospodar"
         Me.label_hospodar.Size = New System.Drawing.Size(119, 13)
         Me.label_hospodar.TabIndex = 92
@@ -1021,7 +1011,7 @@ Partial Class clen_novy
         '
         Me.ComboBox_predseda.FormattingEnabled = True
         Me.ComboBox_predseda.Items.AddRange(New Object() {"Áno", "Nie"})
-        Me.ComboBox_predseda.Location = New System.Drawing.Point(551, 427)
+        Me.ComboBox_predseda.Location = New System.Drawing.Point(551, 432)
         Me.ComboBox_predseda.Name = "ComboBox_predseda"
         Me.ComboBox_predseda.Size = New System.Drawing.Size(64, 21)
         Me.ComboBox_predseda.TabIndex = 93
@@ -1031,7 +1021,7 @@ Partial Class clen_novy
         '
         Me.ComboBox_hospodar.FormattingEnabled = True
         Me.ComboBox_hospodar.Items.AddRange(New Object() {"Áno", "Nie"})
-        Me.ComboBox_hospodar.Location = New System.Drawing.Point(551, 453)
+        Me.ComboBox_hospodar.Location = New System.Drawing.Point(551, 458)
         Me.ComboBox_hospodar.Name = "ComboBox_hospodar"
         Me.ComboBox_hospodar.Size = New System.Drawing.Size(64, 21)
         Me.ComboBox_hospodar.TabIndex = 94
@@ -1064,7 +1054,7 @@ Partial Class clen_novy
         Me.MestoComboBox.DataSource = Me.CiselnikobceBindingSource
         Me.MestoComboBox.DisplayMember = "obec"
         Me.MestoComboBox.FormattingEnabled = True
-        Me.MestoComboBox.Location = New System.Drawing.Point(53, 163)
+        Me.MestoComboBox.Location = New System.Drawing.Point(198, 156)
         Me.MestoComboBox.Name = "MestoComboBox"
         Me.MestoComboBox.Size = New System.Drawing.Size(121, 21)
         Me.MestoComboBox.TabIndex = 1
@@ -1087,16 +1077,16 @@ Partial Class clen_novy
         '
         'UlicaTextBox
         '
-        Me.UlicaTextBox.Location = New System.Drawing.Point(218, 160)
+        Me.UlicaTextBox.Location = New System.Drawing.Point(198, 183)
         Me.UlicaTextBox.Name = "UlicaTextBox"
-        Me.UlicaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.UlicaTextBox.Size = New System.Drawing.Size(87, 20)
         Me.UlicaTextBox.TabIndex = 1
         '
         'Ulica_cisloTextBox
         '
-        Me.Ulica_cisloTextBox.Location = New System.Drawing.Point(380, 161)
+        Me.Ulica_cisloTextBox.Location = New System.Drawing.Point(343, 184)
         Me.Ulica_cisloTextBox.Name = "Ulica_cisloTextBox"
-        Me.Ulica_cisloTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Ulica_cisloTextBox.Size = New System.Drawing.Size(55, 20)
         Me.Ulica_cisloTextBox.TabIndex = 1
         '
         'Ciselnik_obceTableAdapter
@@ -1107,18 +1097,18 @@ Partial Class clen_novy
         '
         Me.Okres_bydliskaListBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.All_clenoviaBindingSource, "okres_bydliska", True))
         Me.Okres_bydliskaListBox.FormattingEnabled = True
-        Me.Okres_bydliskaListBox.Location = New System.Drawing.Point(200, 180)
+        Me.Okres_bydliskaListBox.Location = New System.Drawing.Point(198, 209)
         Me.Okres_bydliskaListBox.Name = "Okres_bydliskaListBox"
-        Me.Okres_bydliskaListBox.Size = New System.Drawing.Size(120, 43)
+        Me.Okres_bydliskaListBox.Size = New System.Drawing.Size(87, 43)
         Me.Okres_bydliskaListBox.TabIndex = 1
         '
         'PscListBox
         '
         Me.PscListBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.All_clenoviaBindingSource, "psc", True))
         Me.PscListBox.FormattingEnabled = True
-        Me.PscListBox.Location = New System.Drawing.Point(201, 223)
+        Me.PscListBox.Location = New System.Drawing.Point(343, 209)
         Me.PscListBox.Name = "PscListBox"
-        Me.PscListBox.Size = New System.Drawing.Size(117, 43)
+        Me.PscListBox.Size = New System.Drawing.Size(55, 43)
         Me.PscListBox.TabIndex = 1
         '
         'ErrorProvider1
@@ -1154,7 +1144,6 @@ Partial Class clen_novy
         '
         'rodne_cisloMaskedTextBox
         '
-        Me.rodne_cisloMaskedTextBox.Culture = New System.Globalization.CultureInfo("en-US")
         Me.rodne_cisloMaskedTextBox.Location = New System.Drawing.Point(551, 132)
         Me.rodne_cisloMaskedTextBox.Mask = "000000/0000"
         Me.rodne_cisloMaskedTextBox.Name = "rodne_cisloMaskedTextBox"
@@ -1172,7 +1161,6 @@ Partial Class clen_novy
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Gulova_zbranComboBox)
         Me.Controls.Add(Me.Brokova_zbranComboBox)
-        Me.Controls.Add(PscLabel2)
         Me.Controls.Add(Me.PscListBox)
         Me.Controls.Add(Me.Okres_bydliskaListBox)
         Me.Controls.Add(Ulica_cisloLabel)
