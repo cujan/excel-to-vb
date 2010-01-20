@@ -24,6 +24,8 @@ Partial Class zoznam_narodeniny
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Me.all_clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.narodeniny = New evidencia_spz.narodeniny
         Me.narodeniny_check = New System.Windows.Forms.CheckBox
         Me.mesiace_combo = New System.Windows.Forms.ComboBox
         Me.zdruzenia_check = New System.Windows.Forms.CheckBox
@@ -33,14 +35,23 @@ Partial Class zoznam_narodeniny
         Me.ZdruzeniaTableAdapter = New evidencia_spz.zoznam_zdruzeni_comboTableAdapters.zdruzeniaTableAdapter
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
         Me.narodeniny_label = New System.Windows.Forms.Label
-        Me.narodeniny = New evidencia_spz.narodeniny
-        Me.all_clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.all_clenoviaTableAdapter = New evidencia_spz.narodeninyTableAdapters.all_clenoviaTableAdapter
+        Me.nacitat_button = New System.Windows.Forms.Button
+        CType(Me.all_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.narodeniny, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Zoznam_zdruzeni_combo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.narodeniny, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.all_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'all_clenoviaBindingSource
+        '
+        Me.all_clenoviaBindingSource.DataMember = "all_clenovia"
+        Me.all_clenoviaBindingSource.DataSource = Me.narodeniny
+        '
+        'narodeniny
+        '
+        Me.narodeniny.DataSetName = "narodeniny"
+        Me.narodeniny.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'narodeniny_check
         '
@@ -119,25 +130,25 @@ Partial Class zoznam_narodeniny
         Me.narodeniny_label.TabIndex = 5
         Me.narodeniny_label.Text = "Narodeniny v mesiaci"
         '
-        'narodeniny
-        '
-        Me.narodeniny.DataSetName = "narodeniny"
-        Me.narodeniny.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'all_clenoviaBindingSource
-        '
-        Me.all_clenoviaBindingSource.DataMember = "all_clenovia"
-        Me.all_clenoviaBindingSource.DataSource = Me.narodeniny
-        '
         'all_clenoviaTableAdapter
         '
         Me.all_clenoviaTableAdapter.ClearBeforeFill = True
+        '
+        'nacitat_button
+        '
+        Me.nacitat_button.Location = New System.Drawing.Point(707, 27)
+        Me.nacitat_button.Name = "nacitat_button"
+        Me.nacitat_button.Size = New System.Drawing.Size(120, 23)
+        Me.nacitat_button.TabIndex = 6
+        Me.nacitat_button.Text = "Načítať tl. zostavu"
+        Me.nacitat_button.UseVisualStyleBackColor = True
         '
         'zoznam_narodeniny
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(967, 582)
+        Me.Controls.Add(Me.nacitat_button)
         Me.Controls.Add(Me.narodeniny_label)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Controls.Add(Me.zdruzenia_combo)
@@ -146,10 +157,10 @@ Partial Class zoznam_narodeniny
         Me.Controls.Add(Me.narodeniny_check)
         Me.Name = "zoznam_narodeniny"
         Me.Text = "Zoznam narodenín členov"
+        CType(Me.all_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.narodeniny, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Zoznam_zdruzeni_combo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.narodeniny, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.all_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -161,9 +172,10 @@ Partial Class zoznam_narodeniny
     Friend WithEvents Zoznam_zdruzeni_combo As evidencia_spz.zoznam_zdruzeni_combo
     Friend WithEvents ZdruzeniaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ZdruzeniaTableAdapter As evidencia_spz.zoznam_zdruzeni_comboTableAdapters.zdruzeniaTableAdapter
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents narodeniny_label As System.Windows.Forms.Label
     Friend WithEvents all_clenoviaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents narodeniny As evidencia_spz.narodeniny
     Friend WithEvents all_clenoviaTableAdapter As evidencia_spz.narodeninyTableAdapters.all_clenoviaTableAdapter
+    Friend WithEvents nacitat_button As System.Windows.Forms.Button
+    Private WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
 End Class

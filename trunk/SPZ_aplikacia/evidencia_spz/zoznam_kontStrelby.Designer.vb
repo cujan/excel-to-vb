@@ -969,33 +969,52 @@ Namespace zoznam_kontStrelbyTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT     all_clenovia.meno, all_clenovia.priezvisko AS clen_priezvisko, all_cle"& _ 
                 "novia.rodne_cislo, all_clenovia.mesto, all_clenovia.okres_bydliska, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"          "& _ 
-                "            zdruzenia.nazov AS zdruzenie_nazov, all_clenovia.brokova_zbran AS ty"& _ 
-                "p_zbran, all_clenovia.kontrolne_strelby_brok AS zbran_strelby_kedy"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM        "& _ 
-                " all_clenovia INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      zdruzenia ON all_clenovia.clen_p"& _ 
-                "z = zdruzenia.ico"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (all_clenovia.brokova_zbran like @Param1) AND (DATE"& _ 
-                "PART(YEAR, GETDATE()) - all_clenovia.kontrolne_strelby_brok >= 5)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"UNION ALL"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SE"& _ 
-                "LECT     all_clenovia_1.meno, all_clenovia_1.priezvisko AS clen_priezvisko, all_"& _ 
-                "clenovia_1.rodne_cislo, all_clenovia_1.mesto, all_clenovia_1.okres_bydliska, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" "& _ 
-                "                     zdruzenia_1.nazov AS zdruzenie_nazov, all_clenovia_1.gulova"& _ 
-                "_zbran AS typ_zbran, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia_1.kontrolne_strelby_gu"& _ 
-                "la AS zbran_strelby_kedy"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         all_clenovia AS all_clenovia_1 INNER JOIN"& _ 
-                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      zdruzenia AS zdruzenia_1 ON all_clenovia_1.clen_pz = zdr"& _ 
-                "uzenia_1.ico"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (all_clenovia_1.gulova_zbran like @Param2) AND (DATEPART"& _ 
-                "(YEAR, GETDATE()) - all_clenovia_1.kontrolne_strelby_gula >= 5)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY clen_p"& _ 
-                "riezvisko"
+                "            zdruzenia.nazov AS zdruzenie_nazov, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      CASE WHE"& _ 
+                "N all_clenovia.brokova_zbran LIKE 'ÁNO' THEN 'Broková zbran' ELSE all_clenovia.b"& _ 
+                "rokova_zbran END AS typ_zbran, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      all_clenovia.kontrolne_st"& _ 
+                "relby_brok AS zbran_strelby_kedy"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         all_clenovia INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
+                "              zdruzenia ON all_clenovia.clen_pz = zdruzenia.ico"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (all_"& _ 
+                "clenovia.brokova_zbran LIKE @Param1) AND (DATEPART(YEAR, GETDATE()) - all_clenov"& _ 
+                "ia.kontrolne_strelby_brok >= 5) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      (zdruzenia.nazov LIK"& _ 
+                "E @Param2)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"UNION ALL"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT     all_clenovia_1.meno, all_clenovia_1.priezvisko"& _ 
+                " AS clen_priezvisko, all_clenovia_1.rodne_cislo, all_clenovia_1.mesto, all_cleno"& _ 
+                "via_1.okres_bydliska, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      zdruzenia_1.nazov AS zdruzenie_naz"& _ 
+                "ov, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      CASE WHEN all_clenovia_1.gulova_zbran LIKE 'ÁNO' THE"& _ 
+                "N 'Gulovná zbran' ELSE all_clenovia_1.gulova_zbran END AS typ_zbran, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"         "& _ 
+                "             all_clenovia_1.kontrolne_strelby_gula AS zbran_strelby_kedy"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM  "& _ 
+                "       all_clenovia AS all_clenovia_1 INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      zdruzeni"& _ 
+                "a AS zdruzenia_1 ON all_clenovia_1.clen_pz = zdruzenia_1.ico"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (all_cle"& _ 
+                "novia_1.gulova_zbran LIKE @Param3) AND (DATEPART(YEAR, GETDATE()) - all_clenovia"& _ 
+                "_1.kontrolne_strelby_gula >= 5) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      (zdruzenia_1.nazov L"& _ 
+                "IKE @Param4)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY clen_priezvisko"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param1", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "typ_zbran", Global.System.Data.DataRowVersion.Current, Nothing))
             Dim param As Global.System.Data.SqlServerCe.SqlCeParameter = New Global.System.Data.SqlServerCe.SqlCeParameter
-            param.ParameterName = "@Param2"
+            param.ParameterName = "@Param1"
             param.Size = 45
             param.IsNullable = true
             Me._commandCollection(0).Parameters.Add(param)
+            Dim param2 As Global.System.Data.SqlServerCe.SqlCeParameter = New Global.System.Data.SqlServerCe.SqlCeParameter
+            param2.ParameterName = "@Param2"
+            param2.Size = 45
+            param2.IsNullable = True
+            Me._commandCollection(0).Parameters.Add(param2)
+            Dim param3 As Global.System.Data.SqlServerCe.SqlCeParameter = New Global.System.Data.SqlServerCe.SqlCeParameter
+            param3.ParameterName = "@Param3"
+            param3.Size = 45
+            param3.IsNullable = True
+            Me._commandCollection(0).Parameters.Add(param3)
+            Dim param4 As Global.System.Data.SqlServerCe.SqlCeParameter = New Global.System.Data.SqlServerCe.SqlCeParameter
+            param4.ParameterName = "@Param4"
+            param4.Size = 45
+            param4.IsNullable = True
+            Me._commandCollection(0).Parameters.Add(param4)
+
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As zoznam_kontStrelby.all_clenoviaDataTable, ByVal Param1 As String, ByVal Param2 As String) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As zoznam_kontStrelby.all_clenoviaDataTable, ByVal Param1 As String, ByVal Param2 As String, ByVal Param3 As String, ByVal Param4 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Param1 Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
@@ -1006,6 +1025,16 @@ Namespace zoznam_kontStrelbyTableAdapters
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2,String)
+            End If
+            If (Param3 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(Param3,String)
+            End If
+            If (Param4 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Param4,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1017,7 +1046,7 @@ Namespace zoznam_kontStrelbyTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal Param1 As String, ByVal Param2 As String) As zoznam_kontStrelby.all_clenoviaDataTable
+        Public Overloads Overridable Function GetData(ByVal Param1 As String, ByVal Param2 As String, ByVal Param3 As String, ByVal Param4 As String) As zoznam_kontStrelby.all_clenoviaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Param1 Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
@@ -1028,6 +1057,16 @@ Namespace zoznam_kontStrelbyTableAdapters
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2,String)
+            End If
+            If (Param3 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(Param3,String)
+            End If
+            If (Param4 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Param4,String)
             End If
             Dim dataTable As zoznam_kontStrelby.all_clenoviaDataTable = New zoznam_kontStrelby.all_clenoviaDataTable
             Me.Adapter.Fill(dataTable)
