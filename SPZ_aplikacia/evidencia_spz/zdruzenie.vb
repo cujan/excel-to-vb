@@ -42,6 +42,7 @@
 
     Private Sub ZdruzeniaDataGridView_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ZdruzeniaDataGridView.CellDoubleClick
         zdruzenie_edituj.Show()
+        zdruzenie_edituj.BringToFront()
         
     End Sub
 End Class

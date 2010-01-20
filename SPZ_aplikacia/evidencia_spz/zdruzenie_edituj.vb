@@ -93,6 +93,12 @@
         Dim startovacia_premenna_hospodar As String
         startovacia_premenna_hospodar = Polovny_hospodarTextBox.Text
         hospodarComboBox.SelectedValue = startovacia_premenna_hospodar
+
+
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
+
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -225,5 +231,9 @@
             con.Close()
             Me.Polovny_hospodar_telefonTextBox.Text = ""
         End Try
+    End Sub
+
+    Private Sub zavriet_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_button.Click
+        Me.Close()
     End Sub
 End Class
