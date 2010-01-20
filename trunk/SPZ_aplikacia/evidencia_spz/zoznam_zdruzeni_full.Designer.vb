@@ -24,8 +24,6 @@ Partial Class zoznam_zdruzeni_full
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
-        Me.zdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.zoznam_zdruzeni_report_full = New evidencia_spz.zoznam_zdruzeni_report_full
         Me.vymera_check = New System.Windows.Forms.CheckBox
         Me.najomna_zmluva_check = New System.Windows.Forms.CheckBox
         Me.jelenia_check = New System.Windows.Forms.CheckBox
@@ -52,26 +50,18 @@ Partial Class zoznam_zdruzeni_full
         Me.psy_ = New System.Windows.Forms.Label
         Me.psy_typy_skutocnost_check = New System.Windows.Forms.CheckBox
         Me.psy_typy_plan_check = New System.Windows.Forms.CheckBox
-        Me.zdruzeniaTableAdapter = New evidencia_spz.zoznam_zdruzeni_report_fullTableAdapters.zdruzeniaTableAdapter
         Me.platnost_naj_zmluvy_combo = New System.Windows.Forms.ComboBox
         Me.RokyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Roky = New evidencia_spz.roky
         Me.RokyTableAdapter = New evidencia_spz.rokyTableAdapters.rokyTableAdapter
-        CType(Me.zdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.zoznam_zdruzeni_report_full, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.zoznam_zdruzeni_report_full = New evidencia_spz.zoznam_zdruzeni_report_full
+        Me.zdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.zdruzeniaTableAdapter = New evidencia_spz.zoznam_zdruzeni_report_fullTableAdapters.zdruzeniaTableAdapter
         CType(Me.RokyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Roky, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.zoznam_zdruzeni_report_full, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.zdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'zdruzeniaBindingSource
-        '
-        Me.zdruzeniaBindingSource.DataMember = "zdruzenia"
-        Me.zdruzeniaBindingSource.DataSource = Me.zoznam_zdruzeni_report_full
-        '
-        'zoznam_zdruzeni_report_full
-        '
-        Me.zoznam_zdruzeni_report_full.DataSetName = "zoznam_zdruzeni_report_full"
-        Me.zoznam_zdruzeni_report_full.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'vymera_check
         '
@@ -280,7 +270,7 @@ Partial Class zoznam_zdruzeni_full
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.zoznam_zdruz_full_report.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(5, 157)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(986, 313)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1075, 450)
         Me.ReportViewer1.TabIndex = 21
         '
         'psy_typy_skutocnost_combo
@@ -333,10 +323,6 @@ Partial Class zoznam_zdruzeni_full
         Me.psy_typy_plan_check.Text = "Plán aspoň"
         Me.psy_typy_plan_check.UseVisualStyleBackColor = True
         '
-        'zdruzeniaTableAdapter
-        '
-        Me.zdruzeniaTableAdapter.ClearBeforeFill = True
-        '
         'platnost_naj_zmluvy_combo
         '
         Me.platnost_naj_zmluvy_combo.DataSource = Me.RokyBindingSource
@@ -363,11 +349,25 @@ Partial Class zoznam_zdruzeni_full
         '
         Me.RokyTableAdapter.ClearBeforeFill = True
         '
+        'zoznam_zdruzeni_report_full
+        '
+        Me.zoznam_zdruzeni_report_full.DataSetName = "zoznam_zdruzeni_report_full"
+        Me.zoznam_zdruzeni_report_full.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'zdruzeniaBindingSource
+        '
+        Me.zdruzeniaBindingSource.DataMember = "zdruzenia"
+        Me.zdruzeniaBindingSource.DataSource = Me.zoznam_zdruzeni_report_full
+        '
+        'zdruzeniaTableAdapter
+        '
+        Me.zdruzeniaTableAdapter.ClearBeforeFill = True
+        '
         'zoznam_zdruzeni_full
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1003, 474)
+        Me.ClientSize = New System.Drawing.Size(1092, 619)
         Me.Controls.Add(Me.platnost_naj_zmluvy_combo)
         Me.Controls.Add(Me.psy_typy_skutocnost_combo)
         Me.Controls.Add(Me.psy_typy_plan_combo)
@@ -397,10 +397,10 @@ Partial Class zoznam_zdruzeni_full
         Me.Controls.Add(Me.vymera_check)
         Me.Name = "zoznam_zdruzeni_full"
         Me.Text = "Zoznam združení"
-        CType(Me.zdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.zoznam_zdruzeni_report_full, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RokyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Roky, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.zoznam_zdruzeni_report_full, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.zdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -431,11 +431,11 @@ Partial Class zoznam_zdruzeni_full
     Friend WithEvents psy_ As System.Windows.Forms.Label
     Friend WithEvents psy_typy_skutocnost_check As System.Windows.Forms.CheckBox
     Friend WithEvents psy_typy_plan_check As System.Windows.Forms.CheckBox
-    Friend WithEvents zdruzeniaBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents zoznam_zdruzeni_report_full As evidencia_spz.zoznam_zdruzeni_report_full
-    Friend WithEvents zdruzeniaTableAdapter As evidencia_spz.zoznam_zdruzeni_report_fullTableAdapters.zdruzeniaTableAdapter
     Friend WithEvents platnost_naj_zmluvy_combo As System.Windows.Forms.ComboBox
     Friend WithEvents Roky As evidencia_spz.roky
     Friend WithEvents RokyBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents RokyTableAdapter As evidencia_spz.rokyTableAdapters.rokyTableAdapter
+    Friend WithEvents zdruzeniaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents zoznam_zdruzeni_report_full As evidencia_spz.zoznam_zdruzeni_report_full
+    Friend WithEvents zdruzeniaTableAdapter As evidencia_spz.zoznam_zdruzeni_report_fullTableAdapters.zdruzeniaTableAdapter
 End Class

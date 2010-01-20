@@ -16,9 +16,9 @@
   <InteractiveWidth>8.5in</InteractiveWidth>
   <rd:GridSpacing>0.25cm</rd:GridSpacing>
   <rd:SnapToGrid>true</rd:SnapToGrid>
-  <RightMargin>2.5cm</RightMargin>
-  <LeftMargin>2.5cm</LeftMargin>
-  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>0.1cm</RightMargin>
+  <LeftMargin>0.1cm</LeftMargin>
+  <BottomMargin>0.1cm</BottomMargin>
   <rd:ReportID>c39c428f-8a47-44c0-891b-0385ffdf2316</rd:ReportID>
   <PageWidth>21cm</PageWidth>
   <DataSets>
@@ -125,12 +125,33 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  <Width>38.09524cm</Width>
+  <Code />
+  <Width>27cm</Width>
   <Body>
-    <ColumnSpacing>1cm</ColumnSpacing>
+    <ColumnSpacing>0.5cm</ColumnSpacing>
     <ReportItems>
+      <Textbox Name="textbox17">
+        <Top>0.25cm</Top>
+        <Width>3.03968cm</Width>
+        <Style>
+          <Color>#365838</Color>
+          <FontFamily>Times New Roman</FontFamily>
+          <FontSize>11pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>23.75cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=Day(today()) &amp; "." &amp; Month(today())   &amp; "." &amp; year(today())</Value>
+      </Textbox>
       <Textbox Name="textbox1">
         <rd:DefaultName>textbox1</rd:DefaultName>
+        <Width>5.5cm</Width>
         <Style>
           <Color>#365838</Color>
           <FontFamily>Times New Roman</FontFamily>
@@ -142,12 +163,13 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
         </Style>
         <ZIndex>1</ZIndex>
         <CanGrow>true</CanGrow>
+        <Left>0.25cm</Left>
         <Height>0.8381cm</Height>
         <Value>Zoznam členov</Value>
       </Textbox>
       <Table Name="table1">
         <DataSetName>zoznam_clenov_all_clenovia</DataSetName>
-        <Top>0.8381cm</Top>
+        <Top>1cm</Top>
         <Details>
           <TableRows>
             <TableRow>
@@ -165,38 +187,15 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>14</ZIndex>
+                      <ZIndex>12</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!meno.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="priezvisko">
-                      <rd:DefaultName>priezvisko</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>13</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!priezvisko.Value</Value>
+                      <Value>=Fields!meno.Value &amp; " " &amp; Fields!priezvisko.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -213,12 +212,14 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
+                        <Format>dd.MM.yyyy</Format>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>12</ZIndex>
+                      <ZIndex>11</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!datum_narodenia.Value</Value>
                     </Textbox>
@@ -237,30 +238,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>11</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!bydlisko.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="okres_bydliska">
-                      <rd:DefaultName>okres_bydliska</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -268,31 +246,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                       </Style>
                       <ZIndex>10</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!okres_bydliska.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="nazov">
-                      <rd:DefaultName>nazov</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>9</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!nazov.Value</Value>
+                      <Value>="okr.:" &amp; Fields!okres_bydliska.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -309,12 +263,13 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>8</ZIndex>
+                      <ZIndex>9</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Expr1.Value</Value>
                     </Textbox>
@@ -333,6 +288,32 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!skratka.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="nazov">
+                      <rd:DefaultName>nazov</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -340,7 +321,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                       </Style>
                       <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!skratka.Value</Value>
+                      <Value>=Fields!nazov.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -357,6 +338,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -365,102 +347,6 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                       <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!cislo_clenskeho_preukazu_spz.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="cislo_pl">
-                      <rd:DefaultName>cislo_pl</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>5</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!cislo_pl.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="datum_vydania_pl">
-                      <rd:DefaultName>datum_vydania_pl</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>4</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!datum_vydania_pl.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="cislo_zp">
-                      <rd:DefaultName>cislo_zp</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>3</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!cislo_zp.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="datum_vydania_zp">
-                      <rd:DefaultName>datum_vydania_zp</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>2</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!datum_vydania_zp.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -477,12 +363,13 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>1</ZIndex>
+                      <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!clen_spz_od.Value</Value>
                     </Textbox>
@@ -501,13 +388,116 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!clenske_do.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="cislo_pl">
+                      <rd:DefaultName>cislo_pl</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!cislo_pl.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="datum_vydania_pl">
+                      <rd:DefaultName>datum_vydania_pl</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <Format>dd.MM.yyyy</Format>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!datum_vydania_pl.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="cislo_zp">
+                      <rd:DefaultName>cislo_zp</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!cislo_zp.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="datum_vydania_zp">
+                      <rd:DefaultName>datum_vydania_zp</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <Format>dd.MM.yyyy</Format>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!clenske_do.Value</Value>
+                      <Value>=Fields!datum_vydania_zp.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -515,6 +505,12 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
               <Height>0.48254cm</Height>
             </TableRow>
           </TableRows>
+          <Sorting>
+            <SortBy>
+              <SortExpression>=Fields!priezvisko.Value</SortExpression>
+              <Direction>Ascending</Direction>
+            </SortBy>
+          </Sorting>
         </Details>
         <Header>
           <TableRows>
@@ -534,43 +530,16 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>29</ZIndex>
+                      <ZIndex>25</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>meno</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox3">
-                      <rd:DefaultName>textbox3</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#365838</BackgroundColor>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>28</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>priezvisko</Value>
+                      <Value>Meno</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -588,16 +557,16 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>27</ZIndex>
+                      <ZIndex>24</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>datum narodenia</Value>
+                      <Value>D. narodenia</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -615,70 +584,16 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>26</ZIndex>
+                      <ZIndex>23</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>bydlisko</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox6">
-                      <rd:DefaultName>textbox6</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#365838</BackgroundColor>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>25</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>okres bydliska</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox7">
-                      <rd:DefaultName>textbox7</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#365838</BackgroundColor>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>24</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>nazov</Value>
+                      <Value>Bydlisko</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -696,16 +611,16 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>23</ZIndex>
+                      <ZIndex>22</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>Expr1</Value>
+                      <Value>Národnosť</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -723,16 +638,43 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>22</ZIndex>
+                      <ZIndex>21</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>skratka</Value>
+                      <Value>Št. prísl.</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#365838</BackgroundColor>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>20</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Združenie</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -750,62 +692,8 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>21</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>cislo clenskeho preukazu spz</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox11">
-                      <rd:DefaultName>textbox11</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#365838</BackgroundColor>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>20</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>cislo pl</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox12">
-                      <rd:DefaultName>textbox12</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#365838</BackgroundColor>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -813,61 +701,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                       </Style>
                       <ZIndex>19</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>datum vydania pl</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox13">
-                      <rd:DefaultName>textbox13</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#365838</BackgroundColor>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>18</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>cislo zp</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox14">
-                      <rd:DefaultName>textbox14</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#365838</BackgroundColor>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>17</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>datum vydania zp</Value>
+                      <Value>Číslo ČP</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -885,17 +719,16 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Right</TextAlign>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>16</ZIndex>
+                      <ZIndex>18</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>clen spz od</Value>
+                      <Value>Člen od</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -913,9 +746,62 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Right</TextAlign>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>17</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Členské do</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#365838</BackgroundColor>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>16</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Číslo PL</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#365838</BackgroundColor>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -923,7 +809,61 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                       </Style>
                       <ZIndex>15</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>clenske do</Value>
+                      <Value>PL vydaný</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox13">
+                      <rd:DefaultName>textbox13</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#365838</BackgroundColor>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>14</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Číslo ZP</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#365838</BackgroundColor>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>13</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>ZP vydaný</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -935,56 +875,51 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
         </Header>
         <TableColumns>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>3cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>2.5cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>2.5cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>2cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>1.75cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>2cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>1.75cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>1.75cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>2.25cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>1.75cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>2cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>1.75cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>2.53968cm</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>2cm</Width>
           </TableColumn>
         </TableColumns>
+        <Height>1.04127cm</Height>
       </Table>
     </ReportItems>
-    <Height>1.87937cm</Height>
+    <Height>2.25cm</Height>
   </Body>
   <Language>en-US</Language>
-  <TopMargin>2.5cm</TopMargin>
-  <PageHeight>29.7cm</PageHeight>
+  <TopMargin>0.1cm</TopMargin>
+  <PageHeight>27cm</PageHeight>
 </Report>

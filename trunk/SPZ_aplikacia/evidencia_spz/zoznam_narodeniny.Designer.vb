@@ -23,7 +23,7 @@ Partial Class zoznam_narodeniny
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
         Me.all_clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.narodeniny = New evidencia_spz.narodeniny
         Me.narodeniny_check = New System.Windows.Forms.CheckBox
@@ -68,7 +68,7 @@ Partial Class zoznam_narodeniny
         Me.mesiace_combo.Enabled = False
         Me.mesiace_combo.FormattingEnabled = True
         Me.mesiace_combo.Items.AddRange(New Object() {"Január", "Február", "Marec", "Apríl", "Máj", "Jún", "Júl", "August", "September", "Október", "November", "December"})
-        Me.mesiace_combo.Location = New System.Drawing.Point(366, 31)
+        Me.mesiace_combo.Location = New System.Drawing.Point(511, 6)
         Me.mesiace_combo.Name = "mesiace_combo"
         Me.mesiace_combo.Size = New System.Drawing.Size(133, 21)
         Me.mesiace_combo.TabIndex = 1
@@ -76,7 +76,7 @@ Partial Class zoznam_narodeniny
         'zdruzenia_check
         '
         Me.zdruzenia_check.AutoSize = True
-        Me.zdruzenia_check.Location = New System.Drawing.Point(521, 8)
+        Me.zdruzenia_check.Location = New System.Drawing.Point(366, 35)
         Me.zdruzenia_check.Name = "zdruzenia_check"
         Me.zdruzenia_check.Size = New System.Drawing.Size(139, 17)
         Me.zdruzenia_check.TabIndex = 2
@@ -89,9 +89,9 @@ Partial Class zoznam_narodeniny
         Me.zdruzenia_combo.DisplayMember = "nazov"
         Me.zdruzenia_combo.Enabled = False
         Me.zdruzenia_combo.FormattingEnabled = True
-        Me.zdruzenia_combo.Location = New System.Drawing.Point(521, 31)
+        Me.zdruzenia_combo.Location = New System.Drawing.Point(511, 33)
         Me.zdruzenia_combo.Name = "zdruzenia_combo"
-        Me.zdruzenia_combo.Size = New System.Drawing.Size(139, 21)
+        Me.zdruzenia_combo.Size = New System.Drawing.Size(133, 21)
         Me.zdruzenia_combo.TabIndex = 3
         Me.zdruzenia_combo.ValueMember = "nazov"
         '
@@ -111,20 +111,20 @@ Partial Class zoznam_narodeniny
         '
         'ReportViewer1
         '
-        ReportDataSource1.Name = "narodeniny_all_clenovia"
-        ReportDataSource1.Value = Me.all_clenoviaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        ReportDataSource2.Name = "narodeniny_all_clenovia"
+        ReportDataSource2.Value = Me.all_clenoviaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.zoznam_narodeniny_report.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 58)
+        Me.ReportViewer1.Location = New System.Drawing.Point(12, 69)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(943, 512)
+        Me.ReportViewer1.Size = New System.Drawing.Size(943, 501)
         Me.ReportViewer1.TabIndex = 4
         '
         'narodeniny_label
         '
         Me.narodeniny_label.AutoSize = True
         Me.narodeniny_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.narodeniny_label.Location = New System.Drawing.Point(26, 15)
+        Me.narodeniny_label.Location = New System.Drawing.Point(38, 3)
         Me.narodeniny_label.Name = "narodeniny_label"
         Me.narodeniny_label.Size = New System.Drawing.Size(191, 24)
         Me.narodeniny_label.TabIndex = 5
@@ -136,9 +136,9 @@ Partial Class zoznam_narodeniny
         '
         'nacitat_button
         '
-        Me.nacitat_button.Location = New System.Drawing.Point(707, 27)
+        Me.nacitat_button.Location = New System.Drawing.Point(42, 33)
         Me.nacitat_button.Name = "nacitat_button"
-        Me.nacitat_button.Size = New System.Drawing.Size(120, 23)
+        Me.nacitat_button.Size = New System.Drawing.Size(141, 23)
         Me.nacitat_button.TabIndex = 6
         Me.nacitat_button.Text = "Načítať tl. zostavu"
         Me.nacitat_button.UseVisualStyleBackColor = True

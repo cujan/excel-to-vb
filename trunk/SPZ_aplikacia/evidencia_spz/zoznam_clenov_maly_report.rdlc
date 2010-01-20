@@ -2,7 +2,7 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <DataSources>
     <DataSource Name="spzConnectionString">
-      <rd:DataSourceID>b76c2e59-61b6-4e44-a150-2a50d3d71e67</rd:DataSourceID>
+      <rd:DataSourceID>1c5b3d1f-00bd-4c3b-97fd-e10be61a4745</rd:DataSourceID>
       <ConnectionProperties>
         <DataProvider>
         </DataProvider>
@@ -19,72 +19,216 @@
   <RightMargin>0.5cm</RightMargin>
   <LeftMargin>0.5cm</LeftMargin>
   <BottomMargin>0.5cm</BottomMargin>
-  <rd:ReportID>09299dfc-7490-43e6-9b77-2ccedcee48f4</rd:ReportID>
+  <rd:ReportID>93e11a08-d7b0-4453-aacf-2daf49817cbf</rd:ReportID>
   <PageWidth>21cm</PageWidth>
   <DataSets>
-    <DataSet Name="zoznam_kontStrelby_all_clenovia">
+    <DataSet Name="kartyClenov_karty_clenov">
       <Fields>
         <Field Name="meno">
           <DataField>meno</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="priezvisko">
+          <DataField>priezvisko</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="rodne_cislo">
           <DataField>rodne_cislo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="miesto_narodenia">
+          <DataField>miesto_narodenia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="okres_narodenia">
+          <DataField>okres_narodenia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="psc">
+          <DataField>psc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cislo_op">
+          <DataField>cislo_op</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="datum_vydania_op">
+          <DataField>datum_vydania_op</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="cislo_pl">
+          <DataField>cislo_pl</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="datum_vydania_pl">
+          <DataField>datum_vydania_pl</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="cislo_zp">
+          <DataField>cislo_zp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="datum_vydania_zp">
+          <DataField>datum_vydania_zp</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="cislo_clenskeho_preukazu_spz">
+          <DataField>cislo_clenskeho_preukazu_spz</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="clen_spz_od">
+          <DataField>clen_spz_od</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="clenske_do">
+          <DataField>clenske_do</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="cislo_dokladu_clenske">
+          <DataField>cislo_dokladu_clenske</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="clen_pz">
+          <DataField>clen_pz</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="skuska_z_polovnictva">
+          <DataField>skuska_z_polovnictva</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="skuska_pre_polovnych_hospodarov">
+          <DataField>skuska_pre_polovnych_hospodarov</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="miesto_skusky_pre_polovnych_hospodarov">
+          <DataField>miesto_skusky_pre_polovnych_hospodarov</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="vyzsia_skuska_z_polovnictva">
+          <DataField>vyzsia_skuska_z_polovnictva</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="miesto_vyzsej_skusky_z_polovnictva">
+          <DataField>miesto_vyzsej_skusky_z_polovnictva</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="brokova_zbran">
+          <DataField>brokova_zbran</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="kontrolne_strelby_brok">
+          <DataField>kontrolne_strelby_brok</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="gulova_zbran">
+          <DataField>gulova_zbran</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="udelene_tresty">
+          <DataField>udelene_tresty</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="poznamky">
+          <DataField>poznamky</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="datum_narodenia">
+          <DataField>datum_narodenia</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
         <Field Name="okres_bydliska">
           <DataField>okres_bydliska</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="najvyzsie_vyznamenanie">
+          <DataField>najvyzsie_vyznamenanie</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="vyznamenanie_kedy">
+          <DataField>vyznamenanie_kedy</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="telefon">
+          <DataField>telefon</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Expr1">
+          <DataField>Expr1</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="miesto_skusky_z_polovnictva">
+          <DataField>miesto_skusky_z_polovnictva</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Narodnost">
+          <DataField>Narodnost</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Zdruzenie">
+          <DataField>Zdruzenie</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Statna_prislusnot">
+          <DataField>Statna prislusnot</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Titul_pred">
+          <DataField>Titul pred</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Titul_za">
+          <DataField>Titul za</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="kontrolne_strelby_gula">
+          <DataField>kontrolne_strelby_gula</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="mesto">
           <DataField>mesto</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="clen_priezvisko">
-          <DataField>clen_priezvisko</DataField>
+        <Field Name="ulica">
+          <DataField>ulica</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="zdruzenie_nazov">
-          <DataField>zdruzenie_nazov</DataField>
+        <Field Name="ulica_cislo">
+          <DataField>ulica_cislo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="typ_zbran">
-          <DataField>typ_zbran</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="zbran_strelby_kedy">
-          <DataField>zbran_strelby_kedy</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <Query>
         <DataSourceName>spzConnectionString</DataSourceName>
-        <CommandText>SELECT     all_clenovia.meno, all_clenovia.priezvisko AS clen_priezvisko, all_clenovia.rodne_cislo, all_clenovia.mesto, all_clenovia.okres_bydliska, 
-                      zdruzenia.nazov AS zdruzenie_nazov, all_clenovia.brokova_zbran AS typ_zbran, all_clenovia.kontrolne_strelby_brok AS zbran_strelby_kedy
-FROM         all_clenovia INNER JOIN
-                      zdruzenia ON all_clenovia.clen_pz = zdruzenia.ico
-WHERE     (all_clenovia.brokova_zbran = @Param1) AND (DATEPART(YEAR, GETDATE()) - all_clenovia.kontrolne_strelby_brok &lt;= 5)
-UNION ALL
-SELECT     all_clenovia_1.meno, all_clenovia_1.priezvisko AS clen_priezvisko, all_clenovia_1.rodne_cislo, all_clenovia_1.mesto, all_clenovia_1.okres_bydliska, 
-                      zdruzenia_1.nazov AS zdruzenie_nazov, all_clenovia_1.gulova_zbran AS typ_zbran, 
-                      all_clenovia_1.kontrolne_strelby_gula AS zbran_strelby_kedy
-FROM         all_clenovia AS all_clenovia_1 INNER JOIN
-                      zdruzenia AS zdruzenia_1 ON all_clenovia_1.clen_pz = zdruzenia_1.ico
-WHERE     (all_clenovia_1.gulova_zbran = @Param2) AND (DATEPART(YEAR, GETDATE()) - all_clenovia_1.kontrolne_strelby_gula &lt;= 5)
-ORDER BY clen_priezvisko</CommandText>
+        <CommandText>SELECT     all_clenovia.meno, all_clenovia.priezvisko, all_clenovia.rodne_cislo, all_clenovia.miesto_narodenia, all_clenovia.okres_narodenia, all_clenovia.psc, 
+                      all_clenovia.cislo_op, all_clenovia.datum_vydania_op, all_clenovia.cislo_pl, all_clenovia.datum_vydania_pl, all_clenovia.cislo_zp, 
+                      all_clenovia.datum_vydania_zp, all_clenovia.cislo_clenskeho_preukazu_spz, all_clenovia.clen_spz_od, all_clenovia.clenske_do, 
+                      all_clenovia.cislo_dokladu_clenske, all_clenovia.clen_pz, all_clenovia.skuska_z_polovnictva, all_clenovia.skuska_pre_polovnych_hospodarov, 
+                      all_clenovia.miesto_skusky_pre_polovnych_hospodarov, all_clenovia.vyzsia_skuska_z_polovnictva, 
+                      all_clenovia.miesto_vyzsej_skusky_z_polovnictva, all_clenovia.brokova_zbran, all_clenovia.kontrolne_strelby_brok, all_clenovia.gulova_zbran, 
+                      all_clenovia.kontrolne_strelby_gula, all_clenovia.udelene_tresty, all_clenovia.poznamky, all_clenovia.datum_narodenia, all_clenovia.okres_bydliska, 
+                      all_clenovia.najvyzsie_vyznamenanie, all_clenovia.vyznamenanie_kedy, all_clenovia.telefon, all_clenovia.clen_pz AS Expr1, 
+                      all_clenovia.miesto_skusky_z_polovnictva, narodnost.skratka AS Narodnost, zdruzenia.nazov AS Zdruzenie, 
+                      statna_prislusnost.skratka AS [Statna prislusnot], titul_pred.skratka AS [Titul pred], titul_za.skratka AS [Titul za], all_clenovia.mesto, all_clenovia.ulica, 
+                      all_clenovia.ulica_cislo
+FROM         all_clenovia LEFT OUTER JOIN
+                      statna_prislusnost ON all_clenovia.statna_prislusnost_id = statna_prislusnost.id LEFT OUTER JOIN
+                      narodnost ON all_clenovia.narodnost_id = narodnost.id LEFT OUTER JOIN
+                      titul_za ON all_clenovia.titul_za_id = titul_za.id LEFT OUTER JOIN
+                      titul_pred ON all_clenovia.titul_pred_id = titul_pred.id LEFT OUTER JOIN
+                      zdruzenia ON all_clenovia.clen_pz = zdruzenia.ico</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>zoznam_kontStrelby</rd:DataSetName>
-        <rd:TableName>all_clenovia</rd:TableName>
-        <rd:TableAdapterName>all_clenoviaTableAdapter</rd:TableAdapterName>
+        <rd:DataSetName>kartyClenov</rd:DataSetName>
+        <rd:TableName>karty_clenov</rd:TableName>
+        <rd:TableAdapterName>karty_clenovTableAdapter</rd:TableAdapterName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <Code />
-  <Width>20.31746cm</Width>
+  <Width>20cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
@@ -104,17 +248,17 @@ ORDER BY clen_priezvisko</CommandText>
         </Style>
         <ZIndex>2</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>15.5cm</Left>
+        <Left>14.5cm</Left>
         <Height>0.63492cm</Height>
         <Value>=Day(today()) &amp; "." &amp; Month(today())   &amp; "." &amp; year(today())</Value>
       </Textbox>
       <Textbox Name="textbox1">
         <rd:DefaultName>textbox1</rd:DefaultName>
-        <Width>15.75cm</Width>
+        <Width>6.75cm</Width>
         <Style>
           <Color>#365838</Color>
           <FontFamily>Times New Roman</FontFamily>
-          <FontSize>16pt</FontSize>
+          <FontSize>18pt</FontSize>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
@@ -122,14 +266,14 @@ ORDER BY clen_priezvisko</CommandText>
         </Style>
         <ZIndex>1</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>0.25cm</Left>
+        <Left>0.5cm</Left>
         <Height>0.8381cm</Height>
-        <Value>="Kontrolné streľby vykonané naposledy v roku " &amp; Max(Fields!zbran_strelby_kedy.Value, "zoznam_kontStrelby_all_clenovia")</Value>
+        <Value>Zoznam členov SPZ</Value>
       </Textbox>
       <Table Name="table1">
-        <DataSetName>zoznam_kontStrelby_all_clenovia</DataSetName>
+        <DataSetName>kartyClenov_karty_clenov</DataSetName>
         <Top>1cm</Top>
-        <Width>18.02645cm</Width>
+        <Width>18.07936cm</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -147,57 +291,6 @@ ORDER BY clen_priezvisko</CommandText>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Left</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>5</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!meno.Value &amp; " " &amp; Fields!clen_priezvisko.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="rodne_cislo">
-                      <rd:DefaultName>rodne_cislo</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <TextAlign>Left</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>4</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!rodne_cislo.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="okres_bydliska">
-                      <rd:DefaultName>okres_bydliska</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -205,14 +298,14 @@ ORDER BY clen_priezvisko</CommandText>
                       </Style>
                       <ZIndex>3</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>= Fields!mesto.Value &amp; " okr.:" &amp; Fields!okres_bydliska.Value</Value>
+                      <Value>=Fields!meno.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="zdruzenie_nazov">
-                      <rd:DefaultName>zdruzenie_nazov</rd:DefaultName>
+                    <Textbox Name="priezvisko">
+                      <rd:DefaultName>priezvisko</rd:DefaultName>
                       <Style>
                         <BorderColor>
                           <Default>DarkGray</Default>
@@ -222,7 +315,6 @@ ORDER BY clen_priezvisko</CommandText>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -230,14 +322,14 @@ ORDER BY clen_priezvisko</CommandText>
                       </Style>
                       <ZIndex>2</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!zdruzenie_nazov.Value</Value>
+                      <Value>=Fields!priezvisko.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="typ_zbran">
-                      <rd:DefaultName>typ_zbran</rd:DefaultName>
+                    <Textbox Name="datum_narodenia">
+                      <rd:DefaultName>datum_narodenia</rd:DefaultName>
                       <Style>
                         <BorderColor>
                           <Default>DarkGray</Default>
@@ -247,7 +339,7 @@ ORDER BY clen_priezvisko</CommandText>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Left</TextAlign>
+                        <Format>dd.MM.yyyy</Format>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -255,14 +347,14 @@ ORDER BY clen_priezvisko</CommandText>
                       </Style>
                       <ZIndex>1</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!typ_zbran.Value</Value>
+                      <Value>=Fields!datum_narodenia.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="zbran_strelby_kedy">
-                      <rd:DefaultName>zbran_strelby_kedy</rd:DefaultName>
+                    <Textbox Name="mesto">
+                      <rd:DefaultName>mesto</rd:DefaultName>
                       <Style>
                         <BorderColor>
                           <Default>DarkGray</Default>
@@ -272,14 +364,13 @@ ORDER BY clen_priezvisko</CommandText>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!zbran_strelby_kedy.Value</Value>
+                      <Value>=Fields!ulica.Value &amp; " " &amp; Fields!ulica_cislo.Value &amp; ", " &amp; Fields!mesto.Value &amp; " " &amp; Fields!psc.Value &amp; ", okr.:" &amp; Fields!okres_bydliska.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -289,7 +380,7 @@ ORDER BY clen_priezvisko</CommandText>
           </TableRows>
           <Sorting>
             <SortBy>
-              <SortExpression>=Fields!clen_priezvisko.Value</SortExpression>
+              <SortExpression>=Fields!priezvisko.Value</SortExpression>
               <Direction>Ascending</Direction>
             </SortBy>
           </Sorting>
@@ -312,14 +403,14 @@ ORDER BY clen_priezvisko</CommandText>
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>11</ZIndex>
+                      <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Meno</Value>
                     </Textbox>
@@ -339,16 +430,16 @@ ORDER BY clen_priezvisko</CommandText>
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>10</ZIndex>
+                      <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>RČ</Value>
+                      <Value>Priezvisko</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -366,23 +457,23 @@ ORDER BY clen_priezvisko</CommandText>
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>9</ZIndex>
+                      <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>Bydlisko</Value>
+                      <Value>Dát. narodenia</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox7">
-                      <rd:DefaultName>textbox7</rd:DefaultName>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
                       <Style>
                         <Color>White</Color>
                         <BackgroundColor>#365838</BackgroundColor>
@@ -393,70 +484,16 @@ ORDER BY clen_priezvisko</CommandText>
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>11pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>8</ZIndex>
+                      <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>Združenie</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox8">
-                      <rd:DefaultName>textbox8</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#365838</BackgroundColor>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Left</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>7</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>Typ zbrane</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox9">
-                      <rd:DefaultName>textbox9</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#365838</BackgroundColor>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Left</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>6</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>Posl. streľby</Value>
+                      <Value>Adresa</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -468,29 +505,23 @@ ORDER BY clen_priezvisko</CommandText>
         </Header>
         <TableColumns>
           <TableColumn>
-            <Width>3cm</Width>
+            <Width>2.53968cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2cm</Width>
+            <Width>2.53968cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>6.25cm</Width>
+            <Width>3.25cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.02645cm</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>2.25cm</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>2.5cm</Width>
+            <Width>9.75cm</Width>
           </TableColumn>
         </TableColumns>
         <Height>1.04127cm</Height>
-        <Left>0.25cm</Left>
+        <Left>0.5cm</Left>
       </Table>
     </ReportItems>
-    <Height>2.25cm</Height>
+    <Height>2.29127cm</Height>
   </Body>
   <Language>en-US</Language>
   <TopMargin>0.5cm</TopMargin>
