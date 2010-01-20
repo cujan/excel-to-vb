@@ -44,9 +44,14 @@
     End Sub
 
     Private Sub zdruzenia_combo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zdruzenia_combo.SelectedIndexChanged
-        zdruzenie = zdruzenia_combo.SelectedValue
+        If zdruzenia_combo.SelectedIndex <> -1 Then
+            zdruzenie = zdruzenia_combo.SelectedValue
+            Me.all_clenoviaTableAdapter.Fill(Me.narodeniny.all_clenovia, mesiac, zdruzenie)
+            Me.ReportViewer1.RefreshReport()
+        End If
+    End Sub
 
-
+    Private Sub nacitat_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nacitat_button.Click
         Me.all_clenoviaTableAdapter.Fill(Me.narodeniny.all_clenovia, mesiac, zdruzenie)
         Me.ReportViewer1.RefreshReport()
     End Sub

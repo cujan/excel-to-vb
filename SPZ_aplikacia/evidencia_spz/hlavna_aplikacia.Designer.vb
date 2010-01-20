@@ -920,7 +920,7 @@ Partial Class hlavna_aplikacia
         '
         Me.narodeniny.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.narodeniny.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.narodeniny.Location = New System.Drawing.Point(4, 176)
+        Me.narodeniny.Location = New System.Drawing.Point(4, 79)
         Me.narodeniny.Name = "narodeniny"
         Me.narodeniny.Size = New System.Drawing.Size(130, 21)
         Me.narodeniny.TabIndex = 6
@@ -931,7 +931,7 @@ Partial Class hlavna_aplikacia
         '
         Me.kont_strelby_gula_button.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.kont_strelby_gula_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.kont_strelby_gula_button.Location = New System.Drawing.Point(4, 152)
+        Me.kont_strelby_gula_button.Location = New System.Drawing.Point(4, 175)
         Me.kont_strelby_gula_button.Name = "kont_strelby_gula_button"
         Me.kont_strelby_gula_button.Size = New System.Drawing.Size(130, 21)
         Me.kont_strelby_gula_button.TabIndex = 5
@@ -942,7 +942,7 @@ Partial Class hlavna_aplikacia
         '
         Me.kont_strelby_brok_button.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.kont_strelby_brok_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.kont_strelby_brok_button.Location = New System.Drawing.Point(4, 104)
+        Me.kont_strelby_brok_button.Location = New System.Drawing.Point(4, 127)
         Me.kont_strelby_brok_button.Name = "kont_strelby_brok_button"
         Me.kont_strelby_brok_button.Size = New System.Drawing.Size(130, 21)
         Me.kont_strelby_brok_button.TabIndex = 4
@@ -953,7 +953,7 @@ Partial Class hlavna_aplikacia
         '
         Me.platnost_clenstva_button.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.platnost_clenstva_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.platnost_clenstva_button.Location = New System.Drawing.Point(4, 128)
+        Me.platnost_clenstva_button.Location = New System.Drawing.Point(4, 151)
         Me.platnost_clenstva_button.Name = "platnost_clenstva_button"
         Me.platnost_clenstva_button.Size = New System.Drawing.Size(130, 21)
         Me.platnost_clenstva_button.TabIndex = 3
@@ -964,7 +964,7 @@ Partial Class hlavna_aplikacia
         '
         Me.zoznam_zdruzeni_button.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.zoznam_zdruzeni_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.zoznam_zdruzeni_button.Location = New System.Drawing.Point(4, 80)
+        Me.zoznam_zdruzeni_button.Location = New System.Drawing.Point(4, 103)
         Me.zoznam_zdruzeni_button.Name = "zoznam_zdruzeni_button"
         Me.zoznam_zdruzeni_button.Size = New System.Drawing.Size(130, 21)
         Me.zoznam_zdruzeni_button.TabIndex = 2
