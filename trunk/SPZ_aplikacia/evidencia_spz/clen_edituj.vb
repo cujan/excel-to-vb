@@ -135,7 +135,9 @@
             PscListBox.SelectedIndex = 0
         End If
 
-
+        Me.Dock = DockStyle.Fill
+        Me.TopLevel = False
+        hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
 
     End Sub
 
@@ -413,5 +415,14 @@
             'zrus(chybu)
             ErrorProvider1.SetError(Kontrolne_strelby_gulaTextBox, Nothing)
         End If
+    End Sub
+
+    Private Sub zavriet_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_button.Click
+        Me.Close()
+
+    End Sub
+
+    Private Sub Okres_bydliskaLabel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 End Class
