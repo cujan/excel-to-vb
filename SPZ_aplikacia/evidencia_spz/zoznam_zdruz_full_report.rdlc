@@ -2,7 +2,7 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <DataSources>
     <DataSource Name="spzConnectionString">
-      <rd:DataSourceID>b3be6f4e-db76-4c1b-b100-c6ece881abbe</rd:DataSourceID>
+      <rd:DataSourceID>f81ad008-90f8-45be-8914-898b840e0dce</rd:DataSourceID>
       <ConnectionProperties>
         <DataProvider>
         </DataProvider>
@@ -11,8 +11,8 @@
       </ConnectionProperties>
     </DataSource>
   </DataSources>
-  <rd:ReportID>95df7a1f-1ffa-400f-a3cc-e1ea507db80f</rd:ReportID>
-  <Width>45.71429cm</Width>
+  <rd:ReportID>372cc5e6-a917-46ab-9de5-2978fca9a188</rd:ReportID>
+  <Width>43.17460cm</Width>
   <Body>
     <Height>1.87937cm</Height>
     <ColumnSpacing>1cm</ColumnSpacing>
@@ -89,7 +89,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox3</rd:DefaultName>
-                      <Value>cislo reviru</Value>
+                      <Value>sidlo</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -145,7 +145,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox5</rd:DefaultName>
-                      <Value>sidlo</Value>
+                      <Value>predseda zdruzenia</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -173,7 +173,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox6</rd:DefaultName>
-                      <Value>predseda zdruzenia</Value>
+                      <Value>hospodar zdruzenia</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -201,7 +201,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox7</rd:DefaultName>
-                      <Value>hospodar zdruzenia</Value>
+                      <Value>cislo reviru</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -223,13 +223,14 @@
                         <BorderColor>
                           <Default>DarkGray</Default>
                         </BorderColor>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox8</rd:DefaultName>
-                      <Value>chovatelska oblast</Value>
+                      <Value>vymera</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -251,13 +252,14 @@
                         <BorderColor>
                           <Default>DarkGray</Default>
                         </BorderColor>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox9</rd:DefaultName>
-                      <Value>vymera</Value>
+                      <Value>platnost najomnej zmluvy do</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -279,13 +281,14 @@
                         <BorderColor>
                           <Default>DarkGray</Default>
                         </BorderColor>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox10</rd:DefaultName>
-                      <Value>jelenia</Value>
+                      <Value>plemena plan</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -307,13 +310,14 @@
                         <BorderColor>
                           <Default>DarkGray</Default>
                         </BorderColor>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox11</rd:DefaultName>
-                      <Value>srncia</Value>
+                      <Value>plemena skutocnost</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -335,13 +339,14 @@
                         <BorderColor>
                           <Default>DarkGray</Default>
                         </BorderColor>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox12</rd:DefaultName>
-                      <Value>diviacia</Value>
+                      <Value>pes typy plan</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -363,13 +368,14 @@
                         <BorderColor>
                           <Default>DarkGray</Default>
                         </BorderColor>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox13</rd:DefaultName>
-                      <Value>bazant</Value>
+                      <Value>pes typy skutocnost</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -391,13 +397,14 @@
                         <BorderColor>
                           <Default>DarkGray</Default>
                         </BorderColor>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox14</rd:DefaultName>
-                      <Value>ina</Value>
+                      <Value>jelenia</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -419,13 +426,14 @@
                         <BorderColor>
                           <Default>DarkGray</Default>
                         </BorderColor>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox15</rd:DefaultName>
-                      <Value>platnost najomnej zmluvy do</Value>
+                      <Value>srncia</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -447,13 +455,14 @@
                         <BorderColor>
                           <Default>DarkGray</Default>
                         </BorderColor>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox16</rd:DefaultName>
-                      <Value>plemena plan</Value>
+                      <Value>diviacia</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -475,13 +484,14 @@
                         <BorderColor>
                           <Default>DarkGray</Default>
                         </BorderColor>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox17</rd:DefaultName>
-                      <Value>plemena skutocnost</Value>
+                      <Value>bazant</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -503,41 +513,14 @@
                         <BorderColor>
                           <Default>DarkGray</Default>
                         </BorderColor>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <rd:DefaultName>textbox18</rd:DefaultName>
-                      <Value>pes typy plan</Value>
-                      <CanGrow>true</CanGrow>
-                      <Height>0.55873cm</Height>
-                      <Width>2.53968cm</Width>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox19">
-                      <Style>
-                        <BackgroundColor>#365838</BackgroundColor>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>White</Color>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <rd:DefaultName>textbox19</rd:DefaultName>
-                      <Value>pes typy skutocnost</Value>
+                      <Value>ina</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.55873cm</Height>
                       <Width>2.53968cm</Width>
@@ -580,7 +563,7 @@
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="cislo_reviru">
+                    <Textbox Name="sidlo">
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -595,8 +578,8 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <rd:DefaultName>cislo_reviru</rd:DefaultName>
-                      <Value>=Fields!cislo_reviru.Value</Value>
+                      <rd:DefaultName>sidlo</rd:DefaultName>
+                      <Value>=Fields!sidlo.Value</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.48254cm</Height>
                       <Width>2.53968cm</Width>
@@ -622,31 +605,6 @@
                       </Style>
                       <rd:DefaultName>ico</rd:DefaultName>
                       <Value>=Fields!ico.Value</Value>
-                      <CanGrow>true</CanGrow>
-                      <Height>0.48254cm</Height>
-                      <Width>2.53968cm</Width>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="sidlo">
-                      <Style>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <rd:DefaultName>sidlo</rd:DefaultName>
-                      <Value>=Fields!sidlo.Value</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.48254cm</Height>
                       <Width>2.53968cm</Width>
@@ -705,7 +663,7 @@
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="chovatelska_oblast">
+                    <Textbox Name="cislo_reviru">
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
@@ -720,8 +678,8 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <rd:DefaultName>chovatelska_oblast</rd:DefaultName>
-                      <Value>=Fields!chovatelska_oblast.Value</Value>
+                      <rd:DefaultName>cislo_reviru</rd:DefaultName>
+                      <Value>=Fields!cislo_reviru.Value</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.48254cm</Height>
                       <Width>2.53968cm</Width>
@@ -747,131 +705,6 @@
                       </Style>
                       <rd:DefaultName>vymera</rd:DefaultName>
                       <Value>=Fields!vymera.Value</Value>
-                      <CanGrow>true</CanGrow>
-                      <Height>0.48254cm</Height>
-                      <Width>2.53968cm</Width>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="jelenia">
-                      <Style>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <rd:DefaultName>jelenia</rd:DefaultName>
-                      <Value>=Fields!jelenia.Value</Value>
-                      <CanGrow>true</CanGrow>
-                      <Height>0.48254cm</Height>
-                      <Width>2.53968cm</Width>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="srncia">
-                      <Style>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <rd:DefaultName>srncia</rd:DefaultName>
-                      <Value>=Fields!srncia.Value</Value>
-                      <CanGrow>true</CanGrow>
-                      <Height>0.48254cm</Height>
-                      <Width>2.53968cm</Width>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="diviacia">
-                      <Style>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <rd:DefaultName>diviacia</rd:DefaultName>
-                      <Value>=Fields!diviacia.Value</Value>
-                      <CanGrow>true</CanGrow>
-                      <Height>0.48254cm</Height>
-                      <Width>2.53968cm</Width>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="bazant">
-                      <Style>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <rd:DefaultName>bazant</rd:DefaultName>
-                      <Value>=Fields!bazant.Value</Value>
-                      <CanGrow>true</CanGrow>
-                      <Height>0.48254cm</Height>
-                      <Width>2.53968cm</Width>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="ina">
-                      <Style>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <rd:DefaultName>ina</rd:DefaultName>
-                      <Value>=Fields!ina.Value</Value>
                       <CanGrow>true</CanGrow>
                       <Height>0.48254cm</Height>
                       <Width>2.53968cm</Width>
@@ -1003,15 +836,137 @@
                     </Textbox>
                   </ReportItems>
                 </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="jelenia">
+                      <Style>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <rd:DefaultName>jelenia</rd:DefaultName>
+                      <Value>=Fields!jelenia.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Height>0.48254cm</Height>
+                      <Width>2.53968cm</Width>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="srncia">
+                      <Style>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <rd:DefaultName>srncia</rd:DefaultName>
+                      <Value>=Fields!srncia.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Height>0.48254cm</Height>
+                      <Width>2.53968cm</Width>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="diviacia">
+                      <Style>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <rd:DefaultName>diviacia</rd:DefaultName>
+                      <Value>=Fields!diviacia.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Height>0.48254cm</Height>
+                      <Width>2.53968cm</Width>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="bazant">
+                      <Style>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <rd:DefaultName>bazant</rd:DefaultName>
+                      <Value>=Fields!bazant.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Height>0.48254cm</Height>
+                      <Width>2.53968cm</Width>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ina">
+                      <Style>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <rd:DefaultName>ina</rd:DefaultName>
+                      <Value>=Fields!ina.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Height>0.48254cm</Height>
+                      <Width>2.53968cm</Width>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
               </TableCells>
               <Height>0.48254cm</Height>
             </TableRow>
           </TableRows>
         </Details>
         <TableColumns>
-          <TableColumn>
-            <Width>2.53968cm</Width>
-          </TableColumn>
           <TableColumn>
             <Width>2.53968cm</Width>
           </TableColumn>
@@ -1087,27 +1042,7 @@
       </rd:DataSetInfo>
       <Query>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-        <CommandText>SELECT     zdruzenia.ico, zdruzenia.nazov, zdruzenia.sidlo, zdruzenia.dic, zdruzenia.chovatelska_oblast, zdruzenia.cislo_reviru, zdruzenia.vymera, 
-                      zdruzenia.les, zdruzenia.jelenia, zdruzenia.srncia, zdruzenia.diviacia, zdruzenia.bazant, zdruzenia.ina, zdruzenia.platnost_najomnej_zmluvy_do, 
-                      zdruzenia.farbiare_plan + zdruzenia.brlohare_plan + zdruzenia.ostatne_durice_plan + zdruzenia.stavace_plan + zdruzenia.sliedice_plan + zdruzenia.slovensky_kopov_plan
-                       AS plemena_plan, 
-                      zdruzenia.stavace_skutocnost + zdruzenia.sliedice_skutocnost + zdruzenia.slovensky_kopov_skutocnost + zdruzenia.ostatne_durice_skutocnost + zdruzenia.brlohare_skutocnost
-                       + zdruzenia.farbiare_skutocnost AS plemena_skutocnost, 
-                      zdruzenia.pes_srncia_plan + zdruzenia.pes_jelenia_plan + zdruzenia.pes_diviacia_plan + zdruzenia.pes_mala_plan AS pes_typy_plan, 
-                      zdruzenia.pes_jelenia_skutocnost + zdruzenia.pes_diviacia_skutocnost + zdruzenia.pes_srncia_skutocnost + zdruzenia.pes_mala_skutocnost AS pes_typy_skutocnost,
-                       c1.meno + ' ' + c1.priezvisko AS predseda_zdruzenia, c2.meno + ' ' + c2.priezvisko AS hospodar_zdruzenia
-FROM         zdruzenia LEFT OUTER JOIN
-                      all_clenovia AS c1 ON c1.rodne_cislo = zdruzenia.predseda LEFT OUTER JOIN
-                      all_clenovia AS c2 ON c2.rodne_cislo = zdruzenia.polovny_hospodar
-WHERE     (zdruzenia.vymera &gt;= @Param7) AND (zdruzenia.platnost_najomnej_zmluvy_do &gt;= @Param8) AND 
-                      (zdruzenia.farbiare_plan + zdruzenia.brlohare_plan + zdruzenia.ostatne_durice_plan + zdruzenia.stavace_plan + zdruzenia.sliedice_plan + zdruzenia.slovensky_kopov_plan
-                       &gt;= @Param9) AND 
-                      (zdruzenia.pes_srncia_plan + zdruzenia.pes_jelenia_plan + zdruzenia.pes_diviacia_plan + zdruzenia.pes_mala_plan &gt;= @Param11) AND 
-                      (zdruzenia.pes_jelenia_skutocnost + zdruzenia.pes_diviacia_skutocnost + zdruzenia.pes_srncia_skutocnost + zdruzenia.pes_mala_skutocnost &gt;= @Param12)
-                       AND 
-                      (zdruzenia.stavace_skutocnost + zdruzenia.sliedice_skutocnost + zdruzenia.slovensky_kopov_skutocnost + zdruzenia.ostatne_durice_skutocnost + zdruzenia.brlohare_skutocnost
-                       + zdruzenia.farbiare_skutocnost &gt;= @Param10) AND (zdruzenia.jelenia &gt;= @Param22) AND (zdruzenia.srncia &gt;= @Param23) AND 
-                      (zdruzenia.diviacia &gt;= @Param24) AND (zdruzenia.bazant &gt;= @Param25) AND (zdruzenia.ina &gt;= @Param26)</CommandText>
+        <CommandText>SELECT zdruzenia.ico, zdruzenia.nazov, zdruzenia.sidlo, zdruzenia.dic, zdruzenia.chovatelska_oblast, zdruzenia.cislo_reviru, zdruzenia.les, c1.meno + ' ' + c1.priezvisko AS predseda_zdruzenia, c2.meno + ' ' + c2.priezvisko AS hospodar_zdruzenia FROM zdruzenia LEFT OUTER JOIN all_clenovia AS c1 ON c1.rodne_cislo = zdruzenia.predseda LEFT OUTER JOIN all_clenovia AS c2 ON c2.rodne_cislo = zdruzenia.polovny_hospodar WHERE (zdruzenia.vymera &gt;= @Param7) AND (zdruzenia.platnost_najomnej_zmluvy_do &gt;= @Param8) AND (zdruzenia.farbiare_plan + zdruzenia.brlohare_plan + zdruzenia.ostatne_durice_plan + zdruzenia.stavace_plan + zdruzenia.sliedice_plan + zdruzenia.slovensky_kopov_plan &gt;= @Param9) AND (zdruzenia.pes_srncia_plan + zdruzenia.pes_jelenia_plan + zdruzenia.pes_diviacia_plan + zdruzenia.pes_mala_plan &gt;= @Param11) AND (zdruzenia.pes_jelenia_skutocnost + zdruzenia.pes_diviacia_skutocnost + zdruzenia.pes_srncia_skutocnost + zdruzenia.pes_mala_skutocnost &gt;= @Param12) AND (zdruzenia.stavace_skutocnost + zdruzenia.sliedice_skutocnost + zdruzenia.slovensky_kopov_skutocnost + zdruzenia.ostatne_durice_skutocnost + zdruzenia.brlohare_skutocnost + zdruzenia.farbiare_skutocnost &gt;= @Param10) AND (zdruzenia.jelenia &gt;= @Param22) AND (zdruzenia.srncia &gt;= @Param23) AND (zdruzenia.diviacia &gt;= @Param24) AND (zdruzenia.bazant &gt;= @Param25) AND (zdruzenia.ina &gt;= @Param26)</CommandText>
         <DataSourceName>spzConnectionString</DataSourceName>
       </Query>
       <Fields>
@@ -1137,7 +1072,7 @@ WHERE     (zdruzenia.vymera &gt;= @Param7) AND (zdruzenia.platnost_najomnej_zmlu
         </Field>
         <Field Name="vymera">
           <DataField>vymera</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="les">
           <DataField>les</DataField>
@@ -1145,43 +1080,43 @@ WHERE     (zdruzenia.vymera &gt;= @Param7) AND (zdruzenia.platnost_najomnej_zmlu
         </Field>
         <Field Name="jelenia">
           <DataField>jelenia</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="srncia">
           <DataField>srncia</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="diviacia">
           <DataField>diviacia</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="bazant">
           <DataField>bazant</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="ina">
           <DataField>ina</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="platnost_najomnej_zmluvy_do">
           <DataField>platnost_najomnej_zmluvy_do</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="plemena_plan">
           <DataField>plemena_plan</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="plemena_skutocnost">
           <DataField>plemena_skutocnost</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="pes_typy_plan">
           <DataField>pes_typy_plan</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="pes_typy_skutocnost">
           <DataField>pes_typy_skutocnost</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="predseda_zdruzenia">
           <DataField>predseda_zdruzenia</DataField>

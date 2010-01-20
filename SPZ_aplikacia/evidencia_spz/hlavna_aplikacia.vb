@@ -560,7 +560,8 @@ Public Class hlavna_aplikacia
 
 
     Private Sub zoznam_clenov_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zoznam_clenov_button.Click
-
+        zoznam_clenov_maly.Show()
+        zoznam_clenov_maly.BringToFront()
 
     End Sub
 

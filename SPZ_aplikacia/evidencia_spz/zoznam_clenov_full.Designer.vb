@@ -326,7 +326,7 @@ Partial Class zoznam_clenov_full
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.zoznam_clenov_full.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(4, 103)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(926, 409)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1018, 445)
         Me.ReportViewer1.TabIndex = 18
         '
         'all_clenoviaTableAdapter
@@ -346,7 +346,7 @@ Partial Class zoznam_clenov_full
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(942, 524)
+        Me.ClientSize = New System.Drawing.Size(1034, 560)
         Me.Controls.Add(Me.generuj_button)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Controls.Add(Me.clenske_do_combo)

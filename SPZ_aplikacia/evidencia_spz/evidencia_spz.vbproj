@@ -351,6 +351,12 @@
     <Compile Include="zoznam_clenov_full.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="zoznam_clenov_maly.Designer.vb">
+      <DependentUpon>zoznam_clenov_maly.vb</DependentUpon>
+    </Compile>
+    <Compile Include="zoznam_clenov_maly.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="zoznam_kontStrelby.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -498,6 +504,11 @@
       <DependentUpon>zoznam_clenov_full.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="zoznam_clenov_maly.resx">
+      <DependentUpon>zoznam_clenov_maly.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zoznam_clenov_maly_report.rdlc" />
     <EmbeddedResource Include="zoznam_kont_strelby_report.rdlc" />
     <EmbeddedResource Include="zoznam_narodeniny.resx">
       <DependentUpon>zoznam_narodeniny.vb</DependentUpon>

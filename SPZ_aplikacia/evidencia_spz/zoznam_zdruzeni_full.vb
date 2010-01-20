@@ -13,6 +13,8 @@
     Dim zaciatok_datum As Date
 
     Private Sub zoznam_zdruzeni_full_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'kartyClenov.karty_clenov' table. You can move, or remove it, as needed.
+
         'TODO: This line of code loads data into the 'Roky._roky' table. You can move, or remove it, as needed.
         Me.RokyTableAdapter.Fill(Me.Roky._roky)
         'TODO: This line of code loads data into the 'zoznam_zdruzeni_report_full.zdruzenia' table. You can move, or remove it, as needed.
