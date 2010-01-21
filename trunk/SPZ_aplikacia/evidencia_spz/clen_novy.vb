@@ -220,12 +220,80 @@
             com.ExecuteNonQuery()
             con.Close()
 
-            hlavna_aplikacia.updatniNepridanychPredsedov()
-            MsgBox("Clen bol uspesne pridany. ", MsgBoxStyle.Information)
-            Me.Close()
-        Else
-            MsgBox("Mate chybne vyplnene tieto polia: " + vbNewLine + vbNewLine + chyba, MsgBoxStyle.Critical, "upozornenie")
-        End If
+            Dim uz_existuje As String
+            If ComboBox_predseda.Visible And ComboBox_predseda.SelectedIndex = 0 Then
+                'Dim con2 As New SqlCeConnection(pripojovaci_retazec)
+                'Dim com2 As New SqlCeCommand("SELECT [predseda] FROM zdruzenia WHERE ico = @zdruzenie ", con2)
+                'With com.Parameters
+                '    .AddWithValue("zdruzenie", Clen_pzComboBox.SelectedValue)
+
+                'End With
+
+                'MsgBox(Clen_pzComboBox.SelectedValue)
+
+                'con2.Open()
+                'Dim rdr As SqlCeDataReader = com2.ExecuteReader()
+                'rdr.Read()
+                'uz_existuje = rdr.GetString(0)
+
+                'con2.Close()
+
+                'MsgBox(uz_existuje)
+
+                If uz_existuje = "N" Then
+                    Dim con1 As New SqlCeConnection(pripojovaci_retazec)
+                    Dim com1 As New SqlCeCommand("UPDATE zdruzenia SET  predseda = @predseda, predseda_telefon = @predseda_telefon WHERE ico = @zdruzenie ", con1)
+                    With com1.Parameters
+                        .AddWithValue("predseda", rodne_cisloMaskedTextBox.Text)
+                        .AddWithValue("predseda_telefon", TelefonTextBox.Text)
+                        .AddWithValue("zdruzenie", Clen_pzComboBox.SelectedValue)
+                    End With
+                    con1.Open()
+                    com1.ExecuteNonQuery()
+                    con1.Close()
+                Else
+                    MsgBox("V združení " + Clen_pzComboBox.SelectedValue + " už existuje predseda. Nového predsedu vyberiete v editácii združenia.")
+                End If
+
+            ElseIf ComboBox_hospodar.Visible And ComboBox_hospodar.SelectedIndex = 0 Then
+
+                'Dim con2 As New SqlCeConnection(pripojovaci_retazec)
+                'Dim com2 As New SqlCeCommand("SELECT [polovny_hospodar] FROM zdruzenia WHERE ico = @zdruzenie ", con2)
+                'With com.Parameters
+                '    .AddWithValue("zdruzenie", Clen_pzComboBox.SelectedValue)
+
+                'End With
+
+                'con2.Open()
+                'Dim rdr As SqlCeDataReader = com2.ExecuteReader()
+                'rdr.Read()
+                'uz_existuje = rdr.GetString(0)
+                'con2.Close()
+
+                If uz_existuje = "N" Then
+
+                    Dim con1 As New SqlCeConnection(pripojovaci_retazec)
+                    Dim com1 As New SqlCeCommand("UPDATE zdruzenia SET  polovny_hospodar = @polovny_hospodar, polovny_hospodar_telefon = @polovny_hospodar_telefon WHERE ico = @zdruzenie ", con1)
+                    With com1.Parameters
+                        .AddWithValue("polovny_hospodar", rodne_cisloMaskedTextBox.Text)
+                        .AddWithValue("polovny_hospodar_telefon", TelefonTextBox.Text)
+                        .AddWithValue("zdruzenie", Clen_pzComboBox.SelectedValue)
+                    End With
+                    con1.Open()
+                    com1.ExecuteNonQuery()
+                    con1.Close()
+                Else
+                    MsgBox("V združení " + Clen_pzComboBox.SelectedValue + " už existuje poľovný hospodár. Nového poľovného hospodára vyberiete v editácii združenia.")
+                End If
+
+            End If
+
+                hlavna_aplikacia.updatniNepridanychPredsedov()
+                MsgBox("Clen bol uspesne pridany. ", MsgBoxStyle.Information)
+                Me.Close()
+            Else
+                MsgBox("Mate chybne vyplnene tieto polia: " + vbNewLine + vbNewLine + chyba, MsgBoxStyle.Critical, "upozornenie")
+            End If
     End Sub
 
     Private Sub zavriet_kartu_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_kartu_button.Click

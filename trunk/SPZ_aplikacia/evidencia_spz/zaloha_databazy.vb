@@ -19,7 +19,7 @@ Public Class zaloha_databazy
         cDir = CurDir()
         Dim fileEntries As String()
         Try
-            fileEntries = Directory.GetFiles(cDir & "\backup", "*.accdb-*")
+            fileEntries = Directory.GetFiles(cDir & "\backup", "*.sdf-*")
 
             Dim fileName As String
             Dim tempFile As String
@@ -60,8 +60,8 @@ Public Class zaloha_databazy
         cDir = CurDir()
         now = Format(DateTime.Now, "dd-MM-yyyy--HH-mm-ss")
 
-        source = cDir & "\spz_evidencia.accdb"
-        destination = cDir & "\backup\spz_evidencia.accdb-" & now
+        source = cDir & "\spz.sdf"
+        destination = cDir & "\backup\spz.sdf-" & now
 
 
         'poznamka.Text = source & "     " & destination
@@ -115,7 +115,7 @@ Public Class zaloha_databazy
         If Not obnov_listbox.SelectedIndex = -1 Then
 
             source = cDir & "\backup\" & obnov_listbox.SelectedItem
-            destination = cDir & "\spz_evidencia.accdb"
+            destination = cDir & "\spz.sdf"
 
             'poznamka.Text = source & "     " & destination
 
@@ -168,7 +168,7 @@ Public Class zaloha_databazy
 
         Dim fileEntries As String()
         Try
-            fileEntries = Directory.GetFiles(cDir & "\backup", "*.accdb-*")
+            fileEntries = Directory.GetFiles(cDir & "\backup", "*.sdf-*")
 
             Dim fileName As String
             Dim tempFile As String
