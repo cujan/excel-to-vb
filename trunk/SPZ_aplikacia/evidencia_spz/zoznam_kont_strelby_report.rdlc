@@ -84,7 +84,7 @@ ORDER BY clen_priezvisko</CommandText>
     </DataSet>
   </DataSets>
   <Code />
-  <Width>20.31746cm</Width>
+  <Width>19cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>

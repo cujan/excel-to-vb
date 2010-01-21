@@ -84,7 +84,7 @@ WHERE     (DATEPART(mm, all_clenovia.datum_narodenia) LIKE @Param2) AND (zdruzen
     </DataSet>
   </DataSets>
   <Code />
-  <Width>25.64112cm</Width>
+  <Width>21cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
@@ -121,6 +121,7 @@ WHERE     (DATEPART(mm, all_clenovia.datum_narodenia) LIKE @Param2) AND (zdruzen
         </Style>
         <ZIndex>1</ZIndex>
         <CanGrow>true</CanGrow>
+        <Left>0.25cm</Left>
         <Height>0.8381cm</Height>
         <Value>="Zoznam narodenín v " &amp; Month(First(Fields!datum_narodenia.Value, "narodeniny_all_clenovia")) &amp; ". mesiaci"</Value>
       </Textbox>

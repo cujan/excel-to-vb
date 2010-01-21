@@ -228,7 +228,7 @@ FROM         all_clenovia LEFT OUTER JOIN
     </DataSet>
   </DataSets>
   <Code />
-  <Width>20cm</Width>
+  <Width>19cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
