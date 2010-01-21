@@ -126,13 +126,13 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
     </DataSet>
   </DataSets>
   <Code />
-  <Width>27cm</Width>
+  <Width>26.75cm</Width>
   <Body>
     <ColumnSpacing>0.5cm</ColumnSpacing>
     <ReportItems>
       <Textbox Name="textbox17">
-        <Top>0.25cm</Top>
-        <Width>3.03968cm</Width>
+        <Top>0.5cm</Top>
+        <Width>3.53968cm</Width>
         <Style>
           <Color>#365838</Color>
           <FontFamily>Times New Roman</FontFamily>
@@ -145,12 +145,13 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
         </Style>
         <ZIndex>2</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>23.75cm</Left>
+        <Left>22.5cm</Left>
         <Height>0.63492cm</Height>
         <Value>=Day(today()) &amp; "." &amp; Month(today())   &amp; "." &amp; year(today())</Value>
       </Textbox>
       <Textbox Name="textbox1">
         <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>0.25cm</Top>
         <Width>5.5cm</Width>
         <Style>
           <Color>#365838</Color>
@@ -169,7 +170,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
       </Textbox>
       <Table Name="table1">
         <DataSetName>zoznam_clenov_all_clenovia</DataSetName>
-        <Top>1cm</Top>
+        <Top>1.25cm</Top>
         <Details>
           <TableRows>
             <TableRow>
@@ -213,7 +214,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
                         <Format>dd.MM.yyyy</Format>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -238,7 +239,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -263,7 +264,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -288,7 +289,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -313,7 +314,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -338,7 +339,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -363,7 +364,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -388,7 +389,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -413,7 +414,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -439,7 +440,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
                         <Format>dd.MM.yyyy</Format>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -464,7 +465,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -490,7 +491,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <FontFamily>Times New Roman</FontFamily>
                         <FontSize>9pt</FontSize>
                         <Format>dd.MM.yyyy</Format>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -531,7 +532,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -558,7 +559,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -585,7 +586,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -612,7 +613,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -639,7 +640,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -666,7 +667,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -693,7 +694,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -720,7 +721,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -747,7 +748,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -774,7 +775,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -801,7 +802,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -828,7 +829,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -855,7 +856,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         </BorderStyle>
                         <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
+                        <TextAlign>Left</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -899,7 +900,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
             <Width>1.75cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.25cm</Width>
+            <Width>2cm</Width>
           </TableColumn>
           <TableColumn>
             <Width>1.75cm</Width>
@@ -917,7 +918,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
         <Height>1.04127cm</Height>
       </Table>
     </ReportItems>
-    <Height>2.25cm</Height>
+    <Height>2.5cm</Height>
   </Body>
   <Language>en-US</Language>
   <TopMargin>0.1cm</TopMargin>
