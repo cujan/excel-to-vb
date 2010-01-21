@@ -17,7 +17,7 @@
   <rd:GridSpacing>0.25cm</rd:GridSpacing>
   <rd:SnapToGrid>true</rd:SnapToGrid>
   <rd:ReportID>372cc5e6-a917-46ab-9de5-2978fca9a188</rd:ReportID>
-  <PageWidth>21cm</PageWidth>
+  <PageWidth>29.7cm</PageWidth>
   <DataSets>
     <DataSet Name="zoznam_zdruzeni_report_full_zdruzenia">
       <Fields>
@@ -745,5 +745,5 @@
     <Height>2.5cm</Height>
   </Body>
   <Language>en-US</Language>
-  <PageHeight>29.7cm</PageHeight>
+  <PageHeight>21cm</PageHeight>
 </Report>

@@ -84,7 +84,7 @@ WHERE     (DATEPART(mm, all_clenovia.datum_narodenia) LIKE @Param2) AND (zdruzen
     </DataSet>
   </DataSets>
   <Code />
-  <Width>21cm</Width>
+  <Width>19.75cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
@@ -103,7 +103,7 @@ WHERE     (DATEPART(mm, all_clenovia.datum_narodenia) LIKE @Param2) AND (zdruzen
         </Style>
         <ZIndex>2</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>17.5cm</Left>
+        <Left>16.25cm</Left>
         <Height>0.63492cm</Height>
         <Value>=Day(today()) &amp; "." &amp; Month(today())   &amp; "." &amp; year(today())</Value>
       </Textbox>
@@ -128,7 +128,6 @@ WHERE     (DATEPART(mm, all_clenovia.datum_narodenia) LIKE @Param2) AND (zdruzen
       <Table Name="table1">
         <DataSetName>narodeniny_all_clenovia</DataSetName>
         <Top>1cm</Top>
-        <Width>20.25cm</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -418,7 +417,7 @@ WHERE     (DATEPART(mm, all_clenovia.datum_narodenia) LIKE @Param2) AND (zdruzen
             <Width>4cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>4.5cm</Width>
+            <Width>3.75cm</Width>
           </TableColumn>
           <TableColumn>
             <Width>2.25cm</Width>
