@@ -20,7 +20,7 @@
   <LeftMargin>0.1cm</LeftMargin>
   <BottomMargin>0.1cm</BottomMargin>
   <rd:ReportID>c39c428f-8a47-44c0-891b-0385ffdf2316</rd:ReportID>
-  <PageWidth>21cm</PageWidth>
+  <PageWidth>27cm</PageWidth>
   <DataSets>
     <DataSet Name="zoznam_clenov_all_clenovia">
       <Fields>
@@ -922,5 +922,5 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
   </Body>
   <Language>en-US</Language>
   <TopMargin>0.1cm</TopMargin>
-  <PageHeight>27cm</PageHeight>
+  <PageHeight>21cm</PageHeight>
 </Report>
