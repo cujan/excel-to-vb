@@ -1,6 +1,9 @@
 potrebne ciselniky:
+
 - vymazavanie clenov
+
 - rodne cislo predelit / + pozriet ci by sa dala pouzit maska na tl. zostavy
+
 - pridat kontrolu na policka, ktore sa vyuzivaju v tl. zostavach
 
 - Okres   - Done
