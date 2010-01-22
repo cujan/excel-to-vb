@@ -48,7 +48,7 @@
         Dim response As Integer
 
         If hlavna_aplikacia.zaregistrovatHospodara And hlavna_aplikacia.zaregistrovatPredsedu Then
-            response = MsgBox("Doteraz nebol priradený predseda a hospodár pre združenie. Ak si prajete aspoň jedného z nich priradiť teraz, kliknite na tlačítko OK." + vbNewLine + vbNewLine + listNeuplnych, 4, "Otázka")
+            response = MsgBox("Doteraz nebol priradený predseda a hospodár pre združenie. Ak si prajete priradiť predsedu teraz, kliknite na tlačítko OK." + vbNewLine + vbNewLine + listNeuplnych, 4, "Otázka")
             If response = vbYes Then
                 Me.label_predseda.Visible = True
                 Me.ComboBox_predseda.Visible = True
@@ -59,17 +59,18 @@
         ElseIf hlavna_aplikacia.zaregistrovatHospodara And Not hlavna_aplikacia.zaregistrovatPredsedu Then
             response = MsgBox("Doteraz nebol priradený hospodár pre združenie. Ak si ho prajete priradiť teraz, kliknite na tlačítko OK." + vbNewLine + vbNewLine + listNeuplnych, 4, "Otázka")
             If response = vbYes Then
-                Me.label_predseda.Visible = True
-                Me.ComboBox_predseda.Visible = True
+                Me.label_hospodar.Visible = True
+                Me.ComboBox_hospodar.Visible = True
 
                 Me.ComboBox_predseda.SelectedItem = Me.ComboBox_predseda.Items.Item(1)
                 Me.ComboBox_hospodar.SelectedItem = Me.ComboBox_hospodar.Items.Item(1)
+
             End If
         ElseIf Not hlavna_aplikacia.zaregistrovatHospodara And hlavna_aplikacia.zaregistrovatPredsedu Then
             response = MsgBox("Doteraz nebol priradený predseda pre združenie. Ak si ho prajete priradiť teraz, kliknite na tlačítko OK." + vbNewLine + vbNewLine + listNeuplnych, 4, "Otázka")
             If response = vbYes Then
-                Me.label_hospodar.Visible = True
-                Me.ComboBox_hospodar.Visible = True
+                Me.label_predseda.Visible = True
+                Me.ComboBox_predseda.Visible = True
 
                 Me.ComboBox_predseda.SelectedItem = Me.ComboBox_predseda.Items.Item(1)
                 Me.ComboBox_hospodar.SelectedItem = Me.ComboBox_hospodar.Items.Item(1)
@@ -220,27 +221,25 @@
             com.ExecuteNonQuery()
             con.Close()
 
-            Dim uz_existuje As String
+            Dim uz_existuje As Integer
             If ComboBox_predseda.Visible And ComboBox_predseda.SelectedIndex = 0 Then
-                'Dim con2 As New SqlCeConnection(pripojovaci_retazec)
-                'Dim com2 As New SqlCeCommand("SELECT [predseda] FROM zdruzenia WHERE ico = @zdruzenie ", con2)
-                'With com.Parameters
-                '    .AddWithValue("zdruzenie", Clen_pzComboBox.SelectedValue)
+                Dim con2 As New SqlCeConnection(pripojovaci_retazec)
+                Dim com2 As New SqlCeCommand("SELECT count(*) FROM zdruzenia WHERE ico = @zdruzenie and predseda like 'N' ", con2)
+                With com2.Parameters
+                    .AddWithValue("zdruzenie", Clen_pzComboBox.SelectedValue)
 
-                'End With
+                End With
 
-                'MsgBox(Clen_pzComboBox.SelectedValue)
+                MsgBox(Clen_pzComboBox.SelectedValue)
 
-                'con2.Open()
-                'Dim rdr As SqlCeDataReader = com2.ExecuteReader()
-                'rdr.Read()
-                'uz_existuje = rdr.GetString(0)
+                con2.Open()
+                uz_existuje = com2.ExecuteScalar
 
-                'con2.Close()
+                con2.Close()
 
-                'MsgBox(uz_existuje)
+                MsgBox(uz_existuje)
 
-                If uz_existuje = "N" Then
+                If uz_existuje = 1 Then
                     Dim con1 As New SqlCeConnection(pripojovaci_retazec)
                     Dim com1 As New SqlCeCommand("UPDATE zdruzenia SET  predseda = @predseda, predseda_telefon = @predseda_telefon WHERE ico = @zdruzenie ", con1)
                     With com1.Parameters
@@ -257,20 +256,21 @@
 
             ElseIf ComboBox_hospodar.Visible And ComboBox_hospodar.SelectedIndex = 0 Then
 
-                'Dim con2 As New SqlCeConnection(pripojovaci_retazec)
-                'Dim com2 As New SqlCeCommand("SELECT [polovny_hospodar] FROM zdruzenia WHERE ico = @zdruzenie ", con2)
-                'With com.Parameters
-                '    .AddWithValue("zdruzenie", Clen_pzComboBox.SelectedValue)
+                Dim con2 As New SqlCeConnection(pripojovaci_retazec)
+                Dim com2 As New SqlCeCommand("SELECT count(*) FROM zdruzenia WHERE ico = @zdruzenie and polovny_hospodar like 'N' ", con2)
+                With com2.Parameters
+                    .AddWithValue("zdruzenie", Clen_pzComboBox.SelectedValue)
 
-                'End With
+                End With
 
-                'con2.Open()
-                'Dim rdr As SqlCeDataReader = com2.ExecuteReader()
-                'rdr.Read()
-                'uz_existuje = rdr.GetString(0)
-                'con2.Close()
+                MsgBox(Clen_pzComboBox.SelectedValue)
 
-                If uz_existuje = "N" Then
+                con2.Open()
+                uz_existuje = com2.ExecuteScalar
+
+                con2.Close()
+
+                If uz_existuje = 1 Then
 
                     Dim con1 As New SqlCeConnection(pripojovaci_retazec)
                     Dim com1 As New SqlCeCommand("UPDATE zdruzenia SET  polovny_hospodar = @polovny_hospodar, polovny_hospodar_telefon = @polovny_hospodar_telefon WHERE ico = @zdruzenie ", con1)
