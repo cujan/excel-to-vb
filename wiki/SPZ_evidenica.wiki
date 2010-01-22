@@ -1,3 +1,7 @@
 potrebne ciselniky:
-- Okres
-- Obec spolu s prisluchajucim PSC
+- vymazavanie clenov
+- rodne cislo predelit / + pozriet ci by sa dala pouzit maska na tl. zostavy
+- pridat kontrolu na policka, ktore sa vyuzivaju v tl. zostavach
+
+- Okres   - Done
+- Obec spolu s prisluchajucim PSC - Done
