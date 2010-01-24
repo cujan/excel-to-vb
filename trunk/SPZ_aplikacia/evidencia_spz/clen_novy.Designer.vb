@@ -1144,6 +1144,7 @@ Partial Class clen_novy
         '
         'rodne_cisloMaskedTextBox
         '
+        Me.rodne_cisloMaskedTextBox.Culture = New System.Globalization.CultureInfo("en-US")
         Me.rodne_cisloMaskedTextBox.Location = New System.Drawing.Point(551, 132)
         Me.rodne_cisloMaskedTextBox.Mask = "000000/0000"
         Me.rodne_cisloMaskedTextBox.Name = "rodne_cisloMaskedTextBox"
