@@ -16,7 +16,7 @@
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
         hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
-
+        ZdruzeniaDataGridView.CurrentCell = Nothing
     End Sub
 
     Private Sub ZdruzeniaBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ZdruzeniaBindingNavigatorSaveItem.Click
@@ -44,5 +44,26 @@
         zdruzenie_edituj.Show()
         zdruzenie_edituj.BringToFront()
         
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+
+        If Label2.Text <> "Label2" Then
+            If MsgBox("Naozaj chete zmazat vybrane zdruzenie?", MsgBoxStyle.Critical + MsgBoxStyle.OkCancel, "Upozornenie !!!") = MsgBoxResult.Ok Then
+                Dim con As New SqlCeConnection(pripojovaci_retazec)
+                Dim com As New SqlCeCommand("DELETE FROM zdruzenia WHERE ico = @ico", con)
+                com.Parameters.AddWithValue("ico", Label2.Text)
+
+                con.Open()
+                com.ExecuteNonQuery()
+                con.Close()
+            End If
+        Else
+            MsgBox("Nemate vybrane ziadne zdruzenie!!!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
+        End If
+        Me.ZdruzeniaTableAdapter.Fill(Me.SpzDataSet.zdruzenia)
+
+
     End Sub
 End Class
