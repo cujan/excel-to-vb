@@ -385,3 +385,5 @@ D:\tmp\moj_pg\evidencia_spz\obj\Debug\evidencia_spz.zoznam_clenov_maly.resources
 D:\tmp\moj_pg\evidencia_spz\obj\Debug\evidencia_spz.zoznam_narodeniny.resources
 D:\tmp\moj_pg\evidencia_spz\obj\Debug\evidencia_spz.zoznam_zdruzeni_full.resources
 D:\tmp\moj_pg\evidencia_spz\obj\Debug\evidencia_spz.vbproj.GenerateResource.Cache
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zoznam_clenov_maly.resources
+D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.zoznam_narodeniny.resources
