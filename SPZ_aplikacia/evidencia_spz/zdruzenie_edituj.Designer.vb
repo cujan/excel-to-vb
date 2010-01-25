@@ -67,6 +67,8 @@ Partial Class zdruzenie_edituj
         Dim Pes_mala_planLabel As System.Windows.Forms.Label
         Dim Pes_mala_skutocnostLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(zdruzenie_edituj))
+        Dim Label1 As System.Windows.Forms.Label
+        Dim Label2 As System.Windows.Forms.Label
         Me.ZdruzeniaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.ZdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -144,6 +146,7 @@ Partial Class zdruzenie_edituj
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        Me.Panel1 = New System.Windows.Forms.Panel
         IcoLabel = New System.Windows.Forms.Label
         ICO_clenoviaLabel = New System.Windows.Forms.Label
         ICO_psyLabel = New System.Windows.Forms.Label
@@ -187,6 +190,8 @@ Partial Class zdruzenie_edituj
         Pes_srncia_skutocnostLabel = New System.Windows.Forms.Label
         Pes_mala_planLabel = New System.Windows.Forms.Label
         Pes_mala_skutocnostLabel = New System.Windows.Forms.Label
+        Label1 = New System.Windows.Forms.Label
+        Label2 = New System.Windows.Forms.Label
         CType(Me.ZdruzeniaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ZdruzeniaBindingNavigator.SuspendLayout()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -212,7 +217,7 @@ Partial Class zdruzenie_edituj
         'ICO_clenoviaLabel
         '
         ICO_clenoviaLabel.AutoSize = True
-        ICO_clenoviaLabel.Location = New System.Drawing.Point(674, 44)
+        ICO_clenoviaLabel.Location = New System.Drawing.Point(729, 74)
         ICO_clenoviaLabel.Name = "ICO_clenoviaLabel"
         ICO_clenoviaLabel.Size = New System.Drawing.Size(71, 13)
         ICO_clenoviaLabel.TabIndex = 3
@@ -221,7 +226,7 @@ Partial Class zdruzenie_edituj
         'ICO_psyLabel
         '
         ICO_psyLabel.AutoSize = True
-        ICO_psyLabel.Location = New System.Drawing.Point(674, 70)
+        ICO_psyLabel.Location = New System.Drawing.Point(729, 100)
         ICO_psyLabel.Name = "ICO_psyLabel"
         ICO_psyLabel.Size = New System.Drawing.Size(47, 13)
         ICO_psyLabel.TabIndex = 5
@@ -230,7 +235,7 @@ Partial Class zdruzenie_edituj
         'ICO_trofejeLabel
         '
         ICO_trofejeLabel.AutoSize = True
-        ICO_trofejeLabel.Location = New System.Drawing.Point(674, 96)
+        ICO_trofejeLabel.Location = New System.Drawing.Point(729, 126)
         ICO_trofejeLabel.Name = "ICO_trofejeLabel"
         ICO_trofejeLabel.Size = New System.Drawing.Size(60, 13)
         ICO_trofejeLabel.TabIndex = 7
@@ -601,7 +606,7 @@ Partial Class zdruzenie_edituj
         Me.ZdruzeniaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ZdruzeniaBindingNavigator.Name = "ZdruzeniaBindingNavigator"
         Me.ZdruzeniaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ZdruzeniaBindingNavigator.Size = New System.Drawing.Size(914, 25)
+        Me.ZdruzeniaBindingNavigator.Size = New System.Drawing.Size(973, 25)
         Me.ZdruzeniaBindingNavigator.TabIndex = 0
         Me.ZdruzeniaBindingNavigator.Text = "BindingNavigator1"
         '
@@ -720,7 +725,7 @@ Partial Class zdruzenie_edituj
         'ICO_clenoviaTextBox
         '
         Me.ICO_clenoviaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "ICO_clenovia", True))
-        Me.ICO_clenoviaTextBox.Location = New System.Drawing.Point(747, 44)
+        Me.ICO_clenoviaTextBox.Location = New System.Drawing.Point(802, 74)
         Me.ICO_clenoviaTextBox.Name = "ICO_clenoviaTextBox"
         Me.ICO_clenoviaTextBox.ReadOnly = True
         Me.ICO_clenoviaTextBox.Size = New System.Drawing.Size(100, 20)
@@ -729,7 +734,7 @@ Partial Class zdruzenie_edituj
         'ICO_psyTextBox
         '
         Me.ICO_psyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "ICO_psy", True))
-        Me.ICO_psyTextBox.Location = New System.Drawing.Point(747, 70)
+        Me.ICO_psyTextBox.Location = New System.Drawing.Point(802, 100)
         Me.ICO_psyTextBox.Name = "ICO_psyTextBox"
         Me.ICO_psyTextBox.ReadOnly = True
         Me.ICO_psyTextBox.Size = New System.Drawing.Size(100, 20)
@@ -738,7 +743,7 @@ Partial Class zdruzenie_edituj
         'ICO_trofejeTextBox
         '
         Me.ICO_trofejeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "ICO_trofeje", True))
-        Me.ICO_trofejeTextBox.Location = New System.Drawing.Point(747, 96)
+        Me.ICO_trofejeTextBox.Location = New System.Drawing.Point(802, 126)
         Me.ICO_trofejeTextBox.Name = "ICO_trofejeTextBox"
         Me.ICO_trofejeTextBox.ReadOnly = True
         Me.ICO_trofejeTextBox.Size = New System.Drawing.Size(100, 20)
@@ -763,7 +768,7 @@ Partial Class zdruzenie_edituj
         'PredsedaTextBox
         '
         Me.PredsedaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "predseda", True))
-        Me.PredsedaTextBox.Location = New System.Drawing.Point(322, 181)
+        Me.PredsedaTextBox.Location = New System.Drawing.Point(802, 152)
         Me.PredsedaTextBox.Name = "PredsedaTextBox"
         Me.PredsedaTextBox.ReadOnly = True
         Me.PredsedaTextBox.Size = New System.Drawing.Size(74, 20)
@@ -781,7 +786,7 @@ Partial Class zdruzenie_edituj
         'Polovny_hospodarTextBox
         '
         Me.Polovny_hospodarTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "polovny_hospodar", True))
-        Me.Polovny_hospodarTextBox.Location = New System.Drawing.Point(626, 180)
+        Me.Polovny_hospodarTextBox.Location = New System.Drawing.Point(802, 178)
         Me.Polovny_hospodarTextBox.Name = "Polovny_hospodarTextBox"
         Me.Polovny_hospodarTextBox.ReadOnly = True
         Me.Polovny_hospodarTextBox.Size = New System.Drawing.Size(76, 20)
@@ -1184,7 +1189,7 @@ Partial Class zdruzenie_edituj
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(914, 852)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(973, 949)
         Me.ShapeContainer1.TabIndex = 91
         Me.ShapeContainer1.TabStop = False
         '
@@ -1197,13 +1202,41 @@ Partial Class zdruzenie_edituj
         Me.LineShape2.Y1 = 486
         Me.LineShape2.Y2 = 486
         '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Location = New System.Drawing.Point(735, 155)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(54, 13)
+        Label1.TabIndex = 92
+        Label1.Text = "predseda:"
+        '
+        'Label2
+        '
+        Label2.AutoSize = True
+        Label2.Location = New System.Drawing.Point(702, 181)
+        Label2.Name = "Label2"
+        Label2.Size = New System.Drawing.Size(94, 13)
+        Label2.TabIndex = 93
+        Label2.Text = "polovny hospodar:"
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(687, 52)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(232, 190)
+        Me.Panel1.TabIndex = 94
+        '
         'zdruzenie_edituj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(914, 852)
+        Me.ClientSize = New System.Drawing.Size(973, 949)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Label2)
+        Me.Controls.Add(Label1)
         Me.Controls.Add(Me.zavriet_button)
         Me.Controls.Add(Me.hospodarComboBox)
         Me.Controls.Add(Me.predsedaComboBox)
@@ -1392,4 +1425,5 @@ Partial Class zdruzenie_edituj
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class
