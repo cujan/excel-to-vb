@@ -89,6 +89,9 @@ Partial Class hlavna_aplikacia
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.hlavny_splitter = New System.Windows.Forms.SplitContainer
+        Me.Button10 = New System.Windows.Forms.Button
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.otv_formy_zoznam_listbox = New System.Windows.Forms.ListBox
         Me.nastavenia_splitter = New System.Windows.Forms.SplitContainer
         Me.nastavenia_button = New System.Windows.Forms.Button
         Me.nastavenia_label = New System.Windows.Forms.Label
@@ -167,8 +170,6 @@ Partial Class hlavna_aplikacia
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.SpzDataSet = New evidencia_spz.spzDataSet
         Me.SpzDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.otv_formy_zoznam_listbox = New System.Windows.Forms.ListBox
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
         TelefonLabel = New System.Windows.Forms.Label
         FaxLabel = New System.Windows.Forms.Label
         EmailLabel = New System.Windows.Forms.Label
@@ -182,6 +183,7 @@ Partial Class hlavna_aplikacia
         Me.hlavny_splitter.Panel1.SuspendLayout()
         Me.hlavny_splitter.Panel2.SuspendLayout()
         Me.hlavny_splitter.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.nastavenia_splitter.Panel1.SuspendLayout()
         Me.nastavenia_splitter.Panel2.SuspendLayout()
         Me.nastavenia_splitter.SuspendLayout()
@@ -198,7 +200,6 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigator1.SuspendLayout()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpzDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TelefonLabel
@@ -694,6 +695,7 @@ Partial Class hlavna_aplikacia
         '
         Me.hlavny_splitter.Panel1.AutoScroll = True
         Me.hlavny_splitter.Panel1.BackColor = System.Drawing.Color.DarkGreen
+        Me.hlavny_splitter.Panel1.Controls.Add(Me.Button10)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.GroupBox1)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.nastavenia_splitter)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.tl_zostavy_splitter)
@@ -751,6 +753,35 @@ Partial Class hlavna_aplikacia
         Me.hlavny_splitter.SplitterDistance = 170
         Me.hlavny_splitter.SplitterWidth = 1
         Me.hlavny_splitter.TabIndex = 9
+        '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(79, 339)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(75, 23)
+        Me.Button10.TabIndex = 6
+        Me.Button10.Text = "Button10"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.otv_formy_zoznam_listbox)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 355)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(159, 169)
+        Me.GroupBox1.TabIndex = 5
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Otvorené formuláre"
+        '
+        'otv_formy_zoznam_listbox
+        '
+        Me.otv_formy_zoznam_listbox.BackColor = System.Drawing.Color.PaleGreen
+        Me.otv_formy_zoznam_listbox.FormattingEnabled = True
+        Me.otv_formy_zoznam_listbox.Location = New System.Drawing.Point(10, 21)
+        Me.otv_formy_zoznam_listbox.Name = "otv_formy_zoznam_listbox"
+        Me.otv_formy_zoznam_listbox.Size = New System.Drawing.Size(138, 134)
+        Me.otv_formy_zoznam_listbox.TabIndex = 4
         '
         'nastavenia_splitter
         '
@@ -1596,25 +1627,6 @@ Partial Class hlavna_aplikacia
         Me.SpzDataSetBindingSource.DataSource = Me.SpzDataSet
         Me.SpzDataSetBindingSource.Position = 0
         '
-        'otv_formy_zoznam_listbox
-        '
-        Me.otv_formy_zoznam_listbox.FormattingEnabled = True
-        Me.otv_formy_zoznam_listbox.Location = New System.Drawing.Point(10, 21)
-        Me.otv_formy_zoznam_listbox.Name = "otv_formy_zoznam_listbox"
-        Me.otv_formy_zoznam_listbox.Size = New System.Drawing.Size(138, 134)
-        Me.otv_formy_zoznam_listbox.TabIndex = 4
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.otv_formy_zoznam_listbox)
-        Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 355)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(159, 169)
-        Me.GroupBox1.TabIndex = 5
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Otvorené formuláre"
-        '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1640,6 +1652,7 @@ Partial Class hlavna_aplikacia
         Me.hlavny_splitter.Panel2.ResumeLayout(False)
         Me.hlavny_splitter.Panel2.PerformLayout()
         Me.hlavny_splitter.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
         Me.nastavenia_splitter.Panel1.ResumeLayout(False)
         Me.nastavenia_splitter.Panel2.ResumeLayout(False)
         Me.nastavenia_splitter.ResumeLayout(False)
@@ -1657,7 +1670,6 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigator1.PerformLayout()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpzDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1799,5 +1811,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents otv_formy_zoznam_listbox As System.Windows.Forms.ListBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Button10 As System.Windows.Forms.Button
 
 End Class

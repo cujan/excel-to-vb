@@ -5,12 +5,13 @@ Imports System.IO
 Imports Microsoft.VisualBasic.CompilerServices
 
 
-
 Public Class hlavna_aplikacia
     Private bInstalled As Boolean
     Public zaregistrovatPredsedu As Boolean
     Public zaregistrovatHospodara As Boolean
     Public neuplne_zdruzenie(150) As String '= New String() {}
+
+
 
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
@@ -38,7 +39,7 @@ Public Class hlavna_aplikacia
     Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SaveAsToolStripMenuItem.Click
         Dim SaveFileDialog As New SaveFileDialog
         SaveFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
-        SaveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*" 
+        SaveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
 
         If (SaveFileDialog.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK) Then
             Dim FileName As String = SaveFileDialog.FileName
@@ -167,7 +168,7 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub edituj_clena_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
- 
+
 
     End Sub
 
@@ -338,7 +339,7 @@ Public Class hlavna_aplikacia
         Dim reg_cislo As ULong
         Dim kontrola As ULong
 
-        try
+        Try
             reg_cislo = Conversions.ToULong(Me.Reg_cisloTextBox.Text)
         Catch
         End Try
@@ -766,7 +767,74 @@ Public Class hlavna_aplikacia
         pokusny_form.BringToFront()
     End Sub
 
-    Private Sub otv_formy_zoznam_listbox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles otv_formy_zoznam_listbox.SelectedIndexChanged
 
+    Public Sub GetOpenFormTitles()
+        Dim formTitles As New Collection
+        Dim nadpis As String
+        Try
+            For Each f As Form In My.Application.OpenForms
+                ' Use a thread-safe method to get all form titles.
+                nadpis = GetFormTitle(f)
+                If nadpis <> "Administrácia SPZ" Then
+                    formTitles.Add(GetFormTitle(f))
+                End If
+            Next
+        Catch ex As Exception
+            formTitles.Add("Error: " & ex.Message)
+        End Try
+
+        otv_formy_zoznam_listbox.DataSource = formTitles
+        otv_formy_zoznam_listbox.SelectedIndex = -1
+    End Sub
+
+    Private Sub BringToFrontOpenForm(ByVal formName As String)
+        Try
+            For Each f As Form In My.Application.OpenForms
+                ' Use a thread-safe method to get all form titles.
+                If Not f.InvokeRequired Then
+                    If f.Text = formName Then
+                        f.BringToFront()
+                        Exit For
+                    End If
+                End If
+            Next
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message)
+        End Try
+
+    End Sub
+
+
+
+    Private Delegate Function GetFormTitleDelegate(ByVal f As Form) As String
+    Private Function GetFormTitle(ByVal f As Form) As String
+        ' Check if the form can be accessed from the current thread.
+        If Not f.InvokeRequired Then
+            ' Access the form directly.
+            Return f.Text
+        Else
+            ' Marshal to the thread that owns the form. 
+            Dim del As GetFormTitleDelegate = AddressOf GetFormTitle
+            Dim param As Object() = {f}
+            Dim result As System.IAsyncResult = f.BeginInvoke(del, param)
+            ' Give the form's thread a chance process function.
+            System.Threading.Thread.Sleep(10)
+            ' Check the result.
+            If result.IsCompleted Then
+                ' Get the function's return value.
+                Return "Different thread: " & f.EndInvoke(result).ToString
+            Else
+                Return "Unresponsive thread"
+            End If
+        End If
+    End Function
+
+    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
+        GetOpenFormTitles()
+    End Sub
+
+    Private Sub otv_formy_zoznam_listbox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles otv_formy_zoznam_listbox.DoubleClick
+        MsgBox(otv_formy_zoznam_listbox.SelectedValue)
+        BringToFrontOpenForm(otv_formy_zoznam_listbox.SelectedValue)
     End Sub
 End Class
