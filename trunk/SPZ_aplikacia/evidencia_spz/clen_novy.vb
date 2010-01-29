@@ -32,6 +32,7 @@
         Me.statna_prislusnostComboBox.SelectedIndex = -1
         Me.narodnostComboBox.SelectedIndex = -1
 
+        Me.Visible = False
 
         Dim listNeuplnych As String
         listNeuplnych = "Neúplné združenia sú nasledujúce:" + vbNewLine
@@ -77,6 +78,7 @@
             End If
         End If
 
+        Me.Visible = True
 
     End Sub
 
