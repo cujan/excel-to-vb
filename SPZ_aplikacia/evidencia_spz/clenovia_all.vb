@@ -16,6 +16,7 @@
         Me.TopLevel = False
         hlavna_aplikacia.hlavny_splitter.Panel2.Controls.Add(Me)
 
+
         'TODO: This line of code loads data into the 'All_clenoviaDataSet.all_clenovia' table. You can move, or remove it, as needed.
         Me.All_clenoviaTableAdapter.Fill(Me.All_clenoviaDataSet.all_clenovia)
         Me.All_clenoviaDataGridView.CurrentCell = Nothing
