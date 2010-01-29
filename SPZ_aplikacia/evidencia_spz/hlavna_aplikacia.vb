@@ -765,4 +765,8 @@ Public Class hlavna_aplikacia
         pokusny_form.Show()
         pokusny_form.BringToFront()
     End Sub
+
+    Private Sub otv_formy_zoznam_listbox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles otv_formy_zoznam_listbox.SelectedIndexChanged
+
+    End Sub
 End Class

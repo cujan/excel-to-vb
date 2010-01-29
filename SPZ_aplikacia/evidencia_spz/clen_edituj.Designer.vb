@@ -67,7 +67,6 @@ Partial Class clen_edituj
         Dim PscLabel1 As System.Windows.Forms.Label
         Dim PscLabel As System.Windows.Forms.Label
         Dim Okres_bydliskaLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(clen_edituj))
         Dim Label1 As System.Windows.Forms.Label
         Dim Label2 As System.Windows.Forms.Label
         Dim Label3 As System.Windows.Forms.Label
@@ -81,6 +80,7 @@ Partial Class clen_edituj
         Dim Label11 As System.Windows.Forms.Label
         Dim Label12 As System.Windows.Forms.Label
         Dim Label13 As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(clen_edituj))
         Me.All_clenoviaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.All_clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -177,6 +177,7 @@ Partial Class clen_edituj
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.Panel1 = New System.Windows.Forms.Panel
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Cislo_plLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -247,331 +248,332 @@ Partial Class clen_edituj
         CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Cislo_plLabel
         '
         Cislo_plLabel.AutoSize = True
-        Cislo_plLabel.Location = New System.Drawing.Point(161, 361)
+        Cislo_plLabel.Location = New System.Drawing.Point(153, 369)
         Cislo_plLabel.Name = "Cislo_plLabel"
-        Cislo_plLabel.Size = New System.Drawing.Size(42, 13)
+        Cislo_plLabel.Size = New System.Drawing.Size(50, 13)
         Cislo_plLabel.TabIndex = 1
-        Cislo_plLabel.Text = "cislo pl:"
+        Cislo_plLabel.Text = "Číslo PL:"
         '
         'MenoLabel
         '
         MenoLabel.AutoSize = True
-        MenoLabel.Location = New System.Drawing.Point(167, 84)
+        MenoLabel.Location = New System.Drawing.Point(166, 84)
         MenoLabel.Name = "MenoLabel"
-        MenoLabel.Size = New System.Drawing.Size(36, 13)
+        MenoLabel.Size = New System.Drawing.Size(37, 13)
         MenoLabel.TabIndex = 3
-        MenoLabel.Text = "meno:"
+        MenoLabel.Text = "Meno:"
         '
         'PriezviskoLabel
         '
         PriezviskoLabel.AutoSize = True
-        PriezviskoLabel.Location = New System.Drawing.Point(150, 110)
+        PriezviskoLabel.Location = New System.Drawing.Point(145, 110)
         PriezviskoLabel.Name = "PriezviskoLabel"
-        PriezviskoLabel.Size = New System.Drawing.Size(57, 13)
+        PriezviskoLabel.Size = New System.Drawing.Size(58, 13)
         PriezviskoLabel.TabIndex = 5
-        PriezviskoLabel.Text = "priezvisko:"
+        PriezviskoLabel.Text = "Priezvisko:"
         '
         'Datum_narodeniaLabel
         '
         Datum_narodeniaLabel.AutoSize = True
-        Datum_narodeniaLabel.Location = New System.Drawing.Point(465, 85)
+        Datum_narodeniaLabel.Location = New System.Drawing.Point(474, 85)
         Datum_narodeniaLabel.Name = "Datum_narodeniaLabel"
-        Datum_narodeniaLabel.Size = New System.Drawing.Size(89, 13)
+        Datum_narodeniaLabel.Size = New System.Drawing.Size(80, 13)
         Datum_narodeniaLabel.TabIndex = 7
-        Datum_narodeniaLabel.Text = "datum narodenia:"
+        Datum_narodeniaLabel.Text = "Dát. narodenia:"
         '
         'Rodne_cisloLabel
         '
         Rodne_cisloLabel.AutoSize = True
-        Rodne_cisloLabel.Location = New System.Drawing.Point(490, 162)
+        Rodne_cisloLabel.Location = New System.Drawing.Point(486, 162)
         Rodne_cisloLabel.Name = "Rodne_cisloLabel"
-        Rodne_cisloLabel.Size = New System.Drawing.Size(61, 13)
+        Rodne_cisloLabel.Size = New System.Drawing.Size(68, 13)
         Rodne_cisloLabel.TabIndex = 9
-        Rodne_cisloLabel.Text = "rodne cislo:"
+        Rodne_cisloLabel.Text = "Rodné číslo:"
         '
         'Miesto_narodeniaLabel
         '
         Miesto_narodeniaLabel.AutoSize = True
-        Miesto_narodeniaLabel.Location = New System.Drawing.Point(464, 110)
+        Miesto_narodeniaLabel.Location = New System.Drawing.Point(463, 110)
         Miesto_narodeniaLabel.Name = "Miesto_narodeniaLabel"
-        Miesto_narodeniaLabel.Size = New System.Drawing.Size(90, 13)
+        Miesto_narodeniaLabel.Size = New System.Drawing.Size(91, 13)
         Miesto_narodeniaLabel.TabIndex = 11
-        Miesto_narodeniaLabel.Text = "miesto narodenia:"
+        Miesto_narodeniaLabel.Text = "Miesto narodenia:"
         '
         'Okres_narodeniaLabel
         '
         Okres_narodeniaLabel.AutoSize = True
-        Okres_narodeniaLabel.Location = New System.Drawing.Point(468, 136)
+        Okres_narodeniaLabel.Location = New System.Drawing.Point(474, 136)
         Okres_narodeniaLabel.Name = "Okres_narodeniaLabel"
-        Okres_narodeniaLabel.Size = New System.Drawing.Size(86, 13)
+        Okres_narodeniaLabel.Size = New System.Drawing.Size(80, 13)
         Okres_narodeniaLabel.TabIndex = 13
-        Okres_narodeniaLabel.Text = "okres narodenia:"
+        Okres_narodeniaLabel.Text = "Okr. narodenia:"
         '
         'TelefonLabel
         '
         TelefonLabel.AutoSize = True
-        TelefonLabel.Location = New System.Drawing.Point(512, 243)
+        TelefonLabel.Location = New System.Drawing.Point(526, 243)
         TelefonLabel.Name = "TelefonLabel"
-        TelefonLabel.Size = New System.Drawing.Size(42, 13)
+        TelefonLabel.Size = New System.Drawing.Size(28, 13)
         TelefonLabel.TabIndex = 21
-        TelefonLabel.Text = "telefon:"
+        TelefonLabel.Text = "Tel.:"
         '
         'Cislo_opLabel
         '
         Cislo_opLabel.AutoSize = True
-        Cislo_opLabel.Location = New System.Drawing.Point(157, 335)
+        Cislo_opLabel.Location = New System.Drawing.Point(151, 343)
         Cislo_opLabel.Name = "Cislo_opLabel"
-        Cislo_opLabel.Size = New System.Drawing.Size(46, 13)
+        Cislo_opLabel.Size = New System.Drawing.Size(52, 13)
         Cislo_opLabel.TabIndex = 23
-        Cislo_opLabel.Text = "cislo op:"
+        Cislo_opLabel.Text = "Číslo OP:"
         '
         'Datum_vydania_opLabel
         '
         Datum_vydania_opLabel.AutoSize = True
-        Datum_vydania_opLabel.Location = New System.Drawing.Point(460, 336)
+        Datum_vydania_opLabel.Location = New System.Drawing.Point(455, 344)
         Datum_vydania_opLabel.Name = "Datum_vydania_opLabel"
-        Datum_vydania_opLabel.Size = New System.Drawing.Size(94, 13)
+        Datum_vydania_opLabel.Size = New System.Drawing.Size(99, 13)
         Datum_vydania_opLabel.TabIndex = 25
-        Datum_vydania_opLabel.Text = "datum vydania op:"
+        Datum_vydania_opLabel.Text = "Dátum vydania OP:"
         '
         'Datum_vydania_plLabel
         '
         Datum_vydania_plLabel.AutoSize = True
-        Datum_vydania_plLabel.Location = New System.Drawing.Point(461, 362)
+        Datum_vydania_plLabel.Location = New System.Drawing.Point(457, 370)
         Datum_vydania_plLabel.Name = "Datum_vydania_plLabel"
-        Datum_vydania_plLabel.Size = New System.Drawing.Size(90, 13)
+        Datum_vydania_plLabel.Size = New System.Drawing.Size(97, 13)
         Datum_vydania_plLabel.TabIndex = 27
-        Datum_vydania_plLabel.Text = "datum vydania pl:"
+        Datum_vydania_plLabel.Text = "Dátum vydania PL:"
         '
         'Cislo_zpLabel
         '
         Cislo_zpLabel.AutoSize = True
-        Cislo_zpLabel.Location = New System.Drawing.Point(161, 387)
+        Cislo_zpLabel.Location = New System.Drawing.Point(152, 395)
         Cislo_zpLabel.Name = "Cislo_zpLabel"
-        Cislo_zpLabel.Size = New System.Drawing.Size(45, 13)
+        Cislo_zpLabel.Size = New System.Drawing.Size(51, 13)
         Cislo_zpLabel.TabIndex = 29
-        Cislo_zpLabel.Text = "cislo zp:"
+        Cislo_zpLabel.Text = "Číslo ZP:"
         '
         'Datum_vydania_zpLabel
         '
         Datum_vydania_zpLabel.AutoSize = True
-        Datum_vydania_zpLabel.Location = New System.Drawing.Point(458, 387)
+        Datum_vydania_zpLabel.Location = New System.Drawing.Point(456, 395)
         Datum_vydania_zpLabel.Name = "Datum_vydania_zpLabel"
-        Datum_vydania_zpLabel.Size = New System.Drawing.Size(93, 13)
+        Datum_vydania_zpLabel.Size = New System.Drawing.Size(98, 13)
         Datum_vydania_zpLabel.TabIndex = 31
-        Datum_vydania_zpLabel.Text = "datum vydania zp:"
+        Datum_vydania_zpLabel.Text = "Dátum vydania ZP:"
         '
         'Cislo_clenskeho_preukazu_spzLabel
         '
         Cislo_clenskeho_preukazu_spzLabel.AutoSize = True
-        Cislo_clenskeho_preukazu_spzLabel.Location = New System.Drawing.Point(54, 459)
+        Cislo_clenskeho_preukazu_spzLabel.Location = New System.Drawing.Point(84, 467)
         Cislo_clenskeho_preukazu_spzLabel.Name = "Cislo_clenskeho_preukazu_spzLabel"
-        Cislo_clenskeho_preukazu_spzLabel.Size = New System.Drawing.Size(149, 13)
+        Cislo_clenskeho_preukazu_spzLabel.Size = New System.Drawing.Size(119, 13)
         Cislo_clenskeho_preukazu_spzLabel.TabIndex = 33
-        Cislo_clenskeho_preukazu_spzLabel.Text = "cislo clenskeho preukazu spz:"
+        Cislo_clenskeho_preukazu_spzLabel.Text = "Číslo čl. preukazu SPZ:"
         '
         'Clen_spz_odLabel
         '
         Clen_spz_odLabel.AutoSize = True
-        Clen_spz_odLabel.Location = New System.Drawing.Point(139, 485)
+        Clen_spz_odLabel.Location = New System.Drawing.Point(133, 493)
         Clen_spz_odLabel.Name = "Clen_spz_odLabel"
-        Clen_spz_odLabel.Size = New System.Drawing.Size(64, 13)
+        Clen_spz_odLabel.Size = New System.Drawing.Size(70, 13)
         Clen_spz_odLabel.TabIndex = 35
-        Clen_spz_odLabel.Text = "clen spz od:"
+        Clen_spz_odLabel.Text = "Člen SPZ od:"
         '
         'Clenske_doLabel
         '
         Clenske_doLabel.AutoSize = True
-        Clenske_doLabel.Location = New System.Drawing.Point(141, 511)
+        Clenske_doLabel.Location = New System.Drawing.Point(140, 519)
         Clenske_doLabel.Name = "Clenske_doLabel"
-        Clenske_doLabel.Size = New System.Drawing.Size(62, 13)
+        Clenske_doLabel.Size = New System.Drawing.Size(63, 13)
         Clenske_doLabel.TabIndex = 37
-        Clenske_doLabel.Text = "clenske do:"
+        Clenske_doLabel.Text = "Členské do:"
         '
         'Cislo_dokladu_clenskeLabel
         '
         Cislo_dokladu_clenskeLabel.AutoSize = True
-        Cislo_dokladu_clenskeLabel.Location = New System.Drawing.Point(442, 459)
+        Cislo_dokladu_clenskeLabel.Location = New System.Drawing.Point(454, 467)
         Cislo_dokladu_clenskeLabel.Name = "Cislo_dokladu_clenskeLabel"
-        Cislo_dokladu_clenskeLabel.Size = New System.Drawing.Size(112, 13)
+        Cislo_dokladu_clenskeLabel.Size = New System.Drawing.Size(100, 13)
         Cislo_dokladu_clenskeLabel.TabIndex = 39
-        Cislo_dokladu_clenskeLabel.Text = "cislo dokladu clenske:"
+        Cislo_dokladu_clenskeLabel.Text = "Číslo dokl. členské:"
         '
         'Clen_pzLabel
         '
         Clen_pzLabel.AutoSize = True
-        Clen_pzLabel.Location = New System.Drawing.Point(159, 432)
+        Clen_pzLabel.Location = New System.Drawing.Point(155, 440)
         Clen_pzLabel.Name = "Clen_pzLabel"
-        Clen_pzLabel.Size = New System.Drawing.Size(44, 13)
+        Clen_pzLabel.Size = New System.Drawing.Size(48, 13)
         Clen_pzLabel.TabIndex = 41
-        Clen_pzLabel.Text = "clen pz:"
+        Clen_pzLabel.Text = "Člen PZ:"
         '
         'Skuska_z_polovnictvaLabel
         '
         Skuska_z_polovnictvaLabel.AutoSize = True
-        Skuska_z_polovnictvaLabel.Location = New System.Drawing.Point(93, 570)
+        Skuska_z_polovnictvaLabel.Location = New System.Drawing.Point(93, 578)
         Skuska_z_polovnictvaLabel.Name = "Skuska_z_polovnictvaLabel"
-        Skuska_z_polovnictvaLabel.Size = New System.Drawing.Size(110, 13)
+        Skuska_z_polovnictvaLabel.Size = New System.Drawing.Size(116, 13)
         Skuska_z_polovnictvaLabel.TabIndex = 43
-        Skuska_z_polovnictvaLabel.Text = "skuska z polovnictva:"
+        Skuska_z_polovnictvaLabel.Text = "Skúška z poľovníctva:"
         '
         'Miesto_skusky_z_polovnictvaLabel
         '
         Miesto_skusky_z_polovnictvaLabel.AutoSize = True
-        Miesto_skusky_z_polovnictvaLabel.Location = New System.Drawing.Point(412, 569)
+        Miesto_skusky_z_polovnictvaLabel.Location = New System.Drawing.Point(407, 578)
         Miesto_skusky_z_polovnictvaLabel.Name = "Miesto_skusky_z_polovnictvaLabel"
-        Miesto_skusky_z_polovnictvaLabel.Size = New System.Drawing.Size(142, 13)
+        Miesto_skusky_z_polovnictvaLabel.Size = New System.Drawing.Size(147, 13)
         Miesto_skusky_z_polovnictvaLabel.TabIndex = 45
-        Miesto_skusky_z_polovnictvaLabel.Text = "miesto skusky z polovnictva:"
+        Miesto_skusky_z_polovnictvaLabel.Text = "Miesto skúšky z poľovníctva:"
         '
         'Skuska_pre_polovnych_hospodarovLabel
         '
         Skuska_pre_polovnych_hospodarovLabel.AutoSize = True
-        Skuska_pre_polovnych_hospodarovLabel.Location = New System.Drawing.Point(32, 596)
+        Skuska_pre_polovnych_hospodarovLabel.Location = New System.Drawing.Point(32, 604)
         Skuska_pre_polovnych_hospodarovLabel.Name = "Skuska_pre_polovnych_hospodarovLabel"
-        Skuska_pre_polovnych_hospodarovLabel.Size = New System.Drawing.Size(173, 13)
+        Skuska_pre_polovnych_hospodarovLabel.Size = New System.Drawing.Size(145, 13)
         Skuska_pre_polovnych_hospodarovLabel.TabIndex = 47
-        Skuska_pre_polovnych_hospodarovLabel.Text = "skuska pre polovnych hospodarov:"
+        Skuska_pre_polovnych_hospodarovLabel.Text = "Skuška pre poľ. hospodárov:"
         '
         'Miesto_skusky_pre_polovnych_hospodarovLabel
         '
         Miesto_skusky_pre_polovnych_hospodarovLabel.AutoSize = True
-        Miesto_skusky_pre_polovnych_hospodarovLabel.Location = New System.Drawing.Point(353, 596)
+        Miesto_skusky_pre_polovnych_hospodarovLabel.Location = New System.Drawing.Point(378, 604)
         Miesto_skusky_pre_polovnych_hospodarovLabel.Name = "Miesto_skusky_pre_polovnych_hospodarovLabel"
-        Miesto_skusky_pre_polovnych_hospodarovLabel.Size = New System.Drawing.Size(205, 13)
+        Miesto_skusky_pre_polovnych_hospodarovLabel.Size = New System.Drawing.Size(176, 13)
         Miesto_skusky_pre_polovnych_hospodarovLabel.TabIndex = 49
-        Miesto_skusky_pre_polovnych_hospodarovLabel.Text = "miesto skusky pre polovnych hospodarov:"
+        Miesto_skusky_pre_polovnych_hospodarovLabel.Text = "Miesto skúšky pre poľ. hospodárov:"
         '
         'Vyzsia_skuska_z_polovnictvaLabel
         '
         Vyzsia_skuska_z_polovnictvaLabel.AutoSize = True
-        Vyzsia_skuska_z_polovnictvaLabel.Location = New System.Drawing.Point(61, 622)
+        Vyzsia_skuska_z_polovnictvaLabel.Location = New System.Drawing.Point(61, 630)
         Vyzsia_skuska_z_polovnictvaLabel.Name = "Vyzsia_skuska_z_polovnictvaLabel"
-        Vyzsia_skuska_z_polovnictvaLabel.Size = New System.Drawing.Size(142, 13)
+        Vyzsia_skuska_z_polovnictvaLabel.Size = New System.Drawing.Size(147, 13)
         Vyzsia_skuska_z_polovnictvaLabel.TabIndex = 51
-        Vyzsia_skuska_z_polovnictvaLabel.Text = "vyzsia skuska z polovnictva:"
+        Vyzsia_skuska_z_polovnictvaLabel.Text = "Vyššia skúška z poľovníctva:"
         '
         'Miesto_vyzsej_skusky_z_polovnictvaLabel
         '
         Miesto_vyzsej_skusky_z_polovnictvaLabel.AutoSize = True
-        Miesto_vyzsej_skusky_z_polovnictvaLabel.Location = New System.Drawing.Point(380, 621)
+        Miesto_vyzsej_skusky_z_polovnictvaLabel.Location = New System.Drawing.Point(375, 630)
         Miesto_vyzsej_skusky_z_polovnictvaLabel.Name = "Miesto_vyzsej_skusky_z_polovnictvaLabel"
-        Miesto_vyzsej_skusky_z_polovnictvaLabel.Size = New System.Drawing.Size(174, 13)
+        Miesto_vyzsej_skusky_z_polovnictvaLabel.Size = New System.Drawing.Size(179, 13)
         Miesto_vyzsej_skusky_z_polovnictvaLabel.TabIndex = 53
-        Miesto_vyzsej_skusky_z_polovnictvaLabel.Text = "miesto vyzsej skusky z polovnictva:"
+        Miesto_vyzsej_skusky_z_polovnictvaLabel.Text = "Miesto vyššej skúšky z poľovníctva:"
         '
         'Brokova_zbranLabel
         '
         Brokova_zbranLabel.AutoSize = True
-        Brokova_zbranLabel.Location = New System.Drawing.Point(125, 706)
+        Brokova_zbranLabel.Location = New System.Drawing.Point(124, 681)
         Brokova_zbranLabel.Name = "Brokova_zbranLabel"
-        Brokova_zbranLabel.Size = New System.Drawing.Size(78, 13)
+        Brokova_zbranLabel.Size = New System.Drawing.Size(79, 13)
         Brokova_zbranLabel.TabIndex = 55
-        Brokova_zbranLabel.Text = "brokova zbran:"
+        Brokova_zbranLabel.Text = "Broková zbraň:"
         '
         'Kontrolne_strelby_brokLabel
         '
         Kontrolne_strelby_brokLabel.AutoSize = True
-        Kontrolne_strelby_brokLabel.Location = New System.Drawing.Point(447, 706)
+        Kontrolne_strelby_brokLabel.Location = New System.Drawing.Point(460, 681)
         Kontrolne_strelby_brokLabel.Name = "Kontrolne_strelby_brokLabel"
-        Kontrolne_strelby_brokLabel.Size = New System.Drawing.Size(111, 13)
+        Kontrolne_strelby_brokLabel.Size = New System.Drawing.Size(94, 13)
         Kontrolne_strelby_brokLabel.TabIndex = 57
-        Kontrolne_strelby_brokLabel.Text = "kontrolne strelby brok:"
+        Kontrolne_strelby_brokLabel.Text = "Kont. streľby brok:"
         '
         'Gulova_zbranLabel
         '
         Gulova_zbranLabel.AutoSize = True
-        Gulova_zbranLabel.Location = New System.Drawing.Point(132, 733)
+        Gulova_zbranLabel.Location = New System.Drawing.Point(128, 708)
         Gulova_zbranLabel.Name = "Gulova_zbranLabel"
-        Gulova_zbranLabel.Size = New System.Drawing.Size(71, 13)
+        Gulova_zbranLabel.Size = New System.Drawing.Size(75, 13)
         Gulova_zbranLabel.TabIndex = 59
-        Gulova_zbranLabel.Text = "gulova zbran:"
+        Gulova_zbranLabel.Text = "Guľová zbraň:"
         '
         'Kontrolne_strelby_gulaLabel
         '
         Kontrolne_strelby_gulaLabel.AutoSize = True
-        Kontrolne_strelby_gulaLabel.Location = New System.Drawing.Point(447, 733)
+        Kontrolne_strelby_gulaLabel.Location = New System.Drawing.Point(459, 708)
         Kontrolne_strelby_gulaLabel.Name = "Kontrolne_strelby_gulaLabel"
-        Kontrolne_strelby_gulaLabel.Size = New System.Drawing.Size(110, 13)
+        Kontrolne_strelby_gulaLabel.Size = New System.Drawing.Size(95, 13)
         Kontrolne_strelby_gulaLabel.TabIndex = 61
-        Kontrolne_strelby_gulaLabel.Text = "kontrolne strelby gula:"
+        Kontrolne_strelby_gulaLabel.Text = "Kont. streľby guľa:"
         '
         'Najvyzsie_vyznamenanieLabel
         '
         Najvyzsie_vyznamenanieLabel.AutoSize = True
-        Najvyzsie_vyznamenanieLabel.Location = New System.Drawing.Point(82, 760)
+        Najvyzsie_vyznamenanieLabel.Location = New System.Drawing.Point(77, 735)
         Najvyzsie_vyznamenanieLabel.Name = "Najvyzsie_vyznamenanieLabel"
-        Najvyzsie_vyznamenanieLabel.Size = New System.Drawing.Size(124, 13)
+        Najvyzsie_vyznamenanieLabel.Size = New System.Drawing.Size(126, 13)
         Najvyzsie_vyznamenanieLabel.TabIndex = 63
-        Najvyzsie_vyznamenanieLabel.Text = "najvyzsie vyznamenanie:"
+        Najvyzsie_vyznamenanieLabel.Text = "Najvyššie vyznamenanie:"
         '
         'Vyznamenanie_kedyLabel
         '
         Vyznamenanie_kedyLabel.AutoSize = True
-        Vyznamenanie_kedyLabel.Location = New System.Drawing.Point(450, 760)
+        Vyznamenanie_kedyLabel.Location = New System.Drawing.Point(449, 735)
         Vyznamenanie_kedyLabel.Name = "Vyznamenanie_kedyLabel"
-        Vyznamenanie_kedyLabel.Size = New System.Drawing.Size(104, 13)
+        Vyznamenanie_kedyLabel.Size = New System.Drawing.Size(105, 13)
         Vyznamenanie_kedyLabel.TabIndex = 65
-        Vyznamenanie_kedyLabel.Text = "vyznamenanie kedy:"
+        Vyznamenanie_kedyLabel.Text = "Vyznamenanie kedy:"
         '
         'Udelene_trestyLabel
         '
         Udelene_trestyLabel.AutoSize = True
-        Udelene_trestyLabel.Location = New System.Drawing.Point(127, 786)
+        Udelene_trestyLabel.Location = New System.Drawing.Point(128, 761)
         Udelene_trestyLabel.Name = "Udelene_trestyLabel"
-        Udelene_trestyLabel.Size = New System.Drawing.Size(76, 13)
+        Udelene_trestyLabel.Size = New System.Drawing.Size(78, 13)
         Udelene_trestyLabel.TabIndex = 67
-        Udelene_trestyLabel.Text = "udelene tresty:"
+        Udelene_trestyLabel.Text = "Udelené tresty:"
         '
         'PoznamkyLabel
         '
         PoznamkyLabel.AutoSize = True
-        PoznamkyLabel.Location = New System.Drawing.Point(145, 812)
+        PoznamkyLabel.Location = New System.Drawing.Point(144, 787)
         PoznamkyLabel.Name = "PoznamkyLabel"
-        PoznamkyLabel.Size = New System.Drawing.Size(58, 13)
+        PoznamkyLabel.Size = New System.Drawing.Size(59, 13)
         PoznamkyLabel.TabIndex = 69
-        PoznamkyLabel.Text = "poznamky:"
+        PoznamkyLabel.Text = "Poznámky:"
         '
         'Titul_pred_idLabel
         '
         Titul_pred_idLabel.AutoSize = True
-        Titul_pred_idLabel.Location = New System.Drawing.Point(146, 137)
+        Titul_pred_idLabel.Location = New System.Drawing.Point(149, 136)
         Titul_pred_idLabel.Name = "Titul_pred_idLabel"
-        Titul_pred_idLabel.Size = New System.Drawing.Size(61, 13)
+        Titul_pred_idLabel.Size = New System.Drawing.Size(54, 13)
         Titul_pred_idLabel.TabIndex = 71
-        Titul_pred_idLabel.Text = "titul pred id:"
+        Titul_pred_idLabel.Text = "Titul pred:"
         '
         'Titul_za_idLabel
         '
         Titul_za_idLabel.AutoSize = True
-        Titul_za_idLabel.Location = New System.Drawing.Point(156, 163)
+        Titul_za_idLabel.Location = New System.Drawing.Point(159, 163)
         Titul_za_idLabel.Name = "Titul_za_idLabel"
-        Titul_za_idLabel.Size = New System.Drawing.Size(51, 13)
+        Titul_za_idLabel.Size = New System.Drawing.Size(44, 13)
         Titul_za_idLabel.TabIndex = 73
-        Titul_za_idLabel.Text = "titul za id:"
+        Titul_za_idLabel.Text = "Titul za:"
         '
         'Narodnost_idLabel
         '
         Narodnost_idLabel.AutoSize = True
-        Narodnost_idLabel.Location = New System.Drawing.Point(486, 189)
+        Narodnost_idLabel.Location = New System.Drawing.Point(494, 190)
         Narodnost_idLabel.Name = "Narodnost_idLabel"
-        Narodnost_idLabel.Size = New System.Drawing.Size(68, 13)
+        Narodnost_idLabel.Size = New System.Drawing.Size(60, 13)
         Narodnost_idLabel.TabIndex = 75
-        Narodnost_idLabel.Text = "narodnost id:"
+        Narodnost_idLabel.Text = "Národnosť:"
         '
         'Statna_prislusnost_idLabel
         '
         Statna_prislusnost_idLabel.AutoSize = True
-        Statna_prislusnost_idLabel.Location = New System.Drawing.Point(452, 214)
+        Statna_prislusnost_idLabel.Location = New System.Drawing.Point(476, 214)
         Statna_prislusnost_idLabel.Name = "Statna_prislusnost_idLabel"
-        Statna_prislusnost_idLabel.Size = New System.Drawing.Size(102, 13)
+        Statna_prislusnost_idLabel.Size = New System.Drawing.Size(78, 13)
         Statna_prislusnost_idLabel.TabIndex = 77
-        Statna_prislusnost_idLabel.Text = "statna prislusnost id:"
+        Statna_prislusnost_idLabel.Text = "Št. príslušnosť:"
         '
         'Ico_clenoviaLabel
         '
@@ -585,47 +587,47 @@ Partial Class clen_edituj
         'MestoLabel
         '
         MestoLabel.AutoSize = True
-        MestoLabel.Location = New System.Drawing.Point(167, 188)
+        MestoLabel.Location = New System.Drawing.Point(167, 190)
         MestoLabel.Name = "MestoLabel"
-        MestoLabel.Size = New System.Drawing.Size(38, 13)
+        MestoLabel.Size = New System.Drawing.Size(39, 13)
         MestoLabel.TabIndex = 91
-        MestoLabel.Text = "mesto:"
+        MestoLabel.Text = "Mesto:"
         '
         'UlicaLabel
         '
         UlicaLabel.AutoSize = True
-        UlicaLabel.Location = New System.Drawing.Point(172, 217)
+        UlicaLabel.Location = New System.Drawing.Point(46, 16)
         UlicaLabel.Name = "UlicaLabel"
-        UlicaLabel.Size = New System.Drawing.Size(32, 13)
+        UlicaLabel.Size = New System.Drawing.Size(34, 13)
         UlicaLabel.TabIndex = 92
-        UlicaLabel.Text = "ulica:"
+        UlicaLabel.Text = "Ulica:"
         '
         'Ulica_cisloLabel
         '
         Ulica_cisloLabel.AutoSize = True
-        Ulica_cisloLabel.Location = New System.Drawing.Point(301, 217)
+        Ulica_cisloLabel.Location = New System.Drawing.Point(173, 16)
         Ulica_cisloLabel.Name = "Ulica_cisloLabel"
-        Ulica_cisloLabel.Size = New System.Drawing.Size(45, 13)
+        Ulica_cisloLabel.Size = New System.Drawing.Size(49, 13)
         Ulica_cisloLabel.TabIndex = 93
-        Ulica_cisloLabel.Text = "ul. cislo:"
+        Ulica_cisloLabel.Text = "Ul. číslo:"
         '
         'Okres_bydliskaLabel1
         '
         Okres_bydliskaLabel1.AutoSize = True
-        Okres_bydliskaLabel1.Location = New System.Drawing.Point(128, 240)
+        Okres_bydliskaLabel1.Location = New System.Drawing.Point(9, 39)
         Okres_bydliskaLabel1.Name = "Okres_bydliskaLabel1"
-        Okres_bydliskaLabel1.Size = New System.Drawing.Size(77, 13)
+        Okres_bydliskaLabel1.Size = New System.Drawing.Size(71, 13)
         Okres_bydliskaLabel1.TabIndex = 103
-        Okres_bydliskaLabel1.Text = "okres bydliska:"
+        Okres_bydliskaLabel1.Text = "Okr. bydliska:"
         '
         'PscLabel1
         '
         PscLabel1.AutoSize = True
-        PscLabel1.Location = New System.Drawing.Point(318, 240)
+        PscLabel1.Location = New System.Drawing.Point(191, 39)
         PscLabel1.Name = "PscLabel1"
-        PscLabel1.Size = New System.Drawing.Size(27, 13)
+        PscLabel1.Size = New System.Drawing.Size(31, 13)
         PscLabel1.TabIndex = 104
-        PscLabel1.Text = "psc:"
+        PscLabel1.Text = "PSČ:"
         '
         'PscLabel
         '
@@ -646,6 +648,123 @@ Partial Class clen_edituj
         Okres_bydliskaLabel.Text = "okres bydliska:"
         AddHandler Okres_bydliskaLabel.Click, AddressOf Me.Okres_bydliskaLabel_Click
         '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Location = New System.Drawing.Point(936, 160)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(68, 13)
+        Label1.TabIndex = 109
+        Label1.Text = "narodnost id:"
+        '
+        'Label2
+        '
+        Label2.AutoSize = True
+        Label2.Location = New System.Drawing.Point(902, 185)
+        Label2.Name = "Label2"
+        Label2.Size = New System.Drawing.Size(102, 13)
+        Label2.TabIndex = 110
+        Label2.Text = "statna prislusnost id:"
+        '
+        'Label3
+        '
+        Label3.AutoSize = True
+        Label3.Location = New System.Drawing.Point(912, 81)
+        Label3.Name = "Label3"
+        Label3.Size = New System.Drawing.Size(89, 13)
+        Label3.TabIndex = 111
+        Label3.Text = "datum narodenia:"
+        '
+        'Label4
+        '
+        Label4.AutoSize = True
+        Label4.Location = New System.Drawing.Point(940, 212)
+        Label4.Name = "Label4"
+        Label4.Size = New System.Drawing.Size(61, 13)
+        Label4.TabIndex = 112
+        Label4.Text = "titul pred id:"
+        '
+        'Label5
+        '
+        Label5.AutoSize = True
+        Label5.Location = New System.Drawing.Point(950, 238)
+        Label5.Name = "Label5"
+        Label5.Size = New System.Drawing.Size(51, 13)
+        Label5.TabIndex = 113
+        Label5.Text = "titul za id:"
+        '
+        'Label6
+        '
+        Label6.AutoSize = True
+        Label6.Location = New System.Drawing.Point(914, 268)
+        Label6.Name = "Label6"
+        Label6.Size = New System.Drawing.Size(94, 13)
+        Label6.TabIndex = 114
+        Label6.Text = "datum vydania op:"
+        '
+        'Label7
+        '
+        Label7.AutoSize = True
+        Label7.Location = New System.Drawing.Point(915, 294)
+        Label7.Name = "Label7"
+        Label7.Size = New System.Drawing.Size(90, 13)
+        Label7.TabIndex = 115
+        Label7.Text = "datum vydania pl:"
+        '
+        'Label8
+        '
+        Label8.AutoSize = True
+        Label8.Location = New System.Drawing.Point(912, 319)
+        Label8.Name = "Label8"
+        Label8.Size = New System.Drawing.Size(93, 13)
+        Label8.TabIndex = 116
+        Label8.Text = "datum vydania zp:"
+        '
+        'Label9
+        '
+        Label9.AutoSize = True
+        Label9.Location = New System.Drawing.Point(959, 346)
+        Label9.Name = "Label9"
+        Label9.Size = New System.Drawing.Size(45, 13)
+        Label9.TabIndex = 117
+        Label9.Text = "cislo zp:"
+        '
+        'Label10
+        '
+        Label10.AutoSize = True
+        Label10.Location = New System.Drawing.Point(894, 371)
+        Label10.Name = "Label10"
+        Label10.Size = New System.Drawing.Size(110, 13)
+        Label10.TabIndex = 118
+        Label10.Text = "skuska z polovnictva:"
+        '
+        'Label11
+        '
+        Label11.AutoSize = True
+        Label11.Location = New System.Drawing.Point(803, 397)
+        Label11.Name = "Label11"
+        Label11.Size = New System.Drawing.Size(205, 13)
+        Label11.TabIndex = 119
+        Label11.Text = "miesto skusky pre polovnych hospodarov:"
+        '
+        'Label12
+        '
+        Label12.AutoSize = True
+        Label12.Location = New System.Drawing.Point(830, 422)
+        Label12.Name = "Label12"
+        Label12.Size = New System.Drawing.Size(174, 13)
+        Label12.TabIndex = 120
+        Label12.Text = "miesto vyzsej skusky z polovnictva:"
+        '
+        'Label13
+        '
+        Label13.AutoSize = True
+        Label13.Location = New System.Drawing.Point(897, 451)
+        Label13.Name = "Label13"
+        Label13.Size = New System.Drawing.Size(104, 13)
+        Label13.TabIndex = 121
+        Label13.Text = "vyznamenanie kedy:"
+        '
         'All_clenoviaBindingNavigator
         '
         Me.All_clenoviaBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -663,6 +782,7 @@ Partial Class clen_edituj
         Me.All_clenoviaBindingNavigator.Size = New System.Drawing.Size(1257, 25)
         Me.All_clenoviaBindingNavigator.TabIndex = 0
         Me.All_clenoviaBindingNavigator.Text = "BindingNavigator1"
+        Me.All_clenoviaBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
@@ -770,7 +890,7 @@ Partial Class clen_edituj
         'Cislo_plTextBox
         '
         Me.Cislo_plTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "cislo_pl", True))
-        Me.Cislo_plTextBox.Location = New System.Drawing.Point(209, 358)
+        Me.Cislo_plTextBox.Location = New System.Drawing.Point(209, 366)
         Me.Cislo_plTextBox.Name = "Cislo_plTextBox"
         Me.Cislo_plTextBox.Size = New System.Drawing.Size(121, 20)
         Me.Cislo_plTextBox.TabIndex = 2
@@ -818,14 +938,14 @@ Partial Class clen_edituj
         'Cislo_opTextBox
         '
         Me.Cislo_opTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "cislo_op", True))
-        Me.Cislo_opTextBox.Location = New System.Drawing.Point(209, 332)
+        Me.Cislo_opTextBox.Location = New System.Drawing.Point(209, 340)
         Me.Cislo_opTextBox.Name = "Cislo_opTextBox"
         Me.Cislo_opTextBox.Size = New System.Drawing.Size(121, 20)
         Me.Cislo_opTextBox.TabIndex = 24
         '
         'Datum_vydania_opDateTimePicker
         '
-        Me.Datum_vydania_opDateTimePicker.Location = New System.Drawing.Point(560, 332)
+        Me.Datum_vydania_opDateTimePicker.Location = New System.Drawing.Point(560, 340)
         Me.Datum_vydania_opDateTimePicker.Name = "Datum_vydania_opDateTimePicker"
         Me.Datum_vydania_opDateTimePicker.ShowCheckBox = True
         Me.Datum_vydania_opDateTimePicker.Size = New System.Drawing.Size(143, 20)
@@ -833,7 +953,7 @@ Partial Class clen_edituj
         '
         'Datum_vydania_plDateTimePicker
         '
-        Me.Datum_vydania_plDateTimePicker.Location = New System.Drawing.Point(560, 358)
+        Me.Datum_vydania_plDateTimePicker.Location = New System.Drawing.Point(560, 366)
         Me.Datum_vydania_plDateTimePicker.Name = "Datum_vydania_plDateTimePicker"
         Me.Datum_vydania_plDateTimePicker.ShowCheckBox = True
         Me.Datum_vydania_plDateTimePicker.Size = New System.Drawing.Size(143, 20)
@@ -842,14 +962,14 @@ Partial Class clen_edituj
         'Cislo_zpTextBox
         '
         Me.Cislo_zpTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "cislo_zp", True))
-        Me.Cislo_zpTextBox.Location = New System.Drawing.Point(209, 384)
+        Me.Cislo_zpTextBox.Location = New System.Drawing.Point(209, 392)
         Me.Cislo_zpTextBox.Name = "Cislo_zpTextBox"
         Me.Cislo_zpTextBox.Size = New System.Drawing.Size(121, 20)
         Me.Cislo_zpTextBox.TabIndex = 30
         '
         'Datum_vydania_zpDateTimePicker
         '
-        Me.Datum_vydania_zpDateTimePicker.Location = New System.Drawing.Point(560, 383)
+        Me.Datum_vydania_zpDateTimePicker.Location = New System.Drawing.Point(560, 391)
         Me.Datum_vydania_zpDateTimePicker.Name = "Datum_vydania_zpDateTimePicker"
         Me.Datum_vydania_zpDateTimePicker.ShowCheckBox = True
         Me.Datum_vydania_zpDateTimePicker.Size = New System.Drawing.Size(143, 20)
@@ -858,7 +978,7 @@ Partial Class clen_edituj
         'Cislo_clenskeho_preukazu_spzTextBox
         '
         Me.Cislo_clenskeho_preukazu_spzTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "cislo_clenskeho_preukazu_spz", True))
-        Me.Cislo_clenskeho_preukazu_spzTextBox.Location = New System.Drawing.Point(209, 456)
+        Me.Cislo_clenskeho_preukazu_spzTextBox.Location = New System.Drawing.Point(209, 464)
         Me.Cislo_clenskeho_preukazu_spzTextBox.Name = "Cislo_clenskeho_preukazu_spzTextBox"
         Me.Cislo_clenskeho_preukazu_spzTextBox.Size = New System.Drawing.Size(121, 20)
         Me.Cislo_clenskeho_preukazu_spzTextBox.TabIndex = 34
@@ -866,7 +986,7 @@ Partial Class clen_edituj
         'Clen_spz_odTextBox
         '
         Me.Clen_spz_odTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "clen_spz_od", True))
-        Me.Clen_spz_odTextBox.Location = New System.Drawing.Point(209, 482)
+        Me.Clen_spz_odTextBox.Location = New System.Drawing.Point(209, 490)
         Me.Clen_spz_odTextBox.Name = "Clen_spz_odTextBox"
         Me.Clen_spz_odTextBox.Size = New System.Drawing.Size(121, 20)
         Me.Clen_spz_odTextBox.TabIndex = 36
@@ -874,7 +994,7 @@ Partial Class clen_edituj
         'Clenske_doTextBox
         '
         Me.Clenske_doTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "clenske_do", True))
-        Me.Clenske_doTextBox.Location = New System.Drawing.Point(209, 508)
+        Me.Clenske_doTextBox.Location = New System.Drawing.Point(209, 516)
         Me.Clenske_doTextBox.Name = "Clenske_doTextBox"
         Me.Clenske_doTextBox.Size = New System.Drawing.Size(121, 20)
         Me.Clenske_doTextBox.TabIndex = 38
@@ -882,7 +1002,7 @@ Partial Class clen_edituj
         'Cislo_dokladu_clenskeTextBox
         '
         Me.Cislo_dokladu_clenskeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "cislo_dokladu_clenske", True))
-        Me.Cislo_dokladu_clenskeTextBox.Location = New System.Drawing.Point(560, 456)
+        Me.Cislo_dokladu_clenskeTextBox.Location = New System.Drawing.Point(560, 464)
         Me.Cislo_dokladu_clenskeTextBox.Name = "Cislo_dokladu_clenskeTextBox"
         Me.Cislo_dokladu_clenskeTextBox.Size = New System.Drawing.Size(143, 20)
         Me.Cislo_dokladu_clenskeTextBox.TabIndex = 40
@@ -898,7 +1018,7 @@ Partial Class clen_edituj
         '
         'Skuska_z_polovnictvaDateTimePicker
         '
-        Me.Skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(209, 566)
+        Me.Skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(209, 574)
         Me.Skuska_z_polovnictvaDateTimePicker.Name = "Skuska_z_polovnictvaDateTimePicker"
         Me.Skuska_z_polovnictvaDateTimePicker.ShowCheckBox = True
         Me.Skuska_z_polovnictvaDateTimePicker.Size = New System.Drawing.Size(138, 20)
@@ -907,14 +1027,14 @@ Partial Class clen_edituj
         'Miesto_skusky_z_polovnictvaTextBox
         '
         Me.Miesto_skusky_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "miesto_skusky_z_polovnictva", True))
-        Me.Miesto_skusky_z_polovnictvaTextBox.Location = New System.Drawing.Point(560, 566)
+        Me.Miesto_skusky_z_polovnictvaTextBox.Location = New System.Drawing.Point(560, 574)
         Me.Miesto_skusky_z_polovnictvaTextBox.Name = "Miesto_skusky_z_polovnictvaTextBox"
         Me.Miesto_skusky_z_polovnictvaTextBox.Size = New System.Drawing.Size(146, 20)
         Me.Miesto_skusky_z_polovnictvaTextBox.TabIndex = 46
         '
         'Skuska_pre_polovnych_hospodarovDateTimePicker
         '
-        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Location = New System.Drawing.Point(209, 592)
+        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Location = New System.Drawing.Point(209, 600)
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Name = "Skuska_pre_polovnych_hospodarovDateTimePicker"
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.ShowCheckBox = True
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Size = New System.Drawing.Size(137, 20)
@@ -923,14 +1043,14 @@ Partial Class clen_edituj
         'Miesto_skusky_pre_polovnych_hospodarovTextBox
         '
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "miesto_skusky_pre_polovnych_hospodarov", True))
-        Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.Location = New System.Drawing.Point(560, 593)
+        Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.Location = New System.Drawing.Point(560, 601)
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.Name = "Miesto_skusky_pre_polovnych_hospodarovTextBox"
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.Size = New System.Drawing.Size(146, 20)
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.TabIndex = 50
         '
         'Vyzsia_skuska_z_polovnictvaDateTimePicker
         '
-        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(209, 618)
+        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Location = New System.Drawing.Point(209, 626)
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Name = "Vyzsia_skuska_z_polovnictvaDateTimePicker"
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.ShowCheckBox = True
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Size = New System.Drawing.Size(138, 20)
@@ -939,7 +1059,7 @@ Partial Class clen_edituj
         'Miesto_vyzsej_skusky_z_polovnictvaTextBox
         '
         Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "miesto_vyzsej_skusky_z_polovnictva", True))
-        Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox.Location = New System.Drawing.Point(560, 619)
+        Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox.Location = New System.Drawing.Point(560, 627)
         Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox.Name = "Miesto_vyzsej_skusky_z_polovnictvaTextBox"
         Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox.Size = New System.Drawing.Size(146, 20)
         Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox.TabIndex = 54
@@ -947,7 +1067,7 @@ Partial Class clen_edituj
         'Kontrolne_strelby_brokTextBox
         '
         Me.Kontrolne_strelby_brokTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "kontrolne_strelby_brok", True))
-        Me.Kontrolne_strelby_brokTextBox.Location = New System.Drawing.Point(560, 703)
+        Me.Kontrolne_strelby_brokTextBox.Location = New System.Drawing.Point(560, 678)
         Me.Kontrolne_strelby_brokTextBox.Name = "Kontrolne_strelby_brokTextBox"
         Me.Kontrolne_strelby_brokTextBox.Size = New System.Drawing.Size(143, 20)
         Me.Kontrolne_strelby_brokTextBox.TabIndex = 58
@@ -955,7 +1075,7 @@ Partial Class clen_edituj
         'Kontrolne_strelby_gulaTextBox
         '
         Me.Kontrolne_strelby_gulaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "kontrolne_strelby_gula", True))
-        Me.Kontrolne_strelby_gulaTextBox.Location = New System.Drawing.Point(560, 730)
+        Me.Kontrolne_strelby_gulaTextBox.Location = New System.Drawing.Point(560, 705)
         Me.Kontrolne_strelby_gulaTextBox.Name = "Kontrolne_strelby_gulaTextBox"
         Me.Kontrolne_strelby_gulaTextBox.Size = New System.Drawing.Size(143, 20)
         Me.Kontrolne_strelby_gulaTextBox.TabIndex = 62
@@ -963,7 +1083,7 @@ Partial Class clen_edituj
         'Najvyzsie_vyznamenanieTextBox
         '
         Me.Najvyzsie_vyznamenanieTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "najvyzsie_vyznamenanie", True))
-        Me.Najvyzsie_vyznamenanieTextBox.Location = New System.Drawing.Point(209, 757)
+        Me.Najvyzsie_vyznamenanieTextBox.Location = New System.Drawing.Point(209, 732)
         Me.Najvyzsie_vyznamenanieTextBox.Name = "Najvyzsie_vyznamenanieTextBox"
         Me.Najvyzsie_vyznamenanieTextBox.Size = New System.Drawing.Size(121, 20)
         Me.Najvyzsie_vyznamenanieTextBox.TabIndex = 64
@@ -971,7 +1091,7 @@ Partial Class clen_edituj
         'Vyznamenanie_kedyDateTimePicker
         '
         Me.Vyznamenanie_kedyDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.All_clenoviaBindingSource, "vyznamenanie_kedy", True))
-        Me.Vyznamenanie_kedyDateTimePicker.Location = New System.Drawing.Point(560, 757)
+        Me.Vyznamenanie_kedyDateTimePicker.Location = New System.Drawing.Point(560, 732)
         Me.Vyznamenanie_kedyDateTimePicker.Name = "Vyznamenanie_kedyDateTimePicker"
         Me.Vyznamenanie_kedyDateTimePicker.ShowCheckBox = True
         Me.Vyznamenanie_kedyDateTimePicker.Size = New System.Drawing.Size(143, 20)
@@ -980,7 +1100,7 @@ Partial Class clen_edituj
         'Udelene_trestyTextBox
         '
         Me.Udelene_trestyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "udelene_tresty", True))
-        Me.Udelene_trestyTextBox.Location = New System.Drawing.Point(209, 783)
+        Me.Udelene_trestyTextBox.Location = New System.Drawing.Point(209, 758)
         Me.Udelene_trestyTextBox.Name = "Udelene_trestyTextBox"
         Me.Udelene_trestyTextBox.Size = New System.Drawing.Size(121, 20)
         Me.Udelene_trestyTextBox.TabIndex = 68
@@ -988,7 +1108,7 @@ Partial Class clen_edituj
         'PoznamkyTextBox
         '
         Me.PoznamkyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "poznamky", True))
-        Me.PoznamkyTextBox.Location = New System.Drawing.Point(209, 809)
+        Me.PoznamkyTextBox.Location = New System.Drawing.Point(209, 784)
         Me.PoznamkyTextBox.Multiline = True
         Me.PoznamkyTextBox.Name = "PoznamkyTextBox"
         Me.PoznamkyTextBox.Size = New System.Drawing.Size(494, 123)
@@ -1109,7 +1229,7 @@ Partial Class clen_edituj
         Me.clen_pzComboBox.DataSource = Me.ZdruzeniaBindingSource
         Me.clen_pzComboBox.DisplayMember = "nazov"
         Me.clen_pzComboBox.FormattingEnabled = True
-        Me.clen_pzComboBox.Location = New System.Drawing.Point(209, 429)
+        Me.clen_pzComboBox.Location = New System.Drawing.Point(209, 437)
         Me.clen_pzComboBox.Name = "clen_pzComboBox"
         Me.clen_pzComboBox.Size = New System.Drawing.Size(121, 21)
         Me.clen_pzComboBox.TabIndex = 87
@@ -1168,7 +1288,7 @@ Partial Class clen_edituj
         'UlicaTextBox
         '
         Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "ulica", True))
-        Me.UlicaTextBox.Location = New System.Drawing.Point(209, 214)
+        Me.UlicaTextBox.Location = New System.Drawing.Point(86, 13)
         Me.UlicaTextBox.Name = "UlicaTextBox"
         Me.UlicaTextBox.Size = New System.Drawing.Size(74, 20)
         Me.UlicaTextBox.TabIndex = 93
@@ -1176,7 +1296,7 @@ Partial Class clen_edituj
         'Ulica_cisloTextBox
         '
         Me.Ulica_cisloTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "ulica_cislo", True))
-        Me.Ulica_cisloTextBox.Location = New System.Drawing.Point(345, 214)
+        Me.Ulica_cisloTextBox.Location = New System.Drawing.Point(222, 13)
         Me.Ulica_cisloTextBox.Name = "Ulica_cisloTextBox"
         Me.Ulica_cisloTextBox.Size = New System.Drawing.Size(52, 20)
         Me.Ulica_cisloTextBox.TabIndex = 94
@@ -1214,7 +1334,7 @@ Partial Class clen_edituj
         Me.Brokova_zbranComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "brokova_zbran", True))
         Me.Brokova_zbranComboBox.FormattingEnabled = True
         Me.Brokova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ÁNO"})
-        Me.Brokova_zbranComboBox.Location = New System.Drawing.Point(209, 703)
+        Me.Brokova_zbranComboBox.Location = New System.Drawing.Point(209, 678)
         Me.Brokova_zbranComboBox.Name = "Brokova_zbranComboBox"
         Me.Brokova_zbranComboBox.Size = New System.Drawing.Size(64, 21)
         Me.Brokova_zbranComboBox.TabIndex = 97
@@ -1224,14 +1344,14 @@ Partial Class clen_edituj
         Me.Gulova_zbranComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "gulova_zbran", True))
         Me.Gulova_zbranComboBox.FormattingEnabled = True
         Me.Gulova_zbranComboBox.Items.AddRange(New Object() {"NIE", "ÁNO"})
-        Me.Gulova_zbranComboBox.Location = New System.Drawing.Point(209, 730)
+        Me.Gulova_zbranComboBox.Location = New System.Drawing.Point(209, 705)
         Me.Gulova_zbranComboBox.Name = "Gulova_zbranComboBox"
         Me.Gulova_zbranComboBox.Size = New System.Drawing.Size(64, 21)
         Me.Gulova_zbranComboBox.TabIndex = 98
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(712, 501)
+        Me.Button2.Location = New System.Drawing.Point(596, 36)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 99
@@ -1325,7 +1445,7 @@ Partial Class clen_edituj
         'Okres_bydliskaListBox
         '
         Me.Okres_bydliskaListBox.FormattingEnabled = True
-        Me.Okres_bydliskaListBox.Location = New System.Drawing.Point(209, 240)
+        Me.Okres_bydliskaListBox.Location = New System.Drawing.Point(86, 39)
         Me.Okres_bydliskaListBox.Name = "Okres_bydliskaListBox"
         Me.Okres_bydliskaListBox.Size = New System.Drawing.Size(99, 43)
         Me.Okres_bydliskaListBox.TabIndex = 104
@@ -1333,7 +1453,7 @@ Partial Class clen_edituj
         'PscListBox
         '
         Me.PscListBox.FormattingEnabled = True
-        Me.PscListBox.Location = New System.Drawing.Point(345, 240)
+        Me.PscListBox.Location = New System.Drawing.Point(222, 39)
         Me.PscListBox.Name = "PscListBox"
         Me.PscListBox.Size = New System.Drawing.Size(52, 43)
         Me.PscListBox.TabIndex = 105
@@ -1383,8 +1503,8 @@ Partial Class clen_edituj
         Me.LineShape1.Name = "LineShape1"
         Me.LineShape1.X1 = 84
         Me.LineShape1.X2 = 768
-        Me.LineShape1.Y1 = 318
-        Me.LineShape1.Y2 = 318
+        Me.LineShape1.Y1 = 321
+        Me.LineShape1.Y2 = 321
         '
         'ShapeContainer1
         '
@@ -1402,125 +1522,8 @@ Partial Class clen_edituj
         Me.LineShape2.Name = "LineShape2"
         Me.LineShape2.X1 = 84
         Me.LineShape2.X2 = 768
-        Me.LineShape2.Y1 = 689
-        Me.LineShape2.Y2 = 689
-        '
-        'Label1
-        '
-        Label1.AutoSize = True
-        Label1.Location = New System.Drawing.Point(936, 160)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(68, 13)
-        Label1.TabIndex = 109
-        Label1.Text = "narodnost id:"
-        '
-        'Label2
-        '
-        Label2.AutoSize = True
-        Label2.Location = New System.Drawing.Point(902, 185)
-        Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(102, 13)
-        Label2.TabIndex = 110
-        Label2.Text = "statna prislusnost id:"
-        '
-        'Label3
-        '
-        Label3.AutoSize = True
-        Label3.Location = New System.Drawing.Point(912, 81)
-        Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(89, 13)
-        Label3.TabIndex = 111
-        Label3.Text = "datum narodenia:"
-        '
-        'Label4
-        '
-        Label4.AutoSize = True
-        Label4.Location = New System.Drawing.Point(940, 212)
-        Label4.Name = "Label4"
-        Label4.Size = New System.Drawing.Size(61, 13)
-        Label4.TabIndex = 112
-        Label4.Text = "titul pred id:"
-        '
-        'Label5
-        '
-        Label5.AutoSize = True
-        Label5.Location = New System.Drawing.Point(950, 238)
-        Label5.Name = "Label5"
-        Label5.Size = New System.Drawing.Size(51, 13)
-        Label5.TabIndex = 113
-        Label5.Text = "titul za id:"
-        '
-        'Label6
-        '
-        Label6.AutoSize = True
-        Label6.Location = New System.Drawing.Point(914, 268)
-        Label6.Name = "Label6"
-        Label6.Size = New System.Drawing.Size(94, 13)
-        Label6.TabIndex = 114
-        Label6.Text = "datum vydania op:"
-        '
-        'Label7
-        '
-        Label7.AutoSize = True
-        Label7.Location = New System.Drawing.Point(915, 294)
-        Label7.Name = "Label7"
-        Label7.Size = New System.Drawing.Size(90, 13)
-        Label7.TabIndex = 115
-        Label7.Text = "datum vydania pl:"
-        '
-        'Label8
-        '
-        Label8.AutoSize = True
-        Label8.Location = New System.Drawing.Point(912, 319)
-        Label8.Name = "Label8"
-        Label8.Size = New System.Drawing.Size(93, 13)
-        Label8.TabIndex = 116
-        Label8.Text = "datum vydania zp:"
-        '
-        'Label9
-        '
-        Label9.AutoSize = True
-        Label9.Location = New System.Drawing.Point(959, 346)
-        Label9.Name = "Label9"
-        Label9.Size = New System.Drawing.Size(45, 13)
-        Label9.TabIndex = 117
-        Label9.Text = "cislo zp:"
-        '
-        'Label10
-        '
-        Label10.AutoSize = True
-        Label10.Location = New System.Drawing.Point(894, 371)
-        Label10.Name = "Label10"
-        Label10.Size = New System.Drawing.Size(110, 13)
-        Label10.TabIndex = 118
-        Label10.Text = "skuska z polovnictva:"
-        '
-        'Label11
-        '
-        Label11.AutoSize = True
-        Label11.Location = New System.Drawing.Point(803, 397)
-        Label11.Name = "Label11"
-        Label11.Size = New System.Drawing.Size(205, 13)
-        Label11.TabIndex = 119
-        Label11.Text = "miesto skusky pre polovnych hospodarov:"
-        '
-        'Label12
-        '
-        Label12.AutoSize = True
-        Label12.Location = New System.Drawing.Point(830, 422)
-        Label12.Name = "Label12"
-        Label12.Size = New System.Drawing.Size(174, 13)
-        Label12.TabIndex = 120
-        Label12.Text = "miesto vyzsej skusky z polovnictva:"
-        '
-        'Label13
-        '
-        Label13.AutoSize = True
-        Label13.Location = New System.Drawing.Point(897, 451)
-        Label13.Name = "Label13"
-        Label13.Size = New System.Drawing.Size(104, 13)
-        Label13.TabIndex = 121
-        Label13.Text = "vyznamenanie kedy:"
+        Me.LineShape2.Y1 = 661
+        Me.LineShape2.Y2 = 661
         '
         'Panel1
         '
@@ -1529,6 +1532,24 @@ Partial Class clen_edituj
         Me.Panel1.Size = New System.Drawing.Size(357, 461)
         Me.Panel1.TabIndex = 122
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Okres_bydliskaListBox)
+        Me.GroupBox1.Controls.Add(Me.UlicaTextBox)
+        Me.GroupBox1.Controls.Add(UlicaLabel)
+        Me.GroupBox1.Controls.Add(Me.Ulica_cisloTextBox)
+        Me.GroupBox1.Controls.Add(Ulica_cisloLabel)
+        Me.GroupBox1.Controls.Add(Okres_bydliskaLabel1)
+        Me.GroupBox1.Controls.Add(Me.PscListBox)
+        Me.GroupBox1.Controls.Add(PscLabel1)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Black
+        Me.GroupBox1.Location = New System.Drawing.Point(124, 221)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(286, 93)
+        Me.GroupBox1.TabIndex = 123
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Adresa"
+        '
         'clen_edituj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1536,6 +1557,7 @@ Partial Class clen_edituj
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(1257, 963)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Label13)
         Me.Controls.Add(Label11)
@@ -1552,10 +1574,6 @@ Partial Class clen_edituj
         Me.Controls.Add(Label2)
         Me.Controls.Add(Me.zavriet_button)
         Me.Controls.Add(Me.Rodne_cisloMaskedTextBox)
-        Me.Controls.Add(PscLabel1)
-        Me.Controls.Add(Me.PscListBox)
-        Me.Controls.Add(Okres_bydliskaLabel1)
-        Me.Controls.Add(Me.Okres_bydliskaListBox)
         Me.Controls.Add(Me.Statna_prislusnost_idComboBox)
         Me.Controls.Add(Me.Narodnost_idComboBox)
         Me.Controls.Add(Me.Titul_za_idComboBox)
@@ -1564,10 +1582,6 @@ Partial Class clen_edituj
         Me.Controls.Add(Me.Gulova_zbranComboBox)
         Me.Controls.Add(Me.Brokova_zbranComboBox)
         Me.Controls.Add(Me.MestoComboBox)
-        Me.Controls.Add(Ulica_cisloLabel)
-        Me.Controls.Add(Me.Ulica_cisloTextBox)
-        Me.Controls.Add(UlicaLabel)
-        Me.Controls.Add(Me.UlicaTextBox)
         Me.Controls.Add(MestoLabel)
         Me.Controls.Add(Me.Vyznamenanie_kedyTextBox)
         Me.Controls.Add(Me.Vyzsia_skuska_z_polovnictvaTextBox)
@@ -1673,6 +1687,8 @@ Partial Class clen_edituj
         CType(Me.NarodnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StatnaprislusnostBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1773,4 +1789,5 @@ Partial Class clen_edituj
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 End Class

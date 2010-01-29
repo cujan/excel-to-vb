@@ -111,8 +111,13 @@ Partial Class zdruzenie_nove
         Me.uloz_button = New System.Windows.Forms.Button
         Me.zavriet_kartu_button = New System.Windows.Forms.Button
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox
+        Me.Panel1 = New System.Windows.Forms.Panel
+        Me.Label1 = New System.Windows.Forms.Label
         IcoLabel = New System.Windows.Forms.Label
         ICO_clenoviaLabel = New System.Windows.Forms.Label
         ICO_psyLabel = New System.Windows.Forms.Label
@@ -156,6 +161,9 @@ Partial Class zdruzenie_nove
         Pes_srncia_skutocnostLabel = New System.Windows.Forms.Label
         Pes_mala_planLabel = New System.Windows.Forms.Label
         Pes_mala_skutocnostLabel = New System.Windows.Forms.Label
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'IcoLabel
@@ -163,9 +171,9 @@ Partial Class zdruzenie_nove
         IcoLabel.AutoSize = True
         IcoLabel.Location = New System.Drawing.Point(166, 91)
         IcoLabel.Name = "IcoLabel"
-        IcoLabel.Size = New System.Drawing.Size(24, 13)
+        IcoLabel.Size = New System.Drawing.Size(28, 13)
         IcoLabel.TabIndex = 1
-        IcoLabel.Text = "ico:"
+        IcoLabel.Text = "IČO:"
         '
         'ICO_clenoviaLabel
         '
@@ -197,353 +205,353 @@ Partial Class zdruzenie_nove
         'NazovLabel
         '
         NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(151, 65)
+        NazovLabel.Location = New System.Drawing.Point(153, 65)
         NazovLabel.Name = "NazovLabel"
-        NazovLabel.Size = New System.Drawing.Size(39, 13)
+        NazovLabel.Size = New System.Drawing.Size(41, 13)
         NazovLabel.TabIndex = 9
-        NazovLabel.Text = "nazov:"
+        NazovLabel.Text = "Názov:"
         '
         'SidloLabel
         '
         SidloLabel.AutoSize = True
-        SidloLabel.Location = New System.Drawing.Point(441, 62)
+        SidloLabel.Location = New System.Drawing.Point(437, 62)
         SidloLabel.Name = "SidloLabel"
-        SidloLabel.Size = New System.Drawing.Size(31, 13)
+        SidloLabel.Size = New System.Drawing.Size(35, 13)
         SidloLabel.TabIndex = 11
-        SidloLabel.Text = "sidlo:"
+        SidloLabel.Text = "Sídlo:"
         '
         'PredsedaLabel
         '
         PredsedaLabel.AutoSize = True
-        PredsedaLabel.Location = New System.Drawing.Point(136, 170)
+        PredsedaLabel.Location = New System.Drawing.Point(139, 166)
         PredsedaLabel.Name = "PredsedaLabel"
-        PredsedaLabel.Size = New System.Drawing.Size(54, 13)
+        PredsedaLabel.Size = New System.Drawing.Size(55, 13)
         PredsedaLabel.TabIndex = 13
-        PredsedaLabel.Text = "predseda:"
+        PredsedaLabel.Text = "Predseda:"
         '
         'Predseda_telefonLabel
         '
         Predseda_telefonLabel.AutoSize = True
-        Predseda_telefonLabel.Location = New System.Drawing.Point(101, 196)
+        Predseda_telefonLabel.Location = New System.Drawing.Point(104, 192)
         Predseda_telefonLabel.Name = "Predseda_telefonLabel"
-        Predseda_telefonLabel.Size = New System.Drawing.Size(89, 13)
+        Predseda_telefonLabel.Size = New System.Drawing.Size(90, 13)
         Predseda_telefonLabel.TabIndex = 15
-        Predseda_telefonLabel.Text = "predseda telefon:"
+        Predseda_telefonLabel.Text = "Predseda telefón:"
         '
         'Polovny_hospodarLabel
         '
         Polovny_hospodarLabel.AutoSize = True
-        Polovny_hospodarLabel.Location = New System.Drawing.Point(378, 170)
+        Polovny_hospodarLabel.Location = New System.Drawing.Point(399, 166)
         Polovny_hospodarLabel.Name = "Polovny_hospodarLabel"
-        Polovny_hospodarLabel.Size = New System.Drawing.Size(94, 13)
+        Polovny_hospodarLabel.Size = New System.Drawing.Size(77, 13)
         Polovny_hospodarLabel.TabIndex = 17
-        Polovny_hospodarLabel.Text = "polovny hospodar:"
+        Polovny_hospodarLabel.Text = "Poľ. hospodár:"
         '
         'Polovny_hospodar_telefonLabel
         '
         Polovny_hospodar_telefonLabel.AutoSize = True
-        Polovny_hospodar_telefonLabel.Location = New System.Drawing.Point(343, 196)
+        Polovny_hospodar_telefonLabel.Location = New System.Drawing.Point(364, 192)
         Polovny_hospodar_telefonLabel.Name = "Polovny_hospodar_telefonLabel"
-        Polovny_hospodar_telefonLabel.Size = New System.Drawing.Size(129, 13)
+        Polovny_hospodar_telefonLabel.Size = New System.Drawing.Size(112, 13)
         Polovny_hospodar_telefonLabel.TabIndex = 19
-        Polovny_hospodar_telefonLabel.Text = "polovny hospodar telefon:"
+        Polovny_hospodar_telefonLabel.Text = "Poľ. hospodár telefón:"
         '
         'DicLabel
         '
         DicLabel.AutoSize = True
         DicLabel.Location = New System.Drawing.Point(166, 117)
         DicLabel.Name = "DicLabel"
-        DicLabel.Size = New System.Drawing.Size(24, 13)
+        DicLabel.Size = New System.Drawing.Size(28, 13)
         DicLabel.TabIndex = 21
-        DicLabel.Text = "dic:"
+        DicLabel.Text = "DIČ:"
         '
         'BankaLabel
         '
         BankaLabel.AutoSize = True
         BankaLabel.Location = New System.Drawing.Point(432, 91)
         BankaLabel.Name = "BankaLabel"
-        BankaLabel.Size = New System.Drawing.Size(40, 13)
+        BankaLabel.Size = New System.Drawing.Size(41, 13)
         BankaLabel.TabIndex = 23
-        BankaLabel.Text = "banka:"
+        BankaLabel.Text = "Banka:"
         '
         'Cislo_uctuLabel
         '
         Cislo_uctuLabel.AutoSize = True
-        Cislo_uctuLabel.Location = New System.Drawing.Point(418, 117)
+        Cislo_uctuLabel.Location = New System.Drawing.Point(414, 117)
         Cislo_uctuLabel.Name = "Cislo_uctuLabel"
-        Cislo_uctuLabel.Size = New System.Drawing.Size(55, 13)
+        Cislo_uctuLabel.Size = New System.Drawing.Size(58, 13)
         Cislo_uctuLabel.TabIndex = 25
-        Cislo_uctuLabel.Text = "cislo uctu:"
+        Cislo_uctuLabel.Text = "Číslo účtu:"
         '
         'Chovatelska_oblastLabel
         '
         Chovatelska_oblastLabel.AutoSize = True
-        Chovatelska_oblastLabel.Location = New System.Drawing.Point(91, 300)
+        Chovatelska_oblastLabel.Location = New System.Drawing.Point(124, 300)
         Chovatelska_oblastLabel.Name = "Chovatelska_oblastLabel"
-        Chovatelska_oblastLabel.Size = New System.Drawing.Size(99, 13)
+        Chovatelska_oblastLabel.Size = New System.Drawing.Size(70, 13)
         Chovatelska_oblastLabel.TabIndex = 27
-        Chovatelska_oblastLabel.Text = "chovatelska oblast:"
+        Chovatelska_oblastLabel.Text = "Chov. oblasť:"
         '
         'Cislo_reviruLabel
         '
         Cislo_reviruLabel.AutoSize = True
         Cislo_reviruLabel.Location = New System.Drawing.Point(130, 248)
         Cislo_reviruLabel.Name = "Cislo_reviruLabel"
-        Cislo_reviruLabel.Size = New System.Drawing.Size(60, 13)
+        Cislo_reviruLabel.Size = New System.Drawing.Size(65, 13)
         Cislo_reviruLabel.TabIndex = 29
-        Cislo_reviruLabel.Text = "cislo reviru:"
+        Cislo_reviruLabel.Text = "Číslo revíru:"
         '
         'VymeraLabel
         '
         VymeraLabel.AutoSize = True
-        VymeraLabel.Location = New System.Drawing.Point(146, 274)
+        VymeraLabel.Location = New System.Drawing.Point(149, 274)
         VymeraLabel.Name = "VymeraLabel"
-        VymeraLabel.Size = New System.Drawing.Size(44, 13)
+        VymeraLabel.Size = New System.Drawing.Size(45, 13)
         VymeraLabel.TabIndex = 31
-        VymeraLabel.Text = "vymera:"
+        VymeraLabel.Text = "Výmera:"
         '
         'LesLabel
         '
         LesLabel.AutoSize = True
         LesLabel.Location = New System.Drawing.Point(449, 274)
         LesLabel.Name = "LesLabel"
-        LesLabel.Size = New System.Drawing.Size(23, 13)
+        LesLabel.Size = New System.Drawing.Size(27, 13)
         LesLabel.TabIndex = 33
-        LesLabel.Text = "les:"
+        LesLabel.Text = "Les:"
         '
         'JeleniaLabel
         '
         JeleniaLabel.AutoSize = True
-        JeleniaLabel.Location = New System.Drawing.Point(150, 354)
+        JeleniaLabel.Location = New System.Drawing.Point(21, 20)
         JeleniaLabel.Name = "JeleniaLabel"
-        JeleniaLabel.Size = New System.Drawing.Size(40, 13)
+        JeleniaLabel.Size = New System.Drawing.Size(43, 13)
         JeleniaLabel.TabIndex = 35
-        JeleniaLabel.Text = "jelenia:"
+        JeleniaLabel.Text = "Jelenia:"
         '
         'SrnciaLabel
         '
         SrnciaLabel.AutoSize = True
-        SrnciaLabel.Location = New System.Drawing.Point(152, 380)
+        SrnciaLabel.Location = New System.Drawing.Point(20, 46)
         SrnciaLabel.Name = "SrnciaLabel"
-        SrnciaLabel.Size = New System.Drawing.Size(38, 13)
+        SrnciaLabel.Size = New System.Drawing.Size(40, 13)
         SrnciaLabel.TabIndex = 37
-        SrnciaLabel.Text = "srncia:"
+        SrnciaLabel.Text = "Srnčia:"
         '
         'DiviaciaLabel
         '
         DiviaciaLabel.AutoSize = True
-        DiviaciaLabel.Location = New System.Drawing.Point(144, 406)
+        DiviaciaLabel.Location = New System.Drawing.Point(16, 72)
         DiviaciaLabel.Name = "DiviaciaLabel"
-        DiviaciaLabel.Size = New System.Drawing.Size(46, 13)
+        DiviaciaLabel.Size = New System.Drawing.Size(48, 13)
         DiviaciaLabel.TabIndex = 39
-        DiviaciaLabel.Text = "diviacia:"
+        DiviaciaLabel.Text = "Diviačia:"
         '
         'BazantLabel
         '
         BazantLabel.AutoSize = True
-        BazantLabel.Location = New System.Drawing.Point(430, 354)
+        BazantLabel.Location = New System.Drawing.Point(303, 20)
         BazantLabel.Name = "BazantLabel"
-        BazantLabel.Size = New System.Drawing.Size(42, 13)
+        BazantLabel.Size = New System.Drawing.Size(43, 13)
         BazantLabel.TabIndex = 41
-        BazantLabel.Text = "bazant:"
+        BazantLabel.Text = "Bažant:"
         '
         'InaLabel
         '
         InaLabel.AutoSize = True
-        InaLabel.Location = New System.Drawing.Point(448, 380)
+        InaLabel.Location = New System.Drawing.Point(321, 46)
         InaLabel.Name = "InaLabel"
-        InaLabel.Size = New System.Drawing.Size(24, 13)
+        InaLabel.Size = New System.Drawing.Size(25, 13)
         InaLabel.TabIndex = 43
-        InaLabel.Text = "ina:"
+        InaLabel.Text = "Iná:"
         '
         'Platnost_najomnej_zmluvy_doLabel
         '
         Platnost_najomnej_zmluvy_doLabel.AutoSize = True
-        Platnost_najomnej_zmluvy_doLabel.Location = New System.Drawing.Point(330, 248)
+        Platnost_najomnej_zmluvy_doLabel.Location = New System.Drawing.Point(353, 248)
         Platnost_najomnej_zmluvy_doLabel.Name = "Platnost_najomnej_zmluvy_doLabel"
-        Platnost_najomnej_zmluvy_doLabel.Size = New System.Drawing.Size(142, 13)
+        Platnost_najomnej_zmluvy_doLabel.Size = New System.Drawing.Size(119, 13)
         Platnost_najomnej_zmluvy_doLabel.TabIndex = 45
-        Platnost_najomnej_zmluvy_doLabel.Text = "platnost najomnej zmluvy do:"
+        Platnost_najomnej_zmluvy_doLabel.Text = "Platnosť náj. zmluvy do:"
         '
         'Stavace_planLabel
         '
         Stavace_planLabel.AutoSize = True
-        Stavace_planLabel.Location = New System.Drawing.Point(119, 465)
+        Stavace_planLabel.Location = New System.Drawing.Point(53, 18)
         Stavace_planLabel.Name = "Stavace_planLabel"
-        Stavace_planLabel.Size = New System.Drawing.Size(71, 13)
+        Stavace_planLabel.Size = New System.Drawing.Size(73, 13)
         Stavace_planLabel.TabIndex = 47
-        Stavace_planLabel.Text = "stavace plan:"
+        Stavace_planLabel.Text = "Stavače plán:"
         '
         'Stavace_skutocnostLabel
         '
         Stavace_skutocnostLabel.AutoSize = True
-        Stavace_skutocnostLabel.Location = New System.Drawing.Point(369, 465)
+        Stavace_skutocnostLabel.Location = New System.Drawing.Point(303, 18)
         Stavace_skutocnostLabel.Name = "Stavace_skutocnostLabel"
-        Stavace_skutocnostLabel.Size = New System.Drawing.Size(103, 13)
+        Stavace_skutocnostLabel.Size = New System.Drawing.Size(106, 13)
         Stavace_skutocnostLabel.TabIndex = 49
-        Stavace_skutocnostLabel.Text = "stavace skutocnost:"
+        Stavace_skutocnostLabel.Text = "Stavače skutočnosť:"
         '
         'Sliedice_planLabel
         '
         Sliedice_planLabel.AutoSize = True
-        Sliedice_planLabel.Location = New System.Drawing.Point(122, 491)
+        Sliedice_planLabel.Location = New System.Drawing.Point(56, 44)
         Sliedice_planLabel.Name = "Sliedice_planLabel"
-        Sliedice_planLabel.Size = New System.Drawing.Size(68, 13)
+        Sliedice_planLabel.Size = New System.Drawing.Size(70, 13)
         Sliedice_planLabel.TabIndex = 51
-        Sliedice_planLabel.Text = "sliedice plan:"
+        Sliedice_planLabel.Text = "Sliediče plán:"
         '
         'Sliedice_skutocnostLabel
         '
         Sliedice_skutocnostLabel.AutoSize = True
-        Sliedice_skutocnostLabel.Location = New System.Drawing.Point(372, 491)
+        Sliedice_skutocnostLabel.Location = New System.Drawing.Point(306, 44)
         Sliedice_skutocnostLabel.Name = "Sliedice_skutocnostLabel"
-        Sliedice_skutocnostLabel.Size = New System.Drawing.Size(100, 13)
+        Sliedice_skutocnostLabel.Size = New System.Drawing.Size(103, 13)
         Sliedice_skutocnostLabel.TabIndex = 53
-        Sliedice_skutocnostLabel.Text = "sliedice skutocnost:"
+        Sliedice_skutocnostLabel.Text = "Sliediče skutočnosť:"
         '
         'Slovensky_kopov_planLabel
         '
         Slovensky_kopov_planLabel.AutoSize = True
-        Slovensky_kopov_planLabel.Location = New System.Drawing.Point(77, 517)
+        Slovensky_kopov_planLabel.Location = New System.Drawing.Point(35, 70)
         Slovensky_kopov_planLabel.Name = "Slovensky_kopov_planLabel"
-        Slovensky_kopov_planLabel.Size = New System.Drawing.Size(113, 13)
+        Slovensky_kopov_planLabel.Size = New System.Drawing.Size(90, 13)
         Slovensky_kopov_planLabel.TabIndex = 55
-        Slovensky_kopov_planLabel.Text = "slovensky kopov plan:"
+        Slovensky_kopov_planLabel.Text = "Slov. kopov plán:"
         '
         'Slovensky_kopov_skutocnostLabel
         '
         Slovensky_kopov_skutocnostLabel.AutoSize = True
-        Slovensky_kopov_skutocnostLabel.Location = New System.Drawing.Point(327, 517)
+        Slovensky_kopov_skutocnostLabel.Location = New System.Drawing.Point(283, 70)
         Slovensky_kopov_skutocnostLabel.Name = "Slovensky_kopov_skutocnostLabel"
-        Slovensky_kopov_skutocnostLabel.Size = New System.Drawing.Size(145, 13)
+        Slovensky_kopov_skutocnostLabel.Size = New System.Drawing.Size(123, 13)
         Slovensky_kopov_skutocnostLabel.TabIndex = 57
-        Slovensky_kopov_skutocnostLabel.Text = "slovensky kopov skutocnost:"
+        Slovensky_kopov_skutocnostLabel.Text = "Slov. kopov skutočnosť:"
         '
         'Ostatne_durice_planLabel
         '
         Ostatne_durice_planLabel.AutoSize = True
-        Ostatne_durice_planLabel.Location = New System.Drawing.Point(90, 543)
+        Ostatne_durice_planLabel.Location = New System.Drawing.Point(20, 96)
         Ostatne_durice_planLabel.Name = "Ostatne_durice_planLabel"
-        Ostatne_durice_planLabel.Size = New System.Drawing.Size(100, 13)
+        Ostatne_durice_planLabel.Size = New System.Drawing.Size(105, 13)
         Ostatne_durice_planLabel.TabIndex = 59
-        Ostatne_durice_planLabel.Text = "ostatne durice plan:"
+        Ostatne_durice_planLabel.Text = "Ostatne duriče plán::"
         '
         'Ostatne_durice_skutocnostLabel
         '
         Ostatne_durice_skutocnostLabel.AutoSize = True
-        Ostatne_durice_skutocnostLabel.Location = New System.Drawing.Point(340, 543)
+        Ostatne_durice_skutocnostLabel.Location = New System.Drawing.Point(274, 96)
         Ostatne_durice_skutocnostLabel.Name = "Ostatne_durice_skutocnostLabel"
-        Ostatne_durice_skutocnostLabel.Size = New System.Drawing.Size(132, 13)
+        Ostatne_durice_skutocnostLabel.Size = New System.Drawing.Size(135, 13)
         Ostatne_durice_skutocnostLabel.TabIndex = 61
-        Ostatne_durice_skutocnostLabel.Text = "ostatne durice skutocnost:"
+        Ostatne_durice_skutocnostLabel.Text = "Ostatné duriče skutočnosť:"
         '
         'Brlohare_planLabel
         '
         Brlohare_planLabel.AutoSize = True
-        Brlohare_planLabel.Location = New System.Drawing.Point(119, 569)
+        Brlohare_planLabel.Location = New System.Drawing.Point(53, 122)
         Brlohare_planLabel.Name = "Brlohare_planLabel"
-        Brlohare_planLabel.Size = New System.Drawing.Size(71, 13)
+        Brlohare_planLabel.Size = New System.Drawing.Size(72, 13)
         Brlohare_planLabel.TabIndex = 63
-        Brlohare_planLabel.Text = "brlohare plan:"
+        Brlohare_planLabel.Text = "Brloháre plán:"
         '
         'Brlohare_skutocnostLabel
         '
         Brlohare_skutocnostLabel.AutoSize = True
-        Brlohare_skutocnostLabel.Location = New System.Drawing.Point(369, 569)
+        Brlohare_skutocnostLabel.Location = New System.Drawing.Point(303, 122)
         Brlohare_skutocnostLabel.Name = "Brlohare_skutocnostLabel"
-        Brlohare_skutocnostLabel.Size = New System.Drawing.Size(103, 13)
+        Brlohare_skutocnostLabel.Size = New System.Drawing.Size(105, 13)
         Brlohare_skutocnostLabel.TabIndex = 65
-        Brlohare_skutocnostLabel.Text = "brlohare skutocnost:"
+        Brlohare_skutocnostLabel.Text = "Brloháre skutočnosť:"
         '
         'Farbiare_planLabel
         '
         Farbiare_planLabel.AutoSize = True
-        Farbiare_planLabel.Location = New System.Drawing.Point(122, 595)
+        Farbiare_planLabel.Location = New System.Drawing.Point(54, 148)
         Farbiare_planLabel.Name = "Farbiare_planLabel"
-        Farbiare_planLabel.Size = New System.Drawing.Size(68, 13)
+        Farbiare_planLabel.Size = New System.Drawing.Size(71, 13)
         Farbiare_planLabel.TabIndex = 67
-        Farbiare_planLabel.Text = "farbiare plan:"
+        Farbiare_planLabel.Text = "Farbiare plán:"
         '
         'Farbiare_skutocnostLabel
         '
         Farbiare_skutocnostLabel.AutoSize = True
-        Farbiare_skutocnostLabel.Location = New System.Drawing.Point(373, 595)
+        Farbiare_skutocnostLabel.Location = New System.Drawing.Point(307, 148)
         Farbiare_skutocnostLabel.Name = "Farbiare_skutocnostLabel"
-        Farbiare_skutocnostLabel.Size = New System.Drawing.Size(100, 13)
+        Farbiare_skutocnostLabel.Size = New System.Drawing.Size(104, 13)
         Farbiare_skutocnostLabel.TabIndex = 69
-        Farbiare_skutocnostLabel.Text = "farbiare skutocnost:"
+        Farbiare_skutocnostLabel.Text = "Farbiare skutočnosť:"
         '
         'Pes_jelenia_planLabel
         '
         Pes_jelenia_planLabel.AutoSize = True
-        Pes_jelenia_planLabel.Location = New System.Drawing.Point(108, 621)
+        Pes_jelenia_planLabel.Location = New System.Drawing.Point(42, 29)
         Pes_jelenia_planLabel.Name = "Pes_jelenia_planLabel"
-        Pes_jelenia_planLabel.Size = New System.Drawing.Size(83, 13)
+        Pes_jelenia_planLabel.Size = New System.Drawing.Size(84, 13)
         Pes_jelenia_planLabel.TabIndex = 71
-        Pes_jelenia_planLabel.Text = "pes jelenia plan:"
+        Pes_jelenia_planLabel.Text = "Pes jelenia plán:"
         '
         'Pes_jelenia_skutocnostLabel
         '
         Pes_jelenia_skutocnostLabel.AutoSize = True
-        Pes_jelenia_skutocnostLabel.Location = New System.Drawing.Point(359, 621)
+        Pes_jelenia_skutocnostLabel.Location = New System.Drawing.Point(294, 29)
         Pes_jelenia_skutocnostLabel.Name = "Pes_jelenia_skutocnostLabel"
-        Pes_jelenia_skutocnostLabel.Size = New System.Drawing.Size(115, 13)
+        Pes_jelenia_skutocnostLabel.Size = New System.Drawing.Size(117, 13)
         Pes_jelenia_skutocnostLabel.TabIndex = 73
-        Pes_jelenia_skutocnostLabel.Text = "pes jelenia skutocnost:"
+        Pes_jelenia_skutocnostLabel.Text = "Pes jelenia skutočnosť:"
         '
         'Pes_diviacia_planLabel
         '
         Pes_diviacia_planLabel.AutoSize = True
-        Pes_diviacia_planLabel.Location = New System.Drawing.Point(101, 647)
+        Pes_diviacia_planLabel.Location = New System.Drawing.Point(37, 55)
         Pes_diviacia_planLabel.Name = "Pes_diviacia_planLabel"
-        Pes_diviacia_planLabel.Size = New System.Drawing.Size(89, 13)
+        Pes_diviacia_planLabel.Size = New System.Drawing.Size(90, 13)
         Pes_diviacia_planLabel.TabIndex = 75
-        Pes_diviacia_planLabel.Text = "pes diviacia plan:"
+        Pes_diviacia_planLabel.Text = "Pes diviačia plán:"
         '
         'Pes_diviacia_skutocnostLabel
         '
         Pes_diviacia_skutocnostLabel.AutoSize = True
-        Pes_diviacia_skutocnostLabel.Location = New System.Drawing.Point(351, 647)
+        Pes_diviacia_skutocnostLabel.Location = New System.Drawing.Point(286, 55)
         Pes_diviacia_skutocnostLabel.Name = "Pes_diviacia_skutocnostLabel"
-        Pes_diviacia_skutocnostLabel.Size = New System.Drawing.Size(121, 13)
+        Pes_diviacia_skutocnostLabel.Size = New System.Drawing.Size(123, 13)
         Pes_diviacia_skutocnostLabel.TabIndex = 77
-        Pes_diviacia_skutocnostLabel.Text = "pes diviacia skutocnost:"
+        Pes_diviacia_skutocnostLabel.Text = "Pes diviačia skutočnosť:"
         '
         'Pes_srncia_planLabel
         '
         Pes_srncia_planLabel.AutoSize = True
-        Pes_srncia_planLabel.Location = New System.Drawing.Point(109, 673)
+        Pes_srncia_planLabel.Location = New System.Drawing.Point(44, 81)
         Pes_srncia_planLabel.Name = "Pes_srncia_planLabel"
-        Pes_srncia_planLabel.Size = New System.Drawing.Size(81, 13)
+        Pes_srncia_planLabel.Size = New System.Drawing.Size(82, 13)
         Pes_srncia_planLabel.TabIndex = 79
-        Pes_srncia_planLabel.Text = "pes srncia plan:"
+        Pes_srncia_planLabel.Text = "Pes srnčia plán:"
         '
         'Pes_srncia_skutocnostLabel
         '
         Pes_srncia_skutocnostLabel.AutoSize = True
-        Pes_srncia_skutocnostLabel.Location = New System.Drawing.Point(361, 673)
+        Pes_srncia_skutocnostLabel.Location = New System.Drawing.Point(296, 81)
         Pes_srncia_skutocnostLabel.Name = "Pes_srncia_skutocnostLabel"
-        Pes_srncia_skutocnostLabel.Size = New System.Drawing.Size(113, 13)
+        Pes_srncia_skutocnostLabel.Size = New System.Drawing.Size(115, 13)
         Pes_srncia_skutocnostLabel.TabIndex = 81
-        Pes_srncia_skutocnostLabel.Text = "pes srncia skutocnost:"
+        Pes_srncia_skutocnostLabel.Text = "Pes srnčia skutočnosť:"
         '
         'Pes_mala_planLabel
         '
         Pes_mala_planLabel.AutoSize = True
-        Pes_mala_planLabel.Location = New System.Drawing.Point(115, 699)
+        Pes_mala_planLabel.Location = New System.Drawing.Point(50, 107)
         Pes_mala_planLabel.Name = "Pes_mala_planLabel"
-        Pes_mala_planLabel.Size = New System.Drawing.Size(75, 13)
+        Pes_mala_planLabel.Size = New System.Drawing.Size(76, 13)
         Pes_mala_planLabel.TabIndex = 83
-        Pes_mala_planLabel.Text = "pes mala plan:"
+        Pes_mala_planLabel.Text = "Pes malá plán:"
         '
         'Pes_mala_skutocnostLabel
         '
         Pes_mala_skutocnostLabel.AutoSize = True
-        Pes_mala_skutocnostLabel.Location = New System.Drawing.Point(365, 699)
+        Pes_mala_skutocnostLabel.Location = New System.Drawing.Point(301, 107)
         Pes_mala_skutocnostLabel.Name = "Pes_mala_skutocnostLabel"
-        Pes_mala_skutocnostLabel.Size = New System.Drawing.Size(107, 13)
+        Pes_mala_skutocnostLabel.Size = New System.Drawing.Size(109, 13)
         Pes_mala_skutocnostLabel.TabIndex = 85
-        Pes_mala_skutocnostLabel.Text = "pes mala skutocnost:"
+        Pes_mala_skutocnostLabel.Text = "Pes malá skutočnosť:"
         '
         'IcoTextBox
         '
@@ -589,29 +597,33 @@ Partial Class zdruzenie_nove
         '
         'PredsedaTextBox
         '
-        Me.PredsedaTextBox.Location = New System.Drawing.Point(196, 167)
+        Me.PredsedaTextBox.Location = New System.Drawing.Point(196, 163)
         Me.PredsedaTextBox.Name = "PredsedaTextBox"
+        Me.PredsedaTextBox.ReadOnly = True
         Me.PredsedaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PredsedaTextBox.TabIndex = 14
         '
         'Predseda_telefonTextBox
         '
-        Me.Predseda_telefonTextBox.Location = New System.Drawing.Point(196, 193)
+        Me.Predseda_telefonTextBox.Location = New System.Drawing.Point(196, 189)
         Me.Predseda_telefonTextBox.Name = "Predseda_telefonTextBox"
+        Me.Predseda_telefonTextBox.ReadOnly = True
         Me.Predseda_telefonTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Predseda_telefonTextBox.TabIndex = 16
         '
         'Polovny_hospodarTextBox
         '
-        Me.Polovny_hospodarTextBox.Location = New System.Drawing.Point(478, 167)
+        Me.Polovny_hospodarTextBox.Location = New System.Drawing.Point(478, 163)
         Me.Polovny_hospodarTextBox.Name = "Polovny_hospodarTextBox"
+        Me.Polovny_hospodarTextBox.ReadOnly = True
         Me.Polovny_hospodarTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Polovny_hospodarTextBox.TabIndex = 18
         '
         'Polovny_hospodar_telefonTextBox
         '
-        Me.Polovny_hospodar_telefonTextBox.Location = New System.Drawing.Point(478, 193)
+        Me.Polovny_hospodar_telefonTextBox.Location = New System.Drawing.Point(478, 189)
         Me.Polovny_hospodar_telefonTextBox.Name = "Polovny_hospodar_telefonTextBox"
+        Me.Polovny_hospodar_telefonTextBox.ReadOnly = True
         Me.Polovny_hospodar_telefonTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Polovny_hospodar_telefonTextBox.TabIndex = 20
         '
@@ -666,35 +678,35 @@ Partial Class zdruzenie_nove
         '
         'JeleniaTextBox
         '
-        Me.JeleniaTextBox.Location = New System.Drawing.Point(196, 351)
+        Me.JeleniaTextBox.Location = New System.Drawing.Point(66, 17)
         Me.JeleniaTextBox.Name = "JeleniaTextBox"
         Me.JeleniaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.JeleniaTextBox.TabIndex = 36
         '
         'SrnciaTextBox
         '
-        Me.SrnciaTextBox.Location = New System.Drawing.Point(196, 377)
+        Me.SrnciaTextBox.Location = New System.Drawing.Point(66, 43)
         Me.SrnciaTextBox.Name = "SrnciaTextBox"
         Me.SrnciaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SrnciaTextBox.TabIndex = 38
         '
         'DiviaciaTextBox
         '
-        Me.DiviaciaTextBox.Location = New System.Drawing.Point(196, 403)
+        Me.DiviaciaTextBox.Location = New System.Drawing.Point(66, 69)
         Me.DiviaciaTextBox.Name = "DiviaciaTextBox"
         Me.DiviaciaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DiviaciaTextBox.TabIndex = 40
         '
         'BazantTextBox
         '
-        Me.BazantTextBox.Location = New System.Drawing.Point(478, 351)
+        Me.BazantTextBox.Location = New System.Drawing.Point(348, 17)
         Me.BazantTextBox.Name = "BazantTextBox"
         Me.BazantTextBox.Size = New System.Drawing.Size(100, 20)
         Me.BazantTextBox.TabIndex = 42
         '
         'InaTextBox
         '
-        Me.InaTextBox.Location = New System.Drawing.Point(478, 377)
+        Me.InaTextBox.Location = New System.Drawing.Point(348, 43)
         Me.InaTextBox.Name = "InaTextBox"
         Me.InaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.InaTextBox.TabIndex = 44
@@ -708,140 +720,140 @@ Partial Class zdruzenie_nove
         '
         'Stavace_planTextBox
         '
-        Me.Stavace_planTextBox.Location = New System.Drawing.Point(196, 462)
+        Me.Stavace_planTextBox.Location = New System.Drawing.Point(130, 15)
         Me.Stavace_planTextBox.Name = "Stavace_planTextBox"
         Me.Stavace_planTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Stavace_planTextBox.TabIndex = 48
         '
         'Stavace_skutocnostTextBox
         '
-        Me.Stavace_skutocnostTextBox.Location = New System.Drawing.Point(478, 462)
+        Me.Stavace_skutocnostTextBox.Location = New System.Drawing.Point(412, 15)
         Me.Stavace_skutocnostTextBox.Name = "Stavace_skutocnostTextBox"
         Me.Stavace_skutocnostTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Stavace_skutocnostTextBox.TabIndex = 50
         '
         'Sliedice_planTextBox
         '
-        Me.Sliedice_planTextBox.Location = New System.Drawing.Point(196, 488)
+        Me.Sliedice_planTextBox.Location = New System.Drawing.Point(130, 41)
         Me.Sliedice_planTextBox.Name = "Sliedice_planTextBox"
         Me.Sliedice_planTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Sliedice_planTextBox.TabIndex = 52
         '
         'Sliedice_skutocnostTextBox
         '
-        Me.Sliedice_skutocnostTextBox.Location = New System.Drawing.Point(478, 488)
+        Me.Sliedice_skutocnostTextBox.Location = New System.Drawing.Point(412, 41)
         Me.Sliedice_skutocnostTextBox.Name = "Sliedice_skutocnostTextBox"
         Me.Sliedice_skutocnostTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Sliedice_skutocnostTextBox.TabIndex = 54
         '
         'Slovensky_kopov_planTextBox
         '
-        Me.Slovensky_kopov_planTextBox.Location = New System.Drawing.Point(196, 514)
+        Me.Slovensky_kopov_planTextBox.Location = New System.Drawing.Point(130, 67)
         Me.Slovensky_kopov_planTextBox.Name = "Slovensky_kopov_planTextBox"
         Me.Slovensky_kopov_planTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Slovensky_kopov_planTextBox.TabIndex = 56
         '
         'Slovensky_kopov_skutocnostTextBox
         '
-        Me.Slovensky_kopov_skutocnostTextBox.Location = New System.Drawing.Point(478, 514)
+        Me.Slovensky_kopov_skutocnostTextBox.Location = New System.Drawing.Point(412, 67)
         Me.Slovensky_kopov_skutocnostTextBox.Name = "Slovensky_kopov_skutocnostTextBox"
         Me.Slovensky_kopov_skutocnostTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Slovensky_kopov_skutocnostTextBox.TabIndex = 58
         '
         'Ostatne_durice_planTextBox
         '
-        Me.Ostatne_durice_planTextBox.Location = New System.Drawing.Point(196, 540)
+        Me.Ostatne_durice_planTextBox.Location = New System.Drawing.Point(130, 93)
         Me.Ostatne_durice_planTextBox.Name = "Ostatne_durice_planTextBox"
         Me.Ostatne_durice_planTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Ostatne_durice_planTextBox.TabIndex = 60
         '
         'Ostatne_durice_skutocnostTextBox
         '
-        Me.Ostatne_durice_skutocnostTextBox.Location = New System.Drawing.Point(478, 540)
+        Me.Ostatne_durice_skutocnostTextBox.Location = New System.Drawing.Point(412, 93)
         Me.Ostatne_durice_skutocnostTextBox.Name = "Ostatne_durice_skutocnostTextBox"
         Me.Ostatne_durice_skutocnostTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Ostatne_durice_skutocnostTextBox.TabIndex = 62
         '
         'Brlohare_planTextBox
         '
-        Me.Brlohare_planTextBox.Location = New System.Drawing.Point(196, 566)
+        Me.Brlohare_planTextBox.Location = New System.Drawing.Point(130, 119)
         Me.Brlohare_planTextBox.Name = "Brlohare_planTextBox"
         Me.Brlohare_planTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Brlohare_planTextBox.TabIndex = 64
         '
         'Brlohare_skutocnostTextBox
         '
-        Me.Brlohare_skutocnostTextBox.Location = New System.Drawing.Point(478, 566)
+        Me.Brlohare_skutocnostTextBox.Location = New System.Drawing.Point(412, 119)
         Me.Brlohare_skutocnostTextBox.Name = "Brlohare_skutocnostTextBox"
         Me.Brlohare_skutocnostTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Brlohare_skutocnostTextBox.TabIndex = 66
         '
         'Farbiare_planTextBox
         '
-        Me.Farbiare_planTextBox.Location = New System.Drawing.Point(196, 592)
+        Me.Farbiare_planTextBox.Location = New System.Drawing.Point(130, 145)
         Me.Farbiare_planTextBox.Name = "Farbiare_planTextBox"
         Me.Farbiare_planTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Farbiare_planTextBox.TabIndex = 68
         '
         'Farbiare_skutocnostTextBox
         '
-        Me.Farbiare_skutocnostTextBox.Location = New System.Drawing.Point(478, 592)
+        Me.Farbiare_skutocnostTextBox.Location = New System.Drawing.Point(412, 145)
         Me.Farbiare_skutocnostTextBox.Name = "Farbiare_skutocnostTextBox"
         Me.Farbiare_skutocnostTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Farbiare_skutocnostTextBox.TabIndex = 70
         '
         'Pes_jelenia_planTextBox
         '
-        Me.Pes_jelenia_planTextBox.Location = New System.Drawing.Point(196, 618)
+        Me.Pes_jelenia_planTextBox.Location = New System.Drawing.Point(131, 26)
         Me.Pes_jelenia_planTextBox.Name = "Pes_jelenia_planTextBox"
         Me.Pes_jelenia_planTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Pes_jelenia_planTextBox.TabIndex = 72
         '
         'Pes_jelenia_skutocnostTextBox
         '
-        Me.Pes_jelenia_skutocnostTextBox.Location = New System.Drawing.Point(478, 618)
+        Me.Pes_jelenia_skutocnostTextBox.Location = New System.Drawing.Point(413, 26)
         Me.Pes_jelenia_skutocnostTextBox.Name = "Pes_jelenia_skutocnostTextBox"
         Me.Pes_jelenia_skutocnostTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Pes_jelenia_skutocnostTextBox.TabIndex = 74
         '
         'Pes_diviacia_planTextBox
         '
-        Me.Pes_diviacia_planTextBox.Location = New System.Drawing.Point(196, 644)
+        Me.Pes_diviacia_planTextBox.Location = New System.Drawing.Point(131, 52)
         Me.Pes_diviacia_planTextBox.Name = "Pes_diviacia_planTextBox"
         Me.Pes_diviacia_planTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Pes_diviacia_planTextBox.TabIndex = 76
         '
         'Pes_diviacia_skutocnostTextBox
         '
-        Me.Pes_diviacia_skutocnostTextBox.Location = New System.Drawing.Point(478, 644)
+        Me.Pes_diviacia_skutocnostTextBox.Location = New System.Drawing.Point(413, 52)
         Me.Pes_diviacia_skutocnostTextBox.Name = "Pes_diviacia_skutocnostTextBox"
         Me.Pes_diviacia_skutocnostTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Pes_diviacia_skutocnostTextBox.TabIndex = 78
         '
         'Pes_srncia_planTextBox
         '
-        Me.Pes_srncia_planTextBox.Location = New System.Drawing.Point(196, 670)
+        Me.Pes_srncia_planTextBox.Location = New System.Drawing.Point(131, 78)
         Me.Pes_srncia_planTextBox.Name = "Pes_srncia_planTextBox"
         Me.Pes_srncia_planTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Pes_srncia_planTextBox.TabIndex = 80
         '
         'Pes_srncia_skutocnostTextBox
         '
-        Me.Pes_srncia_skutocnostTextBox.Location = New System.Drawing.Point(478, 670)
+        Me.Pes_srncia_skutocnostTextBox.Location = New System.Drawing.Point(413, 78)
         Me.Pes_srncia_skutocnostTextBox.Name = "Pes_srncia_skutocnostTextBox"
         Me.Pes_srncia_skutocnostTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Pes_srncia_skutocnostTextBox.TabIndex = 82
         '
         'Pes_mala_planTextBox
         '
-        Me.Pes_mala_planTextBox.Location = New System.Drawing.Point(196, 696)
+        Me.Pes_mala_planTextBox.Location = New System.Drawing.Point(131, 104)
         Me.Pes_mala_planTextBox.Name = "Pes_mala_planTextBox"
         Me.Pes_mala_planTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Pes_mala_planTextBox.TabIndex = 84
         '
         'Pes_mala_skutocnostTextBox
         '
-        Me.Pes_mala_skutocnostTextBox.Location = New System.Drawing.Point(478, 696)
+        Me.Pes_mala_skutocnostTextBox.Location = New System.Drawing.Point(413, 104)
         Me.Pes_mala_skutocnostTextBox.Name = "Pes_mala_skutocnostTextBox"
         Me.Pes_mala_skutocnostTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Pes_mala_skutocnostTextBox.TabIndex = 86
@@ -878,15 +890,6 @@ Partial Class zdruzenie_nove
         Me.ShapeContainer1.TabIndex = 89
         Me.ShapeContainer1.TabStop = False
         '
-        'LineShape1
-        '
-        Me.LineShape1.BorderWidth = 2
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 66
-        Me.LineShape1.X2 = 684
-        Me.LineShape1.Y1 = 238
-        Me.LineShape1.Y2 = 238
-        '
         'LineShape2
         '
         Me.LineShape2.BorderWidth = 2
@@ -896,6 +899,113 @@ Partial Class zdruzenie_nove
         Me.LineShape2.Y1 = 453
         Me.LineShape2.Y2 = 453
         '
+        'LineShape1
+        '
+        Me.LineShape1.BorderWidth = 2
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 66
+        Me.LineShape1.X2 = 684
+        Me.LineShape1.Y1 = 238
+        Me.LineShape1.Y2 = 238
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.SrnciaTextBox)
+        Me.GroupBox1.Controls.Add(Me.InaTextBox)
+        Me.GroupBox1.Controls.Add(InaLabel)
+        Me.GroupBox1.Controls.Add(Me.BazantTextBox)
+        Me.GroupBox1.Controls.Add(BazantLabel)
+        Me.GroupBox1.Controls.Add(Me.DiviaciaTextBox)
+        Me.GroupBox1.Controls.Add(DiviaciaLabel)
+        Me.GroupBox1.Controls.Add(SrnciaLabel)
+        Me.GroupBox1.Controls.Add(Me.JeleniaTextBox)
+        Me.GroupBox1.Controls.Add(JeleniaLabel)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Black
+        Me.GroupBox1.Location = New System.Drawing.Point(131, 332)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(460, 100)
+        Me.GroupBox1.TabIndex = 90
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Zver"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Slovensky_kopov_planTextBox)
+        Me.GroupBox2.Controls.Add(Me.Farbiare_skutocnostTextBox)
+        Me.GroupBox2.Controls.Add(Farbiare_skutocnostLabel)
+        Me.GroupBox2.Controls.Add(Me.Farbiare_planTextBox)
+        Me.GroupBox2.Controls.Add(Farbiare_planLabel)
+        Me.GroupBox2.Controls.Add(Me.Brlohare_skutocnostTextBox)
+        Me.GroupBox2.Controls.Add(Brlohare_skutocnostLabel)
+        Me.GroupBox2.Controls.Add(Me.Brlohare_planTextBox)
+        Me.GroupBox2.Controls.Add(Brlohare_planLabel)
+        Me.GroupBox2.Controls.Add(Me.Ostatne_durice_skutocnostTextBox)
+        Me.GroupBox2.Controls.Add(Ostatne_durice_skutocnostLabel)
+        Me.GroupBox2.Controls.Add(Me.Ostatne_durice_planTextBox)
+        Me.GroupBox2.Controls.Add(Ostatne_durice_planLabel)
+        Me.GroupBox2.Controls.Add(Me.Slovensky_kopov_skutocnostTextBox)
+        Me.GroupBox2.Controls.Add(Slovensky_kopov_skutocnostLabel)
+        Me.GroupBox2.Controls.Add(Slovensky_kopov_planLabel)
+        Me.GroupBox2.Controls.Add(Me.Sliedice_skutocnostTextBox)
+        Me.GroupBox2.Controls.Add(Sliedice_skutocnostLabel)
+        Me.GroupBox2.Controls.Add(Me.Sliedice_planTextBox)
+        Me.GroupBox2.Controls.Add(Sliedice_planLabel)
+        Me.GroupBox2.Controls.Add(Me.Stavace_skutocnostTextBox)
+        Me.GroupBox2.Controls.Add(Stavace_skutocnostLabel)
+        Me.GroupBox2.Controls.Add(Me.Stavace_planTextBox)
+        Me.GroupBox2.Controls.Add(Stavace_planLabel)
+        Me.GroupBox2.ForeColor = System.Drawing.Color.Black
+        Me.GroupBox2.Location = New System.Drawing.Point(69, 461)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(521, 171)
+        Me.GroupBox2.TabIndex = 91
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Plemená psov"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Pes_diviacia_skutocnostLabel)
+        Me.GroupBox3.Controls.Add(Me.Pes_mala_skutocnostTextBox)
+        Me.GroupBox3.Controls.Add(Pes_mala_skutocnostLabel)
+        Me.GroupBox3.Controls.Add(Me.Pes_mala_planTextBox)
+        Me.GroupBox3.Controls.Add(Pes_mala_planLabel)
+        Me.GroupBox3.Controls.Add(Me.Pes_srncia_skutocnostTextBox)
+        Me.GroupBox3.Controls.Add(Pes_srncia_skutocnostLabel)
+        Me.GroupBox3.Controls.Add(Me.Pes_srncia_planTextBox)
+        Me.GroupBox3.Controls.Add(Pes_srncia_planLabel)
+        Me.GroupBox3.Controls.Add(Me.Pes_diviacia_skutocnostTextBox)
+        Me.GroupBox3.Controls.Add(Me.Pes_diviacia_planTextBox)
+        Me.GroupBox3.Controls.Add(Pes_diviacia_planLabel)
+        Me.GroupBox3.Controls.Add(Me.Pes_jelenia_skutocnostTextBox)
+        Me.GroupBox3.Controls.Add(Pes_jelenia_skutocnostLabel)
+        Me.GroupBox3.Controls.Add(Me.Pes_jelenia_planTextBox)
+        Me.GroupBox3.Controls.Add(Pes_jelenia_planLabel)
+        Me.GroupBox3.ForeColor = System.Drawing.Color.Black
+        Me.GroupBox3.Location = New System.Drawing.Point(69, 660)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(522, 126)
+        Me.GroupBox3.TabIndex = 92
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Typy psov"
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(618, 8)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(200, 100)
+        Me.Panel1.TabIndex = 93
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label1.Location = New System.Drawing.Point(131, 218)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(507, 13)
+        Me.Label1.TabIndex = 94
+        Me.Label1.Text = "Predsedu a poľovného hospodára môžete priradiť k združeniu až po ich vytvorení vo" & _
+            " formulári 'Nový člen'!"
+        '
         'zdruzenie_nove
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -903,6 +1013,11 @@ Partial Class zdruzenie_nove
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(835, 800)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.zavriet_kartu_button)
         Me.Controls.Add(Me.uloz_button)
         Me.Controls.Add(IcoLabel)
@@ -939,62 +1054,18 @@ Partial Class zdruzenie_nove
         Me.Controls.Add(Me.VymeraTextBox)
         Me.Controls.Add(LesLabel)
         Me.Controls.Add(Me.LesTextBox)
-        Me.Controls.Add(JeleniaLabel)
-        Me.Controls.Add(Me.JeleniaTextBox)
-        Me.Controls.Add(SrnciaLabel)
-        Me.Controls.Add(Me.SrnciaTextBox)
-        Me.Controls.Add(DiviaciaLabel)
-        Me.Controls.Add(Me.DiviaciaTextBox)
-        Me.Controls.Add(BazantLabel)
-        Me.Controls.Add(Me.BazantTextBox)
-        Me.Controls.Add(InaLabel)
-        Me.Controls.Add(Me.InaTextBox)
         Me.Controls.Add(Platnost_najomnej_zmluvy_doLabel)
         Me.Controls.Add(Me.Platnost_najomnej_zmluvy_doTextBox)
-        Me.Controls.Add(Stavace_planLabel)
-        Me.Controls.Add(Me.Stavace_planTextBox)
-        Me.Controls.Add(Stavace_skutocnostLabel)
-        Me.Controls.Add(Me.Stavace_skutocnostTextBox)
-        Me.Controls.Add(Sliedice_planLabel)
-        Me.Controls.Add(Me.Sliedice_planTextBox)
-        Me.Controls.Add(Sliedice_skutocnostLabel)
-        Me.Controls.Add(Me.Sliedice_skutocnostTextBox)
-        Me.Controls.Add(Slovensky_kopov_planLabel)
-        Me.Controls.Add(Me.Slovensky_kopov_planTextBox)
-        Me.Controls.Add(Slovensky_kopov_skutocnostLabel)
-        Me.Controls.Add(Me.Slovensky_kopov_skutocnostTextBox)
-        Me.Controls.Add(Ostatne_durice_planLabel)
-        Me.Controls.Add(Me.Ostatne_durice_planTextBox)
-        Me.Controls.Add(Ostatne_durice_skutocnostLabel)
-        Me.Controls.Add(Me.Ostatne_durice_skutocnostTextBox)
-        Me.Controls.Add(Brlohare_planLabel)
-        Me.Controls.Add(Me.Brlohare_planTextBox)
-        Me.Controls.Add(Brlohare_skutocnostLabel)
-        Me.Controls.Add(Me.Brlohare_skutocnostTextBox)
-        Me.Controls.Add(Farbiare_planLabel)
-        Me.Controls.Add(Me.Farbiare_planTextBox)
-        Me.Controls.Add(Farbiare_skutocnostLabel)
-        Me.Controls.Add(Me.Farbiare_skutocnostTextBox)
-        Me.Controls.Add(Pes_jelenia_planLabel)
-        Me.Controls.Add(Me.Pes_jelenia_planTextBox)
-        Me.Controls.Add(Pes_jelenia_skutocnostLabel)
-        Me.Controls.Add(Me.Pes_jelenia_skutocnostTextBox)
-        Me.Controls.Add(Pes_diviacia_planLabel)
-        Me.Controls.Add(Me.Pes_diviacia_planTextBox)
-        Me.Controls.Add(Pes_diviacia_skutocnostLabel)
-        Me.Controls.Add(Me.Pes_diviacia_skutocnostTextBox)
-        Me.Controls.Add(Pes_srncia_planLabel)
-        Me.Controls.Add(Me.Pes_srncia_planTextBox)
-        Me.Controls.Add(Pes_srncia_skutocnostLabel)
-        Me.Controls.Add(Me.Pes_srncia_skutocnostTextBox)
-        Me.Controls.Add(Pes_mala_planLabel)
-        Me.Controls.Add(Me.Pes_mala_planTextBox)
-        Me.Controls.Add(Pes_mala_skutocnostLabel)
-        Me.Controls.Add(Me.Pes_mala_skutocnostTextBox)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "zdruzenie_nove"
         Me.Text = "zdruzeenie_nove"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1047,4 +1118,9 @@ Partial Class zdruzenie_nove
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

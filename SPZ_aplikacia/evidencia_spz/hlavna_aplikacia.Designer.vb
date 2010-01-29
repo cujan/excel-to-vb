@@ -167,6 +167,8 @@ Partial Class hlavna_aplikacia
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.SpzDataSet = New evidencia_spz.spzDataSet
         Me.SpzDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.otv_formy_zoznam_listbox = New System.Windows.Forms.ListBox
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
         TelefonLabel = New System.Windows.Forms.Label
         FaxLabel = New System.Windows.Forms.Label
         EmailLabel = New System.Windows.Forms.Label
@@ -196,6 +198,7 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigator1.SuspendLayout()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpzDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TelefonLabel
@@ -691,6 +694,7 @@ Partial Class hlavna_aplikacia
         '
         Me.hlavny_splitter.Panel1.AutoScroll = True
         Me.hlavny_splitter.Panel1.BackColor = System.Drawing.Color.DarkGreen
+        Me.hlavny_splitter.Panel1.Controls.Add(Me.GroupBox1)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.nastavenia_splitter)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.tl_zostavy_splitter)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.sprava_zdruzeni_splitter)
@@ -1181,6 +1185,7 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigator1.Size = New System.Drawing.Size(921, 25)
         Me.BindingNavigator1.TabIndex = 40
         Me.BindingNavigator1.Text = "BindingNavigator1"
+        Me.BindingNavigator1.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
@@ -1591,6 +1596,25 @@ Partial Class hlavna_aplikacia
         Me.SpzDataSetBindingSource.DataSource = Me.SpzDataSet
         Me.SpzDataSetBindingSource.Position = 0
         '
+        'otv_formy_zoznam_listbox
+        '
+        Me.otv_formy_zoznam_listbox.FormattingEnabled = True
+        Me.otv_formy_zoznam_listbox.Location = New System.Drawing.Point(10, 21)
+        Me.otv_formy_zoznam_listbox.Name = "otv_formy_zoznam_listbox"
+        Me.otv_formy_zoznam_listbox.Size = New System.Drawing.Size(138, 134)
+        Me.otv_formy_zoznam_listbox.TabIndex = 4
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.otv_formy_zoznam_listbox)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 355)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(159, 169)
+        Me.GroupBox1.TabIndex = 5
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Otvorené formuláre"
+        '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1633,6 +1657,7 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigator1.PerformLayout()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpzDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1772,5 +1797,7 @@ Partial Class hlavna_aplikacia
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents Button9 As System.Windows.Forms.Button
+    Friend WithEvents otv_formy_zoznam_listbox As System.Windows.Forms.ListBox
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 
 End Class
