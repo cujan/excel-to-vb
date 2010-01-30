@@ -631,7 +631,7 @@ Partial Class zdruzenie_edituj
         Me.ZdruzeniaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ZdruzeniaBindingNavigator.Name = "ZdruzeniaBindingNavigator"
         Me.ZdruzeniaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ZdruzeniaBindingNavigator.Size = New System.Drawing.Size(973, 25)
+        Me.ZdruzeniaBindingNavigator.Size = New System.Drawing.Size(956, 25)
         Me.ZdruzeniaBindingNavigator.TabIndex = 0
         Me.ZdruzeniaBindingNavigator.Text = "BindingNavigator1"
         '
@@ -1214,7 +1214,7 @@ Partial Class zdruzenie_edituj
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(973, 861)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(956, 842)
         Me.ShapeContainer1.TabIndex = 91
         Me.ShapeContainer1.TabStop = False
         '
@@ -1320,7 +1320,7 @@ Partial Class zdruzenie_edituj
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(973, 861)
+        Me.ClientSize = New System.Drawing.Size(973, 812)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -1371,7 +1371,7 @@ Partial Class zdruzenie_edituj
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "zdruzenie_edituj"
-        Me.Text = "zdruzenie_edituj"
+        Me.Text = "Uprav združenie"
         CType(Me.ZdruzeniaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ZdruzeniaBindingNavigator.ResumeLayout(False)
         Me.ZdruzeniaBindingNavigator.PerformLayout()

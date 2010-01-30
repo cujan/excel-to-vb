@@ -47,6 +47,8 @@
     End Sub
 
     Private Sub koniecButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles koniecButton.Click
+
+        hlavna_aplikacia.removeFormFromList(Me.Text)
         Me.Close()
     End Sub
 

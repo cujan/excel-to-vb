@@ -9,6 +9,7 @@
     End Sub
 
     Private Sub zavriet_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet.Click
+        hlavna_aplikacia.removeFormFromList(Me.Text)
         Me.Close()
 
     End Sub

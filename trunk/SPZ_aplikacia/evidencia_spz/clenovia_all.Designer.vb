@@ -574,7 +574,7 @@ Partial Class clenovia_all
         Me.Controls.Add(Me.All_clenoviaBindingNavigator)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "clenovia_all"
-        Me.Text = "clenovia_all"
+        Me.Text = "Zoznam členov"
         CType(Me.All_clenoviaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.All_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.All_clenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()

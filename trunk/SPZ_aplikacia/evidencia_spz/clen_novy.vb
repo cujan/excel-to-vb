@@ -290,15 +290,17 @@
 
             End If
 
-                hlavna_aplikacia.updatniNepridanychPredsedov()
-                MsgBox("Clen bol uspesne pridany. ", MsgBoxStyle.Information)
-                Me.Close()
+            hlavna_aplikacia.updatniNepridanychPredsedov()
+            MsgBox("Člen bol úspešne pridaný. ", MsgBoxStyle.Information)
+            hlavna_aplikacia.removeFormFromList(Me.Text)
+            Me.Close()
             Else
                 MsgBox("Mate chybne vyplnene tieto polia: " + vbNewLine + vbNewLine + chyba, MsgBoxStyle.Critical, "upozornenie")
             End If
     End Sub
 
     Private Sub zavriet_kartu_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_kartu_button.Click
+        hlavna_aplikacia.removeFormFromList(Me.Text)
         Me.Close()
     End Sub
 

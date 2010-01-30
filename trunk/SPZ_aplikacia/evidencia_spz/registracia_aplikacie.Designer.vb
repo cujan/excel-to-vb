@@ -131,7 +131,7 @@ Partial Class registracia_aplikacie
         Me.Controls.Add(Reg_cisloLabel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "registracia_aplikacie"
-        Me.Text = "registracia_aplikacie"
+        Me.Text = "Registrácia aplikácie"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

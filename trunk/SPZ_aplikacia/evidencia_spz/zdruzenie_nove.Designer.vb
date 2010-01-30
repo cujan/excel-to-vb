@@ -1059,7 +1059,7 @@ Partial Class zdruzenie_nove
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "zdruzenie_nove"
-        Me.Text = "zdruzeenie_nove"
+        Me.Text = "Nové združenie"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

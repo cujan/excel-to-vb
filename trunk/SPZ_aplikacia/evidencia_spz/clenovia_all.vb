@@ -23,6 +23,7 @@
     End Sub
 
     Private Sub zavriet_kartu_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_kartu_button.Click
+        hlavna_aplikacia.removeFormFromList(Me.Text)
         Me.Close()
 
     End Sub
@@ -43,6 +44,7 @@
     Private Sub All_clenoviaDataGridView_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles All_clenoviaDataGridView.CellDoubleClick
         clen_edituj.Show()
         clen_edituj.BringToFront()
+        hlavna_aplikacia.GetOpenFormTitles()
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click

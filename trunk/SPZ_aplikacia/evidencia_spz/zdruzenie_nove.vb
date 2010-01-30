@@ -106,11 +106,14 @@
             clen_novy.Show()
             clen_novy.BringToFront()
         End If
+        MsgBox("Združenie úspešne vytvorené.", "Info")
+        hlavna_aplikacia.removeFormFromList(Me.Text)
         Me.Close()
 
     End Sub
 
     Private Sub zavriet_kartu_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_kartu_button.Click
+        hlavna_aplikacia.removeFormFromList(Me.Text)
         Me.Close()
     End Sub
 End Class

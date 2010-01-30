@@ -141,6 +141,7 @@ Partial Class zdruzenie
         Me.ZdruzeniaBindingNavigator.Size = New System.Drawing.Size(759, 25)
         Me.ZdruzeniaBindingNavigator.TabIndex = 0
         Me.ZdruzeniaBindingNavigator.Text = "BindingNavigator1"
+        Me.ZdruzeniaBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
@@ -154,7 +155,7 @@ Partial Class zdruzenie
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '

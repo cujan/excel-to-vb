@@ -318,7 +318,7 @@ Partial Class vseobecne_udaje
         Me.Controls.Add(Me.WebTextBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "vseobecne_udaje"
-        Me.Text = "vseobecne_udaje"
+        Me.Text = "Všeobecné údaje"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
