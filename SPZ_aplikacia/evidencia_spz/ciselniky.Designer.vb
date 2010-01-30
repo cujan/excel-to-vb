@@ -23,11 +23,11 @@ Partial Class ciselniky
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ciselniky_splitter = New System.Windows.Forms.SplitContainer
+        Me.narodnost_button = New System.Windows.Forms.Button
         Me.zavriet_button = New System.Windows.Forms.Button
         Me.titul_za_button = New System.Windows.Forms.Button
         Me.st_prisl_button = New System.Windows.Forms.Button
         Me.tituly_button = New System.Windows.Forms.Button
-        Me.narodnost_button = New System.Windows.Forms.Button
         Me.ciselniky_splitter.Panel1.SuspendLayout()
         Me.ciselniky_splitter.SuspendLayout()
         Me.SuspendLayout()
@@ -53,6 +53,17 @@ Partial Class ciselniky
         Me.ciselniky_splitter.Size = New System.Drawing.Size(735, 516)
         Me.ciselniky_splitter.SplitterDistance = 53
         Me.ciselniky_splitter.TabIndex = 0
+        '
+        'narodnost_button
+        '
+        Me.narodnost_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.narodnost_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.narodnost_button.Location = New System.Drawing.Point(479, 12)
+        Me.narodnost_button.Name = "narodnost_button"
+        Me.narodnost_button.Size = New System.Drawing.Size(75, 23)
+        Me.narodnost_button.TabIndex = 4
+        Me.narodnost_button.Text = "Národnosť"
+        Me.narodnost_button.UseVisualStyleBackColor = False
         '
         'zavriet_button
         '
@@ -98,17 +109,6 @@ Partial Class ciselniky
         Me.tituly_button.Text = "Tituly"
         Me.tituly_button.UseVisualStyleBackColor = False
         '
-        'narodnost_button
-        '
-        Me.narodnost_button.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.narodnost_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.narodnost_button.Location = New System.Drawing.Point(479, 12)
-        Me.narodnost_button.Name = "narodnost_button"
-        Me.narodnost_button.Size = New System.Drawing.Size(75, 23)
-        Me.narodnost_button.TabIndex = 4
-        Me.narodnost_button.Text = "Národnosť"
-        Me.narodnost_button.UseVisualStyleBackColor = False
-        '
         'ciselniky
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -118,7 +118,7 @@ Partial Class ciselniky
         Me.Controls.Add(Me.ciselniky_splitter)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ciselniky"
-        Me.Text = "ciselniky"
+        Me.Text = "Číselníky"
         Me.ciselniky_splitter.Panel1.ResumeLayout(False)
         Me.ciselniky_splitter.ResumeLayout(False)
         Me.ResumeLayout(False)

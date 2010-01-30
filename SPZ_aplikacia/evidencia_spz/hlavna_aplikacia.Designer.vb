@@ -89,7 +89,6 @@ Partial Class hlavna_aplikacia
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.hlavny_splitter = New System.Windows.Forms.SplitContainer
-        Me.Button10 = New System.Windows.Forms.Button
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.otv_formy_zoznam_listbox = New System.Windows.Forms.ListBox
         Me.nastavenia_splitter = New System.Windows.Forms.SplitContainer
@@ -695,7 +694,6 @@ Partial Class hlavna_aplikacia
         '
         Me.hlavny_splitter.Panel1.AutoScroll = True
         Me.hlavny_splitter.Panel1.BackColor = System.Drawing.Color.DarkGreen
-        Me.hlavny_splitter.Panel1.Controls.Add(Me.Button10)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.GroupBox1)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.nastavenia_splitter)
         Me.hlavny_splitter.Panel1.Controls.Add(Me.tl_zostavy_splitter)
@@ -754,22 +752,13 @@ Partial Class hlavna_aplikacia
         Me.hlavny_splitter.SplitterWidth = 1
         Me.hlavny_splitter.TabIndex = 9
         '
-        'Button10
-        '
-        Me.Button10.Location = New System.Drawing.Point(79, 339)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(75, 23)
-        Me.Button10.TabIndex = 6
-        Me.Button10.Text = "Button10"
-        Me.Button10.UseVisualStyleBackColor = True
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.otv_formy_zoznam_listbox)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(6, 355)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(159, 169)
+        Me.GroupBox1.Size = New System.Drawing.Size(144, 93)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Otvorené formuláre"
@@ -778,9 +767,9 @@ Partial Class hlavna_aplikacia
         '
         Me.otv_formy_zoznam_listbox.BackColor = System.Drawing.Color.PaleGreen
         Me.otv_formy_zoznam_listbox.FormattingEnabled = True
-        Me.otv_formy_zoznam_listbox.Location = New System.Drawing.Point(10, 21)
+        Me.otv_formy_zoznam_listbox.Location = New System.Drawing.Point(7, 16)
         Me.otv_formy_zoznam_listbox.Name = "otv_formy_zoznam_listbox"
-        Me.otv_formy_zoznam_listbox.Size = New System.Drawing.Size(138, 134)
+        Me.otv_formy_zoznam_listbox.Size = New System.Drawing.Size(131, 69)
         Me.otv_formy_zoznam_listbox.TabIndex = 4
         '
         'nastavenia_splitter
@@ -1811,6 +1800,5 @@ Partial Class hlavna_aplikacia
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents otv_formy_zoznam_listbox As System.Windows.Forms.ListBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button10 As System.Windows.Forms.Button
 
 End Class

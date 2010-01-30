@@ -23,6 +23,7 @@ Public Class registracia_aplikacie
     End Sub
 
     Private Sub zavriet_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet.Click
+        hlavna_aplikacia.removeFormFromList(Me.Text)
         Me.Close()
 
     End Sub
@@ -83,6 +84,7 @@ Public Class registracia_aplikacie
             hlavna_aplikacia.nastavenia_button.Visible = True
         End If
 
+        hlavna_aplikacia.removeFormFromList(Me.Text)
         Me.Close()
 
         If Not hlavna_aplikacia.nastavenia_button.Visible Then

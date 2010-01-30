@@ -1512,7 +1512,7 @@ Partial Class clen_edituj
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1257, 963)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1240, 907)
         Me.ShapeContainer1.TabIndex = 108
         Me.ShapeContainer1.TabStop = False
         '
@@ -1556,7 +1556,7 @@ Partial Class clen_edituj
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(1257, 963)
+        Me.ClientSize = New System.Drawing.Size(1257, 812)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Label13)
@@ -1672,7 +1672,7 @@ Partial Class clen_edituj
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "clen_edituj"
-        Me.Text = "clen_edituj"
+        Me.Text = "Edituj člena"
         CType(Me.All_clenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.All_clenoviaBindingNavigator.ResumeLayout(False)
         Me.All_clenoviaBindingNavigator.PerformLayout()

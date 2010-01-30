@@ -128,7 +128,7 @@ Public Class hlavna_aplikacia
             End If
             tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
             nastavenia_splitter.Location = tl_zostavy_splitter_position
-
+            presunListbox()
         Else
             sprava_clenov_splitter.Panel2Collapsed = True
             sprava_clenov_button.Text = "v"
@@ -155,7 +155,7 @@ Public Class hlavna_aplikacia
             End If
             tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
             nastavenia_splitter.Location = tl_zostavy_splitter_position
-
+            presunListbox()
         End If
 
     End Sub
@@ -164,7 +164,7 @@ Public Class hlavna_aplikacia
     Private Sub novy_clen_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles novy_clen_button.Click
         clen_novy.Show()
         clen_novy.BringToFront()
-
+        GetOpenFormTitles()
     End Sub
 
     Private Sub edituj_clena_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -180,7 +180,7 @@ Public Class hlavna_aplikacia
     Private Sub prehlad_clenov_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles prehlad_clenov_button.Click
         clenovia_all.Show()
         clenovia_all.BringToFront()
-
+        GetOpenFormTitles()
     End Sub
 
 
@@ -205,7 +205,7 @@ Public Class hlavna_aplikacia
             End If
             tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
             nastavenia_splitter.Location = tl_zostavy_splitter_position
-
+            presunListbox()
         Else
             sprava_zdruzeni_button.Text = "v"
             sprava_zdruzeni_splitter.Panel2Collapsed = True
@@ -223,7 +223,7 @@ Public Class hlavna_aplikacia
             End If
             tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
             nastavenia_splitter.Location = tl_zostavy_splitter_position
-
+            presunListbox()
         End If
 
     End Sub
@@ -380,7 +380,7 @@ Public Class hlavna_aplikacia
         Me.versionLabel.Text = SplashScreen1.Version.Text
 
         Me.updatniNepridanychPredsedov()
-
+        presunListbox()
 
     End Sub
 
@@ -463,9 +463,11 @@ Public Class hlavna_aplikacia
         If nastavenia_button.Text = "v" Then
             nastavenia_button.Text = "^"
             nastavenia_splitter.Panel2Collapsed = False
+            presunListbox()
         Else
             nastavenia_button.Text = "v"
             nastavenia_splitter.Panel2Collapsed = True
+            presunListbox()
 
         End If
     End Sub
@@ -477,7 +479,7 @@ Public Class hlavna_aplikacia
     Private Sub nastavenia_ciselniky_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nastavenia_ciselniky_button.Click
         ciselniky.Show()
         ciselniky.BringToFront()
-
+        GetOpenFormTitles()
     End Sub
 
     Private Sub Vseobecne_udajeBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -490,7 +492,7 @@ Public Class hlavna_aplikacia
     Private Sub upravit_udaje_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles upravit_udaje_button.Click
         vseobecne_udaje.Show()
         vseobecne_udaje.BringToFront()
-
+        GetOpenFormTitles()
     End Sub
 
 
@@ -517,14 +519,14 @@ Public Class hlavna_aplikacia
     Private Sub prehlad_zdruzeni_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles prehlad_zdruzeni_button.Click
         zdruzenie.Show()
         zdruzenie.BringToFront()
-
+        GetOpenFormTitles()
 
     End Sub
 
     Private Sub nove_zdruzenie_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nove_zdruzenie_button.Click
         zdruzenie_nove.Show()
         zdruzenie_nove.BringToFront()
-
+        GetOpenFormTitles()
 
     End Sub
 
@@ -545,7 +547,7 @@ Public Class hlavna_aplikacia
             tl_zostavy_splitter_position.Y = tl_zostavy_splitter.Location.Y + 265
             tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
             nastavenia_splitter.Location = tl_zostavy_splitter_position
-
+            presunListbox()
         Else
             tl_zostavy_button.Text = "v"
             tl_zostavy_splitter.Panel2Collapsed = True
@@ -553,7 +555,7 @@ Public Class hlavna_aplikacia
             tl_zostavy_splitter_position.X = tl_zostavy_splitter.Location.X
 
             nastavenia_splitter.Location = tl_zostavy_splitter_position
-
+            presunListbox()
         End If
 
     End Sub
@@ -609,7 +611,7 @@ Public Class hlavna_aplikacia
     Private Sub registracia_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles registracia.Click
         registracia_aplikacie.Show()
         registracia_aplikacie.BringToFront()
-
+        GetOpenFormTitles()
 
 
     End Sub
@@ -622,7 +624,7 @@ Public Class hlavna_aplikacia
     Private Sub o_aplikacii_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles o_aplikacii_button.Click
         o_aplikacii.Show()
         o_aplikacii.BringToFront()
-
+        GetOpenFormTitles()
     End Sub
 
 
@@ -637,7 +639,7 @@ Public Class hlavna_aplikacia
     Private Sub zalohuj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zalohuj.Click
         zaloha_databazy.Show()
         zaloha_databazy.BringToFront()
-
+        GetOpenFormTitles()
     End Sub
 
     Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -805,6 +807,18 @@ Public Class hlavna_aplikacia
     End Sub
 
 
+    Public Sub removeFormFromList(ByVal formName As String)
+        Dim zoznamFormov As New Collection
+        Dim zoznamFormovNovy As New Collection
+        zoznamFormov = otv_formy_zoznam_listbox.DataSource
+
+        For i As Integer = 1 To zoznamFormov.Count
+            If zoznamFormov.Item(i) <> formName Then
+                zoznamFormovNovy.Add(zoznamFormov.Item(i))
+            End If
+        Next
+        otv_formy_zoznam_listbox.DataSource = zoznamFormovNovy
+    End Sub
 
     Private Delegate Function GetFormTitleDelegate(ByVal f As Form) As String
     Private Function GetFormTitle(ByVal f As Form) As String
@@ -829,12 +843,74 @@ Public Class hlavna_aplikacia
         End If
     End Function
 
-    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
+    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         GetOpenFormTitles()
     End Sub
 
     Private Sub otv_formy_zoznam_listbox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles otv_formy_zoznam_listbox.DoubleClick
-        MsgBox(otv_formy_zoznam_listbox.SelectedValue)
         BringToFrontOpenForm(otv_formy_zoznam_listbox.SelectedValue)
+    End Sub
+
+    Private Sub presunListbox()
+        Dim groupboxposition As New System.Drawing.Point
+        groupboxposition.Y = nastavenia_splitter.Location.Y + nastavenia_splitter.Size.Height + 10
+        groupboxposition.X = GroupBox1.Location.X
+
+        GroupBox1.Location = groupboxposition
+    End Sub
+
+    Private Sub Nazov_organizacieTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Nazov_organizacieTextBox.TextChanged
+
+    End Sub
+
+    Private Sub hlavna_aplikacia_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Me.FormClosing
+        Dim zoznamFormov As New Collection
+        zoznamFormov = otv_formy_zoznam_listbox.DataSource
+
+        Dim formular As String
+        If otv_formy_zoznam_listbox.Items.Count <> 0 Then
+
+            For i As Integer = 1 To zoznamFormov.Count
+                formular = zoznamFormov.Item(i)
+                Select Case formular
+
+                    Case "Pridaj člena"
+                        If MsgBox("V aplikácii máte otvorený formulár '" + formular + "', zatvorením aplikácie stratíte všetky neuložené zmeny. Naozaj chcete zavrieť aplikáciu? Stlačením na tlačítko Nie budete presmerovaný na otvorený formulár.", 4, "Otázka") = MsgBoxResult.No Then
+                            BringToFrontOpenForm(formular)
+                            e.Cancel = True
+                            Exit For
+                        End If
+                    Case "Edituj člena"
+                        If MsgBox("V aplikácii máte otvorený formulár '" + formular + "', zatvorením aplikácie stratíte všetky neuložené zmeny. Naozaj chcete zavrieť aplikáciu? Stlačením na tlačítko Nie budete presmerovaný na otvorený formulár.", 4, "Otázka") = MsgBoxResult.No Then
+                            BringToFrontOpenForm(formular)
+                            e.Cancel = True
+                            Exit For
+                        End If
+
+                    Case "Uprav združenie"
+                        If MsgBox("V aplikácii máte otvorený formulár '" + formular + "', zatvorením aplikácie stratíte všetky neuložené zmeny. Naozaj chcete zavrieť aplikáciu? Stlačením na tlačítko Nie budete presmerovaný na otvorený formulár.", 4, "Otázka") = MsgBoxResult.No Then
+                            BringToFrontOpenForm(formular)
+                            e.Cancel = True
+                            Exit For
+                        End If
+
+                    Case "Nové združenie"
+                        If MsgBox("V aplikácii máte otvorený formulár '" + formular + "', zatvorením aplikácie stratíte všetky neuložené zmeny. Naozaj chcete zavrieť aplikáciu? Stlačením na tlačítko Nie budete presmerovaný na otvorený formulár.", 4, "Otázka") = MsgBoxResult.No Then
+                            BringToFrontOpenForm(formular)
+                            e.Cancel = True
+                            Exit For
+                        End If
+
+                    Case "Všeobecné údaje"
+                        If MsgBox("V aplikácii máte otvorený formulár '" + formular + "', zatvorením aplikácie stratíte všetky neuložené zmeny. Naozaj chcete zavrieť aplikáciu? Stlačením na tlačítko Nie budete presmerovaný na otvorený formulár.", 4, "Otázka") = MsgBoxResult.No Then
+                            BringToFrontOpenForm(formular)
+                            e.Cancel = True
+                            Exit For
+                        End If
+                End Select
+            Next
+
+        End If
+
     End Sub
 End Class

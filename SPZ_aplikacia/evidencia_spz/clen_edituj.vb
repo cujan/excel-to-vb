@@ -297,7 +297,9 @@
             con.Close()
             hlavna_aplikacia.vytvor_all_clenovia()
             clenovia_all.All_clenoviaTableAdapter.Fill(clenovia_all.All_clenoviaDataSet.all_clenovia)
-
+            MsgBox("Člen bol úspešne upravený.", "Info")
+            hlavna_aplikacia.removeFormFromList(Me.Text)
+            Me.Close()
         Else
             MsgBox("Mate chybne vyplnene tieto polia: " + vbNewLine + vbNewLine + chyba, MsgBoxStyle.Critical, "upozornenie")
         End If
@@ -418,6 +420,7 @@
     End Sub
 
     Private Sub zavriet_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_button.Click
+        hlavna_aplikacia.removeFormFromList(Me.Text)
         Me.Close()
 
     End Sub

@@ -37,13 +37,14 @@
     End Sub
 
     Private Sub zavriet_kartu_zdruzenia_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_kartu_button.Click
+        hlavna_aplikacia.removeFormFromList(Me.Text)
         Me.Close()
     End Sub
 
     Private Sub ZdruzeniaDataGridView_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ZdruzeniaDataGridView.CellDoubleClick
         zdruzenie_edituj.Show()
         zdruzenie_edituj.BringToFront()
-        
+        hlavna_aplikacia.GetOpenFormTitles()
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click

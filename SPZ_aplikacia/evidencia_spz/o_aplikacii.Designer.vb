@@ -174,7 +174,7 @@ Partial Class o_aplikacii
         Me.Controls.Add(Me.uvod)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "o_aplikacii"
-        Me.Text = "o_aplikacii"
+        Me.Text = "O aplikáciii"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

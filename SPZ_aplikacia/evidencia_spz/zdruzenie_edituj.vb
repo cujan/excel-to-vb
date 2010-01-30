@@ -158,6 +158,10 @@
         con.Close()
 
         zdruzenie.ZdruzeniaTableAdapter.Fill(zdruzenie.SpzDataSet.zdruzenia)
+        MsgBox("Združenie úspešne upravené.", "Info")
+        hlavna_aplikacia.removeFormFromList(Me.Text)
+        Me.Close()
+
     End Sub
 
     Private Sub predsedaComboBox_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles predsedaComboBox.Leave
@@ -234,6 +238,7 @@
     End Sub
 
     Private Sub zavriet_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zavriet_button.Click
+        hlavna_aplikacia.removeFormFromList(Me.Text)
         Me.Close()
     End Sub
 
