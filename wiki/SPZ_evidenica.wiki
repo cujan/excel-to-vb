@@ -1,4 +1,6 @@
-- vymazavanie clenov
+- pridat jednotky k lablom pre novy clen/zdruzenie, edituj clena/zdruzenie (napr. vymera (ha) )
+
+- vymazavanie clenov  
 
 - rodne cislo predelit / + pozriet ci by sa dala pouzit maska na tl. zostavy
 
