@@ -6,6 +6,10 @@
     End Sub
 
     Private Sub vseobecne_udaje_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'SpzDataSet.vseobecne_udaje' table. You can move, or remove it, as needed.
+        Me.Vseobecne_udajeTableAdapter.Fill(Me.SpzDataSet.vseobecne_udaje)
+        'TODO: This line of code loads data into the 'SpzDataSet.vseobecne_udaje' table. You can move, or remove it, as needed.
+        Me.Vseobecne_udajeTableAdapter.Fill(Me.SpzDataSet.vseobecne_udaje)
         'TODO: This line of code loads data into the 'Spz_vseobecne_udaje.vseobecne_udaje' table. You can move, or remove it, as needed.
         Me.Dock = DockStyle.Fill
         Me.TopLevel = False
@@ -42,7 +46,10 @@
         Me.FaxTextBox.ReadOnly = True
         Me.EmailTextBox.ReadOnly = True
         Me.WebTextBox.ReadOnly = True
-
+        Me.Validate()
+        Me.Vseobecne_udajeBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.SpzDataSet)
+        hlavna_aplikacia.Vseobecne_udajeTableAdapter.Fill(hlavna_aplikacia.SpzDataSet.vseobecne_udaje)
 
     End Sub
 
@@ -53,6 +60,13 @@
     End Sub
 
     Private Sub EmailLabel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Vseobecne_udajeBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Vseobecne_udajeBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.Vseobecne_udajeBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.SpzDataSet)
 
     End Sub
 End Class
