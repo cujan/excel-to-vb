@@ -1,3 +1,5 @@
+- prepojit vs. udaje na tabulku zdruzenia (ak aplikaciu nevyuziva kr. zdruzenie)
+
 -rozsirit sidlo v tab. zdruzenie na mesto, okres, psc
 
 - pridat jednotky k lablom pre novy clen/zdruzenie, edituj clena/zdruzenie (napr. vymera (ha) )
