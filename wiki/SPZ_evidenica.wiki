@@ -1,3 +1,5 @@
+-rozsirit sidlo v tab. zdruzenie na mesto, okres, psc
+
 - pridat jednotky k lablom pre novy clen/zdruzenie, edituj clena/zdruzenie (napr. vymera (ha) )
 
 - vymazavanie clenov  
