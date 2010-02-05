@@ -6,6 +6,13 @@
 
         Return pripojovaci_retazec_string
     End Function
+    Public Function pripojovaci_retazec_sdf2() As String
+
+        Dim pripojovaci_retazec_string As String = "Data Source=|DataDirectory|\databza_sdf2.sdf"
+
+
+        Return pripojovaci_retazec_string
+    End Function
 
     Public Function pripojovaci_retazec_accdb() As String
 
