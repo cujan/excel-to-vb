@@ -801,6 +801,7 @@ Partial Class clen_edituj
         'All_clenoviaDataSet
         '
         Me.All_clenoviaDataSet.DataSetName = "all_clenoviaDataSet"
+        Me.All_clenoviaDataSet.EnforceConstraints = False
         Me.All_clenoviaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
