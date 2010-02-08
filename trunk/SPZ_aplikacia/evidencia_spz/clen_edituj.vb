@@ -128,11 +128,11 @@
         'vybere pri nacitani formu aktualnu hodnotu v okres a psc listbox
 
         If Okres_bydliskaTextBox.Text <> "" Then
-            Okres_bydliskaListBox.SelectedIndex = 0
+            Okres_bydliskaListBox.SelectedIndex = -1
         End If
 
         If PscTextBox.Text <> "" Then
-            PscListBox.SelectedIndex = 0
+            PscListBox.SelectedIndex = -1
         End If
 
         Me.Dock = DockStyle.Fill
