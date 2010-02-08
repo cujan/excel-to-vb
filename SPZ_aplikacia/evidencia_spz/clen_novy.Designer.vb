@@ -1032,6 +1032,7 @@ Partial Class clen_novy
         'All_clenoviaDataSet
         '
         Me.All_clenoviaDataSet.DataSetName = "all_clenoviaDataSet"
+        Me.All_clenoviaDataSet.EnforceConstraints = False
         Me.All_clenoviaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'All_clenoviaBindingSource
@@ -1146,6 +1147,7 @@ Partial Class clen_novy
         '
         'rodne_cisloMaskedTextBox
         '
+        Me.rodne_cisloMaskedTextBox.Culture = New System.Globalization.CultureInfo("")
         Me.rodne_cisloMaskedTextBox.Location = New System.Drawing.Point(551, 132)
         Me.rodne_cisloMaskedTextBox.Mask = "000000/0000"
         Me.rodne_cisloMaskedTextBox.Name = "rodne_cisloMaskedTextBox"
