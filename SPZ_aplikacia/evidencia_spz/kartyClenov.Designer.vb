@@ -188,7 +188,7 @@ Partial Public Class kartyClenov
         Me.DataSetName = "kartyClenov"
         Me.Prefix = ""
         Me.Namespace = "http://tempuri.org/kartyClenov.xsd"
-        Me.EnforceConstraints = true
+        Me.EnforceConstraints = false
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tablekarty_clenov = New karty_clenovDataTable
         MyBase.Tables.Add(Me.tablekarty_clenov)
