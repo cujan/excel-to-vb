@@ -97,7 +97,7 @@
         </Field>
         <Field Name="clen_pz">
           <DataField>clen_pz</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
         <Field Name="skuska_z_polovnictva">
           <DataField>skuska_z_polovnictva</DataField>
@@ -169,7 +169,7 @@
         </Field>
         <Field Name="clen_pz_id">
           <DataField>clen_pz_id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
         <Field Name="miesto_skusky_z_polovnictva">
           <DataField>miesto_skusky_z_polovnictva</DataField>

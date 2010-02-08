@@ -731,7 +731,7 @@ Partial Public Class kartyClenov
                     ByVal clen_spz_od As Integer,  _
                     ByVal clenske_do As Integer,  _
                     ByVal cislo_dokladu_clenske As String,  _
-                    ByVal clen_pz As Integer,  _
+                    ByVal clen_pz As Long,  _
                     ByVal skuska_z_polovnictva As Date,  _
                     ByVal skuska_pre_polovnych_hospodarov As Date,  _
                     ByVal miesto_skusky_pre_polovnych_hospodarov As String,  _
@@ -858,7 +858,7 @@ Partial Public Class kartyClenov
             MyBase.Columns.Add(Me.columnclenske_do)
             Me.columncislo_dokladu_clenske = New Global.System.Data.DataColumn("cislo_dokladu_clenske", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncislo_dokladu_clenske)
-            Me.columnclen_pz = New Global.System.Data.DataColumn("clen_pz", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnclen_pz = New Global.System.Data.DataColumn("clen_pz", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnclen_pz)
             Me.columnskuska_z_polovnictva = New Global.System.Data.DataColumn("skuska_z_polovnictva", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnskuska_z_polovnictva)
@@ -984,6 +984,7 @@ Partial Public Class kartyClenov
             Me.columnulica.MaxLength = 100
             Me.columnulica_cislo.ReadOnly = true
             Me.columnulica_cislo.MaxLength = 100
+            Me.Locale = New Global.System.Globalization.CultureInfo("en-GB")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1345,10 +1346,10 @@ Partial Public Class kartyClenov
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property clen_pz() As Integer
+        Public Property clen_pz() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tablekarty_clenov.clen_pzColumn),Integer)
+                    Return CType(Me(Me.tablekarty_clenov.clen_pzColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'clen_pz' in table 'karty_clenov' is DBNull.", e)
                 End Try
