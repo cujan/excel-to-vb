@@ -51,7 +51,7 @@
 
 
         If Label2.Text <> "Label2" Then
-            If MsgBox("Naozaj chete zmazat vybrane zdruzenie?", MsgBoxStyle.Critical + MsgBoxStyle.OkCancel, "Upozornenie !!!") = MsgBoxResult.Ok Then
+            If MsgBox("Naozaj chete vyazať vybrané združenie?", MsgBoxStyle.Critical + MsgBoxStyle.OkCancel, "Upozornenie !!!") = MsgBoxResult.Ok Then
                 Dim con As New SqlCeConnection(pripojovaci_retazec)
                 Dim com As New SqlCeCommand("DELETE FROM zdruzenia WHERE ico = @ico", con)
                 com.Parameters.AddWithValue("ico", Label2.Text)
@@ -61,7 +61,7 @@
                 con.Close()
             End If
         Else
-            MsgBox("Nemate vybrane ziadne zdruzenie!!!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
+            MsgBox("Nemáte vybrané žiadne združenie!!!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
         End If
         Me.ZdruzeniaTableAdapter.Fill(Me.SpzDataSet.zdruzenia)
 

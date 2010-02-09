@@ -50,7 +50,7 @@
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim ico_clenovia As String = Label4.Text
         If Label2.Text <> "Label2" Then
-            If MsgBox("Naozaj chete zmazat vybraneho clena?", MsgBoxStyle.Critical + MsgBoxStyle.OkCancel, "Upozornenie !!!") = MsgBoxResult.Ok Then
+            If MsgBox("Naozaj chete zmazat vybraného člena?", MsgBoxStyle.Critical + MsgBoxStyle.OkCancel, "Upozornenie !!!") = MsgBoxResult.Ok Then
                 Dim con As New SqlCeConnection(pripojovaci_retazec)
                 Dim com As New SqlCeCommand("DELETE FROM """ & ico_clenovia & """ WHERE  rodne_cislo = @rodne_cislo", con)
                 com.Parameters.AddWithValue("rodne_cislo", Label2.Text)
@@ -60,7 +60,7 @@
                 con.Close()
             End If
         Else
-            MsgBox("Nemate vybraneho ziadneho clena!!!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
+            MsgBox("Nemáte vybranáho žiadneho člena!!!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
         End If
         hlavna_aplikacia.vytvor_all_clenovia()
         Me.All_clenoviaTableAdapter.Fill(Me.All_clenoviaDataSet.all_clenovia)

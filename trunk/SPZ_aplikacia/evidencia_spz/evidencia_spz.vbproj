@@ -362,6 +362,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>zoznam_kontStrelby.xsd</DependentUpon>
     </Compile>
+    <Compile Include="zoznam_kontStrelby.vb">
+      <DependentUpon>zoznam_kontStrelby.xsd</DependentUpon>
+    </Compile>
     <Compile Include="zoznam_narodeniny.Designer.vb">
       <DependentUpon>zoznam_narodeniny.vb</DependentUpon>
     </Compile>

@@ -101,6 +101,7 @@ Partial Class clenovia_all
         'All_clenoviaDataSet
         '
         Me.All_clenoviaDataSet.DataSetName = "all_clenoviaDataSet"
+        Me.All_clenoviaDataSet.EnforceConstraints = False
         Me.All_clenoviaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'All_clenoviaBindingSource
@@ -525,12 +526,14 @@ Partial Class clenovia_all
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(510, 38)
+        Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(420, 38)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(98, 23)
         Me.Button1.TabIndex = 5
-        Me.Button1.Text = "zmaz"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Text = "Vymazať člena"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label3
         '
