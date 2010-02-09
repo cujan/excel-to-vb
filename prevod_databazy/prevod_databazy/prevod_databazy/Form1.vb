@@ -210,4 +210,66 @@
         Next
         Label1.Text = "clenovia rozdeleni"
     End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        updatniTabulky()
+    End Sub
+
+    Private Sub updatniTabulky()
+        Label1.Text = "Start"
+        Dim query As String = "SELECT [ico], [nazov] FROM zdruzenia"
+        Dim conn As New SqlCeConnection(pripojovaci_retazec_sdf)
+        Dim cmd As New SqlCeCommand(query, conn)
+        Dim i As Integer
+        Dim val1 As String
+        Dim val2 As String
+        Dim val3 As String
+        Dim cmdtext As String
+        Dim zoznamICO As New Collection
+        Dim zoznamICO_nazov As New Collection
+        val3 = ""
+        conn.Open()
+        Dim rdr As SqlCeDataReader = cmd.ExecuteReader()
+        i = 0
+        Try
+            ' Iterate through the results
+            '
+            While rdr.Read()
+                val1 = rdr.GetString(0)
+                val2 = rdr.GetString(1)
+                zoznamICO.Add(val1)
+                zoznamICO_nazov.Add(val2)
+            End While
+        Finally
+            ' Always call Close when done reading
+            '
+            rdr.Close()
+
+            ' Always call Close when done reading
+            '
+            conn.Close()
+        End Try
+
+        Dim con As New SqlCeConnection(pripojovaci_retazec_sdf)
+        For j As Integer = 1 To zoznamICO.Count
+            con.Open()
+            'cmdtext = "update ""all_clenovia"" set ""clen_pz""= '" + zoznamICO.Item(j) + "', ""ico_clenovia""= """ + zoznamICO.Item(j) + "_clenovia"" where ""clen_pz"" like '" + zoznamICO_nazov.Item(j) + "'"
+            'MsgBox(cmdtext)
+            Dim com As New SqlCeCommand("update """ + zoznamICO.Item(j) + "_clenovia"" set ""brokova_zbran""= 'ÁNO' where ""brokova_zbran"" like 'ANO'", con)
+            com.ExecuteNonQuery()
+            con.Close()
+        Next
+
+        For j As Integer = 1 To zoznamICO.Count
+            con.Open()
+            'cmdtext = "update ""all_clenovia"" set ""clen_pz""= '" + zoznamICO.Item(j) + "', ""ico_clenovia""= """ + zoznamICO.Item(j) + "_clenovia"" where ""clen_pz"" like '" + zoznamICO_nazov.Item(j) + "'"
+            'MsgBox(cmdtext)
+            Dim com As New SqlCeCommand("update """ + zoznamICO.Item(j) + "_clenovia"" set ""gulova_zbran""= 'ÁNO' where ""gulova_zbran"" like 'ANO'", con)
+            com.ExecuteNonQuery()
+            con.Close()
+        Next
+
+        Label1.Text = "Hotovo"
+       
+    End Sub
 End Class

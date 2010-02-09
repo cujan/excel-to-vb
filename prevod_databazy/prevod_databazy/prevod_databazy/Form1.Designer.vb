@@ -27,6 +27,7 @@ Partial Class Form1
         Me.RadioButton2 = New System.Windows.Forms.RadioButton
         Me.Label1 = New System.Windows.Forms.Label
         Me.RadioButton3 = New System.Windows.Forms.RadioButton
+        Me.Button2 = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'Button1
@@ -79,11 +80,21 @@ Partial Class Form1
         Me.RadioButton3.Text = "Rozhod clenov"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(174, 86)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(131, 23)
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "Updatni vsetky tabulky"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(412, 121)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.RadioButton3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.RadioButton2)
@@ -100,5 +111,6 @@ Partial Class Form1
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class
