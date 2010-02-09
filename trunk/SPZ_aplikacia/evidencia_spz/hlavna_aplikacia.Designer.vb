@@ -756,7 +756,7 @@ Partial Class hlavna_aplikacia
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(6, 355)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(144, 93)
+        Me.GroupBox1.Size = New System.Drawing.Size(144, 104)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Otvorené formuláre"
@@ -767,7 +767,7 @@ Partial Class hlavna_aplikacia
         Me.otv_formy_zoznam_listbox.FormattingEnabled = True
         Me.otv_formy_zoznam_listbox.Location = New System.Drawing.Point(7, 16)
         Me.otv_formy_zoznam_listbox.Name = "otv_formy_zoznam_listbox"
-        Me.otv_formy_zoznam_listbox.Size = New System.Drawing.Size(131, 69)
+        Me.otv_formy_zoznam_listbox.Size = New System.Drawing.Size(131, 82)
         Me.otv_formy_zoznam_listbox.TabIndex = 4
         '
         'nastavenia_splitter
