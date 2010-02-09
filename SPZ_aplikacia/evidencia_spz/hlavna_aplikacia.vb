@@ -894,4 +894,6 @@ Public Class hlavna_aplikacia
         End If
 
     End Sub
+
+
 End Class
