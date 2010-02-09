@@ -31,8 +31,8 @@ Partial Class hlavna_aplikacia
         Dim IcoLabel As System.Windows.Forms.Label
         Dim DicLabel As System.Windows.Forms.Label
         Dim Reg_cisloLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(hlavna_aplikacia))
         Dim Verzia_aplikacieLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(hlavna_aplikacia))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip
         Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
@@ -120,11 +120,9 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_label = New System.Windows.Forms.Label
         Me.prehlad_clenov_button = New System.Windows.Forms.Button
         Me.novy_clen_button = New System.Windows.Forms.Button
-        Me.Button9 = New System.Windows.Forms.Button
-        Me.Button8 = New System.Windows.Forms.Button
-        Me.Button7 = New System.Windows.Forms.Button
-        Me.ListBox1 = New System.Windows.Forms.ListBox
-        Me.Button6 = New System.Windows.Forms.Button
+        Me.Verzia_aplikacieLabel1 = New System.Windows.Forms.Label
+        Me.VseobecneudajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SpzDataSet = New evidencia_spz.spzDataSet
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
@@ -137,11 +135,6 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.Button5 = New System.Windows.Forms.Button
-        Me.Button4 = New System.Windows.Forms.Button
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
         Me.verzia_text = New System.Windows.Forms.Label
         Me.versionLabel = New System.Windows.Forms.Label
         Me.copyrightLabel = New System.Windows.Forms.Label
@@ -168,9 +161,6 @@ Partial Class hlavna_aplikacia
         Me.Nazov_organizacieTextBox = New System.Windows.Forms.TextBox
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
-        Me.Verzia_aplikacieLabel1 = New System.Windows.Forms.Label
-        Me.VseobecneudajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SpzDataSet = New evidencia_spz.spzDataSet
         Me.SpzDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Vseobecne_udajeTableAdapter = New evidencia_spz.spzDataSetTableAdapters.vseobecne_udajeTableAdapter
         Me.TableAdapterManager = New evidencia_spz.spzDataSetTableAdapters.TableAdapterManager
@@ -201,10 +191,10 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_splitter.Panel1.SuspendLayout()
         Me.sprava_clenov_splitter.Panel2.SuspendLayout()
         Me.sprava_clenov_splitter.SuspendLayout()
-        CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.BindingNavigator1.SuspendLayout()
         CType(Me.VseobecneudajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BindingNavigator1.SuspendLayout()
         CType(Me.SpzDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -273,6 +263,15 @@ Partial Class hlavna_aplikacia
         Reg_cisloLabel.Size = New System.Drawing.Size(113, 9)
         Reg_cisloLabel.TabIndex = 0
         Reg_cisloLabel.Text = "Registračné číslo SPZ aplikácie"
+        '
+        'Verzia_aplikacieLabel
+        '
+        Verzia_aplikacieLabel.AutoSize = True
+        Verzia_aplikacieLabel.Location = New System.Drawing.Point(573, 475)
+        Verzia_aplikacieLabel.Name = "Verzia_aplikacieLabel"
+        Verzia_aplikacieLabel.Size = New System.Drawing.Size(83, 13)
+        Verzia_aplikacieLabel.TabIndex = 0
+        Verzia_aplikacieLabel.Text = "verzia aplikacie:"
         '
         'MenuStrip
         '
@@ -713,17 +712,7 @@ Partial Class hlavna_aplikacia
         Me.hlavny_splitter.Panel2.BackColor = System.Drawing.Color.PaleGreen
         Me.hlavny_splitter.Panel2.Controls.Add(Verzia_aplikacieLabel)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Verzia_aplikacieLabel1)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button9)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button8)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button7)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.ListBox1)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button6)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.BindingNavigator1)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button5)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button4)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button3)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button1)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Button2)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.verzia_text)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.versionLabel)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.copyrightLabel)
@@ -1154,49 +1143,24 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
         '
-        'Button9
+        'Verzia_aplikacieLabel1
         '
-        Me.Button9.Location = New System.Drawing.Point(13, 132)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(147, 23)
-        Me.Button9.TabIndex = 11
-        Me.Button9.Text = "pokusnz form"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.Verzia_aplikacieLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneudajeBindingSource, "verzia_aplikacie", True))
+        Me.Verzia_aplikacieLabel1.Location = New System.Drawing.Point(703, 475)
+        Me.Verzia_aplikacieLabel1.Name = "Verzia_aplikacieLabel1"
+        Me.Verzia_aplikacieLabel1.Size = New System.Drawing.Size(100, 23)
+        Me.Verzia_aplikacieLabel1.TabIndex = 1
+        Me.Verzia_aplikacieLabel1.Text = "Label3"
         '
-        'Button8
+        'VseobecneudajeBindingSource
         '
-        Me.Button8.Location = New System.Drawing.Point(52, 83)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 23)
-        Me.Button8.TabIndex = 11
-        Me.Button8.Text = "Button8"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.VseobecneudajeBindingSource.DataMember = "vseobecne_udaje"
+        Me.VseobecneudajeBindingSource.DataSource = Me.SpzDataSet
         '
-        'Button7
+        'SpzDataSet
         '
-        Me.Button7.Location = New System.Drawing.Point(466, 440)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(75, 23)
-        Me.Button7.TabIndex = 42
-        Me.Button7.Text = "karty clenov"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(691, 116)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(120, 212)
-        Me.ListBox1.TabIndex = 41
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(322, 442)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
-        Me.Button6.TabIndex = 11
-        Me.Button6.Text = "clenovia all"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.SpzDataSet.DataSetName = "spzDataSet"
+        Me.SpzDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigator1
         '
@@ -1300,51 +1264,6 @@ Partial Class hlavna_aplikacia
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(652, 81)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(180, 23)
-        Me.Button5.TabIndex = 11
-        Me.Button5.Text = "nazvy tabuliek"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(52, 481)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(168, 23)
-        Me.Button4.TabIndex = 38
-        Me.Button4.Text = "novy clen aj v menu"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(52, 452)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(168, 23)
-        Me.Button3.TabIndex = 37
-        Me.Button3.Text = "123 clenovia"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(26, 355)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(153, 23)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "zdruzenie aj v menu"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(26, 400)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(153, 23)
-        Me.Button2.TabIndex = 12
-        Me.Button2.Text = "nove zdruzenie aj v menu"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'verzia_text
         '
@@ -1627,34 +1546,6 @@ Partial Class hlavna_aplikacia
         Me.LineShape1.Y1 = 325
         Me.LineShape1.Y2 = 325
         '
-        'Verzia_aplikacieLabel
-        '
-        Verzia_aplikacieLabel.AutoSize = True
-        Verzia_aplikacieLabel.Location = New System.Drawing.Point(573, 475)
-        Verzia_aplikacieLabel.Name = "Verzia_aplikacieLabel"
-        Verzia_aplikacieLabel.Size = New System.Drawing.Size(83, 13)
-        Verzia_aplikacieLabel.TabIndex = 0
-        Verzia_aplikacieLabel.Text = "verzia aplikacie:"
-        '
-        'Verzia_aplikacieLabel1
-        '
-        Me.Verzia_aplikacieLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneudajeBindingSource, "verzia_aplikacie", True))
-        Me.Verzia_aplikacieLabel1.Location = New System.Drawing.Point(703, 475)
-        Me.Verzia_aplikacieLabel1.Name = "Verzia_aplikacieLabel1"
-        Me.Verzia_aplikacieLabel1.Size = New System.Drawing.Size(100, 23)
-        Me.Verzia_aplikacieLabel1.TabIndex = 1
-        Me.Verzia_aplikacieLabel1.Text = "Label3"
-        '
-        'VseobecneudajeBindingSource
-        '
-        Me.VseobecneudajeBindingSource.DataMember = "vseobecne_udaje"
-        Me.VseobecneudajeBindingSource.DataSource = Me.SpzDataSet
-        '
-        'SpzDataSet
-        '
-        Me.SpzDataSet.DataSetName = "spzDataSet"
-        Me.SpzDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'SpzDataSetBindingSource
         '
         Me.SpzDataSetBindingSource.DataSource = Me.SpzDataSet
@@ -1718,11 +1609,11 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_splitter.Panel1.ResumeLayout(False)
         Me.sprava_clenov_splitter.Panel2.ResumeLayout(False)
         Me.sprava_clenov_splitter.ResumeLayout(False)
+        CType(Me.VseobecneudajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
-        CType(Me.VseobecneudajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpzDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1839,13 +1730,8 @@ Partial Class hlavna_aplikacia
     Friend WithEvents versionLabel As System.Windows.Forms.Label
     Friend WithEvents copyrightLabel As System.Windows.Forms.Label
     Friend WithEvents verzia_text As System.Windows.Forms.Label
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents SpzDataSet As evidencia_spz.spzDataSet
     Friend WithEvents SpzDataSetBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents BindingNavigator1 As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -1858,11 +1744,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents BindingNavigatorMoveNextItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
-    Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents otv_formy_zoznam_listbox As System.Windows.Forms.ListBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents VseobecneudajeBindingSource As System.Windows.Forms.BindingSource

@@ -116,7 +116,9 @@ Partial Class zdruzenie
         Me.TableAdapterManager._456_clenoviaTableAdapter = Nothing
         Me.TableAdapterManager.all_clenoviaTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ciselnik_obceTableAdapter = Nothing
         Me.TableAdapterManager.narodnostTableAdapter = Nothing
+        Me.TableAdapterManager.rokyTableAdapter = Nothing
         Me.TableAdapterManager.statna_prislusnostTableAdapter = Nothing
         Me.TableAdapterManager.titul_predTableAdapter = Nothing
         Me.TableAdapterManager.titul_zaTableAdapter = Nothing
@@ -520,7 +522,7 @@ Partial Class zdruzenie
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(343, 46)
+        Me.Label1.Location = New System.Drawing.Point(455, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 3
@@ -529,7 +531,7 @@ Partial Class zdruzenie
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(407, 46)
+        Me.Label2.Location = New System.Drawing.Point(519, 20)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(39, 13)
         Me.Label2.TabIndex = 4
@@ -537,12 +539,14 @@ Partial Class zdruzenie
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(561, 41)
+        Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(240, 36)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(112, 23)
         Me.Button1.TabIndex = 5
-        Me.Button1.Text = "zmaz"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Text = "Vymazať združenie"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'zdruzenie
         '
@@ -558,7 +562,7 @@ Partial Class zdruzenie
         Me.Controls.Add(Me.ZdruzeniaBindingNavigator)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "zdruzenie"
-        Me.Text = "zdruzenie"
+        Me.Text = "Zoznam združení"
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzeniaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()

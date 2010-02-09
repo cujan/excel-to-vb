@@ -644,55 +644,35 @@ Public Class hlavna_aplikacia
         GetOpenFormTitles()
     End Sub
 
-    Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs)
         zdruzenie.Show()
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         zdruzenie_nove.Show()
     End Sub
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         clen_novy.Show()
         clen_novy.BringToFront()
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         clenovia123.Show()
     End Sub
 
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
-        Me.ListBox1.Items.Clear()
-
-        Dim con As New SqlCeConnection(pripojovaci_retazec)
-        Dim com As New SqlCeCommand("SELECT TABLE_NAME  FROM INFORMATION_SCHEMA.TABLES ORDER BY TABLE_NAME; ", con)
-        Dim nazov As String = ""
-
-        con.Open()
-        Dim datareader As SqlCeDataReader = com.ExecuteReader()
-        While datareader.Read
-            nazov = datareader.GetString(0)
-            ListBox1.Items.Add(nazov)
-        End While
 
 
-
-
-        datareader.Close()
-        con.Close()
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-
-    End Sub
-
-    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         zoznam_narodeniny.Show()
         zoznam_narodeniny.BringToFront()
     End Sub
 
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         skusobny_report2.Show()
     End Sub
 
@@ -765,7 +745,7 @@ Public Class hlavna_aplikacia
 
     End Sub
 
-    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         pokusny_form.Show()
         pokusny_form.BringToFront()
     End Sub
