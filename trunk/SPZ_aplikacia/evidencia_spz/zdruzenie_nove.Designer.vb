@@ -886,7 +886,7 @@ Partial Class zdruzenie_nove
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(835, 800)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(835, 838)
         Me.ShapeContainer1.TabIndex = 89
         Me.ShapeContainer1.TabStop = False
         '
@@ -1012,7 +1012,7 @@ Partial Class zdruzenie_nove
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(835, 800)
+        Me.ClientSize = New System.Drawing.Size(835, 838)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox3)

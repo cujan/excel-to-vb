@@ -139,7 +139,6 @@ Partial Class clen_novy
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Brokova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
-        Me.Button2 = New System.Windows.Forms.Button
         Me.rodne_cisloMaskedTextBox = New System.Windows.Forms.MaskedTextBox
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Cislo_plLabel = New System.Windows.Forms.Label
@@ -842,6 +841,7 @@ Partial Class clen_novy
         Me.Button1.TabIndex = 83
         Me.Button1.Text = "zobraz ico"
         Me.Button1.UseVisualStyleBackColor = False
+        Me.Button1.Visible = False
         '
         'uloz_clena_button
         '
@@ -880,7 +880,7 @@ Partial Class clen_novy
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(973, 800)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(973, 841)
         Me.ShapeContainer1.TabIndex = 86
         Me.ShapeContainer1.TabStop = False
         '
@@ -1136,15 +1136,6 @@ Partial Class clen_novy
         Me.Gulova_zbranComboBox.Size = New System.Drawing.Size(62, 21)
         Me.Gulova_zbranComboBox.TabIndex = 1
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(694, 12)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 95
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'rodne_cisloMaskedTextBox
         '
         Me.rodne_cisloMaskedTextBox.Culture = New System.Globalization.CultureInfo("")
@@ -1178,10 +1169,9 @@ Partial Class clen_novy
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(973, 800)
+        Me.ClientSize = New System.Drawing.Size(973, 841)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.rodne_cisloMaskedTextBox)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Gulova_zbranComboBox)
         Me.Controls.Add(Me.Brokova_zbranComboBox)
         Me.Controls.Add(MestoLabel)
@@ -1358,7 +1348,6 @@ Partial Class clen_novy
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents Gulova_zbranComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents Brokova_zbranComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents rodne_cisloMaskedTextBox As System.Windows.Forms.MaskedTextBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 End Class

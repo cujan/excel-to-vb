@@ -153,17 +153,17 @@ Partial Class hlavna_aplikacia
         Me.EmailTextBox = New System.Windows.Forms.TextBox
         Me.FaxTextBox = New System.Windows.Forms.TextBox
         Me.TelefonTextBox = New System.Windows.Forms.TextBox
-        Me.kontakt_label = New System.Windows.Forms.Label
         Me.PscTextBox = New System.Windows.Forms.TextBox
         Me.MestoTextBox = New System.Windows.Forms.TextBox
         Me.UlicaTextBox = New System.Windows.Forms.TextBox
-        Me.adresa_label = New System.Windows.Forms.Label
         Me.Nazov_organizacieTextBox = New System.Windows.Forms.TextBox
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.SpzDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Vseobecne_udajeTableAdapter = New evidencia_spz.spzDataSetTableAdapters.vseobecne_udajeTableAdapter
         Me.TableAdapterManager = New evidencia_spz.spzDataSetTableAdapters.TableAdapterManager
+        Me.adresa_groupbox = New System.Windows.Forms.GroupBox
+        Me.kontakt_GroupBox = New System.Windows.Forms.GroupBox
         TelefonLabel = New System.Windows.Forms.Label
         FaxLabel = New System.Windows.Forms.Label
         EmailLabel = New System.Windows.Forms.Label
@@ -196,12 +196,15 @@ Partial Class hlavna_aplikacia
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         CType(Me.SpzDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.adresa_groupbox.SuspendLayout()
+        Me.kontakt_GroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'TelefonLabel
         '
         TelefonLabel.AutoSize = True
-        TelefonLabel.Location = New System.Drawing.Point(476, 178)
+        TelefonLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TelefonLabel.Location = New System.Drawing.Point(43, 27)
         TelefonLabel.Name = "TelefonLabel"
         TelefonLabel.Size = New System.Drawing.Size(25, 13)
         TelefonLabel.TabIndex = 6
@@ -210,7 +213,8 @@ Partial Class hlavna_aplikacia
         'FaxLabel
         '
         FaxLabel.AutoSize = True
-        FaxLabel.Location = New System.Drawing.Point(477, 194)
+        FaxLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        FaxLabel.Location = New System.Drawing.Point(44, 43)
         FaxLabel.Name = "FaxLabel"
         FaxLabel.Size = New System.Drawing.Size(24, 13)
         FaxLabel.TabIndex = 8
@@ -219,7 +223,8 @@ Partial Class hlavna_aplikacia
         'EmailLabel
         '
         EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(469, 210)
+        EmailLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        EmailLabel.Location = New System.Drawing.Point(36, 59)
         EmailLabel.Name = "EmailLabel"
         EmailLabel.Size = New System.Drawing.Size(32, 13)
         EmailLabel.TabIndex = 10
@@ -228,7 +233,8 @@ Partial Class hlavna_aplikacia
         'WebLabel
         '
         WebLabel.AutoSize = True
-        WebLabel.Location = New System.Drawing.Point(436, 224)
+        WebLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        WebLabel.Location = New System.Drawing.Point(3, 73)
         WebLabel.Name = "WebLabel"
         WebLabel.Size = New System.Drawing.Size(65, 13)
         WebLabel.TabIndex = 12
@@ -710,6 +716,8 @@ Partial Class hlavna_aplikacia
         '
         Me.hlavny_splitter.Panel2.AutoScroll = True
         Me.hlavny_splitter.Panel2.BackColor = System.Drawing.Color.PaleGreen
+        Me.hlavny_splitter.Panel2.Controls.Add(Me.kontakt_GroupBox)
+        Me.hlavny_splitter.Panel2.Controls.Add(Me.adresa_groupbox)
         Me.hlavny_splitter.Panel2.Controls.Add(Verzia_aplikacieLabel)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Verzia_aplikacieLabel1)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.BindingNavigator1)
@@ -724,25 +732,12 @@ Partial Class hlavna_aplikacia
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Reg_cisloTextBox)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.poznamky)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Label2)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.Label1)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.upravit_udaje_button)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.lomene_label)
         Me.hlavny_splitter.Panel2.Controls.Add(DicLabel)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.DicTextBox)
         Me.hlavny_splitter.Panel2.Controls.Add(IcoLabel)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.IcoTextBox)
-        Me.hlavny_splitter.Panel2.Controls.Add(WebLabel)
-        Me.hlavny_splitter.Panel2.Controls.Add(EmailLabel)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.EmailTextBox)
-        Me.hlavny_splitter.Panel2.Controls.Add(FaxLabel)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.FaxTextBox)
-        Me.hlavny_splitter.Panel2.Controls.Add(TelefonLabel)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.TelefonTextBox)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.kontakt_label)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.PscTextBox)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.MestoTextBox)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.UlicaTextBox)
-        Me.hlavny_splitter.Panel2.Controls.Add(Me.adresa_label)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.Nazov_organizacieTextBox)
         Me.hlavny_splitter.Panel2.Controls.Add(Me.ShapeContainer1)
         Me.hlavny_splitter.Size = New System.Drawing.Size(1092, 540)
@@ -1373,8 +1368,8 @@ Partial Class hlavna_aplikacia
         '
         Me.Label1.AutoSize = True
         Me.Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneudajeBindingSource, "web", True))
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Label1.Location = New System.Drawing.Point(505, 224)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(69, 73)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(45, 13)
         Me.Label1.TabIndex = 20
@@ -1384,7 +1379,7 @@ Partial Class hlavna_aplikacia
         '
         Me.upravit_udaje_button.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.upravit_udaje_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.upravit_udaje_button.Location = New System.Drawing.Point(555, 266)
+        Me.upravit_udaje_button.Location = New System.Drawing.Point(555, 284)
         Me.upravit_udaje_button.Name = "upravit_udaje_button"
         Me.upravit_udaje_button.Size = New System.Drawing.Size(101, 23)
         Me.upravit_udaje_button.TabIndex = 19
@@ -1429,7 +1424,7 @@ Partial Class hlavna_aplikacia
         Me.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneudajeBindingSource, "email", True))
         Me.EmailTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EmailTextBox.Location = New System.Drawing.Point(503, 209)
+        Me.EmailTextBox.Location = New System.Drawing.Point(70, 58)
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.ReadOnly = True
         Me.EmailTextBox.Size = New System.Drawing.Size(140, 13)
@@ -1441,7 +1436,7 @@ Partial Class hlavna_aplikacia
         Me.FaxTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.FaxTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneudajeBindingSource, "fax", True))
         Me.FaxTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FaxTextBox.Location = New System.Drawing.Point(503, 194)
+        Me.FaxTextBox.Location = New System.Drawing.Point(70, 43)
         Me.FaxTextBox.Name = "FaxTextBox"
         Me.FaxTextBox.ReadOnly = True
         Me.FaxTextBox.Size = New System.Drawing.Size(140, 13)
@@ -1453,21 +1448,11 @@ Partial Class hlavna_aplikacia
         Me.TelefonTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TelefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneudajeBindingSource, "telefon", True))
         Me.TelefonTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TelefonTextBox.Location = New System.Drawing.Point(503, 178)
+        Me.TelefonTextBox.Location = New System.Drawing.Point(70, 27)
         Me.TelefonTextBox.Name = "TelefonTextBox"
         Me.TelefonTextBox.ReadOnly = True
         Me.TelefonTextBox.Size = New System.Drawing.Size(140, 13)
         Me.TelefonTextBox.TabIndex = 7
-        '
-        'kontakt_label
-        '
-        Me.kontakt_label.AutoSize = True
-        Me.kontakt_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.kontakt_label.Location = New System.Drawing.Point(430, 150)
-        Me.kontakt_label.Name = "kontakt_label"
-        Me.kontakt_label.Size = New System.Drawing.Size(71, 20)
-        Me.kontakt_label.TabIndex = 6
-        Me.kontakt_label.Text = "Kontakt"
         '
         'PscTextBox
         '
@@ -1475,7 +1460,7 @@ Partial Class hlavna_aplikacia
         Me.PscTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.PscTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneudajeBindingSource, "psc", True))
         Me.PscTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PscTextBox.Location = New System.Drawing.Point(313, 191)
+        Me.PscTextBox.Location = New System.Drawing.Point(128, 57)
         Me.PscTextBox.Name = "PscTextBox"
         Me.PscTextBox.ReadOnly = True
         Me.PscTextBox.Size = New System.Drawing.Size(52, 13)
@@ -1487,7 +1472,7 @@ Partial Class hlavna_aplikacia
         Me.MestoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.MestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneudajeBindingSource, "mesto", True))
         Me.MestoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MestoTextBox.Location = New System.Drawing.Point(235, 191)
+        Me.MestoTextBox.Location = New System.Drawing.Point(50, 57)
         Me.MestoTextBox.Name = "MestoTextBox"
         Me.MestoTextBox.ReadOnly = True
         Me.MestoTextBox.Size = New System.Drawing.Size(74, 13)
@@ -1499,21 +1484,11 @@ Partial Class hlavna_aplikacia
         Me.UlicaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.UlicaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneudajeBindingSource, "ulica", True))
         Me.UlicaTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UlicaTextBox.Location = New System.Drawing.Point(235, 173)
+        Me.UlicaTextBox.Location = New System.Drawing.Point(50, 39)
         Me.UlicaTextBox.Name = "UlicaTextBox"
         Me.UlicaTextBox.ReadOnly = True
         Me.UlicaTextBox.Size = New System.Drawing.Size(120, 13)
         Me.UlicaTextBox.TabIndex = 3
-        '
-        'adresa_label
-        '
-        Me.adresa_label.AutoSize = True
-        Me.adresa_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.adresa_label.Location = New System.Drawing.Point(166, 150)
-        Me.adresa_label.Name = "adresa_label"
-        Me.adresa_label.Size = New System.Drawing.Size(66, 20)
-        Me.adresa_label.TabIndex = 2
-        Me.adresa_label.Text = "Adresa"
         '
         'Nazov_organizacieTextBox
         '
@@ -1521,11 +1496,12 @@ Partial Class hlavna_aplikacia
         Me.Nazov_organizacieTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Nazov_organizacieTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneudajeBindingSource, "nazov_organizacie", True))
         Me.Nazov_organizacieTextBox.Font = New System.Drawing.Font("Candara", 22.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Nazov_organizacieTextBox.Location = New System.Drawing.Point(130, 20)
+        Me.Nazov_organizacieTextBox.Location = New System.Drawing.Point(104, 20)
         Me.Nazov_organizacieTextBox.Name = "Nazov_organizacieTextBox"
         Me.Nazov_organizacieTextBox.ReadOnly = True
         Me.Nazov_organizacieTextBox.Size = New System.Drawing.Size(604, 36)
         Me.Nazov_organizacieTextBox.TabIndex = 1
+        Me.Nazov_organizacieTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'ShapeContainer1
         '
@@ -1571,6 +1547,39 @@ Partial Class hlavna_aplikacia
         Me.TableAdapterManager.vseobecne_udajeTableAdapter = Me.Vseobecne_udajeTableAdapter
         Me.TableAdapterManager.zdruzeniaTableAdapter = Nothing
         '
+        'adresa_groupbox
+        '
+        Me.adresa_groupbox.Controls.Add(Me.PscTextBox)
+        Me.adresa_groupbox.Controls.Add(Me.UlicaTextBox)
+        Me.adresa_groupbox.Controls.Add(Me.MestoTextBox)
+        Me.adresa_groupbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.adresa_groupbox.ForeColor = System.Drawing.Color.Black
+        Me.adresa_groupbox.Location = New System.Drawing.Point(164, 124)
+        Me.adresa_groupbox.Name = "adresa_groupbox"
+        Me.adresa_groupbox.Size = New System.Drawing.Size(196, 100)
+        Me.adresa_groupbox.TabIndex = 41
+        Me.adresa_groupbox.TabStop = False
+        Me.adresa_groupbox.Text = "Adresa"
+        '
+        'kontakt_GroupBox
+        '
+        Me.kontakt_GroupBox.Controls.Add(EmailLabel)
+        Me.kontakt_GroupBox.Controls.Add(Me.TelefonTextBox)
+        Me.kontakt_GroupBox.Controls.Add(TelefonLabel)
+        Me.kontakt_GroupBox.Controls.Add(Me.FaxTextBox)
+        Me.kontakt_GroupBox.Controls.Add(FaxLabel)
+        Me.kontakt_GroupBox.Controls.Add(Me.EmailTextBox)
+        Me.kontakt_GroupBox.Controls.Add(WebLabel)
+        Me.kontakt_GroupBox.Controls.Add(Me.Label1)
+        Me.kontakt_GroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.kontakt_GroupBox.ForeColor = System.Drawing.Color.Black
+        Me.kontakt_GroupBox.Location = New System.Drawing.Point(439, 124)
+        Me.kontakt_GroupBox.Name = "kontakt_GroupBox"
+        Me.kontakt_GroupBox.Size = New System.Drawing.Size(229, 100)
+        Me.kontakt_GroupBox.TabIndex = 42
+        Me.kontakt_GroupBox.TabStop = False
+        Me.kontakt_GroupBox.Text = "Kontakt"
+        '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1615,6 +1624,10 @@ Partial Class hlavna_aplikacia
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
         CType(Me.SpzDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.adresa_groupbox.ResumeLayout(False)
+        Me.adresa_groupbox.PerformLayout()
+        Me.kontakt_GroupBox.ResumeLayout(False)
+        Me.kontakt_GroupBox.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1691,11 +1704,9 @@ Partial Class hlavna_aplikacia
     Friend WithEvents EmailTextBox As System.Windows.Forms.TextBox
     Friend WithEvents FaxTextBox As System.Windows.Forms.TextBox
     Friend WithEvents TelefonTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents kontakt_label As System.Windows.Forms.Label
     Friend WithEvents PscTextBox As System.Windows.Forms.TextBox
     Friend WithEvents MestoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents UlicaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents adresa_label As System.Windows.Forms.Label
     Friend WithEvents Nazov_organizacieTextBox As System.Windows.Forms.TextBox
     Friend WithEvents DicTextBox As System.Windows.Forms.TextBox
     Friend WithEvents IcoTextBox As System.Windows.Forms.TextBox
@@ -1750,5 +1761,7 @@ Partial Class hlavna_aplikacia
     Friend WithEvents Vseobecne_udajeTableAdapter As evidencia_spz.spzDataSetTableAdapters.vseobecne_udajeTableAdapter
     Friend WithEvents Verzia_aplikacieLabel1 As System.Windows.Forms.Label
     Friend WithEvents TableAdapterManager As evidencia_spz.spzDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents kontakt_GroupBox As System.Windows.Forms.GroupBox
+    Friend WithEvents adresa_groupbox As System.Windows.Forms.GroupBox
 
 End Class

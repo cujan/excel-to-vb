@@ -153,7 +153,6 @@ Partial Class clen_edituj
         Me.Ciselnik_obceTableAdapter = New evidencia_spz.obceDataSetTableAdapters.ciselnik_obceTableAdapter
         Me.Brokova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
-        Me.Button2 = New System.Windows.Forms.Button
         Me.Titul_pred_idComboBox = New System.Windows.Forms.ComboBox
         Me.TitulpredBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Titul_predTableAdapter = New evidencia_spz.spzDataSetTableAdapters.titul_predTableAdapter
@@ -1112,7 +1111,7 @@ Partial Class clen_edituj
         Me.PoznamkyTextBox.Location = New System.Drawing.Point(209, 784)
         Me.PoznamkyTextBox.Multiline = True
         Me.PoznamkyTextBox.Name = "PoznamkyTextBox"
-        Me.PoznamkyTextBox.Size = New System.Drawing.Size(494, 123)
+        Me.PoznamkyTextBox.Size = New System.Drawing.Size(494, 96)
         Me.PoznamkyTextBox.TabIndex = 70
         '
         'Titul_pred_idTextBox
@@ -1350,15 +1349,6 @@ Partial Class clen_edituj
         Me.Gulova_zbranComboBox.Size = New System.Drawing.Size(64, 21)
         Me.Gulova_zbranComboBox.TabIndex = 98
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(596, 36)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 99
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Titul_pred_idComboBox
         '
         Me.Titul_pred_idComboBox.DataSource = Me.TitulpredBindingSource
@@ -1514,7 +1504,7 @@ Partial Class clen_edituj
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1240, 907)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1257, 927)
         Me.ShapeContainer1.TabIndex = 108
         Me.ShapeContainer1.TabStop = False
         '
@@ -1558,7 +1548,7 @@ Partial Class clen_edituj
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(1257, 812)
+        Me.ClientSize = New System.Drawing.Size(1257, 927)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Label13)
@@ -1580,7 +1570,6 @@ Partial Class clen_edituj
         Me.Controls.Add(Me.Narodnost_idComboBox)
         Me.Controls.Add(Me.Titul_za_idComboBox)
         Me.Controls.Add(Me.Titul_pred_idComboBox)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Gulova_zbranComboBox)
         Me.Controls.Add(Me.Brokova_zbranComboBox)
         Me.Controls.Add(Me.MestoComboBox)
@@ -1767,7 +1756,6 @@ Partial Class clen_edituj
     Friend WithEvents Ciselnik_obceTableAdapter As evidencia_spz.obceDataSetTableAdapters.ciselnik_obceTableAdapter
     Friend WithEvents Brokova_zbranComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents Gulova_zbranComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Titul_pred_idComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents TitulpredBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Titul_predTableAdapter As evidencia_spz.spzDataSetTableAdapters.titul_predTableAdapter

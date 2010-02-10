@@ -26,6 +26,8 @@ Partial Class zdruzenie
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(zdruzenie))
         Me.ZdruzeniaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.ZdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SpzDataSet = New evidencia_spz.spzDataSet
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
@@ -38,10 +40,6 @@ Partial Class zdruzenie
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ZdruzeniaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.ZdruzeniaDataGridView = New System.Windows.Forms.DataGridView
-        Me.zavriet_kartu_button = New System.Windows.Forms.Button
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button
         Me.IcoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.ICOclenoviaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.ICOpsyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -85,17 +83,20 @@ Partial Class zdruzenie
         Me.PessrnciaskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.PesmalaplanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.PesmalaskutocnostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ZdruzeniaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SpzDataSet = New evidencia_spz.spzDataSet
+        Me.zavriet_kartu_button = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Button1 = New System.Windows.Forms.Button
         Me.ZdruzeniaTableAdapter = New evidencia_spz.spzDataSetTableAdapters.zdruzeniaTableAdapter
         Me.TableAdapterManager = New evidencia_spz.spzDataSetTableAdapters.TableAdapterManager
         Me.Label3 = New System.Windows.Forms.Label
         Me.nazovTextBox = New System.Windows.Forms.TextBox
+        Me.Panel1 = New System.Windows.Forms.Panel
         CType(Me.ZdruzeniaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ZdruzeniaBindingNavigator.SuspendLayout()
-        CType(Me.ZdruzeniaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ZdruzeniaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ZdruzeniaBindingNavigator
@@ -125,6 +126,16 @@ Partial Class zdruzenie
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'ZdruzeniaBindingSource
+        '
+        Me.ZdruzeniaBindingSource.DataMember = "zdruzenia"
+        Me.ZdruzeniaBindingSource.DataSource = Me.SpzDataSet
+        '
+        'SpzDataSet
+        '
+        Me.SpzDataSet.DataSetName = "spzDataSet"
+        Me.SpzDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -216,51 +227,11 @@ Partial Class zdruzenie
         Me.ZdruzeniaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ZdruzeniaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IcoDataGridViewTextBoxColumn, Me.ICOclenoviaDataGridViewTextBoxColumn, Me.ICOpsyDataGridViewTextBoxColumn, Me.ICOtrofejeDataGridViewTextBoxColumn, Me.NazovDataGridViewTextBoxColumn, Me.SidloDataGridViewTextBoxColumn, Me.PredsedaDataGridViewTextBoxColumn, Me.PredsedatelefonDataGridViewTextBoxColumn, Me.PolovnyhospodarDataGridViewTextBoxColumn, Me.PolovnyhospodartelefonDataGridViewTextBoxColumn, Me.DicDataGridViewTextBoxColumn, Me.BankaDataGridViewTextBoxColumn, Me.CislouctuDataGridViewTextBoxColumn, Me.ChovatelskaoblastDataGridViewTextBoxColumn, Me.CisloreviruDataGridViewTextBoxColumn, Me.VymeraDataGridViewTextBoxColumn, Me.LesDataGridViewTextBoxColumn, Me.JeleniaDataGridViewTextBoxColumn, Me.SrnciaDataGridViewTextBoxColumn, Me.DiviaciaDataGridViewTextBoxColumn, Me.BazantDataGridViewTextBoxColumn, Me.InaDataGridViewTextBoxColumn, Me.PlatnostnajomnejzmluvydoDataGridViewTextBoxColumn, Me.StavaceplanDataGridViewTextBoxColumn, Me.StavaceskutocnostDataGridViewTextBoxColumn, Me.SliediceplanDataGridViewTextBoxColumn, Me.SliediceskutocnostDataGridViewTextBoxColumn, Me.SlovenskykopovplanDataGridViewTextBoxColumn, Me.SlovenskykopovskutocnostDataGridViewTextBoxColumn, Me.OstatneduriceplanDataGridViewTextBoxColumn, Me.OstatneduriceskutocnostDataGridViewTextBoxColumn, Me.BrlohareplanDataGridViewTextBoxColumn, Me.BrlohareskutocnostDataGridViewTextBoxColumn, Me.FarbiareplanDataGridViewTextBoxColumn, Me.FarbiareskutocnostDataGridViewTextBoxColumn, Me.PesjeleniaplanDataGridViewTextBoxColumn, Me.PesjeleniaskutocnostDataGridViewTextBoxColumn, Me.PesdiviaciaplanDataGridViewTextBoxColumn, Me.PesdiviaciaskutocnostDataGridViewTextBoxColumn, Me.PessrnciaplanDataGridViewTextBoxColumn, Me.PessrnciaskutocnostDataGridViewTextBoxColumn, Me.PesmalaplanDataGridViewTextBoxColumn, Me.PesmalaskutocnostDataGridViewTextBoxColumn})
         Me.ZdruzeniaDataGridView.DataSource = Me.ZdruzeniaBindingSource
-        Me.ZdruzeniaDataGridView.Location = New System.Drawing.Point(38, 162)
+        Me.ZdruzeniaDataGridView.Location = New System.Drawing.Point(12, 80)
         Me.ZdruzeniaDataGridView.Name = "ZdruzeniaDataGridView"
         Me.ZdruzeniaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ZdruzeniaDataGridView.Size = New System.Drawing.Size(664, 257)
+        Me.ZdruzeniaDataGridView.Size = New System.Drawing.Size(868, 363)
         Me.ZdruzeniaDataGridView.TabIndex = 1
-        '
-        'zavriet_kartu_button
-        '
-        Me.zavriet_kartu_button.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.zavriet_kartu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.zavriet_kartu_button.Location = New System.Drawing.Point(155, 36)
-        Me.zavriet_kartu_button.Name = "zavriet_kartu_button"
-        Me.zavriet_kartu_button.Size = New System.Drawing.Size(79, 23)
-        Me.zavriet_kartu_button.TabIndex = 2
-        Me.zavriet_kartu_button.Text = "Zavrieť kartu"
-        Me.zavriet_kartu_button.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(455, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Label1"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(519, 20)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Label2"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(240, 36)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Vymazať združenie"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'IcoDataGridViewTextBoxColumn
         '
@@ -520,15 +491,45 @@ Partial Class zdruzenie
         Me.PesmalaskutocnostDataGridViewTextBoxColumn.HeaderText = "pes_mala_skutocnost"
         Me.PesmalaskutocnostDataGridViewTextBoxColumn.Name = "PesmalaskutocnostDataGridViewTextBoxColumn"
         '
-        'ZdruzeniaBindingSource
+        'zavriet_kartu_button
         '
-        Me.ZdruzeniaBindingSource.DataMember = "zdruzenia"
-        Me.ZdruzeniaBindingSource.DataSource = Me.SpzDataSet
+        Me.zavriet_kartu_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.zavriet_kartu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.zavriet_kartu_button.Location = New System.Drawing.Point(336, 15)
+        Me.zavriet_kartu_button.Name = "zavriet_kartu_button"
+        Me.zavriet_kartu_button.Size = New System.Drawing.Size(79, 23)
+        Me.zavriet_kartu_button.TabIndex = 2
+        Me.zavriet_kartu_button.Text = "Zavrieť kartu"
+        Me.zavriet_kartu_button.UseVisualStyleBackColor = False
         '
-        'SpzDataSet
+        'Label1
         '
-        Me.SpzDataSet.DataSetName = "spzDataSet"
-        Me.SpzDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(663, 25)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Label1"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(727, 25)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Label2"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(421, 15)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(112, 23)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Vymazať združenie"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'ZdruzeniaTableAdapter
         '
@@ -553,25 +554,34 @@ Partial Class zdruzenie
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(82, 113)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(9, 57)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(38, 13)
+        Me.Label3.Size = New System.Drawing.Size(264, 13)
         Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Nazov"
+        Me.Label3.Text = "Rýchle vyhľadávanie podľa názvu združenia:"
         '
         'nazovTextBox
         '
-        Me.nazovTextBox.Location = New System.Drawing.Point(155, 106)
+        Me.nazovTextBox.Location = New System.Drawing.Point(279, 54)
         Me.nazovTextBox.Name = "nazovTextBox"
-        Me.nazovTextBox.Size = New System.Drawing.Size(207, 20)
+        Me.nazovTextBox.Size = New System.Drawing.Size(111, 20)
         Me.nazovTextBox.TabIndex = 7
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(632, 10)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(217, 49)
+        Me.Panel1.TabIndex = 8
         '
         'zdruzenie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(759, 602)
+        Me.ClientSize = New System.Drawing.Size(961, 602)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.nazovTextBox)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button1)
@@ -586,9 +596,9 @@ Partial Class zdruzenie
         CType(Me.ZdruzeniaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ZdruzeniaBindingNavigator.ResumeLayout(False)
         Me.ZdruzeniaBindingNavigator.PerformLayout()
-        CType(Me.ZdruzeniaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ZdruzeniaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -660,4 +670,5 @@ Partial Class zdruzenie
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents nazovTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class
