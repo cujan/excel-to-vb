@@ -84,7 +84,7 @@ ORDER BY clen_priezvisko</CommandText>
     </DataSet>
   </DataSets>
   <Code />
-  <Width>19cm</Width>
+  <Width>21.27645cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
@@ -129,11 +129,36 @@ ORDER BY clen_priezvisko</CommandText>
       <Table Name="table1">
         <DataSetName>zoznam_kontStrelby_all_clenovia</DataSetName>
         <Top>1cm</Top>
-        <Width>18.02645cm</Width>
+        <Width>19.52645cm</Width>
         <Details>
           <TableRows>
             <TableRow>
               <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=RowNumber("table1")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
                 <TableCell>
                   <ReportItems>
                     <Textbox Name="meno">
@@ -300,6 +325,33 @@ ORDER BY clen_priezvisko</CommandText>
               <TableCells>
                 <TableCell>
                   <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#365838</BackgroundColor>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>13</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>P.Č.</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
                     <Textbox Name="textbox2">
                       <rd:DefaultName>textbox2</rd:DefaultName>
                       <Style>
@@ -319,7 +371,7 @@ ORDER BY clen_priezvisko</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>11</ZIndex>
+                      <ZIndex>12</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Meno</Value>
                     </Textbox>
@@ -346,7 +398,7 @@ ORDER BY clen_priezvisko</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>10</ZIndex>
+                      <ZIndex>11</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>RČ</Value>
                     </Textbox>
@@ -373,7 +425,7 @@ ORDER BY clen_priezvisko</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>9</ZIndex>
+                      <ZIndex>10</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Bydlisko</Value>
                     </Textbox>
@@ -400,7 +452,7 @@ ORDER BY clen_priezvisko</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>8</ZIndex>
+                      <ZIndex>9</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Združenie</Value>
                     </Textbox>
@@ -427,7 +479,7 @@ ORDER BY clen_priezvisko</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>7</ZIndex>
+                      <ZIndex>8</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Typ zbrane</Value>
                     </Textbox>
@@ -454,7 +506,7 @@ ORDER BY clen_priezvisko</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>6</ZIndex>
+                      <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Posl. streľby</Value>
                     </Textbox>
@@ -467,6 +519,9 @@ ORDER BY clen_priezvisko</CommandText>
           <RepeatOnNewPage>true</RepeatOnNewPage>
         </Header>
         <TableColumns>
+          <TableColumn>
+            <Width>1.5cm</Width>
+          </TableColumn>
           <TableColumn>
             <Width>3cm</Width>
           </TableColumn>

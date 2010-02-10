@@ -1111,7 +1111,9 @@ Partial Class zdruzenie_edituj
         Me.TableAdapterManager._456_clenoviaTableAdapter = Nothing
         Me.TableAdapterManager.all_clenoviaTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ciselnik_obceTableAdapter = Nothing
         Me.TableAdapterManager.narodnostTableAdapter = Nothing
+        Me.TableAdapterManager.rokyTableAdapter = Nothing
         Me.TableAdapterManager.statna_prislusnostTableAdapter = Nothing
         Me.TableAdapterManager.titul_predTableAdapter = Nothing
         Me.TableAdapterManager.titul_zaTableAdapter = Nothing
@@ -1138,6 +1140,7 @@ Partial Class zdruzenie_edituj
         'PredsedaDataSet
         '
         Me.PredsedaDataSet.DataSetName = "predsedaDataSet"
+        Me.PredsedaDataSet.EnforceConstraints = False
         Me.PredsedaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'AllclenoviaBindingSource
@@ -1148,6 +1151,7 @@ Partial Class zdruzenie_edituj
         'All_clenoviaDataSet
         '
         Me.All_clenoviaDataSet.DataSetName = "all_clenoviaDataSet"
+        Me.All_clenoviaDataSet.EnforceConstraints = False
         Me.All_clenoviaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'All_clenoviaTableAdapter
@@ -1178,6 +1182,7 @@ Partial Class zdruzenie_edituj
         'HospodarDataSet
         '
         Me.HospodarDataSet.DataSetName = "hospodarDataSet"
+        Me.HospodarDataSet.EnforceConstraints = False
         Me.HospodarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'All_clenoviaTableAdapter1

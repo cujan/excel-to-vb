@@ -45,6 +45,7 @@
         clen_edituj.Show()
         clen_edituj.BringToFront()
         hlavna_aplikacia.GetOpenFormTitles()
+        Me.priezviskoTextBox.Text = ""
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -65,5 +66,10 @@
         hlavna_aplikacia.vytvor_all_clenovia()
         Me.All_clenoviaTableAdapter.Fill(Me.All_clenoviaDataSet.all_clenovia)
 
+    End Sub
+
+    Private Sub priezviskoTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles priezviskoTextBox.TextChanged
+        Dim priezvisko As String = Me.priezviskoTextBox.Text & "%"
+        Me.All_clenoviaTableAdapter.FillBy_priezvisko(Me.All_clenoviaDataSet.all_clenovia, priezvisko)
     End Sub
 End Class

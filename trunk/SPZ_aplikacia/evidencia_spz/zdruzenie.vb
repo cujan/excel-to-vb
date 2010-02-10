@@ -45,6 +45,7 @@
         zdruzenie_edituj.Show()
         zdruzenie_edituj.BringToFront()
         hlavna_aplikacia.GetOpenFormTitles()
+        Me.nazovTextBox.Text = ""
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -66,5 +67,10 @@
         Me.ZdruzeniaTableAdapter.Fill(Me.SpzDataSet.zdruzenia)
 
 
+    End Sub
+
+    Private Sub nazovTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nazovTextBox.TextChanged
+        Dim nazov As String = Me.nazovTextBox.Text & "%"
+        Me.ZdruzeniaTableAdapter.FillBy_nazov(Me.SpzDataSet.zdruzenia, nazov)
     End Sub
 End Class
