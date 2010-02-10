@@ -2343,7 +2343,7 @@ Namespace all_clenoviaDataSetTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(1) {}
+            Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(2) {}
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, miesto_narodenia"& _ 
@@ -2359,7 +2359,23 @@ Namespace all_clenoviaDataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT brokova_zbran, cislo_clenskeho_preukazu_spz, cislo_dokladu_clenske, cislo_"& _ 
+            Me._commandCollection(1).CommandText = "SELECT     cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, miesto_narod"& _ 
+                "enia, okres_narodenia, okres_bydliska, psc, telefon, cislo_op, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"               "& _ 
+                "       datum_vydania_op, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_cle"& _ 
+                "nskeho_preukazu_spz, clen_spz_od, clenske_do, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      cislo_dokl"& _ 
+                "adu_clenske, clen_pz, skuska_z_polovnictva, miesto_skusky_z_polovnictva, skuska_"& _ 
+                "pre_polovnych_hospodarov, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      miesto_skusky_pre_polovnych_ho"& _ 
+                "spodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsej_skusky_z_polovnictva, broko"& _ 
+                "va_zbran, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      kontrolne_strelby_brok, gulova_zbran, kontroln"& _ 
+                "e_strelby_gula, najvyzsie_vyznamenanie, vyznamenanie_kedy, udelene_tresty, pozna"& _ 
+                "mky, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      titul_pred_id, titul_za_id, narodnost_id, statna_pr"& _ 
+                "islusnost_id, ico_clenovia, mesto, ulica, ulica_cislo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         all_clenovia"& _ 
+                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (priezvisko LIKE @priezvisko)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@priezvisko", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "priezvisko", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(2) = New Global.System.Data.SqlServerCe.SqlCeCommand
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT brokova_zbran, cislo_clenskeho_preukazu_spz, cislo_dokladu_clenske, cislo_"& _ 
                 "op, cislo_pl, cislo_zp, clen_pz, clen_spz_od, clenske_do, datum_narodenia, datum"& _ 
                 "_vydania_op, datum_vydania_pl, datum_vydania_zp, gulova_zbran, ico_clenovia, kon"& _ 
                 "trolne_strelby_brok, kontrolne_strelby_gula, meno, mesto, miesto_narodenia, mies"& _ 
@@ -2369,8 +2385,8 @@ Namespace all_clenoviaDataSetTableAdapters
                 "rov, skuska_z_polovnictva, statna_prislusnost_id, telefon, titul_pred_id, titul_"& _ 
                 "za_id, udelene_tresty, ulica, ulica_cislo, vyznamenanie_kedy, vyzsia_skuska_z_po"& _ 
                 "lovnictva FROM all_clenovia WHERE (rodne_cislo = @Param1)"
-            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param1", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "rodne_cislo", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param1", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "rodne_cislo", Global.System.Data.DataRowVersion.Current, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2398,8 +2414,40 @@ Namespace all_clenoviaDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy_rodnecislo(ByVal dataTable As all_clenoviaDataSet.all_clenoviaDataTable, ByVal Param1 As String) As Integer
+        Public Overloads Overridable Function FillBy_priezvisko(ByVal dataTable As all_clenoviaDataSet.all_clenoviaDataTable, ByVal priezvisko As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (priezvisko Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(priezvisko,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy_priezvisko(ByVal priezvisko As String) As all_clenoviaDataSet.all_clenoviaDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (priezvisko Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(priezvisko,String)
+            End If
+            Dim dataTable As all_clenoviaDataSet.all_clenoviaDataTable = New all_clenoviaDataSet.all_clenoviaDataTable
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy_rodnecislo(ByVal dataTable As all_clenoviaDataSet.all_clenoviaDataTable, ByVal Param1 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
             If (Param1 Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -2416,7 +2464,7 @@ Namespace all_clenoviaDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
         Public Overloads Overridable Function GetDataBy_rodnecislo(ByVal Param1 As String) As all_clenoviaDataSet.all_clenoviaDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
             If (Param1 Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else

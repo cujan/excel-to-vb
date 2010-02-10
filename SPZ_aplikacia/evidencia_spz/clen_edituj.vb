@@ -297,7 +297,7 @@
             con.Close()
             hlavna_aplikacia.vytvor_all_clenovia()
             clenovia_all.All_clenoviaTableAdapter.Fill(clenovia_all.All_clenoviaDataSet.all_clenovia)
-            MsgBox("Člen bol úspešne upravený.", "Info")
+            MsgBox("Člen bol úspešne upravený.")
             hlavna_aplikacia.removeFormFromList(Me.Text)
             Me.Close()
         Else

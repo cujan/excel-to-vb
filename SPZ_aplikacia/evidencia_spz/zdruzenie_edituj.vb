@@ -158,7 +158,7 @@
         con.Close()
 
         zdruzenie.ZdruzeniaTableAdapter.Fill(zdruzenie.SpzDataSet.zdruzenia)
-        MsgBox("Združenie úspešne upravené.", "Info")
+        MsgBox("Združenie úspešne upravené.")
         hlavna_aplikacia.removeFormFromList(Me.Text)
         Me.Close()
 

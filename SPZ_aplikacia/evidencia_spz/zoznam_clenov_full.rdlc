@@ -126,7 +126,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
     </DataSet>
   </DataSets>
   <Code />
-  <Width>26.75cm</Width>
+  <Width>29.75cm</Width>
   <Body>
     <ColumnSpacing>0.5cm</ColumnSpacing>
     <ReportItems>
@@ -171,10 +171,36 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
       <Table Name="table1">
         <DataSetName>zoznam_clenov_all_clenovia</DataSetName>
         <Top>1.25cm</Top>
+        <Width>28.30291cm</Width>
         <Details>
           <TableRows>
             <TableRow>
               <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>9pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>13</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=RowNumber("table1")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
                 <TableCell>
                   <ReportItems>
                     <Textbox Name="meno">
@@ -519,6 +545,33 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
               <TableCells>
                 <TableCell>
                   <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#365838</BackgroundColor>
+                        <BorderColor>
+                          <Default>DarkGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>27</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>P.Č.</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
                     <Textbox Name="textbox2">
                       <rd:DefaultName>textbox2</rd:DefaultName>
                       <Style>
@@ -538,7 +591,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>25</ZIndex>
+                      <ZIndex>26</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Meno</Value>
                     </Textbox>
@@ -565,7 +618,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>24</ZIndex>
+                      <ZIndex>25</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>D. narodenia</Value>
                     </Textbox>
@@ -592,7 +645,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>23</ZIndex>
+                      <ZIndex>24</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Bydlisko</Value>
                     </Textbox>
@@ -619,7 +672,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>22</ZIndex>
+                      <ZIndex>23</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Národnosť</Value>
                     </Textbox>
@@ -646,7 +699,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>21</ZIndex>
+                      <ZIndex>22</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Št. prísl.</Value>
                     </Textbox>
@@ -673,7 +726,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>20</ZIndex>
+                      <ZIndex>21</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Združenie</Value>
                     </Textbox>
@@ -700,7 +753,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>19</ZIndex>
+                      <ZIndex>20</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Číslo ČP</Value>
                     </Textbox>
@@ -727,7 +780,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>18</ZIndex>
+                      <ZIndex>19</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Člen od</Value>
                     </Textbox>
@@ -754,7 +807,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>17</ZIndex>
+                      <ZIndex>18</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Členské do</Value>
                     </Textbox>
@@ -781,7 +834,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>16</ZIndex>
+                      <ZIndex>17</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Číslo PL</Value>
                     </Textbox>
@@ -808,7 +861,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>15</ZIndex>
+                      <ZIndex>16</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>PL vydaný</Value>
                     </Textbox>
@@ -835,7 +888,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>14</ZIndex>
+                      <ZIndex>15</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Číslo ZP</Value>
                     </Textbox>
@@ -862,7 +915,7 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>13</ZIndex>
+                      <ZIndex>14</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>ZP vydaný</Value>
                     </Textbox>
@@ -876,6 +929,9 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
         </Header>
         <TableColumns>
           <TableColumn>
+            <Width>1.5cm</Width>
+          </TableColumn>
+          <TableColumn>
             <Width>3cm</Width>
           </TableColumn>
           <TableColumn>
@@ -885,10 +941,10 @@ WHERE     (all_clenovia.datum_narodenia &gt;= @Param1) AND (all_clenovia.datum_v
             <Width>2.5cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2cm</Width>
+            <Width>2.02646cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>1.75cm</Width>
+            <Width>1.77646cm</Width>
           </TableColumn>
           <TableColumn>
             <Width>2cm</Width>

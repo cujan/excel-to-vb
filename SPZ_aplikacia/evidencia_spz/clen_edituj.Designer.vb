@@ -1479,6 +1479,7 @@ Partial Class clen_edituj
         '
         'Rodne_cisloMaskedTextBox
         '
+        Me.Rodne_cisloMaskedTextBox.Culture = New System.Globalization.CultureInfo("")
         Me.Rodne_cisloMaskedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.All_clenoviaBindingSource, "rodne_cislo", True))
         Me.Rodne_cisloMaskedTextBox.Location = New System.Drawing.Point(560, 159)
         Me.Rodne_cisloMaskedTextBox.Mask = "000000/0000"
