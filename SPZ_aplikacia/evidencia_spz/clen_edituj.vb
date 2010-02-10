@@ -352,7 +352,7 @@
         End If
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         MsgBox(Brokova_zbranComboBox.Text)
     End Sub
 

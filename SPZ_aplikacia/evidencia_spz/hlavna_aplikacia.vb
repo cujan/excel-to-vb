@@ -240,29 +240,31 @@ Public Class hlavna_aplikacia
         'TODO: This line of code loads data into the 'SpzDataSet.vseobecne_udaje' table. You can move, or remove it, as needed.
         Me.Vseobecne_udajeTableAdapter.Fill(Me.SpzDataSet.vseobecne_udaje)
         'TODO: This line of code loads data into the 'Spz_vseobecne_udaje.vseobecne_udaje' table. You can move, or remove it, as needed.
-        Try
-            'Dim oApp As Object = CreateObject("Access.Application")
-            Dim oApp As Object = CreateObject("Microsoft.ACE.OLEDB.12.0")
-            bInstalled = True
-            ' Label2.Text = bInstalled.ToString
-        Catch
-            bInstalled = False
-            'MessageBox.Show("Runtime Access 2007 nie je nainstalovany.", "Varovanie", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End Try
 
-        If Not bInstalled Then
-            'MessageBox.Show("Runtime Access 2007.", "Varovanie", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            'Me.Visible = False
-            Me.Hide()
-            kontrola_verzii.Show()
-            kontrola_verzii.BringToFront()
-            'Else
-            '    'Me.Visible = False
-            '    Me.Hide()
-            '    kontrola_verzii.Show()
-            '    kontrola_verzii.BringToFront()
-            '    'MessageBox.Show("Runtime Access 2007 nie je nainstalovany.", "Varovanie", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End If
+        ' KONTROLA Accress Runtime zakomentovana - odkomentovat ak treba
+        'Try
+        '    'Dim oApp As Object = CreateObject("Access.Application")
+        '    Dim oApp As Object = CreateObject("Microsoft.ACE.OLEDB.12.0")
+        '    bInstalled = True
+        '    ' Label2.Text = bInstalled.ToString
+        'Catch
+        '    bInstalled = False
+        '    'MessageBox.Show("Runtime Access 2007 nie je nainstalovany.", "Varovanie", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        'End Try
+
+        'If Not bInstalled Then
+        '    'MessageBox.Show("Runtime Access 2007.", "Varovanie", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        '    'Me.Visible = False
+        '    Me.Hide()
+        '    kontrola_verzii.Show()
+        '    kontrola_verzii.BringToFront()
+        '    'Else
+        '    '    'Me.Visible = False
+        '    '    Me.Hide()
+        '    '    kontrola_verzii.Show()
+        '    '    kontrola_verzii.BringToFront()
+        '    '    'MessageBox.Show("Runtime Access 2007 nie je nainstalovany.", "Varovanie", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        'End If
 
 
 
@@ -306,8 +308,11 @@ Public Class hlavna_aplikacia
         'koniec = DateTime.Parse("31." & (mesiac.SelectedIndex + 1).ToString & "." & rok.Text)
         ''''' NARODKY DOROBIT !!!!!!!!!!
 
-        'narodky.clenoviaTableAdapter.Fill(narodky.narodeniny_DataSet.clenovia, mesiac)
-        'Label2.Text = "V mesiaci " & mesiac_string & " má narodeniny " & narodky.clenoviaBindingSource.Count & " členov."
+
+        vytvor_all_clenovia()
+        zoznam_narodeniny.all_clenoviaTableAdapter.Fill(zoznam_narodeniny.narodeniny.all_clenovia, mesiac, "%")
+
+        Label2.Text = "V mesiaci " & mesiac_string & " má narodeniny " & zoznam_narodeniny.all_clenoviaBindingSource.Count & " členov."
 
         'security
 

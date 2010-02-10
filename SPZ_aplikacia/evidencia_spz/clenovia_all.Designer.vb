@@ -26,6 +26,8 @@ Partial Class clenovia_all
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(clenovia_all))
         Me.All_clenoviaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.All_clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.All_clenoviaDataSet = New evidencia_spz.all_clenoviaDataSet
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
@@ -38,16 +40,6 @@ Partial Class clenovia_all
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.All_clenoviaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.All_clenoviaDataGridView = New System.Windows.Forms.DataGridView
-        Me.mesto = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ulica = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ulica_cislo = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.zavriet_kartu_button = New System.Windows.Forms.Button
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Panel1 = New System.Windows.Forms.Panel
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -87,17 +79,25 @@ Partial Class clenovia_all
         Me.DataGridViewTextBoxColumn38 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn39 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn40 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.All_clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.All_clenoviaDataSet = New evidencia_spz.all_clenoviaDataSet
+        Me.mesto = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ulica = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ulica_cislo = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.zavriet_kartu_button = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.Panel1 = New System.Windows.Forms.Panel
         Me.All_clenoviaTableAdapter = New evidencia_spz.all_clenoviaDataSetTableAdapters.all_clenoviaTableAdapter
         Me.TableAdapterManager = New evidencia_spz.all_clenoviaDataSetTableAdapters.TableAdapterManager
         Me.Label5 = New System.Windows.Forms.Label
         Me.priezviskoTextBox = New System.Windows.Forms.TextBox
         CType(Me.All_clenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.All_clenoviaBindingNavigator.SuspendLayout()
-        CType(Me.All_clenoviaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.All_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.All_clenoviaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.All_clenoviaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'All_clenoviaBindingNavigator
@@ -127,6 +127,17 @@ Partial Class clenovia_all
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'All_clenoviaBindingSource
+        '
+        Me.All_clenoviaBindingSource.DataMember = "all_clenovia"
+        Me.All_clenoviaBindingSource.DataSource = Me.All_clenoviaDataSet
+        '
+        'All_clenoviaDataSet
+        '
+        Me.All_clenoviaDataSet.DataSetName = "all_clenoviaDataSet"
+        Me.All_clenoviaDataSet.EnforceConstraints = False
+        Me.All_clenoviaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -218,94 +229,11 @@ Partial Class clenovia_all
         Me.All_clenoviaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.All_clenoviaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn36, Me.DataGridViewTextBoxColumn37, Me.DataGridViewTextBoxColumn38, Me.DataGridViewTextBoxColumn39, Me.DataGridViewTextBoxColumn40, Me.mesto, Me.ulica, Me.ulica_cislo})
         Me.All_clenoviaDataGridView.DataSource = Me.All_clenoviaBindingSource
-        Me.All_clenoviaDataGridView.Location = New System.Drawing.Point(47, 137)
+        Me.All_clenoviaDataGridView.Location = New System.Drawing.Point(15, 83)
         Me.All_clenoviaDataGridView.Name = "All_clenoviaDataGridView"
         Me.All_clenoviaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.All_clenoviaDataGridView.Size = New System.Drawing.Size(694, 386)
+        Me.All_clenoviaDataGridView.Size = New System.Drawing.Size(902, 386)
         Me.All_clenoviaDataGridView.TabIndex = 1
-        '
-        'mesto
-        '
-        Me.mesto.DataPropertyName = "mesto"
-        Me.mesto.HeaderText = "mesto"
-        Me.mesto.Name = "mesto"
-        '
-        'ulica
-        '
-        Me.ulica.DataPropertyName = "ulica"
-        Me.ulica.HeaderText = "ulica"
-        Me.ulica.Name = "ulica"
-        '
-        'ulica_cislo
-        '
-        Me.ulica_cislo.DataPropertyName = "ulica_cislo"
-        Me.ulica_cislo.HeaderText = "ulica_cislo"
-        Me.ulica_cislo.Name = "ulica_cislo"
-        '
-        'zavriet_kartu_button
-        '
-        Me.zavriet_kartu_button.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.zavriet_kartu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.zavriet_kartu_button.Location = New System.Drawing.Point(332, 15)
-        Me.zavriet_kartu_button.Name = "zavriet_kartu_button"
-        Me.zavriet_kartu_button.Size = New System.Drawing.Size(82, 24)
-        Me.zavriet_kartu_button.TabIndex = 2
-        Me.zavriet_kartu_button.Text = "Zavrieť kartu"
-        Me.zavriet_kartu_button.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 38)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Label1"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(57, 38)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Label2"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(420, 16)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(98, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Vymazať člena"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(118, 38)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Label3"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(163, 38)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Label4"
-        '
-        'Panel1
-        '
-        Me.Panel1.Location = New System.Drawing.Point(15, 15)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(231, 46)
-        Me.Panel1.TabIndex = 8
         '
         'DataGridViewTextBoxColumn1
         '
@@ -541,16 +469,88 @@ Partial Class clenovia_all
         Me.DataGridViewTextBoxColumn40.HeaderText = "ico_clenovia"
         Me.DataGridViewTextBoxColumn40.Name = "DataGridViewTextBoxColumn40"
         '
-        'All_clenoviaBindingSource
+        'mesto
         '
-        Me.All_clenoviaBindingSource.DataMember = "all_clenovia"
-        Me.All_clenoviaBindingSource.DataSource = Me.All_clenoviaDataSet
+        Me.mesto.DataPropertyName = "mesto"
+        Me.mesto.HeaderText = "mesto"
+        Me.mesto.Name = "mesto"
         '
-        'All_clenoviaDataSet
+        'ulica
         '
-        Me.All_clenoviaDataSet.DataSetName = "all_clenoviaDataSet"
-        Me.All_clenoviaDataSet.EnforceConstraints = False
-        Me.All_clenoviaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.ulica.DataPropertyName = "ulica"
+        Me.ulica.HeaderText = "ulica"
+        Me.ulica.Name = "ulica"
+        '
+        'ulica_cislo
+        '
+        Me.ulica_cislo.DataPropertyName = "ulica_cislo"
+        Me.ulica_cislo.HeaderText = "ulica_cislo"
+        Me.ulica_cislo.Name = "ulica_cislo"
+        '
+        'zavriet_kartu_button
+        '
+        Me.zavriet_kartu_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.zavriet_kartu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.zavriet_kartu_button.Location = New System.Drawing.Point(332, 16)
+        Me.zavriet_kartu_button.Name = "zavriet_kartu_button"
+        Me.zavriet_kartu_button.Size = New System.Drawing.Size(82, 23)
+        Me.zavriet_kartu_button.TabIndex = 2
+        Me.zavriet_kartu_button.Text = "Zavrieť kartu"
+        Me.zavriet_kartu_button.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(616, 16)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Label1"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(661, 16)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Label2"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(420, 16)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(105, 23)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Vymazať člena"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(722, 16)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Label3"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(767, 16)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Label4"
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(606, 12)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(311, 50)
+        Me.Panel1.TabIndex = 8
         '
         'All_clenoviaTableAdapter
         '
@@ -565,17 +565,18 @@ Partial Class clenovia_all
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(57, 100)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(12, 60)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 13)
+        Me.Label5.Size = New System.Drawing.Size(229, 13)
         Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Priezvisko"
+        Me.Label5.Text = "Rýchle vyhľadávanie podľa priezviska:"
         '
         'priezviskoTextBox
         '
-        Me.priezviskoTextBox.Location = New System.Drawing.Point(121, 97)
+        Me.priezviskoTextBox.Location = New System.Drawing.Point(247, 57)
         Me.priezviskoTextBox.Name = "priezviskoTextBox"
-        Me.priezviskoTextBox.Size = New System.Drawing.Size(204, 20)
+        Me.priezviskoTextBox.Size = New System.Drawing.Size(116, 20)
         Me.priezviskoTextBox.TabIndex = 10
         '
         'clenovia_all
@@ -583,7 +584,7 @@ Partial Class clenovia_all
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(786, 535)
+        Me.ClientSize = New System.Drawing.Size(974, 535)
         Me.Controls.Add(Me.priezviskoTextBox)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel1)
@@ -601,9 +602,9 @@ Partial Class clenovia_all
         CType(Me.All_clenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.All_clenoviaBindingNavigator.ResumeLayout(False)
         Me.All_clenoviaBindingNavigator.PerformLayout()
-        CType(Me.All_clenoviaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.All_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.All_clenoviaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.All_clenoviaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
