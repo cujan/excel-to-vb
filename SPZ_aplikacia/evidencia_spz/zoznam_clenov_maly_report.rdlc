@@ -16,9 +16,9 @@
   <InteractiveWidth>8.5in</InteractiveWidth>
   <rd:GridSpacing>0.25cm</rd:GridSpacing>
   <rd:SnapToGrid>true</rd:SnapToGrid>
-  <RightMargin>0.5cm</RightMargin>
-  <LeftMargin>0.5cm</LeftMargin>
-  <BottomMargin>0.5cm</BottomMargin>
+  <RightMargin>0.2cm</RightMargin>
+  <LeftMargin>0.2cm</LeftMargin>
+  <BottomMargin>0.2cm</BottomMargin>
   <rd:ReportID>93e11a08-d7b0-4453-aacf-2daf49817cbf</rd:ReportID>
   <PageWidth>21cm</PageWidth>
   <DataSets>
@@ -228,7 +228,7 @@ FROM         all_clenovia LEFT OUTER JOIN
     </DataSet>
   </DataSets>
   <Code />
-  <Width>21.11904cm</Width>
+  <Width>19.25cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
@@ -273,7 +273,7 @@ FROM         all_clenovia LEFT OUTER JOIN
       <Table Name="table1">
         <DataSetName>kartyClenov_karty_clenov</DataSetName>
         <Top>1cm</Top>
-        <Width>19.57936cm</Width>
+        <Width>18.57936cm</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -556,7 +556,7 @@ FROM         all_clenovia LEFT OUTER JOIN
         </Header>
         <TableColumns>
           <TableColumn>
-            <Width>1.5cm</Width>
+            <Width>1.25cm</Width>
           </TableColumn>
           <TableColumn>
             <Width>2.53968cm</Width>
@@ -568,7 +568,7 @@ FROM         all_clenovia LEFT OUTER JOIN
             <Width>3.25cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>9.75cm</Width>
+            <Width>9cm</Width>
           </TableColumn>
         </TableColumns>
         <Height>1.04127cm</Height>
@@ -578,6 +578,6 @@ FROM         all_clenovia LEFT OUTER JOIN
     <Height>2.29127cm</Height>
   </Body>
   <Language>en-US</Language>
-  <TopMargin>0.5cm</TopMargin>
+  <TopMargin>0.2cm</TopMargin>
   <PageHeight>29.7cm</PageHeight>
 </Report>
