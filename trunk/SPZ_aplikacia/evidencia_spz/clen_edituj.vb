@@ -97,7 +97,7 @@
         'nastavi pociatocnu hodnotu titul_pred
 
         If Titul_pred_idTextBox.Text = "" Then
-            Titul_pred_idComboBox.SelectedValue = 0
+            Titul_pred_idComboBox.SelectedValue = -1
         Else
             Titul_pred_idComboBox.SelectedValue = Titul_pred_idTextBox.Text
 
@@ -105,7 +105,7 @@
         'nastavi pociatocnu hodnotu titul_za
 
         If Titul_za_idTextBox.Text = "" Then
-            Titul_za_idComboBox.SelectedValue = 0
+            Titul_za_idComboBox.SelectedValue = -1
         Else
             Titul_za_idComboBox.SelectedValue = Titul_za_idTextBox.Text
 
@@ -113,7 +113,7 @@
         'nastavi pociatocnu hodnotu narodnost_id
 
         If Narodnost_idTextBox.Text = "" Then
-            Narodnost_idComboBox.SelectedValue = 0
+            Narodnost_idComboBox.SelectedValue = -1
         Else
             Narodnost_idComboBox.SelectedValue = Narodnost_idTextBox.Text
 
@@ -121,19 +121,23 @@
         'nastavi pociatocnu hodnotu statna_prislusnost_id
 
         If Statna_prislusnost_idTextBox.Text = "" Then
-            Statna_prislusnost_idComboBox.SelectedValue = 0
+            Statna_prislusnost_idComboBox.SelectedValue = -1
         Else
             Statna_prislusnost_idComboBox.SelectedValue = Statna_prislusnost_idTextBox.Text
 
         End If
         'vybere pri nacitani formu aktualnu hodnotu v okres a psc listbox
 
-        If Okres_bydliskaTextBox.Text <> "" Then
+        If Okres_bydliskaTextBox.Text = "" Then
             Okres_bydliskaListBox.SelectedIndex = -1
+        Else
+            Okres_bydliskaListBox.SelectedItem = Okres_bydliskaTextBox.Text
         End If
 
-        If PscTextBox.Text <> "" Then
+        If PscTextBox.Text = "" Then
             PscListBox.SelectedIndex = -1
+        Else
+            PscListBox.SelectedItem = PscTextBox.Text
         End If
 
         Me.Dock = DockStyle.Fill
@@ -428,6 +432,10 @@
     End Sub
 
     Private Sub Okres_bydliskaLabel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 End Class

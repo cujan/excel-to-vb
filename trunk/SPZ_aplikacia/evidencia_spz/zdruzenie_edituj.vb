@@ -123,34 +123,142 @@
             .AddWithValue("cislo_uctu", Cislo_uctuTextBox.Text)
             .AddWithValue("chovatelska_oblast", Chovatelska_oblastTextBox.Text)
             .AddWithValue("cislo_reviru", Cislo_reviruTextBox.Text)
-            .AddWithValue("vymera", VymeraTextBox.Text)
+            If VymeraTextBox.Text <> "" Then
+                .AddWithValue("vymera", VymeraTextBox.Text)
+            Else
+                .AddWithValue("vymera", DBNull.Value)
+            End If
             .AddWithValue("les", LesTextBox.Text)
-            .AddWithValue("jelenia", JeleniaTextBox.Text)
-            .AddWithValue("srncia", SrnciaTextBox.Text)
-            .AddWithValue("diviacia", DiviaciaTextBox.Text)
-            .AddWithValue("bazant", BazantTextBox.Text)
-            .AddWithValue("ina", InaTextBox.Text)
-            .AddWithValue("platnost_najomnej_zmluvy_do", Platnost_najomnej_zmluvy_doTextBox.Text)
-            .AddWithValue("stavace_plan", Stavace_planTextBox.Text)
-            .AddWithValue("stavace_skutocnost", Stavace_skutocnostTextBox.Text)
-            .AddWithValue("sliedice_plan", Sliedice_planTextBox.Text)
-            .AddWithValue("sliedice_skutocnost", Sliedice_skutocnostTextBox.Text)
-            .AddWithValue("slovensky_kopov_plan", Slovensky_kopov_planTextBox.Text)
-            .AddWithValue("slovensky_kopov_skutocnost", Slovensky_kopov_skutocnostTextBox.Text)
-            .AddWithValue("ostatne_durice_plan", Ostatne_durice_planTextBox.Text)
-            .AddWithValue("ostatne_durice_skutocnost", Ostatne_durice_skutocnostTextBox.Text)
-            .AddWithValue("brlohare_plan", Brlohare_planTextBox.Text)
-            .AddWithValue("brlohare_skutocnost", Brlohare_skutocnostTextBox.Text)
-            .AddWithValue("farbiare_plan", Farbiare_planTextBox.Text)
-            .AddWithValue("farbiare_skutocnost", Farbiare_skutocnostTextBox.Text)
-            .AddWithValue("pes_jelenia_plan", Pes_jelenia_planTextBox.Text)
-            .AddWithValue("pes_jelenia_skutocnost", Pes_jelenia_skutocnostTextBox.Text)
-            .AddWithValue("pes_diviacia_plan", Pes_diviacia_planTextBox.Text)
-            .AddWithValue("pes_diviacia_skutocnost", Pes_diviacia_skutocnostTextBox.Text)
-            .AddWithValue("pes_srncia_plan", Pes_srncia_planTextBox.Text)
-            .AddWithValue("pes_srncia_skutocnost", Pes_srncia_skutocnostTextBox.Text)
-            .AddWithValue("pes_mala_plan", Pes_mala_planTextBox.Text)
-            .AddWithValue("pes_mala_skutocnost", Pes_mala_skutocnostTextBox.Text)
+            If JeleniaTextBox.Text <> "" Then
+                .AddWithValue("jelenia", JeleniaTextBox.Text)
+            Else
+                .AddWithValue("jelenia", DBNull.Value)
+            End If
+            If SrnciaTextBox.Text <> "" Then
+                .AddWithValue("srncia", SrnciaTextBox.Text)
+            Else
+                .AddWithValue("srncia", DBNull.Value)
+            End If
+            If DiviaciaTextBox.Text <> "" Then
+                .AddWithValue("diviacia", DiviaciaTextBox.Text)
+            Else
+                .AddWithValue("diviacia", DBNull.Value)
+            End If
+            If BazantTextBox.Text <> "" Then
+                .AddWithValue("bazant", BazantTextBox.Text)
+            Else
+                .AddWithValue("bazant", DBNull.Value)
+            End If
+            If InaTextBox.Text <> "" Then
+                .AddWithValue("ina", InaTextBox.Text)
+            Else
+                .AddWithValue("ina", DBNull.Value)
+            End If
+            If Platnost_najomnej_zmluvy_doTextBox.Text <> "" Then
+                .AddWithValue("platnost_najomnej_zmluvy_do", Platnost_najomnej_zmluvy_doTextBox.Text)
+            Else
+                .AddWithValue("platnost_najomnej_zmluvy_do", DBNull.Value)
+            End If
+            If Stavace_planTextBox.Text <> "" Then
+                .AddWithValue("stavace_plan", Stavace_planTextBox.Text)
+            Else
+                .AddWithValue("stavace_plan", DBNull.Value)
+            End If
+            If Stavace_skutocnostTextBox.Text <> "" Then
+                .AddWithValue("stavace_skutocnost", Stavace_skutocnostTextBox.Text)
+            Else
+                .AddWithValue("stavace_skutocnost", DBNull.Value)
+            End If
+            If Sliedice_planTextBox.Text <> "" Then
+                .AddWithValue("sliedice_plan", Sliedice_planTextBox.Text)
+            Else
+                .AddWithValue("sliedice_plan", DBNull.Value)
+            End If
+            If Sliedice_skutocnostTextBox.Text <> "" Then
+                .AddWithValue("sliedice_skutocnost", Sliedice_skutocnostTextBox.Text)
+            Else
+                .AddWithValue("sliedice_skutocnost", DBNull.Value)
+            End If
+            If Slovensky_kopov_planTextBox.Text <> "" Then
+                .AddWithValue("slovensky_kopov_plan", Slovensky_kopov_planTextBox.Text)
+            Else
+                .AddWithValue("slovensky_kopov_plan", DBNull.Value)
+            End If
+            If Slovensky_kopov_skutocnostTextBox.Text <> "" Then
+                .AddWithValue("slovensky_kopov_skutocnost", Slovensky_kopov_skutocnostTextBox.Text)
+            Else
+                .AddWithValue("slovensky_kopov_skutocnost", DBNull.Value)
+            End If
+            If Ostatne_durice_planTextBox.Text <> "" Then
+                .AddWithValue("ostatne_durice_plan", Ostatne_durice_planTextBox.Text)
+            Else
+                .AddWithValue("ostatne_durice_plan", DBNull.Value)
+            End If
+            If Ostatne_durice_skutocnostTextBox.Text <> "" Then
+                .AddWithValue("ostatne_durice_skutocnost", Ostatne_durice_skutocnostTextBox.Text)
+            Else
+                .AddWithValue("ostatne_durice_skutocnost", DBNull.Value)
+            End If
+            If Brlohare_planTextBox.Text <> "" Then
+                .AddWithValue("brlohare_plan", Brlohare_planTextBox.Text)
+            Else
+                .AddWithValue("brlohare_plan", DBNull.Value)
+            End If
+            If Brlohare_skutocnostTextBox.Text <> "" Then
+                .AddWithValue("brlohare_skutocnost", Brlohare_skutocnostTextBox.Text)
+            Else
+                .AddWithValue("brlohare_skutocnost", DBNull.Value)
+            End If
+            If Farbiare_planTextBox.Text <> "" Then
+                .AddWithValue("farbiare_plan", Farbiare_planTextBox.Text)
+            Else
+                .AddWithValue("farbiare_plan", DBNull.Value)
+            End If
+            If Farbiare_skutocnostTextBox.Text <> "" Then
+                .AddWithValue("farbiare_skutocnost", Farbiare_skutocnostTextBox.Text)
+            Else
+                .AddWithValue("farbiare_skutocnost", DBNull.Value)
+            End If
+            If Pes_jelenia_planTextBox.Text <> "" Then
+                .AddWithValue("pes_jelenia_plan", Pes_jelenia_planTextBox.Text)
+            Else
+                .AddWithValue("pes_jelenia_plan", DBNull.Value)
+            End If
+            If Pes_jelenia_skutocnostTextBox.Text <> "" Then
+                .AddWithValue("pes_jelenia_skutocnost", Pes_jelenia_skutocnostTextBox.Text)
+            Else
+                .AddWithValue("pes_jelenia_skutocnost", DBNull.Value)
+            End If
+            If Pes_diviacia_planTextBox.Text <> "" Then
+                .AddWithValue("pes_diviacia_plan", Pes_diviacia_planTextBox.Text)
+            Else
+                .AddWithValue("pes_diviacia_plan", DBNull.Value)
+            End If
+            If Pes_diviacia_skutocnostTextBox.Text <> "" Then
+                .AddWithValue("pes_diviacia_skutocnost", Pes_diviacia_skutocnostTextBox.Text)
+            Else
+                .AddWithValue("pes_diviacia_skutocnost", DBNull.Value)
+            End If
+            If Pes_srncia_planTextBox.Text <> "" Then
+                .AddWithValue("pes_srncia_plan", Pes_srncia_planTextBox.Text)
+            Else
+                .AddWithValue("pes_srncia_plan", DBNull.Value)
+            End If
+            If Pes_srncia_skutocnostTextBox.Text <> "" Then
+                .AddWithValue("pes_srncia_skutocnost", Pes_srncia_skutocnostTextBox.Text)
+            Else
+                .AddWithValue("pes_srncia_skutocnost", DBNull.Value)
+            End If
+            If Pes_mala_planTextBox.Text <> "" Then
+                .AddWithValue("pes_mala_plan", Pes_mala_planTextBox.Text)
+            Else
+                .AddWithValue("pes_mala_plan", DBNull.Value)
+            End If
+            If Pes_mala_skutocnostTextBox.Text <> "" Then
+                .AddWithValue("pes_mala_skutocnost", Pes_mala_skutocnostTextBox.Text)
+            Else
+                .AddWithValue("pes_mala_skutocnost", DBNull.Value)
+            End If
         End With
 
         con.Open()
