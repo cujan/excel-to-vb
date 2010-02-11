@@ -1,4 +1,5 @@
 ﻿Public Class clen_edituj
+    Dim rodnecislo As String
 
     Private Sub All_clenoviaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles All_clenoviaBindingNavigatorSaveItem.Click
         Me.Validate()
@@ -21,7 +22,7 @@
         'TODO: This line of code loads data into the 'SpzDataSet.zdruzenia' table. You can move, or remove it, as needed.
         Me.ZdruzeniaTableAdapter.Fill(Me.SpzDataSet.zdruzenia)
 
-        Dim rodnecislo As String = clenovia_all.Label2.Text
+        rodnecislo = clenovia_all.Label2.Text
         'TODO: This line of code loads data into the 'All_clenoviaDataSet.all_clenovia' table. You can move, or remove it, as needed.
         Me.All_clenoviaTableAdapter.FillBy_rodnecislo(Me.All_clenoviaDataSet.all_clenovia, rodnecislo)
 
@@ -161,7 +162,7 @@
                 Else
                     .AddWithValue("datum_narodenia", datum_narodeniaDateTimePicker.Value)
                 End If
-                .AddWithValue("rodne_cislo", Rodne_cisloMaskedTextBox.Text)
+                .AddWithValue("rodne_cislo", rodnecislo)
                 .AddWithValue("miesto_narodenia", Miesto_narodeniaTextBox.Text)
                 .AddWithValue("okres_narodenia", Okres_narodeniaTextBox.Text)
                 .AddWithValue("okres_bydliska", Okres_bydliskaListBox.SelectedItem)
@@ -298,6 +299,7 @@
             hlavna_aplikacia.vytvor_all_clenovia()
             clenovia_all.All_clenoviaTableAdapter.Fill(clenovia_all.All_clenoviaDataSet.all_clenovia)
             MsgBox("Člen bol úspešne upravený.")
+
             hlavna_aplikacia.removeFormFromList(Me.Text)
             Me.Close()
         Else
@@ -348,7 +350,7 @@
             Catch
                 con.Close()
             End Try
-        
+
         End If
     End Sub
 
