@@ -346,7 +346,7 @@ ORDER BY clen_priezvisko</CommandText>
                       </Style>
                       <ZIndex>13</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>P.Č.</Value>
+                      <Value>P. č.</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
