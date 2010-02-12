@@ -228,7 +228,7 @@ FROM         all_clenovia LEFT OUTER JOIN
     </DataSet>
   </DataSets>
   <Code />
-  <Width>19.25cm</Width>
+  <Width>18.77646cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
@@ -273,7 +273,6 @@ FROM         all_clenovia LEFT OUTER JOIN
       <Table Name="table1">
         <DataSetName>kartyClenov_karty_clenov</DataSetName>
         <Top>1cm</Top>
-        <Width>18.57936cm</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -296,7 +295,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>4</ZIndex>
+                      <ZIndex>3</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=RowNumber("table1")</Value>
                     </Textbox>
@@ -320,33 +319,9 @@ FROM         all_clenovia LEFT OUTER JOIN
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>3</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!meno.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="priezvisko">
-                      <rd:DefaultName>priezvisko</rd:DefaultName>
-                      <Style>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>9pt</FontSize>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
                       <ZIndex>2</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!priezvisko.Value</Value>
+                      <Value>= Fields!Titul_pred.Value &amp;" "&amp; Fields!meno.Value &amp; " "&amp; Fields!priezvisko.Value &amp;" "&amp;Fields!Titul_za.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -434,9 +409,9 @@ FROM         all_clenovia LEFT OUTER JOIN
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>9</ZIndex>
+                      <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>P. Č.</Value>
+                      <Value>P. č.</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -461,36 +436,9 @@ FROM         all_clenovia LEFT OUTER JOIN
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>8</ZIndex>
+                      <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Meno</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox3">
-                      <rd:DefaultName>textbox3</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#365838</BackgroundColor>
-                        <BorderColor>
-                          <Default>DarkGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>7</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>Priezvisko</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -515,7 +463,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>6</ZIndex>
+                      <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Dát. narodenia</Value>
                     </Textbox>
@@ -542,7 +490,7 @@ FROM         all_clenovia LEFT OUTER JOIN
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>5</ZIndex>
+                      <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Adresa</Value>
                     </Textbox>
@@ -559,20 +507,17 @@ FROM         all_clenovia LEFT OUTER JOIN
             <Width>1.25cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>5cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.53968cm</Width>
+            <Width>3.02645cm</Width>
           </TableColumn>
           <TableColumn>
-            <Width>3.25cm</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>9cm</Width>
+            <Width>9.25cm</Width>
           </TableColumn>
         </TableColumns>
         <Height>1.04127cm</Height>
-        <Left>0.5cm</Left>
+        <Left>0.25cm</Left>
       </Table>
     </ReportItems>
     <Height>2.29127cm</Height>
