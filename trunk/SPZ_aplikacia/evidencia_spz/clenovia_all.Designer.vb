@@ -40,6 +40,12 @@ Partial Class clenovia_all
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.All_clenoviaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.All_clenoviaDataGridView = New System.Windows.Forms.DataGridView
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ulica = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ulica_cislo = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.mesto = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.zavriet_kartu_button = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
@@ -51,12 +57,6 @@ Partial Class clenovia_all
         Me.TableAdapterManager = New evidencia_spz.all_clenoviaDataSetTableAdapters.TableAdapterManager
         Me.Label5 = New System.Windows.Forms.Label
         Me.priezviskoTextBox = New System.Windows.Forms.TextBox
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ulica = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ulica_cislo = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.mesto = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.All_clenoviaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.All_clenoviaBindingNavigator.SuspendLayout()
         CType(Me.All_clenoviaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,7 +106,7 @@ Partial Class clenovia_all
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -193,11 +193,47 @@ Partial Class clenovia_all
         Me.All_clenoviaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.All_clenoviaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.ulica, Me.ulica_cislo, Me.mesto})
         Me.All_clenoviaDataGridView.DataSource = Me.All_clenoviaBindingSource
-        Me.All_clenoviaDataGridView.Location = New System.Drawing.Point(159, 104)
+        Me.All_clenoviaDataGridView.Location = New System.Drawing.Point(15, 83)
         Me.All_clenoviaDataGridView.Name = "All_clenoviaDataGridView"
         Me.All_clenoviaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.All_clenoviaDataGridView.Size = New System.Drawing.Size(647, 386)
+        Me.All_clenoviaDataGridView.Size = New System.Drawing.Size(857, 440)
         Me.All_clenoviaDataGridView.TabIndex = 1
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "meno"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "meno"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "priezvisko"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "priezvisko"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "datum_narodenia"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "datum_narodenia"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'ulica
+        '
+        Me.ulica.DataPropertyName = "ulica"
+        Me.ulica.HeaderText = "ulica"
+        Me.ulica.Name = "ulica"
+        '
+        'ulica_cislo
+        '
+        Me.ulica_cislo.DataPropertyName = "ulica_cislo"
+        Me.ulica_cislo.HeaderText = "ulica_cislo"
+        Me.ulica_cislo.Name = "ulica_cislo"
+        '
+        'mesto
+        '
+        Me.mesto.DataPropertyName = "mesto"
+        Me.mesto.HeaderText = "mesto"
+        Me.mesto.Name = "mesto"
         '
         'zavriet_kartu_button
         '
@@ -290,42 +326,6 @@ Partial Class clenovia_all
         Me.priezviskoTextBox.Name = "priezviskoTextBox"
         Me.priezviskoTextBox.Size = New System.Drawing.Size(116, 20)
         Me.priezviskoTextBox.TabIndex = 10
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "meno"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "meno"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "priezvisko"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "priezvisko"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "datum_narodenia"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "datum_narodenia"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'ulica
-        '
-        Me.ulica.DataPropertyName = "ulica"
-        Me.ulica.HeaderText = "ulica"
-        Me.ulica.Name = "ulica"
-        '
-        'ulica_cislo
-        '
-        Me.ulica_cislo.DataPropertyName = "ulica_cislo"
-        Me.ulica_cislo.HeaderText = "ulica_cislo"
-        Me.ulica_cislo.Name = "ulica_cislo"
-        '
-        'mesto
-        '
-        Me.mesto.DataPropertyName = "mesto"
-        Me.mesto.HeaderText = "mesto"
-        Me.mesto.Name = "mesto"
         '
         'clenovia_all
         '
