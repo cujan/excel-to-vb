@@ -350,6 +350,8 @@ Partial Public Class predsedaDataSet
         
         Private columnulica_cislo As Global.System.Data.DataColumn
         
+        Private columnclen_pz1 As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub New()
             MyBase.New
@@ -676,6 +678,13 @@ Partial Public Class predsedaDataSet
             End Get
         End Property
         
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property clen_pz1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnclen_pz1
+            End Get
+        End Property
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -747,9 +756,10 @@ Partial Public Class predsedaDataSet
                     ByVal ico_clenovia As String,  _
                     ByVal mesto As String,  _
                     ByVal ulica As String,  _
-                    ByVal ulica_cislo As String) As all_clenoviaRow
+                    ByVal ulica_cislo As String,  _
+                    ByVal clen_pz1 As Long) As all_clenoviaRow
             Dim rowall_clenoviaRow As all_clenoviaRow = CType(Me.NewRow,all_clenoviaRow)
-            Dim columnValuesArray() As Object = New Object() {cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, miesto_narodenia, okres_narodenia, okres_bydliska, psc, telefon, cislo_op, datum_vydania_op, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, miesto_skusky_z_polovnictva, skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsej_skusky_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gula, najvyzsie_vyznamenanie, vyznamenanie_kedy, udelene_tresty, poznamky, titul_pred_id, titul_za_id, narodnost_id, statna_prislusnost_id, ico_clenovia, mesto, ulica, ulica_cislo}
+            Dim columnValuesArray() As Object = New Object() {cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, miesto_narodenia, okres_narodenia, okres_bydliska, psc, telefon, cislo_op, datum_vydania_op, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, miesto_skusky_z_polovnictva, skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsej_skusky_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gula, najvyzsie_vyznamenanie, vyznamenanie_kedy, udelene_tresty, poznamky, titul_pred_id, titul_za_id, narodnost_id, statna_prislusnost_id, ico_clenovia, mesto, ulica, ulica_cislo, clen_pz1}
             rowall_clenoviaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowall_clenoviaRow)
             Return rowall_clenoviaRow
@@ -816,6 +826,7 @@ Partial Public Class predsedaDataSet
             Me.columnmesto = MyBase.Columns("mesto")
             Me.columnulica = MyBase.Columns("ulica")
             Me.columnulica_cislo = MyBase.Columns("ulica_cislo")
+            Me.columnclen_pz1 = MyBase.Columns("clen_pz1")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -904,6 +915,8 @@ Partial Public Class predsedaDataSet
             MyBase.Columns.Add(Me.columnulica)
             Me.columnulica_cislo = New Global.System.Data.DataColumn("ulica_cislo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnulica_cislo)
+            Me.columnclen_pz1 = New Global.System.Data.DataColumn("clen_pz1", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnclen_pz1)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columncislo_pl, Me.columnrodne_cislo}, true))
             Me.columncislo_pl.AllowDBNull = false
             Me.columncislo_pl.MaxLength = 45
@@ -932,6 +945,7 @@ Partial Public Class predsedaDataSet
             Me.columnmesto.MaxLength = 100
             Me.columnulica.MaxLength = 100
             Me.columnulica_cislo.MaxLength = 100
+            Me.columnclen_pz1.Caption = "clen_pz"
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1654,6 +1668,20 @@ Partial Public Class predsedaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property clen_pz1() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tableall_clenovia.clen_pz1Column),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'clen_pz1' in table 'all_clenovia' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableall_clenovia.clen_pz1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function IsmenoNull() As Boolean
             Return Me.IsNull(Me.tableall_clenovia.menoColumn)
         End Function
@@ -2052,6 +2080,16 @@ Partial Public Class predsedaDataSet
         Public Sub Setulica_cisloNull()
             Me(Me.tableall_clenovia.ulica_cisloColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Isclen_pz1Null() As Boolean
+            Return Me.IsNull(Me.tableall_clenovia.clen_pz1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setclen_pz1Null()
+            Me(Me.tableall_clenovia.clen_pz1Column) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -2230,7 +2268,6 @@ Namespace predsedaDataSetTableAdapters
             tableMapping.ColumnMappings.Add("clen_spz_od", "clen_spz_od")
             tableMapping.ColumnMappings.Add("clenske_do", "clenske_do")
             tableMapping.ColumnMappings.Add("cislo_dokladu_clenske", "cislo_dokladu_clenske")
-            tableMapping.ColumnMappings.Add("clen_pz", "clen_pz")
             tableMapping.ColumnMappings.Add("skuska_z_polovnictva", "skuska_z_polovnictva")
             tableMapping.ColumnMappings.Add("miesto_skusky_z_polovnictva", "miesto_skusky_z_polovnictva")
             tableMapping.ColumnMappings.Add("skuska_pre_polovnych_hospodarov", "skuska_pre_polovnych_hospodarov")
@@ -2253,13 +2290,8 @@ Namespace predsedaDataSetTableAdapters
             tableMapping.ColumnMappings.Add("mesto", "mesto")
             tableMapping.ColumnMappings.Add("ulica", "ulica")
             tableMapping.ColumnMappings.Add("ulica_cislo", "ulica_cislo")
+            tableMapping.ColumnMappings.Add("clen_pz", "clen_pz1")
             Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.DeleteCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
-            Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [all_clenovia] WHERE (([cislo_pl] = @p1) AND ([rodne_cislo] = @p2))"
-            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_pl", Global.System.Data.DataRowVersion.Original, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "rodne_cislo", Global.System.Data.DataRowVersion.Original, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [all_clenovia] ([cislo_pl], [meno], [priezvisko], [datum_narodenia], "& _ 
@@ -2296,7 +2328,7 @@ Namespace predsedaDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p17", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clen_spz_od", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p18", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clenske_do", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p19", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_dokladu_clenske", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p20", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clen_pz", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p20", Global.System.Data.SqlDbType.BigInt, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clen_pz", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p21", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p22", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "miesto_skusky_z_polovnictva", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p23", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Current, Nothing))
@@ -2319,68 +2351,6 @@ Namespace predsedaDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p40", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "mesto", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p41", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ulica", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p42", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ulica_cislo", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
-            Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [all_clenovia] SET [cislo_pl] = @p1, [meno] = @p2, [priezvisko] = @p3, [da"& _ 
-                "tum_narodenia] = @p4, [rodne_cislo] = @p5, [miesto_narodenia] = @p6, [okres_naro"& _ 
-                "denia] = @p7, [okres_bydliska] = @p8, [psc] = @p9, [telefon] = @p10, [cislo_op] "& _ 
-                "= @p11, [datum_vydania_op] = @p12, [datum_vydania_pl] = @p13, [cislo_zp] = @p14,"& _ 
-                " [datum_vydania_zp] = @p15, [cislo_clenskeho_preukazu_spz] = @p16, [clen_spz_od]"& _ 
-                " = @p17, [clenske_do] = @p18, [cislo_dokladu_clenske] = @p19, [clen_pz] = @p20, "& _ 
-                "[skuska_z_polovnictva] = @p21, [miesto_skusky_z_polovnictva] = @p22, [skuska_pre"& _ 
-                "_polovnych_hospodarov] = @p23, [miesto_skusky_pre_polovnych_hospodarov] = @p24, "& _ 
-                "[vyzsia_skuska_z_polovnictva] = @p25, [miesto_vyzsej_skusky_z_polovnictva] = @p2"& _ 
-                "6, [brokova_zbran] = @p27, [kontrolne_strelby_brok] = @p28, [gulova_zbran] = @p2"& _ 
-                "9, [kontrolne_strelby_gula] = @p30, [najvyzsie_vyznamenanie] = @p31, [vyznamenan"& _ 
-                "ie_kedy] = @p32, [udelene_tresty] = @p33, [poznamky] = @p34, [titul_pred_id] = @"& _ 
-                "p35, [titul_za_id] = @p36, [narodnost_id] = @p37, [statna_prislusnost_id] = @p38"& _ 
-                ", [ico_clenovia] = @p39, [mesto] = @p40, [ulica] = @p41, [ulica_cislo] = @p42 WH"& _ 
-                "ERE (([cislo_pl] = @p43) AND ([rodne_cislo] = @p44))"
-            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_pl", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "meno", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "priezvisko", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "datum_narodenia", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p5", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "rodne_cislo", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p6", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "miesto_narodenia", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p7", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "okres_narodenia", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p8", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "okres_bydliska", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p9", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "psc", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p10", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "telefon", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p11", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_op", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p12", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "datum_vydania_op", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p13", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "datum_vydania_pl", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p14", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_zp", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p15", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "datum_vydania_zp", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p16", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_clenskeho_preukazu_spz", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p17", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clen_spz_od", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p18", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clenske_do", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p19", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_dokladu_clenske", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p20", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "clen_pz", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p21", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "skuska_z_polovnictva", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p22", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "miesto_skusky_z_polovnictva", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p23", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "skuska_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p24", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "miesto_skusky_pre_polovnych_hospodarov", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p25", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "vyzsia_skuska_z_polovnictva", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p26", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "miesto_vyzsej_skusky_z_polovnictva", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p27", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "brokova_zbran", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p28", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "kontrolne_strelby_brok", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p29", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "gulova_zbran", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p30", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "kontrolne_strelby_gula", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p31", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "najvyzsie_vyznamenanie", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p32", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "vyznamenanie_kedy", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p33", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "udelene_tresty", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p34", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "poznamky", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p35", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "titul_pred_id", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p36", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "titul_za_id", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p37", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "narodnost_id", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p38", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "statna_prislusnost_id", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p39", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ico_clenovia", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p40", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "mesto", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p41", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ulica", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p42", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ulica_cislo", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p43", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_pl", Global.System.Data.DataRowVersion.Original, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p44", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "rodne_cislo", Global.System.Data.DataRowVersion.Original, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -2403,7 +2373,8 @@ Namespace predsedaDataSetTableAdapters
                 "rokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gula, najv"& _ 
                 "yzsie_vyznamenanie, vyznamenanie_kedy, udelene_tresty, poznamky, titul_pred_id, "& _ 
                 "titul_za_id, narodnost_id, statna_prislusnost_id, ico_clenovia, mesto, ulica, ul"& _ 
-                "ica_cislo FROM all_clenovia WHERE (ico_clenovia = @Param1)"
+                "ica_cislo FROM all_clenovia WHERE (ico_clenovia = @Param1) order by priezvisko a"& _ 
+                "sc"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param1", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ico_clenovia", Global.System.Data.DataRowVersion.Current, Nothing))
         End Sub
@@ -2466,35 +2437,6 @@ Namespace predsedaDataSetTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal p1 As String, ByVal p2 As String) As Integer
-            If (p1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p1")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(p1,String)
-            End If
-            If (p2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p2")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(p2,String)
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
         Public Overloads Overridable Function Insert( _
                     ByVal p1 As String,  _
@@ -2516,7 +2458,7 @@ Namespace predsedaDataSetTableAdapters
                     ByVal p17 As Global.System.Nullable(Of Integer),  _
                     ByVal p18 As Global.System.Nullable(Of Integer),  _
                     ByVal p19 As String,  _
-                    ByVal p20 As Global.System.Nullable(Of Integer),  _
+                    ByVal p20 As Global.System.Nullable(Of Long),  _
                     ByVal p21 As Global.System.Nullable(Of Date),  _
                     ByVal p22 As String,  _
                     ByVal p23 As Global.System.Nullable(Of Date),  _
@@ -2540,7 +2482,7 @@ Namespace predsedaDataSetTableAdapters
                     ByVal p41 As String,  _
                     ByVal p42 As String) As Integer
             If (p1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p1")
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(p1,String)
             End If
@@ -2560,7 +2502,7 @@ Namespace predsedaDataSetTableAdapters
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             If (p5 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p5")
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = CType(p5,String)
             End If
@@ -2635,7 +2577,7 @@ Namespace predsedaDataSetTableAdapters
                 Me.Adapter.InsertCommand.Parameters(18).Value = CType(p19,String)
             End If
             If (p20.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(19).Value = CType(p20.Value,Integer)
+                Me.Adapter.InsertCommand.Parameters(19).Value = CType(p20.Value,Long)
             Else
                 Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
@@ -2762,338 +2704,6 @@ Namespace predsedaDataSetTableAdapters
                     Me.Adapter.InsertCommand.Connection.Close
                 End If
             End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal p1 As String,  _
-                    ByVal p2 As String,  _
-                    ByVal p3 As String,  _
-                    ByVal p4 As Global.System.Nullable(Of Date),  _
-                    ByVal p5 As String,  _
-                    ByVal p6 As String,  _
-                    ByVal p7 As String,  _
-                    ByVal p8 As String,  _
-                    ByVal p9 As String,  _
-                    ByVal p10 As String,  _
-                    ByVal p11 As String,  _
-                    ByVal p12 As Global.System.Nullable(Of Date),  _
-                    ByVal p13 As Global.System.Nullable(Of Date),  _
-                    ByVal p14 As String,  _
-                    ByVal p15 As Global.System.Nullable(Of Date),  _
-                    ByVal p16 As String,  _
-                    ByVal p17 As Global.System.Nullable(Of Integer),  _
-                    ByVal p18 As Global.System.Nullable(Of Integer),  _
-                    ByVal p19 As String,  _
-                    ByVal p20 As Global.System.Nullable(Of Integer),  _
-                    ByVal p21 As Global.System.Nullable(Of Date),  _
-                    ByVal p22 As String,  _
-                    ByVal p23 As Global.System.Nullable(Of Date),  _
-                    ByVal p24 As String,  _
-                    ByVal p25 As Global.System.Nullable(Of Date),  _
-                    ByVal p26 As String,  _
-                    ByVal p27 As String,  _
-                    ByVal p28 As Global.System.Nullable(Of Integer),  _
-                    ByVal p29 As String,  _
-                    ByVal p30 As Global.System.Nullable(Of Integer),  _
-                    ByVal p31 As String,  _
-                    ByVal p32 As Global.System.Nullable(Of Date),  _
-                    ByVal p33 As String,  _
-                    ByVal p34 As String,  _
-                    ByVal p35 As Global.System.Nullable(Of Integer),  _
-                    ByVal p36 As Global.System.Nullable(Of Integer),  _
-                    ByVal p37 As Global.System.Nullable(Of Integer),  _
-                    ByVal p38 As Global.System.Nullable(Of Integer),  _
-                    ByVal p39 As String,  _
-                    ByVal p40 As String,  _
-                    ByVal p41 As String,  _
-                    ByVal p42 As String,  _
-                    ByVal p43 As String,  _
-                    ByVal p44 As String) As Integer
-            If (p1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p1")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(p1,String)
-            End If
-            If (p2 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2,String)
-            End If
-            If (p3 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(p3,String)
-            End If
-            If (p4.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(p4.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            If (p5 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p5")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(p5,String)
-            End If
-            If (p6 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(p6,String)
-            End If
-            If (p7 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(p7,String)
-            End If
-            If (p8 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(p8,String)
-            End If
-            If (p9 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(p9,String)
-            End If
-            If (p10 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(p10,String)
-            End If
-            If (p11 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(p11,String)
-            End If
-            If (p12.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(p12.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
-            End If
-            If (p13.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(p13.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
-            End If
-            If (p14 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(p14,String)
-            End If
-            If (p15.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(p15.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
-            End If
-            If (p16 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(p16,String)
-            End If
-            If (p17.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(p17.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
-            End If
-            If (p18.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(p18.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
-            End If
-            If (p19 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(p19,String)
-            End If
-            If (p20.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(p20.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
-            End If
-            If (p21.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(p21.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
-            If (p22 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(p22,String)
-            End If
-            If (p23.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(p23.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
-            End If
-            If (p24 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(p24,String)
-            End If
-            If (p25.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(p25.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
-            End If
-            If (p26 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(p26,String)
-            End If
-            If (p27 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(p27,String)
-            End If
-            If (p28.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(p28.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
-            End If
-            If (p29 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(p29,String)
-            End If
-            If (p30.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(p30.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
-            End If
-            If (p31 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(p31,String)
-            End If
-            If (p32.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(p32.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
-            End If
-            If (p33 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(p33,String)
-            End If
-            If (p34 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(p34,String)
-            End If
-            If (p35.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(p35.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
-            End If
-            If (p36.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(p36.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
-            End If
-            If (p37.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(p37.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
-            End If
-            If (p38.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(p38.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
-            End If
-            If (p39 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(p39,String)
-            End If
-            If (p40 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(p40,String)
-            End If
-            If (p41 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(p41,String)
-            End If
-            If (p42 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(41).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(p42,String)
-            End If
-            If (p43 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p43")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(p43,String)
-            End If
-            If (p44 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p44")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(p44,String)
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
-            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.UpdateCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.UpdateCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal p2 As String,  _
-                    ByVal p3 As String,  _
-                    ByVal p4 As Global.System.Nullable(Of Date),  _
-                    ByVal p6 As String,  _
-                    ByVal p7 As String,  _
-                    ByVal p8 As String,  _
-                    ByVal p9 As String,  _
-                    ByVal p10 As String,  _
-                    ByVal p11 As String,  _
-                    ByVal p12 As Global.System.Nullable(Of Date),  _
-                    ByVal p13 As Global.System.Nullable(Of Date),  _
-                    ByVal p14 As String,  _
-                    ByVal p15 As Global.System.Nullable(Of Date),  _
-                    ByVal p16 As String,  _
-                    ByVal p17 As Global.System.Nullable(Of Integer),  _
-                    ByVal p18 As Global.System.Nullable(Of Integer),  _
-                    ByVal p19 As String,  _
-                    ByVal p20 As Global.System.Nullable(Of Integer),  _
-                    ByVal p21 As Global.System.Nullable(Of Date),  _
-                    ByVal p22 As String,  _
-                    ByVal p23 As Global.System.Nullable(Of Date),  _
-                    ByVal p24 As String,  _
-                    ByVal p25 As Global.System.Nullable(Of Date),  _
-                    ByVal p26 As String,  _
-                    ByVal p27 As String,  _
-                    ByVal p28 As Global.System.Nullable(Of Integer),  _
-                    ByVal p29 As String,  _
-                    ByVal p30 As Global.System.Nullable(Of Integer),  _
-                    ByVal p31 As String,  _
-                    ByVal p32 As Global.System.Nullable(Of Date),  _
-                    ByVal p33 As String,  _
-                    ByVal p34 As String,  _
-                    ByVal p35 As Global.System.Nullable(Of Integer),  _
-                    ByVal p36 As Global.System.Nullable(Of Integer),  _
-                    ByVal p37 As Global.System.Nullable(Of Integer),  _
-                    ByVal p38 As Global.System.Nullable(Of Integer),  _
-                    ByVal p39 As String,  _
-                    ByVal p40 As String,  _
-                    ByVal p41 As String,  _
-                    ByVal p42 As String,  _
-                    ByVal p43 As String,  _
-                    ByVal p44 As String) As Integer
-            Return Me.Update(p43, p2, p3, p4, p44, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44)
         End Function
     End Class
     
