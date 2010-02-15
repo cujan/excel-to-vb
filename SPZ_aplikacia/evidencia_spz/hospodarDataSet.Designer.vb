@@ -352,6 +352,8 @@ Partial Public Class hospodarDataSet
         
         Private columnclen_pz1 As Global.System.Data.DataColumn
         
+        Private columnmeno_hospodar As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub New()
             MyBase.New
@@ -685,6 +687,13 @@ Partial Public Class hospodarDataSet
             End Get
         End Property
         
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property meno_hospodarColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmeno_hospodar
+            End Get
+        End Property
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -757,9 +766,10 @@ Partial Public Class hospodarDataSet
                     ByVal mesto As String,  _
                     ByVal ulica As String,  _
                     ByVal ulica_cislo As String,  _
-                    ByVal clen_pz1 As Long) As all_clenoviaRow
+                    ByVal clen_pz1 As Long,  _
+                    ByVal meno_hospodar As String) As all_clenoviaRow
             Dim rowall_clenoviaRow As all_clenoviaRow = CType(Me.NewRow,all_clenoviaRow)
-            Dim columnValuesArray() As Object = New Object() {cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, miesto_narodenia, okres_narodenia, okres_bydliska, psc, telefon, cislo_op, datum_vydania_op, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, miesto_skusky_z_polovnictva, skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsej_skusky_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gula, najvyzsie_vyznamenanie, vyznamenanie_kedy, udelene_tresty, poznamky, titul_pred_id, titul_za_id, narodnost_id, statna_prislusnost_id, ico_clenovia, mesto, ulica, ulica_cislo, clen_pz1}
+            Dim columnValuesArray() As Object = New Object() {cislo_pl, meno, priezvisko, datum_narodenia, rodne_cislo, miesto_narodenia, okres_narodenia, okres_bydliska, psc, telefon, cislo_op, datum_vydania_op, datum_vydania_pl, cislo_zp, datum_vydania_zp, cislo_clenskeho_preukazu_spz, clen_spz_od, clenske_do, cislo_dokladu_clenske, clen_pz, skuska_z_polovnictva, miesto_skusky_z_polovnictva, skuska_pre_polovnych_hospodarov, miesto_skusky_pre_polovnych_hospodarov, vyzsia_skuska_z_polovnictva, miesto_vyzsej_skusky_z_polovnictva, brokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gula, najvyzsie_vyznamenanie, vyznamenanie_kedy, udelene_tresty, poznamky, titul_pred_id, titul_za_id, narodnost_id, statna_prislusnost_id, ico_clenovia, mesto, ulica, ulica_cislo, clen_pz1, meno_hospodar}
             rowall_clenoviaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowall_clenoviaRow)
             Return rowall_clenoviaRow
@@ -827,6 +837,7 @@ Partial Public Class hospodarDataSet
             Me.columnulica = MyBase.Columns("ulica")
             Me.columnulica_cislo = MyBase.Columns("ulica_cislo")
             Me.columnclen_pz1 = MyBase.Columns("clen_pz1")
+            Me.columnmeno_hospodar = MyBase.Columns("meno_hospodar")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -917,6 +928,8 @@ Partial Public Class hospodarDataSet
             MyBase.Columns.Add(Me.columnulica_cislo)
             Me.columnclen_pz1 = New Global.System.Data.DataColumn("clen_pz1", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnclen_pz1)
+            Me.columnmeno_hospodar = New Global.System.Data.DataColumn("meno_hospodar", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmeno_hospodar)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columncislo_pl, Me.columnrodne_cislo}, true))
             Me.columncislo_pl.AllowDBNull = false
             Me.columncislo_pl.MaxLength = 45
@@ -946,6 +959,8 @@ Partial Public Class hospodarDataSet
             Me.columnulica.MaxLength = 100
             Me.columnulica_cislo.MaxLength = 100
             Me.columnclen_pz1.Caption = "clen_pz"
+            Me.columnmeno_hospodar.ReadOnly = true
+            Me.columnmeno_hospodar.MaxLength = 91
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1682,6 +1697,20 @@ Partial Public Class hospodarDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property meno_hospodar() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableall_clenovia.meno_hospodarColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'meno_hospodar' in table 'all_clenovia' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableall_clenovia.meno_hospodarColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function IsmenoNull() As Boolean
             Return Me.IsNull(Me.tableall_clenovia.menoColumn)
         End Function
@@ -2090,6 +2119,16 @@ Partial Public Class hospodarDataSet
         Public Sub Setclen_pz1Null()
             Me(Me.tableall_clenovia.clen_pz1Column) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Ismeno_hospodarNull() As Boolean
+            Return Me.IsNull(Me.tableall_clenovia.meno_hospodarColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setmeno_hospodarNull()
+            Me(Me.tableall_clenovia.meno_hospodarColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -2291,6 +2330,7 @@ Namespace hospodarDataSetTableAdapters
             tableMapping.ColumnMappings.Add("ulica", "ulica")
             tableMapping.ColumnMappings.Add("ulica_cislo", "ulica_cislo")
             tableMapping.ColumnMappings.Add("clen_pz", "clen_pz1")
+            tableMapping.ColumnMappings.Add("meno_hospodar", "meno_hospodar")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.InsertCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.InsertCommand.Connection = Me.Connection
@@ -2373,8 +2413,8 @@ Namespace hospodarDataSetTableAdapters
                 "rokova_zbran, kontrolne_strelby_brok, gulova_zbran, kontrolne_strelby_gula, najv"& _ 
                 "yzsie_vyznamenanie, vyznamenanie_kedy, udelene_tresty, poznamky, titul_pred_id, "& _ 
                 "titul_za_id, narodnost_id, statna_prislusnost_id, ico_clenovia, mesto, ulica, ul"& _ 
-                "ica_cislo FROM all_clenovia WHERE (ico_clenovia = @Param2) order by priezvisko a"& _ 
-                "sc"
+                "ica_cislo, priezvisko + ' ' +meno as meno_hospodar FROM all_clenovia WHERE (ico_"& _ 
+                "clenovia = @Param2) order by priezvisko asc"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param2", Global.System.Data.SqlDbType.NVarChar, 45, Global.System.Data.ParameterDirection.Input, true, 0, 0, "ico_clenovia", Global.System.Data.DataRowVersion.Current, Nothing))
         End Sub
