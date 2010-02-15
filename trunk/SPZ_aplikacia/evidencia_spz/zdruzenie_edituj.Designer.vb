@@ -1125,11 +1125,11 @@ Partial Class zdruzenie_edituj
         'predsedaComboBox
         '
         Me.predsedaComboBox.DataSource = Me.AllclenoviaBindingSource2
-        Me.predsedaComboBox.DisplayMember = "priezvisko"
+        Me.predsedaComboBox.DisplayMember = "meno_predseda"
         Me.predsedaComboBox.FormattingEnabled = True
         Me.predsedaComboBox.Location = New System.Drawing.Point(213, 181)
         Me.predsedaComboBox.Name = "predsedaComboBox"
-        Me.predsedaComboBox.Size = New System.Drawing.Size(103, 21)
+        Me.predsedaComboBox.Size = New System.Drawing.Size(128, 21)
         Me.predsedaComboBox.TabIndex = 88
         Me.predsedaComboBox.ValueMember = "rodne_cislo"
         '
@@ -1162,11 +1162,11 @@ Partial Class zdruzenie_edituj
         'hospodarComboBox
         '
         Me.hospodarComboBox.DataSource = Me.AllclenoviaBindingSource1
-        Me.hospodarComboBox.DisplayMember = "priezvisko"
+        Me.hospodarComboBox.DisplayMember = "meno_hospodar"
         Me.hospodarComboBox.FormattingEnabled = True
         Me.hospodarComboBox.Location = New System.Drawing.Point(520, 180)
         Me.hospodarComboBox.Name = "hospodarComboBox"
-        Me.hospodarComboBox.Size = New System.Drawing.Size(100, 21)
+        Me.hospodarComboBox.Size = New System.Drawing.Size(121, 21)
         Me.hospodarComboBox.TabIndex = 89
         Me.hospodarComboBox.ValueMember = "rodne_cislo"
         '

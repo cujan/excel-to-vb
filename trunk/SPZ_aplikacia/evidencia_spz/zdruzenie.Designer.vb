@@ -40,6 +40,12 @@ Partial Class zdruzenie
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.ZdruzeniaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.ZdruzeniaDataGridView = New System.Windows.Forms.DataGridView
+        Me.NazovDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.SidloDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.IcoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DicDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PredsedaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.PolovnyhospodarDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.zavriet_kartu_button = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
@@ -49,12 +55,6 @@ Partial Class zdruzenie
         Me.Label3 = New System.Windows.Forms.Label
         Me.nazovTextBox = New System.Windows.Forms.TextBox
         Me.Panel1 = New System.Windows.Forms.Panel
-        Me.NazovDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.SidloDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.IcoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DicDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.PredsedaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.PolovnyhospodarDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.ZdruzeniaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ZdruzeniaBindingNavigator.SuspendLayout()
         CType(Me.ZdruzeniaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,7 +76,7 @@ Partial Class zdruzenie
         Me.ZdruzeniaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ZdruzeniaBindingNavigator.Name = "ZdruzeniaBindingNavigator"
         Me.ZdruzeniaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ZdruzeniaBindingNavigator.Size = New System.Drawing.Size(759, 25)
+        Me.ZdruzeniaBindingNavigator.Size = New System.Drawing.Size(961, 25)
         Me.ZdruzeniaBindingNavigator.TabIndex = 0
         Me.ZdruzeniaBindingNavigator.Text = "BindingNavigator1"
         Me.ZdruzeniaBindingNavigator.Visible = False
@@ -103,7 +103,7 @@ Partial Class zdruzenie
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -193,8 +193,44 @@ Partial Class zdruzenie
         Me.ZdruzeniaDataGridView.Location = New System.Drawing.Point(12, 80)
         Me.ZdruzeniaDataGridView.Name = "ZdruzeniaDataGridView"
         Me.ZdruzeniaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ZdruzeniaDataGridView.Size = New System.Drawing.Size(868, 363)
+        Me.ZdruzeniaDataGridView.Size = New System.Drawing.Size(645, 363)
         Me.ZdruzeniaDataGridView.TabIndex = 1
+        '
+        'NazovDataGridViewTextBoxColumn
+        '
+        Me.NazovDataGridViewTextBoxColumn.DataPropertyName = "nazov"
+        Me.NazovDataGridViewTextBoxColumn.HeaderText = "nazov"
+        Me.NazovDataGridViewTextBoxColumn.Name = "NazovDataGridViewTextBoxColumn"
+        '
+        'SidloDataGridViewTextBoxColumn
+        '
+        Me.SidloDataGridViewTextBoxColumn.DataPropertyName = "sidlo"
+        Me.SidloDataGridViewTextBoxColumn.HeaderText = "sidlo"
+        Me.SidloDataGridViewTextBoxColumn.Name = "SidloDataGridViewTextBoxColumn"
+        '
+        'IcoDataGridViewTextBoxColumn
+        '
+        Me.IcoDataGridViewTextBoxColumn.DataPropertyName = "ico"
+        Me.IcoDataGridViewTextBoxColumn.HeaderText = "ico"
+        Me.IcoDataGridViewTextBoxColumn.Name = "IcoDataGridViewTextBoxColumn"
+        '
+        'DicDataGridViewTextBoxColumn
+        '
+        Me.DicDataGridViewTextBoxColumn.DataPropertyName = "dic"
+        Me.DicDataGridViewTextBoxColumn.HeaderText = "dic"
+        Me.DicDataGridViewTextBoxColumn.Name = "DicDataGridViewTextBoxColumn"
+        '
+        'PredsedaDataGridViewTextBoxColumn
+        '
+        Me.PredsedaDataGridViewTextBoxColumn.DataPropertyName = "predseda"
+        Me.PredsedaDataGridViewTextBoxColumn.HeaderText = "predseda"
+        Me.PredsedaDataGridViewTextBoxColumn.Name = "PredsedaDataGridViewTextBoxColumn"
+        '
+        'PolovnyhospodarDataGridViewTextBoxColumn
+        '
+        Me.PolovnyhospodarDataGridViewTextBoxColumn.DataPropertyName = "polovny_hospodar"
+        Me.PolovnyhospodarDataGridViewTextBoxColumn.HeaderText = "polovny_hospodar"
+        Me.PolovnyhospodarDataGridViewTextBoxColumn.Name = "PolovnyhospodarDataGridViewTextBoxColumn"
         '
         'zavriet_kartu_button
         '
@@ -279,42 +315,6 @@ Partial Class zdruzenie
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(217, 49)
         Me.Panel1.TabIndex = 8
-        '
-        'NazovDataGridViewTextBoxColumn
-        '
-        Me.NazovDataGridViewTextBoxColumn.DataPropertyName = "nazov"
-        Me.NazovDataGridViewTextBoxColumn.HeaderText = "nazov"
-        Me.NazovDataGridViewTextBoxColumn.Name = "NazovDataGridViewTextBoxColumn"
-        '
-        'SidloDataGridViewTextBoxColumn
-        '
-        Me.SidloDataGridViewTextBoxColumn.DataPropertyName = "sidlo"
-        Me.SidloDataGridViewTextBoxColumn.HeaderText = "sidlo"
-        Me.SidloDataGridViewTextBoxColumn.Name = "SidloDataGridViewTextBoxColumn"
-        '
-        'IcoDataGridViewTextBoxColumn
-        '
-        Me.IcoDataGridViewTextBoxColumn.DataPropertyName = "ico"
-        Me.IcoDataGridViewTextBoxColumn.HeaderText = "ico"
-        Me.IcoDataGridViewTextBoxColumn.Name = "IcoDataGridViewTextBoxColumn"
-        '
-        'DicDataGridViewTextBoxColumn
-        '
-        Me.DicDataGridViewTextBoxColumn.DataPropertyName = "dic"
-        Me.DicDataGridViewTextBoxColumn.HeaderText = "dic"
-        Me.DicDataGridViewTextBoxColumn.Name = "DicDataGridViewTextBoxColumn"
-        '
-        'PredsedaDataGridViewTextBoxColumn
-        '
-        Me.PredsedaDataGridViewTextBoxColumn.DataPropertyName = "predseda"
-        Me.PredsedaDataGridViewTextBoxColumn.HeaderText = "predseda"
-        Me.PredsedaDataGridViewTextBoxColumn.Name = "PredsedaDataGridViewTextBoxColumn"
-        '
-        'PolovnyhospodarDataGridViewTextBoxColumn
-        '
-        Me.PolovnyhospodarDataGridViewTextBoxColumn.DataPropertyName = "polovny_hospodar"
-        Me.PolovnyhospodarDataGridViewTextBoxColumn.HeaderText = "polovny_hospodar"
-        Me.PolovnyhospodarDataGridViewTextBoxColumn.Name = "PolovnyhospodarDataGridViewTextBoxColumn"
         '
         'zdruzenie
         '
