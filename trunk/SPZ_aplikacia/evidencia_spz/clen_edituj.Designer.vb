@@ -177,6 +177,10 @@ Partial Class clen_edituj
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.Label14 = New System.Windows.Forms.Label
+        Me.Label15 = New System.Windows.Forms.Label
+        Me.Label16 = New System.Windows.Forms.Label
+        Me.Label17 = New System.Windows.Forms.Label
         Cislo_plLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -1542,6 +1546,42 @@ Partial Class clen_edituj
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Adresa"
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(343, 497)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(70, 13)
+        Me.Label14.TabIndex = 124
+        Me.Label14.Text = "( napr. 1998 )"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(343, 519)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(70, 13)
+        Me.Label15.TabIndex = 125
+        Me.Label15.Text = "( napr. 1998 )"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(709, 681)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(70, 13)
+        Me.Label16.TabIndex = 126
+        Me.Label16.Text = "( napr. 1998 )"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(709, 708)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(70, 13)
+        Me.Label17.TabIndex = 127
+        Me.Label17.Text = "( napr. 1998 )"
+        '
         'clen_edituj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1549,6 +1589,10 @@ Partial Class clen_edituj
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(1257, 800)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Label13)
@@ -1780,4 +1824,8 @@ Partial Class clen_edituj
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
 End Class

@@ -148,8 +148,36 @@ Partial Class zdruzenie_edituj
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.Label4 = New System.Windows.Forms.Label
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.Label19 = New System.Windows.Forms.Label
+        Me.Label17 = New System.Windows.Forms.Label
+        Me.Label14 = New System.Windows.Forms.Label
+        Me.Label13 = New System.Windows.Forms.Label
+        Me.Label12 = New System.Windows.Forms.Label
+        Me.Label11 = New System.Windows.Forms.Label
+        Me.Label10 = New System.Windows.Forms.Label
+        Me.Label9 = New System.Windows.Forms.Label
         Me.GroupBox3 = New System.Windows.Forms.GroupBox
+        Me.Label25 = New System.Windows.Forms.Label
+        Me.Label24 = New System.Windows.Forms.Label
+        Me.Label23 = New System.Windows.Forms.Label
+        Me.Label22 = New System.Windows.Forms.Label
+        Me.Label15 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.Label16 = New System.Windows.Forms.Label
+        Me.Label18 = New System.Windows.Forms.Label
+        Me.Label20 = New System.Windows.Forms.Label
+        Me.Label21 = New System.Windows.Forms.Label
+        Me.Label26 = New System.Windows.Forms.Label
+        Me.Label27 = New System.Windows.Forms.Label
+        Me.Label28 = New System.Windows.Forms.Label
+        Me.Label29 = New System.Windows.Forms.Label
+        Me.Label30 = New System.Windows.Forms.Label
         IcoLabel = New System.Windows.Forms.Label
         ICO_clenoviaLabel = New System.Windows.Forms.Label
         ICO_psyLabel = New System.Windows.Forms.Label
@@ -214,7 +242,7 @@ Partial Class zdruzenie_edituj
         'IcoLabel
         '
         IcoLabel.AutoSize = True
-        IcoLabel.Location = New System.Drawing.Point(183, 103)
+        IcoLabel.Location = New System.Drawing.Point(183, 73)
         IcoLabel.Name = "IcoLabel"
         IcoLabel.Size = New System.Drawing.Size(28, 13)
         IcoLabel.TabIndex = 1
@@ -223,7 +251,7 @@ Partial Class zdruzenie_edituj
         'ICO_clenoviaLabel
         '
         ICO_clenoviaLabel.AutoSize = True
-        ICO_clenoviaLabel.Location = New System.Drawing.Point(729, 74)
+        ICO_clenoviaLabel.Location = New System.Drawing.Point(729, 44)
         ICO_clenoviaLabel.Name = "ICO_clenoviaLabel"
         ICO_clenoviaLabel.Size = New System.Drawing.Size(71, 13)
         ICO_clenoviaLabel.TabIndex = 3
@@ -232,7 +260,7 @@ Partial Class zdruzenie_edituj
         'ICO_psyLabel
         '
         ICO_psyLabel.AutoSize = True
-        ICO_psyLabel.Location = New System.Drawing.Point(729, 100)
+        ICO_psyLabel.Location = New System.Drawing.Point(729, 70)
         ICO_psyLabel.Name = "ICO_psyLabel"
         ICO_psyLabel.Size = New System.Drawing.Size(47, 13)
         ICO_psyLabel.TabIndex = 5
@@ -241,7 +269,7 @@ Partial Class zdruzenie_edituj
         'ICO_trofejeLabel
         '
         ICO_trofejeLabel.AutoSize = True
-        ICO_trofejeLabel.Location = New System.Drawing.Point(729, 126)
+        ICO_trofejeLabel.Location = New System.Drawing.Point(729, 96)
         ICO_trofejeLabel.Name = "ICO_trofejeLabel"
         ICO_trofejeLabel.Size = New System.Drawing.Size(60, 13)
         ICO_trofejeLabel.TabIndex = 7
@@ -250,7 +278,7 @@ Partial Class zdruzenie_edituj
         'NazovLabel
         '
         NazovLabel.AutoSize = True
-        NazovLabel.Location = New System.Drawing.Point(171, 77)
+        NazovLabel.Location = New System.Drawing.Point(171, 47)
         NazovLabel.Name = "NazovLabel"
         NazovLabel.Size = New System.Drawing.Size(41, 13)
         NazovLabel.TabIndex = 9
@@ -259,7 +287,7 @@ Partial Class zdruzenie_edituj
         'SidloLabel
         '
         SidloLabel.AutoSize = True
-        SidloLabel.Location = New System.Drawing.Point(483, 77)
+        SidloLabel.Location = New System.Drawing.Point(483, 47)
         SidloLabel.Name = "SidloLabel"
         SidloLabel.Size = New System.Drawing.Size(35, 13)
         SidloLabel.TabIndex = 11
@@ -268,7 +296,7 @@ Partial Class zdruzenie_edituj
         'PredsedaLabel
         '
         PredsedaLabel.AutoSize = True
-        PredsedaLabel.Location = New System.Drawing.Point(154, 183)
+        PredsedaLabel.Location = New System.Drawing.Point(154, 153)
         PredsedaLabel.Name = "PredsedaLabel"
         PredsedaLabel.Size = New System.Drawing.Size(55, 13)
         PredsedaLabel.TabIndex = 13
@@ -277,7 +305,7 @@ Partial Class zdruzenie_edituj
         'Predseda_telefonLabel
         '
         Predseda_telefonLabel.AutoSize = True
-        Predseda_telefonLabel.Location = New System.Drawing.Point(121, 210)
+        Predseda_telefonLabel.Location = New System.Drawing.Point(121, 180)
         Predseda_telefonLabel.Name = "Predseda_telefonLabel"
         Predseda_telefonLabel.Size = New System.Drawing.Size(89, 13)
         Predseda_telefonLabel.TabIndex = 15
@@ -286,7 +314,7 @@ Partial Class zdruzenie_edituj
         'Polovny_hospodarLabel
         '
         Polovny_hospodarLabel.AutoSize = True
-        Polovny_hospodarLabel.Location = New System.Drawing.Point(441, 183)
+        Polovny_hospodarLabel.Location = New System.Drawing.Point(441, 153)
         Polovny_hospodarLabel.Name = "Polovny_hospodarLabel"
         Polovny_hospodarLabel.Size = New System.Drawing.Size(77, 13)
         Polovny_hospodarLabel.TabIndex = 17
@@ -295,7 +323,7 @@ Partial Class zdruzenie_edituj
         'Polovny_hospodar_telefonLabel
         '
         Polovny_hospodar_telefonLabel.AutoSize = True
-        Polovny_hospodar_telefonLabel.Location = New System.Drawing.Point(406, 210)
+        Polovny_hospodar_telefonLabel.Location = New System.Drawing.Point(406, 180)
         Polovny_hospodar_telefonLabel.Name = "Polovny_hospodar_telefonLabel"
         Polovny_hospodar_telefonLabel.Size = New System.Drawing.Size(112, 13)
         Polovny_hospodar_telefonLabel.TabIndex = 19
@@ -304,7 +332,7 @@ Partial Class zdruzenie_edituj
         'DicLabel
         '
         DicLabel.AutoSize = True
-        DicLabel.Location = New System.Drawing.Point(183, 129)
+        DicLabel.Location = New System.Drawing.Point(183, 99)
         DicLabel.Name = "DicLabel"
         DicLabel.Size = New System.Drawing.Size(28, 13)
         DicLabel.TabIndex = 21
@@ -313,7 +341,7 @@ Partial Class zdruzenie_edituj
         'BankaLabel
         '
         BankaLabel.AutoSize = True
-        BankaLabel.Location = New System.Drawing.Point(477, 103)
+        BankaLabel.Location = New System.Drawing.Point(477, 73)
         BankaLabel.Name = "BankaLabel"
         BankaLabel.Size = New System.Drawing.Size(41, 13)
         BankaLabel.TabIndex = 23
@@ -322,7 +350,7 @@ Partial Class zdruzenie_edituj
         'Cislo_uctuLabel
         '
         Cislo_uctuLabel.AutoSize = True
-        Cislo_uctuLabel.Location = New System.Drawing.Point(459, 129)
+        Cislo_uctuLabel.Location = New System.Drawing.Point(459, 99)
         Cislo_uctuLabel.Name = "Cislo_uctuLabel"
         Cislo_uctuLabel.Size = New System.Drawing.Size(60, 13)
         Cislo_uctuLabel.TabIndex = 25
@@ -331,7 +359,7 @@ Partial Class zdruzenie_edituj
         'Chovatelska_oblastLabel
         '
         Chovatelska_oblastLabel.AutoSize = True
-        Chovatelska_oblastLabel.Location = New System.Drawing.Point(139, 323)
+        Chovatelska_oblastLabel.Location = New System.Drawing.Point(139, 293)
         Chovatelska_oblastLabel.Name = "Chovatelska_oblastLabel"
         Chovatelska_oblastLabel.Size = New System.Drawing.Size(70, 13)
         Chovatelska_oblastLabel.TabIndex = 27
@@ -340,7 +368,7 @@ Partial Class zdruzenie_edituj
         'Cislo_reviruLabel
         '
         Cislo_reviruLabel.AutoSize = True
-        Cislo_reviruLabel.Location = New System.Drawing.Point(147, 271)
+        Cislo_reviruLabel.Location = New System.Drawing.Point(147, 241)
         Cislo_reviruLabel.Name = "Cislo_reviruLabel"
         Cislo_reviruLabel.Size = New System.Drawing.Size(65, 13)
         Cislo_reviruLabel.TabIndex = 29
@@ -349,7 +377,7 @@ Partial Class zdruzenie_edituj
         'VymeraLabel
         '
         VymeraLabel.AutoSize = True
-        VymeraLabel.Location = New System.Drawing.Point(164, 297)
+        VymeraLabel.Location = New System.Drawing.Point(164, 267)
         VymeraLabel.Name = "VymeraLabel"
         VymeraLabel.Size = New System.Drawing.Size(45, 13)
         VymeraLabel.TabIndex = 31
@@ -358,7 +386,7 @@ Partial Class zdruzenie_edituj
         'LesLabel
         '
         LesLabel.AutoSize = True
-        LesLabel.Location = New System.Drawing.Point(491, 297)
+        LesLabel.Location = New System.Drawing.Point(491, 267)
         LesLabel.Name = "LesLabel"
         LesLabel.Size = New System.Drawing.Size(27, 13)
         LesLabel.TabIndex = 33
@@ -412,7 +440,7 @@ Partial Class zdruzenie_edituj
         'Platnost_najomnej_zmluvy_doLabel
         '
         Platnost_najomnej_zmluvy_doLabel.AutoSize = True
-        Platnost_najomnej_zmluvy_doLabel.Location = New System.Drawing.Point(399, 271)
+        Platnost_najomnej_zmluvy_doLabel.Location = New System.Drawing.Point(399, 241)
         Platnost_najomnej_zmluvy_doLabel.Name = "Platnost_najomnej_zmluvy_doLabel"
         Platnost_najomnej_zmluvy_doLabel.Size = New System.Drawing.Size(119, 13)
         Platnost_najomnej_zmluvy_doLabel.TabIndex = 45
@@ -602,7 +630,7 @@ Partial Class zdruzenie_edituj
         'Label1
         '
         Label1.AutoSize = True
-        Label1.Location = New System.Drawing.Point(735, 155)
+        Label1.Location = New System.Drawing.Point(735, 125)
         Label1.Name = "Label1"
         Label1.Size = New System.Drawing.Size(54, 13)
         Label1.TabIndex = 92
@@ -611,7 +639,7 @@ Partial Class zdruzenie_edituj
         'Label2
         '
         Label2.AutoSize = True
-        Label2.Location = New System.Drawing.Point(702, 181)
+        Label2.Location = New System.Drawing.Point(702, 151)
         Label2.Name = "Label2"
         Label2.Size = New System.Drawing.Size(94, 13)
         Label2.TabIndex = 93
@@ -624,7 +652,7 @@ Partial Class zdruzenie_edituj
         Me.ZdruzeniaBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.ZdruzeniaBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.ZdruzeniaBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ZdruzeniaBindingNavigatorSaveItem})
-        Me.ZdruzeniaBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.ZdruzeniaBindingNavigator.Location = New System.Drawing.Point(0, -30)
         Me.ZdruzeniaBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.ZdruzeniaBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.ZdruzeniaBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -658,7 +686,7 @@ Partial Class zdruzenie_edituj
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -742,7 +770,7 @@ Partial Class zdruzenie_edituj
         'IcoTextBox
         '
         Me.IcoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "ico", True))
-        Me.IcoTextBox.Location = New System.Drawing.Point(216, 100)
+        Me.IcoTextBox.Location = New System.Drawing.Point(216, 70)
         Me.IcoTextBox.Name = "IcoTextBox"
         Me.IcoTextBox.ReadOnly = True
         Me.IcoTextBox.Size = New System.Drawing.Size(100, 20)
@@ -751,7 +779,7 @@ Partial Class zdruzenie_edituj
         'ICO_clenoviaTextBox
         '
         Me.ICO_clenoviaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "ICO_clenovia", True))
-        Me.ICO_clenoviaTextBox.Location = New System.Drawing.Point(802, 74)
+        Me.ICO_clenoviaTextBox.Location = New System.Drawing.Point(802, 44)
         Me.ICO_clenoviaTextBox.Name = "ICO_clenoviaTextBox"
         Me.ICO_clenoviaTextBox.ReadOnly = True
         Me.ICO_clenoviaTextBox.Size = New System.Drawing.Size(100, 20)
@@ -760,7 +788,7 @@ Partial Class zdruzenie_edituj
         'ICO_psyTextBox
         '
         Me.ICO_psyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "ICO_psy", True))
-        Me.ICO_psyTextBox.Location = New System.Drawing.Point(802, 100)
+        Me.ICO_psyTextBox.Location = New System.Drawing.Point(802, 70)
         Me.ICO_psyTextBox.Name = "ICO_psyTextBox"
         Me.ICO_psyTextBox.ReadOnly = True
         Me.ICO_psyTextBox.Size = New System.Drawing.Size(100, 20)
@@ -769,7 +797,7 @@ Partial Class zdruzenie_edituj
         'ICO_trofejeTextBox
         '
         Me.ICO_trofejeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "ICO_trofeje", True))
-        Me.ICO_trofejeTextBox.Location = New System.Drawing.Point(802, 126)
+        Me.ICO_trofejeTextBox.Location = New System.Drawing.Point(802, 96)
         Me.ICO_trofejeTextBox.Name = "ICO_trofejeTextBox"
         Me.ICO_trofejeTextBox.ReadOnly = True
         Me.ICO_trofejeTextBox.Size = New System.Drawing.Size(100, 20)
@@ -778,7 +806,7 @@ Partial Class zdruzenie_edituj
         'NazovTextBox
         '
         Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "nazov", True))
-        Me.NazovTextBox.Location = New System.Drawing.Point(216, 74)
+        Me.NazovTextBox.Location = New System.Drawing.Point(216, 44)
         Me.NazovTextBox.Name = "NazovTextBox"
         Me.NazovTextBox.Size = New System.Drawing.Size(156, 20)
         Me.NazovTextBox.TabIndex = 10
@@ -786,7 +814,7 @@ Partial Class zdruzenie_edituj
         'SidloTextBox
         '
         Me.SidloTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "sidlo", True))
-        Me.SidloTextBox.Location = New System.Drawing.Point(520, 74)
+        Me.SidloTextBox.Location = New System.Drawing.Point(520, 44)
         Me.SidloTextBox.Name = "SidloTextBox"
         Me.SidloTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SidloTextBox.TabIndex = 12
@@ -794,7 +822,7 @@ Partial Class zdruzenie_edituj
         'PredsedaTextBox
         '
         Me.PredsedaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "predseda", True))
-        Me.PredsedaTextBox.Location = New System.Drawing.Point(802, 152)
+        Me.PredsedaTextBox.Location = New System.Drawing.Point(802, 122)
         Me.PredsedaTextBox.Name = "PredsedaTextBox"
         Me.PredsedaTextBox.ReadOnly = True
         Me.PredsedaTextBox.Size = New System.Drawing.Size(74, 20)
@@ -803,7 +831,7 @@ Partial Class zdruzenie_edituj
         'Predseda_telefonTextBox
         '
         Me.Predseda_telefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "predseda_telefon", True))
-        Me.Predseda_telefonTextBox.Location = New System.Drawing.Point(213, 207)
+        Me.Predseda_telefonTextBox.Location = New System.Drawing.Point(213, 177)
         Me.Predseda_telefonTextBox.Name = "Predseda_telefonTextBox"
         Me.Predseda_telefonTextBox.ReadOnly = True
         Me.Predseda_telefonTextBox.Size = New System.Drawing.Size(103, 20)
@@ -812,7 +840,7 @@ Partial Class zdruzenie_edituj
         'Polovny_hospodarTextBox
         '
         Me.Polovny_hospodarTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "polovny_hospodar", True))
-        Me.Polovny_hospodarTextBox.Location = New System.Drawing.Point(802, 178)
+        Me.Polovny_hospodarTextBox.Location = New System.Drawing.Point(802, 148)
         Me.Polovny_hospodarTextBox.Name = "Polovny_hospodarTextBox"
         Me.Polovny_hospodarTextBox.ReadOnly = True
         Me.Polovny_hospodarTextBox.Size = New System.Drawing.Size(76, 20)
@@ -821,7 +849,7 @@ Partial Class zdruzenie_edituj
         'Polovny_hospodar_telefonTextBox
         '
         Me.Polovny_hospodar_telefonTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "polovny_hospodar_telefon", True))
-        Me.Polovny_hospodar_telefonTextBox.Location = New System.Drawing.Point(520, 207)
+        Me.Polovny_hospodar_telefonTextBox.Location = New System.Drawing.Point(520, 177)
         Me.Polovny_hospodar_telefonTextBox.Name = "Polovny_hospodar_telefonTextBox"
         Me.Polovny_hospodar_telefonTextBox.ReadOnly = True
         Me.Polovny_hospodar_telefonTextBox.Size = New System.Drawing.Size(100, 20)
@@ -830,7 +858,7 @@ Partial Class zdruzenie_edituj
         'DicTextBox
         '
         Me.DicTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "dic", True))
-        Me.DicTextBox.Location = New System.Drawing.Point(216, 126)
+        Me.DicTextBox.Location = New System.Drawing.Point(216, 96)
         Me.DicTextBox.Name = "DicTextBox"
         Me.DicTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DicTextBox.TabIndex = 22
@@ -838,7 +866,7 @@ Partial Class zdruzenie_edituj
         'BankaTextBox
         '
         Me.BankaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "banka", True))
-        Me.BankaTextBox.Location = New System.Drawing.Point(520, 100)
+        Me.BankaTextBox.Location = New System.Drawing.Point(520, 70)
         Me.BankaTextBox.Name = "BankaTextBox"
         Me.BankaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.BankaTextBox.TabIndex = 24
@@ -846,7 +874,7 @@ Partial Class zdruzenie_edituj
         'Cislo_uctuTextBox
         '
         Me.Cislo_uctuTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "cislo_uctu", True))
-        Me.Cislo_uctuTextBox.Location = New System.Drawing.Point(520, 126)
+        Me.Cislo_uctuTextBox.Location = New System.Drawing.Point(520, 96)
         Me.Cislo_uctuTextBox.Name = "Cislo_uctuTextBox"
         Me.Cislo_uctuTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Cislo_uctuTextBox.TabIndex = 26
@@ -854,7 +882,7 @@ Partial Class zdruzenie_edituj
         'Chovatelska_oblastTextBox
         '
         Me.Chovatelska_oblastTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "chovatelska_oblast", True))
-        Me.Chovatelska_oblastTextBox.Location = New System.Drawing.Point(213, 320)
+        Me.Chovatelska_oblastTextBox.Location = New System.Drawing.Point(213, 290)
         Me.Chovatelska_oblastTextBox.Name = "Chovatelska_oblastTextBox"
         Me.Chovatelska_oblastTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Chovatelska_oblastTextBox.TabIndex = 28
@@ -862,7 +890,7 @@ Partial Class zdruzenie_edituj
         'Cislo_reviruTextBox
         '
         Me.Cislo_reviruTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "cislo_reviru", True))
-        Me.Cislo_reviruTextBox.Location = New System.Drawing.Point(213, 268)
+        Me.Cislo_reviruTextBox.Location = New System.Drawing.Point(213, 238)
         Me.Cislo_reviruTextBox.Name = "Cislo_reviruTextBox"
         Me.Cislo_reviruTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Cislo_reviruTextBox.TabIndex = 30
@@ -870,7 +898,7 @@ Partial Class zdruzenie_edituj
         'VymeraTextBox
         '
         Me.VymeraTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "vymera", True))
-        Me.VymeraTextBox.Location = New System.Drawing.Point(213, 294)
+        Me.VymeraTextBox.Location = New System.Drawing.Point(213, 264)
         Me.VymeraTextBox.Name = "VymeraTextBox"
         Me.VymeraTextBox.Size = New System.Drawing.Size(100, 20)
         Me.VymeraTextBox.TabIndex = 32
@@ -878,7 +906,7 @@ Partial Class zdruzenie_edituj
         'LesTextBox
         '
         Me.LesTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "les", True))
-        Me.LesTextBox.Location = New System.Drawing.Point(520, 294)
+        Me.LesTextBox.Location = New System.Drawing.Point(520, 264)
         Me.LesTextBox.Name = "LesTextBox"
         Me.LesTextBox.Size = New System.Drawing.Size(100, 20)
         Me.LesTextBox.TabIndex = 34
@@ -926,7 +954,7 @@ Partial Class zdruzenie_edituj
         'Platnost_najomnej_zmluvy_doTextBox
         '
         Me.Platnost_najomnej_zmluvy_doTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ZdruzeniaBindingSource, "platnost_najomnej_zmluvy_do", True))
-        Me.Platnost_najomnej_zmluvy_doTextBox.Location = New System.Drawing.Point(520, 268)
+        Me.Platnost_najomnej_zmluvy_doTextBox.Location = New System.Drawing.Point(520, 238)
         Me.Platnost_najomnej_zmluvy_doTextBox.Name = "Platnost_najomnej_zmluvy_doTextBox"
         Me.Platnost_najomnej_zmluvy_doTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Platnost_najomnej_zmluvy_doTextBox.TabIndex = 46
@@ -1095,7 +1123,7 @@ Partial Class zdruzenie_edituj
         '
         Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(321, 28)
+        Me.Button1.Location = New System.Drawing.Point(321, -2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 87
@@ -1126,8 +1154,9 @@ Partial Class zdruzenie_edituj
         '
         Me.predsedaComboBox.DataSource = Me.AllclenoviaBindingSource2
         Me.predsedaComboBox.DisplayMember = "meno_predseda"
+        Me.predsedaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.predsedaComboBox.FormattingEnabled = True
-        Me.predsedaComboBox.Location = New System.Drawing.Point(213, 181)
+        Me.predsedaComboBox.Location = New System.Drawing.Point(213, 151)
         Me.predsedaComboBox.Name = "predsedaComboBox"
         Me.predsedaComboBox.Size = New System.Drawing.Size(128, 21)
         Me.predsedaComboBox.TabIndex = 88
@@ -1163,8 +1192,9 @@ Partial Class zdruzenie_edituj
         '
         Me.hospodarComboBox.DataSource = Me.AllclenoviaBindingSource1
         Me.hospodarComboBox.DisplayMember = "meno_hospodar"
+        Me.hospodarComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.hospodarComboBox.FormattingEnabled = True
-        Me.hospodarComboBox.Location = New System.Drawing.Point(520, 180)
+        Me.hospodarComboBox.Location = New System.Drawing.Point(520, 150)
         Me.hospodarComboBox.Name = "hospodarComboBox"
         Me.hospodarComboBox.Size = New System.Drawing.Size(121, 21)
         Me.hospodarComboBox.TabIndex = 89
@@ -1198,7 +1228,7 @@ Partial Class zdruzenie_edituj
         '
         Me.zavriet_button.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.zavriet_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.zavriet_button.Location = New System.Drawing.Point(402, 28)
+        Me.zavriet_button.Location = New System.Drawing.Point(402, -2)
         Me.zavriet_button.Name = "zavriet_button"
         Me.zavriet_button.Size = New System.Drawing.Size(87, 23)
         Me.zavriet_button.TabIndex = 90
@@ -1220,7 +1250,7 @@ Partial Class zdruzenie_edituj
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(973, 971)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(973, 812)
         Me.ShapeContainer1.TabIndex = 91
         Me.ShapeContainer1.TabStop = False
         '
@@ -1228,20 +1258,23 @@ Partial Class zdruzenie_edituj
         '
         Me.LineShape2.BorderWidth = 2
         Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 67
-        Me.LineShape2.X2 = 685
-        Me.LineShape2.Y1 = 472
-        Me.LineShape2.Y2 = 472
+        Me.LineShape2.X1 = 69
+        Me.LineShape2.X2 = 687
+        Me.LineShape2.Y1 = 450
+        Me.LineShape2.Y2 = 450
         '
         'Panel1
         '
-        Me.Panel1.Location = New System.Drawing.Point(687, 52)
+        Me.Panel1.Location = New System.Drawing.Point(687, 22)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(232, 190)
         Me.Panel1.TabIndex = 94
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.SrnciaTextBox)
         Me.GroupBox1.Controls.Add(Me.InaTextBox)
         Me.GroupBox1.Controls.Add(InaLabel)
@@ -1253,15 +1286,50 @@ Partial Class zdruzenie_edituj
         Me.GroupBox1.Controls.Add(Me.JeleniaTextBox)
         Me.GroupBox1.Controls.Add(JeleniaLabel)
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox1.Location = New System.Drawing.Point(148, 360)
+        Me.GroupBox1.Location = New System.Drawing.Point(148, 330)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(480, 97)
+        Me.GroupBox1.Size = New System.Drawing.Size(521, 97)
         Me.GroupBox1.TabIndex = 95
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Zver"
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(170, 72)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(30, 13)
+        Me.Label6.TabIndex = 130
+        Me.Label6.Text = "( ks )"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(170, 46)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(30, 13)
+        Me.Label5.TabIndex = 129
+        Me.Label5.Text = "( ks )"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(171, 20)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(30, 13)
+        Me.Label4.TabIndex = 128
+        Me.Label4.Text = "( ks )"
+        '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label19)
+        Me.GroupBox2.Controls.Add(Me.Label17)
+        Me.GroupBox2.Controls.Add(Me.Label14)
+        Me.GroupBox2.Controls.Add(Me.Label13)
+        Me.GroupBox2.Controls.Add(Me.Label12)
+        Me.GroupBox2.Controls.Add(Me.Label11)
+        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Slovensky_kopov_planTextBox)
         Me.GroupBox2.Controls.Add(Me.Farbiare_skutocnostTextBox)
         Me.GroupBox2.Controls.Add(Farbiare_skutocnostLabel)
@@ -1287,15 +1355,91 @@ Partial Class zdruzenie_edituj
         Me.GroupBox2.Controls.Add(Me.Stavace_planTextBox)
         Me.GroupBox2.Controls.Add(Stavace_planLabel)
         Me.GroupBox2.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox2.Location = New System.Drawing.Point(96, 490)
+        Me.GroupBox2.Location = New System.Drawing.Point(96, 460)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(532, 182)
+        Me.GroupBox2.Size = New System.Drawing.Size(573, 182)
         Me.GroupBox2.TabIndex = 96
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Plemená psov"
         '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(530, 102)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(30, 13)
+        Me.Label19.TabIndex = 140
+        Me.Label19.Text = "( ks )"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(530, 50)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(30, 13)
+        Me.Label17.TabIndex = 138
+        Me.Label17.Text = "( ks )"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(224, 154)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(30, 13)
+        Me.Label14.TabIndex = 136
+        Me.Label14.Text = "( ks )"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(224, 128)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(30, 13)
+        Me.Label13.TabIndex = 135
+        Me.Label13.Text = "( ks )"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(222, 102)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(30, 13)
+        Me.Label12.TabIndex = 134
+        Me.Label12.Text = "( ks )"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(222, 76)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(30, 13)
+        Me.Label11.TabIndex = 133
+        Me.Label11.Text = "( ks )"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(222, 50)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(30, 13)
+        Me.Label10.TabIndex = 132
+        Me.Label10.Text = "( ks )"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(223, 24)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(30, 13)
+        Me.Label9.TabIndex = 131
+        Me.Label9.Text = "( ks )"
+        '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.Label25)
+        Me.GroupBox3.Controls.Add(Me.Label24)
+        Me.GroupBox3.Controls.Add(Me.Label23)
+        Me.GroupBox3.Controls.Add(Me.Label22)
         Me.GroupBox3.Controls.Add(Me.Pes_diviacia_planTextBox)
         Me.GroupBox3.Controls.Add(Me.Pes_mala_skutocnostTextBox)
         Me.GroupBox3.Controls.Add(Pes_mala_skutocnostLabel)
@@ -1313,12 +1457,165 @@ Partial Class zdruzenie_edituj
         Me.GroupBox3.Controls.Add(Me.Pes_jelenia_planTextBox)
         Me.GroupBox3.Controls.Add(Pes_jelenia_planLabel)
         Me.GroupBox3.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox3.Location = New System.Drawing.Point(96, 713)
+        Me.GroupBox3.Location = New System.Drawing.Point(96, 683)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(532, 129)
+        Me.GroupBox3.Size = New System.Drawing.Size(573, 129)
         Me.GroupBox3.TabIndex = 97
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Typy psov"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(222, 103)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(30, 13)
+        Me.Label25.TabIndex = 144
+        Me.Label25.Text = "( ks )"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(222, 77)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(30, 13)
+        Me.Label24.TabIndex = 143
+        Me.Label24.Text = "( ks )"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(222, 51)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(30, 13)
+        Me.Label23.TabIndex = 142
+        Me.Label23.Text = "( ks )"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(222, 25)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(30, 13)
+        Me.Label22.TabIndex = 141
+        Me.Label22.Text = "( ks )"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(626, 245)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(70, 13)
+        Me.Label15.TabIndex = 126
+        Me.Label15.Text = "( napr. 1998 )"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(319, 267)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(31, 13)
+        Me.Label3.TabIndex = 127
+        Me.Label3.Text = "( ha )"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(626, 354)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(30, 13)
+        Me.Label7.TabIndex = 131
+        Me.Label7.Text = "( ks )"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(626, 380)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(30, 13)
+        Me.Label8.TabIndex = 132
+        Me.Label8.Text = "( ks )"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(626, 484)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(30, 13)
+        Me.Label16.TabIndex = 137
+        Me.Label16.Text = "( ks )"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(626, 536)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(30, 13)
+        Me.Label18.TabIndex = 139
+        Me.Label18.Text = "( ks )"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(626, 588)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(30, 13)
+        Me.Label20.TabIndex = 141
+        Me.Label20.Text = "( ks )"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(626, 614)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(30, 13)
+        Me.Label21.TabIndex = 142
+        Me.Label21.Text = "( ks )"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(626, 708)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(30, 13)
+        Me.Label26.TabIndex = 145
+        Me.Label26.Text = "( ks )"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(626, 734)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(30, 13)
+        Me.Label27.TabIndex = 146
+        Me.Label27.Text = "( ks )"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(626, 760)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(30, 13)
+        Me.Label28.TabIndex = 147
+        Me.Label28.Text = "( ks )"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(625, 786)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(30, 13)
+        Me.Label29.TabIndex = 148
+        Me.Label29.Text = "( ks )"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(626, 267)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(31, 13)
+        Me.Label30.TabIndex = 149
+        Me.Label30.Text = "( ha )"
         '
         'zdruzenie_edituj
         '
@@ -1326,7 +1623,20 @@ Partial Class zdruzenie_edituj
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(973, 971)
+        Me.ClientSize = New System.Drawing.Size(973, 812)
+        Me.Controls.Add(Me.Label30)
+        Me.Controls.Add(Me.Label29)
+        Me.Controls.Add(Me.Label28)
+        Me.Controls.Add(Me.Label27)
+        Me.Controls.Add(Me.Label26)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -1481,4 +1791,32 @@ Partial Class zdruzenie_edituj
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents Label27 As System.Windows.Forms.Label
+    Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents Label29 As System.Windows.Forms.Label
+    Friend WithEvents Label30 As System.Windows.Forms.Label
 End Class

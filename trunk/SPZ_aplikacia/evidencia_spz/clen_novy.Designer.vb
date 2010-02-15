@@ -141,6 +141,10 @@ Partial Class clen_novy
         Me.Gulova_zbranComboBox = New System.Windows.Forms.ComboBox
         Me.rodne_cisloMaskedTextBox = New System.Windows.Forms.MaskedTextBox
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.Label15 = New System.Windows.Forms.Label
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
         Cislo_plLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -880,7 +884,7 @@ Partial Class clen_novy
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(973, 841)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(973, 812)
         Me.ShapeContainer1.TabIndex = 86
         Me.ShapeContainer1.TabStop = False
         '
@@ -1163,13 +1167,53 @@ Partial Class clen_novy
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Adresa"
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(344, 449)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(70, 13)
+        Me.Label15.TabIndex = 126
+        Me.Label15.Text = "( napr. 1998 )"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(344, 475)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(70, 13)
+        Me.Label1.TabIndex = 127
+        Me.Label1.Text = "( napr. 1998 )"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(697, 623)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(70, 13)
+        Me.Label2.TabIndex = 128
+        Me.Label2.Text = "( napr. 1998 )"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(697, 651)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(70, 13)
+        Me.Label3.TabIndex = 129
+        Me.Label3.Text = "( napr. 1998 )"
+        '
         'clen_novy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(973, 841)
+        Me.ClientSize = New System.Drawing.Size(973, 812)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.rodne_cisloMaskedTextBox)
         Me.Controls.Add(Me.Gulova_zbranComboBox)
@@ -1350,4 +1394,8 @@ Partial Class clen_novy
     Friend WithEvents Brokova_zbranComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents rodne_cisloMaskedTextBox As System.Windows.Forms.MaskedTextBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
 End Class
