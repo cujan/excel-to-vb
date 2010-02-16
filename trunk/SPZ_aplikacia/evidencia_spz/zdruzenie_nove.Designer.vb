@@ -114,31 +114,31 @@ Partial Class zdruzenie_nove
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Label4 = New System.Windows.Forms.Label
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.Label16 = New System.Windows.Forms.Label
+        Me.Label12 = New System.Windows.Forms.Label
+        Me.Label11 = New System.Windows.Forms.Label
+        Me.Label10 = New System.Windows.Forms.Label
+        Me.Label9 = New System.Windows.Forms.Label
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.Label7 = New System.Windows.Forms.Label
         Me.GroupBox3 = New System.Windows.Forms.GroupBox
+        Me.Label22 = New System.Windows.Forms.Label
+        Me.Label21 = New System.Windows.Forms.Label
+        Me.Label20 = New System.Windows.Forms.Label
+        Me.Label19 = New System.Windows.Forms.Label
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.Label1 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
         Me.Label5 = New System.Windows.Forms.Label
         Me.Label6 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.Label12 = New System.Windows.Forms.Label
         Me.Label13 = New System.Windows.Forms.Label
         Me.Label14 = New System.Windows.Forms.Label
         Me.Label15 = New System.Windows.Forms.Label
-        Me.Label16 = New System.Windows.Forms.Label
         Me.Label17 = New System.Windows.Forms.Label
         Me.Label18 = New System.Windows.Forms.Label
-        Me.Label19 = New System.Windows.Forms.Label
-        Me.Label20 = New System.Windows.Forms.Label
-        Me.Label21 = New System.Windows.Forms.Label
-        Me.Label22 = New System.Windows.Forms.Label
         Me.Label23 = New System.Windows.Forms.Label
         Me.Label24 = New System.Windows.Forms.Label
         Me.Label25 = New System.Windows.Forms.Label
@@ -959,6 +959,33 @@ Partial Class zdruzenie_nove
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Zver"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(172, 72)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(30, 13)
+        Me.Label3.TabIndex = 131
+        Me.Label3.Text = "( ks )"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(172, 46)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(30, 13)
+        Me.Label2.TabIndex = 130
+        Me.Label2.Text = "( ks )"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(172, 20)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(30, 13)
+        Me.Label4.TabIndex = 129
+        Me.Label4.Text = "( ks )"
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Label16)
@@ -1000,6 +1027,69 @@ Partial Class zdruzenie_nove
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Plemená psov"
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(516, 96)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(30, 13)
+        Me.Label16.TabIndex = 141
+        Me.Label16.Text = "( ks )"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(234, 148)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(30, 13)
+        Me.Label12.TabIndex = 137
+        Me.Label12.Text = "( ks )"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(234, 122)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(30, 13)
+        Me.Label11.TabIndex = 136
+        Me.Label11.Text = "( ks )"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(234, 96)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(30, 13)
+        Me.Label10.TabIndex = 135
+        Me.Label10.Text = "( ks )"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(234, 70)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(30, 13)
+        Me.Label9.TabIndex = 134
+        Me.Label9.Text = "( ks )"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(234, 44)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(30, 13)
+        Me.Label8.TabIndex = 133
+        Me.Label8.Text = "( ks )"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(234, 18)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(30, 13)
+        Me.Label7.TabIndex = 132
+        Me.Label7.Text = "( ks )"
+        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.Label22)
@@ -1030,6 +1120,42 @@ Partial Class zdruzenie_nove
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Typy psov"
         '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(234, 107)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(30, 13)
+        Me.Label22.TabIndex = 145
+        Me.Label22.Text = "( ks )"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(234, 81)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(30, 13)
+        Me.Label21.TabIndex = 144
+        Me.Label21.Text = "( ks )"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(234, 55)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(30, 13)
+        Me.Label20.TabIndex = 143
+        Me.Label20.Text = "( ks )"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(234, 29)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(30, 13)
+        Me.Label19.TabIndex = 142
+        Me.Label19.Text = "( ks )"
+        '
         'Panel1
         '
         Me.Panel1.Location = New System.Drawing.Point(618, 8)
@@ -1041,39 +1167,12 @@ Partial Class zdruzenie_nove
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.DarkRed
-        Me.Label1.Location = New System.Drawing.Point(131, 218)
+        Me.Label1.Location = New System.Drawing.Point(97, 218)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(507, 13)
+        Me.Label1.Size = New System.Drawing.Size(555, 13)
         Me.Label1.TabIndex = 94
         Me.Label1.Text = "Predsedu a poľovného hospodára môžete priradiť k združeniu až po ich vytvorení vo" & _
-            " formulári 'Nový člen'!"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(172, 20)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(30, 13)
-        Me.Label4.TabIndex = 129
-        Me.Label4.Text = "( ks )"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(172, 46)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(30, 13)
-        Me.Label2.TabIndex = 130
-        Me.Label2.Text = "( ks )"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(172, 72)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(30, 13)
-        Me.Label3.TabIndex = 131
-        Me.Label3.Text = "( ks )"
+            " formulári 'Pridať nového člena'!"
         '
         'Label5
         '
@@ -1092,60 +1191,6 @@ Partial Class zdruzenie_nove
         Me.Label6.Size = New System.Drawing.Size(30, 13)
         Me.Label6.TabIndex = 133
         Me.Label6.Text = "( ks )"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(234, 18)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(30, 13)
-        Me.Label7.TabIndex = 132
-        Me.Label7.Text = "( ks )"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(234, 44)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(30, 13)
-        Me.Label8.TabIndex = 133
-        Me.Label8.Text = "( ks )"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(234, 70)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(30, 13)
-        Me.Label9.TabIndex = 134
-        Me.Label9.Text = "( ks )"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(234, 96)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(30, 13)
-        Me.Label10.TabIndex = 135
-        Me.Label10.Text = "( ks )"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(234, 122)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(30, 13)
-        Me.Label11.TabIndex = 136
-        Me.Label11.Text = "( ks )"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(234, 148)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(30, 13)
-        Me.Label12.TabIndex = 137
-        Me.Label12.Text = "( ks )"
         '
         'Label13
         '
@@ -1174,15 +1219,6 @@ Partial Class zdruzenie_nove
         Me.Label15.TabIndex = 140
         Me.Label15.Text = "( ks )"
         '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(516, 96)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(30, 13)
-        Me.Label16.TabIndex = 141
-        Me.Label16.Text = "( ks )"
-        '
         'Label17
         '
         Me.Label17.AutoSize = True
@@ -1200,42 +1236,6 @@ Partial Class zdruzenie_nove
         Me.Label18.Size = New System.Drawing.Size(30, 13)
         Me.Label18.TabIndex = 143
         Me.Label18.Text = "( ks )"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(234, 29)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(30, 13)
-        Me.Label19.TabIndex = 142
-        Me.Label19.Text = "( ks )"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(234, 55)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(30, 13)
-        Me.Label20.TabIndex = 143
-        Me.Label20.Text = "( ks )"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(234, 81)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(30, 13)
-        Me.Label21.TabIndex = 144
-        Me.Label21.Text = "( ks )"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(234, 107)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(30, 13)
-        Me.Label22.TabIndex = 145
-        Me.Label22.Text = "( ks )"
         '
         'Label23
         '

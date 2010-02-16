@@ -686,7 +686,7 @@ Partial Class zdruzenie_edituj
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -1241,8 +1241,8 @@ Partial Class zdruzenie_edituj
         Me.LineShape1.Name = "LineShape1"
         Me.LineShape1.X1 = 67
         Me.LineShape1.X2 = 685
-        Me.LineShape1.Y1 = 258
-        Me.LineShape1.Y2 = 258
+        Me.LineShape1.Y1 = 222
+        Me.LineShape1.Y2 = 222
         '
         'ShapeContainer1
         '

@@ -119,10 +119,6 @@ Partial Class clen_novy
         Me.statna_prislusnostComboBox = New System.Windows.Forms.ComboBox
         Me.StatnaprislusnostBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Statna_prislusnostTableAdapter = New evidencia_spz.spzDataSetTableAdapters.statna_prislusnostTableAdapter
-        Me.label_predseda = New System.Windows.Forms.Label
-        Me.label_hospodar = New System.Windows.Forms.Label
-        Me.ComboBox_predseda = New System.Windows.Forms.ComboBox
-        Me.ComboBox_hospodar = New System.Windows.Forms.ComboBox
         Me.All_clenoviaDataSet = New evidencia_spz.all_clenoviaDataSet
         Me.All_clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.All_clenoviaTableAdapter = New evidencia_spz.all_clenoviaDataSetTableAdapters.all_clenoviaTableAdapter
@@ -145,6 +141,9 @@ Partial Class clen_novy
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label3 = New System.Windows.Forms.Label
+        Me.predseda_hospodar_groupbox = New System.Windows.Forms.GroupBox
+        Me.predseda_radio = New System.Windows.Forms.RadioButton
+        Me.hospodar_radio = New System.Windows.Forms.RadioButton
         Cislo_plLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -202,6 +201,7 @@ Partial Class clen_novy
         CType(Me.ObceDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.predseda_hospodar_groupbox.SuspendLayout()
         Me.SuspendLayout()
         '
         'Cislo_plLabel
@@ -369,7 +369,7 @@ Partial Class clen_novy
         'Cislo_dokladu_clenskeLabel
         '
         Cislo_dokladu_clenskeLabel.AutoSize = True
-        Cislo_dokladu_clenskeLabel.Location = New System.Drawing.Point(447, 423)
+        Cislo_dokladu_clenskeLabel.Location = New System.Drawing.Point(447, 475)
         Cislo_dokladu_clenskeLabel.Name = "Cislo_dokladu_clenskeLabel"
         Cislo_dokladu_clenskeLabel.Size = New System.Drawing.Size(100, 13)
         Cislo_dokladu_clenskeLabel.TabIndex = 39
@@ -707,7 +707,7 @@ Partial Class clen_novy
         '
         'Cislo_dokladu_clenskeTextBox
         '
-        Me.Cislo_dokladu_clenskeTextBox.Location = New System.Drawing.Point(551, 420)
+        Me.Cislo_dokladu_clenskeTextBox.Location = New System.Drawing.Point(551, 472)
         Me.Cislo_dokladu_clenskeTextBox.Name = "Cislo_dokladu_clenskeTextBox"
         Me.Cislo_dokladu_clenskeTextBox.Size = New System.Drawing.Size(140, 20)
         Me.Cislo_dokladu_clenskeTextBox.TabIndex = 40
@@ -993,46 +993,6 @@ Partial Class clen_novy
         '
         Me.Statna_prislusnostTableAdapter.ClearBeforeFill = True
         '
-        'label_predseda
-        '
-        Me.label_predseda.AutoSize = True
-        Me.label_predseda.Location = New System.Drawing.Point(426, 449)
-        Me.label_predseda.Name = "label_predseda"
-        Me.label_predseda.Size = New System.Drawing.Size(119, 13)
-        Me.label_predseda.TabIndex = 91
-        Me.label_predseda.Text = "Je predseda združenia?"
-        Me.label_predseda.Visible = False
-        '
-        'label_hospodar
-        '
-        Me.label_hospodar.AutoSize = True
-        Me.label_hospodar.Location = New System.Drawing.Point(426, 475)
-        Me.label_hospodar.Name = "label_hospodar"
-        Me.label_hospodar.Size = New System.Drawing.Size(119, 13)
-        Me.label_hospodar.TabIndex = 92
-        Me.label_hospodar.Text = "Je hospodár združenia?"
-        Me.label_hospodar.Visible = False
-        '
-        'ComboBox_predseda
-        '
-        Me.ComboBox_predseda.FormattingEnabled = True
-        Me.ComboBox_predseda.Items.AddRange(New Object() {"Áno", "Nie"})
-        Me.ComboBox_predseda.Location = New System.Drawing.Point(551, 446)
-        Me.ComboBox_predseda.Name = "ComboBox_predseda"
-        Me.ComboBox_predseda.Size = New System.Drawing.Size(64, 21)
-        Me.ComboBox_predseda.TabIndex = 93
-        Me.ComboBox_predseda.Visible = False
-        '
-        'ComboBox_hospodar
-        '
-        Me.ComboBox_hospodar.FormattingEnabled = True
-        Me.ComboBox_hospodar.Items.AddRange(New Object() {"Áno", "Nie"})
-        Me.ComboBox_hospodar.Location = New System.Drawing.Point(551, 472)
-        Me.ComboBox_hospodar.Name = "ComboBox_hospodar"
-        Me.ComboBox_hospodar.Size = New System.Drawing.Size(64, 21)
-        Me.ComboBox_hospodar.TabIndex = 94
-        Me.ComboBox_hospodar.Visible = False
-        '
         'All_clenoviaDataSet
         '
         Me.All_clenoviaDataSet.DataSetName = "all_clenoviaDataSet"
@@ -1203,6 +1163,42 @@ Partial Class clen_novy
         Me.Label3.TabIndex = 129
         Me.Label3.Text = "( napr. 1998 )"
         '
+        'predseda_hospodar_groupbox
+        '
+        Me.predseda_hospodar_groupbox.Controls.Add(Me.hospodar_radio)
+        Me.predseda_hospodar_groupbox.Controls.Add(Me.predseda_radio)
+        Me.predseda_hospodar_groupbox.ForeColor = System.Drawing.Color.Black
+        Me.predseda_hospodar_groupbox.Location = New System.Drawing.Point(445, 393)
+        Me.predseda_hospodar_groupbox.Name = "predseda_hospodar_groupbox"
+        Me.predseda_hospodar_groupbox.Size = New System.Drawing.Size(119, 65)
+        Me.predseda_hospodar_groupbox.TabIndex = 130
+        Me.predseda_hospodar_groupbox.TabStop = False
+        Me.predseda_hospodar_groupbox.Text = "Funkcia"
+        Me.predseda_hospodar_groupbox.Visible = False
+        '
+        'predseda_radio
+        '
+        Me.predseda_radio.AutoSize = True
+        Me.predseda_radio.Checked = True
+        Me.predseda_radio.Location = New System.Drawing.Point(44, 16)
+        Me.predseda_radio.Name = "predseda_radio"
+        Me.predseda_radio.Size = New System.Drawing.Size(70, 17)
+        Me.predseda_radio.TabIndex = 0
+        Me.predseda_radio.TabStop = True
+        Me.predseda_radio.Text = "Predseda"
+        Me.predseda_radio.UseVisualStyleBackColor = True
+        '
+        'hospodar_radio
+        '
+        Me.hospodar_radio.AutoSize = True
+        Me.hospodar_radio.Location = New System.Drawing.Point(44, 39)
+        Me.hospodar_radio.Name = "hospodar_radio"
+        Me.hospodar_radio.Size = New System.Drawing.Size(71, 17)
+        Me.hospodar_radio.TabIndex = 1
+        Me.hospodar_radio.TabStop = True
+        Me.hospodar_radio.Text = "Hospodár"
+        Me.hospodar_radio.UseVisualStyleBackColor = True
+        '
         'clen_novy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1210,6 +1206,7 @@ Partial Class clen_novy
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(973, 812)
+        Me.Controls.Add(Me.predseda_hospodar_groupbox)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -1220,10 +1217,6 @@ Partial Class clen_novy
         Me.Controls.Add(Me.Brokova_zbranComboBox)
         Me.Controls.Add(MestoLabel)
         Me.Controls.Add(Me.MestoComboBox)
-        Me.Controls.Add(Me.ComboBox_hospodar)
-        Me.Controls.Add(Me.ComboBox_predseda)
-        Me.Controls.Add(Me.label_hospodar)
-        Me.Controls.Add(Me.label_predseda)
         Me.Controls.Add(Me.statna_prislusnostComboBox)
         Me.Controls.Add(Me.narodnostComboBox)
         Me.Controls.Add(Me.titul_zaComboBox)
@@ -1315,6 +1308,8 @@ Partial Class clen_novy
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.predseda_hospodar_groupbox.ResumeLayout(False)
+        Me.predseda_hospodar_groupbox.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1370,10 +1365,6 @@ Partial Class clen_novy
     Friend WithEvents statna_prislusnostComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents StatnaprislusnostBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Statna_prislusnostTableAdapter As evidencia_spz.spzDataSetTableAdapters.statna_prislusnostTableAdapter
-    Friend WithEvents label_predseda As System.Windows.Forms.Label
-    Friend WithEvents label_hospodar As System.Windows.Forms.Label
-    Friend WithEvents ComboBox_predseda As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox_hospodar As System.Windows.Forms.ComboBox
     Friend WithEvents All_clenoviaDataSet As evidencia_spz.all_clenoviaDataSet
     Friend WithEvents All_clenoviaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents All_clenoviaTableAdapter As evidencia_spz.all_clenoviaDataSetTableAdapters.all_clenoviaTableAdapter
@@ -1398,4 +1389,7 @@ Partial Class clen_novy
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents predseda_hospodar_groupbox As System.Windows.Forms.GroupBox
+    Friend WithEvents hospodar_radio As System.Windows.Forms.RadioButton
+    Friend WithEvents predseda_radio As System.Windows.Forms.RadioButton
 End Class
