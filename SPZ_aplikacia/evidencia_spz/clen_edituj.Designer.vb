@@ -1315,7 +1315,7 @@ Partial Class clen_edituj
         Me.MestoComboBox.FormattingEnabled = True
         Me.MestoComboBox.Location = New System.Drawing.Point(209, 187)
         Me.MestoComboBox.Name = "MestoComboBox"
-        Me.MestoComboBox.Size = New System.Drawing.Size(101, 21)
+        Me.MestoComboBox.Size = New System.Drawing.Size(155, 21)
         Me.MestoComboBox.TabIndex = 96
         Me.MestoComboBox.ValueMember = "obec"
         '
