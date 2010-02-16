@@ -142,8 +142,8 @@ Partial Class clen_novy
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label3 = New System.Windows.Forms.Label
         Me.predseda_hospodar_groupbox = New System.Windows.Forms.GroupBox
-        Me.predseda_radio = New System.Windows.Forms.RadioButton
         Me.hospodar_radio = New System.Windows.Forms.RadioButton
+        Me.predseda_radio = New System.Windows.Forms.RadioButton
         Cislo_plLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
@@ -604,14 +604,14 @@ Partial Class clen_novy
         Me.MenoTextBox.Location = New System.Drawing.Point(198, 54)
         Me.MenoTextBox.Name = "MenoTextBox"
         Me.MenoTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.MenoTextBox.TabIndex = 4
+        Me.MenoTextBox.TabIndex = 1
         '
         'PriezviskoTextBox
         '
         Me.PriezviskoTextBox.Location = New System.Drawing.Point(199, 80)
         Me.PriezviskoTextBox.Name = "PriezviskoTextBox"
         Me.PriezviskoTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.PriezviskoTextBox.TabIndex = 6
+        Me.PriezviskoTextBox.TabIndex = 2
         '
         'Datum_narodeniaDateTimePicker
         '
@@ -620,28 +620,28 @@ Partial Class clen_novy
         Me.Datum_narodeniaDateTimePicker.Name = "Datum_narodeniaDateTimePicker"
         Me.Datum_narodeniaDateTimePicker.ShowCheckBox = True
         Me.Datum_narodeniaDateTimePicker.Size = New System.Drawing.Size(140, 20)
-        Me.Datum_narodeniaDateTimePicker.TabIndex = 8
+        Me.Datum_narodeniaDateTimePicker.TabIndex = 10
         '
         'Miesto_narodeniaTextBox
         '
         Me.Miesto_narodeniaTextBox.Location = New System.Drawing.Point(551, 80)
         Me.Miesto_narodeniaTextBox.Name = "Miesto_narodeniaTextBox"
         Me.Miesto_narodeniaTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Miesto_narodeniaTextBox.TabIndex = 12
+        Me.Miesto_narodeniaTextBox.TabIndex = 11
         '
         'Okres_narodeniaTextBox
         '
         Me.Okres_narodeniaTextBox.Location = New System.Drawing.Point(551, 106)
         Me.Okres_narodeniaTextBox.Name = "Okres_narodeniaTextBox"
         Me.Okres_narodeniaTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Okres_narodeniaTextBox.TabIndex = 14
+        Me.Okres_narodeniaTextBox.TabIndex = 12
         '
         'TelefonTextBox
         '
         Me.TelefonTextBox.Location = New System.Drawing.Point(551, 210)
         Me.TelefonTextBox.Name = "TelefonTextBox"
         Me.TelefonTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.TelefonTextBox.TabIndex = 22
+        Me.TelefonTextBox.TabIndex = 16
         '
         'Cislo_opTextBox
         '
@@ -921,7 +921,7 @@ Partial Class clen_novy
         Me.titul_predComboBox.Location = New System.Drawing.Point(199, 105)
         Me.titul_predComboBox.Name = "titul_predComboBox"
         Me.titul_predComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.titul_predComboBox.TabIndex = 87
+        Me.titul_predComboBox.TabIndex = 3
         Me.titul_predComboBox.ValueMember = "id"
         '
         'TitulpredBindingSource
@@ -937,7 +937,7 @@ Partial Class clen_novy
         Me.titul_zaComboBox.Location = New System.Drawing.Point(199, 131)
         Me.titul_zaComboBox.Name = "titul_zaComboBox"
         Me.titul_zaComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.titul_zaComboBox.TabIndex = 88
+        Me.titul_zaComboBox.TabIndex = 4
         Me.titul_zaComboBox.ValueMember = "id"
         '
         'TitulzaBindingSource
@@ -961,7 +961,7 @@ Partial Class clen_novy
         Me.narodnostComboBox.Location = New System.Drawing.Point(551, 158)
         Me.narodnostComboBox.Name = "narodnostComboBox"
         Me.narodnostComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.narodnostComboBox.TabIndex = 89
+        Me.narodnostComboBox.TabIndex = 14
         Me.narodnostComboBox.ValueMember = "id"
         '
         'NarodnostBindingSource
@@ -981,7 +981,7 @@ Partial Class clen_novy
         Me.statna_prislusnostComboBox.Location = New System.Drawing.Point(551, 185)
         Me.statna_prislusnostComboBox.Name = "statna_prislusnostComboBox"
         Me.statna_prislusnostComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.statna_prislusnostComboBox.TabIndex = 90
+        Me.statna_prislusnostComboBox.TabIndex = 15
         Me.statna_prislusnostComboBox.ValueMember = "id"
         '
         'StatnaprislusnostBindingSource
@@ -1024,7 +1024,7 @@ Partial Class clen_novy
         Me.MestoComboBox.Location = New System.Drawing.Point(198, 156)
         Me.MestoComboBox.Name = "MestoComboBox"
         Me.MestoComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.MestoComboBox.TabIndex = 1
+        Me.MestoComboBox.TabIndex = 5
         Me.MestoComboBox.ValueMember = "obec"
         '
         'CiselnikobceBindingSource
@@ -1047,14 +1047,14 @@ Partial Class clen_novy
         Me.UlicaTextBox.Location = New System.Drawing.Point(86, 16)
         Me.UlicaTextBox.Name = "UlicaTextBox"
         Me.UlicaTextBox.Size = New System.Drawing.Size(87, 20)
-        Me.UlicaTextBox.TabIndex = 1
+        Me.UlicaTextBox.TabIndex = 6
         '
         'Ulica_cisloTextBox
         '
         Me.Ulica_cisloTextBox.Location = New System.Drawing.Point(231, 17)
         Me.Ulica_cisloTextBox.Name = "Ulica_cisloTextBox"
         Me.Ulica_cisloTextBox.Size = New System.Drawing.Size(55, 20)
-        Me.Ulica_cisloTextBox.TabIndex = 1
+        Me.Ulica_cisloTextBox.TabIndex = 7
         '
         'Ciselnik_obceTableAdapter
         '
@@ -1067,7 +1067,7 @@ Partial Class clen_novy
         Me.Okres_bydliskaListBox.Location = New System.Drawing.Point(86, 42)
         Me.Okres_bydliskaListBox.Name = "Okres_bydliskaListBox"
         Me.Okres_bydliskaListBox.Size = New System.Drawing.Size(87, 43)
-        Me.Okres_bydliskaListBox.TabIndex = 1
+        Me.Okres_bydliskaListBox.TabIndex = 8
         '
         'PscListBox
         '
@@ -1076,7 +1076,7 @@ Partial Class clen_novy
         Me.PscListBox.Location = New System.Drawing.Point(231, 42)
         Me.PscListBox.Name = "PscListBox"
         Me.PscListBox.Size = New System.Drawing.Size(55, 43)
-        Me.PscListBox.TabIndex = 1
+        Me.PscListBox.TabIndex = 9
         '
         'ErrorProvider1
         '
@@ -1107,7 +1107,7 @@ Partial Class clen_novy
         Me.rodne_cisloMaskedTextBox.Mask = "000000/0000"
         Me.rodne_cisloMaskedTextBox.Name = "rodne_cisloMaskedTextBox"
         Me.rodne_cisloMaskedTextBox.Size = New System.Drawing.Size(76, 20)
-        Me.rodne_cisloMaskedTextBox.TabIndex = 96
+        Me.rodne_cisloMaskedTextBox.TabIndex = 13
         '
         'GroupBox1
         '
@@ -1176,6 +1176,17 @@ Partial Class clen_novy
         Me.predseda_hospodar_groupbox.Text = "Funkcia"
         Me.predseda_hospodar_groupbox.Visible = False
         '
+        'hospodar_radio
+        '
+        Me.hospodar_radio.AutoSize = True
+        Me.hospodar_radio.Location = New System.Drawing.Point(44, 39)
+        Me.hospodar_radio.Name = "hospodar_radio"
+        Me.hospodar_radio.Size = New System.Drawing.Size(71, 17)
+        Me.hospodar_radio.TabIndex = 1
+        Me.hospodar_radio.TabStop = True
+        Me.hospodar_radio.Text = "Hospodár"
+        Me.hospodar_radio.UseVisualStyleBackColor = True
+        '
         'predseda_radio
         '
         Me.predseda_radio.AutoSize = True
@@ -1188,17 +1199,6 @@ Partial Class clen_novy
         Me.predseda_radio.Text = "Predseda"
         Me.predseda_radio.UseVisualStyleBackColor = True
         '
-        'hospodar_radio
-        '
-        Me.hospodar_radio.AutoSize = True
-        Me.hospodar_radio.Location = New System.Drawing.Point(44, 39)
-        Me.hospodar_radio.Name = "hospodar_radio"
-        Me.hospodar_radio.Size = New System.Drawing.Size(71, 17)
-        Me.hospodar_radio.TabIndex = 1
-        Me.hospodar_radio.TabStop = True
-        Me.hospodar_radio.Text = "Hospodár"
-        Me.hospodar_radio.UseVisualStyleBackColor = True
-        '
         'clen_novy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1206,6 +1206,8 @@ Partial Class clen_novy
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(973, 812)
+        Me.Controls.Add(Me.MestoComboBox)
+        Me.Controls.Add(Me.MenoTextBox)
         Me.Controls.Add(Me.predseda_hospodar_groupbox)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -1216,7 +1218,6 @@ Partial Class clen_novy
         Me.Controls.Add(Me.Gulova_zbranComboBox)
         Me.Controls.Add(Me.Brokova_zbranComboBox)
         Me.Controls.Add(MestoLabel)
-        Me.Controls.Add(Me.MestoComboBox)
         Me.Controls.Add(Me.statna_prislusnostComboBox)
         Me.Controls.Add(Me.narodnostComboBox)
         Me.Controls.Add(Me.titul_zaComboBox)
@@ -1228,7 +1229,6 @@ Partial Class clen_novy
         Me.Controls.Add(Cislo_plLabel)
         Me.Controls.Add(Me.Cislo_plTextBox)
         Me.Controls.Add(MenoLabel)
-        Me.Controls.Add(Me.MenoTextBox)
         Me.Controls.Add(PriezviskoLabel)
         Me.Controls.Add(Me.PriezviskoTextBox)
         Me.Controls.Add(Datum_narodeniaLabel)
