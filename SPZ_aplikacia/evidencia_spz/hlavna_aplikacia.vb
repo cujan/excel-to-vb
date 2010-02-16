@@ -10,6 +10,7 @@ Public Class hlavna_aplikacia
     Public zaregistrovatPredsedu As Boolean
     Public zaregistrovatHospodara As Boolean
     Public neuplne_zdruzenie(150) As String '= New String() {}
+    Public listNeuplnych As String
 
 
 
@@ -388,6 +389,7 @@ Public Class hlavna_aplikacia
 
         Me.updatniNepridanychPredsedov()
         presunListbox()
+        Me.neuplneZdruzenia()
 
     End Sub
 
@@ -901,4 +903,52 @@ Public Class hlavna_aplikacia
     End Sub
 
 
+    Public Sub neuplneZdruzenia()
+        clen_novy.predseda_hospodar_groupbox.Visible = False
+        listNeuplnych = "Neúplné združenia sú nasledujúce:" + vbNewLine
+        Dim pocetNeuplnych As Integer = 0
+
+        For i As Integer = 0 To Me.neuplne_zdruzenie.Length - 1
+            If Me.neuplne_zdruzenie(i) <> "" Then
+                listNeuplnych = listNeuplnych + vbTab + Me.neuplne_zdruzenie(i) + vbNewLine
+                pocetNeuplnych = pocetNeuplnych + 1
+            Else
+                Exit For
+            End If
+        Next
+
+        If pocetNeuplnych > 0 Then
+            poznamka2_label.Visible = True
+            neuplne_zdruzenia_button.Visible = True
+        Else
+            poznamka2_label.Visible = False
+            neuplne_zdruzenia_button.Visible = False
+        End If
+
+        If Me.zaregistrovatHospodara And Me.zaregistrovatPredsedu Then
+            poznamka2_label.Text = "Niektoré združenia (počet " + pocetNeuplnych.ToString + ") nemajú priradeného predsedu a hospodára. Ich zoznam získate po kliknutí na tlačítko 'Neúplné združenia'."
+
+        ElseIf Me.zaregistrovatHospodara And Not Me.zaregistrovatPredsedu Then
+            poznamka2_label.Text = "Niektoré združenia (počet " + pocetNeuplnych.ToString + ") nemajú priradeného hospodára. Ich zoznam získate po kliknutí na tlačítko 'Neúplné združenia'."
+
+        ElseIf Not Me.zaregistrovatHospodara And Me.zaregistrovatPredsedu Then
+            poznamka2_label.Text = "Niektoré združenia (počet " + pocetNeuplnych.ToString + ") nemajú priradeného predsedu. Ich zoznam získate po kliknutí na tlačítko 'Neúplné združenia'."
+
+        End If
+
+
+
+    End Sub
+
+
+    Private Sub neuplne_zdruzenia_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles neuplne_zdruzenia_button.Click
+        Dim response As MsgBoxResult
+        response = MsgBox(listNeuplnych + vbNewLine + vbNewLine + "Prajete si ich pridať teraz?", 4, "Otázka")
+        If response = MsgBoxResult.Yes Then
+            clen_novy.Show()
+            clen_novy.predseda_hospodar_groupbox.Visible = True
+            clen_novy.BringToFront()
+            GetOpenFormTitles()
+        End If
+    End Sub
 End Class

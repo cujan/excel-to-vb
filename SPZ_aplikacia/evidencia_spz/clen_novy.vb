@@ -32,53 +32,6 @@
         Me.statna_prislusnostComboBox.SelectedIndex = -1
         Me.narodnostComboBox.SelectedIndex = -1
 
-        Me.Visible = False
-
-        Dim listNeuplnych As String
-        listNeuplnych = "Neúplné združenia sú nasledujúce:" + vbNewLine
-
-        For i As Integer = 0 To hlavna_aplikacia.neuplne_zdruzenie.Length - 1
-            If hlavna_aplikacia.neuplne_zdruzenie(i) <> "" Then
-                listNeuplnych = listNeuplnych + vbTab + hlavna_aplikacia.neuplne_zdruzenie(i) + vbNewLine
-            Else
-                Exit For
-            End If
-
-
-        Next
-        Dim response As Integer
-
-        If hlavna_aplikacia.zaregistrovatHospodara And hlavna_aplikacia.zaregistrovatPredsedu Then
-            response = MsgBox("Doteraz nebol priradený predseda a hospodár pre združenie. Ak si prajete priradiť predsedu teraz, kliknite na tlačítko OK." + vbNewLine + vbNewLine + listNeuplnych, 4, "Otázka")
-            If response = vbYes Then
-                Me.label_predseda.Visible = True
-                Me.ComboBox_predseda.Visible = True
-
-                Me.ComboBox_predseda.SelectedItem = Me.ComboBox_predseda.Items.Item(1)
-                Me.ComboBox_hospodar.SelectedItem = Me.ComboBox_hospodar.Items.Item(1)
-            End If
-        ElseIf hlavna_aplikacia.zaregistrovatHospodara And Not hlavna_aplikacia.zaregistrovatPredsedu Then
-            response = MsgBox("Doteraz nebol priradený hospodár pre združenie. Ak si ho prajete priradiť teraz, kliknite na tlačítko OK." + vbNewLine + vbNewLine + listNeuplnych, 4, "Otázka")
-            If response = vbYes Then
-                Me.label_hospodar.Visible = True
-                Me.ComboBox_hospodar.Visible = True
-
-                Me.ComboBox_predseda.SelectedItem = Me.ComboBox_predseda.Items.Item(1)
-                Me.ComboBox_hospodar.SelectedItem = Me.ComboBox_hospodar.Items.Item(1)
-
-            End If
-        ElseIf Not hlavna_aplikacia.zaregistrovatHospodara And hlavna_aplikacia.zaregistrovatPredsedu Then
-            response = MsgBox("Doteraz nebol priradený predseda pre združenie. Ak si ho prajete priradiť teraz, kliknite na tlačítko OK." + vbNewLine + vbNewLine + listNeuplnych, 4, "Otázka")
-            If response = vbYes Then
-                Me.label_predseda.Visible = True
-                Me.ComboBox_predseda.Visible = True
-
-                Me.ComboBox_predseda.SelectedItem = Me.ComboBox_predseda.Items.Item(1)
-                Me.ComboBox_hospodar.SelectedItem = Me.ComboBox_hospodar.Items.Item(1)
-            End If
-        End If
-
-        Me.Visible = True
 
     End Sub
 
@@ -224,7 +177,7 @@
             con.Close()
 
             Dim uz_existuje As Integer
-            If ComboBox_predseda.Visible And ComboBox_predseda.SelectedIndex = 0 Then
+            If predseda_radio.Checked Then
                 Dim con2 As New SqlCeConnection(pripojovaci_retazec)
                 Dim com2 As New SqlCeCommand("SELECT count(*) FROM zdruzenia WHERE ico = @zdruzenie and predseda like 'N' ", con2)
                 With com2.Parameters
@@ -232,14 +185,14 @@
 
                 End With
 
-                MsgBox(Clen_pzComboBox.SelectedValue)
+
 
                 con2.Open()
                 uz_existuje = com2.ExecuteScalar
 
                 con2.Close()
 
-                MsgBox(uz_existuje)
+
 
                 If uz_existuje = 1 Then
                     Dim con1 As New SqlCeConnection(pripojovaci_retazec)
@@ -256,7 +209,7 @@
                     MsgBox("V združení " + Clen_pzComboBox.SelectedValue + " už existuje predseda. Nového predsedu vyberiete v editácii združenia.")
                 End If
 
-            ElseIf ComboBox_hospodar.Visible And ComboBox_hospodar.SelectedIndex = 0 Then
+            ElseIf hospodar_radio.Checked Then
 
                 Dim con2 As New SqlCeConnection(pripojovaci_retazec)
                 Dim com2 As New SqlCeCommand("SELECT count(*) FROM zdruzenia WHERE ico = @zdruzenie and polovny_hospodar like 'N' ", con2)
@@ -265,7 +218,7 @@
 
                 End With
 
-                MsgBox(Clen_pzComboBox.SelectedValue)
+
 
                 con2.Open()
                 uz_existuje = com2.ExecuteScalar
@@ -291,6 +244,7 @@
             End If
 
             hlavna_aplikacia.updatniNepridanychPredsedov()
+            hlavna_aplikacia.neuplneZdruzenia()
             MsgBox("Člen bol úspešne pridaný. ", MsgBoxStyle.Information)
             hlavna_aplikacia.removeFormFromList(Me.Text)
             Me.Close()
@@ -446,7 +400,7 @@
     End Sub
 
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        MsgBox(rodne_cisloMaskedTextBox.Text)
+
 
 
     End Sub
