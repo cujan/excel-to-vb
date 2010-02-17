@@ -73,4 +73,15 @@
         Dim nazov As String = Me.nazovTextBox.Text & "%"
         Me.ZdruzeniaTableAdapter.FillBy_nazov(Me.SpzDataSet.zdruzenia, nazov)
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
+
+        'If Me.CheckBox1.CheckState = CheckState.Checked Then
+        'Me.ZdruzeniaDataGridView.Columns.Add()
+        'Me.ZdruzeniaTableAdapter.Fill(Me.SpzDataSet.zdruzenia)
+        'Else
+        'Me.ZdruzeniaDataGridView.Columns.Remove("chovatelska_oblast")
+        'End If
+
+    End Sub
 End Class

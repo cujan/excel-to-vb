@@ -597,21 +597,21 @@ Partial Class clen_novy
         Me.Cislo_plTextBox.Location = New System.Drawing.Point(198, 322)
         Me.Cislo_plTextBox.Name = "Cislo_plTextBox"
         Me.Cislo_plTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Cislo_plTextBox.TabIndex = 2
+        Me.Cislo_plTextBox.TabIndex = 15
         '
         'MenoTextBox
         '
         Me.MenoTextBox.Location = New System.Drawing.Point(198, 54)
         Me.MenoTextBox.Name = "MenoTextBox"
         Me.MenoTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.MenoTextBox.TabIndex = 1
+        Me.MenoTextBox.TabIndex = 0
         '
         'PriezviskoTextBox
         '
         Me.PriezviskoTextBox.Location = New System.Drawing.Point(199, 80)
         Me.PriezviskoTextBox.Name = "PriezviskoTextBox"
         Me.PriezviskoTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.PriezviskoTextBox.TabIndex = 2
+        Me.PriezviskoTextBox.TabIndex = 1
         '
         'Datum_narodeniaDateTimePicker
         '
@@ -620,35 +620,35 @@ Partial Class clen_novy
         Me.Datum_narodeniaDateTimePicker.Name = "Datum_narodeniaDateTimePicker"
         Me.Datum_narodeniaDateTimePicker.ShowCheckBox = True
         Me.Datum_narodeniaDateTimePicker.Size = New System.Drawing.Size(140, 20)
-        Me.Datum_narodeniaDateTimePicker.TabIndex = 10
+        Me.Datum_narodeniaDateTimePicker.TabIndex = 6
         '
         'Miesto_narodeniaTextBox
         '
         Me.Miesto_narodeniaTextBox.Location = New System.Drawing.Point(551, 80)
         Me.Miesto_narodeniaTextBox.Name = "Miesto_narodeniaTextBox"
         Me.Miesto_narodeniaTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Miesto_narodeniaTextBox.TabIndex = 11
+        Me.Miesto_narodeniaTextBox.TabIndex = 7
         '
         'Okres_narodeniaTextBox
         '
         Me.Okres_narodeniaTextBox.Location = New System.Drawing.Point(551, 106)
         Me.Okres_narodeniaTextBox.Name = "Okres_narodeniaTextBox"
         Me.Okres_narodeniaTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Okres_narodeniaTextBox.TabIndex = 12
+        Me.Okres_narodeniaTextBox.TabIndex = 8
         '
         'TelefonTextBox
         '
         Me.TelefonTextBox.Location = New System.Drawing.Point(551, 210)
         Me.TelefonTextBox.Name = "TelefonTextBox"
         Me.TelefonTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.TelefonTextBox.TabIndex = 16
+        Me.TelefonTextBox.TabIndex = 12
         '
         'Cislo_opTextBox
         '
         Me.Cislo_opTextBox.Location = New System.Drawing.Point(198, 296)
         Me.Cislo_opTextBox.Name = "Cislo_opTextBox"
         Me.Cislo_opTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Cislo_opTextBox.TabIndex = 24
+        Me.Cislo_opTextBox.TabIndex = 13
         '
         'Datum_vydania_opDateTimePicker
         '
@@ -657,7 +657,7 @@ Partial Class clen_novy
         Me.Datum_vydania_opDateTimePicker.Name = "Datum_vydania_opDateTimePicker"
         Me.Datum_vydania_opDateTimePicker.ShowCheckBox = True
         Me.Datum_vydania_opDateTimePicker.Size = New System.Drawing.Size(140, 20)
-        Me.Datum_vydania_opDateTimePicker.TabIndex = 26
+        Me.Datum_vydania_opDateTimePicker.TabIndex = 14
         '
         'Datum_vydania_plDateTimePicker
         '
@@ -666,14 +666,14 @@ Partial Class clen_novy
         Me.Datum_vydania_plDateTimePicker.Name = "Datum_vydania_plDateTimePicker"
         Me.Datum_vydania_plDateTimePicker.ShowCheckBox = True
         Me.Datum_vydania_plDateTimePicker.Size = New System.Drawing.Size(140, 20)
-        Me.Datum_vydania_plDateTimePicker.TabIndex = 28
+        Me.Datum_vydania_plDateTimePicker.TabIndex = 16
         '
         'Cislo_zpTextBox
         '
         Me.Cislo_zpTextBox.Location = New System.Drawing.Point(198, 348)
         Me.Cislo_zpTextBox.Name = "Cislo_zpTextBox"
         Me.Cislo_zpTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Cislo_zpTextBox.TabIndex = 30
+        Me.Cislo_zpTextBox.TabIndex = 17
         '
         'Datum_vydania_zpDateTimePicker
         '
@@ -682,35 +682,35 @@ Partial Class clen_novy
         Me.Datum_vydania_zpDateTimePicker.Name = "Datum_vydania_zpDateTimePicker"
         Me.Datum_vydania_zpDateTimePicker.ShowCheckBox = True
         Me.Datum_vydania_zpDateTimePicker.Size = New System.Drawing.Size(140, 20)
-        Me.Datum_vydania_zpDateTimePicker.TabIndex = 32
+        Me.Datum_vydania_zpDateTimePicker.TabIndex = 18
         '
         'Cislo_clenskeho_preukazu_spzTextBox
         '
         Me.Cislo_clenskeho_preukazu_spzTextBox.Location = New System.Drawing.Point(198, 420)
         Me.Cislo_clenskeho_preukazu_spzTextBox.Name = "Cislo_clenskeho_preukazu_spzTextBox"
         Me.Cislo_clenskeho_preukazu_spzTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Cislo_clenskeho_preukazu_spzTextBox.TabIndex = 34
+        Me.Cislo_clenskeho_preukazu_spzTextBox.TabIndex = 20
         '
         'Clen_spz_odTextBox
         '
         Me.Clen_spz_odTextBox.Location = New System.Drawing.Point(198, 446)
         Me.Clen_spz_odTextBox.Name = "Clen_spz_odTextBox"
         Me.Clen_spz_odTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Clen_spz_odTextBox.TabIndex = 36
+        Me.Clen_spz_odTextBox.TabIndex = 21
         '
         'Clenske_doTextBox
         '
         Me.Clenske_doTextBox.Location = New System.Drawing.Point(198, 472)
         Me.Clenske_doTextBox.Name = "Clenske_doTextBox"
         Me.Clenske_doTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Clenske_doTextBox.TabIndex = 38
+        Me.Clenske_doTextBox.TabIndex = 22
         '
         'Cislo_dokladu_clenskeTextBox
         '
         Me.Cislo_dokladu_clenskeTextBox.Location = New System.Drawing.Point(551, 472)
         Me.Cislo_dokladu_clenskeTextBox.Name = "Cislo_dokladu_clenskeTextBox"
         Me.Cislo_dokladu_clenskeTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Cislo_dokladu_clenskeTextBox.TabIndex = 40
+        Me.Cislo_dokladu_clenskeTextBox.TabIndex = 23
         '
         'Skuska_z_polovnictvaDateTimePicker
         '
@@ -719,14 +719,14 @@ Partial Class clen_novy
         Me.Skuska_z_polovnictvaDateTimePicker.Name = "Skuska_z_polovnictvaDateTimePicker"
         Me.Skuska_z_polovnictvaDateTimePicker.ShowCheckBox = True
         Me.Skuska_z_polovnictvaDateTimePicker.Size = New System.Drawing.Size(140, 20)
-        Me.Skuska_z_polovnictvaDateTimePicker.TabIndex = 44
+        Me.Skuska_z_polovnictvaDateTimePicker.TabIndex = 24
         '
         'Miesto_skusky_z_polovnictvaTextBox
         '
         Me.Miesto_skusky_z_polovnictvaTextBox.Location = New System.Drawing.Point(551, 520)
         Me.Miesto_skusky_z_polovnictvaTextBox.Name = "Miesto_skusky_z_polovnictvaTextBox"
         Me.Miesto_skusky_z_polovnictvaTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Miesto_skusky_z_polovnictvaTextBox.TabIndex = 46
+        Me.Miesto_skusky_z_polovnictvaTextBox.TabIndex = 25
         '
         'Skuska_pre_polovnych_hospodarovDateTimePicker
         '
@@ -735,14 +735,14 @@ Partial Class clen_novy
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Name = "Skuska_pre_polovnych_hospodarovDateTimePicker"
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.ShowCheckBox = True
         Me.Skuska_pre_polovnych_hospodarovDateTimePicker.Size = New System.Drawing.Size(140, 20)
-        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.TabIndex = 48
+        Me.Skuska_pre_polovnych_hospodarovDateTimePicker.TabIndex = 26
         '
         'Miesto_skusky_pre_polovnych_hospodarovTextBox
         '
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.Location = New System.Drawing.Point(551, 546)
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.Name = "Miesto_skusky_pre_polovnych_hospodarovTextBox"
         Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.TabIndex = 50
+        Me.Miesto_skusky_pre_polovnych_hospodarovTextBox.TabIndex = 27
         '
         'Vyzsia_skuska_z_polovnictvaDateTimePicker
         '
@@ -751,35 +751,35 @@ Partial Class clen_novy
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Name = "Vyzsia_skuska_z_polovnictvaDateTimePicker"
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.ShowCheckBox = True
         Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.Size = New System.Drawing.Size(140, 20)
-        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.TabIndex = 52
+        Me.Vyzsia_skuska_z_polovnictvaDateTimePicker.TabIndex = 28
         '
         'Miesto_vyzsej_skusky_z_polovnictvaTextBox
         '
         Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox.Location = New System.Drawing.Point(551, 572)
         Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox.Name = "Miesto_vyzsej_skusky_z_polovnictvaTextBox"
         Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox.TabIndex = 54
+        Me.Miesto_vyzsej_skusky_z_polovnictvaTextBox.TabIndex = 29
         '
         'Kontrolne_strelby_brokTextBox
         '
         Me.Kontrolne_strelby_brokTextBox.Location = New System.Drawing.Point(551, 618)
         Me.Kontrolne_strelby_brokTextBox.Name = "Kontrolne_strelby_brokTextBox"
         Me.Kontrolne_strelby_brokTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Kontrolne_strelby_brokTextBox.TabIndex = 58
+        Me.Kontrolne_strelby_brokTextBox.TabIndex = 31
         '
         'Kontrolne_strelby_gulaTextBox
         '
         Me.Kontrolne_strelby_gulaTextBox.Location = New System.Drawing.Point(551, 644)
         Me.Kontrolne_strelby_gulaTextBox.Name = "Kontrolne_strelby_gulaTextBox"
         Me.Kontrolne_strelby_gulaTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Kontrolne_strelby_gulaTextBox.TabIndex = 62
+        Me.Kontrolne_strelby_gulaTextBox.TabIndex = 33
         '
         'Najvyzsie_vyznamenanieTextBox
         '
         Me.Najvyzsie_vyznamenanieTextBox.Location = New System.Drawing.Point(198, 670)
         Me.Najvyzsie_vyznamenanieTextBox.Name = "Najvyzsie_vyznamenanieTextBox"
         Me.Najvyzsie_vyznamenanieTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Najvyzsie_vyznamenanieTextBox.TabIndex = 64
+        Me.Najvyzsie_vyznamenanieTextBox.TabIndex = 34
         '
         'Vyznamenanie_kedyDateTimePicker
         '
@@ -788,14 +788,14 @@ Partial Class clen_novy
         Me.Vyznamenanie_kedyDateTimePicker.Name = "Vyznamenanie_kedyDateTimePicker"
         Me.Vyznamenanie_kedyDateTimePicker.ShowCheckBox = True
         Me.Vyznamenanie_kedyDateTimePicker.Size = New System.Drawing.Size(140, 20)
-        Me.Vyznamenanie_kedyDateTimePicker.TabIndex = 66
+        Me.Vyznamenanie_kedyDateTimePicker.TabIndex = 35
         '
         'Udelene_trestyTextBox
         '
         Me.Udelene_trestyTextBox.Location = New System.Drawing.Point(198, 696)
         Me.Udelene_trestyTextBox.Name = "Udelene_trestyTextBox"
         Me.Udelene_trestyTextBox.Size = New System.Drawing.Size(140, 20)
-        Me.Udelene_trestyTextBox.TabIndex = 68
+        Me.Udelene_trestyTextBox.TabIndex = 36
         '
         'PoznamkyTextBox
         '
@@ -803,7 +803,7 @@ Partial Class clen_novy
         Me.PoznamkyTextBox.Multiline = True
         Me.PoznamkyTextBox.Name = "PoznamkyTextBox"
         Me.PoznamkyTextBox.Size = New System.Drawing.Size(493, 78)
-        Me.PoznamkyTextBox.TabIndex = 70
+        Me.PoznamkyTextBox.TabIndex = 37
         '
         'Clen_pzComboBox
         '
@@ -813,7 +813,7 @@ Partial Class clen_novy
         Me.Clen_pzComboBox.Location = New System.Drawing.Point(198, 393)
         Me.Clen_pzComboBox.Name = "Clen_pzComboBox"
         Me.Clen_pzComboBox.Size = New System.Drawing.Size(140, 21)
-        Me.Clen_pzComboBox.TabIndex = 82
+        Me.Clen_pzComboBox.TabIndex = 19
         Me.Clen_pzComboBox.ValueMember = "ico"
         '
         'ZdruzeniaBindingSource1
@@ -884,7 +884,7 @@ Partial Class clen_novy
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(973, 812)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(973, 800)
         Me.ShapeContainer1.TabIndex = 86
         Me.ShapeContainer1.TabStop = False
         '
@@ -921,7 +921,7 @@ Partial Class clen_novy
         Me.titul_predComboBox.Location = New System.Drawing.Point(199, 105)
         Me.titul_predComboBox.Name = "titul_predComboBox"
         Me.titul_predComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.titul_predComboBox.TabIndex = 3
+        Me.titul_predComboBox.TabIndex = 2
         Me.titul_predComboBox.ValueMember = "id"
         '
         'TitulpredBindingSource
@@ -937,7 +937,7 @@ Partial Class clen_novy
         Me.titul_zaComboBox.Location = New System.Drawing.Point(199, 131)
         Me.titul_zaComboBox.Name = "titul_zaComboBox"
         Me.titul_zaComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.titul_zaComboBox.TabIndex = 4
+        Me.titul_zaComboBox.TabIndex = 3
         Me.titul_zaComboBox.ValueMember = "id"
         '
         'TitulzaBindingSource
@@ -961,7 +961,7 @@ Partial Class clen_novy
         Me.narodnostComboBox.Location = New System.Drawing.Point(551, 158)
         Me.narodnostComboBox.Name = "narodnostComboBox"
         Me.narodnostComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.narodnostComboBox.TabIndex = 14
+        Me.narodnostComboBox.TabIndex = 10
         Me.narodnostComboBox.ValueMember = "id"
         '
         'NarodnostBindingSource
@@ -981,7 +981,7 @@ Partial Class clen_novy
         Me.statna_prislusnostComboBox.Location = New System.Drawing.Point(551, 185)
         Me.statna_prislusnostComboBox.Name = "statna_prislusnostComboBox"
         Me.statna_prislusnostComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.statna_prislusnostComboBox.TabIndex = 15
+        Me.statna_prislusnostComboBox.TabIndex = 11
         Me.statna_prislusnostComboBox.ValueMember = "id"
         '
         'StatnaprislusnostBindingSource
@@ -1024,7 +1024,7 @@ Partial Class clen_novy
         Me.MestoComboBox.Location = New System.Drawing.Point(198, 156)
         Me.MestoComboBox.Name = "MestoComboBox"
         Me.MestoComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.MestoComboBox.TabIndex = 5
+        Me.MestoComboBox.TabIndex = 4
         Me.MestoComboBox.ValueMember = "obec"
         '
         'CiselnikobceBindingSource
@@ -1047,14 +1047,14 @@ Partial Class clen_novy
         Me.UlicaTextBox.Location = New System.Drawing.Point(86, 16)
         Me.UlicaTextBox.Name = "UlicaTextBox"
         Me.UlicaTextBox.Size = New System.Drawing.Size(87, 20)
-        Me.UlicaTextBox.TabIndex = 6
+        Me.UlicaTextBox.TabIndex = 0
         '
         'Ulica_cisloTextBox
         '
         Me.Ulica_cisloTextBox.Location = New System.Drawing.Point(231, 17)
         Me.Ulica_cisloTextBox.Name = "Ulica_cisloTextBox"
         Me.Ulica_cisloTextBox.Size = New System.Drawing.Size(55, 20)
-        Me.Ulica_cisloTextBox.TabIndex = 7
+        Me.Ulica_cisloTextBox.TabIndex = 1
         '
         'Ciselnik_obceTableAdapter
         '
@@ -1067,7 +1067,7 @@ Partial Class clen_novy
         Me.Okres_bydliskaListBox.Location = New System.Drawing.Point(86, 42)
         Me.Okres_bydliskaListBox.Name = "Okres_bydliskaListBox"
         Me.Okres_bydliskaListBox.Size = New System.Drawing.Size(87, 43)
-        Me.Okres_bydliskaListBox.TabIndex = 8
+        Me.Okres_bydliskaListBox.TabIndex = 2
         '
         'PscListBox
         '
@@ -1076,7 +1076,7 @@ Partial Class clen_novy
         Me.PscListBox.Location = New System.Drawing.Point(231, 42)
         Me.PscListBox.Name = "PscListBox"
         Me.PscListBox.Size = New System.Drawing.Size(55, 43)
-        Me.PscListBox.TabIndex = 9
+        Me.PscListBox.TabIndex = 3
         '
         'ErrorProvider1
         '
@@ -1089,7 +1089,7 @@ Partial Class clen_novy
         Me.Brokova_zbranComboBox.Location = New System.Drawing.Point(201, 620)
         Me.Brokova_zbranComboBox.Name = "Brokova_zbranComboBox"
         Me.Brokova_zbranComboBox.Size = New System.Drawing.Size(62, 21)
-        Me.Brokova_zbranComboBox.TabIndex = 1
+        Me.Brokova_zbranComboBox.TabIndex = 30
         '
         'Gulova_zbranComboBox
         '
@@ -1098,7 +1098,7 @@ Partial Class clen_novy
         Me.Gulova_zbranComboBox.Location = New System.Drawing.Point(201, 644)
         Me.Gulova_zbranComboBox.Name = "Gulova_zbranComboBox"
         Me.Gulova_zbranComboBox.Size = New System.Drawing.Size(62, 21)
-        Me.Gulova_zbranComboBox.TabIndex = 1
+        Me.Gulova_zbranComboBox.TabIndex = 32
         '
         'rodne_cisloMaskedTextBox
         '
@@ -1107,7 +1107,8 @@ Partial Class clen_novy
         Me.rodne_cisloMaskedTextBox.Mask = "000000/0000"
         Me.rodne_cisloMaskedTextBox.Name = "rodne_cisloMaskedTextBox"
         Me.rodne_cisloMaskedTextBox.Size = New System.Drawing.Size(76, 20)
-        Me.rodne_cisloMaskedTextBox.TabIndex = 13
+        Me.rodne_cisloMaskedTextBox.TabIndex = 9
+        Me.rodne_cisloMaskedTextBox.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         '
         'GroupBox1
         '
@@ -1123,7 +1124,7 @@ Partial Class clen_novy
         Me.GroupBox1.Location = New System.Drawing.Point(114, 188)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(294, 88)
-        Me.GroupBox1.TabIndex = 97
+        Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Adresa"
         '
@@ -1205,7 +1206,7 @@ Partial Class clen_novy
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.PaleGreen
-        Me.ClientSize = New System.Drawing.Size(973, 812)
+        Me.ClientSize = New System.Drawing.Size(973, 800)
         Me.Controls.Add(Me.MestoComboBox)
         Me.Controls.Add(Me.MenoTextBox)
         Me.Controls.Add(Me.predseda_hospodar_groupbox)

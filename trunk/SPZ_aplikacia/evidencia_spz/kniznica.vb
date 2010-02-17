@@ -81,6 +81,7 @@
     End Function
     ' funkcia, ktora pred ukoncenim skontroluje vyplnenie vstupnych udajov
     Public Function kontrola_vstupnych_udajov_clena(ByVal priezvisko As String, ByVal rodne_cislo As String, ByVal clen_spz_od As String, ByVal clen_spz_do As String, ByVal kontrolne_brok As String, ByVal kontrolne_gula As String, ByVal mesto As String, ByVal okres As String, ByVal psc As String, ByRef zoznam_chyb As String) As Boolean
+
         zoznam_chyb = ""
 
         'kontrola dlzky priezviska
@@ -89,9 +90,24 @@
         End If
 
         'kontrola dlzky rodneho cisla
-        If rodne_cislo.Length <> 11 And rodne_cislo.Length <> 10 Then
+        If rodne_cislo.Length <> 10 And rodne_cislo.Length <> 9 Then
             zoznam_chyb = zoznam_chyb + "Rodne cislo" + vbNewLine
 
+        End If
+        hlavna_aplikacia.vytvor_all_clenovia()
+        'skontroluje duplicitu rodneho cisla
+        Dim con1 As New SqlCeConnection(pripojovaci_retazec)
+        Dim com1 As New SqlCeCommand("SELECT count(rodne_cislo) FROM all_clenovia WHERE rodne_cislo = @rodne_cislo", con1)
+        com1.Parameters.AddWithValue("rodne_cislo", rodne_cislo)
+        Dim pocet_rc As Integer
+
+        con1.Open()
+        pocet_rc = com1.ExecuteScalar
+        con1.Close()
+
+
+        If pocet_rc <> 0 Then
+            zoznam_chyb = zoznam_chyb + "Rodné číslo sa už v databáze nachádza!!!!" + vbNewLine
         End If
 
 
