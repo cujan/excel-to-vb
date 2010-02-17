@@ -91,7 +91,7 @@
 
         'kontrola dlzky rodneho cisla
         If rodne_cislo.Length <> 10 And rodne_cislo.Length <> 9 Then
-            zoznam_chyb = zoznam_chyb + "Rodne cislo" + vbNewLine
+            zoznam_chyb = zoznam_chyb + "Rodne cislo - zla dlzka" + vbNewLine
 
         End If
         hlavna_aplikacia.vytvor_all_clenovia()
@@ -109,7 +109,14 @@
         If pocet_rc <> 0 Then
             zoznam_chyb = zoznam_chyb + "Rodné číslo sa už v databáze nachádza!!!!" + vbNewLine
         End If
+        'skontroluje ci rc je delitelne 11
+        If rodne_cislo.Length = 10 Then
 
+            If rodne_cislo Mod 11 <> 0 Then
+                zoznam_chyb = zoznam_chyb + "Rodné číslo je nesprávne!!!!" + vbNewLine
+            End If
+
+        End If
 
         'kontrola dlzky roka clen_spz_od
         If clen_spz_od.Length <> 4 And clen_spz_od <> "" Then
