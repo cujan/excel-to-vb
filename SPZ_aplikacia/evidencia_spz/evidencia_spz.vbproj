@@ -18,25 +18,32 @@
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <ManifestCertificateThumbprint>3B2FA4CFD762EA66F9C54B0C137686B0C492A77C</ManifestCertificateThumbprint>
-    <ManifestKeyFile>evidencia_spz_TemporaryKey.pfx</ManifestKeyFile>
-    <GenerateManifests>false</GenerateManifests>
-    <SignManifests>false</SignManifests>
+    <ManifestCertificateThumbprint>2C6F58876F1054340E9FEAA126396658EEB64AB4</ManifestCertificateThumbprint>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
     <TargetZone>LocalIntranet</TargetZone>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
-    <PublishUrl>E:\projekt google\instalacka\</PublishUrl>
+    <PublishUrl>D:\projekt spz\instalacka\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <UpdateUrl>http://www.usske.eu/evidencia_spz_update/</UpdateUrl>
+    <TargetCulture>sk</TargetCulture>
+    <ProductName>Evidencia SPZ</ProductName>
+    <PublisherName>HK</PublisherName>
+    <SuiteName>HK</SuiteName>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>0.0.8.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
