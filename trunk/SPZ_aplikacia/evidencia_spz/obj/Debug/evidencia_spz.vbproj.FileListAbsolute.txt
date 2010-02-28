@@ -614,3 +614,8 @@ D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.a
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.exe
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.xml
 D:\projekt spz\excel-to-vb\SPZ_aplikacia\evidencia_spz\obj\Debug\evidencia_spz.pdb
+E:\_marek\SPZ\spz\evidencia_spz\bin\Debug\evidencia_spz.exe.manifest
+E:\_marek\SPZ\spz\evidencia_spz\bin\Debug\evidencia_spz.application
+E:\_marek\SPZ\spz\evidencia_spz\obj\Debug\evidencia_spz.TrustInfo.xml
+E:\_marek\SPZ\spz\evidencia_spz\obj\Debug\evidencia_spz.exe.manifest
+E:\_marek\SPZ\spz\evidencia_spz\obj\Debug\evidencia_spz.application
