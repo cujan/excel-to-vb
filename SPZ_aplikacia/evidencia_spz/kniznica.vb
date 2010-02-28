@@ -90,7 +90,7 @@
         End If
 
         'kontrola dlzky rodneho cisla
-        If rodne_cislo.Length <> 10 And rodne_cislo.Length <> 9 Then
+        If rodne_cislo.Length <> 10 And rodne_cislo.Length <> 9 And rodne_cislo.Length <> 11 Then
             zoznam_chyb = zoznam_chyb + "Rodne cislo - zla dlzka" + vbNewLine
 
         End If
@@ -109,6 +109,92 @@
         If pocet_rc <> 0 Then
             zoznam_chyb = zoznam_chyb + "Rodné číslo sa už v databáze nachádza!!!!" + vbNewLine
         End If
+        'skontroluje ci rc je delitelne 11
+        If rodne_cislo.Length = 10 Then
+
+            If rodne_cislo Mod 11 <> 0 Then
+                zoznam_chyb = zoznam_chyb + "Rodné číslo je nesprávne!!!!" + vbNewLine
+            End If
+
+        End If
+
+        'kontrola dlzky roka clen_spz_od
+        If clen_spz_od.Length <> 4 And clen_spz_od <> "" Then
+            zoznam_chyb = zoznam_chyb + "Clen spz od " + vbNewLine
+
+        End If
+
+        'kontrola dlzky roka clen_spz_do
+        If clen_spz_do.Length <> 4 And clen_spz_do <> "" Then
+            zoznam_chyb = zoznam_chyb + "Clenske do " + vbNewLine
+
+        End If
+
+        'kontrola dlzky roka kontrolne brok
+        If kontrolne_brok.Length <> 4 And kontrolne_brok <> "" Then
+            zoznam_chyb = zoznam_chyb + "Kontrolne brok " + vbNewLine
+
+        End If
+        'kontrola dlzky roka kontrolne gula
+        If kontrolne_gula.Length <> 4 And kontrolne_gula <> "" Then
+            zoznam_chyb = zoznam_chyb + "Kontrolne gula " + vbNewLine
+
+        End If
+
+        ' kontrola kombinacie bydliska
+        Dim pocet_zaznamov As String
+        If okres = Nothing Or psc = Nothing Then
+
+            If okres = Nothing Then
+                zoznam_chyb = zoznam_chyb + "Nevybrali ste okres bydliska " + vbNewLine
+            End If
+
+            If psc = Nothing Then
+                zoznam_chyb = zoznam_chyb + "Nevybrali ste psc bydliska " + vbNewLine
+            End If
+        Else
+
+            Dim con As New SqlCeConnection(pripojovaci_retazec)
+            Dim com As New SqlCeCommand("SELECT COUNT(*) AS Expr1 FROM ciselnik_obce WHERE     (obec = @obec) AND (okres = @okres) AND (psc = @psc)", con)
+            With com.Parameters
+                .AddWithValue("obec", mesto)
+                .AddWithValue("okres", okres)
+                .AddWithValue("psc", psc)
+            End With
+
+            con.Open()
+            pocet_zaznamov = com.ExecuteScalar
+            con.Close()
+
+            'skontroluje ci sa nasla spravna kombinacia
+
+            If pocet_zaznamov = 0 Then
+                zoznam_chyb = zoznam_chyb + "Vybarali ste chybnu kombinaciu udajov bydliska (Mesto, Okres, Psc) " + vbNewLine
+            End If
+
+        End If
+
+
+        'ak je vsetko v poriadku
+        Return True
+    End Function
+    ' funkcia, ktora pred ukoncenim skontroluje vyplnenie vstupnych udajov pri editovani udajov
+    Public Function kontrola_vstupnych_udajov_clena_edituj(ByVal priezvisko As String, ByVal rodne_cislo As String, ByVal clen_spz_od As String, ByVal clen_spz_do As String, ByVal kontrolne_brok As String, ByVal kontrolne_gula As String, ByVal mesto As String, ByVal okres As String, ByVal psc As String, ByRef zoznam_chyb As String) As Boolean
+
+        zoznam_chyb = ""
+
+        'kontrola dlzky priezviska
+        If priezvisko.Length = 0 Then
+            zoznam_chyb = "Priezvisko" + vbNewLine
+        End If
+
+        'kontrola dlzky rodneho cisla
+        If rodne_cislo.Length <> 10 And rodne_cislo.Length <> 9 And rodne_cislo.Length <> 11 Then
+            zoznam_chyb = zoznam_chyb + "Rodne cislo - zla dlzka" + vbNewLine
+
+        End If
+        hlavna_aplikacia.vytvor_all_clenovia()
+
         'skontroluje ci rc je delitelne 11
         If rodne_cislo.Length = 10 Then
 
