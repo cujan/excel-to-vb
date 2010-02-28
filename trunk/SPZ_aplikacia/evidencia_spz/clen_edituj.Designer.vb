@@ -1481,6 +1481,7 @@ Partial Class clen_edituj
         Me.Rodne_cisloMaskedTextBox.ReadOnly = True
         Me.Rodne_cisloMaskedTextBox.Size = New System.Drawing.Size(143, 20)
         Me.Rodne_cisloMaskedTextBox.TabIndex = 106
+        Me.Rodne_cisloMaskedTextBox.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         '
         'zavriet_button
         '
