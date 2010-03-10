@@ -1,0 +1,13 @@
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\bin\Debug\pilcik.exe
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\bin\Debug\pilcik.pdb
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\bin\Debug\pilcik.xml
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\ResolveAssemblyReference.cache
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.hlavna_aplikacia.resources
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.Resources.resources
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.vbproj.GenerateResource.Cache
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.exe
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.xml
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.pdb
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\bin\Debug\pilcik_db.accdb
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\bin\Debug\pilcik.exe.config
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.uvodna_obrazovka.resources
