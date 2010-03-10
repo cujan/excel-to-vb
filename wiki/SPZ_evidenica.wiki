@@ -13,4 +13,5 @@
 potrebne ciselniky:
 - Okres   - Done
 - Obec spolu s prisluchajucim PSC - Done
+
 aaaa
