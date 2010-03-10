@@ -1,6 +1,32 @@
 = Návrh databázy =
 
 
-==Osoba==
-==Kurz==
-==Školenie==
+==1. Osoba==
+Titul
+
+meno
+
+priezvisko
+
+datum narodenia
+
+rodne cislo
+
+cislo obcianskeho
+
+bydlisko
+
+cislo pilcickeho preukazu
+
+email
+
+telefon
+
+==2. Kurz==
+nazov
+
+datum zaciatku
+
+datum konca
+
+==3. Školenie==
