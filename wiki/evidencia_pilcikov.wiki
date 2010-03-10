@@ -1,5 +1,6 @@
 = Návrh databázy =
 
 
-==osoba==
-==kurz==
+==Osoba==
+==Kurz==
+==Školenie==
