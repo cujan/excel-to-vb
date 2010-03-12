@@ -26,3 +26,4 @@ D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.hla
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.Resources.resources
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.vbproj.GenerateResource.Cache
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.kurz_novy.resources
+D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\bin\Debug\pilcikdb.sdf

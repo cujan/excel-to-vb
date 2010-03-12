@@ -1,12 +1,11 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>http://localhost/pilcik/</PublishUrlHistory>
+    <PublishUrlHistory>D:\evidencia SPZ\instalacka_pilcik\vb\|D:\evidencia SPZ\instalacka_pilcik\|http://localhost/pilcik/</PublishUrlHistory>
     <InstallUrlHistory>
     </InstallUrlHistory>
     <SupportUrlHistory>
     </SupportUrlHistory>
-    <UpdateUrlHistory>
-    </UpdateUrlHistory>
+    <UpdateUrlHistory>http://www.usske.eu/pilcik_update/</UpdateUrlHistory>
     <BootstrapperUrlHistory>
     </BootstrapperUrlHistory>
     <FallbackCulture>en-US</FallbackCulture>
