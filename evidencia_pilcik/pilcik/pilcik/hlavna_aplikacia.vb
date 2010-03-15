@@ -101,4 +101,16 @@ Public Class hlavna_aplikacia
     Private Sub NovýToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NovýToolStripMenuItem1.Click
         kurz_novy.Show()
     End Sub
+
+    Private Sub osobaStripButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles osobaStripButton.Click
+        osoba_pridaj.Show()
+    End Sub
+
+    Private Sub ToolStripButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton2.Click
+        kurz_novy.Show()
+    End Sub
+
+    Private Sub PrehladToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PrehladToolStripMenuItem.Click
+        osoba_prehlad.Show()
+    End Sub
 End Class

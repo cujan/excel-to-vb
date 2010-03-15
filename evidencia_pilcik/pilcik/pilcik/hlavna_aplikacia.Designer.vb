@@ -67,6 +67,8 @@ Partial Class hlavna_aplikacia
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.OsobaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.NovýToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.KurzyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.NovýToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStrip = New System.Windows.Forms.ToolStrip
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton
@@ -76,11 +78,13 @@ Partial Class hlavna_aplikacia
         Me.PrintPreviewToolStripButton = New System.Windows.Forms.ToolStripButton
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton
+        Me.osobaStripButton = New System.Windows.Forms.ToolStripButton
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton
         Me.StatusStrip = New System.Windows.Forms.StatusStrip
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.KurzyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.NovýToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
+        Me.PrehladToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -88,7 +92,7 @@ Partial Class hlavna_aplikacia
         '
         'MenuStrip
         '
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.EditMenu, Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu, Me.OsobaToolStripMenuItem, Me.KurzyToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.EditMenu, Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu, Me.OsobaToolStripMenuItem, Me.KurzyToolStripMenuItem, Me.PrehladToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
@@ -103,6 +107,7 @@ Partial Class hlavna_aplikacia
         Me.FileMenu.Name = "FileMenu"
         Me.FileMenu.Size = New System.Drawing.Size(35, 20)
         Me.FileMenu.Text = "&File"
+        Me.FileMenu.Visible = False
         '
         'NewToolStripMenuItem
         '
@@ -187,6 +192,7 @@ Partial Class hlavna_aplikacia
         Me.EditMenu.Name = "EditMenu"
         Me.EditMenu.Size = New System.Drawing.Size(37, 20)
         Me.EditMenu.Text = "&Edit"
+        Me.EditMenu.Visible = False
         '
         'UndoToolStripMenuItem
         '
@@ -256,6 +262,7 @@ Partial Class hlavna_aplikacia
         Me.ViewMenu.Name = "ViewMenu"
         Me.ViewMenu.Size = New System.Drawing.Size(41, 20)
         Me.ViewMenu.Text = "&View"
+        Me.ViewMenu.Visible = False
         '
         'ToolBarToolStripMenuItem
         '
@@ -281,6 +288,7 @@ Partial Class hlavna_aplikacia
         Me.ToolsMenu.Name = "ToolsMenu"
         Me.ToolsMenu.Size = New System.Drawing.Size(44, 20)
         Me.ToolsMenu.Text = "&Tools"
+        Me.ToolsMenu.Visible = False
         '
         'OptionsToolStripMenuItem
         '
@@ -294,6 +302,7 @@ Partial Class hlavna_aplikacia
         Me.WindowsMenu.Name = "WindowsMenu"
         Me.WindowsMenu.Size = New System.Drawing.Size(62, 20)
         Me.WindowsMenu.Text = "&Windows"
+        Me.WindowsMenu.Visible = False
         '
         'NewWindowToolStripMenuItem
         '
@@ -337,6 +346,7 @@ Partial Class hlavna_aplikacia
         Me.HelpMenu.Name = "HelpMenu"
         Me.HelpMenu.Size = New System.Drawing.Size(40, 20)
         Me.HelpMenu.Text = "&Help"
+        Me.HelpMenu.Visible = False
         '
         'ContentsToolStripMenuItem
         '
@@ -382,12 +392,25 @@ Partial Class hlavna_aplikacia
         'NovýToolStripMenuItem
         '
         Me.NovýToolStripMenuItem.Name = "NovýToolStripMenuItem"
-        Me.NovýToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NovýToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
         Me.NovýToolStripMenuItem.Text = "Nový"
+        '
+        'KurzyToolStripMenuItem
+        '
+        Me.KurzyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NovýToolStripMenuItem1})
+        Me.KurzyToolStripMenuItem.Name = "KurzyToolStripMenuItem"
+        Me.KurzyToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
+        Me.KurzyToolStripMenuItem.Text = "Kurzy"
+        '
+        'NovýToolStripMenuItem1
+        '
+        Me.NovýToolStripMenuItem1.Name = "NovýToolStripMenuItem1"
+        Me.NovýToolStripMenuItem1.Size = New System.Drawing.Size(110, 22)
+        Me.NovýToolStripMenuItem1.Text = "Nový"
         '
         'ToolStrip
         '
-        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton})
+        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton, Me.ToolStripButton1, Me.osobaStripButton, Me.ToolStripButton2})
         Me.ToolStrip.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip.Name = "ToolStrip"
         Me.ToolStrip.Size = New System.Drawing.Size(912, 25)
@@ -402,6 +425,7 @@ Partial Class hlavna_aplikacia
         Me.NewToolStripButton.Name = "NewToolStripButton"
         Me.NewToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.NewToolStripButton.Text = "New"
+        Me.NewToolStripButton.Visible = False
         '
         'OpenToolStripButton
         '
@@ -411,6 +435,7 @@ Partial Class hlavna_aplikacia
         Me.OpenToolStripButton.Name = "OpenToolStripButton"
         Me.OpenToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.OpenToolStripButton.Text = "Open"
+        Me.OpenToolStripButton.Visible = False
         '
         'SaveToolStripButton
         '
@@ -420,6 +445,7 @@ Partial Class hlavna_aplikacia
         Me.SaveToolStripButton.Name = "SaveToolStripButton"
         Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.SaveToolStripButton.Text = "Save"
+        Me.SaveToolStripButton.Visible = False
         '
         'ToolStripSeparator1
         '
@@ -434,6 +460,7 @@ Partial Class hlavna_aplikacia
         Me.PrintToolStripButton.Name = "PrintToolStripButton"
         Me.PrintToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.PrintToolStripButton.Text = "Print"
+        Me.PrintToolStripButton.Visible = False
         '
         'PrintPreviewToolStripButton
         '
@@ -443,6 +470,7 @@ Partial Class hlavna_aplikacia
         Me.PrintPreviewToolStripButton.Name = "PrintPreviewToolStripButton"
         Me.PrintPreviewToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.PrintPreviewToolStripButton.Text = "Print Preview"
+        Me.PrintPreviewToolStripButton.Visible = False
         '
         'ToolStripSeparator2
         '
@@ -457,6 +485,35 @@ Partial Class hlavna_aplikacia
         Me.HelpToolStripButton.Name = "HelpToolStripButton"
         Me.HelpToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.HelpToolStripButton.Text = "Help"
+        Me.HelpToolStripButton.Visible = False
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        Me.ToolStripButton1.Visible = False
+        '
+        'osobaStripButton
+        '
+        Me.osobaStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.osobaStripButton.Image = CType(resources.GetObject("osobaStripButton.Image"), System.Drawing.Image)
+        Me.osobaStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.osobaStripButton.Name = "osobaStripButton"
+        Me.osobaStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.osobaStripButton.Text = "ToolStripButton2"
+        '
+        'ToolStripButton2
+        '
+        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
+        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton2.Text = "ToolStripButton2"
         '
         'StatusStrip
         '
@@ -473,18 +530,11 @@ Partial Class hlavna_aplikacia
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(38, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
-        'KurzyToolStripMenuItem
+        'PrehladToolStripMenuItem
         '
-        Me.KurzyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NovýToolStripMenuItem1})
-        Me.KurzyToolStripMenuItem.Name = "KurzyToolStripMenuItem"
-        Me.KurzyToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
-        Me.KurzyToolStripMenuItem.Text = "Kurzy"
-        '
-        'NovýToolStripMenuItem1
-        '
-        Me.NovýToolStripMenuItem1.Name = "NovýToolStripMenuItem1"
-        Me.NovýToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.NovýToolStripMenuItem1.Text = "Nový"
+        Me.PrehladToolStripMenuItem.Name = "PrehladToolStripMenuItem"
+        Me.PrehladToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
+        Me.PrehladToolStripMenuItem.Text = "prehlad"
         '
         'hlavna_aplikacia
         '
@@ -568,5 +618,9 @@ Partial Class hlavna_aplikacia
     Friend WithEvents NovýToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents KurzyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NovýToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents osobaStripButton As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents PrehladToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
