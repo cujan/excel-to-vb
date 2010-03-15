@@ -11,8 +11,9 @@
         'TODO: This line of code loads data into the 'PilcikdbDataSet.kurz' table. You can move, or remove it, as needed.
         Me.KurzTableAdapter.Fill(Me.PilcikdbDataSet.kurz)
         'TODO: This line of code loads data into the 'Pilcik_dbDataSet.kurz' table. You can move, or remove it, as needed.
+        Me.KurzDataGridView.CurrentRow.Selected = Nothing
 
-
+        Me.MdiParent = hlavna_aplikacia
     End Sub
 
     Private Sub KurzBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles KurzBindingNavigatorSaveItem.Click
@@ -49,5 +50,28 @@
         NazovTextBox.Text = ""
         Zaciatok_kurzuDateTimePicker.Checked = False
         Koniec_kurzuDateTimePicker.Checked = False
+    End Sub
+
+    Private Sub KurzDataGridView_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles KurzDataGridView.CellClick
+        Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KurzBindingSource, "id", True))
+        Label2.Text = Label1.Text
+        Label1.DataBindings.Clear()
+    End Sub
+
+    Private Sub KurzDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles KurzDataGridView.CellContentClick
+
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+        If MsgBox("Naozaj chcete zmazať vybraný kurz?", MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
+            Dim con As New SqlCeConnection(pripojovaci_retazec)
+            Dim com As New SqlCeCommand("DELETE FROM kurz WHERE id = @id", con)
+            com.Parameters.AddWithValue("id", Label2.Text)
+            con.Open()
+            com.ExecuteNonQuery()
+            con.Close()
+        End If
+        Me.KurzTableAdapter.Fill(Me.PilcikdbDataSet.kurz)
     End Sub
 End Class
