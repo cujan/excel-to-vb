@@ -9,6 +9,7 @@
         Me.MdiParent = hlavna_aplikacia
         Me.OsobaDataGridView.CurrentRow.Selected = Nothing
         Me.KurzDataGridView.CurrentRow.Selected = Nothing
+
     End Sub
 
     Private Sub OsobaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
