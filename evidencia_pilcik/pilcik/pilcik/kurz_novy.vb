@@ -24,32 +24,42 @@
     End Sub
 
     Private Sub ulozButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ulozButton.Click
-        Dim con As New SqlCeConnection(pripojovaci_retazec)
-        Dim com As New SqlCeCommand("INSERT INTO kurz (nazov, zaciatok_kurzu, koniec_kurzu) VALUES (@nazov,@zaciatok_kurzu,@koniec_kurzu)", con)
 
-        With com.Parameters
-            .AddWithValue("nazov", NazovTextBox.Text)
-            If Zaciatok_kurzuDateTimePicker.Checked = True Then
-                .AddWithValue("zaciatok_kurzu", Zaciatok_kurzuDateTimePicker.Value.Date)
-            Else
-                .AddWithValue("zaciatok_kurzu", DBNull.Value)
-            End If
-            If Koniec_kurzuDateTimePicker.Checked = True Then
-                .AddWithValue("koniec_kurzu", Zaciatok_kurzuDateTimePicker.Value.Date)
-            Else
-                .AddWithValue("koniec_kurzu", DBNull.Value)
-            End If
-        End With
 
-        con.Open()
-        com.ExecuteNonQuery()
-        con.Close()
+        If NazovTextBox.Text <> "" And Zaciatok_kurzuDateTimePicker.Checked = True And Koniec_kurzuDateTimePicker.Checked = True And TypComboBox.Text <> "" And Miesto_konaniaTextBox.Text <> "" Then
 
-        Me.KurzTableAdapter.Fill(Me.PilcikdbDataSet.kurz)
 
-        NazovTextBox.Text = ""
-        Zaciatok_kurzuDateTimePicker.Checked = False
-        Koniec_kurzuDateTimePicker.Checked = False
+            Dim con As New SqlCeConnection(pripojovaci_retazec)
+            Dim com As New SqlCeCommand("INSERT INTO kurz (nazov, zaciatok_kurzu, koniec_kurzu, typ, miesto_konania) VALUES (@nazov,@zaciatok_kurzu,@koniec_kurzu,@typ,@miesto_konania)", con)
+
+            With com.Parameters
+                .AddWithValue("nazov", NazovTextBox.Text)
+                If Zaciatok_kurzuDateTimePicker.Checked = True Then
+                    .AddWithValue("zaciatok_kurzu", Zaciatok_kurzuDateTimePicker.Value.Date)
+                Else
+                    .AddWithValue("zaciatok_kurzu", DBNull.Value)
+                End If
+                If Koniec_kurzuDateTimePicker.Checked = True Then
+                    .AddWithValue("koniec_kurzu", Zaciatok_kurzuDateTimePicker.Value.Date)
+                Else
+                    .AddWithValue("koniec_kurzu", DBNull.Value)
+                End If
+                .AddWithValue("typ", TypComboBox.Text)
+                .AddWithValue("miesto_konania", Miesto_konaniaTextBox.Text)
+            End With
+
+            con.Open()
+            com.ExecuteNonQuery()
+            con.Close()
+
+            Me.KurzTableAdapter.Fill(Me.PilcikdbDataSet.kurz)
+
+            NazovTextBox.Text = ""
+            Zaciatok_kurzuDateTimePicker.Checked = False
+            Koniec_kurzuDateTimePicker.Checked = False
+        Else
+            MsgBox("Nemáte zadabé všetky údaje")
+        End If
     End Sub
 
     Private Sub KurzDataGridView_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles KurzDataGridView.CellClick
@@ -73,5 +83,13 @@
             con.Close()
         End If
         Me.KurzTableAdapter.Fill(Me.PilcikdbDataSet.kurz)
+    End Sub
+
+    Private Sub Miesto_konaniaTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Miesto_konaniaTextBox.TextChanged
+
+    End Sub
+
+    Private Sub KurzDataGridView_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles KurzDataGridView.CellDoubleClick
+        kurz_detail.Show()
     End Sub
 End Class

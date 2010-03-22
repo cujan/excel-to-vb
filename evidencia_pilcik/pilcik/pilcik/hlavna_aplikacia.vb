@@ -113,4 +113,12 @@ Public Class hlavna_aplikacia
     Private Sub PrehladToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PrehladToolStripMenuItem.Click
         osoba_prehlad.Show()
     End Sub
+
+    Private Sub TlačovéZostavyToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TlačovéZostavyToolStripMenuItem.Click
+        tlacove_zostavy.Show()
+    End Sub
+
+    Private Sub SkúšobnáKomisiaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SkúšobnáKomisiaToolStripMenuItem.Click
+        skusobna_komisia.Show()
+    End Sub
 End Class

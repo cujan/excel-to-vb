@@ -84,11 +84,16 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn26 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.idkurzComboBox = New System.Windows.Forms.ComboBox
         Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
+        Me.KurzDataGridView = New System.Windows.Forms.DataGridView
+        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn30 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn31 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label4 = New System.Windows.Forms.Label
         Titul_predLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
@@ -109,6 +114,7 @@ Partial Class osoba_pridaj
         Me.OsobaBindingSource1BindingNavigator.SuspendLayout()
         CType(Me.OsobaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Titul_predLabel
@@ -159,7 +165,7 @@ Partial Class osoba_pridaj
         'Cislo_opLabel
         '
         Cislo_opLabel.AutoSize = True
-        Cislo_opLabel.Location = New System.Drawing.Point(487, 92)
+        Cislo_opLabel.Location = New System.Drawing.Point(354, 157)
         Cislo_opLabel.Name = "Cislo_opLabel"
         Cislo_opLabel.Size = New System.Drawing.Size(46, 13)
         Cislo_opLabel.TabIndex = 14
@@ -195,7 +201,7 @@ Partial Class osoba_pridaj
         'Cislo_pilcickeho_preukazuLabel
         '
         Cislo_pilcickeho_preukazuLabel.AutoSize = True
-        Cislo_pilcickeho_preukazuLabel.Location = New System.Drawing.Point(487, 138)
+        Cislo_pilcickeho_preukazuLabel.Location = New System.Drawing.Point(346, 207)
         Cislo_pilcickeho_preukazuLabel.Name = "Cislo_pilcickeho_preukazuLabel"
         Cislo_pilcickeho_preukazuLabel.Size = New System.Drawing.Size(129, 13)
         Cislo_pilcickeho_preukazuLabel.TabIndex = 22
@@ -204,7 +210,7 @@ Partial Class osoba_pridaj
         'EmailLabel
         '
         EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(511, 234)
+        EmailLabel.Location = New System.Drawing.Point(346, 255)
         EmailLabel.Name = "EmailLabel"
         EmailLabel.Size = New System.Drawing.Size(34, 13)
         EmailLabel.TabIndex = 24
@@ -213,7 +219,7 @@ Partial Class osoba_pridaj
         'TelefonLabel
         '
         TelefonLabel.AutoSize = True
-        TelefonLabel.Location = New System.Drawing.Point(511, 282)
+        TelefonLabel.Location = New System.Drawing.Point(338, 305)
         TelefonLabel.Name = "TelefonLabel"
         TelefonLabel.Size = New System.Drawing.Size(42, 13)
         TelefonLabel.TabIndex = 26
@@ -222,7 +228,7 @@ Partial Class osoba_pridaj
         'Id_kurzLabel
         '
         Id_kurzLabel.AutoSize = True
-        Id_kurzLabel.Location = New System.Drawing.Point(597, 21)
+        Id_kurzLabel.Location = New System.Drawing.Point(564, 32)
         Id_kurzLabel.Name = "Id_kurzLabel"
         Id_kurzLabel.Size = New System.Drawing.Size(41, 13)
         Id_kurzLabel.TabIndex = 28
@@ -265,7 +271,7 @@ Partial Class osoba_pridaj
         '
         'Cislo_opTextBox
         '
-        Me.Cislo_opTextBox.Location = New System.Drawing.Point(490, 111)
+        Me.Cislo_opTextBox.Location = New System.Drawing.Point(345, 173)
         Me.Cislo_opTextBox.Name = "Cislo_opTextBox"
         Me.Cislo_opTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Cislo_opTextBox.TabIndex = 15
@@ -293,23 +299,23 @@ Partial Class osoba_pridaj
         '
         'Cislo_pilcickeho_preukazuTextBox
         '
-        Me.Cislo_pilcickeho_preukazuTextBox.Location = New System.Drawing.Point(490, 154)
+        Me.Cislo_pilcickeho_preukazuTextBox.Location = New System.Drawing.Point(331, 227)
         Me.Cislo_pilcickeho_preukazuTextBox.Name = "Cislo_pilcickeho_preukazuTextBox"
         Me.Cislo_pilcickeho_preukazuTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Cislo_pilcickeho_preukazuTextBox.TabIndex = 23
         '
         'EmailTextBox
         '
-        Me.EmailTextBox.Location = New System.Drawing.Point(514, 250)
+        Me.EmailTextBox.Location = New System.Drawing.Point(386, 250)
         Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.EmailTextBox.Size = New System.Drawing.Size(159, 20)
         Me.EmailTextBox.TabIndex = 25
         '
         'TelefonTextBox
         '
-        Me.TelefonTextBox.Location = New System.Drawing.Point(514, 308)
+        Me.TelefonTextBox.Location = New System.Drawing.Point(386, 308)
         Me.TelefonTextBox.Name = "TelefonTextBox"
-        Me.TelefonTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.TelefonTextBox.Size = New System.Drawing.Size(159, 20)
         Me.TelefonTextBox.TabIndex = 27
         '
         'GroupBox1
@@ -329,7 +335,7 @@ Partial Class osoba_pridaj
         '
         'ulozButton
         '
-        Me.ulozButton.Location = New System.Drawing.Point(778, 250)
+        Me.ulozButton.Location = New System.Drawing.Point(325, 352)
         Me.ulozButton.Name = "ulozButton"
         Me.ulozButton.Size = New System.Drawing.Size(75, 23)
         Me.ulozButton.TabIndex = 31
@@ -355,6 +361,7 @@ Partial Class osoba_pridaj
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.kurzTableAdapter = Me.KurzTableAdapter
         Me.TableAdapterManager.osobaTableAdapter = Me.OsobaTableAdapter
+        Me.TableAdapterManager.skusobna_komisiaTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'KurzTableAdapter
@@ -369,14 +376,14 @@ Partial Class osoba_pridaj
         Me.OsobaBindingSource1BindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.OsobaBindingSource1BindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.OsobaBindingSource1BindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.OsobaBindingSource1BindingNavigatorSaveItem})
-        Me.OsobaBindingSource1BindingNavigator.Location = New System.Drawing.Point(0, 667)
+        Me.OsobaBindingSource1BindingNavigator.Location = New System.Drawing.Point(0, 684)
         Me.OsobaBindingSource1BindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.OsobaBindingSource1BindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.OsobaBindingSource1BindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
         Me.OsobaBindingSource1BindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.OsobaBindingSource1BindingNavigator.Name = "OsobaBindingSource1BindingNavigator"
         Me.OsobaBindingSource1BindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.OsobaBindingSource1BindingNavigator.Size = New System.Drawing.Size(923, 25)
+        Me.OsobaBindingSource1BindingNavigator.Size = New System.Drawing.Size(931, 25)
         Me.OsobaBindingSource1BindingNavigator.TabIndex = 32
         Me.OsobaBindingSource1BindingNavigator.Text = "BindingNavigator1"
         '
@@ -487,7 +494,7 @@ Partial Class osoba_pridaj
         Me.OsobaDataGridView.Location = New System.Drawing.Point(12, 381)
         Me.OsobaDataGridView.Name = "OsobaDataGridView"
         Me.OsobaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.OsobaDataGridView.Size = New System.Drawing.Size(899, 283)
+        Me.OsobaDataGridView.Size = New System.Drawing.Size(907, 300)
         Me.OsobaDataGridView.TabIndex = 32
         '
         'DataGridViewTextBoxColumn1
@@ -575,17 +582,6 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn27.HeaderText = "id_kurzu"
         Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
         '
-        'idkurzComboBox
-        '
-        Me.idkurzComboBox.DataSource = Me.KurzBindingSource
-        Me.idkurzComboBox.DisplayMember = "nazov"
-        Me.idkurzComboBox.FormattingEnabled = True
-        Me.idkurzComboBox.Location = New System.Drawing.Point(600, 37)
-        Me.idkurzComboBox.Name = "idkurzComboBox"
-        Me.idkurzComboBox.Size = New System.Drawing.Size(168, 21)
-        Me.idkurzComboBox.TabIndex = 33
-        Me.idkurzComboBox.ValueMember = "id"
-        '
         'KurzBindingSource
         '
         Me.KurzBindingSource.DataMember = "kurz"
@@ -594,7 +590,7 @@ Partial Class osoba_pridaj
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(814, 21)
+        Me.Label1.Location = New System.Drawing.Point(436, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 34
@@ -603,7 +599,7 @@ Partial Class osoba_pridaj
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(814, 44)
+        Me.Label2.Location = New System.Drawing.Point(481, 9)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(39, 13)
         Me.Label2.TabIndex = 35
@@ -611,22 +607,80 @@ Partial Class osoba_pridaj
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(778, 305)
+        Me.Button1.Location = New System.Drawing.Point(406, 352)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 36
         Me.Button1.Text = "Zmaž člena"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'KurzDataGridView
+        '
+        Me.KurzDataGridView.AllowUserToAddRows = False
+        Me.KurzDataGridView.AllowUserToDeleteRows = False
+        Me.KurzDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.KurzDataGridView.AutoGenerateColumns = False
+        Me.KurzDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.KurzDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31})
+        Me.KurzDataGridView.DataSource = Me.KurzBindingSource
+        Me.KurzDataGridView.Location = New System.Drawing.Point(567, 48)
+        Me.KurzDataGridView.Name = "KurzDataGridView"
+        Me.KurzDataGridView.ReadOnly = True
+        Me.KurzDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.KurzDataGridView.Size = New System.Drawing.Size(352, 239)
+        Me.KurzDataGridView.TabIndex = 36
+        '
+        'DataGridViewTextBoxColumn29
+        '
+        Me.DataGridViewTextBoxColumn29.DataPropertyName = "nazov"
+        Me.DataGridViewTextBoxColumn29.HeaderText = "nazov"
+        Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
+        Me.DataGridViewTextBoxColumn29.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn30
+        '
+        Me.DataGridViewTextBoxColumn30.DataPropertyName = "zaciatok_kurzu"
+        Me.DataGridViewTextBoxColumn30.HeaderText = "zaciatok_kurzu"
+        Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
+        Me.DataGridViewTextBoxColumn30.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn31
+        '
+        Me.DataGridViewTextBoxColumn31.DataPropertyName = "koniec_kurzu"
+        Me.DataGridViewTextBoxColumn31.HeaderText = "koniec_kurzu"
+        Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
+        Me.DataGridViewTextBoxColumn31.ReadOnly = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(564, 8)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(0, 13)
+        Me.Label3.TabIndex = 37
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(597, 8)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.TabIndex = 38
+        Me.Label4.Text = "Label4"
+        '
         'osoba_pridaj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(923, 692)
+        Me.ClientSize = New System.Drawing.Size(931, 709)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.KurzDataGridView)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.idkurzComboBox)
         Me.Controls.Add(Me.OsobaDataGridView)
         Me.Controls.Add(Me.OsobaBindingSource1BindingNavigator)
         Me.Controls.Add(Me.ulozButton)
@@ -662,6 +716,7 @@ Partial Class osoba_pridaj
         Me.OsobaBindingSource1BindingNavigator.PerformLayout()
         CType(Me.OsobaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -729,9 +784,14 @@ Partial Class osoba_pridaj
     Friend WithEvents DataGridViewTextBoxColumn26 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn27 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents KurzTableAdapter As pilcik.pilcikdbDataSetTableAdapters.kurzTableAdapter
-    Friend WithEvents idkurzComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents KurzBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents KurzDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn29 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn30 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn31 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class
