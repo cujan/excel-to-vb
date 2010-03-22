@@ -35,7 +35,6 @@ Partial Class osoba_pridaj
         Dim Cislo_pilcickeho_preukazuLabel As System.Windows.Forms.Label
         Dim EmailLabel As System.Windows.Forms.Label
         Dim TelefonLabel As System.Windows.Forms.Label
-        Dim Id_kurzLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(osoba_pridaj))
         Me.Titul_predTextBox = New System.Windows.Forms.TextBox
         Me.PriezviskoTextBox = New System.Windows.Forms.TextBox
@@ -106,7 +105,6 @@ Partial Class osoba_pridaj
         Cislo_pilcickeho_preukazuLabel = New System.Windows.Forms.Label
         EmailLabel = New System.Windows.Forms.Label
         TelefonLabel = New System.Windows.Forms.Label
-        Id_kurzLabel = New System.Windows.Forms.Label
         Me.GroupBox1.SuspendLayout()
         CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OsobaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -224,15 +222,6 @@ Partial Class osoba_pridaj
         TelefonLabel.Size = New System.Drawing.Size(42, 13)
         TelefonLabel.TabIndex = 26
         TelefonLabel.Text = "telefon:"
-        '
-        'Id_kurzLabel
-        '
-        Id_kurzLabel.AutoSize = True
-        Id_kurzLabel.Location = New System.Drawing.Point(564, 32)
-        Id_kurzLabel.Name = "Id_kurzLabel"
-        Id_kurzLabel.Size = New System.Drawing.Size(41, 13)
-        Id_kurzLabel.TabIndex = 28
-        Id_kurzLabel.Text = "id kurz:"
         '
         'Titul_predTextBox
         '
@@ -590,20 +579,18 @@ Partial Class osoba_pridaj
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(436, 9)
+        Me.Label1.Location = New System.Drawing.Point(626, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.Size = New System.Drawing.Size(0, 13)
         Me.Label1.TabIndex = 34
-        Me.Label1.Text = "Label1"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(481, 9)
+        Me.Label2.Location = New System.Drawing.Point(671, 10)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.Size = New System.Drawing.Size(0, 13)
         Me.Label2.TabIndex = 35
-        Me.Label2.Text = "Label2"
         '
         'Button1
         '
@@ -618,8 +605,7 @@ Partial Class osoba_pridaj
         '
         Me.KurzDataGridView.AllowUserToAddRows = False
         Me.KurzDataGridView.AllowUserToDeleteRows = False
-        Me.KurzDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.KurzDataGridView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.KurzDataGridView.AutoGenerateColumns = False
         Me.KurzDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -629,7 +615,7 @@ Partial Class osoba_pridaj
         Me.KurzDataGridView.Name = "KurzDataGridView"
         Me.KurzDataGridView.ReadOnly = True
         Me.KurzDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.KurzDataGridView.Size = New System.Drawing.Size(352, 239)
+        Me.KurzDataGridView.Size = New System.Drawing.Size(352, 95)
         Me.KurzDataGridView.TabIndex = 36
         '
         'DataGridViewTextBoxColumn29
@@ -656,7 +642,7 @@ Partial Class osoba_pridaj
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(564, 8)
+        Me.Label3.Location = New System.Drawing.Point(754, 9)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(0, 13)
         Me.Label3.TabIndex = 37
@@ -664,11 +650,10 @@ Partial Class osoba_pridaj
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(597, 8)
+        Me.Label4.Location = New System.Drawing.Point(787, 9)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.Size = New System.Drawing.Size(0, 13)
         Me.Label4.TabIndex = 38
-        Me.Label4.Text = "Label4"
         '
         'osoba_pridaj
         '
@@ -703,7 +688,6 @@ Partial Class osoba_pridaj
         Me.Controls.Add(Me.EmailTextBox)
         Me.Controls.Add(TelefonLabel)
         Me.Controls.Add(Me.TelefonTextBox)
-        Me.Controls.Add(Id_kurzLabel)
         Me.Name = "osoba_pridaj"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "osoba_pridaj"
