@@ -83,7 +83,7 @@ Partial Class kurz_detail
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.kurzTableAdapter = Me.KurzTableAdapter
-        Me.TableAdapterManager.osobaTableAdapter = Nothing
+
         Me.TableAdapterManager.skusobna_komisiaTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '

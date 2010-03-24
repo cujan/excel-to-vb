@@ -12,6 +12,7 @@
         Me.Skusobna_komisiaTableAdapter.Fill(Me.PilcikdbDataSet.skusobna_komisia)
 
         Me.MdiParent = hlavna_aplikacia
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click

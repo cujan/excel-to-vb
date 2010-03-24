@@ -23,26 +23,26 @@ Partial Class skusobna_komisia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(skusobna_komisia))
         Dim PredsedaLabel As System.Windows.Forms.Label
         Dim Clen1Label As System.Windows.Forms.Label
         Dim Clen2Label As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(skusobna_komisia))
         Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
         Me.Skusobna_komisiaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Skusobna_komisiaTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.skusobna_komisiaTableAdapter
         Me.TableAdapterManager = New pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
         Me.Skusobna_komisiaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.Skusobna_komisiaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.PredsedaTextBox = New System.Windows.Forms.TextBox
         Me.Clen1TextBox = New System.Windows.Forms.TextBox
@@ -56,6 +56,33 @@ Partial Class skusobna_komisia
         CType(Me.Skusobna_komisiaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Skusobna_komisiaBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'PredsedaLabel
+        '
+        PredsedaLabel.AutoSize = True
+        PredsedaLabel.Location = New System.Drawing.Point(115, 129)
+        PredsedaLabel.Name = "PredsedaLabel"
+        PredsedaLabel.Size = New System.Drawing.Size(54, 13)
+        PredsedaLabel.TabIndex = 3
+        PredsedaLabel.Text = "predseda:"
+        '
+        'Clen1Label
+        '
+        Clen1Label.AutoSize = True
+        Clen1Label.Location = New System.Drawing.Point(115, 155)
+        Clen1Label.Name = "Clen1Label"
+        Clen1Label.Size = New System.Drawing.Size(36, 13)
+        Clen1Label.TabIndex = 5
+        Clen1Label.Text = "clen1:"
+        '
+        'Clen2Label
+        '
+        Clen2Label.AutoSize = True
+        Clen2Label.Location = New System.Drawing.Point(115, 181)
+        Clen2Label.Name = "Clen2Label"
+        Clen2Label.Size = New System.Drawing.Size(36, 13)
+        Clen2Label.TabIndex = 7
+        Clen2Label.Text = "clen2:"
         '
         'PilcikdbDataSet
         '
@@ -75,7 +102,6 @@ Partial Class skusobna_komisia
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.kurzTableAdapter = Nothing
-        Me.TableAdapterManager.osobaTableAdapter = Nothing
         Me.TableAdapterManager.skusobna_komisiaTableAdapter = Me.Skusobna_komisiaTableAdapter
         Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
@@ -96,6 +122,31 @@ Partial Class skusobna_komisia
         Me.Skusobna_komisiaBindingNavigator.Size = New System.Drawing.Size(624, 25)
         Me.Skusobna_komisiaBindingNavigator.TabIndex = 0
         Me.Skusobna_komisiaBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -129,17 +180,10 @@ Partial Class skusobna_komisia
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 13)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -147,7 +191,7 @@ Partial Class skusobna_komisia
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -156,48 +200,21 @@ Partial Class skusobna_komisia
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'Skusobna_komisiaBindingNavigatorSaveItem
         '
         Me.Skusobna_komisiaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.Skusobna_komisiaBindingNavigatorSaveItem.Image = CType(resources.GetObject("Skusobna_komisiaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.Skusobna_komisiaBindingNavigatorSaveItem.Name = "Skusobna_komisiaBindingNavigatorSaveItem"
-        Me.Skusobna_komisiaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.Skusobna_komisiaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.Skusobna_komisiaBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'PredsedaLabel
-        '
-        PredsedaLabel.AutoSize = True
-        PredsedaLabel.Location = New System.Drawing.Point(115, 129)
-        PredsedaLabel.Name = "PredsedaLabel"
-        PredsedaLabel.Size = New System.Drawing.Size(54, 13)
-        PredsedaLabel.TabIndex = 3
-        PredsedaLabel.Text = "predseda:"
         '
         'PredsedaTextBox
         '
@@ -207,15 +224,6 @@ Partial Class skusobna_komisia
         Me.PredsedaTextBox.Size = New System.Drawing.Size(274, 20)
         Me.PredsedaTextBox.TabIndex = 4
         '
-        'Clen1Label
-        '
-        Clen1Label.AutoSize = True
-        Clen1Label.Location = New System.Drawing.Point(115, 155)
-        Clen1Label.Name = "Clen1Label"
-        Clen1Label.Size = New System.Drawing.Size(36, 13)
-        Clen1Label.TabIndex = 5
-        Clen1Label.Text = "clen1:"
-        '
         'Clen1TextBox
         '
         Me.Clen1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Skusobna_komisiaBindingSource, "clen1", True))
@@ -223,15 +231,6 @@ Partial Class skusobna_komisia
         Me.Clen1TextBox.Name = "Clen1TextBox"
         Me.Clen1TextBox.Size = New System.Drawing.Size(274, 20)
         Me.Clen1TextBox.TabIndex = 6
-        '
-        'Clen2Label
-        '
-        Clen2Label.AutoSize = True
-        Clen2Label.Location = New System.Drawing.Point(115, 181)
-        Clen2Label.Name = "Clen2Label"
-        Clen2Label.Size = New System.Drawing.Size(36, 13)
-        Clen2Label.TabIndex = 7
-        Clen2Label.Text = "clen2:"
         '
         'Clen2TextBox
         '
@@ -265,6 +264,7 @@ Partial Class skusobna_komisia
         Me.Controls.Add(Me.Skusobna_komisiaBindingNavigator)
         Me.Name = "skusobna_komisia"
         Me.Text = "skusobna_komisia"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Skusobna_komisiaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Skusobna_komisiaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()

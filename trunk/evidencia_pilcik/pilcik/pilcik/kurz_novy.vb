@@ -7,13 +7,20 @@
 
     End Sub
 
+    Private Sub kurz_novy_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+
+    End Sub
+
     Private Sub kurz_novy_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Me.MdiParent = hlavna_aplikacia
         'TODO: This line of code loads data into the 'PilcikdbDataSet.kurz' table. You can move, or remove it, as needed.
         Me.KurzTableAdapter.Fill(Me.PilcikdbDataSet.kurz)
         'TODO: This line of code loads data into the 'Pilcik_dbDataSet.kurz' table. You can move, or remove it, as needed.
         Me.KurzDataGridView.CurrentRow.Selected = Nothing
+        Me.WindowState = FormWindowState.Maximized
+        Me.BringToFront()
 
-        Me.MdiParent = hlavna_aplikacia
+
     End Sub
 
     Private Sub KurzBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles KurzBindingNavigatorSaveItem.Click

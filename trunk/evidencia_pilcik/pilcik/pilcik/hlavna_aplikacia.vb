@@ -86,7 +86,8 @@ Public Class hlavna_aplikacia
     Private m_ChildFormNumber As Integer
 
     Private Sub hlavna_aplikacia_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        uvodna_obrazovka.Show()
+        
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -104,10 +105,13 @@ Public Class hlavna_aplikacia
 
     Private Sub osobaStripButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles osobaStripButton.Click
         osoba_pridaj.Show()
+
+
     End Sub
 
     Private Sub ToolStripButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton2.Click
         kurz_novy.Show()
+
     End Sub
 
     Private Sub PrehladToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PrehladToolStripMenuItem.Click
@@ -120,5 +124,9 @@ Public Class hlavna_aplikacia
 
     Private Sub SkúšobnáKomisiaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SkúšobnáKomisiaToolStripMenuItem.Click
         skusobna_komisia.Show()
+    End Sub
+
+    Private Sub SplitContainer1_Panel2_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs)
+
     End Sub
 End Class
