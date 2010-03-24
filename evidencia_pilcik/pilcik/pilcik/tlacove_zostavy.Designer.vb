@@ -27,11 +27,12 @@ Partial Class tlacove_zostavy
         Me.Label1 = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
         Me.protokol_kurzComboBox = New System.Windows.Forms.ComboBox
-        Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
         Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
         Me.KurzTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.kurzTableAdapter
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label2 = New System.Windows.Forms.Label
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'protokolCheckBox
@@ -73,25 +74,36 @@ Partial Class tlacove_zostavy
         Me.protokol_kurzComboBox.ValueMember = "id"
         Me.protokol_kurzComboBox.Visible = False
         '
-        'PilcikdbDataSet
-        '
-        Me.PilcikdbDataSet.DataSetName = "pilcikdbDataSet"
-        Me.PilcikdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'KurzBindingSource
         '
         Me.KurzBindingSource.DataMember = "kurz"
         Me.KurzBindingSource.DataSource = Me.PilcikdbDataSet
         '
+        'PilcikdbDataSet
+        '
+        Me.PilcikdbDataSet.DataSetName = "pilcikdbDataSet"
+        Me.PilcikdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'KurzTableAdapter
         '
         Me.KurzTableAdapter.ClearBeforeFill = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(371, 86)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(78, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Vyberte kurz !!!"
+        Me.Label2.Visible = False
         '
         'tlacove_zostavy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(741, 547)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.protokol_kurzComboBox)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
@@ -100,8 +112,8 @@ Partial Class tlacove_zostavy
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "tlacove_zostavy"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -113,4 +125,5 @@ Partial Class tlacove_zostavy
     Friend WithEvents PilcikdbDataSet As pilcik.pilcikdbDataSet
     Friend WithEvents KurzBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents KurzTableAdapter As pilcik.pilcikdbDataSetTableAdapters.kurzTableAdapter
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

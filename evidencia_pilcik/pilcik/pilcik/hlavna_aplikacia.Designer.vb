@@ -71,6 +71,7 @@ Partial Class hlavna_aplikacia
         Me.NovýToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.PrehladToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.TlačovéZostavyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.SkúšobnáKomisiaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStrip = New System.Windows.Forms.ToolStrip
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton
@@ -83,10 +84,9 @@ Partial Class hlavna_aplikacia
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton
         Me.osobaStripButton = New System.Windows.Forms.ToolStripButton
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton
-        Me.StatusStrip = New System.Windows.Forms.StatusStrip
-        Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.SkúšobnáKomisiaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel
+        Me.StatusStrip = New System.Windows.Forms.StatusStrip
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -422,6 +422,12 @@ Partial Class hlavna_aplikacia
         Me.TlačovéZostavyToolStripMenuItem.Size = New System.Drawing.Size(97, 20)
         Me.TlačovéZostavyToolStripMenuItem.Text = "Tlačové zostavy"
         '
+        'SkúšobnáKomisiaToolStripMenuItem
+        '
+        Me.SkúšobnáKomisiaToolStripMenuItem.Name = "SkúšobnáKomisiaToolStripMenuItem"
+        Me.SkúšobnáKomisiaToolStripMenuItem.Size = New System.Drawing.Size(102, 20)
+        Me.SkúšobnáKomisiaToolStripMenuItem.Text = "Skúšobná komisia"
+        '
         'ToolStrip
         '
         Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton, Me.ToolStripButton1, Me.osobaStripButton, Me.ToolStripButton2})
@@ -529,6 +535,12 @@ Partial Class hlavna_aplikacia
         Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton2.Text = "ToolStripButton2"
         '
+        'ToolStripStatusLabel
+        '
+        Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
+        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(38, 17)
+        Me.ToolStripStatusLabel.Text = "Status"
+        '
         'StatusStrip
         '
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
@@ -537,18 +549,6 @@ Partial Class hlavna_aplikacia
         Me.StatusStrip.Size = New System.Drawing.Size(912, 22)
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
-        '
-        'ToolStripStatusLabel
-        '
-        Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(38, 17)
-        Me.ToolStripStatusLabel.Text = "Status"
-        '
-        'SkúšobnáKomisiaToolStripMenuItem
-        '
-        Me.SkúšobnáKomisiaToolStripMenuItem.Name = "SkúšobnáKomisiaToolStripMenuItem"
-        Me.SkúšobnáKomisiaToolStripMenuItem.Size = New System.Drawing.Size(102, 20)
-        Me.SkúšobnáKomisiaToolStripMenuItem.Text = "Skúšobná komisia"
         '
         'hlavna_aplikacia
         '
@@ -594,8 +594,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents PrintPreviewToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolTip As System.Windows.Forms.ToolTip
-    Friend WithEvents ToolStripStatusLabel As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents StatusStrip As System.Windows.Forms.StatusStrip
     Friend WithEvents PrintToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents NewToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStrip As System.Windows.Forms.ToolStrip
@@ -638,5 +636,7 @@ Partial Class hlavna_aplikacia
     Friend WithEvents PrehladToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TlačovéZostavyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SkúšobnáKomisiaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripStatusLabel As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents StatusStrip As System.Windows.Forms.StatusStrip
 
 End Class

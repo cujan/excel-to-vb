@@ -5,6 +5,7 @@
         Me.KurzTableAdapter.Fill(Me.PilcikdbDataSet.kurz)
         Me.MdiParent = hlavna_aplikacia
         protokol_kurzComboBox.SelectedIndex = -1
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -18,6 +19,11 @@
     Private Sub protokolCheckBox_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles protokolCheckBox.CheckedChanged
         If protokolCheckBox.CheckState = CheckState.Checked Then
             protokol_kurzComboBox.Visible = True
+            Label2.Visible = True
         End If
+    End Sub
+
+    Private Sub protokol_kurzComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles protokol_kurzComboBox.SelectedIndexChanged
+        Label2.Visible = False
     End Sub
 End Class
