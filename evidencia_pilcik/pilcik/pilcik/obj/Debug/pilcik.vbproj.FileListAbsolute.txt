@@ -26,7 +26,6 @@ D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.Res
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.vbproj.GenerateResource.Cache
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.kurz_novy.resources
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\bin\Debug\pilcikdb.sdf
-D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.osoba_prehlad.resources
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.exe.manifest
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\bin\Debug\pilcik.exe.manifest
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\bin\Debug\pilcik.application
@@ -38,3 +37,6 @@ D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.tla
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.skusobna_komisia.resources
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.kurz_detail.resources
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.uvodna_obrazovka.resources
+D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.clenovia_kurzu.resources
+D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.clen_kurzu_pridaj.resources
+D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.osoba_detail.resources

@@ -110,7 +110,29 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="absolvovaneKurzyDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>absolvovaneKurzyDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="clenovia_kurzu.Designer.vb">
+      <DependentUpon>clenovia_kurzu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="clenovia_kurzu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clenovia_kurzuDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>clenovia_kurzuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="clen_kurzu_pridaj.Designer.vb">
+      <DependentUpon>clen_kurzu_pridaj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="clen_kurzu_pridaj.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="kniznica.vb" />
     <Compile Include="kurzComboDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -129,10 +151,15 @@
     <Compile Include="kurz_novy.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="osoba_prehlad.Designer.vb">
-      <DependentUpon>osoba_prehlad.vb</DependentUpon>
+    <Compile Include="osobaComboDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>osobaComboDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="osoba_prehlad.vb">
+    <Compile Include="osoba_detail.Designer.vb">
+      <DependentUpon>osoba_detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="osoba_detail.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="osoba_pridaj.Designer.vb">
@@ -198,6 +225,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="clenovia_kurzu.resx">
+      <DependentUpon>clenovia_kurzu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clen_kurzu_pridaj.resx">
+      <DependentUpon>clen_kurzu_pridaj.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="kurz_detail.resx">
       <DependentUpon>kurz_detail.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -206,8 +241,8 @@
       <DependentUpon>kurz_novy.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="osoba_prehlad.resx">
-      <DependentUpon>osoba_prehlad.vb</DependentUpon>
+    <EmbeddedResource Include="osoba_detail.resx">
+      <DependentUpon>osoba_detail.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="osoba_pridaj.resx">
@@ -243,7 +278,29 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="absolvovaneKurzyDataSet.xsc">
+      <DependentUpon>absolvovaneKurzyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="absolvovaneKurzyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>absolvovaneKurzyDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="absolvovaneKurzyDataSet.xss">
+      <DependentUpon>absolvovaneKurzyDataSet.xsd</DependentUpon>
+    </None>
     <None Include="app.config" />
+    <None Include="clenovia_kurzuDataSet.xsc">
+      <DependentUpon>clenovia_kurzuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="clenovia_kurzuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>clenovia_kurzuDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="clenovia_kurzuDataSet.xss">
+      <DependentUpon>clenovia_kurzuDataSet.xsd</DependentUpon>
+    </None>
     <None Include="kurzComboDataSet.xsc">
       <DependentUpon>kurzComboDataSet.xsd</DependentUpon>
     </None>
@@ -264,6 +321,17 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="osobaComboDataSet.xsc">
+      <DependentUpon>osobaComboDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="osobaComboDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>osobaComboDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="osobaComboDataSet.xss">
+      <DependentUpon>osobaComboDataSet.xsd</DependentUpon>
     </None>
     <None Include="pilcikdbDataSet.xsc">
       <DependentUpon>pilcikdbDataSet.xsd</DependentUpon>

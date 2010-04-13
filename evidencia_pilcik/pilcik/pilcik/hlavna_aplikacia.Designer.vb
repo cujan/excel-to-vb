@@ -87,6 +87,7 @@ Partial Class hlavna_aplikacia
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel
         Me.StatusStrip = New System.Windows.Forms.StatusStrip
+        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -430,7 +431,7 @@ Partial Class hlavna_aplikacia
         '
         'ToolStrip
         '
-        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton, Me.ToolStripButton1, Me.osobaStripButton, Me.ToolStripButton2})
+        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton, Me.ToolStripButton1, Me.osobaStripButton, Me.ToolStripButton2, Me.ToolStripButton3})
         Me.ToolStrip.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip.Name = "ToolStrip"
         Me.ToolStrip.Size = New System.Drawing.Size(912, 25)
@@ -550,6 +551,15 @@ Partial Class hlavna_aplikacia
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
+        'ToolStripButton3
+        '
+        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
+        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton3.Name = "ToolStripButton3"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton3.Text = "ToolStripButton3"
+        '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -638,5 +648,6 @@ Partial Class hlavna_aplikacia
     Friend WithEvents SkúšobnáKomisiaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripStatusLabel As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents StatusStrip As System.Windows.Forms.StatusStrip
+    Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
 
 End Class
