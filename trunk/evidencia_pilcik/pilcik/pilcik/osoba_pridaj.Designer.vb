@@ -50,10 +50,6 @@ Partial Class osoba_pridaj
         Me.TelefonTextBox = New System.Windows.Forms.TextBox
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.ulozButton = New System.Windows.Forms.Button
-        Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
-        Me.OsobaTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.osobaTableAdapter
-        Me.TableAdapterManager = New pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
-        Me.KurzTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.kurzTableAdapter
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
@@ -66,33 +62,43 @@ Partial Class osoba_pridaj
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.OsobaBindingSource1BindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
-        Me.OsobaDataGridView = New System.Windows.Forms.DataGridView
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.TitulpredDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.PriezviskoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.MenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DatumnarodeniaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.RodnecisloDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.CisloopDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.UlicaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.MestoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.PscDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.CislopilcickehopreukazuDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.TelefonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.IdkurzuDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.NazovDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
         Me.Label5 = New System.Windows.Forms.Label
-        Me.kurzComboBox = New System.Windows.Forms.ComboBox
-        Me.KurzComboDataSet = New pilcik.kurzComboDataSet
-        Me.KurzTableAdapter1 = New pilcik.kurzComboDataSetTableAdapters.kurzTableAdapter
-        Me.BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OsobaBindingSource2BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem1 = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorCountItem1 = New System.Windows.Forms.ToolStripLabel
+        Me.BindingNavigatorDeleteItem1 = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorMoveFirstItem1 = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorMovePreviousItem1 = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorSeparator3 = New System.Windows.Forms.ToolStripSeparator
+        Me.BindingNavigatorPositionItem1 = New System.Windows.Forms.ToolStripTextBox
+        Me.BindingNavigatorSeparator4 = New System.Windows.Forms.ToolStripSeparator
+        Me.BindingNavigatorMoveNextItem1 = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorMoveLastItem1 = New System.Windows.Forms.ToolStripButton
+        Me.BindingNavigatorSeparator5 = New System.Windows.Forms.ToolStripSeparator
+        Me.OsobaBindingSource2BindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
+        Me.OsobaDataGridView = New System.Windows.Forms.DataGridView
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.TextBox1 = New System.Windows.Forms.TextBox
+        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn30 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn31 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn32 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn33 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn34 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn35 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn36 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn37 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn38 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.OsobaBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
+        Me.OsobaTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.osobaTableAdapter
+        Me.TableAdapterManager = New pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
         Titul_predLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
@@ -106,11 +112,12 @@ Partial Class osoba_pridaj
         EmailLabel = New System.Windows.Forms.Label
         TelefonLabel = New System.Windows.Forms.Label
         Me.GroupBox1.SuspendLayout()
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OsobaBindingSource2BindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.OsobaBindingSource2BindingNavigator.SuspendLayout()
         CType(Me.OsobaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KurzComboDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.OsobaBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Titul_predLabel
@@ -147,7 +154,7 @@ Partial Class osoba_pridaj
         '
         Datum_narodeniaLabel.AutoSize = True
         Datum_narodeniaLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Datum_narodeniaLabel.Location = New System.Drawing.Point(250, 92)
+        Datum_narodeniaLabel.Location = New System.Drawing.Point(238, 60)
         Datum_narodeniaLabel.Name = "Datum_narodeniaLabel"
         Datum_narodeniaLabel.Size = New System.Drawing.Size(107, 13)
         Datum_narodeniaLabel.TabIndex = 10
@@ -157,7 +164,7 @@ Partial Class osoba_pridaj
         '
         Rodne_cisloLabel.AutoSize = True
         Rodne_cisloLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Rodne_cisloLabel.Location = New System.Drawing.Point(26, 92)
+        Rodne_cisloLabel.Location = New System.Drawing.Point(26, 60)
         Rodne_cisloLabel.Name = "Rodne_cisloLabel"
         Rodne_cisloLabel.Size = New System.Drawing.Size(80, 13)
         Rodne_cisloLabel.TabIndex = 12
@@ -167,7 +174,7 @@ Partial Class osoba_pridaj
         '
         Cislo_opLabel.AutoSize = True
         Cislo_opLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Cislo_opLabel.Location = New System.Drawing.Point(346, 154)
+        Cislo_opLabel.Location = New System.Drawing.Point(448, 108)
         Cislo_opLabel.Name = "Cislo_opLabel"
         Cislo_opLabel.Size = New System.Drawing.Size(58, 13)
         Cislo_opLabel.TabIndex = 14
@@ -187,7 +194,7 @@ Partial Class osoba_pridaj
         '
         MestoLabel.AutoSize = True
         MestoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        MestoLabel.Location = New System.Drawing.Point(6, 80)
+        MestoLabel.Location = New System.Drawing.Point(6, 55)
         MestoLabel.Name = "MestoLabel"
         MestoLabel.Size = New System.Drawing.Size(45, 13)
         MestoLabel.TabIndex = 18
@@ -197,7 +204,7 @@ Partial Class osoba_pridaj
         '
         PscLabel.AutoSize = True
         PscLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        PscLabel.Location = New System.Drawing.Point(228, 80)
+        PscLabel.Location = New System.Drawing.Point(215, 55)
         PscLabel.Name = "PscLabel"
         PscLabel.Size = New System.Drawing.Size(31, 13)
         PscLabel.TabIndex = 20
@@ -207,7 +214,7 @@ Partial Class osoba_pridaj
         '
         Cislo_pilcickeho_preukazuLabel.AutoSize = True
         Cislo_pilcickeho_preukazuLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Cislo_pilcickeho_preukazuLabel.Location = New System.Drawing.Point(346, 207)
+        Cislo_pilcickeho_preukazuLabel.Location = New System.Drawing.Point(682, 108)
         Cislo_pilcickeho_preukazuLabel.Name = "Cislo_pilcickeho_preukazuLabel"
         Cislo_pilcickeho_preukazuLabel.Size = New System.Drawing.Size(156, 13)
         Cislo_pilcickeho_preukazuLabel.TabIndex = 22
@@ -217,7 +224,7 @@ Partial Class osoba_pridaj
         '
         EmailLabel.AutoSize = True
         EmailLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        EmailLabel.Location = New System.Drawing.Point(346, 255)
+        EmailLabel.Location = New System.Drawing.Point(448, 147)
         EmailLabel.Name = "EmailLabel"
         EmailLabel.Size = New System.Drawing.Size(45, 13)
         EmailLabel.TabIndex = 24
@@ -227,7 +234,7 @@ Partial Class osoba_pridaj
         '
         TelefonLabel.AutoSize = True
         TelefonLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        TelefonLabel.Location = New System.Drawing.Point(346, 305)
+        TelefonLabel.Location = New System.Drawing.Point(682, 147)
         TelefonLabel.Name = "TelefonLabel"
         TelefonLabel.Size = New System.Drawing.Size(54, 13)
         TelefonLabel.TabIndex = 26
@@ -257,7 +264,7 @@ Partial Class osoba_pridaj
         'Datum_narodeniaDateTimePicker
         '
         Me.Datum_narodeniaDateTimePicker.Checked = False
-        Me.Datum_narodeniaDateTimePicker.Location = New System.Drawing.Point(253, 110)
+        Me.Datum_narodeniaDateTimePicker.Location = New System.Drawing.Point(235, 76)
         Me.Datum_narodeniaDateTimePicker.Name = "Datum_narodeniaDateTimePicker"
         Me.Datum_narodeniaDateTimePicker.ShowCheckBox = True
         Me.Datum_narodeniaDateTimePicker.Size = New System.Drawing.Size(200, 20)
@@ -265,14 +272,14 @@ Partial Class osoba_pridaj
         '
         'Rodne_cisloTextBox
         '
-        Me.Rodne_cisloTextBox.Location = New System.Drawing.Point(31, 111)
+        Me.Rodne_cisloTextBox.Location = New System.Drawing.Point(29, 76)
         Me.Rodne_cisloTextBox.Name = "Rodne_cisloTextBox"
         Me.Rodne_cisloTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Rodne_cisloTextBox.TabIndex = 3
         '
         'Cislo_opTextBox
         '
-        Me.Cislo_opTextBox.Location = New System.Drawing.Point(349, 173)
+        Me.Cislo_opTextBox.Location = New System.Drawing.Point(451, 124)
         Me.Cislo_opTextBox.Name = "Cislo_opTextBox"
         Me.Cislo_opTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Cislo_opTextBox.TabIndex = 6
@@ -286,35 +293,35 @@ Partial Class osoba_pridaj
         '
         'MestoTextBox
         '
-        Me.MestoTextBox.Location = New System.Drawing.Point(6, 96)
+        Me.MestoTextBox.Location = New System.Drawing.Point(9, 71)
         Me.MestoTextBox.Name = "MestoTextBox"
         Me.MestoTextBox.Size = New System.Drawing.Size(200, 20)
         Me.MestoTextBox.TabIndex = 1
         '
         'PscTextBox
         '
-        Me.PscTextBox.Location = New System.Drawing.Point(212, 96)
+        Me.PscTextBox.Location = New System.Drawing.Point(215, 71)
         Me.PscTextBox.Name = "PscTextBox"
         Me.PscTextBox.Size = New System.Drawing.Size(78, 20)
         Me.PscTextBox.TabIndex = 2
         '
         'Cislo_pilcickeho_preukazuTextBox
         '
-        Me.Cislo_pilcickeho_preukazuTextBox.Location = New System.Drawing.Point(349, 223)
+        Me.Cislo_pilcickeho_preukazuTextBox.Location = New System.Drawing.Point(681, 124)
         Me.Cislo_pilcickeho_preukazuTextBox.Name = "Cislo_pilcickeho_preukazuTextBox"
         Me.Cislo_pilcickeho_preukazuTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Cislo_pilcickeho_preukazuTextBox.TabIndex = 7
         '
         'EmailTextBox
         '
-        Me.EmailTextBox.Location = New System.Drawing.Point(349, 271)
+        Me.EmailTextBox.Location = New System.Drawing.Point(451, 163)
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.Size = New System.Drawing.Size(196, 20)
         Me.EmailTextBox.TabIndex = 8
         '
         'TelefonTextBox
         '
-        Me.TelefonTextBox.Location = New System.Drawing.Point(349, 321)
+        Me.TelefonTextBox.Location = New System.Drawing.Point(685, 163)
         Me.TelefonTextBox.Name = "TelefonTextBox"
         Me.TelefonTextBox.Size = New System.Drawing.Size(196, 20)
         Me.TelefonTextBox.TabIndex = 9
@@ -327,41 +334,21 @@ Partial Class osoba_pridaj
         Me.GroupBox1.Controls.Add(Me.MestoTextBox)
         Me.GroupBox1.Controls.Add(PscLabel)
         Me.GroupBox1.Controls.Add(Me.PscTextBox)
-        Me.GroupBox1.Location = New System.Drawing.Point(29, 154)
+        Me.GroupBox1.Location = New System.Drawing.Point(29, 108)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(296, 183)
+        Me.GroupBox1.Size = New System.Drawing.Size(301, 103)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Bydlisko"
         '
         'ulozButton
         '
-        Me.ulozButton.Location = New System.Drawing.Point(325, 352)
+        Me.ulozButton.Location = New System.Drawing.Point(763, 189)
         Me.ulozButton.Name = "ulozButton"
         Me.ulozButton.Size = New System.Drawing.Size(75, 23)
         Me.ulozButton.TabIndex = 11
         Me.ulozButton.Text = "Ulož"
         Me.ulozButton.UseVisualStyleBackColor = True
-        '
-        'PilcikdbDataSet
-        '
-        Me.PilcikdbDataSet.DataSetName = "pilcikdbDataSet"
-        Me.PilcikdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'OsobaTableAdapter
-        '
-        Me.OsobaTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.kurzTableAdapter = Me.KurzTableAdapter
-        Me.TableAdapterManager.skusobna_komisiaTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'KurzTableAdapter
-        '
-        Me.KurzTableAdapter.ClearBeforeFill = True
         '
         'BindingNavigatorAddNewItem
         '
@@ -456,134 +443,6 @@ Partial Class osoba_pridaj
         Me.OsobaBindingSource1BindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.OsobaBindingSource1BindingNavigatorSaveItem.Text = "Save Data"
         '
-        'OsobaDataGridView
-        '
-        Me.OsobaDataGridView.AllowUserToAddRows = False
-        Me.OsobaDataGridView.AllowUserToDeleteRows = False
-        Me.OsobaDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.OsobaDataGridView.AutoGenerateColumns = False
-        Me.OsobaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.OsobaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.TitulpredDataGridViewTextBoxColumn, Me.PriezviskoDataGridViewTextBoxColumn, Me.MenoDataGridViewTextBoxColumn, Me.DatumnarodeniaDataGridViewTextBoxColumn, Me.RodnecisloDataGridViewTextBoxColumn, Me.CisloopDataGridViewTextBoxColumn, Me.UlicaDataGridViewTextBoxColumn, Me.MestoDataGridViewTextBoxColumn, Me.PscDataGridViewTextBoxColumn, Me.CislopilcickehopreukazuDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.TelefonDataGridViewTextBoxColumn, Me.IdkurzuDataGridViewTextBoxColumn, Me.NazovDataGridViewTextBoxColumn})
-        Me.OsobaDataGridView.DataSource = Me.BindingSource1
-        Me.OsobaDataGridView.Location = New System.Drawing.Point(12, 381)
-        Me.OsobaDataGridView.Name = "OsobaDataGridView"
-        Me.OsobaDataGridView.ReadOnly = True
-        Me.OsobaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.OsobaDataGridView.Size = New System.Drawing.Size(907, 300)
-        Me.OsobaDataGridView.TabIndex = 32
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TitulpredDataGridViewTextBoxColumn
-        '
-        Me.TitulpredDataGridViewTextBoxColumn.DataPropertyName = "titul_pred"
-        Me.TitulpredDataGridViewTextBoxColumn.HeaderText = "titul_pred"
-        Me.TitulpredDataGridViewTextBoxColumn.Name = "TitulpredDataGridViewTextBoxColumn"
-        Me.TitulpredDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PriezviskoDataGridViewTextBoxColumn
-        '
-        Me.PriezviskoDataGridViewTextBoxColumn.DataPropertyName = "priezvisko"
-        Me.PriezviskoDataGridViewTextBoxColumn.HeaderText = "priezvisko"
-        Me.PriezviskoDataGridViewTextBoxColumn.Name = "PriezviskoDataGridViewTextBoxColumn"
-        Me.PriezviskoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MenoDataGridViewTextBoxColumn
-        '
-        Me.MenoDataGridViewTextBoxColumn.DataPropertyName = "meno"
-        Me.MenoDataGridViewTextBoxColumn.HeaderText = "meno"
-        Me.MenoDataGridViewTextBoxColumn.Name = "MenoDataGridViewTextBoxColumn"
-        Me.MenoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DatumnarodeniaDataGridViewTextBoxColumn
-        '
-        Me.DatumnarodeniaDataGridViewTextBoxColumn.DataPropertyName = "datum_narodenia"
-        Me.DatumnarodeniaDataGridViewTextBoxColumn.HeaderText = "datum_narodenia"
-        Me.DatumnarodeniaDataGridViewTextBoxColumn.Name = "DatumnarodeniaDataGridViewTextBoxColumn"
-        Me.DatumnarodeniaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'RodnecisloDataGridViewTextBoxColumn
-        '
-        Me.RodnecisloDataGridViewTextBoxColumn.DataPropertyName = "rodne_cislo"
-        Me.RodnecisloDataGridViewTextBoxColumn.HeaderText = "rodne_cislo"
-        Me.RodnecisloDataGridViewTextBoxColumn.Name = "RodnecisloDataGridViewTextBoxColumn"
-        Me.RodnecisloDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CisloopDataGridViewTextBoxColumn
-        '
-        Me.CisloopDataGridViewTextBoxColumn.DataPropertyName = "cislo_op"
-        Me.CisloopDataGridViewTextBoxColumn.HeaderText = "cislo_op"
-        Me.CisloopDataGridViewTextBoxColumn.Name = "CisloopDataGridViewTextBoxColumn"
-        Me.CisloopDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'UlicaDataGridViewTextBoxColumn
-        '
-        Me.UlicaDataGridViewTextBoxColumn.DataPropertyName = "ulica"
-        Me.UlicaDataGridViewTextBoxColumn.HeaderText = "ulica"
-        Me.UlicaDataGridViewTextBoxColumn.Name = "UlicaDataGridViewTextBoxColumn"
-        Me.UlicaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MestoDataGridViewTextBoxColumn
-        '
-        Me.MestoDataGridViewTextBoxColumn.DataPropertyName = "mesto"
-        Me.MestoDataGridViewTextBoxColumn.HeaderText = "mesto"
-        Me.MestoDataGridViewTextBoxColumn.Name = "MestoDataGridViewTextBoxColumn"
-        Me.MestoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PscDataGridViewTextBoxColumn
-        '
-        Me.PscDataGridViewTextBoxColumn.DataPropertyName = "psc"
-        Me.PscDataGridViewTextBoxColumn.HeaderText = "psc"
-        Me.PscDataGridViewTextBoxColumn.Name = "PscDataGridViewTextBoxColumn"
-        Me.PscDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CislopilcickehopreukazuDataGridViewTextBoxColumn
-        '
-        Me.CislopilcickehopreukazuDataGridViewTextBoxColumn.DataPropertyName = "cislo_pilcickeho_preukazu"
-        Me.CislopilcickehopreukazuDataGridViewTextBoxColumn.HeaderText = "cislo_pilcickeho_preukazu"
-        Me.CislopilcickehopreukazuDataGridViewTextBoxColumn.Name = "CislopilcickehopreukazuDataGridViewTextBoxColumn"
-        Me.CislopilcickehopreukazuDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EmailDataGridViewTextBoxColumn
-        '
-        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "email"
-        Me.EmailDataGridViewTextBoxColumn.HeaderText = "email"
-        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
-        Me.EmailDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TelefonDataGridViewTextBoxColumn
-        '
-        Me.TelefonDataGridViewTextBoxColumn.DataPropertyName = "telefon"
-        Me.TelefonDataGridViewTextBoxColumn.HeaderText = "telefon"
-        Me.TelefonDataGridViewTextBoxColumn.Name = "TelefonDataGridViewTextBoxColumn"
-        Me.TelefonDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'IdkurzuDataGridViewTextBoxColumn
-        '
-        Me.IdkurzuDataGridViewTextBoxColumn.DataPropertyName = "id_kurzu"
-        Me.IdkurzuDataGridViewTextBoxColumn.HeaderText = "id_kurzu"
-        Me.IdkurzuDataGridViewTextBoxColumn.Name = "IdkurzuDataGridViewTextBoxColumn"
-        Me.IdkurzuDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NazovDataGridViewTextBoxColumn
-        '
-        Me.NazovDataGridViewTextBoxColumn.DataPropertyName = "nazov"
-        Me.NazovDataGridViewTextBoxColumn.HeaderText = "nazov"
-        Me.NazovDataGridViewTextBoxColumn.Name = "NazovDataGridViewTextBoxColumn"
-        Me.NazovDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'BindingSource1
-        '
-        Me.BindingSource1.DataMember = "osoba"
-        Me.BindingSource1.DataSource = Me.PilcikdbDataSet
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -604,30 +463,12 @@ Partial Class osoba_pridaj
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(406, 352)
+        Me.Button1.Location = New System.Drawing.Point(788, 379)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 36
         Me.Button1.Text = "Zmaž člena"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(670, 2)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
-        Me.Label3.TabIndex = 37
-        Me.Label3.Text = "Label3"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(670, 14)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
-        Me.Label4.TabIndex = 38
-        Me.Label4.Text = "Label4"
         '
         'Label5
         '
@@ -639,44 +480,282 @@ Partial Class osoba_pridaj
         Me.Label5.TabIndex = 39
         Me.Label5.Text = "Evidencia osôb"
         '
-        'kurzComboBox
+        'OsobaBindingSource2BindingNavigator
         '
-        Me.kurzComboBox.DataSource = Me.BindingSource2
-        Me.kurzComboBox.DisplayMember = "nazov_spolu"
-        Me.kurzComboBox.FormattingEnabled = True
-        Me.kurzComboBox.Location = New System.Drawing.Point(511, 109)
-        Me.kurzComboBox.Name = "kurzComboBox"
-        Me.kurzComboBox.Size = New System.Drawing.Size(270, 21)
-        Me.kurzComboBox.TabIndex = 40
-        Me.kurzComboBox.ValueMember = "id"
+        Me.OsobaBindingSource2BindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem1
+        Me.OsobaBindingSource2BindingNavigator.BindingSource = Me.OsobaBindingSource2
+        Me.OsobaBindingSource2BindingNavigator.CountItem = Me.BindingNavigatorCountItem1
+        Me.OsobaBindingSource2BindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem1
+        Me.OsobaBindingSource2BindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.OsobaBindingSource2BindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem1, Me.BindingNavigatorMovePreviousItem1, Me.BindingNavigatorSeparator3, Me.BindingNavigatorPositionItem1, Me.BindingNavigatorCountItem1, Me.BindingNavigatorSeparator4, Me.BindingNavigatorMoveNextItem1, Me.BindingNavigatorMoveLastItem1, Me.BindingNavigatorSeparator5, Me.BindingNavigatorAddNewItem1, Me.BindingNavigatorDeleteItem1, Me.OsobaBindingSource2BindingNavigatorSaveItem})
+        Me.OsobaBindingSource2BindingNavigator.Location = New System.Drawing.Point(0, 684)
+        Me.OsobaBindingSource2BindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem1
+        Me.OsobaBindingSource2BindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem1
+        Me.OsobaBindingSource2BindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem1
+        Me.OsobaBindingSource2BindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem1
+        Me.OsobaBindingSource2BindingNavigator.Name = "OsobaBindingSource2BindingNavigator"
+        Me.OsobaBindingSource2BindingNavigator.PositionItem = Me.BindingNavigatorPositionItem1
+        Me.OsobaBindingSource2BindingNavigator.Size = New System.Drawing.Size(931, 25)
+        Me.OsobaBindingSource2BindingNavigator.TabIndex = 40
+        Me.OsobaBindingSource2BindingNavigator.Text = "BindingNavigator1"
+        Me.OsobaBindingSource2BindingNavigator.Visible = False
         '
-        'KurzComboDataSet
+        'BindingNavigatorAddNewItem1
         '
-        Me.KurzComboDataSet.DataSetName = "kurzComboDataSet"
-        Me.KurzComboDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.BindingNavigatorAddNewItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem1.Image = CType(resources.GetObject("BindingNavigatorAddNewItem1.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem1.Name = "BindingNavigatorAddNewItem1"
+        Me.BindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem1.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem1.Text = "Add new"
         '
-        'KurzTableAdapter1
+        'BindingNavigatorCountItem1
         '
-        Me.KurzTableAdapter1.ClearBeforeFill = True
+        Me.BindingNavigatorCountItem1.Name = "BindingNavigatorCountItem1"
+        Me.BindingNavigatorCountItem1.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem1.Text = "of {0}"
+        Me.BindingNavigatorCountItem1.ToolTipText = "Total number of items"
         '
-        'BindingSource2
+        'BindingNavigatorDeleteItem1
         '
-        Me.BindingSource2.DataMember = "kurz"
-        Me.BindingSource2.DataSource = Me.KurzComboDataSet
+        Me.BindingNavigatorDeleteItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem1.Image = CType(resources.GetObject("BindingNavigatorDeleteItem1.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem1.Name = "BindingNavigatorDeleteItem1"
+        Me.BindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem1.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem1.Text = "Delete"
+        '
+        'BindingNavigatorMoveFirstItem1
+        '
+        Me.BindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem1.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem1.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem1.Name = "BindingNavigatorMoveFirstItem1"
+        Me.BindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem1.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem1.Text = "Move first"
+        '
+        'BindingNavigatorMovePreviousItem1
+        '
+        Me.BindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem1.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem1.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem1.Name = "BindingNavigatorMovePreviousItem1"
+        Me.BindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem1.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem1.Text = "Move previous"
+        '
+        'BindingNavigatorSeparator3
+        '
+        Me.BindingNavigatorSeparator3.Name = "BindingNavigatorSeparator3"
+        Me.BindingNavigatorSeparator3.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem1
+        '
+        Me.BindingNavigatorPositionItem1.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem1.AutoSize = False
+        Me.BindingNavigatorPositionItem1.Name = "BindingNavigatorPositionItem1"
+        Me.BindingNavigatorPositionItem1.Size = New System.Drawing.Size(50, 21)
+        Me.BindingNavigatorPositionItem1.Text = "0"
+        Me.BindingNavigatorPositionItem1.ToolTipText = "Current position"
+        '
+        'BindingNavigatorSeparator4
+        '
+        Me.BindingNavigatorSeparator4.Name = "BindingNavigatorSeparator4"
+        Me.BindingNavigatorSeparator4.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorMoveNextItem1
+        '
+        Me.BindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem1.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem1.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem1.Name = "BindingNavigatorMoveNextItem1"
+        Me.BindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem1.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem1.Text = "Move next"
+        '
+        'BindingNavigatorMoveLastItem1
+        '
+        Me.BindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem1.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem1.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem1.Name = "BindingNavigatorMoveLastItem1"
+        Me.BindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem1.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem1.Text = "Move last"
+        '
+        'BindingNavigatorSeparator5
+        '
+        Me.BindingNavigatorSeparator5.Name = "BindingNavigatorSeparator5"
+        Me.BindingNavigatorSeparator5.Size = New System.Drawing.Size(6, 25)
+        '
+        'OsobaBindingSource2BindingNavigatorSaveItem
+        '
+        Me.OsobaBindingSource2BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.OsobaBindingSource2BindingNavigatorSaveItem.Image = CType(resources.GetObject("OsobaBindingSource2BindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.OsobaBindingSource2BindingNavigatorSaveItem.Name = "OsobaBindingSource2BindingNavigatorSaveItem"
+        Me.OsobaBindingSource2BindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.OsobaBindingSource2BindingNavigatorSaveItem.Text = "Save Data"
+        '
+        'OsobaDataGridView
+        '
+        Me.OsobaDataGridView.AllowUserToAddRows = False
+        Me.OsobaDataGridView.AllowUserToDeleteRows = False
+        Me.OsobaDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.OsobaDataGridView.AutoGenerateColumns = False
+        Me.OsobaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.OsobaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn36, Me.DataGridViewTextBoxColumn37, Me.DataGridViewTextBoxColumn38})
+        Me.OsobaDataGridView.DataSource = Me.OsobaBindingSource2
+        Me.OsobaDataGridView.Location = New System.Drawing.Point(12, 438)
+        Me.OsobaDataGridView.Name = "OsobaDataGridView"
+        Me.OsobaDataGridView.ReadOnly = True
+        Me.OsobaDataGridView.Size = New System.Drawing.Size(907, 259)
+        Me.OsobaDataGridView.TabIndex = 40
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 314)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(447, 100)
+        Me.GroupBox2.TabIndex = 41
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Hľadaj"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(3, 16)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(55, 13)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Priezvisko"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(64, 9)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(199, 20)
+        Me.TextBox1.TabIndex = 1
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        Me.DataGridViewTextBoxColumn27.DataPropertyName = "titul_pred"
+        Me.DataGridViewTextBoxColumn27.HeaderText = "titul_pred"
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn28
+        '
+        Me.DataGridViewTextBoxColumn28.DataPropertyName = "priezvisko"
+        Me.DataGridViewTextBoxColumn28.HeaderText = "priezvisko"
+        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
+        Me.DataGridViewTextBoxColumn28.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn29
+        '
+        Me.DataGridViewTextBoxColumn29.DataPropertyName = "meno"
+        Me.DataGridViewTextBoxColumn29.HeaderText = "meno"
+        Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
+        Me.DataGridViewTextBoxColumn29.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn30
+        '
+        Me.DataGridViewTextBoxColumn30.DataPropertyName = "datum_narodenia"
+        Me.DataGridViewTextBoxColumn30.HeaderText = "datum_narodenia"
+        Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
+        Me.DataGridViewTextBoxColumn30.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn31
+        '
+        Me.DataGridViewTextBoxColumn31.DataPropertyName = "rodne_cislo"
+        Me.DataGridViewTextBoxColumn31.HeaderText = "rodne_cislo"
+        Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
+        Me.DataGridViewTextBoxColumn31.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn32
+        '
+        Me.DataGridViewTextBoxColumn32.DataPropertyName = "cislo_op"
+        Me.DataGridViewTextBoxColumn32.HeaderText = "cislo_op"
+        Me.DataGridViewTextBoxColumn32.Name = "DataGridViewTextBoxColumn32"
+        Me.DataGridViewTextBoxColumn32.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn33
+        '
+        Me.DataGridViewTextBoxColumn33.DataPropertyName = "ulica"
+        Me.DataGridViewTextBoxColumn33.HeaderText = "ulica"
+        Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
+        Me.DataGridViewTextBoxColumn33.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn34
+        '
+        Me.DataGridViewTextBoxColumn34.DataPropertyName = "mesto"
+        Me.DataGridViewTextBoxColumn34.HeaderText = "mesto"
+        Me.DataGridViewTextBoxColumn34.Name = "DataGridViewTextBoxColumn34"
+        Me.DataGridViewTextBoxColumn34.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn35
+        '
+        Me.DataGridViewTextBoxColumn35.DataPropertyName = "psc"
+        Me.DataGridViewTextBoxColumn35.HeaderText = "psc"
+        Me.DataGridViewTextBoxColumn35.Name = "DataGridViewTextBoxColumn35"
+        Me.DataGridViewTextBoxColumn35.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn36
+        '
+        Me.DataGridViewTextBoxColumn36.DataPropertyName = "cislo_pilcickeho_preukazu"
+        Me.DataGridViewTextBoxColumn36.HeaderText = "cislo_pilcickeho_preukazu"
+        Me.DataGridViewTextBoxColumn36.Name = "DataGridViewTextBoxColumn36"
+        Me.DataGridViewTextBoxColumn36.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn37
+        '
+        Me.DataGridViewTextBoxColumn37.DataPropertyName = "email"
+        Me.DataGridViewTextBoxColumn37.HeaderText = "email"
+        Me.DataGridViewTextBoxColumn37.Name = "DataGridViewTextBoxColumn37"
+        Me.DataGridViewTextBoxColumn37.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn38
+        '
+        Me.DataGridViewTextBoxColumn38.DataPropertyName = "telefon"
+        Me.DataGridViewTextBoxColumn38.HeaderText = "telefon"
+        Me.DataGridViewTextBoxColumn38.Name = "DataGridViewTextBoxColumn38"
+        Me.DataGridViewTextBoxColumn38.ReadOnly = True
+        '
+        'OsobaBindingSource2
+        '
+        Me.OsobaBindingSource2.DataMember = "osoba"
+        Me.OsobaBindingSource2.DataSource = Me.PilcikdbDataSet
+        '
+        'PilcikdbDataSet
+        '
+        Me.PilcikdbDataSet.DataSetName = "pilcikdbDataSet"
+        Me.PilcikdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'OsobaTableAdapter
+        '
+        Me.OsobaTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.clenovia_kurzuTableAdapter = Nothing
+
+        Me.TableAdapterManager.osobaTableAdapter = Me.OsobaTableAdapter
+        Me.TableAdapterManager.skusobna_komisiaTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'osoba_pridaj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(931, 709)
-        Me.Controls.Add(Me.kurzComboBox)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.OsobaDataGridView)
+        Me.Controls.Add(Me.OsobaBindingSource2BindingNavigator)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.OsobaDataGridView)
         Me.Controls.Add(Me.ulozButton)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Titul_predLabel)
@@ -702,11 +781,14 @@ Partial Class osoba_pridaj
         Me.Text = "osoba_pridaj"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OsobaBindingSource2BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.OsobaBindingSource2BindingNavigator.ResumeLayout(False)
+        Me.OsobaBindingSource2BindingNavigator.PerformLayout()
         CType(Me.OsobaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KurzComboDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        CType(Me.OsobaBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -741,10 +823,7 @@ Partial Class osoba_pridaj
     Friend WithEvents TelefonTextBox As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents ulozButton As System.Windows.Forms.Button
-    Friend WithEvents PilcikdbDataSet As pilcik.pilcikdbDataSet
     Friend WithEvents OsobaBindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents OsobaTableAdapter As pilcik.pilcikdbDataSetTableAdapters.osobaTableAdapter
-    Friend WithEvents TableAdapterManager As pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
     Friend WithEvents OsobaBindingSource1BindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -758,14 +837,10 @@ Partial Class osoba_pridaj
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents OsobaBindingSource1BindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents OsobaDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents KurzTableAdapter As pilcik.pilcikdbDataSetTableAdapters.kurzTableAdapter
     Friend WithEvents KurzBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn16 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn17 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -779,27 +854,40 @@ Partial Class osoba_pridaj
     Friend WithEvents DataGridViewTextBoxColumn25 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn26 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents kurzComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents KurzComboDataSetBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents KurzComboDataSet As pilcik.kurzComboDataSet
     Friend WithEvents KurzBindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents KurzTableAdapter1 As pilcik.kurzComboDataSetTableAdapters.kurzTableAdapter
     Friend WithEvents KurzBindingSource2 As System.Windows.Forms.BindingSource
-    Friend WithEvents IdDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents TitulpredDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents PriezviskoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents MenoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DatumnarodeniaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents RodnecisloDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents CisloopDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents UlicaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents MestoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents PscDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents CislopilcickehopreukazuDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents EmailDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents TelefonDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents IdkurzuDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NazovDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents BindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents PilcikdbDataSet As pilcik.pilcikdbDataSet
+    Friend WithEvents OsobaBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents OsobaTableAdapter As pilcik.pilcikdbDataSetTableAdapters.osobaTableAdapter
+    Friend WithEvents TableAdapterManager As pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents OsobaBindingSource2BindingNavigator As System.Windows.Forms.BindingNavigator
+    Friend WithEvents BindingNavigatorAddNewItem1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BindingNavigatorCountItem1 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents BindingNavigatorDeleteItem1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BindingNavigatorMoveFirstItem1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BindingNavigatorMovePreviousItem1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents BindingNavigatorPositionItem1 As System.Windows.Forms.ToolStripTextBox
+    Friend WithEvents BindingNavigatorSeparator4 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents BindingNavigatorMoveNextItem1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BindingNavigatorMoveLastItem1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator5 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents OsobaBindingSource2BindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents OsobaDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn27 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn28 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn29 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn30 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn31 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn32 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn33 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn34 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn35 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn36 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn37 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn38 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class

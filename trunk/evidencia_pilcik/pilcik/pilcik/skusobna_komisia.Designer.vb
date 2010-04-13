@@ -101,7 +101,7 @@ Partial Class skusobna_komisia
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.kurzTableAdapter = Nothing
+
         Me.TableAdapterManager.skusobna_komisiaTableAdapter = Me.Skusobna_komisiaTableAdapter
         Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '

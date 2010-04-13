@@ -115,7 +115,7 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub PrehladToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PrehladToolStripMenuItem.Click
-        osoba_prehlad.Show()
+
     End Sub
 
     Private Sub TlačovéZostavyToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TlačovéZostavyToolStripMenuItem.Click
@@ -128,5 +128,9 @@ Public Class hlavna_aplikacia
 
     Private Sub SplitContainer1_Panel2_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs)
 
+    End Sub
+
+    Private Sub ToolStripButton3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton3.Click
+        clenovia_kurzu.Show()
     End Sub
 End Class
