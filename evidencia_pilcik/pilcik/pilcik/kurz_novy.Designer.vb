@@ -29,6 +29,16 @@ Partial Class kurz_novy
         Dim TypLabel As System.Windows.Forms.Label
         Dim Miesto_konaniaLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(kurz_novy))
+        Me.NazovTextBox = New System.Windows.Forms.TextBox
+        Me.Zaciatok_kurzuDateTimePicker = New System.Windows.Forms.DateTimePicker
+        Me.Koniec_kurzuDateTimePicker = New System.Windows.Forms.DateTimePicker
+        Me.ulozButton = New System.Windows.Forms.Button
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Miesto_konaniaTextBox = New System.Windows.Forms.TextBox
+        Me.TypComboBox = New System.Windows.Forms.ComboBox
+        Me.Label3 = New System.Windows.Forms.Label
         Me.KurzBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
@@ -43,26 +53,17 @@ Partial Class kurz_novy
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.KurzBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.KurzDataGridView = New System.Windows.Forms.DataGridView
-        Me.NazovTextBox = New System.Windows.Forms.TextBox
-        Me.Zaciatok_kurzuDateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.Koniec_kurzuDateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.ulozButton = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Miesto_konaniaTextBox = New System.Windows.Forms.TextBox
-        Me.TypComboBox = New System.Windows.Forms.ComboBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.typ = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.miesto_konania = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.pocet = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Button2 = New System.Windows.Forms.Button
+        Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Kurz_pocetDataSet = New pilcik.kurz_pocetDataSet
+        Me.KurzTableAdapter = New pilcik.kurz_pocetDataSetTableAdapters.kurzTableAdapter
+        Me.TableAdapterManager = New pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
-        Me.KurzTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.kurzTableAdapter
-        Me.TableAdapterManager = New pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
         NazovLabel = New System.Windows.Forms.Label
         Zaciatok_kurzuLabel = New System.Windows.Forms.Label
         Koniec_kurzuLabel = New System.Windows.Forms.Label
@@ -72,7 +73,7 @@ Partial Class kurz_novy
         Me.KurzBindingNavigator.SuspendLayout()
         CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Kurz_pocetDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NazovLabel
@@ -124,136 +125,6 @@ Partial Class kurz_novy
         Miesto_konaniaLabel.Size = New System.Drawing.Size(97, 13)
         Miesto_konaniaLabel.TabIndex = 14
         Miesto_konaniaLabel.Text = "Miesto konania:"
-        '
-        'KurzBindingNavigator
-        '
-        Me.KurzBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.KurzBindingNavigator.BindingSource = Me.KurzBindingSource
-        Me.KurzBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.KurzBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.KurzBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.KurzBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.KurzBindingNavigatorSaveItem})
-        Me.KurzBindingNavigator.Location = New System.Drawing.Point(0, 686)
-        Me.KurzBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.KurzBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.KurzBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.KurzBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.KurzBindingNavigator.Name = "KurzBindingNavigator"
-        Me.KurzBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.KurzBindingNavigator.Size = New System.Drawing.Size(1127, 25)
-        Me.KurzBindingNavigator.TabIndex = 0
-        Me.KurzBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(58, 21)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'KurzBindingNavigatorSaveItem
-        '
-        Me.KurzBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.KurzBindingNavigatorSaveItem.Image = CType(resources.GetObject("KurzBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.KurzBindingNavigatorSaveItem.Name = "KurzBindingNavigatorSaveItem"
-        Me.KurzBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.KurzBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'KurzDataGridView
-        '
-        Me.KurzDataGridView.AllowUserToAddRows = False
-        Me.KurzDataGridView.AllowUserToDeleteRows = False
-        Me.KurzDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.KurzDataGridView.AutoGenerateColumns = False
-        Me.KurzDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.KurzDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.typ, Me.miesto_konania, Me.pocet})
-        Me.KurzDataGridView.DataSource = Me.KurzBindingSource
-        Me.KurzDataGridView.Location = New System.Drawing.Point(14, 221)
-        Me.KurzDataGridView.Name = "KurzDataGridView"
-        Me.KurzDataGridView.ReadOnly = True
-        Me.KurzDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.KurzDataGridView.Size = New System.Drawing.Size(1099, 462)
-        Me.KurzDataGridView.TabIndex = 1
         '
         'NazovTextBox
         '
@@ -343,57 +214,147 @@ Partial Class kurz_novy
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "Evidencia kurzov"
         '
-        'typ
+        'KurzBindingNavigator
         '
-        Me.typ.DataPropertyName = "typ"
-        Me.typ.HeaderText = "typ"
-        Me.typ.Name = "typ"
-        Me.typ.ReadOnly = True
+        Me.KurzBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.KurzBindingNavigator.BindingSource = Me.KurzBindingSource
+        Me.KurzBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.KurzBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.KurzBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.KurzBindingNavigatorSaveItem})
+        Me.KurzBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.KurzBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.KurzBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.KurzBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.KurzBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.KurzBindingNavigator.Name = "KurzBindingNavigator"
+        Me.KurzBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.KurzBindingNavigator.Size = New System.Drawing.Size(1127, 25)
+        Me.KurzBindingNavigator.TabIndex = 16
+        Me.KurzBindingNavigator.Text = "BindingNavigator1"
         '
-        'miesto_konania
+        'BindingNavigatorAddNewItem
         '
-        Me.miesto_konania.DataPropertyName = "miesto_konania"
-        Me.miesto_konania.HeaderText = "miesto_konania"
-        Me.miesto_konania.Name = "miesto_konania"
-        Me.miesto_konania.ReadOnly = True
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
         '
-        'pocet
+        'BindingNavigatorCountItem
         '
-        Me.pocet.DataPropertyName = "pocet"
-        Me.pocet.HeaderText = "pocet"
-        Me.pocet.Name = "pocet"
-        Me.pocet.ReadOnly = True
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
-        'DataGridViewTextBoxColumn5
+        'BindingNavigatorDeleteItem
         '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "nazov"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
-        'DataGridViewTextBoxColumn6
+        'BindingNavigatorMoveFirstItem
         '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "zaciatok_kurzu"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "zaciatok_kurzu"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
         '
-        'DataGridViewTextBoxColumn7
+        'BindingNavigatorMovePreviousItem
         '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "koniec_kurzu"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "koniec_kurzu"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'KurzBindingNavigatorSaveItem
+        '
+        Me.KurzBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.KurzBindingNavigatorSaveItem.Enabled = False
+        Me.KurzBindingNavigatorSaveItem.Image = CType(resources.GetObject("KurzBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.KurzBindingNavigatorSaveItem.Name = "KurzBindingNavigatorSaveItem"
+        Me.KurzBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.KurzBindingNavigatorSaveItem.Text = "Save Data"
+        '
+        'KurzDataGridView
+        '
+        Me.KurzDataGridView.AutoGenerateColumns = False
+        Me.KurzDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.KurzDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
+        Me.KurzDataGridView.DataSource = Me.KurzBindingSource
+        Me.KurzDataGridView.Location = New System.Drawing.Point(12, 257)
+        Me.KurzDataGridView.Name = "KurzDataGridView"
+        Me.KurzDataGridView.Size = New System.Drawing.Size(925, 220)
+        Me.KurzDataGridView.TabIndex = 16
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(600, 180)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 17
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'KurzBindingSource
         '
         Me.KurzBindingSource.DataMember = "kurz"
-        Me.KurzBindingSource.DataSource = Me.PilcikdbDataSet
+        Me.KurzBindingSource.DataSource = Me.Kurz_pocetDataSet
         '
-        'PilcikdbDataSet
+        'Kurz_pocetDataSet
         '
-        Me.PilcikdbDataSet.DataSetName = "pilcikdbDataSet"
-        Me.PilcikdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Kurz_pocetDataSet.DataSetName = "kurz_pocetDataSet"
+        Me.Kurz_pocetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'KurzTableAdapter
         '
@@ -404,15 +365,53 @@ Partial Class kurz_novy
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.clenovia_kurzuTableAdapter = Nothing
         Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.osobaTableAdapter = Nothing
-        Me.TableAdapterManager.skusobna_komisiaTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UpdateOrder = pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "nazov"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "nazov"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "zaciatok_kurzu"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "zaciatok_kurzu"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "koniec_kurzu"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "koniec_kurzu"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "typ"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "typ"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "miesto_konania"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "miesto_konania"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "pocet"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Počet členov "
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
         '
         'kurz_novy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1127, 711)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.KurzDataGridView)
+        Me.Controls.Add(Me.KurzBindingNavigator)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TypComboBox)
         Me.Controls.Add(Miesto_konaniaLabel)
@@ -428,8 +427,6 @@ Partial Class kurz_novy
         Me.Controls.Add(Me.Zaciatok_kurzuDateTimePicker)
         Me.Controls.Add(Koniec_kurzuLabel)
         Me.Controls.Add(Me.Koniec_kurzuDateTimePicker)
-        Me.Controls.Add(Me.KurzDataGridView)
-        Me.Controls.Add(Me.KurzBindingNavigator)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.Name = "kurz_novy"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
@@ -439,7 +436,7 @@ Partial Class kurz_novy
         Me.KurzBindingNavigator.PerformLayout()
         CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Kurz_pocetDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -448,10 +445,20 @@ Partial Class kurz_novy
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents PilcikdbDataSet As pilcik.pilcikdbDataSet
+    Friend WithEvents NazovTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Zaciatok_kurzuDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Koniec_kurzuDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents ulozButton As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Miesto_konaniaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents TypComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Kurz_pocetDataSet As pilcik.kurz_pocetDataSet
     Friend WithEvents KurzBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents KurzTableAdapter As pilcik.pilcikdbDataSetTableAdapters.kurzTableAdapter
-    Friend WithEvents TableAdapterManager As pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents KurzTableAdapter As pilcik.kurz_pocetDataSetTableAdapters.kurzTableAdapter
+    Friend WithEvents TableAdapterManager As pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager
     Friend WithEvents KurzBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -466,20 +473,11 @@ Partial Class kurz_novy
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents KurzBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents KurzDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents NazovTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Zaciatok_kurzuDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Koniec_kurzuDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents ulozButton As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Miesto_konaniaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents TypComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents typ As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents miesto_konania As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents pocet As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

@@ -52,7 +52,7 @@
         con.Open()
         com.ExecuteNonQuery()
         con.Close()
-
+        Me.OsobaTableAdapter.Fill(Me.PilcikdbDataSet.osoba)
 
         'vymayanie udajov z policok
         Titul_predTextBox.Text = ""

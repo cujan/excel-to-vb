@@ -18,5 +18,6 @@
         com.ExecuteNonQuery()
         con.Close()
         kurz_detail.Clenovia_kurzuTableAdapter.FillBy_parameter(kurz_detail.Clenovia_kurzuDataSet.clenovia_kurzu, vybrany_kurz_id)
+        kurz_novy.KurzTableAdapter.Fill(kurz_novy.Kurz_pocetDataSet.kurz)
     End Sub
 End Class
