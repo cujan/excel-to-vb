@@ -68,6 +68,8 @@ Partial Class osoba_pridaj
         Me.Label5 = New System.Windows.Forms.Label
         Me.OsobaBindingSource2BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem1 = New System.Windows.Forms.ToolStripButton
+        Me.OsobaBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
         Me.BindingNavigatorCountItem1 = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem1 = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem1 = New System.Windows.Forms.ToolStripButton
@@ -80,9 +82,6 @@ Partial Class osoba_pridaj
         Me.BindingNavigatorSeparator5 = New System.Windows.Forms.ToolStripSeparator
         Me.OsobaBindingSource2BindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.OsobaDataGridView = New System.Windows.Forms.DataGridView
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -95,10 +94,13 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn36 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn37 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn38 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.OsobaBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.TextBox1 = New System.Windows.Forms.TextBox
+        Me.Label3 = New System.Windows.Forms.Label
         Me.OsobaTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.osobaTableAdapter
         Me.TableAdapterManager = New pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.Label6 = New System.Windows.Forms.Label
         Titul_predLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
@@ -114,10 +116,10 @@ Partial Class osoba_pridaj
         Me.GroupBox1.SuspendLayout()
         CType(Me.OsobaBindingSource2BindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.OsobaBindingSource2BindingNavigator.SuspendLayout()
-        CType(Me.OsobaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.OsobaBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OsobaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Titul_predLabel
@@ -474,7 +476,7 @@ Partial Class osoba_pridaj
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Monotype Corsiva", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Label5.Location = New System.Drawing.Point(758, 2)
+        Me.Label5.Location = New System.Drawing.Point(613, 3)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(123, 25)
         Me.Label5.TabIndex = 39
@@ -508,6 +510,16 @@ Partial Class osoba_pridaj
         Me.BindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem1.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem1.Text = "Add new"
+        '
+        'OsobaBindingSource2
+        '
+        Me.OsobaBindingSource2.DataMember = "osoba"
+        Me.OsobaBindingSource2.DataSource = Me.PilcikdbDataSet
+        '
+        'PilcikdbDataSet
+        '
+        Me.PilcikdbDataSet.DataSetName = "pilcikdbDataSet"
+        Me.PilcikdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem1
         '
@@ -607,35 +619,9 @@ Partial Class osoba_pridaj
         Me.OsobaDataGridView.Location = New System.Drawing.Point(12, 438)
         Me.OsobaDataGridView.Name = "OsobaDataGridView"
         Me.OsobaDataGridView.ReadOnly = True
+        Me.OsobaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.OsobaDataGridView.Size = New System.Drawing.Size(907, 259)
         Me.OsobaDataGridView.TabIndex = 40
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 314)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(447, 100)
-        Me.GroupBox2.TabIndex = 41
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Hľadaj"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 16)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 13)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Priezvisko"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(64, 9)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox1.TabIndex = 1
         '
         'DataGridViewTextBoxColumn27
         '
@@ -721,15 +707,33 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn38.Name = "DataGridViewTextBoxColumn38"
         Me.DataGridViewTextBoxColumn38.ReadOnly = True
         '
-        'OsobaBindingSource2
+        'GroupBox2
         '
-        Me.OsobaBindingSource2.DataMember = "osoba"
-        Me.OsobaBindingSource2.DataSource = Me.PilcikdbDataSet
+        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 314)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(447, 100)
+        Me.GroupBox2.TabIndex = 41
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Hľadaj"
         '
-        'PilcikdbDataSet
+        'TextBox1
         '
-        Me.PilcikdbDataSet.DataSetName = "pilcikdbDataSet"
-        Me.PilcikdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.TextBox1.Location = New System.Drawing.Point(74, 19)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(199, 20)
+        Me.TextBox1.TabIndex = 1
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Label3.Location = New System.Drawing.Point(3, 16)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(65, 13)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Priezvisko"
         '
         'OsobaTableAdapter
         '
@@ -739,16 +743,34 @@ Partial Class osoba_pridaj
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.clenovia_kurzuTableAdapter = Nothing
-
         Me.TableAdapterManager.osobaTableAdapter = Me.OsobaTableAdapter
         Me.TableAdapterManager.skusobna_komisiaTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(678, 2)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(0, 13)
+        Me.Label4.TabIndex = 42
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(670, 15)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(39, 13)
+        Me.Label6.TabIndex = 43
+        Me.Label6.Text = "Label6"
         '
         'osoba_pridaj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(931, 709)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.OsobaDataGridView)
         Me.Controls.Add(Me.OsobaBindingSource2BindingNavigator)
@@ -784,11 +806,11 @@ Partial Class osoba_pridaj
         CType(Me.OsobaBindingSource2BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.OsobaBindingSource2BindingNavigator.ResumeLayout(False)
         Me.OsobaBindingSource2BindingNavigator.PerformLayout()
+        CType(Me.OsobaBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OsobaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.OsobaBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -890,4 +912,6 @@ Partial Class osoba_pridaj
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

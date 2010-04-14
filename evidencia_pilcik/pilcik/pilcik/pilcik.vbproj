@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{ADCA8095-1C9D-48EA-A143-70E14D274E84}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -263,6 +263,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pomocny.resx">
       <DependentUpon>pomocny.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="protokol_Report.rdlc" />
     <EmbeddedResource Include="skusobna_komisia.resx">

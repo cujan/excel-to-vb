@@ -5,13 +5,15 @@
     End Sub
 
     Private Sub osoba_pridaj_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Me.MdiParent = hlavna_aplikacia
         'TODO: This line of code loads data into the 'PilcikdbDataSet.osoba' table. You can move, or remove it, as needed.
         Me.OsobaTableAdapter.Fill(Me.PilcikdbDataSet.osoba)
         'TODO: This line of code loads data into the 'KurzComboDataSet.kurz' table. You can move, or remove it, as needed.
         
         Me.WindowState = FormWindowState.Maximized
         Me.BringToFront()
-
+        'Me.OsobaDataGridView.CurrentCell = Nothing
+        Label5.BringToFront()
 
     End Sub
 
@@ -86,16 +88,24 @@
     End Sub
 
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        If MsgBox("Naozaj chcete zmazať vybraného člena?", MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
-            Dim con As New SqlCeConnection(pripojovaci_retazec)
-            Dim com As New SqlCeCommand("DELETE FROM osoba WHERE id = @id", con)
-            com.Parameters.AddWithValue("id", Label2.Text)
-            con.Open()
-            com.ExecuteNonQuery()
-            con.Close()
-            Me.OsobaTableAdapter.Fill(Me.PilcikdbDataSet.osoba)
+        Dim priezvisko As String = Label4.Text
+        If Label4.Text <> "" Then
+            If MsgBox("Naozaj chcete zmazať vybraného člena - " + priezvisko + "? Zmaže sa aj ako účastník všetkých kurzov!!!", MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
+                Dim con As New SqlCeConnection(pripojovaci_retazec)
+                Dim com As New SqlCeCommand("DELETE FROM osoba WHERE id = @id", con)
+                Dim com1 As New SqlCeCommand("DELETE FROM clenovia_kurzu WHERE clen_id = @id", con)
+                com.Parameters.AddWithValue("id", Label2.Text)
+                com1.Parameters.AddWithValue("id", Label2.Text)
+                con.Open()
+                com.ExecuteNonQuery()
+                com1.ExecuteNonQuery()
+                con.Close()
+                Me.OsobaTableAdapter.Fill(Me.PilcikdbDataSet.osoba)
+            End If
+        Else
+            MsgBox("Nemáte vybraného žiadneho člena.")
         End If
-        
+
     End Sub
 
     Private Sub KurzDataGridView_CausesValidationChanged(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -120,9 +130,14 @@
     End Sub
 
     Private Sub OsobaDataGridView_CellClick1(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles OsobaDataGridView.CellClick
+        'nacitanie id
         Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OsobaBindingSource2, "id", True))
         Label2.Text = Label1.Text
         Label1.DataBindings.Clear()
+        'nacitanie prieyviska
+        Label4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OsobaBindingSource2, "priezvisko", True))
+        Label6.Text = Label4.Text
+        Label4.DataBindings.Clear()
     End Sub
 
     Private Sub OsobaDataGridView_CellContentClick_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles OsobaDataGridView.CellContentClick
