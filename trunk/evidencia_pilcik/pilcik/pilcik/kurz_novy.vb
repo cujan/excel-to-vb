@@ -18,10 +18,11 @@
         'TODO: This line of code loads data into the 'PilcikdbDataSet.kurz' table. You can move, or remove it, as needed.
 
         'TODO: This line of code loads data into the 'Pilcik_dbDataSet.kurz' table. You can move, or remove it, as needed.
-        Me.KurzDataGridView.CurrentRow.Selected = Nothing
+        'Me.KurzDataGridView.CurrentRow.Selected = Nothing
         Me.WindowState = FormWindowState.Maximized
         Me.BringToFront()
-
+        KurzDataGridView.CurrentCell = Nothing
+        Label3.BringToFront()
 
     End Sub
 
@@ -64,6 +65,8 @@
             NazovTextBox.Text = ""
             Zaciatok_kurzuDateTimePicker.Checked = False
             Koniec_kurzuDateTimePicker.Checked = False
+            'refresh uvodnej obrazovky
+            uvodna_obrazovka.Refresh()
         Else
             MsgBox("Nemáte zadabé všetky údaje")
         End If
@@ -80,14 +83,22 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-
-        If MsgBox("Naozaj chcete zmazať vybraný kurz?", MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
-            Dim con As New SqlCeConnection(pripojovaci_retazec)
-            Dim com As New SqlCeCommand("DELETE FROM kurz WHERE id = @id", con)
-            com.Parameters.AddWithValue("id", Label2.Text)
-            con.Open()
-            com.ExecuteNonQuery()
-            con.Close()
+        Dim nazov As String = Label4.Text
+        If Label4.Text <> "" Then
+            If MsgBox("Naozaj chcete zmazať vybraný kurz - " + nazov + " ? Bude zmazany aj v prehľade jednotlivých členov.", MsgBoxStyle.OkCancel) = MsgBoxResult.Ok Then
+                Dim con As New SqlCeConnection(pripojovaci_retazec)
+                Dim com As New SqlCeCommand("DELETE FROM kurz WHERE id = @id", con)
+                Dim com1 As New SqlCeCommand("DELETE FROM clenovia_kurzu WHERE kurz_id = @id", con)
+                com.Parameters.AddWithValue("id", Label2.Text)
+                com1.Parameters.AddWithValue("id", Label2.Text)
+                con.Open()
+                com.ExecuteNonQuery()
+                com1.ExecuteNonQuery()
+                con.Close()
+                Me.KurzTableAdapter.Fill(Me.Kurz_pocetDataSet.kurz)
+            End If
+        Else
+            MsgBox("Nemáte vybraný žiaden kurz.")
         End If
 
     End Sub
@@ -101,9 +112,14 @@
     End Sub
 
     Private Sub KurzDataGridView_CellClick1(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles KurzDataGridView.CellClick
+        'id
         Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KurzBindingSource, "id", True))
         Label2.Text = Label1.Text
         Label1.DataBindings.Clear()
+        'nazov kurzu
+        Label4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KurzBindingSource, "nazov", True))
+        Label5.Text = Label4.Text
+        Label4.DataBindings.Clear()
     End Sub
 
     Private Sub KurzDataGridView_CellContentClick_1(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles KurzDataGridView.CellContentClick
@@ -114,7 +130,7 @@
         kurz_detail.Show()
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         pomocny.Show()
     End Sub
 End Class

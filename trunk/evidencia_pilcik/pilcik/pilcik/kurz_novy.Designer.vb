@@ -41,6 +41,8 @@ Partial Class kurz_novy
         Me.Label3 = New System.Windows.Forms.Label
         Me.KurzBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Kurz_pocetDataSet = New pilcik.kurz_pocetDataSet
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
@@ -53,17 +55,16 @@ Partial Class kurz_novy
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.KurzBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.KurzDataGridView = New System.Windows.Forms.DataGridView
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Kurz_pocetDataSet = New pilcik.kurz_pocetDataSet
-        Me.KurzTableAdapter = New pilcik.kurz_pocetDataSetTableAdapters.kurzTableAdapter
-        Me.TableAdapterManager = New pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.KurzTableAdapter = New pilcik.kurz_pocetDataSetTableAdapters.kurzTableAdapter
+        Me.TableAdapterManager = New pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.Label5 = New System.Windows.Forms.Label
         NazovLabel = New System.Windows.Forms.Label
         Zaciatok_kurzuLabel = New System.Windows.Forms.Label
         Koniec_kurzuLabel = New System.Windows.Forms.Label
@@ -71,9 +72,9 @@ Partial Class kurz_novy
         Miesto_konaniaLabel = New System.Windows.Forms.Label
         CType(Me.KurzBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.KurzBindingNavigator.SuspendLayout()
-        CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Kurz_pocetDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NazovLabel
@@ -172,7 +173,7 @@ Partial Class kurz_novy
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(630, 36)
+        Me.Label1.Location = New System.Drawing.Point(621, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(45, 13)
         Me.Label1.TabIndex = 12
@@ -181,7 +182,7 @@ Partial Class kurz_novy
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(681, 36)
+        Me.Label2.Location = New System.Drawing.Point(621, 22)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(45, 13)
         Me.Label2.TabIndex = 13
@@ -208,7 +209,7 @@ Partial Class kurz_novy
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Monotype Corsiva", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Label3.Location = New System.Drawing.Point(608, 91)
+        Me.Label3.Location = New System.Drawing.Point(628, 91)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(158, 25)
         Me.Label3.TabIndex = 15
@@ -220,8 +221,9 @@ Partial Class kurz_novy
         Me.KurzBindingNavigator.BindingSource = Me.KurzBindingSource
         Me.KurzBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.KurzBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.KurzBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.KurzBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.KurzBindingNavigatorSaveItem})
-        Me.KurzBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.KurzBindingNavigator.Location = New System.Drawing.Point(0, 686)
         Me.KurzBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.KurzBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.KurzBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -231,6 +233,7 @@ Partial Class kurz_novy
         Me.KurzBindingNavigator.Size = New System.Drawing.Size(1127, 25)
         Me.KurzBindingNavigator.TabIndex = 16
         Me.KurzBindingNavigator.Text = "BindingNavigator1"
+        Me.KurzBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
@@ -241,10 +244,20 @@ Partial Class kurz_novy
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
         '
+        'KurzBindingSource
+        '
+        Me.KurzBindingSource.DataMember = "kurz"
+        Me.KurzBindingSource.DataSource = Me.Kurz_pocetDataSet
+        '
+        'Kurz_pocetDataSet
+        '
+        Me.Kurz_pocetDataSet.DataSetName = "kurz_pocetDataSet"
+        Me.Kurz_pocetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -328,33 +341,63 @@ Partial Class kurz_novy
         '
         'KurzDataGridView
         '
+        Me.KurzDataGridView.AllowUserToAddRows = False
+        Me.KurzDataGridView.AllowUserToDeleteRows = False
+        Me.KurzDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.KurzDataGridView.AutoGenerateColumns = False
         Me.KurzDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.KurzDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
         Me.KurzDataGridView.DataSource = Me.KurzBindingSource
         Me.KurzDataGridView.Location = New System.Drawing.Point(12, 257)
         Me.KurzDataGridView.Name = "KurzDataGridView"
-        Me.KurzDataGridView.Size = New System.Drawing.Size(925, 220)
+        Me.KurzDataGridView.ReadOnly = True
+        Me.KurzDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.KurzDataGridView.Size = New System.Drawing.Size(1103, 442)
         Me.KurzDataGridView.TabIndex = 16
         '
-        'Button2
+        'DataGridViewTextBoxColumn1
         '
-        Me.Button2.Location = New System.Drawing.Point(600, 180)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 17
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "nazov"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "nazov"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
         '
-        'KurzBindingSource
+        'DataGridViewTextBoxColumn5
         '
-        Me.KurzBindingSource.DataMember = "kurz"
-        Me.KurzBindingSource.DataSource = Me.Kurz_pocetDataSet
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "zaciatok_kurzu"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "zaciatok_kurzu"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
-        'Kurz_pocetDataSet
+        'DataGridViewTextBoxColumn6
         '
-        Me.Kurz_pocetDataSet.DataSetName = "kurz_pocetDataSet"
-        Me.Kurz_pocetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "koniec_kurzu"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "koniec_kurzu"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "typ"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "typ"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "miesto_konania"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "miesto_konania"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "pocet"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Počet členov "
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
         '
         'KurzTableAdapter
         '
@@ -367,49 +410,30 @@ Partial Class kurz_novy
         Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.UpdateOrder = pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'DataGridViewTextBoxColumn1
+        'Label4
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "nazov"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "nazov"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(690, 9)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(0, 13)
+        Me.Label4.TabIndex = 17
         '
-        'DataGridViewTextBoxColumn5
+        'Label5
         '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "zaciatok_kurzu"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "zaciatok_kurzu"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "koniec_kurzu"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "koniec_kurzu"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "typ"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "typ"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "miesto_konania"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "miesto_konania"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "pocet"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Počet členov "
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(690, 22)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(45, 13)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = "Label5"
         '
         'kurz_novy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1127, 711)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.KurzDataGridView)
         Me.Controls.Add(Me.KurzBindingNavigator)
         Me.Controls.Add(Me.Label3)
@@ -434,9 +458,9 @@ Partial Class kurz_novy
         CType(Me.KurzBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.KurzBindingNavigator.ResumeLayout(False)
         Me.KurzBindingNavigator.PerformLayout()
-        CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Kurz_pocetDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -473,11 +497,12 @@ Partial Class kurz_novy
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents KurzBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents KurzDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

@@ -57,3 +57,4 @@ D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\RdlCompile.c
 D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.exe.manifest
 D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.application
 D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.pomocny.resources
+D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.pomocny.resources
