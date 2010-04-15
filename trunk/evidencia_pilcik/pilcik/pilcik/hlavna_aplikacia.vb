@@ -88,6 +88,7 @@ Public Class hlavna_aplikacia
     Private Sub hlavna_aplikacia_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         uvodna_obrazovka.Show()
         
+        
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)

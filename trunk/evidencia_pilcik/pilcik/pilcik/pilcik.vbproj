@@ -190,6 +190,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>protokolDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="protokol_kurzDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protokol_kurzDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="skusobna_komisia.Designer.vb">
       <DependentUpon>skusobna_komisia.vb</DependentUpon>
     </Compile>
@@ -382,6 +387,17 @@
     </None>
     <None Include="protokolDataSet.xss">
       <DependentUpon>protokolDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="protokol_kurzDataSet.xsc">
+      <DependentUpon>protokol_kurzDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="protokol_kurzDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protokol_kurzDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protokol_kurzDataSet.xss">
+      <DependentUpon>protokol_kurzDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
