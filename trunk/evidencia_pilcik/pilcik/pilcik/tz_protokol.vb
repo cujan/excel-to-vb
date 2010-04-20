@@ -1,6 +1,10 @@
 ﻿Public Class tz_protokol
 
     Private Sub tz_protokol_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'ProtokolDataSet.kurz' table. You can move, or remove it, as needed.
+        Me.KurzTableAdapter1.Fill(Me.ProtokolDataSet.kurz)
+        'TODO: This line of code loads data into the 'ProtokolDataSet.clenovia_kurzu' table. You can move, or remove it, as needed.
+        Me.Clenovia_kurzuTableAdapter.Fill(Me.ProtokolDataSet.clenovia_kurzu)
 
         Dim id_kurzu As Integer = tlacove_zostavy.protokol_kurzComboBox.SelectedValue
 
@@ -9,9 +13,9 @@
         'TODO: This line of code loads data into the 'pilcikdbDataSet.skusobna_komisia' table. You can move, or remove it, as needed.
         Me.skusobna_komisiaTableAdapter.Fill(Me.pilcikdbDataSet.skusobna_komisia)
         'TODO: This line of code loads data into the 'protokolDataSet.protokolDataTable' table. You can move, or remove it, as needed.
-        Me.OsobaTableAdapter.Fill(Me.ProtokolDataSet.osoba, id_kurzu)
 
 
+        Me.DataTable1TableAdapter.Fill(Me.SkusobnyDataSet.DataTable1, id_kurzu)
 
 
         Me.ReportViewer1.RefreshReport()

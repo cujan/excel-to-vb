@@ -201,6 +201,11 @@
     <Compile Include="skusobna_komisia.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="skusobnyDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>skusobnyDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="tlacove_zostavy.Designer.vb">
       <DependentUpon>tlacove_zostavy.vb</DependentUpon>
     </Compile>
@@ -398,6 +403,17 @@
     </None>
     <None Include="protokol_kurzDataSet.xss">
       <DependentUpon>protokol_kurzDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="skusobnyDataSet.xsc">
+      <DependentUpon>skusobnyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="skusobnyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>skusobnyDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="skusobnyDataSet.xss">
+      <DependentUpon>skusobnyDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
