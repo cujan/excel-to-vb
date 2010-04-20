@@ -84,7 +84,9 @@
       </Fields>
       <Query>
         <DataSourceName>pilcikdbConnectionString</DataSourceName>
-        <CommandText>SELECT [id], [nazov], [zaciatok_kurzu], [koniec_kurzu], [typ], [miesto_konania] FROM [kurz]</CommandText>
+        <CommandText>SELECT     id, nazov, zaciatok_kurzu, koniec_kurzu, typ, miesto_konania
+FROM         kurz
+WHERE     (id = @Param1)</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <rd:DataSetInfo>
@@ -95,23 +97,11 @@
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="protokolDataSet_osoba">
+    <DataSet Name="skusobnyDataSet_DataTable1">
       <Fields>
         <Field Name="id">
           <DataField>id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="priezvisko">
-          <DataField>priezvisko</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="meno">
-          <DataField>meno</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="datum_narodenia">
-          <DataField>datum_narodenia</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="kurz_id">
           <DataField>kurz_id</DataField>
@@ -121,9 +111,21 @@
           <DataField>clen_id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="priezvisko">
+          <DataField>priezvisko</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="nazov">
           <DataField>nazov</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="meno">
+          <DataField>meno</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="datum_narodenia">
+          <DataField>datum_narodenia</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="osoba_id">
           <DataField>osoba_id</DataField>
@@ -142,19 +144,35 @@ ORDER BY osoba.priezvisko</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>protokolDataSet</rd:DataSetName>
-        <rd:TableName>osoba</rd:TableName>
-        <rd:TableAdapterName>osobaTableAdapter</rd:TableAdapterName>
+        <rd:DataSetName>skusobnyDataSet</rd:DataSetName>
+        <rd:TableName>DataTable1</rd:TableName>
+        <rd:TableAdapterName>DataTable1TableAdapter</rd:TableAdapterName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <Code />
-  <Width>23.25cm</Width>
+  <Width>26.5cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
+      <Textbox Name="textbox5">
+        <rd:DefaultName>textbox5</rd:DefaultName>
+        <Top>13.75cm</Top>
+        <Width>2.53968cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>25</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>7cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=First(Fields!priezvisko.Value, "skusobnyDataSet_DataTable1")</Value>
+      </Textbox>
       <Textbox Name="textbox3">
         <rd:DefaultName>textbox3</rd:DefaultName>
         <Top>5.5cm</Top>
