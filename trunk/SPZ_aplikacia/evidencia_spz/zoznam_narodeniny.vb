@@ -31,6 +31,8 @@
         narodeniny_label.Text = "Narodeniny v " + mesiac + ". mesiaci"
         Me.all_clenoviaTableAdapter.Fill(Me.narodeniny.all_clenovia, mesiac, zdruzenie)
         Me.ReportViewer1.RefreshReport()
+
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub zdruzenia_check_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles zdruzenia_check.CheckedChanged
