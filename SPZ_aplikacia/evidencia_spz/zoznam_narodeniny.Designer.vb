@@ -23,7 +23,7 @@ Partial Class zoznam_narodeniny
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
         Me.all_clenoviaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.narodeniny = New evidencia_spz.narodeniny
         Me.narodeniny_check = New System.Windows.Forms.CheckBox
@@ -111,9 +111,12 @@ Partial Class zoznam_narodeniny
         '
         'ReportViewer1
         '
-        ReportDataSource2.Name = "narodeniny_all_clenovia"
-        ReportDataSource2.Value = Me.all_clenoviaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
+        Me.ReportViewer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        ReportDataSource1.Name = "narodeniny_all_clenovia"
+        ReportDataSource1.Value = Me.all_clenoviaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "evidencia_spz.zoznam_narodeniny_report.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(12, 69)
         Me.ReportViewer1.Name = "ReportViewer1"
