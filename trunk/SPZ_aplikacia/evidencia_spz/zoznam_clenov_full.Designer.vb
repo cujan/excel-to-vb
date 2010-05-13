@@ -90,7 +90,7 @@ Partial Class zoznam_clenov_full
         Me.zdruzenia_combo.DisplayMember = "nazov"
         Me.zdruzenia_combo.Enabled = False
         Me.zdruzenia_combo.FormattingEnabled = True
-        Me.zdruzenia_combo.Location = New System.Drawing.Point(142, 4)
+        Me.zdruzenia_combo.Location = New System.Drawing.Point(159, 4)
         Me.zdruzenia_combo.Name = "zdruzenia_combo"
         Me.zdruzenia_combo.Size = New System.Drawing.Size(101, 21)
         Me.zdruzenia_combo.TabIndex = 1
@@ -249,9 +249,9 @@ Partial Class zoznam_clenov_full
         Me.clenske_do_checkbox.AutoSize = True
         Me.clenske_do_checkbox.Location = New System.Drawing.Point(19, 64)
         Me.clenske_do_checkbox.Name = "clenske_do_checkbox"
-        Me.clenske_do_checkbox.Size = New System.Drawing.Size(108, 17)
+        Me.clenske_do_checkbox.Size = New System.Drawing.Size(140, 17)
         Me.clenske_do_checkbox.TabIndex = 15
-        Me.clenske_do_checkbox.Text = "Vyber členské do"
+        Me.clenske_do_checkbox.Text = "Vyber členské aspoň do"
         Me.clenske_do_checkbox.UseVisualStyleBackColor = True
         '
         'clen_spz_od_combo
@@ -260,7 +260,7 @@ Partial Class zoznam_clenov_full
         Me.clen_spz_od_combo.DisplayMember = "rok"
         Me.clen_spz_od_combo.Enabled = False
         Me.clen_spz_od_combo.FormattingEnabled = True
-        Me.clen_spz_od_combo.Location = New System.Drawing.Point(142, 33)
+        Me.clen_spz_od_combo.Location = New System.Drawing.Point(159, 33)
         Me.clen_spz_od_combo.Name = "clen_spz_od_combo"
         Me.clen_spz_od_combo.Size = New System.Drawing.Size(70, 21)
         Me.clen_spz_od_combo.TabIndex = 16
@@ -287,7 +287,7 @@ Partial Class zoznam_clenov_full
         Me.clenske_do_combo.DisplayMember = "rok"
         Me.clenske_do_combo.Enabled = False
         Me.clenske_do_combo.FormattingEnabled = True
-        Me.clenske_do_combo.Location = New System.Drawing.Point(142, 62)
+        Me.clenske_do_combo.Location = New System.Drawing.Point(159, 62)
         Me.clenske_do_combo.Name = "clenske_do_combo"
         Me.clenske_do_combo.Size = New System.Drawing.Size(70, 21)
         Me.clenske_do_combo.TabIndex = 17
