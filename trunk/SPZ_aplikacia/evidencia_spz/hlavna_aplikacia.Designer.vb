@@ -120,6 +120,8 @@ Partial Class hlavna_aplikacia
         Me.sprava_clenov_label = New System.Windows.Forms.Label
         Me.prehlad_clenov_button = New System.Windows.Forms.Button
         Me.novy_clen_button = New System.Windows.Forms.Button
+        Me.neuplne_zdruzenia_button = New System.Windows.Forms.Button
+        Me.poznamka2_label = New System.Windows.Forms.Label
         Me.kontakt_GroupBox = New System.Windows.Forms.GroupBox
         Me.TelefonTextBox = New System.Windows.Forms.TextBox
         Me.VseobecneudajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -164,8 +166,6 @@ Partial Class hlavna_aplikacia
         Me.SpzDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Vseobecne_udajeTableAdapter = New evidencia_spz.spzDataSetTableAdapters.vseobecne_udajeTableAdapter
         Me.TableAdapterManager = New evidencia_spz.spzDataSetTableAdapters.TableAdapterManager
-        Me.poznamka2_label = New System.Windows.Forms.Label
-        Me.neuplne_zdruzenia_button = New System.Windows.Forms.Button
         TelefonLabel = New System.Windows.Forms.Label
         FaxLabel = New System.Windows.Forms.Label
         EmailLabel = New System.Windows.Forms.Label
@@ -978,7 +978,7 @@ Partial Class hlavna_aplikacia
         Me.platnost_clenstva_button.Name = "platnost_clenstva_button"
         Me.platnost_clenstva_button.Size = New System.Drawing.Size(130, 21)
         Me.platnost_clenstva_button.TabIndex = 3
-        Me.platnost_clenstva_button.Text = "Volne"
+        Me.platnost_clenstva_button.Text = "Tl. zostava - členské do"
         Me.platnost_clenstva_button.UseVisualStyleBackColor = False
         '
         'zoznam_zdruzeni_button
@@ -1141,6 +1141,29 @@ Partial Class hlavna_aplikacia
         Me.novy_clen_button.TabIndex = 0
         Me.novy_clen_button.Text = "Pridať nového člena"
         Me.novy_clen_button.UseVisualStyleBackColor = False
+        '
+        'neuplne_zdruzenia_button
+        '
+        Me.neuplne_zdruzenia_button.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.neuplne_zdruzenia_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.neuplne_zdruzenia_button.Location = New System.Drawing.Point(595, 391)
+        Me.neuplne_zdruzenia_button.Name = "neuplne_zdruzenia_button"
+        Me.neuplne_zdruzenia_button.Size = New System.Drawing.Size(106, 23)
+        Me.neuplne_zdruzenia_button.TabIndex = 44
+        Me.neuplne_zdruzenia_button.Text = "Neúplné združenia"
+        Me.neuplne_zdruzenia_button.UseVisualStyleBackColor = False
+        Me.neuplne_zdruzenia_button.Visible = False
+        '
+        'poznamka2_label
+        '
+        Me.poznamka2_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.poznamka2_label.ForeColor = System.Drawing.Color.IndianRed
+        Me.poznamka2_label.Location = New System.Drawing.Point(220, 388)
+        Me.poznamka2_label.Name = "poznamka2_label"
+        Me.poznamka2_label.Size = New System.Drawing.Size(372, 41)
+        Me.poznamka2_label.TabIndex = 43
+        Me.poznamka2_label.Text = "Poznamka 2"
+        Me.poznamka2_label.Visible = False
         '
         'kontakt_GroupBox
         '
@@ -1532,11 +1555,11 @@ Partial Class hlavna_aplikacia
         Me.Nazov_organizacieTextBox.BackColor = System.Drawing.Color.PaleGreen
         Me.Nazov_organizacieTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Nazov_organizacieTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VseobecneudajeBindingSource, "nazov_organizacie", True))
-        Me.Nazov_organizacieTextBox.Font = New System.Drawing.Font("Candara", 22.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Nazov_organizacieTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Nazov_organizacieTextBox.Location = New System.Drawing.Point(104, 20)
         Me.Nazov_organizacieTextBox.Name = "Nazov_organizacieTextBox"
         Me.Nazov_organizacieTextBox.ReadOnly = True
-        Me.Nazov_organizacieTextBox.Size = New System.Drawing.Size(604, 36)
+        Me.Nazov_organizacieTextBox.Size = New System.Drawing.Size(604, 34)
         Me.Nazov_organizacieTextBox.TabIndex = 1
         Me.Nazov_organizacieTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1583,29 +1606,6 @@ Partial Class hlavna_aplikacia
         Me.TableAdapterManager.UpdateOrder = evidencia_spz.spzDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.vseobecne_udajeTableAdapter = Me.Vseobecne_udajeTableAdapter
         Me.TableAdapterManager.zdruzeniaTableAdapter = Nothing
-        '
-        'poznamka2_label
-        '
-        Me.poznamka2_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.poznamka2_label.ForeColor = System.Drawing.Color.IndianRed
-        Me.poznamka2_label.Location = New System.Drawing.Point(220, 388)
-        Me.poznamka2_label.Name = "poznamka2_label"
-        Me.poznamka2_label.Size = New System.Drawing.Size(372, 41)
-        Me.poznamka2_label.TabIndex = 43
-        Me.poznamka2_label.Text = "Poznamka 2"
-        Me.poznamka2_label.Visible = False
-        '
-        'neuplne_zdruzenia_button
-        '
-        Me.neuplne_zdruzenia_button.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.neuplne_zdruzenia_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.neuplne_zdruzenia_button.Location = New System.Drawing.Point(595, 391)
-        Me.neuplne_zdruzenia_button.Name = "neuplne_zdruzenia_button"
-        Me.neuplne_zdruzenia_button.Size = New System.Drawing.Size(106, 23)
-        Me.neuplne_zdruzenia_button.TabIndex = 44
-        Me.neuplne_zdruzenia_button.Text = "Neúplné združenia"
-        Me.neuplne_zdruzenia_button.UseVisualStyleBackColor = False
-        Me.neuplne_zdruzenia_button.Visible = False
         '
         'hlavna_aplikacia
         '
