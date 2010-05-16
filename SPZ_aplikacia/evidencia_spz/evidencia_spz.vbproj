@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{FB9D0E11-2A5C-41C6-BC6C-6E4536AD7457}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -114,10 +114,31 @@
       <DependentUpon>all_clenoviaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="clenske_do_dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>clenske_do_dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kontrolne_strelby.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kontrolne_strelby.xsd</DependentUpon>
+    </Compile>
     <Compile Include="narodeniny.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>narodeniny.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="spzDataSet11.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>spzDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tl_zostava_clenske.Designer.vb">
+      <DependentUpon>tl_zostava_clenske.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tl_zostava_clenske.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="zoznam_chybajuce_kont_strelby.Designer.vb">
       <DependentUpon>zoznam_chybajuce_kont_strelby.vb</DependentUpon>
@@ -397,6 +418,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="a4_report_2.rdlc" />
+    <EmbeddedResource Include="tl_zostava_clenske.resx">
+      <DependentUpon>tl_zostava_clenske.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tl_zostava_clenske_do.rdlc" />
     <EmbeddedResource Include="zoznam_chybajuce_kont_strelby.resx">
       <DependentUpon>zoznam_chybajuce_kont_strelby.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -592,6 +618,17 @@
     <None Include="all_clenoviaDataSet.xss">
       <DependentUpon>all_clenoviaDataSet.xsd</DependentUpon>
     </None>
+    <None Include="clenske_do_dataset.xsc">
+      <DependentUpon>clenske_do_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="clenske_do_dataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>clenske_do_dataset.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="clenske_do_dataset.xss">
+      <DependentUpon>clenske_do_dataset.xsd</DependentUpon>
+    </None>
     <None Include="hospodarDataSet.xsc">
       <DependentUpon>hospodarDataSet.xsd</DependentUpon>
     </None>
@@ -613,6 +650,17 @@
     </None>
     <None Include="kartyClenov.xss">
       <DependentUpon>kartyClenov.xsd</DependentUpon>
+    </None>
+    <None Include="kontrolne_strelby.xsc">
+      <DependentUpon>kontrolne_strelby.xsd</DependentUpon>
+    </None>
+    <None Include="kontrolne_strelby.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kontrolne_strelby.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kontrolne_strelby.xss">
+      <DependentUpon>kontrolne_strelby.xsd</DependentUpon>
     </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\VisualBasic" />
@@ -693,6 +741,17 @@
     </None>
     <None Include="spzDataSet.xss">
       <DependentUpon>spzDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="spzDataSet11.xsc">
+      <DependentUpon>spzDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="spzDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>spzDataSet11.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="spzDataSet11.xss">
+      <DependentUpon>spzDataSet11.xsd</DependentUpon>
     </None>
     <None Include="spz_mdfDataSet.xsc">
       <DependentUpon>spz_mdfDataSet.xsd</DependentUpon>

@@ -675,3 +675,4 @@ D:\ksefty\spz\evidencia_spz\bin\Debug\evidencia_spz.xml
 D:\ksefty\spz\evidencia_spz\obj\Debug\evidencia_spz.TrustInfo.xml
 D:\ksefty\spz\evidencia_spz\obj\Debug\evidencia_spz.exe.manifest
 D:\ksefty\spz\evidencia_spz\obj\Debug\evidencia_spz.application
+D:\ksefty\spz\evidencia_spz\obj\Debug\evidencia_spz.tl_zostava_clenske.resources

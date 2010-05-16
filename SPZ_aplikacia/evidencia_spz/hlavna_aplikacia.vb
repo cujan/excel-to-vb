@@ -585,7 +585,8 @@ Public Class hlavna_aplikacia
     End Sub
 
     Private Sub platnost_clenstva_button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles platnost_clenstva_button.Click
-
+        tl_zostava_clenske.Show()
+        tl_zostava_clenske.BringToFront()
 
     End Sub
 
