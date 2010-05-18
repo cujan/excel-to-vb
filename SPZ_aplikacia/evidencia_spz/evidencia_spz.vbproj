@@ -385,13 +385,13 @@
     <Compile Include="zoznam_clenov_maly.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="zoznam_kontStrelby.Designer.vb">
+    <Compile Include="zoznam_kont_strelby1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>zoznam_kontStrelby.xsd</DependentUpon>
+      <DependentUpon>zoznam_kont_strelby1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="zoznam_kontStrelby.vb">
-      <DependentUpon>zoznam_kontStrelby.xsd</DependentUpon>
+    <Compile Include="zoznam_kont_strelby1.vb">
+      <DependentUpon>zoznam_kont_strelby1.xsd</DependentUpon>
     </Compile>
     <Compile Include="zoznam_narodeniny.Designer.vb">
       <DependentUpon>zoznam_narodeniny.vb</DependentUpon>
@@ -423,6 +423,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="tl_zostava_clenske_do.rdlc" />
+    <EmbeddedResource Include="zoznam_chybajuce_kont_strelby.rdlc" />
     <EmbeddedResource Include="zoznam_chybajuce_kont_strelby.resx">
       <DependentUpon>zoznam_chybajuce_kont_strelby.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -545,7 +546,6 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="zoznam_clenov_maly_report.rdlc" />
-    <EmbeddedResource Include="zoznam_kont_strelby_report.rdlc" />
     <EmbeddedResource Include="zoznam_narodeniny.resx">
       <DependentUpon>zoznam_narodeniny.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -618,6 +618,7 @@
     <None Include="all_clenoviaDataSet.xss">
       <DependentUpon>all_clenoviaDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="clenske_do_dataset.xsc">
       <DependentUpon>clenske_do_dataset.xsd</DependentUpon>
     </None>
@@ -786,16 +787,16 @@
     <None Include="zoznam_clenov.xss">
       <DependentUpon>zoznam_clenov.xsd</DependentUpon>
     </None>
-    <None Include="zoznam_kontStrelby.xsc">
-      <DependentUpon>zoznam_kontStrelby.xsd</DependentUpon>
+    <None Include="zoznam_kont_strelby1.xsc">
+      <DependentUpon>zoznam_kont_strelby1.xsd</DependentUpon>
     </None>
-    <None Include="zoznam_kontStrelby.xsd">
+    <None Include="zoznam_kont_strelby1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>zoznam_kontStrelby.Designer.vb</LastGenOutput>
+      <LastGenOutput>zoznam_kont_strelby1.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="zoznam_kontStrelby.xss">
-      <DependentUpon>zoznam_kontStrelby.xsd</DependentUpon>
+    <None Include="zoznam_kont_strelby1.xss">
+      <DependentUpon>zoznam_kont_strelby1.xsd</DependentUpon>
     </None>
     <None Include="zoznam_zdruzeni_combo.xsc">
       <DependentUpon>zoznam_zdruzeni_combo.xsd</DependentUpon>
