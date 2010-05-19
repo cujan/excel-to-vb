@@ -24,6 +24,17 @@
         KurzDataGridView.CurrentCell = Nothing
         Label3.BringToFront()
 
+        'generovanie cisla protokolu
+        Dim cislo_protokolu As String
+
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
+        Dim com As New SqlCeCommand("SELECT COUNT(*)  FROM(kurz) WHERE DATEPART(year, zaciatok_kurzu) = DATEPART(year, GETDATE())", con)
+
+        con.Open()
+        cislo_protokolu = com.ExecuteScalar
+        con.Close()
+
+        Label7.Text = cislo_protokolu
     End Sub
 
     Private Sub KurzBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
