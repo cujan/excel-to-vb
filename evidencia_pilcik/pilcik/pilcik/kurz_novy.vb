@@ -28,13 +28,13 @@
         Dim cislo_protokolu As String
 
         Dim con As New SqlCeConnection(pripojovaci_retazec)
-        Dim com As New SqlCeCommand("SELECT COUNT(*)  FROM(kurz) WHERE DATEPART(year, zaciatok_kurzu) = DATEPART(year, GETDATE())", con)
+        Dim com As New SqlCeCommand("SELECT COUNT(*)  FROM kurz WHERE DATEPART(year, zaciatok_kurzu) = DATEPART(year, GETDATE())", con)
 
         con.Open()
         cislo_protokolu = com.ExecuteScalar
         con.Close()
 
-        Label7.Text = cislo_protokolu
+        Label7.Text = cislo_protokolu + 1 & "/" & DatePart(DateInterval.Year, Date.Today)
     End Sub
 
     Private Sub KurzBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -49,7 +49,7 @@
 
 
             Dim con As New SqlCeConnection(pripojovaci_retazec)
-            Dim com As New SqlCeCommand("INSERT INTO kurz (nazov, zaciatok_kurzu, koniec_kurzu, typ, miesto_konania) VALUES (@nazov,@zaciatok_kurzu,@koniec_kurzu,@typ,@miesto_konania)", con)
+            Dim com As New SqlCeCommand("INSERT INTO kurz (nazov, zaciatok_kurzu, koniec_kurzu, typ, miesto_konania, cislo_protokolu) VALUES (@nazov,@zaciatok_kurzu,@koniec_kurzu,@typ,@miesto_konania, @cislo_protokolu)", con)
 
             With com.Parameters
                 .AddWithValue("nazov", NazovTextBox.Text)
@@ -65,6 +65,7 @@
                 End If
                 .AddWithValue("typ", TypComboBox.Text)
                 .AddWithValue("miesto_konania", Miesto_konaniaTextBox.Text)
+                .AddWithValue("cislo_protokolu", Label7.Text)
             End With
 
             con.Open()
@@ -78,6 +79,18 @@
             Koniec_kurzuDateTimePicker.Checked = False
             'refresh uvodnej obrazovky
             uvodna_obrazovka.Refresh()
+            'obnovenie cisla protokolu
+            Dim cislo_protokolu As String
+
+
+            Dim com1 As New SqlCeCommand("SELECT COUNT(*)  FROM kurz WHERE DATEPART(year, zaciatok_kurzu) = DATEPART(year, GETDATE())", con)
+
+            con.Open()
+            cislo_protokolu = com1.ExecuteScalar
+            con.Close()
+
+            Label7.Text = cislo_protokolu + 1 & "/" & DatePart(DateInterval.Year, Date.Today)
+
         Else
             MsgBox("Nemáte zadabé všetky údaje")
         End If

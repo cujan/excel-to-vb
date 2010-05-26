@@ -182,6 +182,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>pilcikdbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="pocet_clenov_kurzuDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pocet_clenov_kurzuDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="pomocny.Designer.vb">
       <DependentUpon>pomocny.vb</DependentUpon>
     </Compile>
@@ -192,11 +197,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>protokolDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="protokol_kurzDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>protokol_kurzDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="skusobna_komisia.Designer.vb">
       <DependentUpon>skusobna_komisia.vb</DependentUpon>
@@ -247,6 +247,11 @@
     </Compile>
     <Compile Include="uvodna_obrazovka.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vseobecne_udajeDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vseobecne_udajeDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -385,6 +390,17 @@
       <DependentUpon>pilcikdbDataSet.xsd</DependentUpon>
     </None>
     <None Include="pilcik_TemporaryKey.pfx" />
+    <None Include="pocet_clenov_kurzuDataSet.xsc">
+      <DependentUpon>pocet_clenov_kurzuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pocet_clenov_kurzuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pocet_clenov_kurzuDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pocet_clenov_kurzuDataSet.xss">
+      <DependentUpon>pocet_clenov_kurzuDataSet.xsd</DependentUpon>
+    </None>
     <None Include="protokolDataSet.xsc">
       <DependentUpon>protokolDataSet.xsd</DependentUpon>
     </None>
@@ -396,17 +412,6 @@
     <None Include="protokolDataSet.xss">
       <DependentUpon>protokolDataSet.xsd</DependentUpon>
     </None>
-    <None Include="protokol_kurzDataSet.xsc">
-      <DependentUpon>protokol_kurzDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="protokol_kurzDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>protokol_kurzDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="protokol_kurzDataSet.xss">
-      <DependentUpon>protokol_kurzDataSet.xsd</DependentUpon>
-    </None>
     <None Include="skusobnyDataSet.xsc">
       <DependentUpon>skusobnyDataSet.xsd</DependentUpon>
     </None>
@@ -417,6 +422,17 @@
     </None>
     <None Include="skusobnyDataSet.xss">
       <DependentUpon>skusobnyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="vseobecne_udajeDataSet.xsc">
+      <DependentUpon>vseobecne_udajeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="vseobecne_udajeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vseobecne_udajeDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vseobecne_udajeDataSet.xss">
+      <DependentUpon>vseobecne_udajeDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
