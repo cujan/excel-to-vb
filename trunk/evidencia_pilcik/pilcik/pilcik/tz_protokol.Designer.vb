@@ -26,126 +26,136 @@ Partial Class tz_protokol
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
         Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
         Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
-        Me.skusobna_komisiaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.pilcikdbDataSet = New pilcik.pilcikdbDataSet
+        Dim ReportDataSource4 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
+        Dim ReportDataSource5 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource
         Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Protokol_kurzDataSet = New pilcik.protokol_kurzDataSet
-        Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SkusobnyDataSet = New pilcik.skusobnyDataSet
-        Me.ClenoviakurzuBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProtokolDataSet = New pilcik.protokolDataSet
-        Me.KurzBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.skusobna_komisiaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OsobaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.skusobna_komisiaTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.skusobna_komisiaTableAdapter
-        Me.KurzTableAdapter = New pilcik.protokol_kurzDataSetTableAdapters.kurzTableAdapter
-        Me.Clenovia_kurzuTableAdapter = New pilcik.protokolDataSetTableAdapters.clenovia_kurzuTableAdapter
-        Me.KurzTableAdapter1 = New pilcik.protokolDataSetTableAdapters.kurzTableAdapter
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer
+        Me.KurzTableAdapter = New pilcik.protokolDataSetTableAdapters.kurzTableAdapter
+        Me.SkusobnakomisiaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Skusobna_komisiaTableAdapter = New pilcik.protokolDataSetTableAdapters.skusobna_komisiaTableAdapter
         Me.OsobaTableAdapter = New pilcik.protokolDataSetTableAdapters.osobaTableAdapter
-        Me.DataTable1TableAdapter = New pilcik.skusobnyDataSetTableAdapters.DataTable1TableAdapter
-        CType(Me.skusobna_komisiaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Pocet_clenov_kurzuDataSet = New pilcik.pocet_clenov_kurzuDataSet
+        Me.ClenoviakurzuBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Clenovia_kurzuTableAdapter = New pilcik.pocet_clenov_kurzuDataSetTableAdapters.clenovia_kurzuTableAdapter
+        Me.clenovia_kurzuBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Vseobecne_udajeDataSet = New pilcik.vseobecne_udajeDataSet
+        Me.VseobecneudajeDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.vseobecne_udajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.vseobecne_udajeTableAdapter = New pilcik.vseobecne_udajeDataSetTableAdapters.vseobecne_udajeTableAdapter
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Protokol_kurzDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SkusobnyDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ClenoviakurzuBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProtokolDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KurzBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.skusobna_komisiaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OsobaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkusobnakomisiaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Pocet_clenov_kurzuDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClenoviakurzuBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.clenovia_kurzuBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Vseobecne_udajeDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VseobecneudajeDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ReportViewer1
-        '
-        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource1.Name = "pilcikdbDataSet_skusobna_komisia"
-        ReportDataSource1.Value = Me.skusobna_komisiaBindingSource
-        ReportDataSource2.Name = "protokol_kurzDataSet_kurz"
-        ReportDataSource2.Value = Me.KurzBindingSource
-        ReportDataSource3.Name = "skusobnyDataSet_DataTable1"
-        ReportDataSource3.Value = Me.DataTable1BindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "pilcik.protokol_Report.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(726, 756)
-        Me.ReportViewer1.TabIndex = 0
-        '
-        'skusobna_komisiaBindingSource
-        '
-        Me.skusobna_komisiaBindingSource.DataMember = "skusobna_komisia"
-        Me.skusobna_komisiaBindingSource.DataSource = Me.pilcikdbDataSet
-        '
-        'pilcikdbDataSet
-        '
-        Me.pilcikdbDataSet.DataSetName = "pilcikdbDataSet"
-        Me.pilcikdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'KurzBindingSource
         '
         Me.KurzBindingSource.DataMember = "kurz"
-        Me.KurzBindingSource.DataSource = Me.Protokol_kurzDataSet
-        '
-        'Protokol_kurzDataSet
-        '
-        Me.Protokol_kurzDataSet.DataSetName = "protokol_kurzDataSet"
-        Me.Protokol_kurzDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DataTable1BindingSource
-        '
-        Me.DataTable1BindingSource.DataMember = "DataTable1"
-        Me.DataTable1BindingSource.DataSource = Me.SkusobnyDataSet
-        '
-        'SkusobnyDataSet
-        '
-        Me.SkusobnyDataSet.DataSetName = "skusobnyDataSet"
-        Me.SkusobnyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ClenoviakurzuBindingSource
-        '
-        Me.ClenoviakurzuBindingSource.DataMember = "clenovia_kurzu"
-        Me.ClenoviakurzuBindingSource.DataSource = Me.ProtokolDataSet
+        Me.KurzBindingSource.DataSource = Me.ProtokolDataSet
         '
         'ProtokolDataSet
         '
         Me.ProtokolDataSet.DataSetName = "protokolDataSet"
         Me.ProtokolDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'KurzBindingSource1
+        'skusobna_komisiaBindingSource
         '
-        Me.KurzBindingSource1.DataMember = "kurz"
-        Me.KurzBindingSource1.DataSource = Me.ProtokolDataSet
+        Me.skusobna_komisiaBindingSource.DataMember = "skusobna_komisia"
+        Me.skusobna_komisiaBindingSource.DataSource = Me.ProtokolDataSet
         '
         'OsobaBindingSource
         '
         Me.OsobaBindingSource.DataMember = "osoba"
         Me.OsobaBindingSource.DataSource = Me.ProtokolDataSet
         '
-        'skusobna_komisiaTableAdapter
+        'ReportViewer1
         '
-        Me.skusobna_komisiaTableAdapter.ClearBeforeFill = True
+        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource1.Name = "protokolDataSet_kurz"
+        ReportDataSource1.Value = Me.KurzBindingSource
+        ReportDataSource2.Name = "protokolDataSet_skusobna_komisia"
+        ReportDataSource2.Value = Me.skusobna_komisiaBindingSource
+        ReportDataSource3.Name = "protokolDataSet_osoba"
+        ReportDataSource3.Value = Me.OsobaBindingSource
+        ReportDataSource4.Name = "pocet_clenov_kurzuDataSet_clenovia_kurzu"
+        ReportDataSource4.Value = Me.clenovia_kurzuBindingSource
+        ReportDataSource5.Name = "vseobecne_udajeDataSet_vseobecne_udaje"
+        ReportDataSource5.Value = Me.vseobecne_udajeBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource4)
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource5)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "pilcik.protokol_Report.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.Size = New System.Drawing.Size(726, 756)
+        Me.ReportViewer1.TabIndex = 0
         '
         'KurzTableAdapter
         '
         Me.KurzTableAdapter.ClearBeforeFill = True
         '
-        'Clenovia_kurzuTableAdapter
+        'SkusobnakomisiaBindingSource
         '
-        Me.Clenovia_kurzuTableAdapter.ClearBeforeFill = True
+        Me.SkusobnakomisiaBindingSource.DataMember = "skusobna_komisia"
+        Me.SkusobnakomisiaBindingSource.DataSource = Me.ProtokolDataSet
         '
-        'KurzTableAdapter1
+        'Skusobna_komisiaTableAdapter
         '
-        Me.KurzTableAdapter1.ClearBeforeFill = True
+        Me.Skusobna_komisiaTableAdapter.ClearBeforeFill = True
         '
         'OsobaTableAdapter
         '
         Me.OsobaTableAdapter.ClearBeforeFill = True
         '
-        'DataTable1TableAdapter
+        'Pocet_clenov_kurzuDataSet
         '
-        Me.DataTable1TableAdapter.ClearBeforeFill = True
+        Me.Pocet_clenov_kurzuDataSet.DataSetName = "pocet_clenov_kurzuDataSet"
+        Me.Pocet_clenov_kurzuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ClenoviakurzuBindingSource
+        '
+        Me.ClenoviakurzuBindingSource.DataMember = "clenovia_kurzu"
+        Me.ClenoviakurzuBindingSource.DataSource = Me.Pocet_clenov_kurzuDataSet
+        '
+        'Clenovia_kurzuTableAdapter
+        '
+        Me.Clenovia_kurzuTableAdapter.ClearBeforeFill = True
+        '
+        'clenovia_kurzuBindingSource
+        '
+        Me.clenovia_kurzuBindingSource.DataMember = "clenovia_kurzu"
+        Me.clenovia_kurzuBindingSource.DataSource = Me.Pocet_clenov_kurzuDataSet
+        '
+        'Vseobecne_udajeDataSet
+        '
+        Me.Vseobecne_udajeDataSet.DataSetName = "vseobecne_udajeDataSet"
+        Me.Vseobecne_udajeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'VseobecneudajeDataSetBindingSource
+        '
+        Me.VseobecneudajeDataSetBindingSource.DataSource = Me.Vseobecne_udajeDataSet
+        Me.VseobecneudajeDataSetBindingSource.Position = 0
+        '
+        'vseobecne_udajeBindingSource
+        '
+        Me.vseobecne_udajeBindingSource.DataMember = "vseobecne_udaje"
+        Me.vseobecne_udajeBindingSource.DataSource = Me.Vseobecne_udajeDataSet
+        '
+        'vseobecne_udajeTableAdapter
+        '
+        Me.vseobecne_udajeTableAdapter.ClearBeforeFill = True
         '
         'tz_protokol
         '
@@ -156,35 +166,36 @@ Partial Class tz_protokol
         Me.Name = "tz_protokol"
         Me.Text = "tz_protokol"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.skusobna_komisiaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Protokol_kurzDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SkusobnyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ClenoviakurzuBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProtokolDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KurzBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.skusobna_komisiaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OsobaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkusobnakomisiaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Pocet_clenov_kurzuDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClenoviakurzuBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.clenovia_kurzuBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Vseobecne_udajeDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VseobecneudajeDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.vseobecne_udajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents skusobna_komisiaBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents pilcikdbDataSet As pilcik.pilcikdbDataSet
-    Friend WithEvents skusobna_komisiaTableAdapter As pilcik.pilcikdbDataSetTableAdapters.skusobna_komisiaTableAdapter
-    Friend WithEvents Protokol_kurzDataSet As pilcik.protokol_kurzDataSet
     Friend WithEvents KurzBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents KurzTableAdapter As pilcik.protokol_kurzDataSetTableAdapters.kurzTableAdapter
     Friend WithEvents ProtokolDataSet As pilcik.protokolDataSet
-    Friend WithEvents ClenoviakurzuBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents Clenovia_kurzuTableAdapter As pilcik.protokolDataSetTableAdapters.clenovia_kurzuTableAdapter
-    Friend WithEvents KurzBindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents KurzTableAdapter1 As pilcik.protokolDataSetTableAdapters.kurzTableAdapter
+    Friend WithEvents KurzTableAdapter As pilcik.protokolDataSetTableAdapters.kurzTableAdapter
+    Friend WithEvents SkusobnakomisiaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Skusobna_komisiaTableAdapter As pilcik.protokolDataSetTableAdapters.skusobna_komisiaTableAdapter
     Friend WithEvents OsobaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents OsobaTableAdapter As pilcik.protokolDataSetTableAdapters.osobaTableAdapter
-    Friend WithEvents DataTable1BindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents SkusobnyDataSet As pilcik.skusobnyDataSet
-    Friend WithEvents DataTable1TableAdapter As pilcik.skusobnyDataSetTableAdapters.DataTable1TableAdapter
+    Friend WithEvents skusobna_komisiaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents clenovia_kurzuBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Pocet_clenov_kurzuDataSet As pilcik.pocet_clenov_kurzuDataSet
+    Friend WithEvents ClenoviakurzuBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Clenovia_kurzuTableAdapter As pilcik.pocet_clenov_kurzuDataSetTableAdapters.clenovia_kurzuTableAdapter
+    Friend WithEvents vseobecne_udajeBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Vseobecne_udajeDataSet As pilcik.vseobecne_udajeDataSet
+    Friend WithEvents VseobecneudajeDataSetBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents vseobecne_udajeTableAdapter As pilcik.vseobecne_udajeDataSetTableAdapters.vseobecne_udajeTableAdapter
 
 End Class

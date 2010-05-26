@@ -638,6 +638,8 @@ Partial Public Class protokolDataSet
         
         Private columnmiesto_konania As Global.System.Data.DataColumn
         
+        Private columncislo_protokolu As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub New()
             MyBase.New
@@ -712,6 +714,13 @@ Partial Public Class protokolDataSet
             End Get
         End Property
         
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property cislo_protokoluColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncislo_protokolu
+            End Get
+        End Property
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -741,9 +750,9 @@ Partial Public Class protokolDataSet
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overloads Function AddkurzRow(ByVal nazov As String, ByVal zaciatok_kurzu As Date, ByVal koniec_kurzu As Date, ByVal typ As String, ByVal miesto_konania As String) As kurzRow
+        Public Overloads Function AddkurzRow(ByVal nazov As String, ByVal zaciatok_kurzu As Date, ByVal koniec_kurzu As Date, ByVal typ As String, ByVal miesto_konania As String, ByVal cislo_protokolu As String) As kurzRow
             Dim rowkurzRow As kurzRow = CType(Me.NewRow,kurzRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, nazov, zaciatok_kurzu, koniec_kurzu, typ, miesto_konania}
+            Dim columnValuesArray() As Object = New Object() {Nothing, nazov, zaciatok_kurzu, koniec_kurzu, typ, miesto_konania, cislo_protokolu}
             rowkurzRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowkurzRow)
             Return rowkurzRow
@@ -774,6 +783,7 @@ Partial Public Class protokolDataSet
             Me.columnkoniec_kurzu = MyBase.Columns("koniec_kurzu")
             Me.columntyp = MyBase.Columns("typ")
             Me.columnmiesto_konania = MyBase.Columns("miesto_konania")
+            Me.columncislo_protokolu = MyBase.Columns("cislo_protokolu")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -790,6 +800,8 @@ Partial Public Class protokolDataSet
             MyBase.Columns.Add(Me.columntyp)
             Me.columnmiesto_konania = New Global.System.Data.DataColumn("miesto_konania", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnmiesto_konania)
+            Me.columncislo_protokolu = New Global.System.Data.DataColumn("cislo_protokolu", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncislo_protokolu)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
             Me.columnid.AutoIncrement = true
             Me.columnid.AutoIncrementSeed = -1
@@ -800,6 +812,7 @@ Partial Public Class protokolDataSet
             Me.columnnazov.MaxLength = 100
             Me.columntyp.MaxLength = 100
             Me.columnmiesto_konania.MaxLength = 100
+            Me.columncislo_protokolu.MaxLength = 100
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -945,6 +958,10 @@ Partial Public Class protokolDataSet
         
         Private columnosoba_id As Global.System.Data.DataColumn
         
+        Private columncislo_op As Global.System.Data.DataColumn
+        
+        Private columncislo_pilcickeho_preukazu As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub New()
             MyBase.New
@@ -1033,6 +1050,20 @@ Partial Public Class protokolDataSet
             End Get
         End Property
         
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property cislo_opColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncislo_op
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property cislo_pilcickeho_preukazuColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncislo_pilcickeho_preukazu
+            End Get
+        End Property
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1062,9 +1093,9 @@ Partial Public Class protokolDataSet
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overloads Function AddosobaRow(ByVal priezvisko As String, ByVal meno As String, ByVal datum_narodenia As Date, ByVal kurz_id As Integer, ByVal clen_id As Integer, ByVal nazov As String, ByVal osoba_id As Integer) As osobaRow
+        Public Overloads Function AddosobaRow(ByVal priezvisko As String, ByVal meno As String, ByVal datum_narodenia As Date, ByVal kurz_id As Integer, ByVal clen_id As Integer, ByVal nazov As String, ByVal osoba_id As Integer, ByVal cislo_op As String, ByVal cislo_pilcickeho_preukazu As String) As osobaRow
             Dim rowosobaRow As osobaRow = CType(Me.NewRow,osobaRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, priezvisko, meno, datum_narodenia, kurz_id, clen_id, nazov, osoba_id}
+            Dim columnValuesArray() As Object = New Object() {Nothing, priezvisko, meno, datum_narodenia, kurz_id, clen_id, nazov, osoba_id, cislo_op, cislo_pilcickeho_preukazu}
             rowosobaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowosobaRow)
             Return rowosobaRow
@@ -1097,6 +1128,8 @@ Partial Public Class protokolDataSet
             Me.columnclen_id = MyBase.Columns("clen_id")
             Me.columnnazov = MyBase.Columns("nazov")
             Me.columnosoba_id = MyBase.Columns("osoba_id")
+            Me.columncislo_op = MyBase.Columns("cislo_op")
+            Me.columncislo_pilcickeho_preukazu = MyBase.Columns("cislo_pilcickeho_preukazu")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1117,6 +1150,10 @@ Partial Public Class protokolDataSet
             MyBase.Columns.Add(Me.columnnazov)
             Me.columnosoba_id = New Global.System.Data.DataColumn("osoba_id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnosoba_id)
+            Me.columncislo_op = New Global.System.Data.DataColumn("cislo_op", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncislo_op)
+            Me.columncislo_pilcickeho_preukazu = New Global.System.Data.DataColumn("cislo_pilcickeho_preukazu", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncislo_pilcickeho_preukazu)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
             Me.columnid.AutoIncrement = true
             Me.columnid.AutoIncrementSeed = -1
@@ -1131,6 +1168,10 @@ Partial Public Class protokolDataSet
             Me.columnnazov.ReadOnly = true
             Me.columnnazov.MaxLength = 100
             Me.columnosoba_id.ReadOnly = true
+            Me.columncislo_op.ReadOnly = true
+            Me.columncislo_op.MaxLength = 100
+            Me.columncislo_pilcickeho_preukazu.ReadOnly = true
+            Me.columncislo_pilcickeho_preukazu.MaxLength = 100
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -1700,6 +1741,20 @@ Partial Public Class protokolDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property cislo_protokolu() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablekurz.cislo_protokoluColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'cislo_protokolu' in table 'kurz' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablekurz.cislo_protokoluColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function IsnazovNull() As Boolean
             Return Me.IsNull(Me.tablekurz.nazovColumn)
         End Function
@@ -1747,6 +1802,16 @@ Partial Public Class protokolDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub Setmiesto_konaniaNull()
             Me(Me.tablekurz.miesto_konaniaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Iscislo_protokoluNull() As Boolean
+            Return Me.IsNull(Me.tablekurz.cislo_protokoluColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setcislo_protokoluNull()
+            Me(Me.tablekurz.cislo_protokoluColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1874,6 +1939,34 @@ Partial Public Class protokolDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property cislo_op() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableosoba.cislo_opColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'cislo_op' in table 'osoba' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableosoba.cislo_opColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property cislo_pilcickeho_preukazu() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableosoba.cislo_pilcickeho_preukazuColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'cislo_pilcickeho_preukazu' in table 'osoba' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableosoba.cislo_pilcickeho_preukazuColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Function IspriezviskoNull() As Boolean
             Return Me.IsNull(Me.tableosoba.priezviskoColumn)
         End Function
@@ -1941,6 +2034,26 @@ Partial Public Class protokolDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub Setosoba_idNull()
             Me(Me.tableosoba.osoba_idColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Iscislo_opNull() As Boolean
+            Return Me.IsNull(Me.tableosoba.cislo_opColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setcislo_opNull()
+            Me(Me.tableosoba.cislo_opColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function Iscislo_pilcickeho_preukazuNull() As Boolean
+            Return Me.IsNull(Me.tableosoba.cislo_pilcickeho_preukazuColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub Setcislo_pilcickeho_preukazuNull()
+            Me(Me.tableosoba.cislo_pilcickeho_preukazuColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -2591,6 +2704,7 @@ Namespace protokolDataSetTableAdapters
             tableMapping.ColumnMappings.Add("koniec_kurzu", "koniec_kurzu")
             tableMapping.ColumnMappings.Add("typ", "typ")
             tableMapping.ColumnMappings.Add("miesto_konania", "miesto_konania")
+            tableMapping.ColumnMappings.Add("cislo_protokolu", "cislo_protokolu")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -2600,24 +2714,26 @@ Namespace protokolDataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [kurz] ([nazov], [zaciatok_kurzu], [koniec_kurzu], [typ], [miesto_kon"& _ 
-                "ania]) VALUES (@p1, @p2, @p3, @p4, @p5)"
+                "ania], [cislo_protokolu]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "nazov", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "zaciatok_kurzu", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "koniec_kurzu", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "typ", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p5", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "miesto_konania", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p6", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_protokolu", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [kurz] SET [nazov] = @p1, [zaciatok_kurzu] = @p2, [koniec_kurzu] = @p3, [t"& _ 
-                "yp] = @p4, [miesto_konania] = @p5 WHERE (([id] = @p6))"
+                "yp] = @p4, [miesto_konania] = @p5, [cislo_protokolu] = @p6 WHERE (([id] = @p7))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "nazov", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "zaciatok_kurzu", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "koniec_kurzu", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "typ", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p5", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "miesto_konania", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p6", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p6", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cislo_protokolu", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p7", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -2631,16 +2747,18 @@ Namespace protokolDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT [id], [nazov], [zaciatok_kurzu], [koniec_kurzu], [typ], [miesto_konania] F"& _ 
-                "ROM [kurz]"
+            Me._commandCollection(0).CommandText = "SELECT     id, nazov, zaciatok_kurzu, koniec_kurzu, typ, miesto_konania, cislo_pr"& _ 
+                "otokolu"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         kurz"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (id = @Param1)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Current, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As protokolDataSet.kurzDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As protokolDataSet.kurzDataTable, ByVal Param1 As Integer) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -2651,8 +2769,9 @@ Namespace protokolDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As protokolDataSet.kurzDataTable
+        Public Overloads Overridable Function GetData(ByVal Param1 As Integer) As protokolDataSet.kurzDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
             Dim dataTable As protokolDataSet.kurzDataTable = New protokolDataSet.kurzDataTable
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -2705,7 +2824,7 @@ Namespace protokolDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal p1 As String, ByVal p2 As Global.System.Nullable(Of Date), ByVal p3 As Global.System.Nullable(Of Date), ByVal p4 As String, ByVal p5 As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal p1 As String, ByVal p2 As Global.System.Nullable(Of Date), ByVal p3 As Global.System.Nullable(Of Date), ByVal p4 As String, ByVal p5 As String, ByVal p6 As String) As Integer
             If (p1 Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -2731,6 +2850,11 @@ Namespace protokolDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = CType(p5,String)
             End If
+            If (p6 Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(p6,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -2749,7 +2873,7 @@ Namespace protokolDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p1 As String, ByVal p2 As Global.System.Nullable(Of Date), ByVal p3 As Global.System.Nullable(Of Date), ByVal p4 As String, ByVal p5 As String, ByVal p6 As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal p1 As String, ByVal p2 As Global.System.Nullable(Of Date), ByVal p3 As Global.System.Nullable(Of Date), ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As Integer) As Integer
             If (p1 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -2775,7 +2899,12 @@ Namespace protokolDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = CType(p5,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(p6,Integer)
+            If (p6 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(p6,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(p7,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -2921,6 +3050,8 @@ Namespace protokolDataSetTableAdapters
             tableMapping.ColumnMappings.Add("clen_id", "clen_id")
             tableMapping.ColumnMappings.Add("nazov", "nazov")
             tableMapping.ColumnMappings.Add("osoba_id", "osoba_id")
+            tableMapping.ColumnMappings.Add("cislo_op", "cislo_op")
+            tableMapping.ColumnMappings.Add("cislo_pilcickeho_preukazu", "cislo_pilcickeho_preukazu")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -2937,10 +3068,11 @@ Namespace protokolDataSetTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT     clenovia_kurzu.id, clenovia_kurzu.kurz_id, clenovia_kurzu.clen_id, oso"& _ 
                 "ba.priezvisko, kurz.nazov, osoba.meno, osoba.datum_narodenia, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                "& _ 
-                "      osoba.id AS osoba_id"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         clenovia_kurzu LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"       "& _ 
-                "               osoba ON clenovia_kurzu.clen_id = osoba.id LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"     "& _ 
-                "                 kurz ON clenovia_kurzu.kurz_id = kurz.id"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (clenovia_k"& _ 
-                "urzu.kurz_id = @Param2)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY osoba.priezvisko"
+                "      osoba.id AS osoba_id, osoba.cislo_op, osoba.cislo_pilcickeho_preukazu"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FRO"& _ 
+                "M         clenovia_kurzu LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      osoba ON clenovi"& _ 
+                "a_kurzu.clen_id = osoba.id LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      kurz ON clenov"& _ 
+                "ia_kurzu.kurz_id = kurz.id"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (clenovia_kurzu.kurz_id = @Param2)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER "& _ 
+                "BY osoba.priezvisko"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@Param2", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "kurz_id", Global.System.Data.DataRowVersion.Current, Nothing))
         End Sub
