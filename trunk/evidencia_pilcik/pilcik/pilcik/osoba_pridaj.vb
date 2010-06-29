@@ -26,52 +26,64 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ulozButton.Click
+        'kontorla cisla pilcickeho preukazu
+        Dim pocet_vyskytov_cisla_preukazu As Integer
+        Dim con1 As New SqlCeConnection(pripojovaci_retazec)
+        Dim com1 As New SqlCeCommand("SELECT COUNT(*) FROM osoba GROUP BY cislo_pilcickeho_preukazu HAVING (cislo_pilcickeho_preukazu = @cislo_pilcickeho_preukazu)", con1)
+        com1.Parameters.AddWithValue("cislo_pilcickeho_preukazu", Cislo_pilcickeho_preukazuTextBox.Text)
+        con1.Open()
+        pocet_vyskytov_cisla_preukazu = com1.ExecuteScalar()
+        con1.Close()
 
 
 
-        Dim con As New SqlCeConnection(pripojovaci_retazec)
-        Dim com As New SqlCeCommand("INSERT INTO osoba (titul_pred, priezvisko, meno, datum_narodenia, rodne_cislo, cislo_op, ulica, mesto, psc, cislo_pilcickeho_preukazu, email, telefon) VALUES   (@titul_pred, @priezvisko, @meno, @datum_narodenia, @rodne_cislo, @cislo_op, @ulica, @mesto, @psc, @cislo_pilcickeho_preukazu, @email, @telefon)", con)
-
-        With com.Parameters
-            .AddWithValue("titul_pred", Titul_predTextBox.Text)
-            .AddWithValue("priezvisko", PriezviskoTextBox.Text)
-            .AddWithValue("meno", MenoTextBox.Text)
-            If Datum_narodeniaDateTimePicker.Checked = True Then
-                .AddWithValue("datum_narodenia", Datum_narodeniaDateTimePicker.Value.Date)
-            Else
-                .AddWithValue("datum_narodenia", DBNull.Value)
-            End If
-            .AddWithValue("rodne_cislo", Rodne_cisloTextBox.Text)
-            .AddWithValue("cislo_op", Cislo_opTextBox.Text)
-            .AddWithValue("ulica", UlicaTextBox.Text)
-            .AddWithValue("mesto", MestoTextBox.Text)
-            .AddWithValue("psc", PscTextBox.Text)
-            .AddWithValue("cislo_pilcickeho_preukazu", Cislo_pilcickeho_preukazuTextBox.Text)
-            .AddWithValue("email", EmailTextBox.Text)
-            .AddWithValue("telefon", TelefonTextBox.Text)
-
-        End With
-        con.Open()
-        com.ExecuteNonQuery()
-        con.Close()
-        Me.OsobaTableAdapter.Fill(Me.PilcikdbDataSet.osoba)
-
-        'vymayanie udajov z policok
-        Titul_predTextBox.Text = ""
-        PriezviskoTextBox.Text = ""
-        MenoTextBox.Text = ""
-        Rodne_cisloTextBox.Text = ""
-        Datum_narodeniaDateTimePicker.Checked = False
-        UlicaTextBox.Text = ""
-        MestoTextBox.Text = ""
-        PscTextBox.Text = ""
-        Cislo_opTextBox.Text = ""
-        Cislo_pilcickeho_preukazuTextBox.Text = ""
-        EmailTextBox.Text = ""
-        TelefonTextBox.Text = ""
+        If pocet_vyskytov_cisla_preukazu = 0 Then
 
 
-        
+            Dim con As New SqlCeConnection(pripojovaci_retazec)
+            Dim com As New SqlCeCommand("INSERT INTO osoba (titul_pred, priezvisko, meno, datum_narodenia, rodne_cislo, cislo_op, ulica, mesto, psc, cislo_pilcickeho_preukazu, email, telefon) VALUES   (@titul_pred, @priezvisko, @meno, @datum_narodenia, @rodne_cislo, @cislo_op, @ulica, @mesto, @psc, @cislo_pilcickeho_preukazu, @email, @telefon)", con)
+
+            With com.Parameters
+                .AddWithValue("titul_pred", Titul_predTextBox.Text)
+                .AddWithValue("priezvisko", PriezviskoTextBox.Text)
+                .AddWithValue("meno", MenoTextBox.Text)
+                If Datum_narodeniaDateTimePicker.Checked = True Then
+                    .AddWithValue("datum_narodenia", Datum_narodeniaDateTimePicker.Value.Date)
+                Else
+                    .AddWithValue("datum_narodenia", DBNull.Value)
+                End If
+                .AddWithValue("rodne_cislo", rodnecisloMaskedTextBox.Text)
+                .AddWithValue("cislo_op", Cislo_opTextBox.Text)
+                .AddWithValue("ulica", UlicaTextBox.Text)
+                .AddWithValue("mesto", MestoTextBox.Text)
+                .AddWithValue("psc", PscTextBox.Text)
+                .AddWithValue("cislo_pilcickeho_preukazu", Cislo_pilcickeho_preukazuTextBox.Text)
+                .AddWithValue("email", EmailTextBox.Text)
+                .AddWithValue("telefon", TelefonTextBox.Text)
+
+            End With
+            con.Open()
+            com.ExecuteNonQuery()
+            con.Close()
+            Me.OsobaTableAdapter.Fill(Me.PilcikdbDataSet.osoba)
+
+            'vymayanie udajov z policok
+            Titul_predTextBox.Text = ""
+            PriezviskoTextBox.Text = ""
+            MenoTextBox.Text = ""
+            rodnecisloMaskedTextBox.Text = ""
+            Datum_narodeniaDateTimePicker.Checked = False
+            UlicaTextBox.Text = ""
+            MestoTextBox.Text = ""
+            PscTextBox.Text = ""
+            Cislo_opTextBox.Text = ""
+            Cislo_pilcickeho_preukazuTextBox.Text = ""
+            EmailTextBox.Text = ""
+            TelefonTextBox.Text = ""
+        Else
+            MsgBox("dane cislo preukazu sa uz v databaze nachadza")
+
+        End If
     End Sub
 
     Private Sub OsobaBindingSource1BindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OsobaBindingSource1BindingNavigatorSaveItem.Click
@@ -151,5 +163,31 @@
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
         Dim priezvisko As String = TextBox1.Text & "%"
         Me.OsobaTableAdapter.FillBy_priezvisko(Me.PilcikdbDataSet.osoba, priezvisko)
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        MsgBox(rodnecisloMaskedTextBox.Text)
+    End Sub
+
+    Private Sub rodnecisloMaskedTextBox_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles rodnecisloMaskedTextBox.Leave
+
+        If Not rodnecisloMaskedTextBox.Text.Contains(" ") Then
+
+            If Datum_narodeniaDateTimePicker.Checked <> True Then
+                Datum_narodeniaDateTimePicker.Checked = True
+
+                Dim den As Integer = rodnecisloMaskedTextBox.Text.Substring(4, 2)
+                Dim mesiac As Integer = rodnecisloMaskedTextBox.Text.Substring(2, 2)
+                Dim rok As Integer = "19" & rodnecisloMaskedTextBox.Text.Substring(0, 2)
+
+                Datum_narodeniaDateTimePicker.Value = New Date(rok, mesiac, den)
+            End If
+
+        End If
+
+    End Sub
+
+    Private Sub rodnecisloMaskedTextBox_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles rodnecisloMaskedTextBox.MaskInputRejected
+
     End Sub
 End Class

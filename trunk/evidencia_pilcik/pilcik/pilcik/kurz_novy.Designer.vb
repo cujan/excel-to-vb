@@ -41,6 +41,8 @@ Partial Class kurz_novy
         Me.Label3 = New System.Windows.Forms.Label
         Me.KurzBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Kurz_pocetDataSet = New pilcik.kurz_pocetDataSet
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
@@ -53,19 +55,17 @@ Partial Class kurz_novy
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator
         Me.KurzBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.KurzDataGridView = New System.Windows.Forms.DataGridView
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label5 = New System.Windows.Forms.Label
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Kurz_pocetDataSet = New pilcik.kurz_pocetDataSet
+        Me.cislo_protokolu = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.Label5 = New System.Windows.Forms.Label
         Me.KurzTableAdapter = New pilcik.kurz_pocetDataSetTableAdapters.kurzTableAdapter
         Me.TableAdapterManager = New pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager
-        Me.cislo_protokolu = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Label6 = New System.Windows.Forms.Label
         Me.Label7 = New System.Windows.Forms.Label
         NazovLabel = New System.Windows.Forms.Label
@@ -75,9 +75,9 @@ Partial Class kurz_novy
         Miesto_konaniaLabel = New System.Windows.Forms.Label
         CType(Me.KurzBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.KurzBindingNavigator.SuspendLayout()
-        CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Kurz_pocetDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NazovLabel
@@ -212,7 +212,7 @@ Partial Class kurz_novy
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Monotype Corsiva", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Label3.Location = New System.Drawing.Point(628, 91)
+        Me.Label3.Location = New System.Drawing.Point(619, 9)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(158, 25)
         Me.Label3.TabIndex = 15
@@ -246,6 +246,16 @@ Partial Class kurz_novy
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'KurzBindingSource
+        '
+        Me.KurzBindingSource.DataMember = "kurz"
+        Me.KurzBindingSource.DataSource = Me.Kurz_pocetDataSet
+        '
+        'Kurz_pocetDataSet
+        '
+        Me.Kurz_pocetDataSet.DataSetName = "kurz_pocetDataSet"
+        Me.Kurz_pocetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -350,23 +360,6 @@ Partial Class kurz_novy
         Me.KurzDataGridView.Size = New System.Drawing.Size(1103, 442)
         Me.KurzDataGridView.TabIndex = 16
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(690, 9)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(0, 13)
-        Me.Label4.TabIndex = 17
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(690, 22)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(45, 13)
-        Me.Label5.TabIndex = 18
-        Me.Label5.Text = "Label5"
-        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "nazov"
@@ -409,15 +402,29 @@ Partial Class kurz_novy
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         Me.DataGridViewTextBoxColumn9.ReadOnly = True
         '
-        'KurzBindingSource
+        'cislo_protokolu
         '
-        Me.KurzBindingSource.DataMember = "kurz"
-        Me.KurzBindingSource.DataSource = Me.Kurz_pocetDataSet
+        Me.cislo_protokolu.DataPropertyName = "cislo_protokolu"
+        Me.cislo_protokolu.HeaderText = "Číslo protokolu"
+        Me.cislo_protokolu.Name = "cislo_protokolu"
+        Me.cislo_protokolu.ReadOnly = True
         '
-        'Kurz_pocetDataSet
+        'Label4
         '
-        Me.Kurz_pocetDataSet.DataSetName = "kurz_pocetDataSet"
-        Me.Kurz_pocetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(690, 9)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(0, 13)
+        Me.Label4.TabIndex = 17
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(690, 22)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(45, 13)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = "Label5"
         '
         'KurzTableAdapter
         '
@@ -429,13 +436,6 @@ Partial Class kurz_novy
         Me.TableAdapterManager.clenovia_kurzuTableAdapter = Nothing
         Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.UpdateOrder = pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'cislo_protokolu
-        '
-        Me.cislo_protokolu.DataPropertyName = "cislo_protokolu"
-        Me.cislo_protokolu.HeaderText = "Číslo protokolu"
-        Me.cislo_protokolu.Name = "cislo_protokolu"
-        Me.cislo_protokolu.ReadOnly = True
         '
         'Label6
         '
@@ -488,9 +488,9 @@ Partial Class kurz_novy
         CType(Me.KurzBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.KurzBindingNavigator.ResumeLayout(False)
         Me.KurzBindingNavigator.PerformLayout()
-        CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Kurz_pocetDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
