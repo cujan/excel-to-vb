@@ -283,7 +283,7 @@ HAVING      (kurz_id = @Param1)</CommandText>
         <CanGrow>true</CanGrow>
         <Left>1.5cm</Left>
         <Height>0.75cm</Height>
-        <Value>=First(Fields!nazov.Value, "vseobecne_udajeDataSet_vseobecne_udaje") &amp; ", "First(Fields!ulica.Value, "vseobecne_udajeDataSet_vseobecne_udaje") &amp; ", " &amp; First(Fields!mesto.Value, "vseobecne_udajeDataSet_vseobecne_udaje") &amp; ", " &amp; First(Fields!psc.Value, "vseobecne_udajeDataSet_vseobecne_udaje")</Value>
+        <Value>=First(Fields!nazov.Value, "vseobecne_udajeDataSet_vseobecne_udaje") &amp; ", " &amp; First(Fields!ulica.Value, "vseobecne_udajeDataSet_vseobecne_udaje") &amp; ", " &amp; First(Fields!mesto.Value, "vseobecne_udajeDataSet_vseobecne_udaje") &amp; ", " &amp; First(Fields!psc.Value, "vseobecne_udajeDataSet_vseobecne_udaje")</Value>
       </Textbox>
       <Table Name="table1">
         <ZIndex>26</ZIndex>

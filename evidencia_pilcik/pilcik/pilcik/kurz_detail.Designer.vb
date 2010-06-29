@@ -28,8 +28,8 @@ Partial Class kurz_detail
         Dim Koniec_kurzuLabel As System.Windows.Forms.Label
         Dim TypLabel As System.Windows.Forms.Label
         Dim Miesto_konaniaLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(kurz_detail))
         Dim IdLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(kurz_detail))
         Me.pridaj_clenaButton = New System.Windows.Forms.Button
         Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
         Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -54,16 +54,16 @@ Partial Class kurz_detail
         Me.TypTextBox = New System.Windows.Forms.TextBox
         Me.Miesto_konaniaTextBox = New System.Windows.Forms.TextBox
         Me.Clenovia_kurzuDataGridView = New System.Windows.Forms.DataGridView
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.datum_narodenia = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Clenovia_kurzuBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Clenovia_kurzuDataSet = New pilcik.clenovia_kurzuDataSet
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label3 = New System.Windows.Forms.Label
         Me.IdLabel1 = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Clenovia_kurzuBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Clenovia_kurzuDataSet = New pilcik.clenovia_kurzuDataSet
         Me.Clenovia_kurzuTableAdapter = New pilcik.clenovia_kurzuDataSetTableAdapters.clenovia_kurzuTableAdapter
         Me.TableAdapterManager1 = New pilcik.clenovia_kurzuDataSetTableAdapters.TableAdapterManager
         NazovLabel = New System.Windows.Forms.Label
@@ -130,6 +130,15 @@ Partial Class kurz_detail
         Miesto_konaniaLabel.Size = New System.Drawing.Size(97, 13)
         Miesto_konaniaLabel.TabIndex = 24
         Miesto_konaniaLabel.Text = "Miesto konania:"
+        '
+        'IdLabel
+        '
+        IdLabel.AutoSize = True
+        IdLabel.Location = New System.Drawing.Point(574, 22)
+        IdLabel.Name = "IdLabel"
+        IdLabel.Size = New System.Drawing.Size(18, 13)
+        IdLabel.TabIndex = 28
+        IdLabel.Text = "id:"
         '
         'pridaj_clenaButton
         '
@@ -282,12 +291,14 @@ Partial Class kurz_detail
         Me.NazovTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KurzBindingSource, "nazov", True))
         Me.NazovTextBox.Location = New System.Drawing.Point(170, 29)
         Me.NazovTextBox.Name = "NazovTextBox"
+        Me.NazovTextBox.ReadOnly = True
         Me.NazovTextBox.Size = New System.Drawing.Size(200, 20)
         Me.NazovTextBox.TabIndex = 17
         '
         'Zaciatok_kurzuDateTimePicker
         '
         Me.Zaciatok_kurzuDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.KurzBindingSource, "zaciatok_kurzu", True))
+        Me.Zaciatok_kurzuDateTimePicker.Enabled = False
         Me.Zaciatok_kurzuDateTimePicker.Location = New System.Drawing.Point(170, 67)
         Me.Zaciatok_kurzuDateTimePicker.Name = "Zaciatok_kurzuDateTimePicker"
         Me.Zaciatok_kurzuDateTimePicker.Size = New System.Drawing.Size(200, 20)
@@ -296,6 +307,7 @@ Partial Class kurz_detail
         'Koniec_kurzuDateTimePicker
         '
         Me.Koniec_kurzuDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.KurzBindingSource, "koniec_kurzu", True))
+        Me.Koniec_kurzuDateTimePicker.Enabled = False
         Me.Koniec_kurzuDateTimePicker.Location = New System.Drawing.Point(170, 97)
         Me.Koniec_kurzuDateTimePicker.Name = "Koniec_kurzuDateTimePicker"
         Me.Koniec_kurzuDateTimePicker.Size = New System.Drawing.Size(200, 20)
@@ -306,6 +318,7 @@ Partial Class kurz_detail
         Me.TypTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KurzBindingSource, "typ", True))
         Me.TypTextBox.Location = New System.Drawing.Point(170, 123)
         Me.TypTextBox.Name = "TypTextBox"
+        Me.TypTextBox.ReadOnly = True
         Me.TypTextBox.Size = New System.Drawing.Size(200, 20)
         Me.TypTextBox.TabIndex = 23
         '
@@ -314,6 +327,7 @@ Partial Class kurz_detail
         Me.Miesto_konaniaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KurzBindingSource, "miesto_konania", True))
         Me.Miesto_konaniaTextBox.Location = New System.Drawing.Point(170, 149)
         Me.Miesto_konaniaTextBox.Name = "Miesto_konaniaTextBox"
+        Me.Miesto_konaniaTextBox.ReadOnly = True
         Me.Miesto_konaniaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Miesto_konaniaTextBox.TabIndex = 25
         '
@@ -335,12 +349,36 @@ Partial Class kurz_detail
         Me.Clenovia_kurzuDataGridView.Size = New System.Drawing.Size(1093, 397)
         Me.Clenovia_kurzuDataGridView.TabIndex = 25
         '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "priezvisko"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "priezvisko"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "meno"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "meno"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
         'datum_narodenia
         '
         Me.datum_narodenia.DataPropertyName = "datum_narodenia"
         Me.datum_narodenia.HeaderText = "datum_narodenia"
         Me.datum_narodenia.Name = "datum_narodenia"
         Me.datum_narodenia.ReadOnly = True
+        '
+        'Clenovia_kurzuBindingSource
+        '
+        Me.Clenovia_kurzuBindingSource.DataMember = "clenovia_kurzu"
+        Me.Clenovia_kurzuBindingSource.DataSource = Me.Clenovia_kurzuDataSet
+        '
+        'Clenovia_kurzuDataSet
+        '
+        Me.Clenovia_kurzuDataSet.DataSetName = "clenovia_kurzuDataSet"
+        Me.Clenovia_kurzuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label1
         '
@@ -369,15 +407,6 @@ Partial Class kurz_detail
         Me.Label3.TabIndex = 28
         Me.Label3.Text = "Label3"
         '
-        'IdLabel
-        '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(574, 22)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(18, 13)
-        IdLabel.TabIndex = 28
-        IdLabel.Text = "id:"
-        '
         'IdLabel1
         '
         Me.IdLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KurzBindingSource, "id", True))
@@ -395,30 +424,6 @@ Partial Class kurz_detail
         Me.Button1.TabIndex = 30
         Me.Button1.Text = "Zmaž  člena z kurzu"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "priezvisko"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "priezvisko"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "meno"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "meno"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        '
-        'Clenovia_kurzuBindingSource
-        '
-        Me.Clenovia_kurzuBindingSource.DataMember = "clenovia_kurzu"
-        Me.Clenovia_kurzuBindingSource.DataSource = Me.Clenovia_kurzuDataSet
-        '
-        'Clenovia_kurzuDataSet
-        '
-        Me.Clenovia_kurzuDataSet.DataSetName = "clenovia_kurzuDataSet"
-        Me.Clenovia_kurzuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Clenovia_kurzuTableAdapter
         '

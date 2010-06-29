@@ -40,7 +40,6 @@ Partial Class osoba_pridaj
         Me.PriezviskoTextBox = New System.Windows.Forms.TextBox
         Me.MenoTextBox = New System.Windows.Forms.TextBox
         Me.Datum_narodeniaDateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.Rodne_cisloTextBox = New System.Windows.Forms.TextBox
         Me.Cislo_opTextBox = New System.Windows.Forms.TextBox
         Me.UlicaTextBox = New System.Windows.Forms.TextBox
         Me.MestoTextBox = New System.Windows.Forms.TextBox
@@ -101,6 +100,7 @@ Partial Class osoba_pridaj
         Me.TableAdapterManager = New pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
         Me.Label4 = New System.Windows.Forms.Label
         Me.Label6 = New System.Windows.Forms.Label
+        Me.rodnecisloMaskedTextBox = New System.Windows.Forms.MaskedTextBox
         Titul_predLabel = New System.Windows.Forms.Label
         PriezviskoLabel = New System.Windows.Forms.Label
         MenoLabel = New System.Windows.Forms.Label
@@ -272,19 +272,12 @@ Partial Class osoba_pridaj
         Me.Datum_narodeniaDateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.Datum_narodeniaDateTimePicker.TabIndex = 4
         '
-        'Rodne_cisloTextBox
-        '
-        Me.Rodne_cisloTextBox.Location = New System.Drawing.Point(29, 76)
-        Me.Rodne_cisloTextBox.Name = "Rodne_cisloTextBox"
-        Me.Rodne_cisloTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Rodne_cisloTextBox.TabIndex = 3
-        '
         'Cislo_opTextBox
         '
         Me.Cislo_opTextBox.Location = New System.Drawing.Point(451, 124)
         Me.Cislo_opTextBox.Name = "Cislo_opTextBox"
         Me.Cislo_opTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Cislo_opTextBox.TabIndex = 6
+        Me.Cislo_opTextBox.TabIndex = 5
         '
         'UlicaTextBox
         '
@@ -319,14 +312,14 @@ Partial Class osoba_pridaj
         Me.EmailTextBox.Location = New System.Drawing.Point(451, 163)
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.Size = New System.Drawing.Size(196, 20)
-        Me.EmailTextBox.TabIndex = 8
+        Me.EmailTextBox.TabIndex = 6
         '
         'TelefonTextBox
         '
         Me.TelefonTextBox.Location = New System.Drawing.Point(685, 163)
         Me.TelefonTextBox.Name = "TelefonTextBox"
         Me.TelefonTextBox.Size = New System.Drawing.Size(196, 20)
-        Me.TelefonTextBox.TabIndex = 9
+        Me.TelefonTextBox.TabIndex = 8
         '
         'GroupBox1
         '
@@ -339,7 +332,7 @@ Partial Class osoba_pridaj
         Me.GroupBox1.Location = New System.Drawing.Point(29, 108)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(301, 103)
-        Me.GroupBox1.TabIndex = 5
+        Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Bydlisko"
         '
@@ -348,7 +341,7 @@ Partial Class osoba_pridaj
         Me.ulozButton.Location = New System.Drawing.Point(763, 189)
         Me.ulozButton.Name = "ulozButton"
         Me.ulozButton.Size = New System.Drawing.Size(75, 23)
-        Me.ulozButton.TabIndex = 11
+        Me.ulozButton.TabIndex = 9
         Me.ulozButton.Text = "Ulož"
         Me.ulozButton.UseVisualStyleBackColor = True
         '
@@ -764,11 +757,21 @@ Partial Class osoba_pridaj
         Me.Label6.TabIndex = 43
         Me.Label6.Text = "Label6"
         '
+        'rodnecisloMaskedTextBox
+        '
+        Me.rodnecisloMaskedTextBox.Culture = New System.Globalization.CultureInfo("")
+        Me.rodnecisloMaskedTextBox.Location = New System.Drawing.Point(29, 76)
+        Me.rodnecisloMaskedTextBox.Mask = "000000/0000"
+        Me.rodnecisloMaskedTextBox.Name = "rodnecisloMaskedTextBox"
+        Me.rodnecisloMaskedTextBox.Size = New System.Drawing.Size(180, 20)
+        Me.rodnecisloMaskedTextBox.TabIndex = 3
+        '
         'osoba_pridaj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(931, 709)
+        Me.Controls.Add(Me.rodnecisloMaskedTextBox)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.GroupBox2)
@@ -789,7 +792,6 @@ Partial Class osoba_pridaj
         Me.Controls.Add(Datum_narodeniaLabel)
         Me.Controls.Add(Me.Datum_narodeniaDateTimePicker)
         Me.Controls.Add(Rodne_cisloLabel)
-        Me.Controls.Add(Me.Rodne_cisloTextBox)
         Me.Controls.Add(Cislo_opLabel)
         Me.Controls.Add(Me.Cislo_opTextBox)
         Me.Controls.Add(Cislo_pilcickeho_preukazuLabel)
@@ -817,7 +819,7 @@ Partial Class osoba_pridaj
     End Sub
 
     Friend WithEvents OsobaBindingSource As System.Windows.Forms.BindingSource
-    
+
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -835,7 +837,6 @@ Partial Class osoba_pridaj
     Friend WithEvents PriezviskoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents MenoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Datum_narodeniaDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Rodne_cisloTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Cislo_opTextBox As System.Windows.Forms.TextBox
     Friend WithEvents UlicaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents MestoTextBox As System.Windows.Forms.TextBox
@@ -914,4 +915,5 @@ Partial Class osoba_pridaj
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents rodnecisloMaskedTextBox As System.Windows.Forms.MaskedTextBox
 End Class
