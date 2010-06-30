@@ -28,13 +28,13 @@
         Dim cislo_protokolu As String
 
         Dim con As New SqlCeConnection(pripojovaci_retazec)
-        Dim com As New SqlCeCommand("SELECT COUNT(*)  FROM kurz WHERE DATEPART(year, zaciatok_kurzu) = DATEPART(year, GETDATE())", con)
+        Dim com As New SqlCeCommand("SELECT MAX(SUBSTRING(cislo_protokolu, 1, LEN(cislo_protokolu) - 5)) + 1 AS Expr1 FROM kurz WHERE     (DATEPART(year, zaciatok_kurzu) = DATEPART(year, GETDATE()))", con)
 
         con.Open()
         cislo_protokolu = com.ExecuteScalar
         con.Close()
 
-        Label7.Text = cislo_protokolu + 1 & "/" & DatePart(DateInterval.Year, Date.Today)
+        Label7.Text = cislo_protokolu & "/" & DatePart(DateInterval.Year, Date.Today)
     End Sub
 
     Private Sub KurzBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
