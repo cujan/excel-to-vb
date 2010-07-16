@@ -6,161 +6,342 @@ pilcik
 </name>
 </assembly>
 <members>
-<member name="T:pilcik.kurzComboDataSet.kurzDataTable">
+<member name="T:pilcik.pocet_clenov_kurzuDataSet.clenovia_kurzuDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:pilcik.kurzComboDataSet.kurzRow">
+</member><member name="T:pilcik.pocet_clenov_kurzuDataSet.clenovia_kurzuRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:pilcik.kurzComboDataSet.kurzRowChangeEvent">
+</member><member name="T:pilcik.pocet_clenov_kurzuDataSet.clenovia_kurzuRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:pilcik.kurzComboDataSet">
+</member><member name="T:pilcik.pocet_clenov_kurzuDataSet">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member><member name="T:pilcik.kurzComboDataSetTableAdapters.kurzTableAdapter">
+</member><member name="T:pilcik.pocet_clenov_kurzuDataSetTableAdapters.clenovia_kurzuTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="M:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.kurzComboDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.pocet_clenov_kurzuDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.pocet_clenov_kurzuDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Update rows in top-down order.
 </summary>
-</member><member name="M:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.kurzComboDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.pocet_clenov_kurzuDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.pocet_clenov_kurzuDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Insert rows in top-down order.
 </summary>
-</member><member name="M:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.kurzComboDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.pocet_clenov_kurzuDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.pocet_clenov_kurzuDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Delete rows in bottom-up order.
 </summary>
-</member><member name="M:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.pocet_clenov_kurzuDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
-</member><member name="M:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.kurzComboDataSet)">
+</member><member name="M:pilcik.pocet_clenov_kurzuDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.pocet_clenov_kurzuDataSet)">
 	<summary>
 Update all changes to the dataset.
 </summary>
-</member><member name="T:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+</member><member name="T:pilcik.pocet_clenov_kurzuDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
 	<summary>
 Update Order Option
 </summary>
-</member><member name="T:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+</member><member name="T:pilcik.pocet_clenov_kurzuDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
 	<summary>
 Used to sort self-referenced table's rows
 </summary>
-</member><member name="T:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager">
+</member><member name="T:pilcik.pocet_clenov_kurzuDataSetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
-</member><member name="T:pilcik.osobaComboDataSet.osobaDataTable">
+</member><member name="T:pilcik.vseobecne_udajeDataSet.vseobecne_udajeDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:pilcik.osobaComboDataSet.osobaRow">
+</member><member name="T:pilcik.vseobecne_udajeDataSet.vseobecne_udajeRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:pilcik.osobaComboDataSet.osobaRowChangeEvent">
+</member><member name="T:pilcik.vseobecne_udajeDataSet.vseobecne_udajeRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:pilcik.osobaComboDataSet">
+</member><member name="T:pilcik.vseobecne_udajeDataSet">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member><member name="T:pilcik.osobaComboDataSetTableAdapters.osobaTableAdapter">
+</member><member name="T:pilcik.vseobecne_udajeDataSetTableAdapters.vseobecne_udajeTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="M:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.osobaComboDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.vseobecne_udajeDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.vseobecne_udajeDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Update rows in top-down order.
 </summary>
-</member><member name="M:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.osobaComboDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.vseobecne_udajeDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.vseobecne_udajeDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Insert rows in top-down order.
 </summary>
-</member><member name="M:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.osobaComboDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.vseobecne_udajeDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.vseobecne_udajeDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Delete rows in bottom-up order.
 </summary>
-</member><member name="M:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.vseobecne_udajeDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
-</member><member name="M:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.osobaComboDataSet)">
+</member><member name="M:pilcik.vseobecne_udajeDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.vseobecne_udajeDataSet)">
 	<summary>
 Update all changes to the dataset.
 </summary>
-</member><member name="T:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+</member><member name="T:pilcik.vseobecne_udajeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
 	<summary>
 Update Order Option
 </summary>
-</member><member name="T:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+</member><member name="T:pilcik.vseobecne_udajeDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
 	<summary>
 Used to sort self-referenced table's rows
 </summary>
-</member><member name="T:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager">
+</member><member name="T:pilcik.vseobecne_udajeDataSetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
-</member><member name="T:pilcik.protokol_kurzDataSet.kurzDataTable">
+</member><member name="T:pilcik.absolvovaneKurzyDataSet.clenovia_kurzuDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:pilcik.protokol_kurzDataSet.kurzRow">
+</member><member name="T:pilcik.absolvovaneKurzyDataSet.clenovia_kurzuRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:pilcik.protokol_kurzDataSet.kurzRowChangeEvent">
+</member><member name="T:pilcik.absolvovaneKurzyDataSet.clenovia_kurzuRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:pilcik.protokol_kurzDataSet">
+</member><member name="T:pilcik.absolvovaneKurzyDataSet">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member><member name="T:pilcik.protokol_kurzDataSetTableAdapters.kurzTableAdapter">
+</member><member name="T:pilcik.absolvovaneKurzyDataSetTableAdapters.clenovia_kurzuTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="M:pilcik.protokol_kurzDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.protokol_kurzDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.absolvovaneKurzyDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Update rows in top-down order.
 </summary>
-</member><member name="M:pilcik.protokol_kurzDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.protokol_kurzDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.absolvovaneKurzyDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Insert rows in top-down order.
 </summary>
-</member><member name="M:pilcik.protokol_kurzDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.protokol_kurzDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.absolvovaneKurzyDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Delete rows in bottom-up order.
 </summary>
-</member><member name="M:pilcik.protokol_kurzDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
-</member><member name="M:pilcik.protokol_kurzDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.protokol_kurzDataSet)">
+</member><member name="M:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.absolvovaneKurzyDataSet)">
 	<summary>
 Update all changes to the dataset.
 </summary>
-</member><member name="T:pilcik.protokol_kurzDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+</member><member name="T:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
 	<summary>
 Update Order Option
 </summary>
-</member><member name="T:pilcik.protokol_kurzDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+</member><member name="T:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
 	<summary>
 Used to sort self-referenced table's rows
 </summary>
-</member><member name="T:pilcik.protokol_kurzDataSetTableAdapters.TableAdapterManager">
+</member><member name="T:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:pilcik.protokolDataSet.clenovia_kurzuDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:pilcik.protokolDataSet.kurzDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:pilcik.protokolDataSet.osobaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:pilcik.protokolDataSet.skusobna_komisiaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:pilcik.protokolDataSet.clenovia_kurzuRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:pilcik.protokolDataSet.kurzRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:pilcik.protokolDataSet.osobaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:pilcik.protokolDataSet.skusobna_komisiaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:pilcik.protokolDataSet.clenovia_kurzuRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:pilcik.protokolDataSet.kurzRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:pilcik.protokolDataSet.osobaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:pilcik.protokolDataSet.skusobna_komisiaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:pilcik.protokolDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:pilcik.protokolDataSetTableAdapters.clenovia_kurzuTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:pilcik.protokolDataSetTableAdapters.kurzTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:pilcik.protokolDataSetTableAdapters.osobaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:pilcik.protokolDataSetTableAdapters.skusobna_komisiaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:pilcik.protokolDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.protokolDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:pilcik.protokolDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.protokolDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:pilcik.protokolDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.protokolDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:pilcik.protokolDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:pilcik.protokolDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.protokolDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:pilcik.protokolDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:pilcik.protokolDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:pilcik.protokolDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:pilcik.kurz_pocetDataSet.clenovia_kurzuDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:pilcik.kurz_pocetDataSet.kurzDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:pilcik.kurz_pocetDataSet.clenovia_kurzuRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:pilcik.kurz_pocetDataSet.kurzRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:pilcik.kurz_pocetDataSet.clenovia_kurzuRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:pilcik.kurz_pocetDataSet.kurzRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:pilcik.kurz_pocetDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:pilcik.kurz_pocetDataSetTableAdapters.clenovia_kurzuTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:pilcik.kurz_pocetDataSetTableAdapters.kurzTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.kurz_pocetDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.kurz_pocetDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.kurz_pocetDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.kurz_pocetDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:pilcik.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:pilcik.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:pilcik.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member><member name="T:pilcik.pilcikdbDataSet.clenovia_kurzuDataTable">
 	<summary>
@@ -262,6 +443,58 @@ Used to sort self-referenced table's rows
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
+</member><member name="T:pilcik.osobaComboDataSet.osobaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:pilcik.osobaComboDataSet.osobaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:pilcik.osobaComboDataSet.osobaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:pilcik.osobaComboDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:pilcik.osobaComboDataSetTableAdapters.osobaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.osobaComboDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.osobaComboDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.osobaComboDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.osobaComboDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:pilcik.osobaComboDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
 </member><member name="T:pilcik.skusobnyDataSet.DataTable1DataTable">
 	<summary>
 Represents the strongly named DataTable class.
@@ -311,58 +544,6 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member><member name="T:pilcik.skusobnyDataSetTableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="T:pilcik.absolvovaneKurzyDataSet.clenovia_kurzuDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:pilcik.absolvovaneKurzyDataSet.clenovia_kurzuRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:pilcik.absolvovaneKurzyDataSet.clenovia_kurzuRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:pilcik.absolvovaneKurzyDataSet">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:pilcik.absolvovaneKurzyDataSetTableAdapters.clenovia_kurzuTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.absolvovaneKurzyDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.absolvovaneKurzyDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.absolvovaneKurzyDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.absolvovaneKurzyDataSet)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
@@ -418,184 +599,55 @@ Used to sort self-referenced table's rows
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
-</member><member name="P:pilcik.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:pilcik.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:pilcik.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="T:pilcik.kurz_pocetDataSet.clenovia_kurzuDataTable">
+</member><member name="T:pilcik.kurzComboDataSet.kurzDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:pilcik.kurz_pocetDataSet.kurzDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:pilcik.kurz_pocetDataSet.clenovia_kurzuRow">
+</member><member name="T:pilcik.kurzComboDataSet.kurzRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:pilcik.kurz_pocetDataSet.kurzRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:pilcik.kurz_pocetDataSet.clenovia_kurzuRowChangeEvent">
+</member><member name="T:pilcik.kurzComboDataSet.kurzRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:pilcik.kurz_pocetDataSet.kurzRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:pilcik.kurz_pocetDataSet">
+</member><member name="T:pilcik.kurzComboDataSet">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member><member name="T:pilcik.kurz_pocetDataSetTableAdapters.clenovia_kurzuTableAdapter">
+</member><member name="T:pilcik.kurzComboDataSetTableAdapters.kurzTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:pilcik.kurz_pocetDataSetTableAdapters.kurzTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.kurz_pocetDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.kurzComboDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Update rows in top-down order.
 </summary>
-</member><member name="M:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.kurz_pocetDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.kurzComboDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Insert rows in top-down order.
 </summary>
-</member><member name="M:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.kurz_pocetDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.kurzComboDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Delete rows in bottom-up order.
 </summary>
-</member><member name="M:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
-</member><member name="M:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.kurz_pocetDataSet)">
+</member><member name="M:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.kurzComboDataSet)">
 	<summary>
 Update all changes to the dataset.
 </summary>
-</member><member name="T:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+</member><member name="T:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
 	<summary>
 Update Order Option
 </summary>
-</member><member name="T:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+</member><member name="T:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
 	<summary>
 Used to sort self-referenced table's rows
 </summary>
-</member><member name="T:pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="T:pilcik.protokolDataSet.clenovia_kurzuDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:pilcik.protokolDataSet.kurzDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:pilcik.protokolDataSet.osobaDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:pilcik.protokolDataSet.skusobna_komisiaDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:pilcik.protokolDataSet.clenovia_kurzuRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:pilcik.protokolDataSet.kurzRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:pilcik.protokolDataSet.osobaRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:pilcik.protokolDataSet.skusobna_komisiaRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:pilcik.protokolDataSet.clenovia_kurzuRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:pilcik.protokolDataSet.kurzRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:pilcik.protokolDataSet.osobaRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:pilcik.protokolDataSet.skusobna_komisiaRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:pilcik.protokolDataSet">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:pilcik.protokolDataSetTableAdapters.clenovia_kurzuTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:pilcik.protokolDataSetTableAdapters.kurzTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:pilcik.protokolDataSetTableAdapters.osobaTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:pilcik.protokolDataSetTableAdapters.skusobna_komisiaTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:pilcik.protokolDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.protokolDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:pilcik.protokolDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.protokolDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:pilcik.protokolDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.protokolDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:pilcik.protokolDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:pilcik.protokolDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.protokolDataSet)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:pilcik.protokolDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:pilcik.protokolDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:pilcik.protokolDataSetTableAdapters.TableAdapterManager">
+</member><member name="T:pilcik.kurzComboDataSetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
