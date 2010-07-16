@@ -59,7 +59,7 @@
                     .AddWithValue("zaciatok_kurzu", DBNull.Value)
                 End If
                 If Koniec_kurzuDateTimePicker.Checked = True Then
-                    .AddWithValue("koniec_kurzu", Zaciatok_kurzuDateTimePicker.Value.Date)
+                    .AddWithValue("koniec_kurzu", Koniec_kurzuDateTimePicker.Value.Date)
                 Else
                     .AddWithValue("koniec_kurzu", DBNull.Value)
                 End If

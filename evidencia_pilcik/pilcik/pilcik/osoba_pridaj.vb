@@ -6,6 +6,7 @@
 
     Private Sub osoba_pridaj_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.MdiParent = hlavna_aplikacia
+
         'TODO: This line of code loads data into the 'PilcikdbDataSet.osoba' table. You can move, or remove it, as needed.
         Me.OsobaTableAdapter.Fill(Me.PilcikdbDataSet.osoba)
         'TODO: This line of code loads data into the 'KurzComboDataSet.kurz' table. You can move, or remove it, as needed.
