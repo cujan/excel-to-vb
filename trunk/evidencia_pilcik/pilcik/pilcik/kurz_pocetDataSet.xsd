@@ -54,14 +54,16 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="kurzTableAdapter" GeneratorDataComponentClassName="kurzTableAdapter" Name="kurz" UserDataComponentName="kurzTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="pilcikdbConnectionString (MySettings)" DbObjectName="kurz" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="pilcikdbConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT     COUNT(clenovia_kurzu.kurz_id) AS pocet, kurz.nazov, kurz.zaciatok_kurzu, kurz.koniec_kurzu, kurz.typ, kurz.miesto_konania, kurz.id, 
-                      kurz.cislo_protokolu
+                      kurz.cislo_protokolu, c_typ_kurzu.nazov AS typ_nazov
 FROM         kurz LEFT OUTER JOIN
+                      c_typ_kurzu ON kurz.typ = c_typ_kurzu.id LEFT OUTER JOIN
                       clenovia_kurzu ON clenovia_kurzu.kurz_id = kurz.id
-GROUP BY clenovia_kurzu.kurz_id, kurz.nazov, kurz.zaciatok_kurzu, kurz.koniec_kurzu, kurz.typ, kurz.miesto_konania, kurz.id, kurz.cislo_protokolu</CommandText>
+GROUP BY clenovia_kurzu.kurz_id, kurz.nazov, kurz.zaciatok_kurzu, kurz.koniec_kurzu, kurz.typ, kurz.miesto_konania, kurz.id, kurz.cislo_protokolu, 
+                      c_typ_kurzu.nazov</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -71,11 +73,12 @@ GROUP BY clenovia_kurzu.kurz_id, kurz.nazov, kurz.zaciatok_kurzu, kurz.koniec_ku
               <Mapping SourceColumn="nazov" DataSetColumn="nazov" />
               <Mapping SourceColumn="zaciatok_kurzu" DataSetColumn="zaciatok_kurzu" />
               <Mapping SourceColumn="koniec_kurzu" DataSetColumn="koniec_kurzu" />
-              <Mapping SourceColumn="typ" DataSetColumn="typ" />
               <Mapping SourceColumn="miesto_konania" DataSetColumn="miesto_konania" />
               <Mapping SourceColumn="pocet" DataSetColumn="pocet" />
               <Mapping SourceColumn="id" DataSetColumn="id" />
               <Mapping SourceColumn="cislo_protokolu" DataSetColumn="cislo_protokolu" />
+              <Mapping SourceColumn="typ" DataSetColumn="typ1" />
+              <Mapping SourceColumn="typ_nazov" DataSetColumn="typ_nazov" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -123,8 +126,16 @@ GROUP BY clenovia_kurzu.kurz_id, kurz.nazov, kurz.zaciatok_kurzu, kurz.koniec_ku
                 </xs:simpleType>
               </xs:element>
               <xs:element name="pocet" msdata:ReadOnly="true" msprop:Generator_UserColumnName="pocet" msprop:Generator_ColumnVarNameInTable="columnpocet" msprop:Generator_ColumnPropNameInRow="pocet" msprop:Generator_ColumnPropNameInTable="pocetColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:int" />
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:int" minOccurs="0" />
               <xs:element name="cislo_protokolu" msprop:Generator_UserColumnName="cislo_protokolu" msprop:Generator_ColumnPropNameInRow="cislo_protokolu" msprop:Generator_ColumnVarNameInTable="columncislo_protokolu" msprop:Generator_ColumnPropNameInTable="cislo_protokoluColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="typ1" msdata:ReadOnly="true" msdata:Caption="typ" msprop:Generator_UserColumnName="typ1" msprop:Generator_ColumnVarNameInTable="columntyp1" msprop:Generator_ColumnPropNameInRow="typ1" msprop:Generator_ColumnPropNameInTable="typ1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="typ_nazov" msdata:ReadOnly="true" msprop:Generator_UserColumnName="typ_nazov" msprop:Generator_ColumnVarNameInTable="columntyp_nazov" msprop:Generator_ColumnPropNameInRow="typ_nazov" msprop:Generator_ColumnPropNameInTable="typ_nazovColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />

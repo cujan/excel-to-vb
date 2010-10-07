@@ -6,6 +6,8 @@
     End Sub
 
     Private Sub kurz_detail_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'PilcikdbDataSet.c_typ_kurzu' table. You can move, or remove it, as needed.
+        Me.C_typ_kurzuTableAdapter.Fill(Me.PilcikdbDataSet.c_typ_kurzu)
         Me.MdiParent = hlavna_aplikacia
         Dim id_vybrateho_kurzu As Integer = kurz_novy.Label2.Text
         'TODO: This line of code loads data into the 'Clenovia_kurzuDataSet.clenovia_kurzu' table. You can move, or remove it, as needed.
@@ -20,7 +22,11 @@
 
         'TODO: This line of code loads data into the 'PilcikdbDataSet.kurz' table. You can move, or remove it, as needed.
         Label1.BringToFront()
-
+        If TypTextBox.Text = "" Then
+            typ_nazovComboBox.SelectedValue = -1
+        Else
+            typ_nazovComboBox.SelectedValue = TypTextBox.Text
+        End If
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -68,6 +74,46 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        NazovTextBox.ReadOnly = False
+        Zaciatok_kurzuDateTimePicker.Enabled = True
+        Koniec_kurzuDateTimePicker.Enabled = True
+        Cislo_protokoluTextBox.ReadOnly = False
+        typ_nazovComboBox.Enabled = True
+        Button3.Visible = True
+        Miesto_konaniaTextBox.ReadOnly = False
+        Button2.Visible = False
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        NazovTextBox.ReadOnly = True
+        Zaciatok_kurzuDateTimePicker.Enabled = False
+        Koniec_kurzuDateTimePicker.Enabled = False
+        Cislo_protokoluTextBox.ReadOnly = True
+        typ_nazovComboBox.Enabled = False
+        Button2.Visible = True
+        Miesto_konaniaTextBox.ReadOnly = True
+        Button3.Visible = False
+        Dim id_vybrateho_kurzu As Integer = kurz_novy.Label2.Text
+
+        'update zaznamov v tabulke kurz
+        Dim con As New SqlCeConnection(pripojovaci_retazec)
+        Dim com As New SqlCeCommand("UPDATE kurz SET  nazov = @nazov, zaciatok_kurzu = @zaciatok_kurzu, koniec_kurzu = @koniec_kurzu, typ = @typ, miesto_konania = @miesto_konania, cislo_protokolu = @cislo_protokolu WHERE     id = @id", con)
+        With com.Parameters
+            .AddWithValue("nazov", NazovTextBox.Text)
+            .AddWithValue("zaciatok_kurzu", Zaciatok_kurzuDateTimePicker.Value.Date)
+            .AddWithValue("koniec_kurzu", Koniec_kurzuDateTimePicker.Value.Date)
+            .AddWithValue("typ", typ_nazovComboBox.SelectedValue)
+            .AddWithValue("miesto_konania", Miesto_konaniaTextBox.Text)
+            .AddWithValue("cislo_protokolu", Cislo_protokoluTextBox.Text)
+            .AddWithValue("id", id_vybrateho_kurzu)
+        End With
+        con.Open()
+        com.ExecuteNonQuery()
+        con.Close()
 
     End Sub
 End Class

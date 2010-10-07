@@ -53,9 +53,9 @@ Partial Class uvodna_obrazovka
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(1, 204)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(136, 13)
+        Me.Label3.Size = New System.Drawing.Size(134, 13)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "POčet evidovaných kurzov"
+        Me.Label3.Text = "Počet evidovaných kurzov"
         '
         'Label4
         '
