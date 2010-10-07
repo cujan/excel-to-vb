@@ -29,14 +29,13 @@ Partial Class kurz_detail
         Dim TypLabel As System.Windows.Forms.Label
         Dim Miesto_konaniaLabel As System.Windows.Forms.Label
         Dim IdLabel As System.Windows.Forms.Label
+        Dim Cislo_protokoluLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(kurz_detail))
         Me.pridaj_clenaButton = New System.Windows.Forms.Button
-        Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
-        Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KurzTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.kurzTableAdapter
-        Me.TableAdapterManager = New pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
         Me.KurzBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
+        Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
@@ -66,19 +65,29 @@ Partial Class kurz_detail
         Me.Button1 = New System.Windows.Forms.Button
         Me.Clenovia_kurzuTableAdapter = New pilcik.clenovia_kurzuDataSetTableAdapters.clenovia_kurzuTableAdapter
         Me.TableAdapterManager1 = New pilcik.clenovia_kurzuDataSetTableAdapters.TableAdapterManager
+        Me.Button2 = New System.Windows.Forms.Button
+        Me.Cislo_protokoluTextBox = New System.Windows.Forms.TextBox
+        Me.KurzTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.kurzTableAdapter
+        Me.TableAdapterManager = New pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
+        Me.typ_nazovComboBox = New System.Windows.Forms.ComboBox
+        Me.CtypkurzuBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.C_typ_kurzuTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.c_typ_kurzuTableAdapter
+        Me.Button3 = New System.Windows.Forms.Button
         NazovLabel = New System.Windows.Forms.Label
         Zaciatok_kurzuLabel = New System.Windows.Forms.Label
         Koniec_kurzuLabel = New System.Windows.Forms.Label
         TypLabel = New System.Windows.Forms.Label
         Miesto_konaniaLabel = New System.Windows.Forms.Label
         IdLabel = New System.Windows.Forms.Label
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Cislo_protokoluLabel = New System.Windows.Forms.Label
         CType(Me.KurzBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.KurzBindingNavigator.SuspendLayout()
+        CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Clenovia_kurzuDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Clenovia_kurzuBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Clenovia_kurzuDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CtypkurzuBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NazovLabel
@@ -140,6 +149,16 @@ Partial Class kurz_detail
         IdLabel.TabIndex = 28
         IdLabel.Text = "id:"
         '
+        'Cislo_protokoluLabel
+        '
+        Cislo_protokoluLabel.AutoSize = True
+        Cislo_protokoluLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Cislo_protokoluLabel.Location = New System.Drawing.Point(46, 182)
+        Cislo_protokoluLabel.Name = "Cislo_protokoluLabel"
+        Cislo_protokoluLabel.Size = New System.Drawing.Size(97, 13)
+        Cislo_protokoluLabel.TabIndex = 31
+        Cislo_protokoluLabel.Text = "Číslo protokolu:"
+        '
         'pridaj_clenaButton
         '
         Me.pridaj_clenaButton.Location = New System.Drawing.Point(49, 216)
@@ -148,29 +167,6 @@ Partial Class kurz_detail
         Me.pridaj_clenaButton.TabIndex = 15
         Me.pridaj_clenaButton.Text = "Pridaj člena"
         Me.pridaj_clenaButton.UseVisualStyleBackColor = True
-        '
-        'PilcikdbDataSet
-        '
-        Me.PilcikdbDataSet.DataSetName = "pilcikdbDataSet"
-        Me.PilcikdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'KurzBindingSource
-        '
-        Me.KurzBindingSource.DataMember = "kurz"
-        Me.KurzBindingSource.DataSource = Me.PilcikdbDataSet
-        '
-        'KurzTableAdapter
-        '
-        Me.KurzTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.clenovia_kurzuTableAdapter = Nothing
-        Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.osobaTableAdapter = Nothing
-        Me.TableAdapterManager.skusobna_komisiaTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'KurzBindingNavigator
         '
@@ -200,6 +196,16 @@ Partial Class kurz_detail
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'KurzBindingSource
+        '
+        Me.KurzBindingSource.DataMember = "kurz"
+        Me.KurzBindingSource.DataSource = Me.PilcikdbDataSet
+        '
+        'PilcikdbDataSet
+        '
+        Me.PilcikdbDataSet.DataSetName = "pilcikdbDataSet"
+        Me.PilcikdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -346,7 +352,7 @@ Partial Class kurz_detail
         Me.Clenovia_kurzuDataGridView.Name = "Clenovia_kurzuDataGridView"
         Me.Clenovia_kurzuDataGridView.ReadOnly = True
         Me.Clenovia_kurzuDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.Clenovia_kurzuDataGridView.Size = New System.Drawing.Size(1093, 397)
+        Me.Clenovia_kurzuDataGridView.Size = New System.Drawing.Size(1101, 397)
         Me.Clenovia_kurzuDataGridView.TabIndex = 25
         '
         'DataGridViewTextBoxColumn4
@@ -435,11 +441,81 @@ Partial Class kurz_detail
         Me.TableAdapterManager1.Connection = Nothing
         Me.TableAdapterManager1.UpdateOrder = pilcik.clenovia_kurzuDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(390, 146)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 31
+        Me.Button2.Text = "Zmeň detaily kurzu"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Cislo_protokoluTextBox
+        '
+        Me.Cislo_protokoluTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KurzBindingSource, "cislo_protokolu", True))
+        Me.Cislo_protokoluTextBox.Location = New System.Drawing.Point(170, 175)
+        Me.Cislo_protokoluTextBox.Name = "Cislo_protokoluTextBox"
+        Me.Cislo_protokoluTextBox.ReadOnly = True
+        Me.Cislo_protokoluTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Cislo_protokoluTextBox.TabIndex = 32
+        '
+        'KurzTableAdapter
+        '
+        Me.KurzTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.c_typ_kurzuTableAdapter = Me.C_typ_kurzuTableAdapter
+        Me.TableAdapterManager.clenovia_kurzuTableAdapter = Nothing
+        Me.TableAdapterManager.kurzTableAdapter = Me.KurzTableAdapter
+        Me.TableAdapterManager.osobaTableAdapter = Nothing
+        Me.TableAdapterManager.skusobna_komisiaTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.vseobecne_udajeTableAdapter = Nothing
+        '
+        'typ_nazovComboBox
+        '
+        Me.typ_nazovComboBox.DataSource = Me.CtypkurzuBindingSource
+        Me.typ_nazovComboBox.DisplayMember = "nazov"
+        Me.typ_nazovComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.typ_nazovComboBox.Enabled = False
+        Me.typ_nazovComboBox.FormattingEnabled = True
+        Me.typ_nazovComboBox.Location = New System.Drawing.Point(170, 122)
+        Me.typ_nazovComboBox.Name = "typ_nazovComboBox"
+        Me.typ_nazovComboBox.Size = New System.Drawing.Size(200, 21)
+        Me.typ_nazovComboBox.TabIndex = 33
+        Me.typ_nazovComboBox.ValueMember = "id"
+        '
+        'CtypkurzuBindingSource
+        '
+        Me.CtypkurzuBindingSource.DataMember = "c_typ_kurzu"
+        Me.CtypkurzuBindingSource.DataSource = Me.PilcikdbDataSet
+        '
+        'C_typ_kurzuTableAdapter
+        '
+        Me.C_typ_kurzuTableAdapter.ClearBeforeFill = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(471, 147)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 34
+        Me.Button3.Text = "Ulož zmeny"
+        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.Visible = False
+        '
         'kurz_detail
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1117, 702)
+        Me.ClientSize = New System.Drawing.Size(1125, 702)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.typ_nazovComboBox)
+        Me.Controls.Add(Cislo_protokoluLabel)
+        Me.Controls.Add(Me.Cislo_protokoluTextBox)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(IdLabel)
         Me.Controls.Add(Me.IdLabel1)
@@ -461,14 +537,15 @@ Partial Class kurz_detail
         Me.Controls.Add(Me.pridaj_clenaButton)
         Me.Name = "kurz_detail"
         Me.Text = "kurz_detail"
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KurzBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.KurzBindingNavigator.ResumeLayout(False)
         Me.KurzBindingNavigator.PerformLayout()
+        CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Clenovia_kurzuDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Clenovia_kurzuBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Clenovia_kurzuDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CtypkurzuBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -509,4 +586,10 @@ Partial Class kurz_detail
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents IdLabel1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Cislo_protokoluTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents C_typ_kurzuTableAdapter As pilcik.pilcikdbDataSetTableAdapters.c_typ_kurzuTableAdapter
+    Friend WithEvents typ_nazovComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents CtypkurzuBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

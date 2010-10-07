@@ -12,6 +12,8 @@
     End Sub
 
     Private Sub kurz_novy_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'PilcikdbDataSet.c_typ_kurzu' table. You can move, or remove it, as needed.
+        Me.C_typ_kurzuTableAdapter.Fill(Me.PilcikdbDataSet.c_typ_kurzu)
         'TODO: This line of code loads data into the 'Kurz_pocetDataSet.kurz' table. You can move, or remove it, as needed.
         Me.KurzTableAdapter.Fill(Me.Kurz_pocetDataSet.kurz)
         Me.MdiParent = hlavna_aplikacia
@@ -63,7 +65,7 @@
                 Else
                     .AddWithValue("koniec_kurzu", DBNull.Value)
                 End If
-                .AddWithValue("typ", TypComboBox.Text)
+                .AddWithValue("typ", TypComboBox.SelectedValue)
                 .AddWithValue("miesto_konania", Miesto_konaniaTextBox.Text)
                 .AddWithValue("cislo_protokolu", Label7.Text)
             End With
