@@ -2,7 +2,7 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <DataSources>
     <DataSource Name="pilcikdbConnectionString">
-      <rd:DataSourceID>97482b74-f026-4dd8-a776-6a90044b3d07</rd:DataSourceID>
+      <rd:DataSourceID>5113afcf-28c5-4bc1-b97d-c66cc5594251</rd:DataSourceID>
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
         <ConnectString>Data Source=|DataDirectory|\pilcikdb.sdf</ConnectString>
@@ -14,8 +14,10 @@
   <InteractiveWidth>8.5in</InteractiveWidth>
   <rd:GridSpacing>0.25cm</rd:GridSpacing>
   <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>2.5cm</RightMargin>
+  <LeftMargin>2.5cm</LeftMargin>
   <BottomMargin>2.5cm</BottomMargin>
-  <rd:ReportID>2f1ea9e1-7e90-4925-b3fb-15bbf5cd3931</rd:ReportID>
+  <rd:ReportID>23f85a4d-1d1f-4b68-ae4a-174ae3aaa5ff</rd:ReportID>
   <PageWidth>21cm</PageWidth>
   <DataSets>
     <DataSet Name="protokolDataSet_kurz">
@@ -252,8 +254,7 @@ HAVING      (kurz_id = @Param1)</CommandText>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  <Code />
-  <Width>21cm</Width>
+  <Width>21.25cm</Width>
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
@@ -274,7 +275,7 @@ HAVING      (kurz_id = @Param1)</CommandText>
         <CanGrow>true</CanGrow>
         <Left>3.25cm</Left>
         <Height>0.63492cm</Height>
-        <Value>organizačná zložka: Stredná lesnícka škola</Value>
+        <Value>2</Value>
       </Textbox>
       <Textbox Name="textbox1">
         <rd:DefaultName>textbox1</rd:DefaultName>
@@ -295,8 +296,72 @@ HAVING      (kurz_id = @Param1)</CommandText>
         <Height>0.75cm</Height>
         <Value>=First(Fields!nazov.Value, "vseobecne_udajeDataSet_vseobecne_udaje") &amp; ", " &amp; First(Fields!ulica.Value, "vseobecne_udajeDataSet_vseobecne_udaje") &amp; ", " &amp; First(Fields!mesto.Value, "vseobecne_udajeDataSet_vseobecne_udaje") &amp; ", " &amp; First(Fields!psc.Value, "vseobecne_udajeDataSet_vseobecne_udaje")</Value>
       </Textbox>
-      <Table Name="table1">
+      <Textbox Name="textbox22">
+        <rd:DefaultName>textbox22</rd:DefaultName>
+        <Top>2.5cm</Top>
+        <Width>2.53968cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
         <ZIndex>26</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>10.5cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=First(Fields!cislo_protokolu.Value, "protokolDataSet_kurz")</Value>
+      </Textbox>
+      <Textbox Name="textbox21">
+        <rd:DefaultName>textbox21</rd:DefaultName>
+        <Top>2.5cm</Top>
+        <Width>2.53968cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>25</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>8.5cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>Protokol č.</Value>
+      </Textbox>
+      <Textbox Name="textbox3">
+        <rd:DefaultName>textbox3</rd:DefaultName>
+        <Top>4.5cm</Top>
+        <Width>8cm</Width>
+        <Style>
+          <PaddingLeft>5pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>24</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>7.75cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=First(Fields!typ_nazov.Value, "protokolDataSet_kurz")</Value>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <Top>4.5cm</Top>
+        <Width>2.75cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>23</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.75cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>Typ kurzu:</Value>
+      </Textbox>
+      <Table Name="table1">
+        <ZIndex>22</ZIndex>
         <DataSetName>protokolDataSet_osoba</DataSetName>
         <Top>12.25cm</Top>
         <Width>16.39383cm</Width>
@@ -490,8 +555,7 @@ HAVING      (kurz_id = @Param1)</CommandText>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox37">
-                      <rd:DefaultName>textbox37</rd:DefaultName>
+                    <Textbox Name="textbox4">
                       <Style>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -532,72 +596,7 @@ HAVING      (kurz_id = @Param1)</CommandText>
         <Height>1.26984cm</Height>
         <Left>1.75cm</Left>
       </Table>
-      <Textbox Name="textbox22">
-        <rd:DefaultName>textbox22</rd:DefaultName>
-        <Top>2.5cm</Top>
-        <Width>2.53968cm</Width>
-        <Style>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>25</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>10.5cm</Left>
-        <Height>0.63492cm</Height>
-        <Value>=First(Fields!cislo_protokolu.Value, "protokolDataSet_kurz")</Value>
-      </Textbox>
-      <Textbox Name="textbox21">
-        <rd:DefaultName>textbox21</rd:DefaultName>
-        <Top>2.5cm</Top>
-        <Width>2.53968cm</Width>
-        <Style>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>24</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>8.5cm</Left>
-        <Height>0.63492cm</Height>
-        <Value>Protokol č.</Value>
-      </Textbox>
-      <Textbox Name="textbox3">
-        <rd:DefaultName>textbox3</rd:DefaultName>
-        <Top>4.5cm</Top>
-        <Width>8cm</Width>
-        <Style>
-          <PaddingLeft>5pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>23</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>7.75cm</Left>
-        <Height>0.63492cm</Height>
-        <Value>=First(Fields!typ_nazov.Value, "protokolDataSet_kurz")</Value>
-      </Textbox>
-      <Textbox Name="textbox2">
-        <rd:DefaultName>textbox2</rd:DefaultName>
-        <Top>4.5cm</Top>
-        <Width>2.75cm</Width>
-        <Style>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>22</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>1.75cm</Left>
-        <Height>0.63492cm</Height>
-        <Value>Typ kurzu:</Value>
-      </Textbox>
-      <Textbox Name="textbox4">
-        <rd:DefaultName>textbox4</rd:DefaultName>
+      <Textbox Name="textbox6">
         <Top>10cm</Top>
         <Width>2.75cm</Width>
         <Style>
@@ -783,19 +782,6 @@ HAVING      (kurz_id = @Param1)</CommandText>
         <Height>0.63492cm</Height>
         <Value>=First(Fields!clen1.Value, "protokolDataSet_skusobna_komisia")</Value>
       </Textbox>
-      <Textbox Name="textbox14">
-        <rd:DefaultName>textbox14</rd:DefaultName>
-        <Top>7.5cm</Top>
-        <Width>11.25cm</Width>
-        <Style>
-          <PaddingLeft>5pt</PaddingLeft>
-        </Style>
-        <ZIndex>8</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>7.75cm</Left>
-        <Height>0.63492cm</Height>
-        <Value>=First(Fields!predseda.Value, "protokolDataSet_skusobna_komisia")</Value>
-      </Textbox>
       <Textbox Name="textbox13">
         <rd:DefaultName>textbox13</rd:DefaultName>
         <Top>5.5cm</Top>
@@ -803,27 +789,11 @@ HAVING      (kurz_id = @Param1)</CommandText>
         <Style>
           <PaddingLeft>5pt</PaddingLeft>
         </Style>
-        <ZIndex>7</ZIndex>
+        <ZIndex>8</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>7.75cm</Left>
         <Height>0.63492cm</Height>
         <Value>=First(Fields!miesto_konania.Value, "protokolDataSet_kurz")</Value>
-      </Textbox>
-      <Textbox Name="textbox12">
-        <rd:DefaultName>textbox12</rd:DefaultName>
-        <Top>6.25cm</Top>
-        <Width>13cm</Width>
-        <Style>
-          <PaddingLeft>5pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>6</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>7.75cm</Left>
-        <Height>0.63492cm</Height>
-        <Value>=First(Day(Fields!zaciatok_kurzu.value), "protokolDataSet_kurz") &amp; "." &amp; First(Month(Fields!zaciatok_kurzu.Value), "protokolDataSet_kurz") &amp; "." &amp; First(Year(Fields!zaciatok_kurzu.Value), "protokolDataSet_kurz") &amp; ". - " &amp; First(Day(Fields!koniec_kurzu.value), "protokolDataSet_kurz") &amp; "." &amp; First(Month(Fields!koniec_kurzu.Value), "protokolDataSet_kurz") &amp; "." &amp; First(Year(Fields!koniec_kurzu.Value), "protokolDataSet_kurz")</Value>
       </Textbox>
       <Textbox Name="textbox11">
         <rd:DefaultName>textbox11</rd:DefaultName>
@@ -836,11 +806,40 @@ HAVING      (kurz_id = @Param1)</CommandText>
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>5</ZIndex>
+        <ZIndex>7</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>1.75cm</Left>
         <Height>0.63492cm</Height>
         <Value> Zoznam kandidátov:</Value>
+      </Textbox>
+      <Textbox Name="textbox14">
+        <rd:DefaultName>textbox14</rd:DefaultName>
+        <Top>7.5cm</Top>
+        <Width>11.25cm</Width>
+        <Style>
+          <PaddingLeft>5pt</PaddingLeft>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>7.75cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=First(Fields!predseda.Value, "protokolDataSet_skusobna_komisia")</Value>
+      </Textbox>
+      <Textbox Name="textbox12">
+        <rd:DefaultName>textbox12</rd:DefaultName>
+        <Top>6.25cm</Top>
+        <Width>13cm</Width>
+        <Style>
+          <PaddingLeft>5pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>7.75cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=First(Day(Fields!zaciatok_kurzu.value), "protokolDataSet_kurz") &amp; "." &amp; First(Month(Fields!zaciatok_kurzu.Value), "protokolDataSet_kurz") &amp; "." &amp; First(Year(Fields!zaciatok_kurzu.Value), "protokolDataSet_kurz") &amp; ". - " &amp; First(Day(Fields!koniec_kurzu.value), "protokolDataSet_kurz") &amp; "." &amp; First(Month(Fields!koniec_kurzu.Value), "protokolDataSet_kurz") &amp; "." &amp; First(Year(Fields!koniec_kurzu.Value), "protokolDataSet_kurz")</Value>
       </Textbox>
       <Textbox Name="textbox10">
         <rd:DefaultName>textbox10</rd:DefaultName>
@@ -874,8 +873,7 @@ HAVING      (kurz_id = @Param1)</CommandText>
         <Height>0.63492cm</Height>
         <Value> Členovia skúšobnej komisie: </Value>
       </Textbox>
-      <Textbox Name="textbox8">
-        <rd:DefaultName>textbox8</rd:DefaultName>
+      <Textbox Name="textbox32">
         <Top>6.5cm</Top>
         <Width>3cm</Width>
         <Style>
@@ -890,8 +888,7 @@ HAVING      (kurz_id = @Param1)</CommandText>
         <Height>0.63492cm</Height>
         <Value> Termín konania:</Value>
       </Textbox>
-      <Textbox Name="textbox7">
-        <rd:DefaultName>textbox7</rd:DefaultName>
+      <Textbox Name="textbox33">
         <Top>5.5cm</Top>
         <Width>3cm</Width>
         <Style>
@@ -906,9 +903,9 @@ HAVING      (kurz_id = @Param1)</CommandText>
         <Height>0.63492cm</Height>
         <Value> Miesto konania:</Value>
       </Textbox>
-      <Textbox Name="textbox6">
-        <rd:DefaultName>textbox6</rd:DefaultName>
+      <Textbox Name="textbox36">
         <Top>3.25cm</Top>
+        <Width>18.25cm</Width>
         <Style>
           <TextAlign>Center</TextAlign>
           <PaddingLeft>2pt</PaddingLeft>
@@ -917,20 +914,16 @@ HAVING      (kurz_id = @Param1)</CommandText>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
         <CanGrow>true</CanGrow>
+        <Left>0cm</Left>
         <Height>1cm</Height>
-        <Value>zo skúšok odbornej spôsobilosti na „obsluhu reťazových píl a krovinorezov“
-v zmysle vyhl. č. 46/2010 Zz.
+        <Value>zo skúšok odbornej spôsobilosti na „obsluhu a údržbu ŠLKT a UKT“
+v zmysle platnej legislatívy
 </Value>
       </Textbox>
     </ReportItems>
-    <Height>21.25cm</Height>
+    <Height>21.13492cm</Height>
   </Body>
   <Language>en-US</Language>
-  <PageFooter>
-    <PrintOnFirstPage>true</PrintOnFirstPage>
-    <Height>0.75cm</Height>
-    <PrintOnLastPage>true</PrintOnLastPage>
-  </PageFooter>
   <TopMargin>2.5cm</TopMargin>
   <PageHeight>29.7cm</PageHeight>
 </Report>

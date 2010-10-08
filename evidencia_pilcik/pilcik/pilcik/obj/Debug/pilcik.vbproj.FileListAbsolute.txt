@@ -30,7 +30,6 @@ D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.exe
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\bin\Debug\pilcik.exe.manifest
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\bin\Debug\pilcik.application
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.application
-D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.tz_protokol.resources
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\RdlCompile.cache
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\RdlCompile.compiled
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.tlacove_zostavy.resources
@@ -58,3 +57,5 @@ D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.exe.m
 D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.application
 D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.pomocny.resources
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.pomocny.resources
+D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.tz_protokol_lkt.resources
+D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.tz_protokol_pila.resources
