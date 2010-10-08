@@ -23,35 +23,18 @@ Partial Class tlacove_zostavy
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Me.protokolCheckBox = New System.Windows.Forms.CheckBox
-        Me.Label1 = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
         Me.protokol_kurzComboBox = New System.Windows.Forms.ComboBox
         Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
         Me.KurzTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.kurzTableAdapter
         Me.Label2 = New System.Windows.Forms.Label
+        Me.protokol_pila_RadioButton = New System.Windows.Forms.RadioButton
+        Me.protokol_lkt_RadioButton = New System.Windows.Forms.RadioButton
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'protokolCheckBox
-        '
-        Me.protokolCheckBox.AutoSize = True
-        Me.protokolCheckBox.Location = New System.Drawing.Point(12, 81)
-        Me.protokolCheckBox.Name = "protokolCheckBox"
-        Me.protokolCheckBox.Size = New System.Drawing.Size(15, 14)
-        Me.protokolCheckBox.TabIndex = 0
-        Me.protokolCheckBox.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(33, 81)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Protokol"
         '
         'Button1
         '
@@ -98,16 +81,50 @@ Partial Class tlacove_zostavy
         Me.Label2.Text = "Vyberte kurz !!!"
         Me.Label2.Visible = False
         '
+        'protokol_pila_RadioButton
+        '
+        Me.protokol_pila_RadioButton.AutoSize = True
+        Me.protokol_pila_RadioButton.Location = New System.Drawing.Point(23, 186)
+        Me.protokol_pila_RadioButton.Name = "protokol_pila_RadioButton"
+        Me.protokol_pila_RadioButton.Size = New System.Drawing.Size(256, 17)
+        Me.protokol_pila_RadioButton.TabIndex = 3
+        Me.protokol_pila_RadioButton.TabStop = True
+        Me.protokol_pila_RadioButton.Text = "Protokol - obsluha motorových píl a krovinorezov"
+        Me.protokol_pila_RadioButton.UseVisualStyleBackColor = True
+        '
+        'protokol_lkt_RadioButton
+        '
+        Me.protokol_lkt_RadioButton.AutoSize = True
+        Me.protokol_lkt_RadioButton.Location = New System.Drawing.Point(23, 225)
+        Me.protokol_lkt_RadioButton.Name = "protokol_lkt_RadioButton"
+        Me.protokol_lkt_RadioButton.Size = New System.Drawing.Size(218, 17)
+        Me.protokol_lkt_RadioButton.TabIndex = 6
+        Me.protokol_lkt_RadioButton.TabStop = True
+        Me.protokol_lkt_RadioButton.Text = "Protokol - obsluha a údržba ŠLKT a UKT"
+        Me.protokol_lkt_RadioButton.UseVisualStyleBackColor = True
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(23, 267)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton3.TabIndex = 7
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "RadioButton3"
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
         'tlacove_zostavy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(741, 547)
+        Me.Controls.Add(Me.RadioButton3)
+        Me.Controls.Add(Me.protokol_lkt_RadioButton)
+        Me.Controls.Add(Me.protokol_pila_RadioButton)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.protokol_kurzComboBox)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.protokolCheckBox)
         Me.Name = "tlacove_zostavy"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "tlacove_zostavy"
@@ -118,12 +135,13 @@ Partial Class tlacove_zostavy
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents protokolCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents protokol_kurzComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents PilcikdbDataSet As pilcik.pilcikdbDataSet
     Friend WithEvents KurzBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents KurzTableAdapter As pilcik.pilcikdbDataSetTableAdapters.kurzTableAdapter
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents protokol_pila_RadioButton As System.Windows.Forms.RadioButton
+    Friend WithEvents protokol_lkt_RadioButton As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
 End Class

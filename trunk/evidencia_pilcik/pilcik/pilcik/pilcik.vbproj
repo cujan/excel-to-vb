@@ -183,6 +183,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>pilcikdbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="pilcikdbDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilcikdbDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="pocet_clenov_kurzuDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -216,10 +221,10 @@
     <Compile Include="tlacove_zostavy.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tz_protokol.Designer.vb">
-      <DependentUpon>tz_protokol.vb</DependentUpon>
+    <Compile Include="tz_protokol_pila.Designer.vb">
+      <DependentUpon>tz_protokol_pila.vb</DependentUpon>
     </Compile>
-    <Compile Include="tz_protokol.vb">
+    <Compile Include="tz_protokol_pila.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="hlavna_aplikacia.Designer.vb">
@@ -242,6 +247,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="tz_protokol_lkt.Designer.vb">
+      <DependentUpon>tz_protokol_lkt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tz_protokol_lkt.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="uvodna_obrazovka.Designer.vb">
       <DependentUpon>uvodna_obrazovka.vb</DependentUpon>
@@ -284,6 +295,7 @@
       <DependentUpon>pomocny.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="protokol_lkt_Report.rdlc" />
     <EmbeddedResource Include="protokol_Report.rdlc" />
     <EmbeddedResource Include="skusobna_komisia.resx">
       <DependentUpon>skusobna_komisia.vb</DependentUpon>
@@ -293,8 +305,8 @@
       <DependentUpon>tlacove_zostavy.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="tz_protokol.resx">
-      <DependentUpon>tz_protokol.vb</DependentUpon>
+    <EmbeddedResource Include="tz_protokol_pila.resx">
+      <DependentUpon>tz_protokol_pila.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="hlavna_aplikacia.resx">
@@ -305,6 +317,10 @@
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tz_protokol_lkt.resx">
+      <DependentUpon>tz_protokol_lkt.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="uvodna_obrazovka.resx">
@@ -389,6 +405,17 @@
     </None>
     <None Include="pilcikdbDataSet.xss">
       <DependentUpon>pilcikdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pilcikdbDataSet1.xsc">
+      <DependentUpon>pilcikdbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pilcikdbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilcikdbDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilcikdbDataSet1.xss">
+      <DependentUpon>pilcikdbDataSet1.xsd</DependentUpon>
     </None>
     <None Include="pilcik_TemporaryKey.pfx" />
     <None Include="pocet_clenov_kurzuDataSet.xsc">
