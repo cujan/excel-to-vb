@@ -69,9 +69,9 @@ Partial Class kurz_detail
         Me.Cislo_protokoluTextBox = New System.Windows.Forms.TextBox
         Me.KurzTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.kurzTableAdapter
         Me.TableAdapterManager = New pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
+        Me.C_typ_kurzuTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.c_typ_kurzuTableAdapter
         Me.typ_nazovComboBox = New System.Windows.Forms.ComboBox
         Me.CtypkurzuBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.C_typ_kurzuTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.c_typ_kurzuTableAdapter
         Me.Button3 = New System.Windows.Forms.Button
         NazovLabel = New System.Windows.Forms.Label
         Zaciatok_kurzuLabel = New System.Windows.Forms.Label
@@ -210,7 +210,7 @@ Partial Class kurz_detail
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -345,6 +345,7 @@ Partial Class kurz_detail
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Clenovia_kurzuDataGridView.AutoGenerateColumns = False
+        Me.Clenovia_kurzuDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.Clenovia_kurzuDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Clenovia_kurzuDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn6, Me.datum_narodenia})
         Me.Clenovia_kurzuDataGridView.DataSource = Me.Clenovia_kurzuBindingSource
@@ -361,6 +362,7 @@ Partial Class kurz_detail
         Me.DataGridViewTextBoxColumn4.HeaderText = "priezvisko"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.Width = 79
         '
         'DataGridViewTextBoxColumn6
         '
@@ -368,6 +370,7 @@ Partial Class kurz_detail
         Me.DataGridViewTextBoxColumn6.HeaderText = "meno"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 58
         '
         'datum_narodenia
         '
@@ -375,6 +378,7 @@ Partial Class kurz_detail
         Me.datum_narodenia.HeaderText = "datum_narodenia"
         Me.datum_narodenia.Name = "datum_narodenia"
         Me.datum_narodenia.ReadOnly = True
+        Me.datum_narodenia.Width = 114
         '
         'Clenovia_kurzuBindingSource
         '
@@ -474,6 +478,10 @@ Partial Class kurz_detail
         Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.vseobecne_udajeTableAdapter = Nothing
         '
+        'C_typ_kurzuTableAdapter
+        '
+        Me.C_typ_kurzuTableAdapter.ClearBeforeFill = True
+        '
         'typ_nazovComboBox
         '
         Me.typ_nazovComboBox.DataSource = Me.CtypkurzuBindingSource
@@ -491,10 +499,6 @@ Partial Class kurz_detail
         '
         Me.CtypkurzuBindingSource.DataMember = "c_typ_kurzu"
         Me.CtypkurzuBindingSource.DataSource = Me.PilcikdbDataSet
-        '
-        'C_typ_kurzuTableAdapter
-        '
-        Me.C_typ_kurzuTableAdapter.ClearBeforeFill = True
         '
         'Button3
         '

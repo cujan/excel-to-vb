@@ -517,7 +517,7 @@ Partial Class osoba_pridaj
         'BindingNavigatorCountItem1
         '
         Me.BindingNavigatorCountItem1.Name = "BindingNavigatorCountItem1"
-        Me.BindingNavigatorCountItem1.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem1.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem1.Text = "of {0}"
         Me.BindingNavigatorCountItem1.ToolTipText = "Total number of items"
         '
@@ -606,6 +606,7 @@ Partial Class osoba_pridaj
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.OsobaDataGridView.AutoGenerateColumns = False
+        Me.OsobaDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.OsobaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.OsobaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn36, Me.DataGridViewTextBoxColumn37, Me.DataGridViewTextBoxColumn38})
         Me.OsobaDataGridView.DataSource = Me.OsobaBindingSource2
@@ -622,6 +623,7 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn27.HeaderText = "titul_pred"
         Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
         Me.DataGridViewTextBoxColumn27.ReadOnly = True
+        Me.DataGridViewTextBoxColumn27.Width = 75
         '
         'DataGridViewTextBoxColumn28
         '
@@ -629,6 +631,7 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn28.HeaderText = "priezvisko"
         Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
         Me.DataGridViewTextBoxColumn28.ReadOnly = True
+        Me.DataGridViewTextBoxColumn28.Width = 79
         '
         'DataGridViewTextBoxColumn29
         '
@@ -636,6 +639,7 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn29.HeaderText = "meno"
         Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
         Me.DataGridViewTextBoxColumn29.ReadOnly = True
+        Me.DataGridViewTextBoxColumn29.Width = 58
         '
         'DataGridViewTextBoxColumn30
         '
@@ -643,6 +647,7 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn30.HeaderText = "datum_narodenia"
         Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
         Me.DataGridViewTextBoxColumn30.ReadOnly = True
+        Me.DataGridViewTextBoxColumn30.Width = 114
         '
         'DataGridViewTextBoxColumn31
         '
@@ -650,6 +655,7 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn31.HeaderText = "rodne_cislo"
         Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
         Me.DataGridViewTextBoxColumn31.ReadOnly = True
+        Me.DataGridViewTextBoxColumn31.Width = 86
         '
         'DataGridViewTextBoxColumn32
         '
@@ -657,6 +663,7 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn32.HeaderText = "cislo_op"
         Me.DataGridViewTextBoxColumn32.Name = "DataGridViewTextBoxColumn32"
         Me.DataGridViewTextBoxColumn32.ReadOnly = True
+        Me.DataGridViewTextBoxColumn32.Width = 71
         '
         'DataGridViewTextBoxColumn33
         '
@@ -664,6 +671,7 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn33.HeaderText = "ulica"
         Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
         Me.DataGridViewTextBoxColumn33.ReadOnly = True
+        Me.DataGridViewTextBoxColumn33.Width = 54
         '
         'DataGridViewTextBoxColumn34
         '
@@ -671,6 +679,7 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn34.HeaderText = "mesto"
         Me.DataGridViewTextBoxColumn34.Name = "DataGridViewTextBoxColumn34"
         Me.DataGridViewTextBoxColumn34.ReadOnly = True
+        Me.DataGridViewTextBoxColumn34.Width = 60
         '
         'DataGridViewTextBoxColumn35
         '
@@ -678,6 +687,7 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn35.HeaderText = "psc"
         Me.DataGridViewTextBoxColumn35.Name = "DataGridViewTextBoxColumn35"
         Me.DataGridViewTextBoxColumn35.ReadOnly = True
+        Me.DataGridViewTextBoxColumn35.Width = 49
         '
         'DataGridViewTextBoxColumn36
         '
@@ -685,6 +695,7 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn36.HeaderText = "cislo_pilcickeho_preukazu"
         Me.DataGridViewTextBoxColumn36.Name = "DataGridViewTextBoxColumn36"
         Me.DataGridViewTextBoxColumn36.ReadOnly = True
+        Me.DataGridViewTextBoxColumn36.Width = 157
         '
         'DataGridViewTextBoxColumn37
         '
@@ -692,6 +703,7 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn37.HeaderText = "email"
         Me.DataGridViewTextBoxColumn37.Name = "DataGridViewTextBoxColumn37"
         Me.DataGridViewTextBoxColumn37.ReadOnly = True
+        Me.DataGridViewTextBoxColumn37.Width = 56
         '
         'DataGridViewTextBoxColumn38
         '
@@ -699,6 +711,7 @@ Partial Class osoba_pridaj
         Me.DataGridViewTextBoxColumn38.HeaderText = "telefon"
         Me.DataGridViewTextBoxColumn38.Name = "DataGridViewTextBoxColumn38"
         Me.DataGridViewTextBoxColumn38.ReadOnly = True
+        Me.DataGridViewTextBoxColumn38.Width = 64
         '
         'GroupBox2
         '
@@ -735,10 +748,13 @@ Partial Class osoba_pridaj
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.c_typ_kurzuTableAdapter = Nothing
         Me.TableAdapterManager.clenovia_kurzuTableAdapter = Nothing
+        Me.TableAdapterManager.kurzTableAdapter = Nothing
         Me.TableAdapterManager.osobaTableAdapter = Me.OsobaTableAdapter
         Me.TableAdapterManager.skusobna_komisiaTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.vseobecne_udajeTableAdapter = Nothing
         '
         'Label4
         '
