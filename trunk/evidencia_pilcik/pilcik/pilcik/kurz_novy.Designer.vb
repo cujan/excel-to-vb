@@ -278,7 +278,7 @@ Partial Class kurz_novy
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -368,6 +368,7 @@ Partial Class kurz_novy
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.KurzDataGridView.AutoGenerateColumns = False
+        Me.KurzDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.KurzDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.KurzDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.zaciatok_kurzu, Me.koniec_kurzu, Me.typ_nazov, Me.miesto_konania, Me.pocet, Me.cislo_protokolu})
         Me.KurzDataGridView.DataSource = Me.KurzBindingSource
@@ -434,6 +435,7 @@ Partial Class kurz_novy
         Me.Column1.HeaderText = "Názov kurzu"
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
+        Me.Column1.Width = 95
         '
         'zaciatok_kurzu
         '
@@ -441,6 +443,7 @@ Partial Class kurz_novy
         Me.zaciatok_kurzu.HeaderText = "Začiatok kurzu"
         Me.zaciatok_kurzu.Name = "zaciatok_kurzu"
         Me.zaciatok_kurzu.ReadOnly = True
+        Me.zaciatok_kurzu.Width = 107
         '
         'koniec_kurzu
         '
@@ -448,6 +451,7 @@ Partial Class kurz_novy
         Me.koniec_kurzu.HeaderText = "Koniec kurzu"
         Me.koniec_kurzu.Name = "koniec_kurzu"
         Me.koniec_kurzu.ReadOnly = True
+        Me.koniec_kurzu.Width = 97
         '
         'typ_nazov
         '
@@ -455,6 +459,7 @@ Partial Class kurz_novy
         Me.typ_nazov.HeaderText = "Typ kurzu"
         Me.typ_nazov.Name = "typ_nazov"
         Me.typ_nazov.ReadOnly = True
+        Me.typ_nazov.Width = 81
         '
         'miesto_konania
         '
@@ -462,6 +467,7 @@ Partial Class kurz_novy
         Me.miesto_konania.HeaderText = "Miesto konania"
         Me.miesto_konania.Name = "miesto_konania"
         Me.miesto_konania.ReadOnly = True
+        Me.miesto_konania.Width = 108
         '
         'pocet
         '
@@ -469,6 +475,7 @@ Partial Class kurz_novy
         Me.pocet.HeaderText = "Počet osôb"
         Me.pocet.Name = "pocet"
         Me.pocet.ReadOnly = True
+        Me.pocet.Width = 88
         '
         'cislo_protokolu
         '
@@ -476,6 +483,7 @@ Partial Class kurz_novy
         Me.cislo_protokolu.HeaderText = "Číslo protokolu"
         Me.cislo_protokolu.Name = "cislo_protokolu"
         Me.cislo_protokolu.ReadOnly = True
+        Me.cislo_protokolu.Width = 108
         '
         'kurz_novy
         '
