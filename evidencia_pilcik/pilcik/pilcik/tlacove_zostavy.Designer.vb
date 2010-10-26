@@ -32,8 +32,13 @@ Partial Class tlacove_zostavy
         Me.protokol_pila_RadioButton = New System.Windows.Forms.RadioButton
         Me.protokol_lkt_RadioButton = New System.Windows.Forms.RadioButton
         Me.RadioButton3 = New System.Windows.Forms.RadioButton
+        Me.KurzComboDataSet = New pilcik.kurzComboDataSet
+        Me.KurzBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KurzTableAdapter1 = New pilcik.kurzComboDataSetTableAdapters.kurzTableAdapter
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KurzComboDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KurzBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -47,12 +52,12 @@ Partial Class tlacove_zostavy
         '
         'protokol_kurzComboBox
         '
-        Me.protokol_kurzComboBox.DataSource = Me.KurzBindingSource
-        Me.protokol_kurzComboBox.DisplayMember = "nazov"
+        Me.protokol_kurzComboBox.DataSource = Me.KurzBindingSource1
+        Me.protokol_kurzComboBox.DisplayMember = "nazov_spolu"
         Me.protokol_kurzComboBox.FormattingEnabled = True
-        Me.protokol_kurzComboBox.Location = New System.Drawing.Point(94, 78)
+        Me.protokol_kurzComboBox.Location = New System.Drawing.Point(328, 221)
         Me.protokol_kurzComboBox.Name = "protokol_kurzComboBox"
-        Me.protokol_kurzComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.protokol_kurzComboBox.Size = New System.Drawing.Size(315, 21)
         Me.protokol_kurzComboBox.TabIndex = 3
         Me.protokol_kurzComboBox.ValueMember = "id"
         Me.protokol_kurzComboBox.Visible = False
@@ -114,6 +119,20 @@ Partial Class tlacove_zostavy
         Me.RadioButton3.Text = "RadioButton3"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
+        'KurzComboDataSet
+        '
+        Me.KurzComboDataSet.DataSetName = "kurzComboDataSet"
+        Me.KurzComboDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'KurzBindingSource1
+        '
+        Me.KurzBindingSource1.DataMember = "kurz"
+        Me.KurzBindingSource1.DataSource = Me.KurzComboDataSet
+        '
+        'KurzTableAdapter1
+        '
+        Me.KurzTableAdapter1.ClearBeforeFill = True
+        '
         'tlacove_zostavy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -131,6 +150,8 @@ Partial Class tlacove_zostavy
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KurzComboDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KurzBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -144,4 +165,7 @@ Partial Class tlacove_zostavy
     Friend WithEvents protokol_pila_RadioButton As System.Windows.Forms.RadioButton
     Friend WithEvents protokol_lkt_RadioButton As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
+    Friend WithEvents KurzComboDataSet As pilcik.kurzComboDataSet
+    Friend WithEvents KurzBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents KurzTableAdapter1 As pilcik.kurzComboDataSetTableAdapters.kurzTableAdapter
 End Class

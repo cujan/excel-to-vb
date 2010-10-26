@@ -95,12 +95,12 @@ Public Class hlavna_aplikacia
 
     End Sub
 
-    Private Sub NovýToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NovýToolStripMenuItem.Click
+    Private Sub NovýToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         osoba_pridaj.Show()
 
     End Sub
 
-    Private Sub NovýToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NovýToolStripMenuItem1.Click
+    Private Sub NovýToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         kurz_novy.Show()
     End Sub
 
@@ -133,5 +133,17 @@ Public Class hlavna_aplikacia
 
     Private Sub ToolStripButton3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton3.Click
         clenovia_kurzu.Show()
+    End Sub
+
+    Private Sub OsobaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OsobaToolStripMenuItem.Click
+        osoba_pridaj.Show()
+    End Sub
+
+    Private Sub KurzyToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles KurzyToolStripMenuItem.Click
+        kurz_novy.Show()
+    End Sub
+
+    Private Sub ToolStripStatusLabel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripStatusLabel.Click
+
     End Sub
 End Class

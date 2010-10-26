@@ -6,7 +6,139 @@ pilcik
 </name>
 </assembly>
 <members>
-<member name="T:pilcik.pocet_clenov_kurzuDataSet.clenovia_kurzuDataTable">
+<member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.c_typ_kurzuDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.clenovia_kurzuDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.kurzDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.osobaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.skusobna_komisiaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.vseobecne_udajeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.c_typ_kurzuRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.clenovia_kurzuRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.kurzRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.osobaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.skusobna_komisiaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.vseobecne_udajeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.c_typ_kurzuRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.clenovia_kurzuRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.kurzRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.osobaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.skusobna_komisiaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet.vseobecne_udajeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.c_typ_kurzuTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.clenovia_kurzuTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.kurzTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.osobaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.skusobna_komisiaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.vseobecne_udajeTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(pilcik.vyprsanie_platnosti_preukazuDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(pilcik.vyprsanie_platnosti_preukazuDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(pilcik.vyprsanie_platnosti_preukazuDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.TableAdapterManager.UpdateAll(pilcik.vyprsanie_platnosti_preukazuDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:pilcik.pocet_clenov_kurzuDataSet.clenovia_kurzuDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
