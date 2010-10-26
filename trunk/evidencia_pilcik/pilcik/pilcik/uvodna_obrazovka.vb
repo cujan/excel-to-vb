@@ -15,4 +15,8 @@
         Label4.Text = pocet_osob
         Label5.Text = pocet_kurz
     End Sub
+
+    Private Sub verziaLabel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles verziaLabel.Click
+
+    End Sub
 End Class

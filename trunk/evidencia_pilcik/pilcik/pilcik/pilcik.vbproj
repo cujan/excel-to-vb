@@ -265,6 +265,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vseobecne_udajeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="vyprsanie_platnosti_preukazuDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vyprsanie_platnosti_preukazuDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="clenovia_kurzu.resx">
@@ -462,6 +467,17 @@
     <None Include="vseobecne_udajeDataSet.xss">
       <DependentUpon>vseobecne_udajeDataSet.xsd</DependentUpon>
     </None>
+    <None Include="vyprsanie_platnosti_preukazuDataSet.xsc">
+      <DependentUpon>vyprsanie_platnosti_preukazuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="vyprsanie_platnosti_preukazuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vyprsanie_platnosti_preukazuDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vyprsanie_platnosti_preukazuDataSet.xss">
+      <DependentUpon>vyprsanie_platnosti_preukazuDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="pila.ico" />
@@ -520,12 +536,12 @@
   <ItemGroup>
     <PublishFile Include="pilcik_db.accdb">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>
