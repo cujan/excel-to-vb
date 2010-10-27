@@ -60,3 +60,4 @@ D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.tz_
 D:\evidencia SPZ\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.tz_protokol_pila.resources
 D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.tz_protokol_pila.resources
 D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.tz_protokol_lkt.resources
+D:\projekt spz\excel-to-vb\evidencia_pilcik\pilcik\pilcik\obj\Debug\pilcik.mail.resources
