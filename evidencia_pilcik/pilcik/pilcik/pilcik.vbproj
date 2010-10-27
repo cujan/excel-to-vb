@@ -77,6 +77,9 @@
     <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -110,6 +113,11 @@
     <Import Include="System.Data.SqlTypes" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
+    <Import Include="System.Net" />
+    <Import Include="System.Net.Mail" />
+    <Import Include="System.Net.Security" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Mail" />
     <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
@@ -160,6 +168,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>kurz_pocetDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mail.Designer.vb">
+      <DependentUpon>mail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mail.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="osobaComboDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -287,6 +301,9 @@
     <EmbeddedResource Include="kurz_novy.resx">
       <DependentUpon>kurz_novy.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mail.resx">
+      <DependentUpon>mail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="osoba_detail.resx">
       <DependentUpon>osoba_detail.vb</DependentUpon>
@@ -536,14 +553,17 @@
   <ItemGroup>
     <PublishFile Include="pilcik_db.accdb">
       <Visible>False</Visible>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\" />

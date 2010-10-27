@@ -86,6 +86,8 @@ Partial Class hlavna_aplikacia
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel
         Me.StatusStrip = New System.Windows.Forms.StatusStrip
+        Me.PomocToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.PošliEmailToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -93,7 +95,7 @@ Partial Class hlavna_aplikacia
         '
         'MenuStrip
         '
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.EditMenu, Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu, Me.OsobaToolStripMenuItem, Me.KurzyToolStripMenuItem, Me.PrehladToolStripMenuItem, Me.TlačovéZostavyToolStripMenuItem, Me.SkúšobnáKomisiaToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.EditMenu, Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu, Me.OsobaToolStripMenuItem, Me.KurzyToolStripMenuItem, Me.PrehladToolStripMenuItem, Me.TlačovéZostavyToolStripMenuItem, Me.SkúšobnáKomisiaToolStripMenuItem, Me.PomocToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
@@ -544,6 +546,19 @@ Partial Class hlavna_aplikacia
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
+        'PomocToolStripMenuItem
+        '
+        Me.PomocToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PošliEmailToolStripMenuItem})
+        Me.PomocToolStripMenuItem.Name = "PomocToolStripMenuItem"
+        Me.PomocToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
+        Me.PomocToolStripMenuItem.Text = "Pomoc"
+        '
+        'PošliEmailToolStripMenuItem
+        '
+        Me.PošliEmailToolStripMenuItem.Name = "PošliEmailToolStripMenuItem"
+        Me.PošliEmailToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PošliEmailToolStripMenuItem.Text = "Pošli e-mail"
+        '
         'hlavna_aplikacia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -631,5 +646,7 @@ Partial Class hlavna_aplikacia
     Friend WithEvents ToolStripStatusLabel As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents StatusStrip As System.Windows.Forms.StatusStrip
     Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents PomocToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PošliEmailToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

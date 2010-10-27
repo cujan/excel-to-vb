@@ -146,4 +146,8 @@ Public Class hlavna_aplikacia
     Private Sub ToolStripStatusLabel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripStatusLabel.Click
 
     End Sub
+
+    Private Sub PošliEmailToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PošliEmailToolStripMenuItem.Click
+        mail.Show()
+    End Sub
 End Class
