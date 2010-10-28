@@ -30,6 +30,7 @@ Partial Class uvodna_obrazovka
         Me.verziaLabel = New System.Windows.Forms.Label
         Me.Label6 = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
+        Me.skonecena_platnostButton = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'Label1
@@ -105,12 +106,22 @@ Partial Class uvodna_obrazovka
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'skonecena_platnostButton
+        '
+        Me.skonecena_platnostButton.Location = New System.Drawing.Point(456, 247)
+        Me.skonecena_platnostButton.Name = "skonecena_platnostButton"
+        Me.skonecena_platnostButton.Size = New System.Drawing.Size(243, 23)
+        Me.skonecena_platnostButton.TabIndex = 8
+        Me.skonecena_platnostButton.Text = "Osoby, ktorým skoncila platnosť preukazu"
+        Me.skonecena_platnostButton.UseVisualStyleBackColor = True
+        '
         'uvodna_obrazovka
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(929, 701)
         Me.ControlBox = False
+        Me.Controls.Add(Me.skonecena_platnostButton)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.verziaLabel)
@@ -133,4 +144,5 @@ Partial Class uvodna_obrazovka
     Friend WithEvents verziaLabel As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents skonecena_platnostButton As System.Windows.Forms.Button
 End Class
