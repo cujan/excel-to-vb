@@ -45,4 +45,8 @@ Public Class uvodna_obrazovka
             MsgBox("chyba , zadali ste nespravne udaje" + vbNewLine + ex.Message, MsgBoxStyle.Critical, "odosielanie mailu")
         End Try
     End Sub
+
+    Private Sub skonecena_platnostButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles skonecena_platnostButton.Click
+        skoncena_platnost_osoba.Show()
+    End Sub
 End Class
