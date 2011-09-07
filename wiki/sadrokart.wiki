@@ -1,34 +1,13 @@
-,,cena za 1 m2,,m2,,cena celkom,,,,Min cena,Min Firma,,Dek - Min
-Dek,hobby,1.660525,,120,,199.263,,hobby,,1.541666667,Erbe,,0.118858333
-Dek,vodeodol,2.5092,,31.2,,78.28704,,vodeodol,,2.5092,Dek,,0
-Dek,UD,0.5082,,78,,39.6396,,UD,,0.45,Baumax,,0.0582
-Dek,CD,0.7722,,450,,347.49,,CD,,0.702,Woodc,,0.0702
-Dek,super,4.0488,,,,0,,,,,,,0.247258333
-Dek,vario,7.3668,,,,0,,,,,,,
-Spolu,,,,,,664.67964,,,,,,,
-,,,,,,,,,,,,,Bau - Min
-Baumax,hobby,1.816666667,,120,,218,,,,,,,0.275
-Baumax,vodeodol,3.79,,31.2,,118.248,,,,,,,1.2808
-Baumax,UD,0.45,,78,,35.1,,,,,,,0
-Baumax,CD,0.7225,,450,,325.125,,,,,,,0.0205
-Baumax,super,4.45,,,,0,,,,,,,1.5763
-Baumax,vario,7.99,,,,0,,,,,,,
-Spolu,,,,,,696.473,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,Erbe - Min
-Erbe,hobby,1.541666667,,120,,185,,,,,,,0
-Erbe,vodeodol,2.770833333,,31.2,,86.45,,,,,,,0.261633333
-Erbe,UD,0.54,,78,,42.12,,,,,,,0.09
-Erbe,CD,0.99,,450,,445.5,,,,,,,0.288
-Erbe,super,,,,,0,,,,,,,0.639633333
-Erbe,vario,,,,,0,,,,,,,1.279266667
-,,,,,,759.07,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,Wood - Min
-Woodc,hobby,1.56,,120,,187.2,,,,,,,0.018333333
-Woodc,vodeodol,2.879960317,,31.2,,89.8547619,,,,,,,0.370760317
-Woodc,UD,0.468024691,,78,,36.50592593,,,,,,,0.018024691
-Woodc,CD,0.702,,450,,315.9,,,,,,,0
-Woodc,super,,,,,,,,,,,,0.407118342
-Woodc,vario,,,,,,,,,,,,
-,,,,,,629.4606878,,,,,,,
+INSERT INTO  `EMI_test_results`.`test_scenaria` (
+`scenarioID` ,
+`gridVersion` ,
+`description` ,
+`command` ,
+`successful_output` ,
+`parameters` ,
+`pre_step` ,
+`post_step`
+)
+VALUES (
+'arcsub_man',  'arc1',  'Checks man pages for arcsub',  'arcsub -v ; /usr/bin/man -P /bin/cat arcsub',  'NorduGrid Users Manual',  'P{giis_endpoint}',  'pwd',  'pwd'
+);
