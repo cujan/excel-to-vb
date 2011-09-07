@@ -1,13 +1,1 @@
-INSERT INTO  `EMI_test_results`.`test_scenaria` (
-`scenarioID` ,
-`gridVersion` ,
-`description` ,
-`command` ,
-`successful_output` ,
-`parameters` ,
-`pre_step` ,
-`post_step`
-)
-VALUES (
-'arcsub_man',  'arc1',  'Checks man pages for arcsub',  'arcsub -v ; /usr/bin/man -P /bin/cat arcsub',  'NorduGrid Users Manual',  'P{giis_endpoint}',  'pwd',  'pwd'
-);
+arcproxy, arcinfo, arcsub, arcstat, arccat, arcget, arckill, arcclean, arcrenew, arcresub, arctest, arcmigrate, arcresume, arcecho, arcslcs, arcsync, arccp, arcwsrf, arcrm, arcls, arched, arcsrmping
