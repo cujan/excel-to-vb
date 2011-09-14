@@ -13,9 +13,9 @@
 
     Private Sub kurz_novy_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'PilcikdbDataSet.c_typ_kurzu' table. You can move, or remove it, as needed.
-        Me.C_typ_kurzuTableAdapter.Fill(Me.PilcikdbDataSet.c_typ_kurzu)
+
         'TODO: This line of code loads data into the 'Kurz_pocetDataSet.kurz' table. You can move, or remove it, as needed.
-        Me.KurzTableAdapter.Fill(Me.Kurz_pocetDataSet.kurz)
+
         Me.MdiParent = hlavna_aplikacia
         'TODO: This line of code loads data into the 'PilcikdbDataSet.kurz' table. You can move, or remove it, as needed.
 
@@ -73,7 +73,7 @@
             con.Open()
             com.ExecuteNonQuery()
             con.Close()
-            Me.KurzTableAdapter.Fill(Me.Kurz_pocetDataSet.kurz)
+
 
 
             NazovTextBox.Text = ""
@@ -121,7 +121,7 @@
                 com.ExecuteNonQuery()
                 com1.ExecuteNonQuery()
                 con.Close()
-                Me.KurzTableAdapter.Fill(Me.Kurz_pocetDataSet.kurz)
+
             End If
         Else
             MsgBox("Nemáte vybraný žiaden kurz.")

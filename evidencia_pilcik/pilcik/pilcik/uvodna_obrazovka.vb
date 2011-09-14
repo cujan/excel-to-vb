@@ -6,9 +6,9 @@ Public Class uvodna_obrazovka
         Me.WindowState = FormWindowState.Maximized
 
         'pocet evidovanych osob a kurzov
-        Dim con As New SqlCeConnection(pripojovaci_retazec)
-        Dim com As New SqlCeCommand("SELECT COUNT(*) FROM osoba", con)
-        Dim com1 As New SqlCeCommand("SELECT COUNT(*) FROM kurz", con)
+        Dim con As New OleDbConnection(pripojovaci_retazec)
+        Dim com As New OleDbCommand("SELECT COUNT(*) FROM osoba", con)
+        Dim com1 As New OleDbCommand("SELECT COUNT(*) FROM kurz", con)
         con.Open()
         Dim pocet_osob As Integer = com.ExecuteScalar()
         Dim pocet_kurz As Integer = com1.ExecuteScalar()

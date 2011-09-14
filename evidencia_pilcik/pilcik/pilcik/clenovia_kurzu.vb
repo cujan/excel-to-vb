@@ -2,7 +2,7 @@
 
     Private Sub clenovia_kurzu_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Clenovia_kurzuDataSet.clenovia_kurzu' table. You can move, or remove it, as needed.
-        Me.Clenovia_kurzuTableAdapter.Fill(Me.Clenovia_kurzuDataSet.clenovia_kurzu)
+
         Me.MdiParent = hlavna_aplikacia
         Me.WindowState = FormWindowState.Maximized
         Me.BringToFront()
@@ -12,7 +12,7 @@
     Private Sub Clenovia_kurzuBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
         Me.Clenovia_kurzuBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.Clenovia_kurzuDataSet)
+
 
     End Sub
 

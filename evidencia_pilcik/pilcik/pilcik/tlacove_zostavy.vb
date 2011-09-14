@@ -2,9 +2,9 @@
 
     Private Sub tlacove_zostavy_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'KurzComboDataSet.kurz' table. You can move, or remove it, as needed.
-        Me.KurzTableAdapter1.Fill(Me.KurzComboDataSet.kurz)
+
         'TODO: This line of code loads data into the 'PilcikdbDataSet.kurz' table. You can move, or remove it, as needed.
-        Me.KurzTableAdapter.Fill(Me.PilcikdbDataSet.kurz)
+
         Me.MdiParent = hlavna_aplikacia
         protokol_kurzComboBox.SelectedIndex = -1
         Me.WindowState = FormWindowState.Maximized

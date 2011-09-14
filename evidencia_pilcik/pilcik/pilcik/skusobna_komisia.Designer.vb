@@ -27,10 +27,9 @@ Partial Class skusobna_komisia
         Dim Clen1Label As System.Windows.Forms.Label
         Dim Clen2Label As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(skusobna_komisia))
-        Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
+
         Me.Skusobna_komisiaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Skusobna_komisiaTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.skusobna_komisiaTableAdapter
-        Me.TableAdapterManager = New pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
+        
         Me.Skusobna_komisiaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
@@ -51,7 +50,7 @@ Partial Class skusobna_komisia
         PredsedaLabel = New System.Windows.Forms.Label
         Clen1Label = New System.Windows.Forms.Label
         Clen2Label = New System.Windows.Forms.Label
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+
         CType(Me.Skusobna_komisiaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Skusobna_komisiaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Skusobna_komisiaBindingNavigator.SuspendLayout()
@@ -86,24 +85,21 @@ Partial Class skusobna_komisia
         '
         'PilcikdbDataSet
         '
-        Me.PilcikdbDataSet.DataSetName = "pilcikdbDataSet"
-        Me.PilcikdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+      
         '
         'Skusobna_komisiaBindingSource
         '
         Me.Skusobna_komisiaBindingSource.DataMember = "skusobna_komisia"
-        Me.Skusobna_komisiaBindingSource.DataSource = Me.PilcikdbDataSet
+
         '
         'Skusobna_komisiaTableAdapter
         '
-        Me.Skusobna_komisiaTableAdapter.ClearBeforeFill = True
+
         '
         'TableAdapterManager
         '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+       
 
-        Me.TableAdapterManager.skusobna_komisiaTableAdapter = Me.Skusobna_komisiaTableAdapter
-        Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Skusobna_komisiaBindingNavigator
         '
@@ -265,7 +261,7 @@ Partial Class skusobna_komisia
         Me.Name = "skusobna_komisia"
         Me.Text = "skusobna_komisia"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+
         CType(Me.Skusobna_komisiaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Skusobna_komisiaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Skusobna_komisiaBindingNavigator.ResumeLayout(False)
@@ -274,10 +270,9 @@ Partial Class skusobna_komisia
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents PilcikdbDataSet As pilcik.pilcikdbDataSet
+
     Friend WithEvents Skusobna_komisiaBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents Skusobna_komisiaTableAdapter As pilcik.pilcikdbDataSetTableAdapters.skusobna_komisiaTableAdapter
-    Friend WithEvents TableAdapterManager As pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
+    
     Friend WithEvents Skusobna_komisiaBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel

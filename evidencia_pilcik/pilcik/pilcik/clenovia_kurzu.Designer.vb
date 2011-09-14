@@ -25,10 +25,9 @@ Partial Class clenovia_kurzu
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(clenovia_kurzu))
         Me.Label1 = New System.Windows.Forms.Label
-        Me.Clenovia_kurzuDataSet = New pilcik.clenovia_kurzuDataSet
+
         Me.Clenovia_kurzuBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Clenovia_kurzuTableAdapter = New pilcik.clenovia_kurzuDataSetTableAdapters.clenovia_kurzuTableAdapter
-        Me.TableAdapterManager = New pilcik.clenovia_kurzuDataSetTableAdapters.TableAdapterManager
+        
         Me.Clenovia_kurzuBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
@@ -53,7 +52,7 @@ Partial Class clenovia_kurzu
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        CType(Me.Clenovia_kurzuDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+
         CType(Me.Clenovia_kurzuBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Clenovia_kurzuBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Clenovia_kurzuBindingNavigator.SuspendLayout()
@@ -72,23 +71,21 @@ Partial Class clenovia_kurzu
         '
         'Clenovia_kurzuDataSet
         '
-        Me.Clenovia_kurzuDataSet.DataSetName = "clenovia_kurzuDataSet"
-        Me.Clenovia_kurzuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        
         '
         'Clenovia_kurzuBindingSource
         '
         Me.Clenovia_kurzuBindingSource.DataMember = "clenovia_kurzu"
-        Me.Clenovia_kurzuBindingSource.DataSource = Me.Clenovia_kurzuDataSet
+
         '
         'Clenovia_kurzuTableAdapter
         '
-        Me.Clenovia_kurzuTableAdapter.ClearBeforeFill = True
+
         '
         'TableAdapterManager
         '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.UpdateOrder = pilcik.clenovia_kurzuDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        
+
         '
         'Clenovia_kurzuBindingNavigator
         '
@@ -291,7 +288,7 @@ Partial Class clenovia_kurzu
         Me.Controls.Add(Me.Label1)
         Me.Name = "clenovia_kurzu"
         Me.Text = "clenovia_kurzu"
-        CType(Me.Clenovia_kurzuDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+
         CType(Me.Clenovia_kurzuBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Clenovia_kurzuBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Clenovia_kurzuBindingNavigator.ResumeLayout(False)
@@ -304,10 +301,9 @@ Partial Class clenovia_kurzu
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Clenovia_kurzuDataSet As pilcik.clenovia_kurzuDataSet
+
     Friend WithEvents Clenovia_kurzuBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents Clenovia_kurzuTableAdapter As pilcik.clenovia_kurzuDataSetTableAdapters.clenovia_kurzuTableAdapter
-    Friend WithEvents TableAdapterManager As pilcik.clenovia_kurzuDataSetTableAdapters.TableAdapterManager
+
     Friend WithEvents Clenovia_kurzuBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel

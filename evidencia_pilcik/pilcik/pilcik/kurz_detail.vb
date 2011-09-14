@@ -7,14 +7,14 @@
 
     Private Sub kurz_detail_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'PilcikdbDataSet.c_typ_kurzu' table. You can move, or remove it, as needed.
-        Me.C_typ_kurzuTableAdapter.Fill(Me.PilcikdbDataSet.c_typ_kurzu)
+
         Me.MdiParent = hlavna_aplikacia
         Dim id_vybrateho_kurzu As Integer = kurz_novy.Label2.Text
         'TODO: This line of code loads data into the 'Clenovia_kurzuDataSet.clenovia_kurzu' table. You can move, or remove it, as needed.
-        Me.Clenovia_kurzuTableAdapter.FillBy_parameter(Me.Clenovia_kurzuDataSet.clenovia_kurzu, id_vybrateho_kurzu)
+
 
         'TODO: This line of code loads data into the 'PilcikdbDataSet.kurz' table. You can move, or remove it, as needed.
-        Me.KurzTableAdapter.FillBy_id_kurzu(Me.PilcikdbDataSet.kurz, id_vybrateho_kurzu)
+
 
         'TODO: This line of code loads data into the 'Clenovia_kurzuDataSet.clenovia_kurzu' table. You can move, or remove it, as needed.
 
@@ -61,8 +61,8 @@
                 con.Open()
                 com.ExecuteNonQuery()
                 con.Close()
-                Me.Clenovia_kurzuTableAdapter.FillBy_parameter(Me.Clenovia_kurzuDataSet.clenovia_kurzu, id_kurz)
-                kurz_novy.KurzTableAdapter.Fill(kurz_novy.Kurz_pocetDataSet.kurz)
+
+
             End If
         Else
             MsgBox("Nemáte vybraného žiadneho člena.")

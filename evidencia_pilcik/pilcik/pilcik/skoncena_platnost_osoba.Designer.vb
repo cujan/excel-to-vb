@@ -24,6 +24,9 @@ Partial Class skoncena_platnost_osoba
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(skoncena_platnost_osoba))
+
+        Me.OsobaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        
         Me.OsobaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton
@@ -38,17 +41,44 @@ Partial Class skoncena_platnost_osoba
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.OsobaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton
         Me.OsobaDataGridView = New System.Windows.Forms.DataGridView
-        Me.OsobaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Vyprsanie_platnosti_preukazuDataSet = New pilcik.vyprsanie_platnosti_preukazuDataSet
-        Me.OsobaTableAdapter = New pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.osobaTableAdapter
-        Me.TableAdapterManager = New pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.TableAdapterManager
-        Me.priezvisko = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.FillBy_skoncena_platnostToolStrip = New System.Windows.Forms.ToolStrip
+        Me.FillBy_skoncena_platnostToolStripButton = New System.Windows.Forms.ToolStripButton
+
+        CType(Me.OsobaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OsobaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.OsobaBindingNavigator.SuspendLayout()
         CType(Me.OsobaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OsobaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Vyprsanie_platnosti_preukazuDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FillBy_skoncena_platnostToolStrip.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'Vyprsanie_platnosti_preukazuDataSet
+        '
+       
+        '
+        'OsobaBindingSource
+        '
+        Me.OsobaBindingSource.DataMember = "osoba"
+
+        '
+        'OsobaTableAdapter
+  
+        '
+        'TableAdapterManager
+        '
+       
         '
         'OsobaBindingNavigator
         '
@@ -96,14 +126,14 @@ Partial Class skoncena_platnost_osoba
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -165,67 +195,134 @@ Partial Class skoncena_platnost_osoba
         '
         Me.OsobaDataGridView.AutoGenerateColumns = False
         Me.OsobaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.OsobaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.priezvisko})
+        Me.OsobaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13})
         Me.OsobaDataGridView.DataSource = Me.OsobaBindingSource
-        Me.OsobaDataGridView.Location = New System.Drawing.Point(12, 51)
+        Me.OsobaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.OsobaDataGridView.Location = New System.Drawing.Point(0, 25)
         Me.OsobaDataGridView.Name = "OsobaDataGridView"
-        Me.OsobaDataGridView.Size = New System.Drawing.Size(845, 362)
+        Me.OsobaDataGridView.Size = New System.Drawing.Size(884, 419)
         Me.OsobaDataGridView.TabIndex = 1
         '
-        'OsobaBindingSource
+        'DataGridViewTextBoxColumn1
         '
-        Me.OsobaBindingSource.DataMember = "osoba"
-        Me.OsobaBindingSource.DataSource = Me.Vyprsanie_platnosti_preukazuDataSet
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "id"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
         '
-        'Vyprsanie_platnosti_preukazuDataSet
+        'DataGridViewTextBoxColumn2
         '
-        Me.Vyprsanie_platnosti_preukazuDataSet.DataSetName = "vyprsanie_platnosti_preukazuDataSet"
-        Me.Vyprsanie_platnosti_preukazuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "titul_pred"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "titul_pred"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
-        'OsobaTableAdapter
+        'DataGridViewTextBoxColumn3
         '
-        Me.OsobaTableAdapter.ClearBeforeFill = True
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "priezvisko"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "priezvisko"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
-        'TableAdapterManager
+        'DataGridViewTextBoxColumn4
         '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.c_typ_kurzuTableAdapter = Nothing
-        Me.TableAdapterManager.clenovia_kurzuTableAdapter = Nothing
-        Me.TableAdapterManager.kurzTableAdapter = Nothing
-        Me.TableAdapterManager.osobaTableAdapter = Me.OsobaTableAdapter
-        Me.TableAdapterManager.skusobna_komisiaTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.vseobecne_udajeTableAdapter = Nothing
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "meno"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "meno"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
-        'priezvisko
+        'DataGridViewTextBoxColumn5
         '
-        Me.priezvisko.DataPropertyName = "priezvisko"
-        Me.priezvisko.HeaderText = "priezvisko"
-        Me.priezvisko.Name = "priezvisko"
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "datum_narodenia"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "datum_narodenia"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "rodne_cislo"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "rodne_cislo"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "cislo_op"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "cislo_op"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "ulica"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "ulica"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "mesto"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "mesto"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "psc"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "psc"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "cislo_pilcickeho_preukazu"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "cislo_pilcickeho_preukazu"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "email"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "email"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "telefon"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "telefon"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        '
+        'FillBy_skoncena_platnostToolStrip
+        '
+        Me.FillBy_skoncena_platnostToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FillBy_skoncena_platnostToolStripButton})
+        Me.FillBy_skoncena_platnostToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.FillBy_skoncena_platnostToolStrip.Name = "FillBy_skoncena_platnostToolStrip"
+        Me.FillBy_skoncena_platnostToolStrip.Size = New System.Drawing.Size(111, 25)
+        Me.FillBy_skoncena_platnostToolStrip.TabIndex = 2
+        Me.FillBy_skoncena_platnostToolStrip.Text = "FillBy_skoncena_platnostToolStrip"
+        '
+        'FillBy_skoncena_platnostToolStripButton
+        '
+        Me.FillBy_skoncena_platnostToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.FillBy_skoncena_platnostToolStripButton.Name = "FillBy_skoncena_platnostToolStripButton"
+        Me.FillBy_skoncena_platnostToolStripButton.Size = New System.Drawing.Size(23, 23)
+        Me.FillBy_skoncena_platnostToolStripButton.Text = "FillBy_skoncena_platnost"
         '
         'skoncena_platnost_osoba
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(884, 414)
+        Me.ClientSize = New System.Drawing.Size(884, 444)
+        Me.Controls.Add(Me.FillBy_skoncena_platnostToolStrip)
         Me.Controls.Add(Me.OsobaDataGridView)
         Me.Controls.Add(Me.OsobaBindingNavigator)
         Me.Name = "skoncena_platnost_osoba"
         Me.Text = "skoncena_platnost_osoba"
+
+        CType(Me.OsobaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OsobaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.OsobaBindingNavigator.ResumeLayout(False)
         Me.OsobaBindingNavigator.PerformLayout()
         CType(Me.OsobaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OsobaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Vyprsanie_platnosti_preukazuDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FillBy_skoncena_platnostToolStrip.ResumeLayout(False)
+        Me.FillBy_skoncena_platnostToolStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Vyprsanie_platnosti_preukazuDataSet As pilcik.vyprsanie_platnosti_preukazuDataSet
+
     Friend WithEvents OsobaBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents OsobaTableAdapter As pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.osobaTableAdapter
-    Friend WithEvents TableAdapterManager As pilcik.vyprsanie_platnosti_preukazuDataSetTableAdapters.TableAdapterManager
+  
     Friend WithEvents OsobaBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -240,5 +337,19 @@ Partial Class skoncena_platnost_osoba
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents OsobaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents OsobaDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents priezvisko As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FillBy_skoncena_platnostToolStrip As System.Windows.Forms.ToolStrip
+    Friend WithEvents FillBy_skoncena_platnostToolStripButton As System.Windows.Forms.ToolStripButton
 End Class

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{ADCA8095-1C9D-48EA-A143-70E14D274E84}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -24,6 +24,11 @@
     <SignManifests>true</SignManifests>
     <ApplicationIcon>pila.ico</ApplicationIcon>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
     <PublishUrl>D:\evidencia SPZ\publish pilcik\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -51,7 +56,8 @@
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>pilcik.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -60,7 +66,8 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>pilcik.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
@@ -123,22 +130,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="absolvovaneKurzyDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>absolvovaneKurzyDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="clenovia_kurzu.Designer.vb">
       <DependentUpon>clenovia_kurzu.vb</DependentUpon>
     </Compile>
     <Compile Include="clenovia_kurzu.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="clenovia_kurzuDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>clenovia_kurzuDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="clen_kurzu_pridaj.Designer.vb">
       <DependentUpon>clen_kurzu_pridaj.vb</DependentUpon>
@@ -147,11 +144,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="kniznica.vb" />
-    <Compile Include="kurzComboDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kurzComboDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="kurz_detail.Designer.vb">
       <DependentUpon>kurz_detail.vb</DependentUpon>
     </Compile>
@@ -164,21 +156,11 @@
     <Compile Include="kurz_novy.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="kurz_pocetDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kurz_pocetDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="mail.Designer.vb">
       <DependentUpon>mail.vb</DependentUpon>
     </Compile>
     <Compile Include="mail.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="osobaComboDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>osobaComboDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="osoba_detail.Designer.vb">
       <DependentUpon>osoba_detail.vb</DependentUpon>
@@ -192,31 +174,16 @@
     <Compile Include="osoba_pridaj.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pilcikdbDataSet.Designer.vb">
+    <Compile Include="pilcik_dbDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>pilcikdbDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="pilcikdbDataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>pilcikdbDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="pocet_clenov_kurzuDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>pocet_clenov_kurzuDataSet.xsd</DependentUpon>
+      <DependentUpon>pilcik_dbDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="pomocny.Designer.vb">
       <DependentUpon>pomocny.vb</DependentUpon>
     </Compile>
     <Compile Include="pomocny.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="protokolDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>protokolDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="skoncena_platnost_osoba.Designer.vb">
       <DependentUpon>skoncena_platnost_osoba.vb</DependentUpon>
@@ -229,11 +196,6 @@
     </Compile>
     <Compile Include="skusobna_komisia.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="skusobnyDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>skusobnyDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="tlacove_zostavy.Designer.vb">
       <DependentUpon>tlacove_zostavy.vb</DependentUpon>
@@ -279,16 +241,6 @@
     </Compile>
     <Compile Include="uvodna_obrazovka.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vseobecne_udajeDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>vseobecne_udajeDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="vyprsanie_platnosti_preukazuDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>vyprsanie_platnosti_preukazuDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -362,51 +314,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="absolvovaneKurzyDataSet.xsc">
-      <DependentUpon>absolvovaneKurzyDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="absolvovaneKurzyDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>absolvovaneKurzyDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="absolvovaneKurzyDataSet.xss">
-      <DependentUpon>absolvovaneKurzyDataSet.xsd</DependentUpon>
-    </None>
     <None Include="app.config" />
-    <None Include="clenovia_kurzuDataSet.xsc">
-      <DependentUpon>clenovia_kurzuDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="clenovia_kurzuDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>clenovia_kurzuDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="clenovia_kurzuDataSet.xss">
-      <DependentUpon>clenovia_kurzuDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="kurzComboDataSet.xsc">
-      <DependentUpon>kurzComboDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="kurzComboDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>kurzComboDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="kurzComboDataSet.xss">
-      <DependentUpon>kurzComboDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="kurz_pocetDataSet.xsc">
-      <DependentUpon>kurz_pocetDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="kurz_pocetDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>kurz_pocetDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="kurz_pocetDataSet.xss">
-      <DependentUpon>kurz_pocetDataSet.xsd</DependentUpon>
-    </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -417,101 +325,21 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="osobaComboDataSet.xsc">
-      <DependentUpon>osobaComboDataSet.xsd</DependentUpon>
+    <None Include="pilcik_dbDataSet1.xsc">
+      <DependentUpon>pilcik_dbDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="osobaComboDataSet.xsd">
+    <None Include="pilcik_dbDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>osobaComboDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>pilcik_dbDataSet1.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="osobaComboDataSet.xss">
-      <DependentUpon>osobaComboDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="pilcikdbDataSet.xsc">
-      <DependentUpon>pilcikdbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="pilcikdbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>pilcikdbDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="pilcikdbDataSet.xss">
-      <DependentUpon>pilcikdbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="pilcikdbDataSet1.xsc">
-      <DependentUpon>pilcikdbDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="pilcikdbDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>pilcikdbDataSet1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="pilcikdbDataSet1.xss">
-      <DependentUpon>pilcikdbDataSet1.xsd</DependentUpon>
+    <None Include="pilcik_dbDataSet1.xss">
+      <DependentUpon>pilcik_dbDataSet1.xsd</DependentUpon>
     </None>
     <None Include="pilcik_TemporaryKey.pfx" />
-    <None Include="pocet_clenov_kurzuDataSet.xsc">
-      <DependentUpon>pocet_clenov_kurzuDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="pocet_clenov_kurzuDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>pocet_clenov_kurzuDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="pocet_clenov_kurzuDataSet.xss">
-      <DependentUpon>pocet_clenov_kurzuDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="protokolDataSet.xsc">
-      <DependentUpon>protokolDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="protokolDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>protokolDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="protokolDataSet.xss">
-      <DependentUpon>protokolDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="skusobnyDataSet.xsc">
-      <DependentUpon>skusobnyDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="skusobnyDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>skusobnyDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="skusobnyDataSet.xss">
-      <DependentUpon>skusobnyDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="vseobecne_udajeDataSet.xsc">
-      <DependentUpon>vseobecne_udajeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="vseobecne_udajeDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>vseobecne_udajeDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="vseobecne_udajeDataSet.xss">
-      <DependentUpon>vseobecne_udajeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="vyprsanie_platnosti_preukazuDataSet.xsc">
-      <DependentUpon>vyprsanie_platnosti_preukazuDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="vyprsanie_platnosti_preukazuDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>vyprsanie_platnosti_preukazuDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="vyprsanie_platnosti_preukazuDataSet.xss">
-      <DependentUpon>vyprsanie_platnosti_preukazuDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="pila.ico" />
-    <Content Include="pilcikdb.sdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="pilcik_db.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -521,6 +349,11 @@
       <Visible>False</Visible>
       <ProductName>Crystal Reports Basic for Visual Studio 2008 %28x86, x64%29</ProductName>
       <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
       <Visible>False</Visible>
@@ -537,9 +370,14 @@
       <ProductName>.NET Framework 3.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
       <Visible>False</Visible>
-      <ProductName>SQL Server Compact 3.5</ProductName>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
@@ -559,6 +397,7 @@
       <TargetPath>
       </TargetPath>
       <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>
