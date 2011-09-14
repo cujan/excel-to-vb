@@ -2,7 +2,7 @@
 
     Private Sub clen_kurzu_pridaj_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'OsobaComboDataSet.osoba' table. You can move, or remove it, as needed.
-        Me.OsobaTableAdapter.Fill(Me.OsobaComboDataSet.osoba)
+
        
     End Sub
 
@@ -33,8 +33,8 @@
             con.Open()
             com.ExecuteNonQuery()
             con.Close()
-            kurz_detail.Clenovia_kurzuTableAdapter.FillBy_parameter(kurz_detail.Clenovia_kurzuDataSet.clenovia_kurzu, vybrany_kurz_id)
-            kurz_novy.KurzTableAdapter.Fill(kurz_novy.Kurz_pocetDataSet.kurz)
+
+
         Else
             MsgBox("Tento človek sa už v kurze nachádza!!!")
         End If

@@ -39,7 +39,7 @@ Partial Class osoba_detail
         Me.OsobaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.OsobaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
+
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
@@ -63,14 +63,12 @@ Partial Class osoba_detail
         Me.Cislo_pilcickeho_preukazuTextBox = New System.Windows.Forms.TextBox
         Me.EmailTextBox = New System.Windows.Forms.TextBox
         Me.TelefonTextBox = New System.Windows.Forms.TextBox
-        Me.OsobaTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.osobaTableAdapter
-        Me.TableAdapterManager = New pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
+      
         Me.ulozButton = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
-        Me.AbsolvovaneKurzyDataSet = New pilcik.absolvovaneKurzyDataSet
+
         Me.Clenovia_kurzuBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Clenovia_kurzuTableAdapter = New pilcik.absolvovaneKurzyDataSetTableAdapters.clenovia_kurzuTableAdapter
-        Me.TableAdapterManager1 = New pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager
+       
         Me.Clenovia_kurzuDataGridView = New System.Windows.Forms.DataGridView
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -91,8 +89,8 @@ Partial Class osoba_detail
         CType(Me.OsobaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.OsobaBindingNavigator.SuspendLayout()
         CType(Me.OsobaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AbsolvovaneKurzyDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+
+
         CType(Me.Clenovia_kurzuBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Clenovia_kurzuDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -250,12 +248,11 @@ Partial Class osoba_detail
         'OsobaBindingSource
         '
         Me.OsobaBindingSource.DataMember = "osoba"
-        Me.OsobaBindingSource.DataSource = Me.PilcikdbDataSet
+
         '
         'PilcikdbDataSet
         '
-        Me.PilcikdbDataSet.DataSetName = "pilcikdbDataSet"
-        Me.PilcikdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+ 
         '
         'BindingNavigatorCountItem
         '
@@ -439,15 +436,12 @@ Partial Class osoba_detail
         '
         'OsobaTableAdapter
         '
-        Me.OsobaTableAdapter.ClearBeforeFill = True
+
         '
         'TableAdapterManager
         '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.clenovia_kurzuTableAdapter = Nothing
-        Me.TableAdapterManager.osobaTableAdapter = Me.OsobaTableAdapter
-        Me.TableAdapterManager.skusobna_komisiaTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        
+
         '
         'ulozButton
         '
@@ -470,23 +464,21 @@ Partial Class osoba_detail
         '
         'AbsolvovaneKurzyDataSet
         '
-        Me.AbsolvovaneKurzyDataSet.DataSetName = "absolvovaneKurzyDataSet"
-        Me.AbsolvovaneKurzyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+    
         '
         'Clenovia_kurzuBindingSource
         '
         Me.Clenovia_kurzuBindingSource.DataMember = "clenovia_kurzu"
-        Me.Clenovia_kurzuBindingSource.DataSource = Me.AbsolvovaneKurzyDataSet
+
         '
         'Clenovia_kurzuTableAdapter
         '
-        Me.Clenovia_kurzuTableAdapter.ClearBeforeFill = True
+
         '
         'TableAdapterManager1
         '
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.Connection = Nothing
-        Me.TableAdapterManager1.UpdateOrder = pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+     
+
         '
         'Clenovia_kurzuDataGridView
         '
@@ -572,18 +564,17 @@ Partial Class osoba_detail
         Me.OsobaBindingNavigator.ResumeLayout(False)
         Me.OsobaBindingNavigator.PerformLayout()
         CType(Me.OsobaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AbsolvovaneKurzyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+
+
         CType(Me.Clenovia_kurzuBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Clenovia_kurzuDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents PilcikdbDataSet As pilcik.pilcikdbDataSet
+
     Friend WithEvents OsobaBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents OsobaTableAdapter As pilcik.pilcikdbDataSetTableAdapters.osobaTableAdapter
-    Friend WithEvents TableAdapterManager As pilcik.pilcikdbDataSetTableAdapters.TableAdapterManager
+
     Friend WithEvents OsobaBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -611,10 +602,9 @@ Partial Class osoba_detail
     Friend WithEvents TelefonTextBox As System.Windows.Forms.TextBox
     Friend WithEvents ulozButton As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents AbsolvovaneKurzyDataSet As pilcik.absolvovaneKurzyDataSet
+
     Friend WithEvents Clenovia_kurzuBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents Clenovia_kurzuTableAdapter As pilcik.absolvovaneKurzyDataSetTableAdapters.clenovia_kurzuTableAdapter
-    Friend WithEvents TableAdapterManager1 As pilcik.absolvovaneKurzyDataSetTableAdapters.TableAdapterManager
+  
     Friend WithEvents Clenovia_kurzuDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn

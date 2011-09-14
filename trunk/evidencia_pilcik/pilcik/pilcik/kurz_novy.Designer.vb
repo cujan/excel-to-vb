@@ -39,12 +39,12 @@ Partial Class kurz_novy
         Me.Miesto_konaniaTextBox = New System.Windows.Forms.TextBox
         Me.TypComboBox = New System.Windows.Forms.ComboBox
         Me.CtypkurzuBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PilcikdbDataSet = New pilcik.pilcikdbDataSet
+
         Me.Label3 = New System.Windows.Forms.Label
         Me.KurzBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton
         Me.KurzBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Kurz_pocetDataSet = New pilcik.kurz_pocetDataSet
+
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton
@@ -59,11 +59,10 @@ Partial Class kurz_novy
         Me.KurzDataGridView = New System.Windows.Forms.DataGridView
         Me.Label4 = New System.Windows.Forms.Label
         Me.Label5 = New System.Windows.Forms.Label
-        Me.KurzTableAdapter = New pilcik.kurz_pocetDataSetTableAdapters.kurzTableAdapter
-        Me.TableAdapterManager = New pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager
+        
         Me.Label6 = New System.Windows.Forms.Label
         Me.Label7 = New System.Windows.Forms.Label
-        Me.C_typ_kurzuTableAdapter = New pilcik.pilcikdbDataSetTableAdapters.c_typ_kurzuTableAdapter
+
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.zaciatok_kurzu = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.koniec_kurzu = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -77,11 +76,11 @@ Partial Class kurz_novy
         TypLabel = New System.Windows.Forms.Label
         Miesto_konaniaLabel = New System.Windows.Forms.Label
         CType(Me.CtypkurzuBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+
         CType(Me.KurzBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.KurzBindingNavigator.SuspendLayout()
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Kurz_pocetDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+
         CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -219,12 +218,11 @@ Partial Class kurz_novy
         'CtypkurzuBindingSource
         '
         Me.CtypkurzuBindingSource.DataMember = "c_typ_kurzu"
-        Me.CtypkurzuBindingSource.DataSource = Me.PilcikdbDataSet
+
         '
         'PilcikdbDataSet
         '
-        Me.PilcikdbDataSet.DataSetName = "pilcikdbDataSet"
-        Me.PilcikdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+
         '
         'Label3
         '
@@ -268,12 +266,11 @@ Partial Class kurz_novy
         'KurzBindingSource
         '
         Me.KurzBindingSource.DataMember = "kurz"
-        Me.KurzBindingSource.DataSource = Me.Kurz_pocetDataSet
+
         '
         'Kurz_pocetDataSet
         '
-        Me.Kurz_pocetDataSet.DataSetName = "kurz_pocetDataSet"
-        Me.Kurz_pocetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+      
         '
         'BindingNavigatorCountItem
         '
@@ -398,14 +395,12 @@ Partial Class kurz_novy
         '
         'KurzTableAdapter
         '
-        Me.KurzTableAdapter.ClearBeforeFill = True
+
         '
         'TableAdapterManager
         '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.clenovia_kurzuTableAdapter = Nothing
-        Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.UpdateOrder = pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+       
+
         '
         'Label6
         '
@@ -427,7 +422,7 @@ Partial Class kurz_novy
         '
         'C_typ_kurzuTableAdapter
         '
-        Me.C_typ_kurzuTableAdapter.ClearBeforeFill = True
+
         '
         'Column1
         '
@@ -516,12 +511,12 @@ Partial Class kurz_novy
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "kurz"
         CType(Me.CtypkurzuBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PilcikdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+
         CType(Me.KurzBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.KurzBindingNavigator.ResumeLayout(False)
         Me.KurzBindingNavigator.PerformLayout()
         CType(Me.KurzBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Kurz_pocetDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+
         CType(Me.KurzDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -541,10 +536,9 @@ Partial Class kurz_novy
     Friend WithEvents Miesto_konaniaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents TypComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Kurz_pocetDataSet As pilcik.kurz_pocetDataSet
+
     Friend WithEvents KurzBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents KurzTableAdapter As pilcik.kurz_pocetDataSetTableAdapters.kurzTableAdapter
-    Friend WithEvents TableAdapterManager As pilcik.kurz_pocetDataSetTableAdapters.TableAdapterManager
+    
     Friend WithEvents KurzBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -563,9 +557,9 @@ Partial Class kurz_novy
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents PilcikdbDataSet As pilcik.pilcikdbDataSet
+
     Friend WithEvents CtypkurzuBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents C_typ_kurzuTableAdapter As pilcik.pilcikdbDataSetTableAdapters.c_typ_kurzuTableAdapter
+
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents zaciatok_kurzu As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents koniec_kurzu As System.Windows.Forms.DataGridViewTextBoxColumn

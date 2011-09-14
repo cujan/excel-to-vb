@@ -25,13 +25,12 @@ Partial Class clen_kurzu_pridaj
         Me.components = New System.ComponentModel.Container
         Me.ComboBox1 = New System.Windows.Forms.ComboBox
         Me.OsobaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OsobaComboDataSet = New pilcik.osobaComboDataSet
-        Me.OsobaTableAdapter = New pilcik.osobaComboDataSetTableAdapters.osobaTableAdapter
+        
         Me.Button1 = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         CType(Me.OsobaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OsobaComboDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -48,16 +47,15 @@ Partial Class clen_kurzu_pridaj
         'OsobaBindingSource
         '
         Me.OsobaBindingSource.DataMember = "osoba"
-        Me.OsobaBindingSource.DataSource = Me.OsobaComboDataSet
+
         '
         'OsobaComboDataSet
         '
-        Me.OsobaComboDataSet.DataSetName = "osobaComboDataSet"
-        Me.OsobaComboDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+       
         '
         'OsobaTableAdapter
         '
-        Me.OsobaTableAdapter.ClearBeforeFill = True
+
         '
         'Button1
         '
@@ -98,15 +96,15 @@ Partial Class clen_kurzu_pridaj
         Me.Name = "clen_kurzu_pridaj"
         Me.Text = "clen_kurzu_pridaj"
         CType(Me.OsobaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OsobaComboDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents OsobaComboDataSet As pilcik.osobaComboDataSet
+
     Friend WithEvents OsobaBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents OsobaTableAdapter As pilcik.osobaComboDataSetTableAdapters.osobaTableAdapter
+
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
