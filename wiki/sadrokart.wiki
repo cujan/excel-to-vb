@@ -1,1 +1,10 @@
-arcproxy, arcinfo, arcsub, arcstat, arccat, arcget, arckill, arcclean, arcrenew, arcresub, arctest, arcmigrate, arcresume, arcecho, arcslcs, arcsync, arccp, arcwsrf, arcrm, arcls, arched, arcsrmping
+Hi all,
+even thought the structure of test report for particular scenario was clearly communicated in past, often happend that each tester has provided results in his/her own structure, that required additional work when compiling the final test report. In order to resolve this I have prepared a simple web based form where the test reports for particular scenaria can be collected. The data are stored in db, so the details of tests run for particular version can be easily queried in uniform format. Additional feature of the web form is that after filling the fields and sending them, the reporter will receive wiki formatted output of his/her test result that can be used (copy and paste) for filling relevant wiki pages.
+So I am asking everyone participating in this (and next) round of testing to follow following procedure of test results recording. After the tester obtains the results, he/she uses the web form to record them filling all relevant fields. After sending the results, the obtained wiki formatted output is copied to relevant wiki.nordugrid.org pages.
+Finally the links to web form     and to 'search test results' form . Both links are accessible also from .
+Any comments or advises on how to improve the form (or test results collection) is welcome.
+
+  Cheers,
+  
+       Marek
+	   
