@@ -1,0 +1,6 @@
+Hi Samir,
+I did the deployment tests already yesterday in the evening using the yesterday`s packages from EMI testing repo. Did you not get my email with deployment tests reports? I do not plan to do the deployment again. Is that required?
+
+  Cheers,
+  
+          Marek
