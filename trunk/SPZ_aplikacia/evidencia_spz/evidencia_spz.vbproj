@@ -25,6 +25,8 @@
     <SignManifests>true</SignManifests>
     <TargetZone>LocalIntranet</TargetZone>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <SuiteName>HK</SuiteName>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <PublishUrl>D:\projekt spz\instalacka\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -39,11 +41,9 @@
     <TargetCulture>sk</TargetCulture>
     <ProductName>Evidencia SPZ</ProductName>
     <PublisherName>HK</PublisherName>
-    <SuiteName>HK</SuiteName>
     <ApplicationRevision>5</ApplicationRevision>
-    <ApplicationVersion>0.0.8.%2a</ApplicationVersion>
+    <ApplicationVersion>0.0.8.5</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
-    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -570,11 +570,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
       <Visible>False</Visible>
       <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
@@ -589,11 +584,6 @@
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5</ProductName>
       <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
       <Visible>False</Visible>
