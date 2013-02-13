@@ -24,6 +24,7 @@
         <activity android:name="ShowMineralsListActivity"></activity>
         <activity android:name="ShowMineralsExtraActivity"></activity>
         <activity android:name=".preferences.SettingsActivity"></activity>
+        <activity android:name="ShowMineralsDetailActivity"></activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>    

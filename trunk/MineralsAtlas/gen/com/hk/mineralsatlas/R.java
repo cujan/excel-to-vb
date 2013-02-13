@@ -26,10 +26,11 @@ public final class R {
     }
     public static final class layout {
         public static final int data_container=0x7f030000;
-        public static final int list_data=0x7f030001;
-        public static final int single_column_main=0x7f030002;
-        public static final int single_data=0x7f030003;
-        public static final int web_layout=0x7f030004;
+        public static final int detail_minerals=0x7f030001;
+        public static final int list_minerals=0x7f030002;
+        public static final int single_column_main=0x7f030003;
+        public static final int single_data=0x7f030004;
+        public static final int web_layout=0x7f030005;
     }
     public static final class menu {
         public static final int options_menu=0x7f070000;

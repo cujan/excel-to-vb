@@ -9,8 +9,11 @@ public class Constants {
 	public static final String MINERALS_LIST = "minerals_list";
 	public static final String LOCATIONS = "locations";
 	
-	public static final String ACTION_MINERALS_LIST ="index.php";	
-	public static final String ACTION_MAP ="map.php?id=";	
+	public static final String ACTION_MINERALS_LIST ="index.php";
+	public static final String ACTION_LOCATIONS_LIST = "locations.php";	
+	public static final String ACTION_MAP ="map?id=";	
 	
 	public static final int TIMEOUT_CONNECTION= 15000;
+	public static final String ACTION_MINERALS_DETAIL = "mineralsDetail.php?id=";
+
 }
