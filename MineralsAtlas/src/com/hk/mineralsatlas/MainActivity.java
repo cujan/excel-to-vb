@@ -1,6 +1,5 @@
 package com.hk.mineralsatlas;
 
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,10 +12,7 @@ import android.view.View;
 
 import com.hk.mineralsatlas.preferences.SettingsActivity;
 
-
-
 public class MainActivity extends FragmentActivity {
-	private static String URL = "";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -43,6 +39,14 @@ public class MainActivity extends FragmentActivity {
 					ShowMineralsListActivity.class);
 			i.putExtra(Constants.EXTRA_URL, url);
 			i.putExtra(Constants.EXTRA_PATH, Constants.ACTION_MINERALS_LIST);
+			i.putExtra(Constants.EXTRA_ACTION, Constants.MINERALS_LIST);
+			startActivity(i);
+		} else if (actionType.equals(Constants.LOCATIONS)) {
+			Intent i = new Intent(MainActivity.this,
+					ShowMineralsListActivity.class);
+			i.putExtra(Constants.EXTRA_URL, url);
+			i.putExtra(Constants.EXTRA_PATH, Constants.ACTION_LOCATIONS_LIST);
+			i.putExtra(Constants.EXTRA_ACTION, Constants.MINERALS_LIST);
 			startActivity(i);
 		} else {
 			showExtra(actionType, url, MainActivity.this);
