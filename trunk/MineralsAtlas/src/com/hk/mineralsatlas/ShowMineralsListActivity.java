@@ -29,8 +29,8 @@ public class ShowMineralsListActivity extends ListActivity {
 	private static final int[] COLUMN_IDS_LICATIONS_LIST = { R.id.group,
 			R.id.name, R.id.formula, R.id.entry_id };
 	private static final int LAYOUT_ID = R.layout.single_data;
-	private static final int MENU_GET_DETAILS = 0;
-	private static final int MENU_GET_MAP = 1;
+	public static final int MENU_GET_DETAILS = 0;
+	public static final int MENU_GET_PHOTO = 1;
 	private static String url;
 
 	@Override
@@ -61,7 +61,7 @@ public class ShowMineralsListActivity extends ListActivity {
 			ContextMenu.ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
 		menu.add(0, MENU_GET_DETAILS, 0, R.string.get_details);
-		menu.add(0, MENU_GET_MAP, 0, R.string.get_map);
+		menu.add(0, MENU_GET_PHOTO, 0, R.string.get_map);
 
 	}
 
@@ -76,15 +76,15 @@ public class ShowMineralsListActivity extends ListActivity {
 				.getListView().getItemAtPosition((int) info.id);
 		switch (item.getItemId()) {
 
-		case MENU_GET_MAP:
+		case MENU_GET_PHOTO:
 
-			showExtra(text.get(ENTRY_ID));
+			showExtra(text.get(ENTRY_ID),MENU_GET_PHOTO);
 
 			return true;
 
 		case MENU_GET_DETAILS:
 
-			showExtra(text.get(ENTRY_ID));
+			showDetailActivity(text.get(ENTRY_ID));
 
 			return true;
 
@@ -103,10 +103,11 @@ public class ShowMineralsListActivity extends ListActivity {
 		startActivity(i);
 	}
 
-	public void showExtra(String actionId) {
+	public void showExtra(String actionId, int actionName) {
 
 		Intent i = new Intent(this, ShowMineralsExtraActivity.class);
 		i.putExtra(Constants.EXTRA_ACTION, actionId);
+		i.putExtra(Constants.EXTRA_ACTION_NAME, actionName);		
 		i.putExtra(Constants.EXTRA_URL, url);
 		startActivity(i);
 	}

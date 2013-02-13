@@ -1,5 +1,6 @@
 package com.hk.mineralsatlas;
 
+
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -25,6 +26,7 @@ public class ShowMineralsExtraActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.web_layout);
 		String action = getIntent().getStringExtra(Constants.EXTRA_ACTION);
+		int actionName = getIntent().getIntExtra(Constants.EXTRA_ACTION_NAME, -1);		
 		String url = getIntent().getStringExtra(Constants.EXTRA_URL);
 		Resources res = getResources();
 		// Imageview to show
@@ -70,13 +72,15 @@ public class ShowMineralsExtraActivity extends Activity {
 			}			
 		});		
 		
-		web.loadUrl(url + getAction(action));
+		web.loadUrl(url + getAction(action, actionName));
 
 	}
 
-	private String getAction(String actionID) {
-		String actionUrl = Constants.ACTION_MAP + actionID;
-
+	private String getAction(String actionID, int actionName) {
+		String actionUrl=""; 		
+		if (actionName == ShowMineralsListActivity.MENU_GET_PHOTO) {
+			actionUrl = Constants.ACTION_PHOTOS + actionID;
+		}
 		return actionUrl;
 	}
 

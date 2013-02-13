@@ -16,9 +16,6 @@ import javax.net.ssl.X509TrustManager;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
-import org.apache.http.auth.AuthScope;
-import org.apache.http.auth.Credentials;
-import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -26,9 +23,6 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.conn.ClientConnectionManager;
-import org.apache.http.conn.scheme.Scheme;
-import org.apache.http.conn.scheme.SchemeRegistry;
-import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
@@ -44,8 +38,6 @@ public class JSONParser {
 	static JSONObject jObj = null;
 	static String json = "";
 	private Integer timeoutConnection = 15000;
-	private String login;
-	private String pass;
 
 	// constructor
 	public JSONParser() {
@@ -166,25 +158,12 @@ public class JSONParser {
 			};
 			SSLContext ctx = SSLContext.getInstance("TLS");
 			ctx.init(null, new TrustManager[] { tm }, null);
-			SSLSocketFactory ssf = new MySSLSocketFactory(ctx);
-			ssf.setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
 			ClientConnectionManager ccm = client.getConnectionManager();
-			SchemeRegistry sr = ccm.getSchemeRegistry();
-			sr.register(new Scheme("https", ssf, 443));
 			return new DefaultHttpClient(ccm, client.getParams());
 		} catch (Exception ex) {
 			return null;
 		}
 	}
 
-	public void setLogin(String login) {
-		this.login = login;
-	}
-
-	public void setPass(String pass) {
-		this.pass = pass;
-	}
-	
-	
 
 }
