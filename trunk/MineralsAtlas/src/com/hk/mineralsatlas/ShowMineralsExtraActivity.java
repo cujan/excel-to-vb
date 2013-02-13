@@ -25,14 +25,14 @@ public class ShowMineralsExtraActivity extends Activity {
 		getWindow().requestFeature(Window.FEATURE_PROGRESS);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.web_layout);
-		String action = getIntent().getStringExtra(Constants.EXTRA_ACTION);
-		int actionName = getIntent().getIntExtra(Constants.EXTRA_ACTION_NAME, -1);		
+		String path = getIntent().getStringExtra(Constants.EXTRA_PATH);
+		String actionKey = getIntent().getStringExtra(Constants.EXTRA_ACTION_KEY);		
 		String url = getIntent().getStringExtra(Constants.EXTRA_URL);
 		Resources res = getResources();
 		// Imageview to show
 		WebView web = (WebView) findViewById(R.id.web);
 		TextView text = (TextView) findViewById(R.id.text);
-		text.setText(res.getString(R.string.progress_extra_text, action));
+		text.setText(res.getString(R.string.progress_extra_text, actionKey));
 
 		// Let's display the progress in the activity title bar, like the
 		// browser app does.
@@ -72,16 +72,9 @@ public class ShowMineralsExtraActivity extends Activity {
 			}			
 		});		
 		
-		web.loadUrl(url + getAction(action, actionName));
+		web.loadUrl(url + path+ actionKey);
 
 	}
 
-	private String getAction(String actionID, int actionName) {
-		String actionUrl=""; 		
-		if (actionName == ShowMineralsListActivity.MENU_GET_PHOTO) {
-			actionUrl = Constants.ACTION_PHOTOS + actionID;
-		}
-		return actionUrl;
-	}
 
 }

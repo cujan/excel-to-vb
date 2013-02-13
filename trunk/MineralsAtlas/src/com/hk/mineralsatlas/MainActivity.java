@@ -28,7 +28,7 @@ public class MainActivity extends FragmentActivity {
 	}
 
 	public void onShowLocationsClicked(View v) {
-		getCorrectURLFromView(Constants.LOCATIONS);
+		getCorrectURLFromView(Constants.LOCATIONS_LIST);
 	}
 
 	private void getCorrectURLFromView(String actionType) {
@@ -41,12 +41,12 @@ public class MainActivity extends FragmentActivity {
 			i.putExtra(Constants.EXTRA_PATH, Constants.ACTION_MINERALS_LIST);
 			i.putExtra(Constants.EXTRA_ACTION, Constants.MINERALS_LIST);
 			startActivity(i);
-		} else if (actionType.equals(Constants.LOCATIONS)) {
+		} else if (actionType.equals(Constants.LOCATIONS_LIST)) {
 			Intent i = new Intent(MainActivity.this,
 					ShowMineralsListActivity.class);
 			i.putExtra(Constants.EXTRA_URL, url);
 			i.putExtra(Constants.EXTRA_PATH, Constants.ACTION_LOCATIONS_LIST);
-			i.putExtra(Constants.EXTRA_ACTION, Constants.MINERALS_LIST);
+			i.putExtra(Constants.EXTRA_ACTION, Constants.LOCATIONS_LIST);
 			startActivity(i);
 		} else {
 			showExtra(actionType, url, MainActivity.this);

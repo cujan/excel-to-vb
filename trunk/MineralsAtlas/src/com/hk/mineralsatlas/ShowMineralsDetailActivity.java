@@ -16,7 +16,7 @@ public class ShowMineralsDetailActivity extends ListActivity {
 	private static final String ENTRY_ID = "id";
 	private static final String[] COLUMNS = { GROUP, NAME, FORMULA, ENTRY_ID };
 	private static final int[] COLUMN_IDS = { R.id.group, R.id.name, R.id.formula, R.id.entry_id };
-	private static final int LAYOUT_ID = R.layout.single_data;
+	private static final int LAYOUT_ID = R.layout.minerals_list;
 	private static String url;
 
 	@Override
@@ -26,12 +26,13 @@ public class ShowMineralsDetailActivity extends ListActivity {
 
 		url = getIntent().getStringExtra(Constants.EXTRA_URL);
 		String path = getIntent().getStringExtra(Constants.EXTRA_PATH);
+		String key = getIntent().getStringExtra(Constants.EXTRA_ACTION_KEY);
 		if (url.equals("") || path.equals("")) {
 			Toast.makeText(this, R.string.no_url_found,
 					Toast.LENGTH_LONG).show();
 			return;
 		}
-		LoadData dataProvider = new LoadData(this, url + path, DATA_TYPE,
+		LoadData dataProvider = new LoadData(this, url + path+ key, DATA_TYPE,
 				LAYOUT_ID, COLUMNS, COLUMN_IDS);
 
 		dataProvider.execute();
