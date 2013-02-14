@@ -81,7 +81,8 @@
         android:paddingLeft="6dip"
         android:paddingTop="1dip"
         android:textSize="17sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/zemepisna_dlzka"
@@ -90,6 +91,7 @@
         android:paddingLeft="6dip"
         android:paddingTop="1dip"
         android:textSize="17sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="gone" />
 
 </LinearLayout>
