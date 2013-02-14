@@ -58,6 +58,8 @@ public class MainActivity extends FragmentActivity {
 		if (urlLength < 1)
 			return "";
 		char end = url.charAt(urlLength - 1);
+		char beginning = url.charAt(0);		
+		url = (beginning != 'h' ? "http://" + url : url );		
 		return (end != '/' ? url + "/" : url);
 	}
 

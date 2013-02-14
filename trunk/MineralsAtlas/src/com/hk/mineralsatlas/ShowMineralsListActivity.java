@@ -15,32 +15,6 @@ import com.hk.mineralsatlas.dao.LoadData;
 
 public class ShowMineralsListActivity extends ListActivity {
 
-	private static final String DATA_TYPE = "mineraly";
-	private static final String LOCATIONS_DATA_TYPE = "naleziska";
-	private static final String GROUP = "nazovSkupina";
-	private static final String NAME = "nazov";
-	private static final String OKRES = "okres";
-	private static final String GEOMORFOLOGICKY_CELOK = "geomorfologickyCelok";
-	private static final String CHARAKTERISTIKA = "charakteristika";
-	private static final String GEOLOGICKY_CELOK = "geologickyCelok";
-	private static final String HORNINOVE_ZLOZENIE = "horninoveZlozenie";
-	private static final String ZEMEPISNA_SIRKA = "zemepisnaSirka";
-	private static final String ZEMEPISNA_DLZKA = "zemepisnaDlzka";
-	private static final String MINERALY = "mineraly";
-	private static final String FORMULA = "chemickeZlozenie";
-	private static final String ENTRY_ID = "id";
-	private static final String[] COLUMNS_MINERALS_LIST = { GROUP, NAME,
-			FORMULA, ENTRY_ID };
-	private static final int[] COLUMN_IDS_MINERALS_LIST = { R.id.group,
-			R.id.name, R.id.formula, R.id.entry_id };
-	private static final String[] COLUMNS_LOCATIONS_LIST = { NAME, OKRES,
-			GEOMORFOLOGICKY_CELOK, GEOLOGICKY_CELOK, CHARAKTERISTIKA,
-			HORNINOVE_ZLOZENIE, MINERALY, ZEMEPISNA_SIRKA, ZEMEPISNA_DLZKA,
-			ENTRY_ID };
-	private static final int[] COLUMN_IDS_LOCATIONS_LIST = { R.id.name,
-			R.id.okres, R.id.geomorfologicky_celok, R.id.geologicky_celok,
-			R.id.charakteristika, R.id.horninove_zlozenie, R.id.mineraly,
-			R.id.zemepisna_sirka, R.id.zemepisna_dlzka, R.id.entry_id };
 	private static final int LAYOUT_ID_MINERALS = R.layout.minerals_list;
 	private static final int LAYOUT_ID_LOCATIONS = R.layout.locations_list;
 	public static final int MENU_GET_DETAILS = 0;
@@ -66,13 +40,15 @@ public class ShowMineralsListActivity extends ListActivity {
 		LoadData dataProvider = new LoadData(null, actionID, actionID, 0, null,
 				null);
 		if (Constants.MINERALS_LIST.equals(actionID)) {
-			dataProvider = new LoadData(this, url + path, DATA_TYPE,
-					LAYOUT_ID_MINERALS, COLUMNS_MINERALS_LIST,
-					COLUMN_IDS_MINERALS_LIST);
+			dataProvider = new LoadData(this, url + path,
+					Constants.MINERALS_DATA_TYPE, LAYOUT_ID_MINERALS,
+					Constants.COLUMNS_MINERALS_LIST,
+					Constants.COLUMN_IDS_MINERALS_LIST);
 		} else if (Constants.LOCATIONS_LIST.equals(actionID)) {
-			dataProvider = new LoadData(this, url + path, LOCATIONS_DATA_TYPE,
-					LAYOUT_ID_LOCATIONS, COLUMNS_LOCATIONS_LIST,
-					COLUMN_IDS_LOCATIONS_LIST);
+			dataProvider = new LoadData(this, url + path,
+					Constants.LOCATIONS_DATA_TYPE, LAYOUT_ID_LOCATIONS,
+					Constants.COLUMNS_LOCATIONS_LIST,
+					Constants.COLUMN_IDS_LOCATIONS_LIST);
 		}
 		dataProvider.execute();
 		registerForContextMenu(getListView());
@@ -99,27 +75,26 @@ public class ShowMineralsListActivity extends ListActivity {
 
 		HashMap<String, String> text = (HashMap<String, String>) this
 				.getListView().getItemAtPosition((int) info.id);
-		
-		
+
 		switch (item.getItemId()) {
 
 		case MENU_GET_PHOTO:
 
-			showExtra(text.get(ENTRY_ID), MENU_GET_PHOTO);
+			showExtra(text.get(Constants.ENTRY_ID), MENU_GET_PHOTO);
 
 			return true;
 
 		case MENU_GET_DETAILS:
 
-			showDetailActivity(text.get(ENTRY_ID));
+			showDetailActivity(text.get(Constants.ENTRY_ID));
 
 			return true;
 
 		case MENU_GET_LOCATION_ON_MAP:
-
-			showExtra(
-					text.get(ZEMEPISNA_SIRKA).toString() + "," + text.get(ZEMEPISNA_DLZKA).toString(),
-					MENU_GET_LOCATION_ON_MAP);
+			Object sirka = text.get(Constants.ZEMEPISNA_SIRKA);
+			Object dlzka = text.get(Constants.ZEMEPISNA_DLZKA);
+			String position = sirka.toString() +  "," + dlzka.toString();
+			showExtra(position, MENU_GET_LOCATION_ON_MAP);
 
 			return true;
 
