@@ -1,0 +1,1 @@
+{"obrazky":[{"id":"60","nazov":"s\u00edra","chemickeZlozenie":"S","skupinaNazov":"Prvky","krystalografickaSustava":"koso\u0161tvorcov\u00e1","vryp":"biely","tvrdostOd":"1.5","tvrdostDo":"2.5","stiepatelnost":"nedokonal\u00e1","hustotaOd":"2","hustotaDo":"2.1"}],"success":1}
