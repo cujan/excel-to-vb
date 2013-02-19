@@ -6,17 +6,9 @@ import android.widget.Toast;
 
 import com.hk.mineralsatlas.dao.LoadData;
 
-
 public class ShowMineralsDetailActivity extends ListActivity {
 
-	private static final String DATA_TYPE = "mineraly";
-	private static final String GROUP = "nazovSkupina";
-	private static final String NAME = "nazov";
-	private static final String FORMULA = "chemickeZlozenie";
-	private static final String ENTRY_ID = "id";
-	private static final String[] COLUMNS = { GROUP, NAME, FORMULA, ENTRY_ID };
-	private static final int[] COLUMN_IDS = { R.id.group, R.id.name, R.id.formula, R.id.entry_id };
-	private static final int LAYOUT_ID = R.layout.minerals_list;
+	private static final int LAYOUT_ID = R.layout.minerals_detail;
 	private static String url;
 
 	@Override
@@ -28,12 +20,14 @@ public class ShowMineralsDetailActivity extends ListActivity {
 		String path = getIntent().getStringExtra(Constants.EXTRA_PATH);
 		String key = getIntent().getStringExtra(Constants.EXTRA_ACTION_KEY);
 		if (url.equals("") || path.equals("")) {
-			Toast.makeText(this, R.string.no_url_found,
-					Toast.LENGTH_LONG).show();
+			Toast.makeText(this, R.string.no_url_found, Toast.LENGTH_LONG)
+					.show();
 			return;
 		}
-		LoadData dataProvider = new LoadData(this, url + path+ key, DATA_TYPE,
-				LAYOUT_ID, COLUMNS, COLUMN_IDS);
+		LoadData dataProvider = new LoadData(this, url + path + key,
+				Constants.MINERALS_DETAIL_DATA_TYPE, LAYOUT_ID,
+				Constants.COLUMNS_MINERALS_DETAIL,
+				Constants.COLUMN_IDS_MINERALS_DETAIL);
 
 		dataProvider.execute();
 		registerForContextMenu(getListView());

@@ -69,7 +69,7 @@ public class ShowMineralsListActivity extends ListActivity {
 	@Override
 	@SuppressWarnings("unchecked")
 	public boolean onContextItemSelected(MenuItem item) {
-
+		Object id = new Object();
 		AdapterContextMenuInfo info = (AdapterContextMenuInfo) item
 				.getMenuInfo();
 
@@ -79,14 +79,14 @@ public class ShowMineralsListActivity extends ListActivity {
 		switch (item.getItemId()) {
 
 		case MENU_GET_PHOTO:
-
-			showExtra(text.get(Constants.ENTRY_ID), MENU_GET_PHOTO);
+			id = text.get(Constants.ENTRY_ID);
+			showExtra(id.toString(), MENU_GET_PHOTO);
 
 			return true;
 
 		case MENU_GET_DETAILS:
-
-			showDetailActivity(text.get(Constants.ENTRY_ID));
+			id = text.get(Constants.ENTRY_ID);
+			showDetailActivity(id.toString());
 
 			return true;
 
