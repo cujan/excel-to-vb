@@ -17,5 +17,15 @@
 	<string name="no_url_found">No url found</string>
 	<string name="no_data_found">No data found</string>
 	<string name="loading_data">Loading data</string>
+	<string name="name">Name</string>	
+	<string name="chemicke_zlozenie">Formula</string>	
+	<string name="skupina_nazov">Group</string>	
+	<string name="krystalograficka_sustava">Kryst. sustava</string>
+	<string name="vryp">Vryp</string>
+	<string name="tvrdost_od">Tvrdost od</string>
+	<string name="tvrdost_do">Tvrdost do</string>	
+	<string name="stiepatelnost">Stiepatelnost</string>
+	<string name="hustota_od">Hustota od</string>			
+	<string name="hustota_do">Hustota do</string>	
 	
 </resources>
