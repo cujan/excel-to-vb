@@ -12,7 +12,7 @@
 	<string name="get_map">Get location on map</string>
 	<string name="get_photo">Get photo of mineral</string>	
 	<string name="get_details">Get details</string>	
-	<string name="loading_image">Loading image</string>
+	<string name="loading_image">Loading</string>
 	<string name="progress_extra_text">Loading ...</string>	
 	<string name="no_url_found">No url found</string>
 	<string name="no_data_found">No data found</string>
