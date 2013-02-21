@@ -30,6 +30,10 @@ public class MainActivity extends FragmentActivity {
 	public void onShowLocationsClicked(View v) {
 		getCorrectURLFromView(Constants.LOCATIONS_LIST);
 	}
+	
+	public void onShowKeySearchClicked(View v) {
+		getCorrectURLFromView(Constants.KEY_SEARCH);
+	}	
 
 	private void getCorrectURLFromView(String actionType) {
 		String url = formatURL(SettingsActivity.getRemoteUrl(MainActivity.this));
@@ -48,8 +52,11 @@ public class MainActivity extends FragmentActivity {
 			i.putExtra(Constants.EXTRA_PATH, Constants.ACTION_LOCATIONS_LIST);
 			i.putExtra(Constants.EXTRA_ACTION, Constants.LOCATIONS_LIST);
 			startActivity(i);
-		} else {
-			showExtra(actionType, url, MainActivity.this);
+		} else if (actionType.equals(Constants.KEY_SEARCH)) {
+			Intent i = new Intent(MainActivity.this,
+					KeySearchActivity.class);			
+			i.putExtra(Constants.EXTRA_URL, url);			
+			startActivity(i);
 		}
 	}
 
