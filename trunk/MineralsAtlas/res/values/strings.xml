@@ -8,24 +8,65 @@
     <string name="show_minerals">Minerals</string>
     <string name="no_notes_available">No data found</string>
     <string name="show_locations">Locations</string>
-	<string name="add_endpoint">Set URL endpoint</string>    
-	<string name="get_map">Get location on map</string>
-	<string name="get_photo">Get photo of mineral</string>	
-	<string name="get_details">Get details</string>	
-	<string name="loading_image">Loading</string>
-	<string name="progress_extra_text">Loading ...</string>	
-	<string name="no_url_found">No url found</string>
-	<string name="no_data_found">No data found</string>
-	<string name="loading_data">Loading data</string>
-	<string name="name">Name</string>	
-	<string name="chemicke_zlozenie">Formula</string>	
-	<string name="skupina_nazov">Group</string>	
-	<string name="krystalograficka_sustava">Kryst. sustava</string>
-	<string name="vryp">Vryp</string>
-	<string name="tvrdost_od">Tvrdost od</string>
-	<string name="tvrdost_do">Tvrdost do</string>	
-	<string name="stiepatelnost">Stiepatelnost</string>
-	<string name="hustota_od">Hustota od</string>			
-	<string name="hustota_do">Hustota do</string>	
+    <string name="add_endpoint">Set URL endpoint</string>
+    <string name="get_map">Get location on map</string>
+    <string name="get_photo">Get photo of mineral</string>
+    <string name="get_details">Get details</string>
+    <string name="loading_image">Loading</string>
+    <string name="progress_extra_text">Loading ...</string>
+    <string name="no_url_found">No url found</string>
+    <string name="no_data_found">No data found</string>
+    <string name="loading_data">Loading data</string>
+    <string name="name">Name</string>
+    <string name="chemicke_zlozenie">Formula</string>
+    <string name="skupina_nazov">Group</string>
+    <string name="krystalograficka_sustava">Kryst. sustava</string>
+    <string name="vryp">Vryp</string>
+    <string name="tvrdost_od">Tvrdost od</string>
+    <string name="tvrdost_do">Tvrdost do</string>
+    <string name="stiepatelnost">Stiepatelnost</string>
+    <string name="hustota_od">Hustota od</string>
+    <string name="hustota_do">Hustota do</string>
+    <string name="search_minerals">Vyhladat</string>
+    <string name="shape_key">Vonkajsi vzhlad</string>
+
+    <string-array name="shape_array">
+        <item>celistvy</item>
+        <item>krickovity</item>
+    </string-array>
+
+    <string name="color_key">Farba</string>
+
+    <string-array name="color_array">
+        <item>bezfarebny</item>
+        <item>biela</item>
+    </string-array>
+
+    <string name="hardness_from_key">Tvrdost od - necht (2.5), medena minca (3.5), cepel noza (5.5), sklo (6)</string>
+    <string name="hardness_to_key">Tvrdost do - necht (2.5), medena minca (3.5), cepel noza (5.5), sklo (6)</string>
+
+	<string name="vryp_key">Vryp</string>
+	
+	<string-array name="vryp_array">
+        <item>biely</item>
+        <item>zlty</item>
+    </string-array>    
+
+	<string name="lesk_key">Lesk</string>
+	
+	<string-array name="lesk_array">
+        <item>kovový</item>
+        <item>polokovovy</item>
+    </string-array>	
+	
+	<string name="light_key">Priepustnost svetla</string>
+	
+	<string-array name="light_array">
+        <item>priehladny</item>
+        <item>priesvitny</item>
+		<item>nepriehladny</item>        
+    </string-array>		
+	
+    <string name="show_keysearch">Key search</string>	
 	
 </resources>

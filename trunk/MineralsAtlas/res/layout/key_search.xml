@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <Spinner
+            android:id="@+id/shape_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/shape_array"
+            android:prompt="@string/shape_key" />
+
+        <Spinner
+            android:id="@+id/color_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/color_array"
+            android:prompt="@string/color_key" />
+
+        <EditText
+            android:id="@+id/hardness_from_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789."
+            android:hint="@string/hardness_from_key"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/hardness_to_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789."
+            android:hint="@string/hardness_to_key"
+            android:inputType="number" />
+
+        <Spinner
+            android:id="@+id/vryp_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/vryp_array"
+            android:hint="@string/vryp_key" />
+
+        <Spinner
+            android:id="@+id/lesk_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/lesk_array"
+            android:prompt="@string/lesk_key" />
+
+        <Spinner
+            android:id="@+id/light_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/light_array"
+            android:prompt="@string/light_key" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip"
+            android:onClick="onSearchClicked"
+            android:text="@string/search_minerals" />
+    </LinearLayout>
+
+</ScrollView>

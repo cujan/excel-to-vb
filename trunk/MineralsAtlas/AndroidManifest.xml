@@ -25,6 +25,7 @@
         <activity android:name="ShowMineralsExtraActivity"></activity>
         <activity android:name=".preferences.SettingsActivity"></activity>
         <activity android:name="ShowMineralsDetailActivity"></activity>
+        <activity android:name="KeySearchActivity"></activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>    

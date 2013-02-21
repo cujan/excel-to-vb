@@ -1,5 +1,8 @@
 package com.hk.mineralsatlas;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Constants {
 
 	public static final String EXTRA_ACTION = "action";
@@ -9,8 +12,10 @@ public class Constants {
 
 	public static final String MINERALS_LIST = "minerals_list";
 	public static final String LOCATIONS_LIST = "locations";
+	public static final String KEY_SEARCH = "key_search";	
 
 	public static final String ACTION_MINERALS_LIST = "minerals.php";
+	public static final String ACTION_MINERALS_SEARCH = "searchMinerals.php?";	
 	public static final String ACTION_LOCATIONS_LIST = "locations.php";
 	public static final String ACTION_MAP = "https://maps.google.com/maps?q=";
 	public static final String ACTION_PHOTOS = "getMineralsPhoto.php?idMineral=";
@@ -72,4 +77,11 @@ public class Constants {
 	public static final int[] COLUMN_IDS_MINERALS_DETAIL = { R.id.entry_id,
 			R.id.name, R.id.chemicke_zlozenie, R.id.skupina_nazov, R.id.krystalograficka_sustava, R.id.vryp, R.id.tvrdost_od, R.id.tvrdost_do,R.id.stiepatelnost, R.id.hustota_od,R.id.hustota_do  };
 
+    public static final Map<String, String> KeyMap;
+    static {
+        KeyMap = new HashMap<String, String>();
+        KeyMap.put("biely","biely");
+        KeyMap.put("kovový","kovovy");        
+    }
+	
 }
