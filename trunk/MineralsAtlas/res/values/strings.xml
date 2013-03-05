@@ -33,13 +33,80 @@
     <string-array name="shape_array">
         <item>celistvy</item>
         <item>krickovity</item>
-    </string-array>
+   		<item>ihlicovitý</item>
+		<item>obličkovitý</item>
+		<item>prizmatické kryštály</item>
+		<item>kockové kryštály</item>
+		<item>tabuľkové kryštály</item>
+		<item>povlakovitý</item>
+		<item>nátekový</item>
+		<item>dipyramidálne kryštály</item>
+		<item>šesťuholníkové doštičky</item>
+		<item>ploché doštičky</item>
+		<item>oktaédrické a hexaédrické kryštály</item>
+		<item>dodekaédrické a tetraédrické kryštály</item>
+		<item>stlpcovité kryštály</item>
+		<item>kubooktaédrov oktaédrov</item>
+		<item>pseudotetraédrické kryštály</item>
+		<item>oktaédrické kryštály</item>
+		<item>dodekaédrické kryštály</item>
+		<item>klencové kryštály</item>
+		<item>skalenoédrické kryštály</item>
+		<item>tetraédrické kryštály</item>
+		<item>hexaédrické kryštály</item>
+		<item>romboédrické kryštály</item>
+		<item>pyritotvaré kryštály</item>
+		<item>hľuzovitý</item>
+		<item>guľovitý</item>
+		<item>rozlične sfarbené koncentrické vrstvy</item>
+		<item>hroznovitý agregát</item>
+		<item>kvapľovitý agregát</item>
+		<item>pyramidálne kryštály</item>
+		<item>zemitý</item>
+		<item>zrnitý</item>
+		<item>vlaknitý</item>
+		<item>povlakový</item>
+		<item>šupinkový</item>
+		<item>nátekovitý</item>   
+</string-array>
 
     <string name="color_key">Farba</string>
 
     <string-array name="color_array">
         <item>bezfarebny</item>
         <item>biela</item>
+		<item>žltá</item>
+		<item>zlatožltá</item>
+		<item>mosadznožltá</item>
+		<item>svetlohnedá</item>
+		<item>sivá</item>
+		<item>tmavosivá</item>
+		<item>červená</item>
+		<item>zelená</item>
+		<item>ružová</item>
+		<item>modrá</item>
+		<item>sivočierna</item>
+		<item>čierna</item>
+		<item>tmavohnedá</item>
+		<item>hnedočervená</item>
+		<item>olovenosivá</item>
+		<item>hnedá</item>
+		<item>sýtozelená</item>
+		<item>azúrovomodrá</item>
+		<item>jasnočervená</item>
+		<item>tmavozelená</item>
+		<item>zelenkastá</item>
+		<item>fialová</item>
+		<item>oceľovosivá</item>
+		<item>železnočierna</item>
+		<item>červenkastý</item>
+		<item>ružovkastý</item>
+		<item>žltkastý</item>
+		<item>striebrobiela</item>
+		<item>hnedastá</item>
+		<item>purpurová</item>
+		<item>oranžová</item>
+		<item>tmavomodrá</item>
     </string-array>
 
     <string name="hardness_from_key">Tvrdost od - necht (2.5), medena minca (3.5), cepel noza (5.5), sklo (6)</string>
@@ -50,6 +117,21 @@
 	<string-array name="vryp_array">
         <item>biely</item>
         <item>zlty</item>
+		<item>červený</item>
+		<item>zelený</item>
+		<item>modrý</item>
+		<item>sivý</item>
+		<item>čierny</item>
+		<item>hnedý</item>
+		<item>zelenočierny</item>
+		<item>červenohnedý</item>
+		<item>olovenosivý</item>
+		<item>bezfarebný</item>
+		<item>bledozelený</item>
+		<item>bledomodrý</item>
+		<item>hnedočervený</item>
+		<item>hnedastý</item>
+		<item>žltohnedý</item>
     </string-array>    
 
 	<string name="lesk_key">Lesk</string>
@@ -57,6 +139,13 @@
 	<string-array name="lesk_array">
         <item>kovový</item>
         <item>polokovovy</item>
+		<item>sklený</item>
+		<item>matný</item>
+		<item>mastný</item>
+		<item>hodvábny</item>
+		<item>perleťový</item>
+		<item>diamantový</item>
+		<item>smolný</item>
     </string-array>	
 	
 	<string name="light_key">Priepustnost svetla</string>
