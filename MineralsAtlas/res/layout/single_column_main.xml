@@ -5,6 +5,7 @@
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
@@ -26,17 +27,24 @@
             android:layout_marginRight="6dip"
             android:onClick="onShowLocationsClicked"
             android:text="@string/show_locations" />
-        
-        <Button
-            android:layout_width="match_parent"
+
+        <!-- <Button -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_marginBottom="3dip" -->
+        <!-- android:layout_marginLeft="6dip" -->
+        <!-- android:layout_marginRight="6dip" -->
+        <!-- android:onClick="onShowKeySearchClicked" -->
+        <!-- android:text="@string/show_keysearch" /> -->
+
+        <com.google.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dip"
-            android:layout_marginLeft="6dip"
-            android:layout_marginRight="6dip"
-            android:onClick="onShowKeySearchClicked"
-            android:text="@string/show_keysearch" />
-        
-        
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="a151399395a13a3"
+            ads:loadAdOnCreate="true" 
+            ads:testDevices="TEST_EMULATOR" />
     </LinearLayout>
 
 </ScrollView>
