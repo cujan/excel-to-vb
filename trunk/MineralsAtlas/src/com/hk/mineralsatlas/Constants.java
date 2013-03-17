@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class Constants {
 
+	public static final String STATIC_URL = "http://www.slspo.sk/atlasMineralov/android/";
 	public static final String EXTRA_ACTION = "action";
 	public static final String EXTRA_ACTION_KEY = "action_key";
 	public static final String EXTRA_URL = "url";
@@ -81,7 +82,7 @@ public class Constants {
     static {
         KeyMap = new HashMap<String, String>();
         KeyMap.put("biely","biely");
-        KeyMap.put("kovový","kovovy");        
+        KeyMap.put("kovovï¿½","kovovy");        
     }
 	
 }

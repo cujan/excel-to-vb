@@ -36,7 +36,8 @@ public class MainActivity extends FragmentActivity {
 	}	
 
 	private void getCorrectURLFromView(String actionType) {
-		String url = formatURL(SettingsActivity.getRemoteUrl(MainActivity.this));
+	//	String url = formatURL(SettingsActivity.getRemoteUrl(MainActivity.this));
+		String url = Constants.STATIC_URL;
 
 		if (actionType.equals(Constants.MINERALS_LIST)) {
 			Intent i = new Intent(MainActivity.this,
@@ -70,25 +71,25 @@ public class MainActivity extends FragmentActivity {
 		return (end != '/' ? url + "/" : url);
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.options_menu, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		Intent i;
-		switch (item.getItemId()) {
-		case R.id.settings:
-			i = new Intent(this, SettingsActivity.class);
-			startActivity(i);
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}
-	}
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu) {
+//		MenuInflater inflater = getMenuInflater();
+//		inflater.inflate(R.menu.options_menu, menu);
+//		return true;
+//	}
+//
+//	@Override
+//	public boolean onOptionsItemSelected(MenuItem item) {
+//		Intent i;
+//		switch (item.getItemId()) {
+//		case R.id.settings:
+//			i = new Intent(this, SettingsActivity.class);
+//			startActivity(i);
+//			return true;
+//		default:
+//			return super.onOptionsItemSelected(item);
+//		}
+//	}
 
 	public void showExtra(String actionId, String url, Context ctx) {
 
