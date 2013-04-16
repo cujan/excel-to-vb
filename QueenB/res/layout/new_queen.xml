@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece8e8" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ece8e8"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/do_kalendara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip"
+            android:onClick="onPridatDoKalendara"
+            android:text="@string/pridat_do_kalendara"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/ulozit_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip"
+            android:onClick="onUlozitDoDb"
+            android:text="@string/ulozit_event"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/vlozenie_plemeniva"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/displayDate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="right"
+            android:onClick="onZadajDatum"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/date_text"
+            android:textColor="#FF0000"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/prevesenie_plastu"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/preveseniePlastu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/prevesenie_plastu"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/vlozenie_suse"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/vlozenieSuse"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/vlozenie_suse"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/priprava_sadky"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pripravaSadky"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/priprava_sadky"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/prelozenie_serie"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/prelozenieSerie"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/prelozenie_serie"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/premiestnenie_matecniku1"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/premiestnenieMatecniku1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/premiestnenie_matecniku1"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/kontrola_zavieckovania"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kontrolaZavieckovania"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/kontrola_zavieckovania"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/premiestnenie_matecniku2"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/premiestnenieMatecniku2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/premiestnenie_matecniku2"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/skolkovanie"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/skolkovanie"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/skolkovanie"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/premiestnenie_matecniku3"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/premiestnenieMatecniku3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/premiestnenie_matecniku3"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/liahnutie"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/liahnutie"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/liahnutie"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/zuzitkovanie_matiek"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/zuzitkovanieMatiek"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/zuzitkovanie_matiek"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/vaznenie_od"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/vaznenieOd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/vaznenie_od"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/vaznenie_do"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/vaznenieDo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/vaznenie_do"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/prelet_od"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/preletOd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/prelet_od"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/prelet_do"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/preletDo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/prelet_do"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/snubne_prelety"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/snubnePrelety"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/snubne_prelety"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/prenikanie_spermii"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/prenikanieSpermii"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/prenikanie_spermii"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingTop="1dip"
+            android:text="@string/prve_nakladene_vajicka"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/prveNakladeneVajicka"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="@string/prve_nakladene_vajicka"
+            android:paddingRight="6dip"
+            android:paddingTop="1dip"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF000000" />
+
+        <com.google.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="a15167e41a49a63"
+            ads:loadAdOnCreate="true"
+            ads:testDevices="TEST_EMULATOR" />
+    </LinearLayout>
+
+</ScrollView>
