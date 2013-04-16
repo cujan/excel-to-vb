@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kalendár chovu matiek</string>
+    <string name="settings">Nastavenia</string>
+    <string name="novy_chov">Nový chov</string>
+    <string name="zoznam_chovov">Zoznam chovov</string>
+    <string name="date_text"><u>Vložte dátum kliknutím sem</u></string>
+    <string name="vlozenie_plemeniva">Dátum vloženia plemeniva do sádky</string>
+    <string name="cas_pre_notifikaciu">Notifikácia sa má vykonať o :</string>
+    <string name="prevesenie_plastu">Prípadné prevesenie peľového plástu do medníka</string>
+    <string name="vlozenie_suse">Vloženie súše pre zakladenie chovnou matkou</string>
+    <string name="priprava_sadky">Príprava sádky, vloženie prelarvovaného plemeniva</string>
+    <string name="prelozenie_serie">Preloženie série do medníka dochovného včelstva</string>
+    <string name="premiestnenie_matecniku1">Možné premiestnenie matečníkov 1</string>
+    <string name="kontrola_zavieckovania">Možná kontrola zaviečkovania</string>
+    <string name="premiestnenie_matecniku2">Možné premiestnenie matečníkov 2</string>
+    <string name="skolkovanie">Škôlkovanie matečníkov</string>
+    <string name="premiestnenie_matecniku3">Možné premiestnenie matečníkov 3</string>
+    <string name="liahnutie">Liahnutie matiek</string>
+    <string name="zuzitkovanie_matiek">Značenie a zúžitkovanie matiek</string>
+    <string name="vaznenie_od">	Väznenie oddielkov od</string>
+    <string name="vaznenie_do">	Väznenie oddielkov do</string>
+    <string name="prelet_od">Orientačné prelety matiek od</string>
+    <string name="prelet_do">Orientačné prelety matiek do</string>
+    <string name="snubne_prelety">Rujnosť a snubné prelety matiek od:</string>
+    <string name="prenikanie_spermii">Prenikanie spermií do semenných váčkov</string>
+    <string name="prve_nakladene_vajicka">Prvé nakladené vajíčka</string>
+    <string name="pridat_do_kalendara">Pridať udalosti do kalendára</string>
+    <string name="ulozit_event">Archivovať dátum chovu</string>
+    <string name="date_not_added">Nepodarilo sa vložiť dátum do databázy</string>
+    <string name="date_added">Dátum úspešne vložený do databázy</string>
+    <string name="date_deleted">Dátum bol vymazaný z databázy</string>
+    <string name="date_not_deleted">Dátum nebol vymazaný z databázy</string>
+    <string name="date_not_found">Dátum nebol nájdený</string>
+    <string name="delete">Vymazať záznam z databázy</string>
+    <string name="detail">Zobraziť kalendár pre záznam</string>
+    <string name="no_dates_available">Žiadne záznamy</string>
+    <string name="date_exists">Dátum už existuje v databáze</string>
+    <string name="calendar_created">Záznamy boli zaradené do kalendára</string>
+    <string name="calendar_not_created">Nepodarilo sa zaradiť záznamy do kalendára</string>
+    <string name="date_old">Dátum je príliš starý. Dovolený je dátum nie starší ako 23 dní</string>
+    <string name="chov_matiek_nadpis">Chov matiek pre dátum</string>
+    <string name="no_calendar_configured">Nenašiel sa kalendár. Skontrolujte či je správne nakonfigurovaný.</string>
+    <string name="note_dialog">Poznámka</string>
+    <string name="note_dialog_text">Prosím vložte krátku poznámku pre uloženie.</string>
+    <string name="cancel">Zrušiť</string>
+    <string name="popis_programu">Kalendár chovu matiek slúži na rozvrhnutie jednotlivých krokov pre chov matiek. Pre Android 4.0 a vyššie umožňuje uložiť notifikáciu o jednotlivých krokoch do kalendára.</string>
+
+</resources>
