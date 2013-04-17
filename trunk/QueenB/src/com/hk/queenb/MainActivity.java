@@ -1,10 +1,7 @@
 package com.hk.queenb;
 
-
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 
@@ -17,7 +14,7 @@ public class MainActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.single_column_main);
 		// dualPane = findViewById(R.id.right_column) != null;
-		PreferenceManager.getDefaultSharedPreferences(this);
+		// PreferenceManager.getDefaultSharedPreferences(this);
 	}
 
 	@Override

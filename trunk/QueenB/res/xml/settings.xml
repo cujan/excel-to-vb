@@ -4,7 +4,7 @@
 
     <EditTextPreference
         android:defaultValue=""
-        android:key="remote_url"
+        android:key="notification_start"
         android:title="@string/cas_pre_notifikaciu" />
 
 </PreferenceScreen>

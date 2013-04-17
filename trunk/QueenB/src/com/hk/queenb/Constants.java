@@ -16,5 +16,7 @@ public class Constants {
 	public static final String NO = "n";
 	public static final String YES = "y";
 	public static final int DIALOG_LENGTH = 30;
+	public static final int HOUR_NOTIFY_START = 8;
+	public static final int HOUR_NOTIFY_END = 10;
 
 }

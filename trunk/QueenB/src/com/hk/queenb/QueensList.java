@@ -31,13 +31,15 @@ public class QueensList extends ListActivity {
 		registerForContextMenu(getListView());
 		updateList();
 		av = new AdView(this, AdSize.SMART_BANNER, "a15167e41a49a63");
-		// Lookup your LinearLayout assuming it’s been given
+		// Lookup your LinearLayout assuming it has been given
 		// the attribute android:id="@+id/mainLayout"
 		LinearLayout layout = (LinearLayout) findViewById(R.id.mainLayout);
 		// Add the adView to it
 		layout.addView(av);
 		// Initiate a generic request to load it with an ad
 		av.loadAd(new AdRequest());
+		Toast.makeText(this, R.string.list_queens_help, Toast.LENGTH_LONG)
+				.show();
 	}
 
 	public void updateList() {
@@ -55,6 +57,7 @@ public class QueensList extends ListActivity {
 		setListAdapter(adapter);
 
 		SqliteDao.close();
+
 	}
 
 	@Override
