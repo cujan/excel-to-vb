@@ -29,6 +29,7 @@
     <string name="pridat_do_kalendara">Pridať udalosti do kalendára</string>
     <string name="ulozit_event">Archivovať dátum chovu</string>
     <string name="date_not_added">Nepodarilo sa vložiť dátum do databázy</string>
+    <string name="date_not_added_and_calendar_cancelled">Nepodarilo sa vložiť dátum do databázy. Zastavujem ukladanie do kalendára.</string>    
     <string name="date_added">Dátum úspešne vložený do databázy</string>
     <string name="date_deleted">Dátum bol vymazaný z databázy</string>
     <string name="date_not_deleted">Dátum nebol vymazaný z databázy</string>

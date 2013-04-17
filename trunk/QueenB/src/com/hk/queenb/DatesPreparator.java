@@ -317,7 +317,7 @@ public class DatesPreparator {
 						res.getString(R.string.chov_matiek_nadpis)
 								+ " "
 								+ Constants.formatDate.format(
-										initialDate.getTime()).toString() + " "
+										initialDate.getTime()).toString() + " - "
 								+ poznamka);
 				values.put(CalendarContract.Events.DESCRIPTION, textView
 						.getHint().toString());
@@ -399,57 +399,14 @@ public class DatesPreparator {
 
 			calendarCursor.close();
 
-			SqliteDao dbConnect = new SqliteDao(context);
-			if (!dbConnect.dateExists(getSqlDate())) {
-				AlertDialog.Builder alert = new AlertDialog.Builder(context);
+			SqliteDao SqliteDao = new SqliteDao(context);
+			Cursor date = SqliteDao.getNote(getSqlDate());
+			int noteIndex = date.getColumnIndex(SqliteDao.COLUMN_NOTE);
+			date.moveToNext();
+			poznamka = date.getString(noteIndex);
 
-				alert.setTitle(R.string.note_dialog);
-				alert.setMessage(R.string.note_dialog_text);
-
-				// Set an EditText view to get user input
-				final EditText input = new EditText(context);
-				InputFilter[] FilterArray = new InputFilter[1];
-				FilterArray[0] = new InputFilter.LengthFilter(
-						Constants.DIALOG_LENGTH);
-				input.setFilters(FilterArray);
-
-				alert.setView(input);
-
-				alert.setPositiveButton("Ok",
-						new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog,
-									int whichButton) {
-								poznamka = input.getText().toString();
-								SqliteDao dbConnect = new SqliteDao(context);
-								long id = dbConnect.insertDate(getSqlDate(),
-										poznamka, Constants.NO);
-
-								if (id > -1) {
-									Toast.makeText(context,
-											R.string.date_added,
-											Toast.LENGTH_LONG).show();
-								} else {
-									Toast.makeText(context,
-											R.string.date_not_added,
-											Toast.LENGTH_LONG).show();
-								}
-
-							}
-						});
-
-				alert.show();
-
-			} else {
-				SqliteDao SqliteDao = new SqliteDao(context);
-				Cursor date = SqliteDao.getNote(getSqlDate());
-				int noteIndex = date.getColumnIndex(SqliteDao.COLUMN_NOTE);
-				date.moveToNext();
-				poznamka = date.getString(noteIndex);
-
-				date.close();
-				SqliteDao.close();
-
-			}
+			date.close();
+			SqliteDao.close();
 
 			Resources res = context.getResources();
 			pDialog = new ProgressDialog(context);

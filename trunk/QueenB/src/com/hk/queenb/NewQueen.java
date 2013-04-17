@@ -72,7 +72,6 @@ public class NewQueen extends FragmentActivity {
 
 	}
 
-
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -138,14 +137,66 @@ public class NewQueen extends FragmentActivity {
 	}
 
 	public void onPridatDoKalendara(View v) {
+
 		SqliteDao dbConnect = new SqliteDao(this);
 		if (dbConnect.calendarExists(newDates.getSqlDate())) {
 			Toast.makeText(this, R.string.date_exists, Toast.LENGTH_LONG)
 					.show();
 		} else {
+			if (dbConnect.dateExists(newDates.getSqlDate())) {
+				Toast.makeText(this, R.string.date_exists, Toast.LENGTH_LONG)
+						.show();
+			} else {
+				AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
-			newDates.sendToCalendar();
+				alert.setTitle(R.string.note_dialog);
+				alert.setMessage(R.string.note_dialog_text);
+
+				// Set an EditText view to get user input
+				final EditText input = new EditText(this);
+				InputFilter[] FilterArray = new InputFilter[1];
+				FilterArray[0] = new InputFilter.LengthFilter(
+						Constants.DIALOG_LENGTH);
+				input.setFilters(FilterArray);
+
+				alert.setView(input);
+
+				alert.setPositiveButton("Ok",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog,
+									int whichButton) {
+								String value = input.getText().toString();
+								SqliteDao dbConnect = new SqliteDao(newDates
+										.getContext());
+								long id = dbConnect.insertDate(
+										newDates.getSqlDate(), value,
+										inCalendar);
+
+								if (id > -1) {
+									Toast.makeText(newDates.getContext(),
+											R.string.date_added,
+											Toast.LENGTH_LONG).show();
+									Button doDb = (Button) newDates
+											.getContext().findViewById(
+													R.id.ulozit_event);
+									doDb.setVisibility(View.GONE);
+									newDates.sendToCalendar();
+								} else {
+									Toast.makeText(
+											newDates.getContext(),
+											R.string.date_not_added_and_calendar_cancelled,
+											Toast.LENGTH_LONG).show();
+								}
+
+							}
+						});
+
+				alert.show();
+
+			}
+
 		}
+		dbConnect.close();
 	}
 
 	public void onUlozitDoDb(View v) {
@@ -205,7 +256,7 @@ public class NewQueen extends FragmentActivity {
 			alert.show();
 
 		}
-
+		dbConnect.close();
 	}
 
 }
