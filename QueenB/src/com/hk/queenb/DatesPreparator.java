@@ -6,7 +6,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.TimeZone;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.DialogInterface;
@@ -283,6 +285,9 @@ public class DatesPreparator {
 		private Long calendarID = Long.valueOf(-1);
 		private int status = -1;
 
+		// Progress Dialog
+		private ProgressDialog pDialog;
+
 		@Override
 		protected String doInBackground(String... params) {
 			Resources res = context.getResources();
@@ -292,10 +297,10 @@ public class DatesPreparator {
 			for (String s : labels) {
 				TextView textView = (TextView) context
 						.findViewById(getTextViewID(s));
-				Calendar beginTime = getDateFromLabel(s);
-				beginTime.add(Calendar.HOUR, 8);
-				Calendar endTime = getDateFromLabel(s);
-				endTime.add(Calendar.HOUR, 9);
+				Calendar beginTime = (Calendar) getDateFromLabel(s).clone();
+				beginTime.set(Calendar.HOUR, Constants.HOUR_NOTIFY_START);
+				Calendar endTime = (Calendar) getDateFromLabel(s).clone();
+				endTime.set(Calendar.HOUR, Constants.HOUR_NOTIFY_END);
 
 				// Insert Event
 				ContentResolver cr = context.getContentResolver();
@@ -345,8 +350,53 @@ public class DatesPreparator {
 
 		@Override
 		protected void onPostExecute(String result) {
-			if (status < 0)
+			if (status < 0) {
+				if (pDialog != null && pDialog.isShowing())
+					pDialog.dismiss();
 				return;
+			}
+			SqliteDao dbConnect = new SqliteDao(context);
+
+			dbConnect.updateCalendar(getSqlDate(), Constants.YES,
+					eventIds.toString());
+			Button doKalendara = (Button) context
+					.findViewById(R.id.do_kalendara);
+			doKalendara.setVisibility(View.GONE);
+
+			Button doDb = (Button) context.findViewById(R.id.ulozit_event);
+			doDb.setVisibility(View.GONE);
+			pDialog.dismiss();
+		}
+
+		@SuppressLint("InlinedApi")
+		@SuppressWarnings("deprecation")
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			Uri uri = CalendarContract.Calendars.CONTENT_URI;
+			String[] projection = new String[] {
+					CalendarContract.Calendars._ID,
+					CalendarContract.Calendars.ACCOUNT_NAME,
+					CalendarContract.Calendars.CALENDAR_DISPLAY_NAME,
+					CalendarContract.Calendars.NAME,
+					CalendarContract.Calendars.CALENDAR_COLOR };
+
+			Cursor calendarCursor = context.managedQuery(uri, projection, null,
+					null, null);
+			int idIndex = calendarCursor
+					.getColumnIndex(CalendarContract.Calendars._ID);
+
+			if (calendarCursor.getCount() < 1) {
+				Toast.makeText(context, R.string.no_calendar_configured,
+						Toast.LENGTH_SHORT).show();
+				return;
+			} else {
+				calendarCursor.moveToNext();
+				calendarID = Long.valueOf(calendarCursor.getString(idIndex));
+			}
+
+			calendarCursor.close();
+
 			SqliteDao dbConnect = new SqliteDao(context);
 			if (!dbConnect.dateExists(getSqlDate())) {
 				AlertDialog.Builder alert = new AlertDialog.Builder(context);
@@ -389,41 +439,12 @@ public class DatesPreparator {
 
 			}
 
-			dbConnect.updateCalendar(getSqlDate(), Constants.YES,
-					eventIds.toString());
-			Button doKalendara = (Button) context
-					.findViewById(R.id.do_kalendara);
-			doKalendara.setVisibility(View.GONE);
-
-			Button doDb = (Button) context.findViewById(R.id.ulozit_event);
-			doDb.setVisibility(View.GONE);
-		}
-
-		@Override
-		protected void onPreExecute() {
-			Uri uri = CalendarContract.Calendars.CONTENT_URI;
-			String[] projection = new String[] {
-					CalendarContract.Calendars._ID,
-					CalendarContract.Calendars.ACCOUNT_NAME,
-					CalendarContract.Calendars.CALENDAR_DISPLAY_NAME,
-					CalendarContract.Calendars.NAME,
-					CalendarContract.Calendars.CALENDAR_COLOR };
-
-			Cursor calendarCursor = context.managedQuery(uri, projection, null,
-					null, null);
-			int idIndex = calendarCursor
-					.getColumnIndex(CalendarContract.Calendars._ID);
-
-			if (calendarCursor.getCount() < 1) {
-				Toast.makeText(context, R.string.no_calendar_configured,
-						Toast.LENGTH_SHORT).show();
-				return;
-			} else {
-				calendarCursor.moveToNext();
-				calendarID = Long.valueOf(calendarCursor.getString(idIndex));
-			}
-
-			calendarCursor.close();
+			Resources res = context.getResources();
+			pDialog = new ProgressDialog(context);
+			pDialog.setMessage(res.getString(R.string.writing_to_calendar));
+			pDialog.setIndeterminate(false);
+			pDialog.setCancelable(false);
+			pDialog.show();
 
 		}
 
