@@ -17,7 +17,7 @@ import com.hk.queenb.Constants;
 public class SqliteDao {
 
 	protected static final String DATABASE_NAME = "queenb";
-	protected static final int DATABASE_VERSION = 1;
+	protected static final int DATABASE_VERSION = 2;
 
 	protected static final String TB_NAME = "queenb_dates";
 
