@@ -284,6 +284,7 @@ public class DatesPreparator {
 		private ArrayList<String> eventIds = new ArrayList<String>();
 		private Long calendarID = Long.valueOf(-1);
 		private int status = -1;
+		private String poznamka;
 
 		// Progress Dialog
 		private ProgressDialog pDialog;
@@ -316,7 +317,8 @@ public class DatesPreparator {
 						res.getString(R.string.chov_matiek_nadpis)
 								+ " "
 								+ Constants.formatDate.format(
-										initialDate.getTime()).toString());
+										initialDate.getTime()).toString() + " "
+								+ poznamka);
 				values.put(CalendarContract.Events.DESCRIPTION, textView
 						.getHint().toString());
 				values.put(CalendarContract.Events.CALENDAR_ID, calendarID);
@@ -417,10 +419,10 @@ public class DatesPreparator {
 						new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog,
 									int whichButton) {
-								String value = input.getText().toString();
+								poznamka = input.getText().toString();
 								SqliteDao dbConnect = new SqliteDao(context);
 								long id = dbConnect.insertDate(getSqlDate(),
-										value, Constants.NO);
+										poznamka, Constants.NO);
 
 								if (id > -1) {
 									Toast.makeText(context,
@@ -436,6 +438,16 @@ public class DatesPreparator {
 						});
 
 				alert.show();
+
+			} else {
+				SqliteDao SqliteDao = new SqliteDao(context);
+				Cursor date = SqliteDao.getNote(getSqlDate());
+				int noteIndex = date.getColumnIndex(SqliteDao.COLUMN_NOTE);
+				date.moveToNext();
+				poznamka = date.getString(noteIndex);
+
+				date.close();
+				SqliteDao.close();
 
 			}
 

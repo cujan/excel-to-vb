@@ -21,7 +21,8 @@ public class SqliteDao {
 
 	protected static final String TB_NAME = "queenb_dates";
 
-	// Speciální hodnota "_id", pro jednodušší použití SimpleCursorAdapteru
+	// SpeciÃ¡lnÃ­ hodnota "_id", pro jednoduÅ¡Å¡Ã­ pouÅ¾itÃ­
+	// SimpleCursorAdapteru
 	public static final String COLUMN_ID = "_id";
 	public static final String COLUMN_DATE = "entryDate";
 	public static final String COLUMN_NOTE = "Note";
@@ -50,9 +51,9 @@ public class SqliteDao {
 		}
 
 		/*
-		 * Ve skutečnosti je potřeba, abychom uživatelům nemazali data, vytvořit
-		 * pro každou změnu struktury databáze nějaký upgradovací nedestruktivní
-		 * SQL příkaz.
+		 * Ve skuteÄ�nosti je potÅ™eba, abychom uÅ¾ivatelÅ¯m nemazali data,
+		 * vytvoÅ™it pro kaÅ¾dou zmÄ›nu struktury databÃ¡ze nÄ›jakÃ½
+		 * upgradovacÃ­ nedestruktivnÃ­ SQL pÅ™Ã­kaz.
 		 */
 		@Override
 		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -193,5 +194,14 @@ public class SqliteDao {
 		cursor.close();
 		db.close();
 		return exists;
+	}
+
+	public Cursor getNote(String sqlDate) {
+		SQLiteDatabase db = openHelper.getReadableDatabase();
+		String[] twoColumns = { COLUMN_ID, COLUMN_NOTE };
+		String[] selectionArgs = { sqlDate };
+		return db.query(TB_NAME, twoColumns, COLUMN_DATE + "= ?",
+				selectionArgs, null, null, ORDER_BY);
+
 	}
 }

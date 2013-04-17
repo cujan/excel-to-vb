@@ -40,10 +40,10 @@
     <string name="calendar_created">Záznamy boli zaradené do kalendára</string>
     <string name="calendar_not_created">Nepodarilo sa zaradiť záznamy do kalendára</string>
     <string name="date_old">Dátum je príliš starý. Dovolený je dátum nie starší ako 23 dní</string>
-    <string name="chov_matiek_nadpis">Chov matiek pre dátum</string>
+    <string name="chov_matiek_nadpis">Chov matiek pre </string>
     <string name="no_calendar_configured">Nenašiel sa kalendár. Skontrolujte či je správne nakonfigurovaný.</string>
     <string name="note_dialog">Poznámka</string>
-    <string name="note_dialog_text">Prosím vložte krátku poznámku pre uloženie.</string>
+    <string name="note_dialog_text">Vložte krátku poznámku k záznamu</string>
     <string name="cancel">Zrušiť</string>
     <string name="list_queens_help">Pridržaním riadku získate viac možností</string>
     <string name="writing_to_calendar">Zapisujem udalosti do kalendára</string>
