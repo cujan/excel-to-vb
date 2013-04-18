@@ -30,7 +30,7 @@ public class QueensList extends ListActivity {
 		setContentView(R.layout.data_container);
 		registerForContextMenu(getListView());
 		updateList();
-		av = new AdView(this, AdSize.SMART_BANNER, "a15167e41a49a63");
+		av = new AdView(this, AdSize.SMART_BANNER, "a151706b990770f");
 		// Lookup your LinearLayout assuming it has been given
 		// the attribute android:id="@+id/mainLayout"
 		LinearLayout layout = (LinearLayout) findViewById(R.id.mainLayout);
@@ -47,8 +47,7 @@ public class QueensList extends ListActivity {
 		SqliteDao SqliteDao = new SqliteDao(ctx);
 		if (!SqliteDao.existsRecord())
 			return;
-//		String[] from = { SqliteDao.COLUMN_DATE, SqliteDao.COLUMN_NOTE };
-		String[] from = { SqliteDao.COLUMN_DATE, SqliteDao.COLUMN_EVENT_ID };		
+		String[] from = { SqliteDao.COLUMN_DATE, SqliteDao.COLUMN_NOTE };
 		int[] to = { android.R.id.text2, android.R.id.text1 };
 
 		ListAdapter adapter = new SimpleCursorAdapter(ctx,

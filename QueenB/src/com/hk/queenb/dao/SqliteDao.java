@@ -131,13 +131,15 @@ public class SqliteDao {
 					cursor.moveToNext();
 					String calendarText = cursor.getString(calendarIndex);
 					if (calendarText != null && calendarText != "") {
+						calendarText = calendarText.replace("[", "");
+						calendarText = calendarText.replace("]", "");
 						List<String> parsedIDs = Arrays.asList(calendarText
 								.split(","));
 						for (String eventID : parsedIDs) {
 							Uri deleteUri = null;
 							deleteUri = ContentUris.withAppendedId(
 									CalendarContract.Events.CONTENT_URI,
-									Long.valueOf(eventID));
+									Long.valueOf(eventID.trim()));
 							int rows = ctx.getContentResolver().delete(
 									deleteUri, null, null);
 
