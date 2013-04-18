@@ -315,9 +315,9 @@ public class DatesPreparator {
 				values.put(
 						CalendarContract.Events.TITLE,
 						res.getString(R.string.chov_matiek_nadpis)
-								+ " "
+								+ "-"
 								+ Constants.formatDate.format(
-										initialDate.getTime()).toString() + " - "
+										initialDate.getTime()).toString() + "-"
 								+ poznamka);
 				values.put(CalendarContract.Events.DESCRIPTION, textView
 						.getHint().toString());
@@ -326,7 +326,24 @@ public class DatesPreparator {
 						values);
 
 				// Retrieve ID for new event
-				String eventID = uri2.getLastPathSegment();
+				String eventIDString = uri2.getLastPathSegment();
+				Long eventID = Long.parseLong(eventIDString);
+				
+		        String reminderUriString = "content://com.android.calendar/reminders";
+
+		        ContentValues reminderValues = new ContentValues();
+
+		        reminderValues.put("event_id", eventID);
+		        reminderValues.put("minutes", Constants.CALENDAR_REMINDER_MINUTES); // Default value of the
+		                                            // system. Minutes is a
+		                                            // integer
+		        
+		        reminderValues.put("method", 1); // Alert Methods: Default(0),
+		                                            // Alert(1), Email(2),
+		                                            // SMS(3)
+
+		        Uri reminderUri = cr.insert(Uri.parse(reminderUriString), reminderValues);				
+				
 				eventIds.add(eventID.toString());
 
 				// Intent intent = new Intent(Intent.ACTION_INSERT)

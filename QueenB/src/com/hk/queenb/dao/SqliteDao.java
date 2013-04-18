@@ -73,7 +73,8 @@ public class SqliteDao {
 
 	public Cursor getDates2() {
 		SQLiteDatabase db = openHelper.getReadableDatabase();
-		String[] twoColumns = { COLUMN_ID, COLUMN_DATE, COLUMN_NOTE };
+		String[] twoColumns = { COLUMN_ID, COLUMN_DATE, COLUMN_NOTE,
+				COLUMN_EVENT_ID };
 
 		return db.query(TB_NAME, twoColumns, null, null, null, null, ORDER_BY);
 	}

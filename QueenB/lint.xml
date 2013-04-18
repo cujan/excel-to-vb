@@ -7,5 +7,6 @@
         <ignore path="src/com/hk/queenb/DatesPreparator.java" />
         <ignore path="src/com/hk/queenb/dao/SqliteDao.java" />
         <ignore path="src\com\hk\queenb\DatesPreparator.java" />
+        <ignore path="src\com\hk\queenb\dao\SqliteDao.java" />
     </issue>
 </lint>

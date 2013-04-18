@@ -47,7 +47,8 @@ public class QueensList extends ListActivity {
 		SqliteDao SqliteDao = new SqliteDao(ctx);
 		if (!SqliteDao.existsRecord())
 			return;
-		String[] from = { SqliteDao.COLUMN_DATE, SqliteDao.COLUMN_NOTE };
+//		String[] from = { SqliteDao.COLUMN_DATE, SqliteDao.COLUMN_NOTE };
+		String[] from = { SqliteDao.COLUMN_DATE, SqliteDao.COLUMN_EVENT_ID };		
 		int[] to = { android.R.id.text2, android.R.id.text1 };
 
 		ListAdapter adapter = new SimpleCursorAdapter(ctx,
