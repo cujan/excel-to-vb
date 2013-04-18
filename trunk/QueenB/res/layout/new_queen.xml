@@ -530,9 +530,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             ads:adSize="SMART_BANNER"
-            ads:adUnitId="a15167e41a49a63"
+            ads:adUnitId="a151706b990770f"
             ads:loadAdOnCreate="true"
-            ads:testDevices="TEST_EMULATOR" />
+            ads:testDevices="KXYS-WMI5-UNWJ-E" />
     </LinearLayout>
 
 </ScrollView>

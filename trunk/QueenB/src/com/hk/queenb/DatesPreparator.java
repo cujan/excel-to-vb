@@ -316,9 +316,10 @@ public class DatesPreparator {
 						CalendarContract.Events.TITLE,
 						res.getString(R.string.chov_matiek_nadpis)
 								+ "-"
+								+ poznamka
+								+ "-"
 								+ Constants.formatDate.format(
-										initialDate.getTime()).toString() + "-"
-								+ poznamka);
+										initialDate.getTime()).toString());
 				values.put(CalendarContract.Events.DESCRIPTION, textView
 						.getHint().toString());
 				values.put(CalendarContract.Events.CALENDAR_ID, calendarID);
@@ -328,22 +329,25 @@ public class DatesPreparator {
 				// Retrieve ID for new event
 				String eventIDString = uri2.getLastPathSegment();
 				Long eventID = Long.parseLong(eventIDString);
-				
-		        String reminderUriString = "content://com.android.calendar/reminders";
 
-		        ContentValues reminderValues = new ContentValues();
+				String reminderUriString = "content://com.android.calendar/reminders";
 
-		        reminderValues.put("event_id", eventID);
-		        reminderValues.put("minutes", Constants.CALENDAR_REMINDER_MINUTES); // Default value of the
-		                                            // system. Minutes is a
-		                                            // integer
-		        
-		        reminderValues.put("method", 1); // Alert Methods: Default(0),
-		                                            // Alert(1), Email(2),
-		                                            // SMS(3)
+				ContentValues reminderValues = new ContentValues();
 
-		        Uri reminderUri = cr.insert(Uri.parse(reminderUriString), reminderValues);				
-				
+				reminderValues.put("event_id", eventID);
+				reminderValues.put("minutes",
+						Constants.CALENDAR_REMINDER_MINUTES); // Default value
+																// of the
+				// system. Minutes is a
+				// integer
+
+				reminderValues.put("method", 1); // Alert Methods: Default(0),
+													// Alert(1), Email(2),
+													// SMS(3)
+
+				Uri reminderUri = cr.insert(Uri.parse(reminderUriString),
+						reminderValues);
+
 				eventIds.add(eventID.toString());
 
 				// Intent intent = new Intent(Intent.ACTION_INSERT)
@@ -375,9 +379,10 @@ public class DatesPreparator {
 				return;
 			}
 			SqliteDao dbConnect = new SqliteDao(context);
-
-			dbConnect.updateCalendar(getSqlDate(), Constants.YES,
-					eventIds.toString());
+			String IDs = eventIds.toString();
+			IDs = IDs.replace("[", "");
+			IDs = IDs.replace("]", "");
+			dbConnect.updateCalendar(getSqlDate(), Constants.YES, IDs);
 			Button doKalendara = (Button) context
 					.findViewById(R.id.do_kalendara);
 			doKalendara.setVisibility(View.GONE);
