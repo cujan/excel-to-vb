@@ -91,6 +91,7 @@ public class NewQueen extends FragmentActivity {
 				if (dbNote != null && dbNote != "") {
 					TextView note = (TextView) findViewById(R.id.note);
 					note.setText(dbNote);
+					note.setVisibility(View.VISIBLE);
 				}
 				SqliteDao dbConnect = new SqliteDao(this);
 				if (!dbConnect.calendarExists(newDates.getSqlDate())) {

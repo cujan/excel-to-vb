@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ece8e8" >
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ece8e8"
@@ -16,9 +15,10 @@
             android:id="@+id/note"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:visibility="gone" />
 
@@ -48,10 +48,12 @@
             android:id="@+id/textDate"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="onZadajDatum"
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/vlozenie_plemeniva"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -65,7 +67,7 @@
             android:paddingTop="1dip"
             android:text="@string/date_text"
             android:textColor="#FF0000"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -79,7 +81,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/prevesenie_plastu"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -90,7 +92,7 @@
             android:hint="@string/prevesenie_plastu"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -104,7 +106,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/vlozenie_suse"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -115,7 +117,7 @@
             android:hint="@string/vlozenie_suse"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -129,7 +131,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/priprava_sadky"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -140,7 +142,7 @@
             android:hint="@string/priprava_sadky"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -154,7 +156,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/prelozenie_serie"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -165,7 +167,7 @@
             android:hint="@string/prelozenie_serie"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -179,7 +181,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/premiestnenie_matecniku1"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -190,7 +192,7 @@
             android:hint="@string/premiestnenie_matecniku1"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -204,7 +206,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/kontrola_zavieckovania"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -215,7 +217,7 @@
             android:hint="@string/kontrola_zavieckovania"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -229,7 +231,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/premiestnenie_matecniku2"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -240,7 +242,7 @@
             android:hint="@string/premiestnenie_matecniku2"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -254,7 +256,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/skolkovanie"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -265,7 +267,7 @@
             android:hint="@string/skolkovanie"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -279,7 +281,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/premiestnenie_matecniku3"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -290,7 +292,7 @@
             android:hint="@string/premiestnenie_matecniku3"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -304,7 +306,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/liahnutie"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -315,7 +317,7 @@
             android:hint="@string/liahnutie"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -329,7 +331,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/zuzitkovanie_matiek"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -340,7 +342,7 @@
             android:hint="@string/zuzitkovanie_matiek"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -354,7 +356,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/vaznenie_od"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -365,7 +367,7 @@
             android:hint="@string/vaznenie_od"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -379,7 +381,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/vaznenie_do"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -390,7 +392,7 @@
             android:hint="@string/vaznenie_do"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -404,7 +406,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/prelet_od"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -415,7 +417,7 @@
             android:hint="@string/prelet_od"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -429,7 +431,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/prelet_do"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -440,7 +442,7 @@
             android:hint="@string/prelet_do"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -454,7 +456,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/snubne_prelety"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -465,7 +467,7 @@
             android:hint="@string/snubne_prelety"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -479,7 +481,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/prenikanie_spermii"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -490,7 +492,7 @@
             android:hint="@string/prenikanie_spermii"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View
@@ -504,7 +506,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
             android:text="@string/prve_nakladene_vajicka"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -515,7 +517,7 @@
             android:hint="@string/prve_nakladene_vajicka"
             android:paddingRight="6dip"
             android:paddingTop="1dip"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
         <View

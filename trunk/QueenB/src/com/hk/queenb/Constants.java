@@ -19,4 +19,6 @@ public class Constants {
 	public static final int HOUR_NOTIFY_START = 8;
 	public static final int HOUR_NOTIFY_END = 10;
 
+	public static final int CALENDAR_REMINDER_MINUTES = 10;
+
 }
