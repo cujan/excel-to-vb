@@ -378,17 +378,19 @@ public class DatesPreparator {
 					pDialog.dismiss();
 				return;
 			}
-			SqliteDao dbConnect = new SqliteDao(context);
-			String IDs = eventIds.toString();
-			IDs = IDs.replace("[", "");
-			IDs = IDs.replace("]", "");
-			dbConnect.updateCalendar(getSqlDate(), Constants.YES, IDs);
-			Button doKalendara = (Button) context
-					.findViewById(R.id.do_kalendara);
-			doKalendara.setVisibility(View.GONE);
+			if (eventIds != null && !eventIds.isEmpty()) {
+				SqliteDao dbConnect = new SqliteDao(context);
+				String IDs = eventIds.toString();
+				IDs = IDs.replace("[", "");
+				IDs = IDs.replace("]", "");
+				dbConnect.updateCalendar(getSqlDate(), Constants.YES, IDs);
+				Button doKalendara = (Button) context
+						.findViewById(R.id.do_kalendara);
+				doKalendara.setVisibility(View.GONE);
 
-			Button doDb = (Button) context.findViewById(R.id.ulozit_event);
-			doDb.setVisibility(View.GONE);
+				Button doDb = (Button) context.findViewById(R.id.ulozit_event);
+				doDb.setVisibility(View.GONE);
+			}
 			pDialog.dismiss();
 		}
 
