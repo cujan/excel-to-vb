@@ -57,8 +57,9 @@ public class SqliteDao {
 		 */
 		@Override
 		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-			db.execSQL("DROP TABLE IF EXISTS " + TB_NAME);
-			onCreate(db);
+//			db.execSQL("DROP TABLE IF EXISTS " + TB_NAME);
+//			onCreate(db);
+			return;
 		}
 	}
 

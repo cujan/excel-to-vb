@@ -51,9 +51,10 @@ public class NewQueen extends FragmentActivity {
 	};
 
 	/** Updates the date in the TextView */
+	
 	private void updateDisplay(Calendar newDate, String event) {
 		newDates = new DatesPreparator(newDate, this);
-		if (!newDates.allowedDate(newDate)) {
+		if (!newDates.allowedDate(newDate) && event == Constants.EVENT_NEW) {
 			Toast.makeText(this, R.string.date_old, Toast.LENGTH_LONG).show();
 			return;
 		}
