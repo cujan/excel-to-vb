@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WoodenChurches</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="church_history_text">
+		<![CDATA[
+        <p><b>Chrám svätého Mikuláša (Cerkov/Cerkva svätého Nikolaja)</b> je drevená gréckokatolícka cerkev byzantského obradu v obci Bodružal v okrese Svidník v Prešovskom kraji. Cerkev je zasvätená svätému Mikulášovi Divotvorcovi, arcibiskupovi z Myry v Lýkii.</p><p>Chrám je súčasťou jedinečného urbanistického celku na vyvýšenom mieste v centre obce. Okrem chrámu ho tvorí aj samostatná zvonica, priľahlý cintorín a drevená ohrada so šindľovou strieškou a vstupnou bránkou, ktorá je zakrytá kužeľovou strechou s makovičkou.</p>
+        ]]>
+    </string>
+    <string name="church_detail">Info</string>
+    <string name="church_history">History</string>
+    <string name="church_gallery">Gallery</string>
+    <!-- details -->
+    <string name="name">Name</string>
+    <string name="location">Location</string>
+    <string name="year">Year</string>
+    
+    <string name="name_text">Chrám svätého Mikuláša</string>
+    <string name="location_text">Bodružal</string>
+    <string name="year_text">1658</string>
+</resources>
