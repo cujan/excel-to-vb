@@ -11,13 +11,26 @@
         android:layout_height="wrap_content"
         android:background="#f4f60c"
         android:orientation="vertical" >
+        
+        
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="18dip"
+            android:paddingRight="18dip"
+            android:paddingTop="18dip"
+            android:text="@string/app_name"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/novy_chov"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="23dip"
-            android:layout_marginBottom="3dip"
+            android:layout_marginBottom="8dip"
             android:layout_marginLeft="20dip"
             android:layout_marginRight="20dip"
             android:background="@drawable/button_custom"
@@ -28,7 +41,7 @@
             android:id="@+id/zoznam_chovov"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dip"
+            android:layout_marginBottom="8dip"
             android:layout_marginLeft="20dip"
             android:layout_marginRight="20dip"
             android:background="@drawable/button_custom"
@@ -46,7 +59,6 @@
             android:onClick="onOPrograme"
             android:text="@string/o_programe" />        
         
-
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="wrap_content"
