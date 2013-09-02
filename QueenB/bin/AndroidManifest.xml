@@ -3,7 +3,8 @@
     package="com.hk.queenb"
     android:versionCode="1"
     android:versionName="1.0" >
-
+	<supports-screens android:anyDensity="true" android:screenOrientation="portrait" />
+	
     <uses-sdk
         android:minSdkVersion="7"
         android:targetSdkVersion="16" />
@@ -30,7 +31,7 @@
         <activity android:name="QueensList" >
         </activity>
     </application>
-
+	
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
