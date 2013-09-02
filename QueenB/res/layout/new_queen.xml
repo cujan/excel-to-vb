@@ -3,12 +3,11 @@
     xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ece8e8" >
+    android:background="#f4f60c" >
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#ece8e8"
         android:orientation="vertical" >
 
         <TextView
@@ -29,6 +28,7 @@
             android:layout_marginBottom="3dip"
             android:layout_marginLeft="6dip"
             android:layout_marginRight="6dip"
+            android:background="@drawable/button_custom"
             android:onClick="onPridatDoKalendara"
             android:text="@string/pridat_do_kalendara"
             android:visibility="gone" />
@@ -40,6 +40,7 @@
             android:layout_marginBottom="3dip"
             android:layout_marginLeft="6dip"
             android:layout_marginRight="6dip"
+            android:background="@drawable/button_custom"
             android:onClick="onUlozitDoDb"
             android:text="@string/ulozit_event"
             android:visibility="gone" />

@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.text.InputFilter;
@@ -78,6 +79,13 @@ public class NewQueen extends FragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.new_queen);
+		Button ulozitEvent= (Button) this.findViewById(R.id.ulozit_event);
+		Button doKalendara = (Button) this.findViewById(R.id.do_kalendara);
+		
+		Typeface font = Typeface
+				.createFromAsset(getAssets(), "kristen-itc.ttf");
+		ulozitEvent.setTypeface(font);
+		doKalendara.setTypeface(font);
 		String dbDate = getIntent().getStringExtra(Constants.DATE);
 		String dbNote = getIntent().getStringExtra(Constants.NOTE);
 		pDisplayDate = (TextView) findViewById(R.id.displayDate);
@@ -98,9 +106,10 @@ public class NewQueen extends FragmentActivity {
 				if (!dbConnect.calendarExists(newDates.getSqlDate())) {
 					int currentapiVersion = android.os.Build.VERSION.SDK_INT;
 					if (currentapiVersion >= android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-						Button doKalendara = (Button) this
-								.findViewById(R.id.do_kalendara);
-						doKalendara.setVisibility(View.VISIBLE);
+						Button doKalendara1 = (Button) this
+								.findViewById(R.id.do_kalendara);						
+						doKalendara1.setVisibility(View.VISIBLE);
+						doKalendara1.setTypeface(font);
 					}
 				}
 			} catch (ParseException e) {
