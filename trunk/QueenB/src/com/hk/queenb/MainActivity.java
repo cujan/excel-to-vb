@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.text.Html;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -22,6 +23,7 @@ public class MainActivity extends FragmentActivity {
 		setContentView(R.layout.single_column_main);
 
 		TextView titleText = (TextView) this.findViewById(R.id.title_text);
+		TextView contact = (TextView) this.findViewById(R.id.contact);		
 		Button novyChov = (Button) this.findViewById(R.id.novy_chov);
 		Button zoznamChovov = (Button) this.findViewById(R.id.zoznam_chovov);
 		Button oPrograme = (Button) this.findViewById(R.id.o_programe);
@@ -31,6 +33,9 @@ public class MainActivity extends FragmentActivity {
 		novyChov.setTypeface(font);
 		zoznamChovov.setTypeface(font);
 		oPrograme.setTypeface(font);
+		contact.setTypeface(font);		
+		contact.setText(Html.fromHtml(getString(R.string.contact)));		
+
 
 		// dualPane = findViewById(R.id.right_column) != null;
 		// PreferenceManager.getDefaultSharedPreferences(this);
@@ -59,7 +64,6 @@ public class MainActivity extends FragmentActivity {
 		builder.setMessage(R.string.popis_programu).setPositiveButton(
 				R.string.ok, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
-						// FIRE ZE MISSILES!
 					}
 				});
 		// Create the AlertDialog object and return it
