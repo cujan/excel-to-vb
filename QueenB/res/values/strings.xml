@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<string name="app_name_basic">QueenB</string>
     <string name="app_name">Kalendár chovu matiek</string>
     <string name="settings">Nastavenia</string>
     <string name="novy_chov">Nový chov</string>
