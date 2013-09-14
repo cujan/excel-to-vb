@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Calendar rearing mothers</string>
+    <string name="app_name">Rearing mothers calendar</string>
     <string name="settings">Settings</string>
     <string name="novy_chov">New rearing</string>
     <string name="ok">OK</string>    
     <string name="o_programe">About the program</string>    
     <string name="zoznam_chovov">List of holdings</string>
     <string name="date_text"><u>Insert the date by clicking here</u></string>
-    <string name="vlozenie_plemeniva">Date Added plemeniva in ponds</string>
+    <string name="vlozenie_plemeniva">Date of adding plemeniva in ponds</string>
     <string name="cas_pre_notifikaciu">Notification shall be made by:</string>
     <string name="prevesenie_plastu">Any slack in pollen comb in supers</string>
     <string name="vlozenie_suse">Insert a land base for farming mother</string>

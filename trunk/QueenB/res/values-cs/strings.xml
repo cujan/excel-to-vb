@@ -1,12 +1,12 @@
-seřizeniseřizeniseřizeniseřizeni<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">Kalendář chovu matek</string>
+	<string name="app_name_basic">QueenB</string>
+    <string name="app_name">Kalendár chovu matek</string>
     <string name="settings">Seřizeni</string>
     <string name="novy_chov">Nový chov</string>
     <string name="ok">OK</string>    
     <string name="o_programe">O programu</string>    
-    <string name="zoznam_chovov">Seznam chovů</string>
+    <string name="zoznam_chovov">Seznam chovú</string>
     <string name="date_text"><u>Vložte dátum kliknutím sem</u></string>
     <string name="vlozenie_plemeniva">Datum vložení plemeniva do sádky</string>
     <string name="cas_pre_notifikaciu">Notifikace se má vykonat o:</string>
@@ -28,8 +28,8 @@ seřizeniseřizeniseřizeniseřizeni<?xml version="1.0" encoding="utf-8"?>
     <string name="snubne_prelety">Rujnosť a snubní přelety matek od:</string>
     <string name="prenikanie_spermii">Pronikání spermií do semenných váčků</string>
     <string name="prve_nakladene_vajicka">První nakladená vajíčka</string>
-    <string name="pridat_do_kalendara">Přidej události do kalendáře</string>
-    <string name="ulozit_event">Archivuj datum chovu</string>
+    <string name="pridat_do_kalendara">Pridej události do kalendáre</string>
+    <string name="ulozit_event">Archivuj dátum chovu</string>
     <string name="date_not_added">Nepodařilo se vložit datum do databáze</string>
     <string name="date_not_added_and_calendar_cancelled">Nepodařilo se vložit datum do databáze. Zastavuji ukládání do kalendáře.</string>
     <string name="date_added">Datum úspěšně vložen do databáze</string>
