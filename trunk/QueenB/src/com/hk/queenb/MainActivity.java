@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -19,11 +20,11 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);		
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.single_column_main);
 
 		TextView titleText = (TextView) this.findViewById(R.id.title_text);
-		TextView contact = (TextView) this.findViewById(R.id.contact);		
+		TextView contact = (TextView) this.findViewById(R.id.contact);
 		Button novyChov = (Button) this.findViewById(R.id.novy_chov);
 		Button zoznamChovov = (Button) this.findViewById(R.id.zoznam_chovov);
 		Button oPrograme = (Button) this.findViewById(R.id.o_programe);
@@ -33,10 +34,9 @@ public class MainActivity extends FragmentActivity {
 		novyChov.setTypeface(font);
 		zoznamChovov.setTypeface(font);
 		oPrograme.setTypeface(font);
-		contact.setTypeface(font);		
-		contact.setText(Html.fromHtml(getString(R.string.contact)));		
-
-
+		contact.setTypeface(font);
+		contact.setText(Html.fromHtml(getString(R.string.contact)));
+		contact.setMovementMethod(LinkMovementMethod.getInstance());
 		// dualPane = findViewById(R.id.right_column) != null;
 		// PreferenceManager.getDefaultSharedPreferences(this);
 	}

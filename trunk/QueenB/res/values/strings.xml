@@ -50,7 +50,9 @@
     <string name="cancel">Zrušiť</string>
     <string name="list_queens_help">Pridržaním riadku získate viac možností</string>
     <string name="writing_to_calendar">Zapisujem udalosti do kalendára</string>
-    <string name="popis_programu">Kalendár chovu matiek slúži na rozvrhnutie jednotlivých krokov pre chov včelých matiek. Pre Android 4.0 a vyššie umožňuje uložiť notifikáciu o jednotlivých krokoch do kalendára.</string>
+	<string name="email">polnohospodari@polnohospodari.sk</string>    
+    <string name="popis_programu">Kalendár chovu matiek slúži na rozvrhnutie jednotlivých krokov pre chov včelých matiek. Pre Android 4.0 a vyššie umožňuje uložiť notifikáciu o jednotlivých krokoch do kalendára.\nKontakt: polnohospodari@polnohospodari.sk</string>
+	<string name="no_client">Nenašiel sa emailový klient.</string>    
     <string name="contact">
         <![CDATA[
         <u><a href="mailto:polnohospodari@polnohospodari.sk">@ HK Solutions</a></u>
