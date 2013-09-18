@@ -25,12 +25,12 @@
             android:id="@+id/do_kalendara"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+			android:layout_marginTop="8dip"            
             android:layout_marginBottom="3dip"
             android:layout_marginLeft="16dip"
             android:layout_marginRight="16dip"
             android:background="@drawable/button_custom"
             android:onClick="onPridatDoKalendara"
-            android:paddingTop="8dip"
             android:text="@string/pridat_do_kalendara"
             android:visibility="gone" />
 
