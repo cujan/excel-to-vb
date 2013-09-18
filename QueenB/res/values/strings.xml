@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Rearing mothers calendar</string>
+	<string name="app_name_basic">QueenB</string>    
     <string name="settings">Settings</string>
     <string name="novy_chov">New rearing</string>
     <string name="ok">OK</string>    
