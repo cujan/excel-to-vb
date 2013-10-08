@@ -22,21 +22,39 @@
             android:layout_weight="0.8"
             android:paddingLeft="6dip"
             android:paddingTop="1dip"
-            android:text="@string/prvy_field"
+            android:text="@string/dlzka_kmena"
             android:textSize="13sp"
             android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/prvy_field_id"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:gravity="left"
-            android:inputType="numberDecimal"
-            android:lines="1"
-            android:paddingTop="1dip"
-            android:textStyle="normal" />
     </TableRow>
+
+    <EditText
+        android:id="@+id/dlzka_kmena_id"
+        android:layout_width="228dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="left"
+        android:inputType="numberDecimal"
+        android:lines="1"
+        android:paddingTop="1dip"
+        android:textStyle="normal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sirka_kmena"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/sirka_kmena_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal" />
 
     <Button
         android:layout_width="match_parent"
@@ -46,5 +64,11 @@
         android:layout_marginRight="6dip"
         android:onClick="onCalculateClicked"
         android:text="@string/calculate_volume" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
 
 </LinearLayout>
