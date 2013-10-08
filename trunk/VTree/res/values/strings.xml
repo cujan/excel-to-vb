@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">VTree</string>
+    <string name="calculate_volume">Vypočítaj</string>
+    <string name="prvy_field">Prvy field</string>
+    <string name="no_tree_type_selected">Nebol vybraný žiaden typ stromu</string>
+    <string name="result_text">Vypočítaný objem:</string>
+    <string name="typ_dreva_key">Typ dreva</string>
+
+    <string-array name="typ_dreva_array">
+        <item>Smrek</item>
+    </string-array>
+
+</resources>
