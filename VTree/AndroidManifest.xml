@@ -22,7 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="CalcResults"></activity>
+        <activity android:name="com.hk.vtree.CalcResults" >
+        </activity>
+        <activity
+            android:name="com.hk.vtree.ObjemBezKory"
+            android:label="@string/title_activity_objem_bez_kory" >
+        </activity>
     </application>
 
 </manifest>

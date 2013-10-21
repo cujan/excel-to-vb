@@ -12,8 +12,8 @@ public class CalcResults extends Activity {
 
 		Double calcVolume = getIntent().getDoubleExtra(Constants.VOLUME_RESULT,
 				0);
-		TextView volume = (TextView) findViewById(R.id.result_volume);
-		volume.setText(calcVolume.toString());
+		//TextView volume = (TextView) findViewById(R.id.textView1);
+		//volume.setText(calcVolume.toString());
 
 	}
 }
