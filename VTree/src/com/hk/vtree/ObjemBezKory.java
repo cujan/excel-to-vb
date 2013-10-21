@@ -30,8 +30,8 @@ public class ObjemBezKory extends Activity {
 		EditText sirkaKmena = (EditText)findViewById(R.id.editTextSirkaKmena);
 		String result;
 		
-		Double dlzka = (double) 2;
-		Double sirka = (double) 2;
+		Double dlzka = Double.valueOf(dlzkaKmena.getText().toString());
+		Double sirka = Double.valueOf(sirkaKmena.getText().toString());
 		Double objem;
 		
 		objem = dlzka*sirka;
