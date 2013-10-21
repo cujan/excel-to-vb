@@ -11,6 +11,12 @@
     <string-array name="typ_dreva_array">
         <item>Smrek</item>
     </string-array>
+
     <string name="sirka_kmena">Zadaj šírku kmeňa (cm): </string>
+    <string name="btn_objem_bez_kory">Objem kmeňa bez kôry - meraný s kôrou</string>
+    <string name="title_activity_objem_bez_kory">ObjemBezKory</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="btn_vypocitaj_objem_dreva_bez_kory">Vypočítaj objem kmeňa bez kôry</string>
 
 </resources>
