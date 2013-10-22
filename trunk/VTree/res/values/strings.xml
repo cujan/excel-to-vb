@@ -10,6 +10,7 @@
 
     <string-array name="typ_dreva_array">
         <item>Smrek</item>
+        <item>Dub</item>
     </string-array>
 
     <string name="sirka_kmena">Zadaj šírku kmeňa (cm): </string>
