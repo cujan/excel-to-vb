@@ -26,6 +26,8 @@ public class ObjemBezKory extends Activity {
 		
 		TextView vysledok = (TextView)findViewById(R.id.textViewVysledok);
 		Spinner typDrevaSpinner = (Spinner)findViewById(R.id.spinnerTypDreva);
+		EditText dlzkaKmena = (EditText)findViewById(R.id.editTextDlzkaKmena);
+		EditText sirkaKmena = (EditText)findViewById(R.id.editTextSirkaKmena);
 		
 		String typStromu = "";
 		
@@ -40,7 +42,16 @@ public class ObjemBezKory extends Activity {
 		typStromu = Constants.KeyMap.get(vybranyTypStromu);
 		}
 		
-		vysledok.setText(getResult()+typStromu);
+		//kontrola ci je vlozena dlzka - dokoncit
+		
+		
+		
+		
+			vysledok.setText(getResult());
+		
+		
+		
+		
 		
 		
 	}
@@ -65,17 +76,49 @@ public class ObjemBezKory extends Activity {
 		double zaokruhlene = Math.round(objem*100)/100D;
 		
 		
-		result = objem.toString()+ "--"	+zaokruhlene+"m3";
+		result = zaokruhlene+"m3";
 		return result;
 	}
 	
 	public double koeficient(){
 		EditText sirkaKmena = (EditText)findViewById(R.id.editTextSirkaKmena);
+		//vyber typu stromu a porovnanie a nasledne pouzitie prislusnej konstanty
+		
+		Spinner typDrevaSpinner = (Spinner)findViewById(R.id.spinnerTypDreva);
+		
+		String typStromu = "";
+		
+		String vybranyTypStromu = String.valueOf(typDrevaSpinner.getSelectedItem());
+		
+		if (vybranyTypStromu == null || vybranyTypStromu.equals(String.valueOf(""))
+			|| vybranyTypStromu.isEmpty()) {
+		Toast.makeText(this, R.string.no_tree_type_selected,
+			Toast.LENGTH_SHORT).show();
+		//return;
+		} else {
+		typStromu = Constants.KeyMap.get(vybranyTypStromu);
+		}
+		
 		Double sirka = Double.valueOf(sirkaKmena.getText().toString());
 		double hrubka = 0;
-		double p0 = 0.57723;
-		double p1 = 0.006897;
-		double p2 = 1.3123;
+		double p0=0;
+		double p1=0;
+		double p2=0;
+		
+		
+		if(typStromu=="sm"){
+			p0 = 0.57723;
+			p1 = 0.006897;
+			p2 = 1.3123;
+		}else if (typStromu=="db") {
+			p0=1.2474;
+			p1=0.042323;
+			p2=1.0623;
+		}
+		
+		
+		
+		
 		
 		hrubka =p0 + p1*Math.pow(sirka, p2);
 		

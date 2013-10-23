@@ -64,7 +64,6 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="22dp"
         android:entries="@array/typ_dreva_array"
         android:prompt="@string/typ_dreva_key" />
 
