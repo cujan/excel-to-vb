@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">VTree</string>
+    <string name="app_name">Kubíkovacie tabuľky</string>
     <string name="calculate_volume">Vypočítaj</string>
     <string name="dlzka_kmena">Zadaj dĺžku kmeňa (m):</string>
     <string name="no_tree_type_selected">Nebol vybraný žiaden typ stromu</string>
