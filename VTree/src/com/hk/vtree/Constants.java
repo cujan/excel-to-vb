@@ -17,7 +17,9 @@ public class Constants {
 	static {
 		KeyMap = new HashMap<String, String>();
 		KeyMap.put("Smrek", "sm");
+		KeyMap.put("Borovica", "bo");
 		KeyMap.put("Dub", "db");
+		KeyMap.put("Buk", "bk");
 	}
 
 }

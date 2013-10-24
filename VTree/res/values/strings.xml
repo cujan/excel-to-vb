@@ -9,8 +9,11 @@
     <string name="typ_dreva_key">Typ dreva</string>
 
     <string-array name="typ_dreva_array">
-        <item>Smrek</item>
         <item>Dub</item>
+        <item>Buk</item>
+        <item>Smrek</item>
+        <item>Borovica</item>
+        
     </string-array>
 
     <string name="sirka_kmena">Zadaj šírku kmeňa (cm): </string>
