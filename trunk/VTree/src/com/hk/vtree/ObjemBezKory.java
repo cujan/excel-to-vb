@@ -114,6 +114,14 @@ public class ObjemBezKory extends Activity {
 			p0=1.2474;
 			p1=0.042323;
 			p2=1.0623;
+		}else if (typStromu=="bk") {
+			p0=-0.04088;
+			p1=0.16634;
+			p2=0.56076;
+		}else if (typStromu=="bo") {
+			p0=0.24017;
+			p1=0.001915;
+			p2=1.7866;
 		}
 		
 		
