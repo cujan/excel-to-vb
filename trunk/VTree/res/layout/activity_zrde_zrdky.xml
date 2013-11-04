@@ -1,5 +1,10 @@
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView  
+    xmlns:android="http://schemas.android.com/apk/res/android" 
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<TableLayout
+   
     android:id="@+id/TableLayout1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -83,17 +88,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="max 3" />
+            android:text="najviac 3" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="2 a viac" />
+            android:text="2+" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextIhlZrdky1"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -103,10 +108,10 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewIhlZrdky1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="objem" 
+            android:text="0" 
             android:layout_marginLeft="16dp"/>
 
     </TableRow>
@@ -134,17 +139,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="max 3" />
+            android:text="4 - 6" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="2 a viac" />
+            android:text="3 a 4" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextIhlZrdky2"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -154,10 +159,10 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewIhlZrdky2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="objem" 
+            android:text="0" 
             android:layout_marginLeft="16dp"/>
 
     </TableRow>
@@ -185,17 +190,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="max 3" />
+            android:text="4 - 6" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="2 a viac" />
+            android:text="4.1 - 8" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextIhlZrdky3"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -205,10 +210,10 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewIhlZrdky3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="objem" 
+            android:text="0" 
             android:layout_marginLeft="16dp"/>
 
     </TableRow>
@@ -236,17 +241,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="max 3" />
+            android:text="7 a 8" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="2 a viac" />
+            android:text="6+" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextIhlZrde1"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -256,10 +261,10 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewIhlZrde1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="objem" 
+            android:text="0" 
             android:layout_marginLeft="16dp"/>
 
     </TableRow>
@@ -287,17 +292,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="max 3" />
+            android:text="9 a 10" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="2 a viac" />
+            android:text="8+" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextIhlZrde2"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -307,10 +312,10 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewIhlZrde2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="objem" 
+            android:text="0" 
             android:layout_marginLeft="16dp"/>
 
     </TableRow>
@@ -338,17 +343,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="max 3" />
+            android:text="11 - 13" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="2 a viac" />
+            android:text="9 - 12" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextIhlZrde3"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -358,10 +363,10 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewIhlZrde3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="objem" 
+            android:text="0" 
             android:layout_marginLeft="16dp"/>
 
     </TableRow>
@@ -389,17 +394,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="max 3" />
+            android:text="11 - 13" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="2 a viac" />
+            android:text="12.1 - 15" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextIhlZrde4"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -409,10 +414,10 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewIhlZrde4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="objem" 
+            android:text="0" 
             android:layout_marginLeft="16dp"/>
 
     </TableRow>
@@ -440,17 +445,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="max 3" />
+            android:text="najviac 3" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="2 a viac" />
+            android:text="-" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextListZrdky1"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -460,10 +465,10 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewListZrdky1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="objem" 
+            android:text="0" 
             android:layout_marginLeft="16dp"/>
 
     </TableRow>
@@ -491,17 +496,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="max 3" />
+            android:text="4 a 5" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="2 a viac" />
+            android:text="-" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextListZrdky2"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -511,10 +516,10 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewListZrdky2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="objem" 
+            android:text="0" 
             android:layout_marginLeft="16dp"/>
 
     </TableRow><TableRow
@@ -541,17 +546,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="max 3" />
+            android:text="6" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="2 a viac" />
+            android:text="-" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextListZrdky3"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -561,10 +566,10 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewListZrdky3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="objem" 
+            android:text="0" 
             android:layout_marginLeft="16dp"/>
 
     </TableRow>
@@ -592,17 +597,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="max 3" />
+            android:text="7 a 8" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="2 a viac" />
+            android:text="5+" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextListZrde1"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -612,10 +617,10 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewListZrde1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="objem" 
+            android:text="0" 
             android:layout_marginLeft="16dp"/>
 
     </TableRow>
@@ -643,17 +648,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="max 3" />
+            android:text="9 a 10" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="2 a viac" />
+            android:text="7+" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextListZrde2"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -663,10 +668,10 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewListZrde2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="objem" 
+            android:text="0" 
             android:layout_marginLeft="16dp"/>
 
     </TableRow>
@@ -694,17 +699,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="max 3" />
+            android:text="11 - 13" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="2 a viac" />
+            android:text="9+" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextListZrde3"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -714,12 +719,20 @@
         </EditText>
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textViewListZrde3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="objem" 
+            android:text="0" 
             android:layout_marginLeft="16dp"/>
 
     </TableRow>
 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickButtonPokus"
+        android:text="Button" />
+
 </TableLayout>
+</ScrollView>
