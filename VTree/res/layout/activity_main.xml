@@ -13,4 +13,11 @@
         android:onClick="onClickObjemBezKory"
         android:text="@string/btn_objem_bez_kory" />
 
+    <Button
+        android:id="@+id/btnZrdeZrdky"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickZrdeZrdky"
+        android:text="@string/btn_zrde_zrdky" />
+
 </LinearLayout>

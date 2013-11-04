@@ -28,6 +28,10 @@
             android:name="com.hk.vtree.ObjemBezKory"
             android:label="@string/title_activity_objem_bez_kory" >
         </activity>
+        <activity
+            android:name="com.hk.vtree.ZrdeZrdky"
+            android:label="@string/title_activity_zrde_zrdky" >
+        </activity>
     </application>
 
 </manifest>

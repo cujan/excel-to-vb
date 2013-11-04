@@ -27,6 +27,11 @@ public class MainActivity extends Activity {
 		Intent i = new Intent(this, ObjemBezKory.class);
 		startActivity(i);
 		}
+	
+	public void onClickZrdeZrdky(View v){
+		Intent i = new Intent(this, ZrdeZrdky.class);
+		startActivity(i);
+		}
 
 	//public void onCalculateClicked(View v) {
 		
