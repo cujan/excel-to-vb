@@ -18,17 +18,33 @@ public class ZrdeZrdky extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_zrde_zrdky);
 		
-		EditText etPokus = (EditText)findViewById(R.id.editTextIhlZrdky1);
-		final TextView tvPokus = (TextView)findViewById(R.id.textViewIhlZrdky1);
+		//nacitanie EditText do premennych
+		final EditText editTextIhlZrdky1 = (EditText)findViewById(R.id.editTextIhlZrdky1);
+		EditText editTextIhlZrdky2 = (EditText)findViewById(R.id.editTextIhlZrdky2);
+		EditText editTextIhlZrdky3 = (EditText)findViewById(R.id.editTextIhlZrdky3);
+		EditText editTextIhlZrde1 = (EditText)findViewById(R.id.editTextIhlZrde1);
+		EditText editTextIhlZrde2 = (EditText)findViewById(R.id.editTextIhlZrde2);
+		EditText editTextIhlZrde3 = (EditText)findViewById(R.id.editTextIhlZrde3);
+		EditText editTextIhlZrde4 = (EditText)findViewById(R.id.editTextIhlZrde4);
+		EditText editTextListZrdky1 = (EditText)findViewById(R.id.editTextListZrdky1);
+		EditText editTextListZrdky2 = (EditText)findViewById(R.id.editTextListZrdky2);
+		EditText editTextListZrdky3 = (EditText)findViewById(R.id.editTextListZrdky3);
+		EditText editTextListZrde1 = (EditText)findViewById(R.id.editTextListZrde1);
+		EditText editTextListZrde2 = (EditText)findViewById(R.id.editTextListZrde2);
+		EditText editTextListZrde3 = (EditText)findViewById(R.id.editTextListZrde3);
 		
+		final TextView textViewIhlZrdky1 = (TextView)findViewById(R.id.textViewIhlZrdky1);
+				
 		
-		TextWatcher cakacZmeny = new TextWatcher() {
+		//inicializovany cakac zmeny textu v EditText
+		TextWatcher ihlZrdky1Listener = new TextWatcher() {
 			
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 				// TODO Auto-generated method stub
-				vypocty.tester();
 				
+				String objem = vypocty.getObjemZrdovina(Constants.IHL_ZRDKY_1,editTextIhlZrdky1.getText().toString());
+				textViewIhlZrdky1.setText(objem);		
 			}
 			
 			@Override
@@ -44,9 +60,20 @@ public class ZrdeZrdky extends Activity {
 				
 			}
 		};
-		
-		etPokus.addTextChangedListener(cakacZmeny);
-		
+		//nastavenie cakaca na jednotlice EditText
+		editTextIhlZrdky1.addTextChangedListener(ihlZrdky1Listener);
+		//editTextIhlZrdky2.addTextChangedListener(cakacZmenyTextu);
+		//editTextIhlZrdky3.addTextChangedListener(cakacZmenyTextu);
+		//editTextIhlZrde1.addTextChangedListener(cakacZmenyTextu);
+		//editTextIhlZrde2.addTextChangedListener(cakacZmenyTextu);
+		//editTextIhlZrde3.addTextChangedListener(cakacZmenyTextu);
+		//editTextIhlZrde4.addTextChangedListener(cakacZmenyTextu);
+		//editTextListZrdky1.addTextChangedListener(cakacZmenyTextu);
+		//editTextListZrdky2.addTextChangedListener(cakacZmenyTextu);
+		//editTextListZrdky3.addTextChangedListener(cakacZmenyTextu);
+		//editTextListZrde1.addTextChangedListener(cakacZmenyTextu);
+		//editTextListZrde2.addTextChangedListener(cakacZmenyTextu);
+		//editTextListZrde3.addTextChangedListener(cakacZmenyTextu);
 		
 	}
 
