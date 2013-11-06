@@ -8,13 +8,11 @@ public class vypocty {
 		return  objem;
 	}
 	
+	//vrati objem zrde a zrdky podla poctu kosov a prislusneho koeficientu
+public static double getObjemZrdovina(double koeficient, int pocetKusov){
 	
-public static String getObjemZrdovina(double koeficient, String pocetKusov){
-	int pocet = Integer.parseInt(pocetKusov);
-	
-	double objem = (pocet/100)*koeficient;
-	String premenenyObjem = Double.toString(objem);
-	return premenenyObjem;
+	double objem = (pocetKusov*koeficient)/100;
+	return objem;
 }
 	
 	
