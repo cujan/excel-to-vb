@@ -12,7 +12,8 @@ public class vypocty {
 public static double getObjemZrdovina(double koeficient, int pocetKusov){
 	
 	double objem = (pocetKusov*koeficient)/100;
-	return objem;
+	double zaokruhlenyObjem = Math.round(objem*100)/100D;
+	return zaokruhlenyObjem;
 }
 	
 	

@@ -112,7 +112,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="number" >
+            android:inputType="number"
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
@@ -168,7 +169,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="number" >
+            android:inputType="number"
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
@@ -179,7 +181,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="000" />
+            android:text="000" 
+            android:textSize="10dp"/>
 
     </TableRow>
      <TableRow
@@ -222,7 +225,8 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" >
+            android:inputType="number"
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
@@ -233,7 +237,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="000" />
+            android:text="000"
+            android:textSize="10dp" />
 
     </TableRow>
      <TableRow
@@ -278,7 +283,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="number" >
+            android:inputType="number"
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
@@ -288,7 +294,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="000" />
+            android:text="000" 
+            android:textSize="10dp"/>
 
     </TableRow>
      <TableRow
@@ -331,7 +338,8 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" >
+            android:inputType="number"
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
@@ -342,7 +350,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="000" />
+            android:text="000" 
+            android:textSize="10dp"/>
 
     </TableRow>
      <TableRow
@@ -386,7 +395,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="number" >
+            android:inputType="number"
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
@@ -397,7 +407,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="000" />
+            android:text="000" 
+            android:textSize="10dp"/>
 
     </TableRow>
      <TableRow
@@ -440,7 +451,8 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" >
+            android:inputType="number"
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
@@ -451,7 +463,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="000" />
+            android:text="000" 
+            android:textSize="10dp"/>
 
     </TableRow>
      <TableRow
@@ -494,7 +507,8 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" >
+            android:inputType="number"
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
@@ -505,7 +519,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="000" />
+            android:text="000" 
+            android:textSize="10dp"/>
 
     </TableRow>
     <TableRow
@@ -548,7 +563,8 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" >
+            android:inputType="number"
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
@@ -559,7 +575,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="000" />
+            android:text="000" 
+            android:textSize="10dp"/>
 
     </TableRow><TableRow
         android:id="@+id/tableRow2"
@@ -602,7 +619,8 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" >
+            android:inputType="number"
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
@@ -613,7 +631,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="000" />
+            android:text="000" 
+            android:textSize="10dp"/>
 
     </TableRow>
     <TableRow
@@ -657,7 +676,8 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" >
+            android:inputType="number"
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
@@ -668,7 +688,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="000" />
+            android:text="000" 
+            android:textSize="10dp"/>
 
     </TableRow>
     <TableRow
@@ -711,7 +732,8 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" >
+            android:inputType="number"
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
@@ -721,7 +743,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="000" />
+            android:text="000" 
+            android:textSize="10dp"/>
 
     </TableRow>
     <TableRow
@@ -764,9 +787,11 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" >
+            android:inputType="number"
+            android:singleLine="true" >
 
-            <requestFocus />
+		<requestFocus />
+            
         </EditText>
 
         <TextView
@@ -774,16 +799,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="000" />
+            android:text="000" 
+            android:textSize="10dp"/>
 
     </TableRow>
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClickButtonPokus"
-        android:text="Button" />
 
 </TableLayout>
 </ScrollView>
