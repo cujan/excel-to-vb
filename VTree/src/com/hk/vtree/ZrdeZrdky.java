@@ -18,33 +18,20 @@ public class ZrdeZrdky extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_zrde_zrdky);
 		
-		//nacitanie EditText do premennych
+		//nastavenie citacov
+								
 		final EditText editTextIhlZrdky1 = (EditText)findViewById(R.id.editTextIhlZrdky1);
-		EditText editTextIhlZrdky2 = (EditText)findViewById(R.id.editTextIhlZrdky2);
-		EditText editTextIhlZrdky3 = (EditText)findViewById(R.id.editTextIhlZrdky3);
-		EditText editTextIhlZrde1 = (EditText)findViewById(R.id.editTextIhlZrde1);
-		EditText editTextIhlZrde2 = (EditText)findViewById(R.id.editTextIhlZrde2);
-		EditText editTextIhlZrde3 = (EditText)findViewById(R.id.editTextIhlZrde3);
-		EditText editTextIhlZrde4 = (EditText)findViewById(R.id.editTextIhlZrde4);
-		EditText editTextListZrdky1 = (EditText)findViewById(R.id.editTextListZrdky1);
-		EditText editTextListZrdky2 = (EditText)findViewById(R.id.editTextListZrdky2);
-		EditText editTextListZrdky3 = (EditText)findViewById(R.id.editTextListZrdky3);
-		EditText editTextListZrde1 = (EditText)findViewById(R.id.editTextListZrde1);
-		EditText editTextListZrde2 = (EditText)findViewById(R.id.editTextListZrde2);
-		EditText editTextListZrde3 = (EditText)findViewById(R.id.editTextListZrde3);
-		
 		final TextView textViewIhlZrdky1 = (TextView)findViewById(R.id.textViewIhlZrdky1);
 				
-		
 		//inicializovany cakac zmeny textu v EditText
 		TextWatcher ihlZrdky1Listener = new TextWatcher() {
 			
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 				// TODO Auto-generated method stub
-				
-				String objem = vypocty.getObjemZrdovina(Constants.IHL_ZRDKY_1,editTextIhlZrdky1.getText().toString());
-				textViewIhlZrdky1.setText(objem);		
+				int kusy = Integer.valueOf(editTextIhlZrdky1.getText().toString());
+				Double objem = vypocty.getObjemZrdovina(Constants.IHL_ZRDKY_1,kusy);
+				textViewIhlZrdky1.setText(Double.toString(objem));		
 			}
 			
 			@Override
@@ -60,20 +47,69 @@ public class ZrdeZrdky extends Activity {
 				
 			}
 		};
-		//nastavenie cakaca na jednotlice EditText
 		editTextIhlZrdky1.addTextChangedListener(ihlZrdky1Listener);
-		//editTextIhlZrdky2.addTextChangedListener(cakacZmenyTextu);
-		//editTextIhlZrdky3.addTextChangedListener(cakacZmenyTextu);
-		//editTextIhlZrde1.addTextChangedListener(cakacZmenyTextu);
-		//editTextIhlZrde2.addTextChangedListener(cakacZmenyTextu);
-		//editTextIhlZrde3.addTextChangedListener(cakacZmenyTextu);
-		//editTextIhlZrde4.addTextChangedListener(cakacZmenyTextu);
-		//editTextListZrdky1.addTextChangedListener(cakacZmenyTextu);
-		//editTextListZrdky2.addTextChangedListener(cakacZmenyTextu);
-		//editTextListZrdky3.addTextChangedListener(cakacZmenyTextu);
-		//editTextListZrde1.addTextChangedListener(cakacZmenyTextu);
-		//editTextListZrde2.addTextChangedListener(cakacZmenyTextu);
-		//editTextListZrde3.addTextChangedListener(cakacZmenyTextu);
+		
+		final EditText editTextIhlZrdky2 = (EditText)findViewById(R.id.editTextIhlZrdky2);
+		final TextView textViewIhlZrdky2 = (TextView)findViewById(R.id.textViewIhlZrdky2);
+		
+		editTextIhlZrdky2.addTextChangedListener(cakacZmenyTextu);
+		
+		final EditText editTextIhlZrdky3 = (EditText)findViewById(R.id.editTextIhlZrdky3);
+		final TextView textViewIhlZrdky3 = (TextView)findViewById(R.id.textViewIhlZrdky3);
+		
+		editTextIhlZrdky3.addTextChangedListener(cakacZmenyTextu);
+		
+		final EditText editTextIhlZrde1 = (EditText)findViewById(R.id.editTextIhlZrde1);
+		final TextView textViewIhlZrde1 = (TextView)findViewById(R.id.textViewIhlZrde1);
+		
+		editTextIhlZrde1.addTextChangedListener(cakacZmenyTextu);
+		
+		final EditText editTextIhlZrde2 = (EditText)findViewById(R.id.editTextIhlZrde2);
+		final TextView textViewIhlZrde2 = (TextView)findViewById(R.id.textViewIhlZrde2);
+		
+		editTextIhlZrde2.addTextChangedListener(cakacZmenyTextu);
+		
+		final EditText editTextIhlZrde3 = (EditText)findViewById(R.id.editTextIhlZrde3);
+		final TextView textViewIhlZrde3 = (TextView)findViewById(R.id.textViewIhlZrde3);
+		
+		editTextIhlZrde3.addTextChangedListener(cakacZmenyTextu);
+		
+		final EditText editTextIhlZrde4 = (EditText)findViewById(R.id.editTextIhlZrde4);
+		final TextView textViewIhlZrde4 = (TextView)findViewById(R.id.textViewIhlZrde4);
+		
+		editTextIhlZrde4.addTextChangedListener(cakacZmenyTextu);
+		
+		final EditText editTextListZrdky1 = (EditText)findViewById(R.id.editTextListZrdky1);
+		final TextView textViewListZrdky1 = (TextView)findViewById(R.id.textViewListZrdky1);
+		
+		editTextListZrdky1.addTextChangedListener(cakacZmenyTextu);
+		
+		final EditText editTextListZrdky2 = (EditText)findViewById(R.id.editTextListZrdky2);
+		final TextView textViewListZrdky2 = (TextView)findViewById(R.id.textViewListZrdky2);
+		
+		editTextListZrdky2.addTextChangedListener(cakacZmenyTextu);
+		
+		final EditText editTextListZrdky3 = (EditText)findViewById(R.id.editTextListZrdky3);
+		final TextView textViewListZrdky3 = (TextView)findViewById(R.id.textViewListZrdky3);
+		
+		editTextListZrdky3.addTextChangedListener(cakacZmenyTextu);
+		
+		final EditText editTextListZrde1 = (EditText)findViewById(R.id.editTextListZrde1);
+		final TextView textViewListZrde1 = (TextView)findViewById(R.id.textViewListZrde1);
+		
+		editTextListZrde1.addTextChangedListener(cakacZmenyTextu);
+		
+		final EditText editTextListZrde2 = (EditText)findViewById(R.id.editTextListZrde2);
+		final TextView textViewListZrde2 = (TextView)findViewById(R.id.textViewListZrde2);
+		
+		editTextListZrde2.addTextChangedListener(cakacZmenyTextu);
+		
+		final EditText editTextListZrde3 = (EditText)findViewById(R.id.editTextListZrde3);
+		final TextView textViewListZrde3 = (TextView)findViewById(R.id.textViewListZrde3);
+		
+		editTextListZrde3.addTextChangedListener(cakacZmenyTextu);
+		
+		
 		
 	}
 

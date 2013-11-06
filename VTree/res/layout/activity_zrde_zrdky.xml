@@ -25,6 +25,7 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="DR" />
 
         <TextView
@@ -32,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="KT" />
 
         <TextView
@@ -39,6 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="D" />
 
         <TextView
@@ -46,6 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="L" />
 
         <TextView
@@ -53,6 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="KS" />
 
         <TextView
@@ -60,6 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="V" />
 
     </TableRow>
@@ -73,34 +79,38 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ihl" 
-            />
+            android:layout_weight="1"
+            android:text="Ihl" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="1" />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="najviac 3" />
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="max 3" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
             android:text="2+" />
 
         <EditText
             android:id="@+id/editTextIhlZrdky1"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:ems="10"
             android:inputType="number" >
 
@@ -111,8 +121,10 @@
             android:id="@+id/textViewIhlZrdky1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="0.15"
+            android:textSize="10dp" />
 
     </TableRow>
      <TableRow
@@ -124,34 +136,37 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ihl" 
-            />
+            android:layout_weight="1"
+            android:text="Ihl" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
             android:text="2" />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="10dp"
             android:text="4 - 6" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
             android:text="3 a 4" />
 
         <EditText
             android:id="@+id/editTextIhlZrdky2"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:ems="10"
             android:inputType="number" >
 
@@ -162,8 +177,9 @@
             android:id="@+id/textViewIhlZrdky2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="000" />
 
     </TableRow>
      <TableRow
@@ -175,14 +191,15 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ihl" 
-            />
+            android:layout_weight="1"
+            android:text="Ihl" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="3" />
 
         <TextView
@@ -197,6 +214,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="4.1 - 8" />
 
         <EditText
@@ -213,8 +231,9 @@
             android:id="@+id/textViewIhlZrdky3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="000" />
 
     </TableRow>
      <TableRow
@@ -226,21 +245,23 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ihl" 
-            />
+            android:layout_weight="1"
+            android:text="Ihl" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="1" />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="7 a 8" />
 
         <TextView
@@ -248,12 +269,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="6+" />
 
         <EditText
             android:id="@+id/editTextIhlZrde1"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:ems="10"
             android:inputType="number" >
 
@@ -264,8 +287,8 @@
             android:id="@+id/textViewIhlZrde1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:text="000" />
 
     </TableRow>
      <TableRow
@@ -277,14 +300,15 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ihl" 
-            />
+            android:layout_weight="1"
+            android:text="Ihl" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="2" />
 
         <TextView
@@ -299,6 +323,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="8+" />
 
         <EditText
@@ -315,8 +340,9 @@
             android:id="@+id/textViewIhlZrde2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="000" />
 
     </TableRow>
      <TableRow
@@ -328,14 +354,15 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ihl" 
-            />
+            android:layout_weight="1"
+            android:text="Ihl" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="3" />
 
         <TextView
@@ -350,12 +377,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="9 - 12" />
 
         <EditText
             android:id="@+id/editTextIhlZrde3"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:ems="10"
             android:inputType="number" >
 
@@ -366,8 +395,9 @@
             android:id="@+id/textViewIhlZrde3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="000" />
 
     </TableRow>
      <TableRow
@@ -379,14 +409,15 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ihl" 
-            />
+            android:layout_weight="1"
+            android:text="Ihl" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="4" />
 
         <TextView
@@ -401,6 +432,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="12.1 - 15" />
 
         <EditText
@@ -417,8 +449,9 @@
             android:id="@+id/textViewIhlZrde4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="000" />
 
     </TableRow>
      <TableRow
@@ -430,15 +463,16 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="List" 
-            />
+            android:layout_weight="1"
+            android:text="List" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="1" />
 
         <TextView
             android:id="@+id/textView9"
@@ -452,6 +486,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="-" />
 
         <EditText
@@ -468,8 +503,9 @@
             android:id="@+id/textViewListZrdky1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="000" />
 
     </TableRow>
     <TableRow
@@ -481,14 +517,15 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="List" 
-            />
+            android:layout_weight="1"
+            android:text="List" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="2" />
 
         <TextView
@@ -503,6 +540,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="-" />
 
         <EditText
@@ -519,8 +557,9 @@
             android:id="@+id/textViewListZrdky2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="000" />
 
     </TableRow><TableRow
         android:id="@+id/tableRow2"
@@ -531,14 +570,15 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="List" 
-            />
+            android:layout_weight="1"
+            android:text="List" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="3" />
 
         <TextView
@@ -546,6 +586,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="6" />
 
         <TextView
@@ -553,6 +594,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="-" />
 
         <EditText
@@ -569,8 +611,9 @@
             android:id="@+id/textViewListZrdky3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="000" />
 
     </TableRow>
     <TableRow
@@ -582,21 +625,23 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="List" 
-            />
+            android:layout_weight="1"
+            android:text="List" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="1" />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="7 a 8" />
 
         <TextView
@@ -604,6 +649,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="5+" />
 
         <EditText
@@ -620,8 +666,9 @@
             android:id="@+id/textViewListZrde1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="000" />
 
     </TableRow>
     <TableRow
@@ -633,8 +680,8 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="List" 
-            />
+            android:layout_weight="1"
+            android:text="List" />
 
         <TextView
             android:id="@+id/textView8"
@@ -648,6 +695,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="9 a 10" />
 
         <TextView
@@ -655,6 +703,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="7+" />
 
         <EditText
@@ -671,8 +720,8 @@
             android:id="@+id/textViewListZrde2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:text="000" />
 
     </TableRow>
     <TableRow
@@ -684,15 +733,16 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="List" 
-            />
+            android:layout_weight="1"
+            android:text="List" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="3" />
 
         <TextView
             android:id="@+id/textView9"
@@ -706,6 +756,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_weight="1"
             android:text="9+" />
 
         <EditText
@@ -722,8 +773,8 @@
             android:id="@+id/textViewListZrde3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="10dp"
+            android:text="000" />
 
     </TableRow>
 
