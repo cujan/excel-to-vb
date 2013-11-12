@@ -69,6 +69,9 @@
             android:text="V" />
 
     </TableRow>
+    <View 
+        android:layout_height="2px"
+        android:background="#000000"/>
 
     <TableRow
         android:id="@+id/tableRow2"
@@ -80,40 +83,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ihl" />
+            android:text="Ihl"
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="1" />
+            android:text="1"
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="max 3" />
+            android:text="max 3"
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="2+" />
+            android:text="2+"
+            android:textSize="12dp" />
 
         <EditText
             android:id="@+id/editTextIhlZrdky1"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true" >
+            android:singleLine="true"
+            android:textSize="12dp" >
 
             <requestFocus />
         </EditText>
@@ -122,12 +131,15 @@
             android:id="@+id/textViewIhlZrdky1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:text="0.15"
-            android:textSize="10dp" />
+            android:textSize="12dp" />
 
     </TableRow>
+     <View 
+        android:layout_height="2px"
+        android:background="#000000"/>
      <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
@@ -138,7 +150,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ihl" />
+            android:text="Ihl" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView8"
@@ -146,14 +159,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="2" />
+            android:text="2" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="4 - 6" />
+            android:text="4 - 6" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView10"
@@ -161,7 +176,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="3 a 4" />
+            android:text="3 a 4" 
+            android:textSize="12dp"/>
 
         <EditText
             android:id="@+id/editTextIhlZrdky2"
@@ -170,7 +186,8 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true" >
+            android:singleLine="true"
+            android:textSize="12dp" >
 
             <requestFocus />
         </EditText>
@@ -182,9 +199,12 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="000" 
-            android:textSize="10dp"/>
+            android:textSize="12dp"/>
 
     </TableRow>
+     <View 
+        android:layout_height="2px"
+        android:background="#000000"/>
      <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
@@ -195,7 +215,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ihl" />
+            android:text="Ihl" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView8"
@@ -203,14 +224,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="3" />
+            android:text="3" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="4 - 6" />
+            android:text="4 - 6" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView10"
@@ -218,7 +241,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="4.1 - 8" />
+            android:text="4.1 - 8" 
+            android:textSize="12dp"/>
 
         <EditText
             android:id="@+id/editTextIhlZrdky3"
@@ -226,7 +250,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true" >
+            android:singleLine="true"
+            android:textSize="12dp" >
 
             <requestFocus />
         </EditText>
@@ -238,9 +263,12 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="000"
-            android:textSize="10dp" />
+            android:textSize="12dp" />
 
     </TableRow>
+     <View 
+        android:layout_height="2px"
+        android:background="#000000"/>
      <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
@@ -251,7 +279,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ihl" />
+            android:text="Ihl" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView8"
@@ -259,7 +288,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="1" />
+            android:text="1" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView9"
@@ -267,7 +297,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="7 a 8" />
+            android:text="7 a 8" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView10"
@@ -275,7 +306,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="6+" />
+            android:text="6+" 
+            android:textSize="12dp"/>
 
         <EditText
             android:id="@+id/editTextIhlZrde1"
@@ -284,7 +316,8 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true" >
+            android:singleLine="true" 
+            android:textSize="12dp">
 
             <requestFocus />
         </EditText>
@@ -295,9 +328,12 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="000" 
-            android:textSize="10dp"/>
+            android:textSize="12dp"/>
 
     </TableRow>
+     <View 
+        android:layout_height="2px"
+        android:background="#000000"/>
      <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
@@ -308,7 +344,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ihl" />
+            android:text="Ihl" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView8"
@@ -316,14 +353,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="2" />
+            android:text="2" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="9 a 10" />
+            android:text="9 a 10"
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/textView10"
@@ -331,7 +370,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="8+" />
+            android:text="8+" 
+            android:textSize="12dp"/>
 
         <EditText
             android:id="@+id/editTextIhlZrde2"
@@ -339,7 +379,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true" >
+            android:singleLine="true" 
+            android:textSize="12dp">
 
             <requestFocus />
         </EditText>
@@ -351,9 +392,12 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="000" 
-            android:textSize="10dp"/>
+            android:textSize="12dp"/>
 
     </TableRow>
+     <View 
+        android:layout_height="2px"
+        android:background="#000000"/>
      <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
@@ -364,7 +408,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ihl" />
+            android:text="Ihl" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView8"
@@ -372,14 +417,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="3" />
+            android:text="3" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="11 - 13" />
+            android:text="11 - 13"
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/textView10"
@@ -387,7 +434,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="9 - 12" />
+            android:text="9 - 12" 
+            android:textSize="12dp"/>
 
         <EditText
             android:id="@+id/editTextIhlZrde3"
@@ -396,7 +444,8 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true" >
+            android:singleLine="true" 
+            android:textSize="12dp">
 
             <requestFocus />
         </EditText>
@@ -408,9 +457,12 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="000" 
-            android:textSize="10dp"/>
+            android:textSize="12dp"/>
 
     </TableRow>
+     <View 
+        android:layout_height="2px"
+        android:background="#000000"/>
      <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
@@ -421,7 +473,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ihl" />
+            android:text="Ihl" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView8"
@@ -429,14 +482,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="4" />
+            android:text="4"
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="11 - 13" />
+            android:text="11 - 13" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView10"
@@ -444,7 +499,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="12.1 - 15" />
+            android:text="12.1 - 15" 
+            android:textSize="12dp"/>
 
         <EditText
             android:id="@+id/editTextIhlZrde4"
@@ -452,7 +508,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true" >
+            android:singleLine="true" 
+            android:textSize="12dp">
 
             <requestFocus />
         </EditText>
@@ -464,9 +521,12 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="000" 
-            android:textSize="10dp"/>
+            android:textSize="12dp"/>
 
     </TableRow>
+     <View 
+        android:layout_height="2px"
+        android:background="#000000"/>
      <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
@@ -477,7 +537,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="List" />
+            android:text="List"
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/textView8"
@@ -485,14 +546,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="1" />
+            android:text="1" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="najviac 3" />
+            android:text="najviac 3" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView10"
@@ -500,7 +563,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="-" />
+            android:text="-" 
+            android:textSize="12dp"/>
 
         <EditText
             android:id="@+id/editTextListZrdky1"
@@ -508,7 +572,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true" >
+            android:singleLine="true" 
+            android:textSize="12dp">
 
             <requestFocus />
         </EditText>
@@ -520,9 +585,12 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="000" 
-            android:textSize="10dp"/>
+            android:textSize="12dp"/>
 
     </TableRow>
+     <View 
+        android:layout_height="2px"
+        android:background="#000000"/>
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
@@ -533,7 +601,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="List" />
+            android:text="List" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView8"
@@ -541,14 +610,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="2" />
+            android:text="2" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="4 a 5" />
+            android:text="4 a 5" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView10"
@@ -556,7 +627,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="-" />
+            android:text="-" 
+            android:textSize="12dp"/>
 
         <EditText
             android:id="@+id/editTextListZrdky2"
@@ -564,7 +636,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true" >
+            android:singleLine="true"
+            android:textSize="12dp" >
 
             <requestFocus />
         </EditText>
@@ -576,9 +649,13 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="000" 
-            android:textSize="10dp"/>
+            android:textSize="12dp"/>
 
-    </TableRow><TableRow
+    </TableRow>
+     <View 
+        android:layout_height="2px"
+        android:background="#000000"/>
+    <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
@@ -588,7 +665,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="List" />
+            android:text="List"
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/textView8"
@@ -596,7 +674,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="3" />
+            android:text="3" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView9"
@@ -604,7 +683,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="6" />
+            android:text="6" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView10"
@@ -612,7 +692,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="-" />
+            android:text="-"
+            android:textSize="12dp" />
 
         <EditText
             android:id="@+id/editTextListZrdky3"
@@ -620,7 +701,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true" >
+            android:singleLine="true"
+            android:textSize="12dp" >
 
             <requestFocus />
         </EditText>
@@ -632,9 +714,12 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="000" 
-            android:textSize="10dp"/>
+            android:textSize="12dp"/>
 
     </TableRow>
+     <View 
+        android:layout_height="2px"
+        android:background="#000000"/>
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
@@ -645,7 +730,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="List" />
+            android:text="List" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView8"
@@ -653,7 +739,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="1" />
+            android:text="1" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView9"
@@ -661,7 +748,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="7 a 8" />
+            android:text="7 a 8" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView10"
@@ -669,7 +757,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="5+" />
+            android:text="5+"
+            android:textSize="12dp" />
 
         <EditText
             android:id="@+id/editTextListZrde1"
@@ -677,7 +766,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true" >
+            android:singleLine="true" 
+            android:textSize="12dp">
 
             <requestFocus />
         </EditText>
@@ -689,9 +779,12 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="000" 
-            android:textSize="10dp"/>
+            android:textSize="12dp"/>
 
     </TableRow>
+     <View 
+        android:layout_height="2px"
+        android:background="#000000"/>
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
@@ -702,14 +795,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="List" />
+            android:text="List" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2" 
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="16dp"
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView9"
@@ -717,7 +812,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="9 a 10" />
+            android:text="9 a 10" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView10"
@@ -725,7 +821,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="7+" />
+            android:text="7+" 
+            android:textSize="12dp"/>
 
         <EditText
             android:id="@+id/editTextListZrde2"
@@ -733,7 +830,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true" >
+            android:singleLine="true" 
+            android:textSize="12dp">
 
             <requestFocus />
         </EditText>
@@ -744,9 +842,12 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="000" 
-            android:textSize="10dp"/>
+            android:textSize="12dp"/>
 
     </TableRow>
+     <View 
+        android:layout_height="2px"
+        android:background="#000000"/>
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
@@ -757,7 +858,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="List" />
+            android:text="List" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView8"
@@ -765,14 +867,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="3" />
+            android:text="3" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="11 - 13" />
+            android:text="11 - 13" 
+            android:textSize="12dp"/>
 
         <TextView
             android:id="@+id/textView10"
@@ -780,7 +884,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="9+" />
+            android:text="9+" 
+            android:textSize="12dp"/>
 
         <EditText
             android:id="@+id/editTextListZrde3"
@@ -788,7 +893,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:singleLine="true" >
+            android:singleLine="true"
+            android:textSize="12dp" >
 
 		<requestFocus />
             
@@ -800,7 +906,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="000" 
-            android:textSize="10dp"/>
+            android:textSize="12dp"/>
 
     </TableRow>
 
