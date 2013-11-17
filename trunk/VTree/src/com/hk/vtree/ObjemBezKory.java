@@ -107,21 +107,21 @@ public class ObjemBezKory extends Activity {
 		
 		
 		if(typStromu=="sm"){
-			p0 = 0.57723;
-			p1 = 0.006897;
-			p2 = 1.3123;
+			p0 = Constants.P0SM;
+			p1 = Constants.P1SM;
+			p2 = Constants.P2SM;
 		}else if (typStromu=="db") {
-			p0=1.2474;
-			p1=0.042323;
-			p2=1.0623;
+			p0= Constants.P0DB;
+			p1= Constants.P1DB;
+			p2= Constants.P2DB;
 		}else if (typStromu=="bk") {
-			p0=-0.04088;
-			p1=0.16634;
-			p2=0.56076;
+			p0=Constants.P0BK;
+			p1=Constants.P1BK;
+			p2=Constants.P2BK;
 		}else if (typStromu=="bo") {
-			p0=0.24017;
-			p1=0.001915;
-			p2=1.7866;
+			p0=Constants.P0BO;
+			p1=Constants.P1BO;
+			p2=Constants.P2BO;
 		}
 		
 		
