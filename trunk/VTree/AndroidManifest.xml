@@ -32,6 +32,14 @@
             android:name="com.hk.vtree.ZrdeZrdky"
             android:label="@string/title_activity_zrde_zrdky" >
         </activity>
+        <activity
+            android:name="com.hk.vtree.Activity_objem_bez_kory_menu"
+            android:label="@string/title_activity_activity_objem_bez_kory_menu" >
+        </activity>
+        <activity
+            android:name="com.hk.vtree.Activity_objem_bez_kory_zoznam"
+            android:label="@string/title_activity_activity_objem_bez_kory_zoznam" >
+        </activity>
     </application>
 
 </manifest>

@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 	}
 	
 	public void onClickObjemBezKory(View v){
-		Intent i = new Intent(this, ObjemBezKory.class);
+		Intent i = new Intent(this, Activity_objem_bez_kory_menu.class);
 		startActivity(i);
 		}
 	
