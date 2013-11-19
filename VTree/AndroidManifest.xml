@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.hk.vtree.MainActivity"
+            android:name="com.hk.vtree.views.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,20 +25,20 @@
         <activity android:name="com.hk.vtree.CalcResults" >
         </activity>
         <activity
-            android:name="com.hk.vtree.ObjemBezKory"
+            android:name="com.hk.vtree.views.ObjemBezKoryNovy"
             android:label="@string/title_activity_objem_bez_kory" >
         </activity>
         <activity
-            android:name="com.hk.vtree.ZrdeZrdky"
+            android:name="com.hk.vtree.views.ZrdeZrdkyActivity"
             android:label="@string/title_activity_zrde_zrdky" >
         </activity>
         <activity
-            android:name="com.hk.vtree.Activity_objem_bez_kory_menu"
-            android:label="@string/title_activity_activity_objem_bez_kory_menu" >
+            android:name="com.hk.vtree.views.ObjemBezKoryMainActivity"
+            android:label="@string/title_activity_objem_bez_kory_main" >
         </activity>
         <activity
-            android:name="com.hk.vtree.Activity_objem_bez_kory_zoznam"
-            android:label="@string/title_activity_activity_objem_bez_kory_zoznam" >
+            android:name="com.hk.vtree.views.ObjemBezKoryZoznamActivity"
+            android:label="@string/title_activity_objem_bez_kory_zoznam" >
         </activity>
     </application>
 

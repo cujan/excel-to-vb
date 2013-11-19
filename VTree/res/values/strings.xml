@@ -2,11 +2,17 @@
 <resources>
 
     <string name="app_name">Kubíkovacie tabuľky</string>
+    <string name="cancel">Zrušiť</string>
+	<string name="will_not_be_saved">Meranie nebude uložené!</string>    
+        
     <string name="calculate_volume">Vypočítaj</string>
     <string name="dlzka_kmena">Zadaj dĺžku kmeňa (m):</string>
     <string name="no_tree_type_selected">Nebol vybraný žiaden typ stromu</string>
+	<string name="no_data_for_save_selected">Chýbajú nutné dáta pre uloženie.</string>    
     <string name="result_text">Vypočítaný objem:</string>
     <string name="typ_dreva_key">Typ dreva</string>
+	<string name="no_records">Záznamy nenájdené</string>    
+	<string name="successfully_saved">Úspešne uložené</string>	
 
     <string-array name="typ_dreva_array">
         <item>Dub</item>
@@ -19,15 +25,21 @@
     <string name="title_activity_objem_bez_kory">ObjemBezKory</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="btn_vypocitaj_objem_dreva_bez_kory">Vypočítaj objem kmeňa bez kôry</string>
+    <string name="uloz_hodnotu">Ulož objem k meraniu</string>
     <string name="title_activity_zrde_zrdky">ZrdeZrdky</string>
-    <string name="title_activity_activity_objem_bez_kory_menu">Activity_objem_bez_kory_menu</string>
-
+    <string name="title_activity_objem_bez_kory_main">Activity_objem_bez_kory_menu</string>
+    <string name="meranie_nazov">Nazov:</string>
+	<string name="meranie_odberatel">Odberatel:</string>    
+    
+    
     <!-- tlacidla -->
     <string name="btn_objem_bez_kory">Objem kmeňa bez kôry - meraný s kôrou</string>
     <string name="btn_zrde_zrdky">Žrde a žrďky</string>
     <string name="btn_obk_nove_meranie">Nové meranie</string>
     <string name="btn_obk_zoznam">Zoznam meraní</string>
-    <string name="title_activity_activity_objem_bez_kory_zoznam">Activity_objem_bez_kory_zoznam</string>
+    <string name="title_activity_objem_bez_kory_zoznam">Activity_objem_bez_kory_zoznam</string>
+	<string name="nove_meranie_dialog">Nove meranie</string>    
+	<string name="nove_meranie_dialog_text">Zadajte názov merania a odberateľa</string>	
+    
 
 </resources>
