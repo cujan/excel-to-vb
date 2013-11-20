@@ -24,8 +24,10 @@ public class MeraniaDao extends MeraniaStlpce implements
 			+ MeraniaStlpce.NAZOV_TYPE + "," + " "
 			+ MeraniaStlpce.CREATION_TIME + " "
 			+ MeraniaStlpce.CREATION_TIME_TYPE + "," + " "
-			+ MeraniaStlpce.ODBERATEL + " " + MeraniaStlpce.ODBERATEL_TYPE
-			+ ");";
+			+ MeraniaStlpce.ODBERATEL + " " 
+			+ MeraniaStlpce.ODBERATEL_TYPE + "," + " "
+			+ MeraniaStlpce.CISLO_DOKLADU + " "
+			+ MeraniaStlpce.CISLO_DOKLADU_TYPE + ");";
 
 	int vymazJednoMeranie(DatabaseHelper dHelper, long meranieId) {
 		SQLiteDatabase sqldb = dHelper.getWritableDatabase();
@@ -84,12 +86,13 @@ public class MeraniaDao extends MeraniaStlpce implements
 	}
 
 	public static long vlozMeranie(DatabaseHelper dHelper, String nazov,
-			String odberatel) {
+			String odberatel, String cisloDokladu) {
 		long currentTime = new Date().getTime();
 		ContentValues args = new ContentValues();
 		args.put(MeraniaStlpce.NAZOV, nazov);
 		args.put(MeraniaStlpce.ODBERATEL, odberatel);
 		args.put(MeraniaStlpce.CREATION_TIME, currentTime);
+		args.put(MeraniaStlpce.CISLO_DOKLADU, cisloDokladu);
 
 		SQLiteDatabase sqldb = dHelper.getWritableDatabase();
 		long meranieId = sqldb.insert(MeraniaStlpce.TABLE, null, args);

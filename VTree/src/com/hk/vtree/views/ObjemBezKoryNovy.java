@@ -88,6 +88,10 @@ public class ObjemBezKoryNovy extends Activity {
 		odberatel.setHint(MeraniaStlpce.ODBERATEL);
 		odberatel.setFilters(FilterArray);
 		layout.addView(odberatel);
+		final EditText cisloDokladu = new EditText(this);
+		cisloDokladu.setHint(MeraniaStlpce.CISLO_DOKLADU);
+		cisloDokladu.setFilters(FilterArray);
+		layout.addView(cisloDokladu);
 
 		alert.setView(layout);
 
@@ -95,12 +99,16 @@ public class ObjemBezKoryNovy extends Activity {
 			public void onClick(DialogInterface dialog, int whichButton) {
 				String meranieNazovText = nazov.getText().toString();
 				String meranieOdberatelText = odberatel.getText().toString();
+				String meranieCisloDokladuText = cisloDokladu.getText().toString();
 				TextView nazov = (TextView) ObjemBezKoryNovy.this
 						.findViewById(R.id.meranieNazov);
 				nazov.setText(meranieNazovText);
 				TextView odberatel = (TextView) ObjemBezKoryNovy.this
 						.findViewById(R.id.meranieOdberatel);
 				odberatel.setText(meranieOdberatelText);
+				TextView cisloDokladu = (TextView) ObjemBezKoryNovy.this
+						.findViewById(R.id.meranieCisloDokladu);
+				cisloDokladu.setText(meranieCisloDokladuText);
 			}
 		});
 
@@ -119,8 +127,11 @@ public class ObjemBezKoryNovy extends Activity {
 	}
 
 	public void vypocitajObjemKmena() {
+		
 		TextView vysledok = (TextView) findViewById(R.id.textViewVysledok);
 		vysledok.setText(getResultText());
+		
+		
 	}
 
 	public String getResultText() {
@@ -211,6 +222,7 @@ public class ObjemBezKoryNovy extends Activity {
 		TextView meranieIdText = (TextView) this.findViewById(R.id.meranie_id);
 		EditText dlzkaKmena = (EditText) findViewById(R.id.editTextDlzkaKmena);
 		EditText sirkaKmena = (EditText) findViewById(R.id.editTextSirkaKmena);
+		
 
 		Spinner typDrevaSpinner = (Spinner) findViewById(R.id.spinnerTypDreva);
 		String typStromu = "";
@@ -234,8 +246,10 @@ public class ObjemBezKoryNovy extends Activity {
 					.findViewById(R.id.meranieNazov);
 			TextView odberatel = (TextView) ObjemBezKoryNovy.this
 					.findViewById(R.id.meranieOdberatel);
+			TextView cisloDokladu = (TextView) ObjemBezKoryNovy.this
+					.findViewById(R.id.meranieCisloDokladu);
 			Long meranieId = MeraniaDao.vlozMeranie(mDbHelper, nazov.getText()
-					.toString(), odberatel.getText().toString());
+					.toString(), odberatel.getText().toString(),cisloDokladu.getText().toString());
 			meranieIdText.setText(meranieId.toString());
 			KmeneDao.vlozKmen(mDbHelper, meranieId, typStromu,
 					Double.valueOf(dlzkaKmena.getText().toString()),
@@ -255,6 +269,11 @@ public class ObjemBezKoryNovy extends Activity {
 		
 		clearHodnoty(dlzkaKmena, sirkaKmena);
 		
+		
+		
+		//vypocet celkoveho objemu zadanych kmenov
+		
+		
 		//TU MOZE IST metoda pre nacitanie uz ulozenych kmenov prisluchajucich danemu meraniu
 		//id merania sa skyva v meranie_id textview
 		//reloadKenov();
@@ -270,5 +289,6 @@ public class ObjemBezKoryNovy extends Activity {
 			this.mDbHelper = new DatabaseHelper(context);
 		}
 	}
+	
 
 }
