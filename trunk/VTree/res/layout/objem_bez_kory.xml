@@ -98,4 +98,31 @@
         android:layout_below="@+id/meranieNazov"
         android:layout_toRightOf="@+id/meranieOdberatel_t" />
 
+    <TextView
+        android:id="@+id/meranieCisloDokladu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/meranieNazov"
+        android:layout_marginLeft="21dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:singleLine="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/objemSpoluTw_t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinnerTypDreva"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="Objem spolu:" />
+
+    <TextView
+        android:id="@+id/objemSpoluTw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/spinnerTypDreva"
+        android:layout_alignTop="@+id/spinnerTypDreva"
+        android:layout_toRightOf="@+id/meranieCisloDokladu"
+        android:text="TextView" />
+
 </RelativeLayout>

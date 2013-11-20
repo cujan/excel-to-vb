@@ -34,8 +34,9 @@ public class ObjemBezKoryZoznamActivity extends ListActivity {
 
 		initializeDbHelper(this);
 
-		int[] to = { android.R.id.text2, android.R.id.text1 };
-		String[] from = { MeraniaDao._ID, MeraniaStlpce.NAZOV };
+		int[] to = { android.R.id.text2, android.R.id.text1};
+		String[] from = { MeraniaStlpce.CISLO_DOKLADU, MeraniaStlpce.ODBERATEL };
+		
 		ListAdapter adapter = new SimpleCursorAdapter(this,
 				android.R.layout.simple_list_item_2,
 				MeraniaDao.dajMerania(mDbHelper), from, to, 0);
