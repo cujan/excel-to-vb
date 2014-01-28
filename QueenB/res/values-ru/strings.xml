@@ -1,0 +1,62 @@
+Календарь выведения матокНовое выведение<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name_basic">QueenB</string>
+    <string name="app_name">Календарь выведения маток</string>
+    <string name="settings">Настройки</string>
+    <string name="novy_chov">Новое выведение</string>
+    <string name="ok">OK</string>    
+    <string name="o_programe">О программе</string>    
+    <string name="zoznam_chovov">Список выведений</string>
+    <string name="date_text"><u>Vložte dátum kliknutím sem</u></string>
+    <string name="vlozenie_plemeniva">Дата укладки расплода в питомник</string>
+    <string name="cas_pre_notifikaciu">Сообщение должно произойти в:</string>
+    <string name="prevesenie_plastu">Эвентуальная подвеска перговых сотов в надставку</string>
+    <string name="vlozenie_suse">Закладка суши для откладки маткой</string>
+    <string name="priprava_sadky">Príprava sádky, vloženie prelarvovaného plemeniva</string>
+    <string name="prelozenie_serie">Перекладка партии в надставку в гнездовую колонию</string>
+    <string name="premiestnenie_matecniku1">Эвентуальное перемещение маточников 1</string>
+    <string name="kontrola_zavieckovania">Эвентуальный контроль запечатления маточников</string>
+    <string name="premiestnenie_matecniku2">Эвентуальное перемещение маточников 2</string>
+    <string name="skolkovanie">Запрет маточников в клетку</string>
+    <string name="premiestnenie_matecniku3">Эвентуальное перемещение маточников 3</string>
+    <string name="liahnutie">Выход маток</string>
+    <string name="zuzitkovanie_matiek">Маркировка маток и утилизация маток</string>
+    <string name="vaznenie_od">	Формирование отводков с</string>
+    <string name="vaznenie_do">	Формирование отводков до</string>
+    <string name="prelet_od">Ориентировочные пролеты маток с</string>
+    <string name="prelet_do">Ориентировочные пролеты маток до</string>
+    <string name="snubne_prelety">Готовность к спариванию и брачные вылеты маток с:</string>
+    <string name="prenikanie_spermii">Проникновение семени в семяприемник</string>
+    <string name="prve_nakladene_vajicka">Начало яйцекладки </string>
+    <string name="pridat_do_kalendara">Добавить события в календарь</string>
+    <string name="ulozit_event">Архивировать дату вывода маток</string>
+    <string name="date_not_added">Не удалось вложить дату в базу данных</string>
+    <string name="date_not_added_and_calendar_cancelled">Не удалось вложить дату в базу данных. Останавливаю закладки данных в календарь</string>
+    <string name="date_added">Дата успешно заложена в базу данных</string>
+    <string name="date_deleted">Дата удалена из базы данных и событий из календаря</string>
+    <string name="date_not_deleted">Дата не удалена из базы данных</string>
+    <string name="date_not_found">Дата не найдена</string>
+    <string name="delete">Стиреть запись из базы данных</string>
+    <string name="detail">Изобразить расписание для записи</string>
+    <string name="no_dates_available">Нет никаких записей</string>
+    <string name="date_exists">Дата уже находится в баые данных</string>
+    <string name="calendar_created">Записи включены в календарь</string>
+    <string name="calendar_not_created">Не удалось включить записи в календарь</string>
+    <string name="date_old">Дата слишком давняя. Рарешается дата не старше 23 дня</string>
+    <string name="chov_matiek_nadpis">Ведение маток для</string>
+    <string name="no_calendar_configured">Не найден календарь. Проверьте правильность его конфгурирования</string>
+    <string name="note_dialog">Заметка</string>
+    <string name="note_dialog_text">Вложите короткую заметку к записи</string>
+    <string name="cancel">Отменить</string>
+    <string name="list_queens_help">Придержанием строки вы получите больше возможностей</string>
+    <string name="writing_to_calendar">Запицываю события в календарь</string>
+	<string name="email">polnohospodari@polnohospodari.sk</string>    
+    <string name="popis_programu">Календарь выведения маток служит для распланирования отдельных шагов для вывода маток. Для ОС Android 4.0 и выше позволяет укладывать информацию об отдельных шагах в календарь.</string>
+	<string name="no_client">Nenašiel sa emailový klient.</string>    
+    <string name="contact">
+        <![CDATA[
+        <u><a href="mailto:polnohospodari@polnohospodari.sk">@ HK Solutions</a></u>
+        ]]>
+    </string>
+
+</resources>
