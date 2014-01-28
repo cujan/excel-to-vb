@@ -1,4 +1,4 @@
-Календарь выведения матокНовое выведение<?xml version="1.0" encoding="utf-8"?>
+Календарь выведения маток служит для распланирования отдельных шагов для вывода маток. Для ОС Android 4.0 и выше позволяет укладывать информацию об отдельных шагах в календарь.Календарь выведения матокНовое выведение<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name_basic">QueenB</string>
     <string name="app_name">Календарь выведения маток</string>
@@ -7,12 +7,12 @@
     <string name="ok">OK</string>    
     <string name="o_programe">О программе</string>    
     <string name="zoznam_chovov">Список выведений</string>
-    <string name="date_text"><u>Vložte dátum kliknutím sem</u></string>
+    <string name="date_text"><u>Vložte dátum kliknutím sem</u>Вложите дату при помощи двойного щелчка</string>
     <string name="vlozenie_plemeniva">Дата укладки расплода в питомник</string>
     <string name="cas_pre_notifikaciu">Сообщение должно произойти в:</string>
     <string name="prevesenie_plastu">Эвентуальная подвеска перговых сотов в надставку</string>
     <string name="vlozenie_suse">Закладка суши для откладки маткой</string>
-    <string name="priprava_sadky">Príprava sádky, vloženie prelarvovaného plemeniva</string>
+    <string name="priprava_sadky">Подготовка гнездовой колонии, закладка зрелого расплода</string>
     <string name="prelozenie_serie">Перекладка партии в надставку в гнездовую колонию</string>
     <string name="premiestnenie_matecniku1">Эвентуальное перемещение маточников 1</string>
     <string name="kontrola_zavieckovania">Эвентуальный контроль запечатления маточников</string>
@@ -52,7 +52,7 @@
     <string name="writing_to_calendar">Запицываю события в календарь</string>
 	<string name="email">polnohospodari@polnohospodari.sk</string>    
     <string name="popis_programu">Календарь выведения маток служит для распланирования отдельных шагов для вывода маток. Для ОС Android 4.0 и выше позволяет укладывать информацию об отдельных шагах в календарь.</string>
-	<string name="no_client">Nenašiel sa emailový klient.</string>    
+	<string name="no_client">Не удалось найти почтовый клиент.</string>    
     <string name="contact">
         <![CDATA[
         <u><a href="mailto:polnohospodari@polnohospodari.sk">@ HK Solutions</a></u>
