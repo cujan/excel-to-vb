@@ -1,4 +1,4 @@
-Календарь выведения маток служит для распланирования отдельных шагов для вывода маток. Для ОС Android 4.0 и выше позволяет укладывать информацию об отдельных шагах в календарь.Календарь выведения матокНовое выведение<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name_basic">QueenB</string>
     <string name="app_name">Календарь выведения маток</string>
@@ -7,7 +7,7 @@
     <string name="ok">OK</string>    
     <string name="o_programe">О программе</string>    
     <string name="zoznam_chovov">Список выведений</string>
-    <string name="date_text"><u>Vložte dátum kliknutím sem</u>Вложите дату при помощи двойного щелчка</string>
+    <string name="date_text"><u>Вложите дату при помощи двойного щелчка</u></string>
     <string name="vlozenie_plemeniva">Дата укладки расплода в питомник</string>
     <string name="cas_pre_notifikaciu">Сообщение должно произойти в:</string>
     <string name="prevesenie_plastu">Эвентуальная подвеска перговых сотов в надставку</string>
