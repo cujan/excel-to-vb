@@ -1,0 +1,1419 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:.2in .2in .2in .2in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='background:#F9F9F9;border-collapse:collapse;border:none'>
+ <thead>
+  <tr>
+   <td style='border:solid #AAAAAA 1.0pt;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Name</span></b></p>
+   </td>
+   <td style='border:solid #AAAAAA 1.0pt;border-left:none;background:#F2F2F2;
+   padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Users</span></b></p>
+   </td>
+   <td style='border:solid #AAAAAA 1.0pt;border-left:none;background:#F2F2F2;
+   padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Projects</span></b></p>
+   </td>
+   <td width=380 style='width:284.7pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Prominent
+   projects</span></b></p>
+   </td>
+   <td width=188 valign=top style='width:140.85pt;border:solid #AAAAAA 1.0pt;
+   border-left:none;background:#F2F2F2;padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Notes</span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;background:#F2F2F2;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/GitHub" title=GitHub><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>GitHub</span></b></a></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>5,200,000</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>10,900,000</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-github.com-67"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>]</span></sup></a></p>
+  </td>
+  <td width=380 style='width:284.7pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/Ruby_on_Rails" title="Ruby on Rails"><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Ruby on Rails</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>,&nbsp;<a
+  href="http://en.wikipedia.org/wiki/IronRuby" title=IronRuby><span
+  style='color:#0B0080;text-decoration:none'>IronRuby</span></a>,&nbsp;<a
+  href="http://en.wikipedia.org/wiki/JQuery" title=JQuery><span
+  style='color:#0B0080;text-decoration:none'>jQuery</span></a>,&nbsp;<a
+  href="http://en.wikipedia.org/wiki/Moodle" title=Moodle><span
+  style='color:#0B0080;text-decoration:none'>Moodle</span></a>,&nbsp;<a
+  href="http://en.wikipedia.org/wiki/Diaspora_(software)"
+  title="Diaspora (software)"><span style='color:#0B0080;text-decoration:none'>Diaspora</span></a>,</span><a
+  href="http://en.wikipedia.org/wiki/Node.js" title=Node.js><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>node.js</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>,&nbsp;<a
+  href="http://en.wikipedia.org/wiki/NumPy" title=NumPy><span style='color:
+  #0B0080;text-decoration:none'>NumPy</span></a>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/Spring_Framework" title="Spring Framework"><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Spring Framework</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/PHP" title=PHP><span style='font-size:
+  8.0pt;font-family:"Arial","sans-serif";color:#0B0080;text-decoration:none'>PHP</span></a><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/Play_Framework" title="Play Framework"><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Play Framework</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>,&nbsp;<a
+  href="http://en.wikipedia.org/wiki/Scala_(programming_language)"
+  title="Scala (programming language)"><span style='color:#0B0080;text-decoration:
+  none'>Scala</span></a>,&nbsp;<a href="http://en.wikipedia.org/wiki/SciPy"
+  title=SciPy><span style='color:#0B0080;text-decoration:none'>SciPy</span></a>&nbsp;,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/PPSSPP" title=PPSSPP><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>PPSSPP</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>&nbsp;,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/Dolphin_(emulator)"
+  title="Dolphin (emulator)"><span style='font-size:8.0pt;font-family:"Arial","sans-serif";
+  color:#0B0080;text-decoration:none'>Dolphin (emulator)</span></a><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>&nbsp;,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/PCSX2" title=PCSX2><span style='font-size:
+  8.0pt;font-family:"Arial","sans-serif";color:#0B0080;text-decoration:none'>PCSX2</span></a><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>&nbsp;,
+  Retroarch, Nestopia,&nbsp;</span><a href="http://en.wikipedia.org/wiki/RPCS3"
+  title=RPCS3><span style='font-size:8.0pt;font-family:"Arial","sans-serif";
+  color:#0B0080;text-decoration:none'>RPCS3</span></a><span style='font-size:
+  8.0pt;font-family:"Arial","sans-serif";color:black'>&nbsp;,</span><a
+  href="http://en.wikipedia.org/wiki/Xenia_(emulator)" title="Xenia (emulator)"><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Xenia</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>,&nbsp;<a
+  href="http://en.wikipedia.org/wiki/Whonix" title=Whonix><span
+  style='color:#0B0080;text-decoration:none'>Whonix</span></a></span></p>
+  </td>
+  <td width=188 valign=top style='width:140.85pt;border-top:none;border-left:
+  none;border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black;
+  background:#F9F9F9'>Free for public, paid for private.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;background:#F2F2F2;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/SourceForge" title=SourceForge><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>SourceForge</span></b></a></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>3,400,000+</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>324,000</span></p>
+  </td>
+  <td width=380 style='width:284.7pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/Inkscape" title=Inkscape><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Inkscape</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>&nbsp;(download hosting),&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/LAME" title=LAME><span style='font-size:
+  8.0pt;font-family:"Arial","sans-serif";color:#0B0080;text-decoration:none'>LAME</span></a><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/MinGW" title=MinGW><span style='font-size:
+  8.0pt;font-family:"Arial","sans-serif";color:#0B0080;text-decoration:none'>MinGW</span></a><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/Poedit" title=Poedit><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Poedit</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>,</span><a
+  href="http://en.wikipedia.org/wiki/7-Zip" title=7-Zip><span style='font-size:
+  8.0pt;font-family:"Arial","sans-serif";color:#0B0080;text-decoration:none'>7-Zip</span></a><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/Fluxbox" title=Fluxbox><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Fluxbox</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/Audacity_(audio_editor)"
+  title="Audacity (audio editor)"><span style='font-size:8.0pt;font-family:
+  "Arial","sans-serif";color:#0B0080;text-decoration:none'>Audacity</span></a><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/Ffdshow" title=Ffdshow><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>ffdshow</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/EMule" title=EMule><span style='font-size:
+  8.0pt;font-family:"Arial","sans-serif";color:#0B0080;text-decoration:none'>EMule</span></a><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/FileZilla" title=FileZilla><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>FileZilla</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>,</span><a
+  href="http://en.wikipedia.org/wiki/PhpMyAdmin" title=PhpMyAdmin><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>phpMyAdmin</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>, LiVES,&nbsp;<a
+  href="http://en.wikipedia.org/wiki/Desmume" title=Desmume><span
+  style='color:#0B0080;text-decoration:none'>Desmume</span></a>&nbsp;, Bizhawk,
+  Yabause,</span><a href="http://en.wikipedia.org/wiki/Mednafen"
+  title=Mednafen><span style='font-size:8.0pt;font-family:"Arial","sans-serif";
+  color:#0B0080;text-decoration:none'>Mednafen</span></a><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>, Fceux,
+  Nintendulator</span></p>
+  </td>
+  <td width=188 valign=top style='width:140.85pt;border-top:none;border-left:
+  none;border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black;
+  background:#F9F9F9'>Free. For open-source projects only.</span><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;background:#F2F2F2;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/Google_Code" title="Google Code"><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Google Code</span></b></a></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#E4E4E4;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Unknown</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>250,000+</span></p>
+  </td>
+  <td width=380 style='width:284.7pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/Inferno_(operating_system)"
+  title="Inferno (operating system)"><span style='font-size:8.0pt;font-family:
+  "Arial","sans-serif";color:#0B0080;text-decoration:none'>Inferno</span></a><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/Android_(operating_system)"
+  title="Android (operating system)"><span style='font-size:8.0pt;font-family:
+  "Arial","sans-serif";color:#0B0080;text-decoration:none'>Android</span></a><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/Google_Chrome" title="Google Chrome"><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Chromium</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>&nbsp;,</span></p>
+  </td>
+  <td width=188 valign=top style='width:140.85pt;border-top:none;border-left:
+  none;border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black;
+  background:#F9F9F9'>Free. For open-source projects only.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;background:#F2F2F2;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/Bitbucket" title=Bitbucket><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Bitbucket</span></b></a></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>1,000,000</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>93,661</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-bitbucket.org-62"></a></p>
+  </td>
+  <td width=380 style='width:284.7pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/OGRE" title=OGRE><span style='font-size:
+  8.0pt;font-family:"Arial","sans-serif";color:#0B0080;text-decoration:none'>OGRE</span></a><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>,&nbsp;<a
+  href="http://en.wikipedia.org/wiki/TortoiseHg" title=TortoiseHg><span
+  style='color:#0B0080;text-decoration:none'>TortoiseHg</span></a>,&nbsp;<a
+  href="http://en.wikipedia.org/wiki/Codeigniter" title=Codeigniter><span
+  style='color:#0B0080;text-decoration:none'>Codeigniter</span></a>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/Pylons_project" title="Pylons project"><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Pylons</span></a><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:black'>,&nbsp;</span><a
+  href="http://en.wikipedia.org/wiki/Sphinx_(documentation_generator)"
+  title="Sphinx (documentation generator)"><span style='font-size:8.0pt;
+  font-family:"Arial","sans-serif";color:#0B0080;text-decoration:none'>Sphinx</span></a></p>
+  </td>
+  <td width=188 valign=top style='width:140.85pt;border-top:none;border-left:
+  none;border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black;
+  background:#F9F9F9'>Free private repositories are limited to 5 users</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;background:#F2F2F2;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>GitLab</span></b></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'></td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'></td>
+  <td width=380 style='width:284.7pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'></td>
+  <td width=188 valign=top style='width:140.85pt;border-top:none;border-left:
+  none;border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black;
+  background:#F9F9F9'>Unlimited public and private repos, unlimited public and
+  private collaborators</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-6"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  background:#F9F9F9;text-decoration:none'>[6]</span></sup></a></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:8.0pt;line-height:115%;font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=274
+ style='width:205.45pt;background:#F9F9F9;border-collapse:collapse;border:none'>
+ <thead>
+  <tr>
+   <td style='border:solid #AAAAAA 1.0pt;background:#F2F2F2;padding:2.4pt 10.5pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Name</span></b></p>
+   </td>
+   <td style='border:solid #AAAAAA 1.0pt;border-left:none;background:#F2F2F2;
+   padding:2.4pt 10.5pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+   href="http://en.wikipedia.org/wiki/Concurrent_Versions_System"
+   title="Concurrent Versions System"><b><span style='font-size:8.0pt;
+   font-family:"Arial","sans-serif";color:#0B0080;text-decoration:none'>CVS</span></b></a></p>
+   </td>
+   <td style='border:solid #AAAAAA 1.0pt;border-left:none;background:#F2F2F2;
+   padding:2.4pt 10.5pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+   href="http://en.wikipedia.org/wiki/Subversion_(software)"
+   title="Subversion (software)"><b><span style='font-size:8.0pt;font-family:
+   "Arial","sans-serif";color:#0B0080;text-decoration:none'>SVN</span></b></a></p>
+   </td>
+   <td style='border:solid #AAAAAA 1.0pt;border-left:none;background:#F2F2F2;
+   padding:2.4pt 10.5pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+   href="http://en.wikipedia.org/wiki/Git_(software)" title="Git (software)"><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+   text-decoration:none'>Git</span></b></a></p>
+   </td>
+   <td width=65 style='width:48.5pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 10.5pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+   href="http://en.wikipedia.org/wiki/Mercurial" title=Mercurial><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+   text-decoration:none'>Mercurial</span></b></a></p>
+   </td>
+  </tr>
+ </thead>
+ <tr>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;background:#F2F2F2;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/Bitbucket" title=Bitbucket><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Bitbucket</span></b></a></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;background:#F2F2F2;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/GitHub" title=GitHub><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>GitHub</span></b></a></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#FF9999;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;background:#F2F2F2;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/GitHub" title=GitHub><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>GitLab</span></b></a></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#FF7C80;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#FF9999;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;background:#F2F2F2;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/Google_Code" title="Google Code"><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Google Code</span></b></a></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;background:#F2F2F2;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/SourceForge" title=SourceForge><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>SourceForge</span></b></a></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=65 style='width:48.5pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center;line-height:10.2pt'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:8.0pt;line-height:115%;font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='background:#F9F9F9;border-collapse:collapse;border:none'>
+ <thead>
+  <tr>
+   <td width=72 style='width:54.25pt;border:solid #AAAAAA 1.0pt;background:
+   #F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Name</span></b></p>
+   </td>
+   <td width=49 style='width:36.55pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Code
+   review</span></b></p>
+   </td>
+   <td width=56 style='width:42.0pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Bug
+   tracking</span></b></p>
+   </td>
+   <td width=53 style='width:39.95pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Web
+   hosting</span></b></p>
+   </td>
+   <td width=33 style='width:24.7pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Wiki</span></b></p>
+   </td>
+   <td width=47 style='width:35.45pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Shell
+   server</span></b></p>
+   </td>
+   <td width=51 style='width:38.25pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Mailing
+   List</span></b></p>
+   </td>
+   <td width=44 style='width:33.15pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Forum</span></b></p>
+   </td>
+   <td width=62 style='width:46.3pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Personal
+   branch</span></b></p>
+   </td>
+   <td width=52 style='width:39.2pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Private
+   branch</span></b></p>
+   </td>
+   <td width=63 style='width:47.4pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Announce</span></b></p>
+   </td>
+   <td width=39 style='width:29.15pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Team</span></b></p>
+   </td>
+   <td width=60 style='width:44.65pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Release
+   Binaries</span></b></p>
+   </td>
+   <td width=54 style='width:40.4pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:2.4pt 5.85pt 2.4pt 2.4pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Self-hosting</span></b></p>
+   </td>
+   <td width=47 style='width:34.95pt;border:solid #AAAAAA 1.0pt;border-left:
+   none;background:#F2F2F2;padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+   margin-bottom:12.0pt;margin-left:0in;text-align:center'><b><span
+   style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Add-free</span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr>
+  <td width=72 style='width:54.25pt;border:solid #AAAAAA 1.0pt;border-top:none;
+  background:#F2F2F2;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/Bitbucket" title=Bitbucket><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Bitbucket</span></b></a></p>
+  </td>
+  <td width=49 style='width:36.55pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-ches.nausicaamedia.com-17"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>[16]</span></sup></a></p>
+  </td>
+  <td width=56 style='width:42.0pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=53 style='width:39.95pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-Publishing_a_Website_on_Bitbucket-18"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>[17]</span></sup></a></p>
+  </td>
+  <td width=33 style='width:24.7pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=47 style='width:35.45pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=51 style='width:38.25pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=62 style='width:46.3pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=52 style='width:39.2pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#FFFFBB;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-bitbucket-plan-19"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>[n 2]</span></sup></a></p>
+  </td>
+  <td width=63 style='width:47.4pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#FF9999;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=39 style='width:29.15pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=60 style='width:44.65pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=54 style='width:40.4pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#FF9999;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=47 style='width:34.95pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 style='width:54.25pt;border:solid #AAAAAA 1.0pt;border-top:none;
+  background:#F2F2F2;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/GitHub" title=GitHub><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>GitHub</span></b></a></p>
+  </td>
+  <td width=49 style='width:36.55pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-20"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>[18]</span></sup></a></p>
+  </td>
+  <td width=56 style='width:42.0pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-21"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>[19]</span></sup></a></p>
+  </td>
+  <td width=53 style='width:39.95pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=33 style='width:24.7pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=47 style='width:35.45pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=51 style='width:38.25pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=62 style='width:46.3pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=52 style='width:39.2pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#FFFFBB;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-github-no-private-branches-for-free-accounts-22"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>[n 3]</span></sup></a></p>
+  </td>
+  <td width=63 style='width:47.4pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=39 style='width:29.15pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=60 style='width:44.65pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=54 style='width:40.4pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Commercially</span></p>
+  </td>
+  <td width=47 style='width:34.95pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 style='width:54.25pt;border:solid #AAAAAA 1.0pt;border-top:none;
+  background:#F2F2F2;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/GitHub" title=GitHub><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>GitLab</span></b></a></p>
+  </td>
+  <td width=49 style='width:36.55pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-20"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>[18]</span></sup></a></p>
+  </td>
+  <td width=56 style='width:42.0pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-21"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>[19]</span></sup></a></p>
+  </td>
+  <td width=53 style='width:39.95pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=33 style='width:24.7pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=47 style='width:35.45pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=51 style='width:38.25pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=62 style='width:46.3pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=52 style='width:39.2pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#FFFFBB;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-github-no-private-branches-for-free-accounts-22"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>[n 3]</span></sup></a></p>
+  </td>
+  <td width=63 style='width:47.4pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=39 style='width:29.15pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=60 style='width:44.65pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF7C80;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=54 style='width:40.4pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=47 style='width:34.95pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 style='width:54.25pt;border:solid #AAAAAA 1.0pt;border-top:none;
+  background:#F2F2F2;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/Google_Code" title="Google Code"><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>Google Code</span></b></a></p>
+  </td>
+  <td width=49 style='width:36.55pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=56 style='width:42.0pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=53 style='width:39.95pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FFFFBB;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-out-28"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>[n 5]</span></sup></a></p>
+  </td>
+  <td width=33 style='width:24.7pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=47 style='width:35.45pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=51 style='width:38.25pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FFFFBB;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-out-28"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>[n 5]</span></sup></a></p>
+  </td>
+  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=62 style='width:46.3pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#FFFFBB;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-29"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>[n 6]</span></sup></a></p>
+  </td>
+  <td width=52 style='width:39.2pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#FF9999;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=63 style='width:47.4pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#FF9999;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=39 style='width:29.15pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF9999;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=60 style='width:44.65pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FFFFBB;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span><a
+  href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-30"><sup><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>[n 7]</span></sup></a></p>
+  </td>
+  <td width=54 style='width:40.4pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#FF9999;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+  <td width=47 style='width:34.95pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 style='width:54.25pt;border:solid #AAAAAA 1.0pt;border-top:none;
+  background:#F2F2F2;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><a
+  href="http://en.wikipedia.org/wiki/SourceForge" title=SourceForge><b><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+  text-decoration:none'>SourceForge</span></b></a></p>
+  </td>
+  <td width=49 style='width:36.55pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=56 style='width:42.0pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=53 style='width:39.95pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=33 style='width:24.7pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=47 style='width:35.45pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=51 style='width:38.25pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=62 style='width:46.3pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=52 style='width:39.2pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=63 style='width:47.4pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=39 style='width:29.15pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=60 style='width:44.65pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#99FF99;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=54 style='width:40.4pt;border-top:none;border-left:none;border-bottom:
+  solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;background:#99FF99;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>Yes</span></p>
+  </td>
+  <td width=47 style='width:34.95pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#FF7C80;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0in;
+  margin-bottom:12.0pt;margin-left:0in;text-align:center'><span
+  style='font-size:8.0pt;font-family:"Arial","sans-serif";color:black'>No</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:8.0pt;line-height:115%;font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;line-height:115%;font-family:
+"Arial","sans-serif"'>Other features:</span></p>
+
+<p class=MsoNormal style='margin-bottom:1.2pt;margin-left:19.2pt;text-indent:
+-.25in;line-height:15.25pt;background:white'><span style='font-size:10.0pt;
+font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="http://en.wikipedia.org/wiki/Bitbucket" title=Bitbucket><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+text-decoration:none'>Bitbucket</span></a><span style='font-size:8.0pt;
+font-family:"Arial","sans-serif";color:#252525'>:&nbsp;<a
+href="http://en.wikipedia.org/wiki/OpenID" title=OpenID><span style='color:
+#0B0080;text-decoration:none'>OpenID</span></a>, visualizations</span></p>
+
+<p class=MsoNormal style='margin-bottom:1.2pt;margin-left:19.2pt;text-indent:
+-.25in;background:white'><span style='font-size:10.0pt;font-family:Symbol;
+color:#252525'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="http://en.wikipedia.org/wiki/GitHub" title=GitHub><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080'>GitHub</span></a><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#252525'>: Public
+API,</span><a
+href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-40"><sup><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+text-decoration:none'>[31]</span></sup></a><span style='font-size:8.0pt;
+font-family:"Arial","sans-serif";color:#252525'>&nbsp;static web-page hosting,</span><a
+href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-41"><sup><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+text-decoration:none'>[32]</span></sup></a><span style='font-size:8.0pt;
+font-family:"Arial","sans-serif";color:#252525'>&nbsp;pastebin service&nbsp;<i>Gist</i>,</span><a
+href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-42"><sup><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+text-decoration:none'>[33]</span></sup></a><span style='font-size:8.0pt;
+font-family:"Arial","sans-serif";color:#252525'>&nbsp;3D model support,</span><a
+href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-43"><sup><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+text-decoration:none'>[34]</span></sup></a><span style='font-size:8.0pt;
+font-family:"Arial","sans-serif";color:#252525'>&nbsp;support for OAuth 2.0 and
+SSH keys, Automatic Page Generator,</span><a
+href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-44"><sup><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+text-decoration:none'>[35]</span></sup></a><span style='font-size:8.0pt;
+font-family:"Arial","sans-serif";color:#252525'>&nbsp;Graphs: Contributors,
+Commit Activity, Code Frequency, Punchcard, Pulse and Network Graph, email
+notifications</span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;line-height:115%;font-family:
+"Arial","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:1.2pt;margin-left:19.2pt;text-indent:
+-.25in;background:white'><span style='font-size:10.0pt;font-family:Symbol;
+color:#252525'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="http://en.wikipedia.org/wiki/SourceForge"
+title=SourceForge><span style='font-size:8.0pt;font-family:"Arial","sans-serif";
+color:#0B0080;text-decoration:none'>SourceForge</span></a><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#252525'>:
+Public&nbsp;</span><a href="http://en.wikipedia.org/wiki/API" title=API><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+text-decoration:none'>API</span></a><span style='font-size:8.0pt;font-family:
+"Arial","sans-serif";color:#252525'>&nbsp;, Help Wanted,&nbsp;<a
+href="http://en.wikipedia.org/wiki/OpenID" title=OpenID><span style='color:
+#0B0080;text-decoration:none'>OpenID</span></a>&nbsp;Relying Party, Piwik Web
+Analytics,</span><a
+href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities#cite_note-46"><sup><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+text-decoration:none'>[36]</span></sup></a><span style='font-size:8.0pt;
+font-family:"Arial","sans-serif";color:#252525'>&nbsp;support for&nbsp;</span><a
+href="http://en.wikipedia.org/wiki/Media_Wiki" title="Media Wiki"><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+text-decoration:none'>Media Wiki</span></a><span style='font-size:8.0pt;
+font-family:"Arial","sans-serif";color:#252525'>,&nbsp;</span><a
+href="http://en.wikipedia.org/wiki/Blog" title=Blog><span style='font-size:
+8.0pt;font-family:"Arial","sans-serif";color:#0B0080;text-decoration:none'>Blog</span></a><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#252525'>&nbsp;,&nbsp;<a
+href="http://en.wikipedia.org/wiki/Pastebin" title=Pastebin><span
+style='color:#0B0080;text-decoration:none'>Pastebin</span></a>&nbsp;, Support
+for&nbsp;<a href="http://en.wikipedia.org/wiki/OAuth" title=OAuth><span
+style='color:#0B0080;text-decoration:none'>OAuth</span></a>&nbsp;1.0 with
+bearer tokens and&nbsp;</span><a
+href="http://en.wikipedia.org/wiki/Secure_Shell" title="Secure Shell"><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#0B0080;
+text-decoration:none'>SSH</span></a><span style='font-size:8.0pt;font-family:
+"Arial","sans-serif";color:#252525'>&nbsp;keys, option to write reviews about
+projects,&nbsp;<a href="http://en.wikipedia.org/wiki/Freenode" title=Freenode><span
+style='color:#0B0080;text-decoration:none'>Freenode</span></a>&nbsp;</span><a
+href="http://en.wikipedia.org/wiki/IRC" title=IRC><span style='font-size:8.0pt;
+font-family:"Arial","sans-serif";color:#0B0080;text-decoration:none'>IRC</span></a><span
+style='font-size:8.0pt;font-family:"Arial","sans-serif";color:#252525'>&nbsp;Channel,
+option to migrate&nbsp;<a href="http://en.wikipedia.org/wiki/Trac" title=Trac><span
+style='color:#0B0080;text-decoration:none'>Trac</span></a>&nbsp;tickets,
+Network Graph, public feature requests and site support tickets for Sourceforge
+and&nbsp;<a href="http://en.wikipedia.org/wiki/Allura" title=Allura><span
+style='color:#0B0080;text-decoration:none'>Allura</span></a>&nbsp;, email
+notifications</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:8.0pt;line-height:115%;font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
