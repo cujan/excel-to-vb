@@ -1,0 +1,5 @@
+The Sage Math(1) is a powerful open source mathematical software and so it is a natural step to integrate it with a computatiional resouce. This integration will give the Sage Math users access to Cloud/Grid infrastructure. Within the Techicom project we tried to integrate the Sage Math Notebook frontend with ARC`s Coputing Element (2). 
+Since Sage Math is based on python and ARC middleware also ports its functionality into a python library (called arclib) we used this approach to make an integration. As a result we got a prototyping library that allows the simple setup of computational job with input files defined, then searching feature of available computational resources, submission of defined jobs and retrieval of results. This all is executable from the Sage Math Notebook frontend and the results are automatically retrieved and visualized over Sage Math Notebook.
+
+1) http://www.sagemath.org/
+2) www.nordugrid.org/manuals.html
