@@ -1,0 +1,1 @@
+Program pisany vo VB, ktorym chceme zjednodusit pracu s datami, ktore su momentalne spracovavane iba v exceli
